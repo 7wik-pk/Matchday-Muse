@@ -17,7 +17,7 @@ make dev-mcp        # MCP Inspector on the Go server over stdio, no Docker neede
 make test           # contract checks, Go tests and frontend tests, offline
 ```
 
-`make dev` creates `.env` from [.env.example](.env.example) with a fresh `MCP_AUTH_TOKEN` the first time. While it runs, frontend changes hot-reload and Go changes rebuild the server.
+`make dev` creates `.env` from [.env.example](.env.example) with a fresh `MCP_AUTH_TOKEN` the first time. While it runs, frontend changes hot-reload and Go changes restart the server, which recompiles in a couple of seconds. After changing dependencies, rerun `make dev`. `make images` builds the deployable images.
 
 Open a UI state directly with `?mock=<script>`, for example `?mock=guardrail-failed&speed=0`; the scripts are in [contracts/ws/examples/](contracts/ws/examples/). The MCP server is described in [mcp-server/README.md](mcp-server/README.md).
 

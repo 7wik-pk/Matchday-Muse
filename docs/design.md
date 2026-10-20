@@ -1,4 +1,4 @@
-# Matchday Muse — Design Document
+# Matchday Muse - Design Document
 
 Oct 19, 2026 · @Sathwik
 
@@ -582,13 +582,13 @@ Local runs on docker compose; the cloud runs on GCP via Terraform. The same cont
 
 | Service | Image | Port | Notes |
 | --- | --- | --- | --- |
-| `mcp-server` | `mcp-server/Dockerfile`: Go build, distroless runtime | 8081 | Phase 0. `MCP_TRANSPORT=http`; cache on the `mcp-cache` volume; healthcheck; rebuilt on Go changes |
-| `frontend` | `frontend/Dockerfile`, `dev` target: node, `ng serve` | 4200 | Phase 0. Dev only; `src/` and `contracts/ws/` sync into the container for hot reload; later proxies `/api` and `/ws` to `backend` |
+| `mcp-server` | `mcp-server/Dockerfile`, `dev` target: Go toolchain | 8081 | Phase 0. `MCP_TRANSPORT=http`; source mounted read-only at `/src`; watch restarts it on Go changes and it recompiles on start (about 2 s, build cache on a volume); raw-data cache on the `mcp-cache` volume; healthcheck |
+| `frontend` | `frontend/Dockerfile`, `dev` target: node, `ng serve` | 4200 | Phase 0. Dev only; `src/` and `contracts/ws/` mounted read-only, so `ng serve` hot-reloads on its own; later proxies `/api` and `/ws` to `backend` |
 | `backend` | built from `backend/` | 8000 | Phase 0, when it lands. FastAPI + WebSocket; from Phase 1 runs Alembic on start and serves the `frontend` image's `build` target |
 | `postgres` | postgres:16 | 5432 | Phase 1. Databases `app` and `litellm`; named volume |
 | `litellm` | official LiteLLM Proxy image | 4000 | Phase 3. Reads `infra/litellm/config.yaml`; house key from `.env` |
 
-The stack runs on Podman or Docker: `make dev` uses `podman compose` when Podman is installed, else `docker compose`, and the healthcheck lives in `compose.yaml` because Podman builds OCI images, which have no `HEALTHCHECK`. `podman compose` needs the `docker-compose` provider, since `podman-compose` does not support `watch`. Ports are published on 127.0.0.1 only. `make dev` creates `.env` from `.env.example` with a fresh `MCP_AUTH_TOKEN` if there is none, then runs `compose up --build --watch`; `make down` stops it. Profiles: `--profile offline` sets `SEARCH_PROVIDER=fixture` and a mock LLM, for demos and tests without keys. Tests (`make test`) still run on the host, offline.
+The stack runs on Podman or Docker: `make dev` uses `podman compose` when Podman is installed, else `docker compose`. Three choices keep it portable. The healthcheck lives in `compose.yaml`, because Podman builds OCI images, which have no `HEALTHCHECK`. Source reaches the containers through read-only bind mounts, and watch only uses its `restart` action: on Podman, watch's `sync` fails on deleted or replaced files and its `rebuild` fails to swap containers. And `podman compose` needs the `docker-compose` provider, since `podman-compose` has no `watch`. After changing dependencies (`go.mod`, `package-lock.json`), rerun `make dev`, which rebuilds the images. `make images` builds the deployable images: the MCP server's default target (a static binary on distroless, about 14 MB) and the frontend's `build` target. Ports are published on 127.0.0.1 only. `make dev` creates `.env` from `.env.example` with a fresh `MCP_AUTH_TOKEN` if there is none, then runs `compose up --build --watch`; `make down` stops it. Profiles: `--profile offline` sets `SEARCH_PROVIDER=fixture` and a mock LLM, for demos and tests without keys. Tests (`make test`) still run on the host, offline.
 
 **GCP resources** (`infra/terraform/`)
 

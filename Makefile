@@ -1,4 +1,4 @@
-.PHONY: test test-contracts test-mcp test-frontend gen dev down logs dev-mcp record-espn diagrams
+.PHONY: test test-contracts test-mcp test-frontend gen dev down logs images dev-mcp record-espn diagrams
 
 test: test-contracts test-mcp test-frontend
 
@@ -45,6 +45,13 @@ down:
 
 logs:
 	$(COMPOSE) logs -f
+
+# The deployable images: the MCP server on distroless, and the frontend's
+# production bundle (which the backend image will serve from Phase 1).
+ENGINE ?= $(firstword $(COMPOSE))
+images:
+	$(ENGINE) build -t matchday-muse/mcp-server:latest mcp-server
+	$(ENGINE) build -t matchday-muse/frontend-build:latest --target build -f frontend/Dockerfile .
 
 # A local .env with a fresh MCP token. Never overwrites an existing one.
 .env:

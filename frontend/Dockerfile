@@ -9,7 +9,7 @@ USER node
 COPY --chown=node:node frontend/package.json frontend/package-lock.json ./
 RUN --mount=type=cache,target=/home/node/.npm,uid=1000,gid=1000 npm ci --no-fund --no-audit
 
-# ng serve with hot reload; docker compose watch syncs src/ and contracts/ws/.
+# ng serve with hot reload; compose mounts src/ and contracts/ws/ over the copies.
 FROM deps AS dev
 COPY --chown=node:node contracts/ws /app/contracts/ws
 COPY --chown=node:node frontend/ ./
