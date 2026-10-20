@@ -1,0 +1,15 @@
+{
+  "name": "@matchday-muse/contracts",
+  "private": true,
+  "type": "module",
+  "description": "JSON Schema contracts, the checks that keep example runs in line with them, and TypeScript generation.",
+  "scripts": {
+    "test": "node scripts/validate.mjs && node scripts/gen-ts.mjs --check",
+    "gen": "node scripts/gen-ts.mjs"
+  },
+  "devDependencies": {
+    "ajv": "8.17.1",
+    "ajv-formats": "3.0.1",
+    "json-schema-to-typescript": "16.0.0"
+  }
+}

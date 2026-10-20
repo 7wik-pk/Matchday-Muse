@@ -1,0 +1,25 @@
+flowchart TB
+    browser["<b>Angular app in the browser</b><br/>controls · pipeline stage panel · result card<br/>BYO key held in session storage only"]
+    backend["<b>FastAPI backend (Python)</b><br/>10-stage pipeline state machine<br/>guardrails · free-run limits · quotas<br/>MCP client · LiteLLM SDK"]
+    langfuse["<b>Langfuse</b><br/>Phase 4: traces<br/>and scores per run"]
+    postgres["<b>Postgres</b><br/>Phase 1: sessions · runs<br/>run_events for replay"]
+    mcp["<b>Go MCP server</b><br/>sports + search adapters<br/>raw-data cache"]
+    proxy["<b>LiteLLM Proxy</b><br/>Phase 3: house key for free runs<br/>daily budget cap"]
+    sports["<b>Sports data APIs</b><br/>ESPN (Phase 0)<br/>OpenF1, Cricsheet later"]
+    search["<b>Exa or Tavily</b><br/>chosen by env var<br/>SEARCH_PROVIDER"]
+    providers["<b>LLM providers</b><br/>Gemini · OpenAI<br/>Anthropic · others"]
+
+    browser <-->|"WebSocket /ws + HTTPS"| backend
+    backend -.-> langfuse
+    backend --> postgres
+    backend -->|"MCP over HTTP"| mcp
+    backend --> proxy
+    backend -->|"BYO key, direct"| providers
+    mcp --> sports
+    mcp --> search
+    proxy --> providers
+
+    classDef llm fill:#1e2a44,stroke:#4a90e2,color:#fff
+    classDef later stroke-dasharray: 5 5
+    class backend llm
+    class langfuse,proxy later

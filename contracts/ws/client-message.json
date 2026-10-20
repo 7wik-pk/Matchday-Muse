@@ -1,0 +1,165 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ClientMessage",
+  "description": "Every message the browser sends on /ws.",
+  "oneOf": [
+    { "$ref": "#/$defs/SessionHello" },
+    { "$ref": "#/$defs/RunStart" },
+    { "$ref": "#/$defs/RunRetell" },
+    { "$ref": "#/$defs/RunCancel" },
+    { "$ref": "#/$defs/PromptAnswer" }
+  ],
+  "$defs": {
+    "SessionHello": {
+      "type": "object",
+      "required": ["v", "type", "runId", "payload"],
+      "properties": {
+        "v": { "const": 1 },
+        "type": { "const": "session.hello" },
+        "runId": { "type": "null" },
+        "payload": { "$ref": "#/$defs/SessionHelloPayload" }
+      },
+      "additionalProperties": false
+    },
+    "SessionHelloPayload": {
+      "type": "object",
+      "required": ["sessionToken", "timezone"],
+      "properties": {
+        "sessionToken": {
+          "type": ["string", "null"],
+          "description": "Null before the first session.ready; unused until Phase 3."
+        },
+        "timezone": {
+          "type": "string",
+          "description": "The browser's IANA timezone, such as Europe/London."
+        },
+        "resumeRunId": {
+          "type": ["string", "null"],
+          "description": "Phase 3: resume this run after a reconnect."
+        },
+        "lastSeq": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "description": "Phase 3: replay server messages after this seq."
+        }
+      },
+      "additionalProperties": false
+    },
+    "RunStart": {
+      "type": "object",
+      "required": ["v", "type", "runId", "payload"],
+      "properties": {
+        "v": { "const": 1 },
+        "type": { "const": "run.start" },
+        "runId": { "type": "null" },
+        "payload": { "$ref": "#/$defs/RunStartPayload" }
+      },
+      "additionalProperties": false
+    },
+    "RunStartPayload": {
+      "type": "object",
+      "required": ["sport", "league", "range", "style", "output", "llm"],
+      "properties": {
+        "sport": { "type": "string", "examples": ["football"] },
+        "league": { "type": "string", "examples": ["eng.1"] },
+        "range": { "$ref": "common.json#/$defs/RangeRequest" },
+        "style": { "$ref": "common.json#/$defs/StyleId" },
+        "output": { "$ref": "common.json#/$defs/OutputKind" },
+        "llm": { "$ref": "#/$defs/LlmChoice" }
+      },
+      "additionalProperties": false
+    },
+    "RunRetell": {
+      "type": "object",
+      "required": ["v", "type", "runId", "payload"],
+      "properties": {
+        "v": { "const": 1 },
+        "type": { "const": "run.retell" },
+        "runId": { "type": "null" },
+        "payload": { "$ref": "#/$defs/RunRetellPayload" }
+      },
+      "additionalProperties": false
+    },
+    "RunRetellPayload": {
+      "type": "object",
+      "description": "Retell a finished run's match: reuse its fact sheet and run only generate, guardrails and done.",
+      "required": ["fromRunId", "style", "output", "llm"],
+      "properties": {
+        "fromRunId": {
+          "type": "string",
+          "description": "A run of this session that ended in run.result."
+        },
+        "style": { "$ref": "common.json#/$defs/StyleId" },
+        "output": { "$ref": "common.json#/$defs/OutputKind" },
+        "llm": { "$ref": "#/$defs/LlmChoice" }
+      },
+      "additionalProperties": false
+    },
+    "LlmChoice": {
+      "title": "LlmChoice",
+      "oneOf": [
+        { "$ref": "#/$defs/HouseLlm" },
+        { "$ref": "#/$defs/ByokLlm" }
+      ]
+    },
+    "HouseLlm": {
+      "type": "object",
+      "description": "Run on the server's own key: LLM_API_KEY in development (Phases 0 to 2), a free run on the funded house key from Phase 3.",
+      "required": ["mode"],
+      "properties": {
+        "mode": { "const": "house" }
+      },
+      "additionalProperties": false
+    },
+    "ByokLlm": {
+      "type": "object",
+      "description": "The user's own key. Held in memory for this run only; never echoed, logged or stored.",
+      "required": ["mode", "provider", "model", "apiKey"],
+      "properties": {
+        "mode": { "const": "byok" },
+        "provider": { "type": "string", "examples": ["gemini"] },
+        "model": { "type": "string", "examples": ["gemini/gemini-flash"] },
+        "apiKey": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "RunCancel": {
+      "type": "object",
+      "required": ["v", "type", "runId", "payload"],
+      "properties": {
+        "v": { "const": 1 },
+        "type": { "const": "run.cancel" },
+        "runId": { "type": "string" },
+        "payload": {
+          "title": "RunCancelPayload",
+          "type": "object",
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "PromptAnswer": {
+      "type": "object",
+      "required": ["v", "type", "runId", "payload"],
+      "properties": {
+        "v": { "const": 1 },
+        "type": { "const": "prompt.answer" },
+        "runId": { "type": "string" },
+        "payload": {
+          "title": "PromptAnswerPayload",
+          "type": "object",
+          "required": ["promptId", "choice"],
+          "properties": {
+            "promptId": { "type": "string" },
+            "choice": {
+              "type": "string",
+              "description": "The id of one of the prompt.request options."
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

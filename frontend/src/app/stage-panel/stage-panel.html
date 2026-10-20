@@ -1,0 +1,55 @@
+<section class="panel card" aria-labelledby="stages-heading">
+  <h2 id="stages-heading" class="eyebrow">Pipeline</h2>
+  @if (stages().length) {
+    <ol class="stages">
+      @for (stage of stages(); track stage.id) {
+        <li class="stage" [attr.data-status]="stage.status">
+          <span class="icon" aria-hidden="true">
+            @switch (stage.status) {
+              @case ('running') {
+                <span class="spinner"></span>
+              }
+              @case ('done') {
+                <svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7" /></svg>
+              }
+              @case ('failed') {
+                <svg viewBox="0 0 16 16"><path d="M4.5 4.5l7 7m0-7l-7 7" /></svg>
+              }
+              @case ('skipped') {
+                <svg viewBox="0 0 16 16"><path d="M4.5 8h7" /></svg>
+              }
+            }
+          </span>
+          <div class="body">
+            <div class="row">
+              <span class="label">{{ stage.label }}</span>
+              <span class="visually-hidden">: {{ statusText[stage.status] }}</span>
+              <span class="elapsed">{{ elapsed(stage) }}</span>
+            </div>
+            @if (stage.message) {
+              <p class="message">{{ stage.message }}</p>
+            }
+            @if (stage.status === 'running' && stage.progress !== null) {
+              <progress
+                [value]="stage.progress"
+                max="1"
+                [attr.aria-label]="stage.label + ' progress'"
+              ></progress>
+            }
+            @if (stage.detail) {
+              <details>
+                <summary>Details</summary>
+                <p>{{ stage.detail }}</p>
+              </details>
+            }
+          </div>
+        </li>
+      }
+    </ol>
+  } @else {
+    <p class="hint empty">
+      Each step of the run shows up here: loading the week's matches, scoring them, picking one,
+      writing, and checking the facts.
+    </p>
+  }
+</section>

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Common WebSocket types",
+  "description": "Types shared by client and server messages.",
+  "$defs": {
+    "StageId": {
+      "title": "StageId",
+      "description": "Pipeline stage ids, in run order.",
+      "enum": [
+        "resolve_range",
+        "fetch_matches",
+        "score_matches",
+        "pick_match",
+        "search_coverage",
+        "pick_moment",
+        "build_fact_sheet",
+        "generate",
+        "guardrails",
+        "done"
+      ]
+    },
+    "StyleId": {
+      "title": "StyleId",
+      "description": "Curated style presets; every one is a rhyming form.",
+      "enum": [
+        "ballad",
+        "sonnet",
+        "villanelle",
+        "mock_heroic",
+        "limericks",
+        "clerihews",
+        "terrace_chant",
+        "nursery_rhyme"
+      ]
+    },
+    "StyleFamily": {
+      "title": "StyleFamily",
+      "description": "Groups the presets in the style select: formal verse or light verse.",
+      "enum": ["formal", "light"]
+    },
+    "Granularity": {
+      "title": "Granularity",
+      "enum": ["day", "week", "month"]
+    },
+    "RangeRequest": {
+      "title": "RangeRequest",
+      "type": "object",
+      "required": ["granularity", "anchor"],
+      "properties": {
+        "granularity": { "$ref": "#/$defs/Granularity" },
+        "anchor": {
+          "type": "string",
+          "format": "date",
+          "description": "Any date inside the wanted day, week or month, in the user's timezone."
+        }
+      },
+      "additionalProperties": false
+    },
+    "OutputKind": {
+      "title": "OutputKind",
+      "enum": ["text", "image"]
+    },
+    "Angle": {
+      "title": "Angle",
+      "enum": ["drama", "comedy"]
+    }
+  }
+}

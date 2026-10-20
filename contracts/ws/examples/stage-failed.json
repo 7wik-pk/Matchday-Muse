@@ -1,0 +1,167 @@
+{
+  "$schema": "../mock-script.json",
+  "id": "stage-failed",
+  "title": "Data source unavailable",
+  "description": "ESPN does not respond, fetch_matches fails, and the run ends with stage_failed.",
+  "start": {
+    "sport": "football",
+    "league": "eng.1",
+    "range": {
+      "granularity": "week",
+      "anchor": "2026-10-12"
+    },
+    "style": "ballad",
+    "output": "text",
+    "llm": {
+      "mode": "byok",
+      "provider": "gemini",
+      "model": "gemini/gemini-flash",
+      "apiKey": "mock-key-not-real"
+    }
+  },
+  "steps": [
+    {
+      "delayMs": 150,
+      "send": {
+        "v": 1,
+        "type": "run.accepted",
+        "runId": "r_mock_failed",
+        "seq": 1,
+        "ts": "2026-10-20T09:00:00.150Z",
+        "payload": {
+          "stages": [
+            {
+              "id": "resolve_range",
+              "label": "Resolve the date range"
+            },
+            {
+              "id": "fetch_matches",
+              "label": "Find completed matches"
+            },
+            {
+              "id": "score_matches",
+              "label": "Load events and score drama"
+            },
+            {
+              "id": "pick_match",
+              "label": "Pick the match"
+            },
+            {
+              "id": "search_coverage",
+              "label": "Search match coverage"
+            },
+            {
+              "id": "pick_moment",
+              "label": "Pick the moment"
+            },
+            {
+              "id": "build_fact_sheet",
+              "label": "Build the fact sheet"
+            },
+            {
+              "id": "generate",
+              "label": "Write the poem"
+            },
+            {
+              "id": "guardrails",
+              "label": "Check the output"
+            },
+            {
+              "id": "done",
+              "label": "Done"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_failed",
+        "seq": 2,
+        "ts": "2026-10-20T09:00:00.250Z",
+        "payload": {
+          "stage": "resolve_range",
+          "status": "running",
+          "message": "Resolving the week",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 150,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_failed",
+        "seq": 3,
+        "ts": "2026-10-20T09:00:00.400Z",
+        "payload": {
+          "stage": "resolve_range",
+          "status": "done",
+          "message": "Mon 12 Oct – Sun 18 Oct 2026, London time",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_failed",
+        "seq": 4,
+        "ts": "2026-10-20T09:00:00.500Z",
+        "payload": {
+          "stage": "fetch_matches",
+          "status": "running",
+          "message": "Asking ESPN for Premier League results",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 10000,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_failed",
+        "seq": 5,
+        "ts": "2026-10-20T09:00:10.500Z",
+        "payload": {
+          "stage": "fetch_matches",
+          "status": "failed",
+          "message": "ESPN did not respond within 10 s",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 50,
+      "send": {
+        "v": 1,
+        "type": "run.error",
+        "runId": "r_mock_failed",
+        "seq": 6,
+        "ts": "2026-10-20T09:00:10.550Z",
+        "payload": {
+          "code": "stage_failed",
+          "message": "Couldn't load match results right now. Please try again in a minute.",
+          "retryable": true,
+          "stage": "fetch_matches",
+          "reasons": [
+            "ESPN scoreboard request timed out after 10 s."
+          ],
+          "guardrails": null,
+          "suggestion": null
+        }
+      }
+    }
+  ]
+}

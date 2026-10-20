@@ -1,0 +1,406 @@
+{
+  "$schema": "../mock-script.json",
+  "id": "cancelled",
+  "title": "Cancelled by the user",
+  "description": "The user presses Cancel while the fact sheet is being built. That stage finishes, the run stops at the stage boundary and ends with code cancelled.",
+  "start": {
+    "sport": "football",
+    "league": "eng.1",
+    "range": {
+      "granularity": "week",
+      "anchor": "2026-10-12"
+    },
+    "style": "ballad",
+    "output": "text",
+    "llm": {
+      "mode": "byok",
+      "provider": "gemini",
+      "model": "gemini/gemini-flash",
+      "apiKey": "mock-key-not-real"
+    }
+  },
+  "steps": [
+    {
+      "delayMs": 150,
+      "send": {
+        "v": 1,
+        "type": "run.accepted",
+        "runId": "r_mock_cancel",
+        "seq": 1,
+        "ts": "2026-10-20T09:00:00.150Z",
+        "payload": {
+          "stages": [
+            {
+              "id": "resolve_range",
+              "label": "Resolve the date range"
+            },
+            {
+              "id": "fetch_matches",
+              "label": "Find completed matches"
+            },
+            {
+              "id": "score_matches",
+              "label": "Load events and score drama"
+            },
+            {
+              "id": "pick_match",
+              "label": "Pick the match"
+            },
+            {
+              "id": "search_coverage",
+              "label": "Search match coverage"
+            },
+            {
+              "id": "pick_moment",
+              "label": "Pick the moment"
+            },
+            {
+              "id": "build_fact_sheet",
+              "label": "Build the fact sheet"
+            },
+            {
+              "id": "generate",
+              "label": "Write the poem"
+            },
+            {
+              "id": "guardrails",
+              "label": "Check the output"
+            },
+            {
+              "id": "done",
+              "label": "Done"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_cancel",
+        "seq": 2,
+        "ts": "2026-10-20T09:00:00.250Z",
+        "payload": {
+          "stage": "resolve_range",
+          "status": "running",
+          "message": "Resolving the week",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 150,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_cancel",
+        "seq": 3,
+        "ts": "2026-10-20T09:00:00.400Z",
+        "payload": {
+          "stage": "resolve_range",
+          "status": "done",
+          "message": "Mon 12 Oct – Sun 18 Oct 2026, London time",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_cancel",
+        "seq": 4,
+        "ts": "2026-10-20T09:00:00.500Z",
+        "payload": {
+          "stage": "fetch_matches",
+          "status": "running",
+          "message": "Asking ESPN for Premier League results",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 900,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_cancel",
+        "seq": 5,
+        "ts": "2026-10-20T09:00:01.400Z",
+        "payload": {
+          "stage": "fetch_matches",
+          "status": "done",
+          "message": "10 completed matches",
+          "progress": null,
+          "detail": "Tottenham Hotspur v Coventry City kicked off on Mon 19 Oct, so it belongs to the next week."
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_cancel",
+        "seq": 6,
+        "ts": "2026-10-20T09:00:01.500Z",
+        "payload": {
+          "stage": "score_matches",
+          "status": "running",
+          "message": "Loading match events",
+          "progress": 0.0,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 700,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_cancel",
+        "seq": 7,
+        "ts": "2026-10-20T09:00:02.200Z",
+        "payload": {
+          "stage": "score_matches",
+          "status": "running",
+          "message": "3 of 10 matches loaded",
+          "progress": 0.3,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 900,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_cancel",
+        "seq": 8,
+        "ts": "2026-10-20T09:00:03.100Z",
+        "payload": {
+          "stage": "score_matches",
+          "status": "running",
+          "message": "7 of 10 matches loaded",
+          "progress": 0.7,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 700,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_cancel",
+        "seq": 9,
+        "ts": "2026-10-20T09:00:03.800Z",
+        "payload": {
+          "stage": "score_matches",
+          "status": "done",
+          "message": "10 of 10 matches loaded",
+          "progress": 1.0,
+          "detail": "Strongest drama signals: Brentford 1–2 Liverpool (came from behind, 2 red cards) · Manchester City 3–2 Ipswich Town (5 goals, penalty in the 90th minute) · Coventry City 4–1 Newcastle United (5 goals, penalty)"
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_cancel",
+        "seq": 10,
+        "ts": "2026-10-20T09:00:03.900Z",
+        "payload": {
+          "stage": "pick_match",
+          "status": "running",
+          "message": "Short-listing 3 of 10 matches",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 1400,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_cancel",
+        "seq": 11,
+        "ts": "2026-10-20T09:00:05.300Z",
+        "payload": {
+          "stage": "pick_match",
+          "status": "running",
+          "message": "Searching coverage: Brentford v Liverpool",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 1100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_cancel",
+        "seq": 12,
+        "ts": "2026-10-20T09:00:06.400Z",
+        "payload": {
+          "stage": "pick_match",
+          "status": "running",
+          "message": "Searching coverage: Manchester City v Ipswich Town",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 1600,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_cancel",
+        "seq": 13,
+        "ts": "2026-10-20T09:00:08.000Z",
+        "payload": {
+          "stage": "pick_match",
+          "status": "done",
+          "message": "Picked Brentford v Liverpool · drama",
+          "progress": null,
+          "detail": "Liverpool came from a goal down to win at Brentford, who finished with nine men after red cards in first-half stoppage time and the 92nd minute."
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_cancel",
+        "seq": 14,
+        "ts": "2026-10-20T09:00:08.100Z",
+        "payload": {
+          "stage": "search_coverage",
+          "status": "running",
+          "message": "Searching match coverage",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 1200,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_cancel",
+        "seq": 15,
+        "ts": "2026-10-20T09:00:09.300Z",
+        "payload": {
+          "stage": "search_coverage",
+          "status": "done",
+          "message": "2 sources kept",
+          "progress": null,
+          "detail": "Reused 1 result from the pick stage."
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_cancel",
+        "seq": 16,
+        "ts": "2026-10-20T09:00:09.400Z",
+        "payload": {
+          "stage": "pick_moment",
+          "status": "running",
+          "message": "Reading the timeline",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 1500,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_cancel",
+        "seq": 17,
+        "ts": "2026-10-20T09:00:10.900Z",
+        "payload": {
+          "stage": "pick_moment",
+          "status": "done",
+          "message": "The comeback, from the red card to the winner",
+          "progress": null,
+          "detail": "Yarmoliuk sent off (45+8'), Muñoz equalises (62'), Isak wins it (70')."
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_cancel",
+        "seq": 18,
+        "ts": "2026-10-20T09:00:11.000Z",
+        "payload": {
+          "stage": "build_fact_sheet",
+          "status": "running",
+          "message": "Merging events and coverage",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "await": "run.cancel"
+    },
+    {
+      "delayMs": 400,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_cancel",
+        "seq": 19,
+        "ts": "2026-10-20T09:00:11.400Z",
+        "payload": {
+          "stage": "build_fact_sheet",
+          "status": "done",
+          "message": "14 facts from 2 sources",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "run.error",
+        "runId": "r_mock_cancel",
+        "seq": 20,
+        "ts": "2026-10-20T09:00:11.500Z",
+        "payload": {
+          "code": "cancelled",
+          "message": "Run cancelled. Nothing was generated.",
+          "retryable": true,
+          "stage": "build_fact_sheet",
+          "reasons": [],
+          "guardrails": null,
+          "suggestion": null
+        }
+      }
+    }
+  ]
+}

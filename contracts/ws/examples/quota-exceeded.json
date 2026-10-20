@@ -1,0 +1,906 @@
+{
+  "$schema": "../mock-script.json",
+  "id": "quota-exceeded",
+  "title": "Quota exceeded mid-run",
+  "description": "Gemini's per-minute free quota runs out during pick_match. The backend asks the user to wait or switch model; after the answer the run completes like success.",
+  "start": {
+    "sport": "football",
+    "league": "eng.1",
+    "range": {
+      "granularity": "week",
+      "anchor": "2026-10-12"
+    },
+    "style": "ballad",
+    "output": "text",
+    "llm": {
+      "mode": "byok",
+      "provider": "gemini",
+      "model": "gemini/gemini-flash",
+      "apiKey": "mock-key-not-real"
+    }
+  },
+  "steps": [
+    {
+      "delayMs": 150,
+      "send": {
+        "v": 1,
+        "type": "run.accepted",
+        "runId": "r_mock_quota",
+        "seq": 1,
+        "ts": "2026-10-20T09:00:00.150Z",
+        "payload": {
+          "stages": [
+            {
+              "id": "resolve_range",
+              "label": "Resolve the date range"
+            },
+            {
+              "id": "fetch_matches",
+              "label": "Find completed matches"
+            },
+            {
+              "id": "score_matches",
+              "label": "Load events and score drama"
+            },
+            {
+              "id": "pick_match",
+              "label": "Pick the match"
+            },
+            {
+              "id": "search_coverage",
+              "label": "Search match coverage"
+            },
+            {
+              "id": "pick_moment",
+              "label": "Pick the moment"
+            },
+            {
+              "id": "build_fact_sheet",
+              "label": "Build the fact sheet"
+            },
+            {
+              "id": "generate",
+              "label": "Write the poem"
+            },
+            {
+              "id": "guardrails",
+              "label": "Check the output"
+            },
+            {
+              "id": "done",
+              "label": "Done"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_quota",
+        "seq": 2,
+        "ts": "2026-10-20T09:00:00.250Z",
+        "payload": {
+          "stage": "resolve_range",
+          "status": "running",
+          "message": "Resolving the week",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 150,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_quota",
+        "seq": 3,
+        "ts": "2026-10-20T09:00:00.400Z",
+        "payload": {
+          "stage": "resolve_range",
+          "status": "done",
+          "message": "Mon 12 Oct – Sun 18 Oct 2026, London time",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_quota",
+        "seq": 4,
+        "ts": "2026-10-20T09:00:00.500Z",
+        "payload": {
+          "stage": "fetch_matches",
+          "status": "running",
+          "message": "Asking ESPN for Premier League results",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 900,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_quota",
+        "seq": 5,
+        "ts": "2026-10-20T09:00:01.400Z",
+        "payload": {
+          "stage": "fetch_matches",
+          "status": "done",
+          "message": "10 completed matches",
+          "progress": null,
+          "detail": "Tottenham Hotspur v Coventry City kicked off on Mon 19 Oct, so it belongs to the next week."
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_quota",
+        "seq": 6,
+        "ts": "2026-10-20T09:00:01.500Z",
+        "payload": {
+          "stage": "score_matches",
+          "status": "running",
+          "message": "Loading match events",
+          "progress": 0.0,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 700,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_quota",
+        "seq": 7,
+        "ts": "2026-10-20T09:00:02.200Z",
+        "payload": {
+          "stage": "score_matches",
+          "status": "running",
+          "message": "3 of 10 matches loaded",
+          "progress": 0.3,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 900,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_quota",
+        "seq": 8,
+        "ts": "2026-10-20T09:00:03.100Z",
+        "payload": {
+          "stage": "score_matches",
+          "status": "running",
+          "message": "7 of 10 matches loaded",
+          "progress": 0.7,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 700,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_quota",
+        "seq": 9,
+        "ts": "2026-10-20T09:00:03.800Z",
+        "payload": {
+          "stage": "score_matches",
+          "status": "done",
+          "message": "10 of 10 matches loaded",
+          "progress": 1.0,
+          "detail": "Strongest drama signals: Brentford 1–2 Liverpool (came from behind, 2 red cards) · Manchester City 3–2 Ipswich Town (5 goals, penalty in the 90th minute) · Coventry City 4–1 Newcastle United (5 goals, penalty)"
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_quota",
+        "seq": 10,
+        "ts": "2026-10-20T09:00:03.900Z",
+        "payload": {
+          "stage": "pick_match",
+          "status": "running",
+          "message": "Short-listing 3 of 10 matches",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 1400,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_quota",
+        "seq": 11,
+        "ts": "2026-10-20T09:00:05.300Z",
+        "payload": {
+          "stage": "pick_match",
+          "status": "running",
+          "message": "Waiting for the Gemini quota to reset",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 50,
+      "send": {
+        "v": 1,
+        "type": "prompt.request",
+        "runId": "r_mock_quota",
+        "seq": 12,
+        "ts": "2026-10-20T09:00:05.350Z",
+        "payload": {
+          "promptId": "p_quota_1",
+          "kind": "quota_exceeded",
+          "message": "Gemini's free per-minute quota is used up. Retry in 38 s, or switch to another model.",
+          "options": [
+            {
+              "id": "wait",
+              "label": "Wait and retry"
+            },
+            {
+              "id": "switch_model",
+              "label": "Switch model"
+            },
+            {
+              "id": "cancel",
+              "label": "Cancel run"
+            }
+          ],
+          "retryAfterSeconds": 38
+        }
+      }
+    },
+    {
+      "await": "prompt.answer"
+    },
+    {
+      "delayMs": 300,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_quota",
+        "seq": 13,
+        "ts": "2026-10-20T09:00:05.650Z",
+        "payload": {
+          "stage": "pick_match",
+          "status": "running",
+          "message": "Searching coverage: Brentford v Liverpool",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 1100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_quota",
+        "seq": 14,
+        "ts": "2026-10-20T09:00:06.750Z",
+        "payload": {
+          "stage": "pick_match",
+          "status": "running",
+          "message": "Searching coverage: Manchester City v Ipswich Town",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 1600,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_quota",
+        "seq": 15,
+        "ts": "2026-10-20T09:00:08.350Z",
+        "payload": {
+          "stage": "pick_match",
+          "status": "done",
+          "message": "Picked Brentford v Liverpool · drama",
+          "progress": null,
+          "detail": "Liverpool came from a goal down to win at Brentford, who finished with nine men after red cards in first-half stoppage time and the 92nd minute."
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_quota",
+        "seq": 16,
+        "ts": "2026-10-20T09:00:08.450Z",
+        "payload": {
+          "stage": "search_coverage",
+          "status": "running",
+          "message": "Searching match coverage",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 1200,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_quota",
+        "seq": 17,
+        "ts": "2026-10-20T09:00:09.650Z",
+        "payload": {
+          "stage": "search_coverage",
+          "status": "done",
+          "message": "2 sources kept",
+          "progress": null,
+          "detail": "Reused 1 result from the pick stage."
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_quota",
+        "seq": 18,
+        "ts": "2026-10-20T09:00:09.750Z",
+        "payload": {
+          "stage": "pick_moment",
+          "status": "running",
+          "message": "Reading the timeline",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 1500,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_quota",
+        "seq": 19,
+        "ts": "2026-10-20T09:00:11.250Z",
+        "payload": {
+          "stage": "pick_moment",
+          "status": "done",
+          "message": "The comeback, from the red card to the winner",
+          "progress": null,
+          "detail": "Yarmoliuk sent off (45+8'), Muñoz equalises (62'), Isak wins it (70')."
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_quota",
+        "seq": 20,
+        "ts": "2026-10-20T09:00:11.350Z",
+        "payload": {
+          "stage": "build_fact_sheet",
+          "status": "running",
+          "message": "Merging events and coverage",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 2100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_quota",
+        "seq": 21,
+        "ts": "2026-10-20T09:00:13.450Z",
+        "payload": {
+          "stage": "build_fact_sheet",
+          "status": "done",
+          "message": "14 facts from 2 sources",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_quota",
+        "seq": 22,
+        "ts": "2026-10-20T09:00:13.550Z",
+        "payload": {
+          "stage": "generate",
+          "status": "running",
+          "message": "Writing the headline and poem",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 3800,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_quota",
+        "seq": 23,
+        "ts": "2026-10-20T09:00:17.350Z",
+        "payload": {
+          "stage": "generate",
+          "status": "done",
+          "message": "Poem written",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_quota",
+        "seq": 24,
+        "ts": "2026-10-20T09:00:17.450Z",
+        "payload": {
+          "stage": "guardrails",
+          "status": "running",
+          "message": "Running 7 checks",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 1900,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_quota",
+        "seq": 25,
+        "ts": "2026-10-20T09:00:19.350Z",
+        "payload": {
+          "stage": "guardrails",
+          "status": "done",
+          "message": "7 of 7 checks passed on the first attempt",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_quota",
+        "seq": 26,
+        "ts": "2026-10-20T09:00:19.450Z",
+        "payload": {
+          "stage": "done",
+          "status": "done",
+          "message": "Done",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 50,
+      "send": {
+        "v": 1,
+        "type": "run.result",
+        "runId": "r_mock_quota",
+        "seq": 27,
+        "ts": "2026-10-20T09:00:19.500Z",
+        "payload": {
+          "output": "text",
+          "text": {
+            "headline": {
+              "text": "The Ballad of the Nine-Man Bees",
+              "factIds": [
+                "f4",
+                "f10"
+              ]
+            },
+            "stanzas": [
+              {
+                "lines": [
+                  {
+                    "text": "A penalty for Liverpool",
+                    "factIds": [
+                      "f3"
+                    ]
+                  },
+                  {
+                    "text": "was cancelled by the screen;",
+                    "factIds": [
+                      "f3"
+                    ]
+                  },
+                  {
+                    "text": "two minutes on, Keane Lewis-Potter",
+                    "factIds": [
+                      "f2"
+                    ]
+                  },
+                  {
+                    "text": "rose up and headed clean.",
+                    "factIds": [
+                      "f2"
+                    ]
+                  }
+                ]
+              },
+              {
+                "lines": [
+                  {
+                    "text": "It came from Igor Thiago's cross",
+                    "factIds": [
+                      "f2"
+                    ]
+                  },
+                  {
+                    "text": "and found the topmost nook:",
+                    "factIds": [
+                      "f2"
+                    ]
+                  },
+                  {
+                    "text": "one–nil, and all the Gtech roared;",
+                    "factIds": [
+                      "f2"
+                    ]
+                  },
+                  {
+                    "text": "the Reds could only look.",
+                    "factIds": []
+                  }
+                ]
+              },
+              {
+                "lines": [
+                  {
+                    "text": "But deep in first-half added time",
+                    "factIds": [
+                      "f4"
+                    ]
+                  },
+                  {
+                    "text": "Yarmoliuk lost his head:",
+                    "factIds": [
+                      "f4"
+                    ]
+                  },
+                  {
+                    "text": "he aimed it, grappling, at Jacquet,",
+                    "factIds": [
+                      "f5"
+                    ]
+                  },
+                  {
+                    "text": "and VAR turned it red.",
+                    "factIds": [
+                      "f4",
+                      "f5"
+                    ]
+                  }
+                ]
+              },
+              {
+                "lines": [
+                  {
+                    "text": "With ten men left, the Bees held firm",
+                    "factIds": [
+                      "f4"
+                    ]
+                  },
+                  {
+                    "text": "until the sixty-second,",
+                    "factIds": [
+                      "f6"
+                    ]
+                  },
+                  {
+                    "text": "when Wirtz sent Muñoz down the right,",
+                    "factIds": [
+                      "f6"
+                    ]
+                  },
+                  {
+                    "text": "and one–one, the scoreboard reckoned.",
+                    "factIds": [
+                      "f6"
+                    ]
+                  }
+                ]
+              },
+              {
+                "lines": [
+                  {
+                    "text": "Mac Allister swung in a cross,",
+                    "factIds": [
+                      "f8"
+                    ]
+                  },
+                  {
+                    "text": "and Barcola headed back,",
+                    "factIds": [
+                      "f7"
+                    ]
+                  },
+                  {
+                    "text": "and Isak, fresh from injury,",
+                    "factIds": [
+                      "f9"
+                    ]
+                  },
+                  {
+                    "text": "struck home to end the attack.",
+                    "factIds": [
+                      "f7"
+                    ]
+                  }
+                ]
+              },
+              {
+                "lines": [
+                  {
+                    "text": "Then, in the last of added time,",
+                    "factIds": [
+                      "f10"
+                    ]
+                  },
+                  {
+                    "text": "Janelt pulled Ngumoha back;",
+                    "factIds": [
+                      "f10"
+                    ]
+                  },
+                  {
+                    "text": "a second yellow sent him off,",
+                    "factIds": [
+                      "f10"
+                    ]
+                  },
+                  {
+                    "text": "and the Bees were nine, alack.",
+                    "factIds": [
+                      "f10"
+                    ]
+                  }
+                ]
+              },
+              {
+                "lines": [
+                  {
+                    "text": "So sing it soft in Brentford town",
+                    "factIds": []
+                  },
+                  {
+                    "text": "and loud on Merseyside:",
+                    "factIds": []
+                  },
+                  {
+                    "text": "two goals to one to Liverpool,",
+                    "factIds": [
+                      "f1"
+                    ]
+                  },
+                  {
+                    "text": "who came from behind and turned the tide.",
+                    "factIds": [
+                      "f1",
+                      "f2"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "imageUrl": null,
+          "style": "ballad",
+          "match": {
+            "matchId": "401879262",
+            "sport": "football",
+            "competition": "English Premier League",
+            "title": "Brentford v Liverpool",
+            "participants": [
+              "Brentford",
+              "Liverpool"
+            ],
+            "finalResult": "Brentford 1–2 Liverpool",
+            "startTime": "2026-10-17T14:00:00Z",
+            "venue": "Gtech Community Stadium"
+          },
+          "angle": "drama",
+          "moment": "Liverpool's comeback against ten, then nine, men",
+          "facts": [
+            {
+              "id": "f1",
+              "text": "Final score: Brentford 1–2 Liverpool, at the Gtech Community Stadium on Saturday 17 October 2026, kick-off 3pm.",
+              "kind": "score",
+              "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879262"
+            },
+            {
+              "id": "f2",
+              "text": "44': Keane Lewis-Potter headed Igor Thiago's cross into the top right corner. Brentford 1, Liverpool 0. Lewis-Potter is among the smallest players on the pitch.",
+              "kind": "event",
+              "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879262"
+            },
+            {
+              "id": "f3",
+              "text": "Two minutes before the opener, referee John Brooks gave Liverpool a penalty for a trip by Dango Ouattara on Alexis Mac Allister, then overturned it after a VAR review showed Ouattara touched the ball.",
+              "kind": "context",
+              "sourceUrl": "https://www.espn.com/soccer/report/_/gameId/401879262"
+            },
+            {
+              "id": "f4",
+              "text": "45+8': Yehor Yarmoliuk (Brentford) was sent off for violent conduct.",
+              "kind": "event",
+              "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879262"
+            },
+            {
+              "id": "f5",
+              "text": "VAR spotted Yarmoliuk aiming a headbutting action at Jérémy Jacquet as they grappled at a corner.",
+              "kind": "context",
+              "sourceUrl": "https://www.espn.com/soccer/report/_/gameId/401879262"
+            },
+            {
+              "id": "f6",
+              "text": "62': Víctor Muñoz, sent racing down the right by Florian Wirtz on a fast break, cut inside and scored with a left-footed shot into the bottom corner. Brentford 1, Liverpool 1.",
+              "kind": "event",
+              "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879262"
+            },
+            {
+              "id": "f7",
+              "text": "70': Alexander Isak scored from very close range with his left foot after Bradley Barcola headed the ball back to him. Brentford 1, Liverpool 2.",
+              "kind": "event",
+              "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879262"
+            },
+            {
+              "id": "f8",
+              "text": "The winner began with a deep cross from Alexis Mac Allister towards the far post.",
+              "kind": "context",
+              "sourceUrl": "https://www.espn.com/soccer/report/_/gameId/401879262"
+            },
+            {
+              "id": "f9",
+              "text": "Isak had missed Liverpool's previous two matches through injury; the winner was his fifth goal of the season.",
+              "kind": "context",
+              "sourceUrl": "https://www.espn.com/soccer/report/_/gameId/401879262"
+            },
+            {
+              "id": "f10",
+              "text": "90+2': Vitaly Janelt (Brentford) was sent off for a second yellow card, for pulling back Rio Ngumoha. Brentford finished with nine men.",
+              "kind": "event",
+              "sourceUrl": "https://www.espn.com/soccer/report/_/gameId/401879262"
+            },
+            {
+              "id": "f11",
+              "text": "Bradley Barcola, a £123m signing, had a free run on goal after a Janelt mistake, tried to chip goalkeeper Caoimhín Kelleher and stabbed the ball wide.",
+              "kind": "context",
+              "sourceUrl": "https://www.espn.com/soccer/report/_/gameId/401879262"
+            },
+            {
+              "id": "f12",
+              "text": "Home fans behind the goal sang \"what a waste of money\" after Barcola's miss.",
+              "kind": "quote",
+              "sourceUrl": "https://www.espn.com/soccer/report/_/gameId/401879262"
+            },
+            {
+              "id": "f13",
+              "text": "Dominik Szoboszlai went off injured after 32 minutes.",
+              "kind": "context",
+              "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879262"
+            },
+            {
+              "id": "f14",
+              "text": "Liverpool had 59.9% of possession and 21 shots to Brentford's 10.",
+              "kind": "context",
+              "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879262"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Alexander Isak completes Liverpool comeback at nine-man Brentford",
+              "url": "https://www.espn.com/soccer/report/_/gameId/401879262",
+              "publisher": "ESPN",
+              "publishedAt": "2026-10-17T16:07:00Z"
+            },
+            {
+              "title": "Brentford v Liverpool: match events",
+              "url": "https://www.espn.com/soccer/match/_/gameId/401879262",
+              "publisher": "ESPN",
+              "publishedAt": null
+            }
+          ],
+          "guardrails": {
+            "passed": true,
+            "attempts": 1,
+            "checks": [
+              {
+                "id": "score",
+                "label": "Score",
+                "status": "pass",
+                "detail": "Every score matches the match data"
+              },
+              {
+                "id": "names",
+                "label": "Names",
+                "status": "pass",
+                "detail": "11 people named, all in the match roster"
+              },
+              {
+                "id": "quotes",
+                "label": "Quotes",
+                "status": "pass",
+                "detail": "No quotes used"
+              },
+              {
+                "id": "overlap",
+                "label": "Originality",
+                "status": "pass",
+                "detail": "Longest span shared with a source: 4 words; 8-gram overlap 0.0%"
+              },
+              {
+                "id": "form",
+                "label": "Length and form",
+                "status": "pass",
+                "detail": "7 quatrains, 28 lines, ABCB; 154 words"
+              },
+              {
+                "id": "grounding",
+                "label": "Grounding",
+                "status": "pass",
+                "detail": "26 lines with factual claims, all supported"
+              },
+              {
+                "id": "moderation",
+                "label": "Safety",
+                "status": "pass",
+                "detail": null
+              }
+            ]
+          },
+          "usage": {
+            "model": "gemini/gemini-flash",
+            "inputTokens": 21840,
+            "outputTokens": 2310,
+            "costUsd": 0.0042
+          }
+        }
+      }
+    }
+  ]
+}

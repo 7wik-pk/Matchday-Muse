@@ -1,0 +1,88 @@
+@if (open()) {
+  <div class="backdrop" (click)="open.set(false)"></div>
+  <aside
+    #panel
+    class="drawer"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="drawer-title"
+    tabindex="-1"
+  >
+    <header>
+      <h2 id="drawer-title">Your LLM</h2>
+      <button type="button" class="btn quiet" aria-label="Close" (click)="open.set(false)">
+        ✕
+      </button>
+    </header>
+
+    <p class="hint">
+      Runs use your own API key. It stays in this browser tab, is sent only with each run, and is
+      never stored on the server or logged.
+    </p>
+
+    <label class="field">
+      <span>Provider</span>
+      <select (change)="setProvider($any($event.target).value)">
+        @for (p of providers(); track p) {
+          <option [value]="p" [selected]="p === settings.provider()">{{ providerLabel(p) }}</option>
+        }
+      </select>
+    </label>
+
+    <label class="field">
+      <span>Model</span>
+      <select (change)="settings.model.set($any($event.target).value)">
+        @for (m of providerModels(); track m.id) {
+          <option [value]="m.id" [selected]="m.id === settings.model()">{{ m.label }}</option>
+        }
+      </select>
+      @if (selectedModel()?.freeTierNote; as note) {
+        <span class="hint">{{ note }}</span>
+      }
+      <span class="hint">Only models that can call tools and return JSON are listed.</span>
+    </label>
+
+    <div class="field">
+      <label for="api-key"><span class="label">API key</span></label>
+      <div class="key-row">
+        <input
+          id="api-key"
+          [type]="showKey() ? 'text' : 'password'"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="Paste your key"
+          [value]="settings.apiKey()"
+          (input)="settings.apiKey.set($any($event.target).value)"
+        />
+        <button
+          type="button"
+          class="btn"
+          [attr.aria-pressed]="showKey()"
+          (click)="showKey.set(!showKey())"
+        >
+          {{ showKey() ? 'Hide' : 'Show' }}
+        </button>
+      </div>
+      @if (settings.hasKey()) {
+        <button type="button" class="btn quiet forget" (click)="settings.forgetKey()">
+          Forget key
+        </button>
+      } @else {
+        <span class="hint"
+          >Without a key, runs use the server's development key, if it has one.</span
+        >
+      }
+    </div>
+
+    @if (settings.provider() === 'gemini') {
+      <div class="help">
+        <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener noreferrer">
+          Get a free Gemini key
+        </a>
+        <p class="hint">
+          To stay on the free tier, don't attach a billing account to the Google Cloud project.
+        </p>
+      </div>
+    }
+  </aside>
+}

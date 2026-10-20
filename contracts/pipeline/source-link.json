@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SourceLink",
+  "description": "A source the fact sheet drew on, listed under Sources on the result card.",
+  "type": "object",
+  "required": ["title", "url", "publisher", "publishedAt"],
+  "properties": {
+    "title": { "type": "string" },
+    "url": { "type": "string", "format": "uri" },
+    "publisher": { "type": ["string", "null"] },
+    "publishedAt": { "type": ["string", "null"], "format": "date-time" }
+  },
+  "additionalProperties": false
+}

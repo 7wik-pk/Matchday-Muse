@@ -1,0 +1,68 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  background: rgb(0 0 0 / 30%);
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 11;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: min(400px, 100%);
+  padding: 20px 24px;
+  overflow-y: auto;
+  border-left: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.drawer:focus {
+  outline: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h2 {
+  font: 600 22px/1.3 var(--font-prose);
+}
+
+.label {
+  color: var(--ink-muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.key-row {
+  display: flex;
+  gap: 8px;
+}
+
+.forget {
+  align-self: flex-start;
+  padding-inline: 0;
+  color: var(--danger);
+}
+
+.help {
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-sunk);
+}
+
+.help a {
+  font-weight: 500;
+}
+
+.help p {
+  margin-top: 4px;
+}

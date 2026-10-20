@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GuardrailReport",
+  "description": "Output checks for one run, shown as chips on the result card and scored by evals.",
+  "type": "object",
+  "required": ["passed", "attempts", "checks"],
+  "properties": {
+    "passed": {
+      "type": "boolean",
+      "description": "True only when every check on the final attempt passed or was skipped."
+    },
+    "attempts": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2,
+      "description": "1 = passed first time; 2 = one repair attempt was made."
+    },
+    "checks": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/GuardrailCheck" }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "GuardrailCheck": {
+      "type": "object",
+      "required": ["id", "label", "status", "detail"],
+      "properties": {
+        "id": {
+          "enum": ["score", "names", "quotes", "overlap", "form", "grounding", "moderation"]
+        },
+        "label": { "type": "string" },
+        "status": { "enum": ["pass", "fail", "skipped"] },
+        "detail": {
+          "type": ["string", "null"],
+          "description": "One line for the chip's tooltip, such as the failure reason."
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

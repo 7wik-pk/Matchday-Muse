@@ -1,0 +1,112 @@
+@let r = result();
+<article class="result card" aria-labelledby="result-match">
+  @if (showTabs()) {
+    <nav class="takes" aria-label="Takes on this match">
+      @for (t of takes(); track t.runId) {
+        <button
+          type="button"
+          class="take"
+          [attr.aria-current]="t.runId === take().runId"
+          (click)="select.emit(t.runId)"
+        >
+          {{ styleLabel(t.result.style) }}
+        </button>
+      }
+      @if (pendingStyle(); as pending) {
+        <span class="take pending" aria-live="polite">
+          <span class="spinner" aria-hidden="true"></span>
+          {{ styleLabel(pending) }}…
+        </span>
+      }
+    </nav>
+  }
+
+  @if (retellErrorText(); as message) {
+    <div class="retell-error" role="alert">
+      <span>{{ message }}</span>
+      @if (retellError()?.retryable) {
+        <button type="button" class="btn quiet" [disabled]="busy()" (click)="retryRetell.emit()">
+          Try again
+        </button>
+      }
+    </div>
+  }
+
+  <header>
+    <p class="eyebrow">{{ matchLine() }}</p>
+    <p id="result-match" class="match">
+      {{ isRevealed() ? r.match.finalResult : r.match.title }}
+    </p>
+    <p class="moment">
+      <span class="chip angle" [attr.data-angle]="r.angle">{{ r.angle }}</span>
+      @if (isRevealed()) {
+        {{ r.moment }}
+      }
+    </p>
+  </header>
+
+  <figure class="retelling">
+    @if (r.output === 'image' && r.imageUrl) {
+      <img [src]="r.imageUrl" [alt]="'Illustration of ' + r.moment" />
+    } @else if (r.text) {
+      <app-passage
+        [text]="r.text"
+        [facts]="r.facts"
+        [sources]="r.sources"
+        [animate]="!isRevealed()"
+        [attr.data-style]="r.style"
+        (revealed)="revealed.emit(take().runId)"
+      />
+    }
+    <figcaption class="hint">
+      {{ styleLabel(r.style) }} · AI-generated from match data; may contain errors.
+    </figcaption>
+  </figure>
+
+  <section class="checks" aria-label="Fact checks">
+    <app-guardrail-chips [report]="r.guardrails" />
+  </section>
+
+  @if (r.sources.length) {
+    <section class="sources" aria-labelledby="sources-heading">
+      <h3 id="sources-heading" class="eyebrow">Sources</h3>
+      <ul>
+        @for (source of r.sources; track source.url) {
+          <li>
+            <a [href]="source.url" target="_blank" rel="noopener noreferrer">{{ source.title }}</a>
+            @if (source.publisher) {
+              <span class="hint"> · {{ source.publisher }}</span>
+            }
+          </li>
+        }
+      </ul>
+    </section>
+  }
+
+  @if (r.output === 'text') {
+    <form class="retell" (submit)="$event.preventDefault(); retell.emit(retellStyle())">
+      <label class="field">
+        <span>Retell this match in another style</span>
+        <select (change)="retellStyle.set($any($event.target).value)">
+          @for (group of styleGroups(); track group.label) {
+            <optgroup [label]="group.label">
+              @for (s of group.styles; track s.id) {
+                <option [value]="s.id" [selected]="s.id === retellStyle()">{{ s.label }}</option>
+              }
+            </optgroup>
+          }
+        </select>
+      </label>
+      <button type="submit" class="btn" [disabled]="busy()">Retell</button>
+    </form>
+  }
+
+  <footer>
+    <span class="hint usage">{{ r.usage.model }} · {{ tokens() }} tokens · {{ cost() }}</span>
+    @if (r.text) {
+      <button type="button" class="btn quiet" (click)="copy()">
+        {{ copied() ? 'Copied' : 'Copy poem' }}
+      </button>
+    }
+  </footer>
+</article>

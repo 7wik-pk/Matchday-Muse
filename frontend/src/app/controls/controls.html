@@ -1,0 +1,128 @@
+<form class="controls card" (submit)="submit($event)">
+  <label class="field competition">
+    <span>Competition</span>
+    <select
+      [disabled]="active() || !session()"
+      (change)="competition.set($any($event.target).value)"
+    >
+      @for (sport of sports(); track sport.label) {
+        <optgroup [label]="sport.label">
+          @for (c of sport.competitions; track competitionKey(c)) {
+            <option [value]="competitionKey(c)" [selected]="competitionKey(c) === competition()">
+              {{ c.leagueLabel }}
+            </option>
+          }
+        </optgroup>
+      } @empty {
+        <option>Loading…</option>
+      }
+    </select>
+  </label>
+
+  <fieldset class="field range" [disabled]="active()">
+    <legend>Range</legend>
+    <div class="range-row">
+      <div class="segmented" role="group" aria-label="Range length">
+        @for (g of granularities; track g.id) {
+          <button
+            type="button"
+            [attr.aria-pressed]="range().granularity === g.id"
+            (click)="setGranularity(g.id)"
+          >
+            {{ g.label }}
+          </button>
+        }
+      </div>
+      <div class="stepper">
+        <button
+          type="button"
+          class="btn quiet step"
+          [attr.aria-label]="'Previous ' + unit()"
+          (click)="shift(-1)"
+        >
+          ‹
+        </button>
+        @if (range().granularity === 'month') {
+          <input
+            type="month"
+            aria-label="Month"
+            [value]="range().anchor.slice(0, 7)"
+            (change)="setAnchor($any($event.target).value)"
+          />
+        } @else {
+          <input
+            type="date"
+            [attr.aria-label]="range().granularity === 'week' ? 'Any day in the week' : 'Day'"
+            [value]="range().anchor"
+            (change)="setAnchor($any($event.target).value)"
+          />
+        }
+        <button
+          type="button"
+          class="btn quiet step"
+          [attr.aria-label]="'Next ' + unit()"
+          (click)="shift(1)"
+        >
+          ›
+        </button>
+      </div>
+    </div>
+    <p class="hint range-label" aria-live="polite">{{ label() }}</p>
+  </fieldset>
+
+  <label class="field style">
+    <span>Style</span>
+    <select [disabled]="active() || !session()" (change)="style.set($any($event.target).value)">
+      @for (group of styleGroups(); track group.label) {
+        <optgroup [label]="group.label">
+          @for (s of group.styles; track s.id) {
+            <option [value]="s.id" [selected]="s.id === style()">{{ s.label }}</option>
+          }
+        </optgroup>
+      } @empty {
+        <option>Loading…</option>
+      }
+    </select>
+    <span class="hint style-description">{{ styleDescription() }}</span>
+  </label>
+
+  <fieldset class="field output" [disabled]="active()">
+    <legend>Output</legend>
+    <div class="segmented" role="group" aria-label="Output">
+      <button
+        type="button"
+        [attr.aria-pressed]="outputKind() === 'text'"
+        (click)="outputKind.set('text')"
+      >
+        Text
+      </button>
+      <button
+        type="button"
+        [attr.aria-pressed]="outputKind() === 'image'"
+        [disabled]="imageBlockedReason() !== null"
+        [attr.title]="imageBlockedReason()"
+        (click)="outputKind.set('image')"
+      >
+        Image
+      </button>
+    </div>
+    @if (imageBlockedReason(); as reason) {
+      <span class="hint">{{ reason }}</span>
+    }
+  </fieldset>
+
+  <div class="go">
+    @if (active()) {
+      <button
+        type="button"
+        class="btn danger"
+        [disabled]="phase() !== 'running'"
+        (click)="cancel.emit()"
+      >
+        {{ phase() === 'cancelling' ? 'Cancelling…' : 'Cancel' }}
+      </button>
+    } @else {
+      <button type="submit" class="btn primary" [disabled]="!session()">Generate</button>
+    }
+  </div>
+</form>

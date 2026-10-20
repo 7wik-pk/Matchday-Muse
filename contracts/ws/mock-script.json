@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MockScript",
+  "description": "A scripted run in contracts/ws/examples/: the server messages for one run, in order. The frontend's MockWsService replays it; backend protocol tests compare against it.",
+  "type": "object",
+  "required": ["id", "title", "description", "start", "steps"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Matches the file name; selected in the UI with ?mock=<id>."
+    },
+    "title": { "type": "string" },
+    "description": { "type": "string" },
+    "start": {
+      "description": "The run.start or run.retell payload the script answers. Null for the session handshake script.",
+      "anyOf": [
+        { "$ref": "client-message.json#/$defs/RunStartPayload" },
+        { "$ref": "client-message.json#/$defs/RunRetellPayload" },
+        { "type": "null" }
+      ]
+    },
+    "steps": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "oneOf": [
+          { "$ref": "#/$defs/SendStep" },
+          { "$ref": "#/$defs/AwaitStep" }
+        ]
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "SendStep": {
+      "type": "object",
+      "required": ["delayMs", "send"],
+      "properties": {
+        "delayMs": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Wait this long after the previous step before sending."
+        },
+        "send": { "$ref": "server-message.json" }
+      },
+      "additionalProperties": false
+    },
+    "AwaitStep": {
+      "type": "object",
+      "description": "Pause the replay until the client sends a message of this type.",
+      "required": ["await"],
+      "properties": {
+        "await": { "enum": ["run.cancel", "prompt.answer"] }
+      },
+      "additionalProperties": false
+    }
+  }
+}

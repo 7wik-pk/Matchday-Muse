@@ -1,0 +1,406 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ServerMessage",
+  "description": "Every message the backend sends on /ws. seq increases by 1 per run, starting at 1; session messages carry runId null and seq 0.",
+  "oneOf": [
+    { "$ref": "#/$defs/SessionReady" },
+    { "$ref": "#/$defs/RunAccepted" },
+    { "$ref": "#/$defs/StageUpdate" },
+    { "$ref": "#/$defs/PromptRequest" },
+    { "$ref": "#/$defs/RunResult" },
+    { "$ref": "#/$defs/RunError" }
+  ],
+  "$defs": {
+    "Ts": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "SessionReady": {
+      "type": "object",
+      "required": ["v", "type", "runId", "seq", "ts", "payload"],
+      "properties": {
+        "v": { "const": 1 },
+        "type": { "const": "session.ready" },
+        "runId": { "type": "null" },
+        "seq": { "const": 0 },
+        "ts": { "$ref": "#/$defs/Ts" },
+        "payload": { "$ref": "#/$defs/SessionReadyPayload" }
+      },
+      "additionalProperties": false
+    },
+    "SessionReadyPayload": {
+      "type": "object",
+      "required": ["freeRunsLeft", "competitions", "styles", "models"],
+      "properties": {
+        "freeRunsLeft": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "description": "Null until free runs exist (Phase 3); the UI then hides the counter."
+        },
+        "competitions": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/Competition" }
+        },
+        "styles": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/StylePreset" }
+        },
+        "models": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/ModelInfo" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "Competition": {
+      "type": "object",
+      "required": ["sport", "sportLabel", "league", "leagueLabel", "coverage"],
+      "properties": {
+        "sport": { "type": "string" },
+        "sportLabel": { "type": "string" },
+        "league": { "type": "string" },
+        "leagueLabel": { "type": "string" },
+        "coverage": { "enum": ["full_events", "round_stats", "scores_only"] }
+      },
+      "additionalProperties": false
+    },
+    "StylePreset": {
+      "type": "object",
+      "required": ["id", "label", "description", "family"],
+      "properties": {
+        "id": { "$ref": "common.json#/$defs/StyleId" },
+        "label": { "type": "string" },
+        "description": { "type": "string" },
+        "family": { "$ref": "common.json#/$defs/StyleFamily" }
+      },
+      "additionalProperties": false
+    },
+    "ModelInfo": {
+      "type": "object",
+      "description": "One entry of the model registry.",
+      "required": ["id", "provider", "label", "tools", "json", "imageCompanion", "freeTierNote"],
+      "properties": {
+        "id": { "type": "string", "description": "LiteLLM model string." },
+        "provider": { "type": "string" },
+        "label": { "type": "string" },
+        "tools": { "type": "boolean" },
+        "json": { "type": "boolean" },
+        "imageCompanion": {
+          "type": ["string", "null"],
+          "description": "Image model for this provider; null disables the Image toggle."
+        },
+        "freeTierNote": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "RunAccepted": {
+      "type": "object",
+      "required": ["v", "type", "runId", "seq", "ts", "payload"],
+      "properties": {
+        "v": { "const": 1 },
+        "type": { "const": "run.accepted" },
+        "runId": { "type": "string" },
+        "seq": { "type": "integer", "minimum": 1 },
+        "ts": { "$ref": "#/$defs/Ts" },
+        "payload": {
+          "title": "RunAcceptedPayload",
+          "type": "object",
+          "required": ["stages"],
+          "properties": {
+            "stages": {
+              "description": "A full run lists all 10 stages; a retell lists generate, guardrails and done.",
+              "type": "array",
+              "minItems": 1,
+              "items": { "$ref": "#/$defs/StageInfo" }
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "StageInfo": {
+      "type": "object",
+      "required": ["id", "label"],
+      "properties": {
+        "id": { "$ref": "common.json#/$defs/StageId" },
+        "label": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "StageUpdate": {
+      "type": "object",
+      "required": ["v", "type", "runId", "seq", "ts", "payload"],
+      "properties": {
+        "v": { "const": 1 },
+        "type": { "const": "stage.update" },
+        "runId": { "type": "string" },
+        "seq": { "type": "integer", "minimum": 1 },
+        "ts": { "$ref": "#/$defs/Ts" },
+        "payload": {
+          "title": "StageUpdatePayload",
+          "type": "object",
+          "required": ["stage", "status", "message", "progress", "detail"],
+          "properties": {
+            "stage": { "$ref": "common.json#/$defs/StageId" },
+            "status": { "enum": ["running", "done", "skipped", "failed"] },
+            "message": {
+              "type": "string",
+              "description": "Latest one-line status, such as \"7 of 10 matches loaded\"."
+            },
+            "progress": {
+              "type": ["number", "null"],
+              "minimum": 0,
+              "maximum": 1
+            },
+            "detail": {
+              "type": ["string", "null"],
+              "description": "Expandable extra text, such as the reason for a pick."
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "PromptRequest": {
+      "type": "object",
+      "required": ["v", "type", "runId", "seq", "ts", "payload"],
+      "properties": {
+        "v": { "const": 1 },
+        "type": { "const": "prompt.request" },
+        "runId": { "type": "string" },
+        "seq": { "type": "integer", "minimum": 1 },
+        "ts": { "$ref": "#/$defs/Ts" },
+        "payload": {
+          "title": "PromptRequestPayload",
+          "type": "object",
+          "required": ["promptId", "kind", "message", "options", "retryAfterSeconds"],
+          "properties": {
+            "promptId": { "type": "string" },
+            "kind": { "enum": ["free_runs_exhausted", "quota_exceeded", "switch_model"] },
+            "message": { "type": "string" },
+            "options": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "title": "PromptOption",
+                "type": "object",
+                "required": ["id", "label"],
+                "properties": {
+                  "id": { "type": "string" },
+                  "label": { "type": "string" }
+                },
+                "additionalProperties": false
+              }
+            },
+            "retryAfterSeconds": { "type": ["integer", "null"], "minimum": 0 }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "RunResult": {
+      "type": "object",
+      "required": ["v", "type", "runId", "seq", "ts", "payload"],
+      "properties": {
+        "v": { "const": 1 },
+        "type": { "const": "run.result" },
+        "runId": { "type": "string" },
+        "seq": { "type": "integer", "minimum": 1 },
+        "ts": { "$ref": "#/$defs/Ts" },
+        "payload": { "$ref": "#/$defs/RunResultPayload" }
+      },
+      "additionalProperties": false
+    },
+    "RunResultPayload": {
+      "type": "object",
+      "required": ["output", "text", "imageUrl", "style", "match", "angle", "moment", "facts", "sources", "guardrails", "usage"],
+      "properties": {
+        "output": { "$ref": "common.json#/$defs/OutputKind" },
+        "text": {
+          "anyOf": [{ "$ref": "#/$defs/PassageText" }, { "type": "null" }],
+          "description": "Set when output is text."
+        },
+        "imageUrl": { "type": ["string", "null"], "format": "uri", "description": "Set when output is image." },
+        "style": { "$ref": "common.json#/$defs/StyleId" },
+        "match": { "$ref": "#/$defs/MatchSummary" },
+        "angle": { "$ref": "common.json#/$defs/Angle" },
+        "moment": { "type": "string", "description": "One line naming the retold moment." },
+        "facts": {
+          "type": "array",
+          "description": "The fact sheet's facts, which lines refer to by id.",
+          "items": { "$ref": "#/$defs/Fact" }
+        },
+        "sources": {
+          "type": "array",
+          "items": { "$ref": "../pipeline/source-link.json" }
+        },
+        "guardrails": { "$ref": "../pipeline/guardrail-report.json" },
+        "usage": { "$ref": "#/$defs/Usage" }
+      },
+      "additionalProperties": false
+    },
+    "PassageText": {
+      "type": "object",
+      "description": "The headline and poem. The backend splits the poem into stanzas and lines.",
+      "required": ["headline", "stanzas"],
+      "properties": {
+        "headline": { "$ref": "#/$defs/Line" },
+        "stanzas": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/Stanza" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "Stanza": {
+      "type": "object",
+      "required": ["lines"],
+      "properties": {
+        "lines": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/Line" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "Line": {
+      "type": "object",
+      "required": ["text", "factIds"],
+      "properties": {
+        "text": { "type": "string", "minLength": 1 },
+        "factIds": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "The facts this line rests on, from the grounding judge; empty for pure colour."
+        }
+      },
+      "additionalProperties": false
+    },
+    "Fact": {
+      "type": "object",
+      "required": ["id", "text", "kind", "sourceUrl"],
+      "properties": {
+        "id": { "type": "string", "examples": ["f3"] },
+        "text": { "type": "string" },
+        "kind": { "enum": ["score", "event", "context", "quote"] },
+        "sourceUrl": {
+          "type": "string",
+          "format": "uri",
+          "description": "The url of one of the result's sources."
+        }
+      },
+      "additionalProperties": false
+    },
+    "MatchSummary": {
+      "type": "object",
+      "required": ["matchId", "sport", "competition", "title", "participants", "finalResult", "startTime", "venue"],
+      "properties": {
+        "matchId": { "type": "string" },
+        "sport": { "type": "string" },
+        "competition": { "type": "string" },
+        "title": { "type": "string", "examples": ["Brentford v Liverpool"] },
+        "participants": { "type": "array", "items": { "type": "string" } },
+        "finalResult": { "type": "string", "examples": ["Brentford 1–2 Liverpool"] },
+        "startTime": { "$ref": "#/$defs/Ts" },
+        "venue": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "Usage": {
+      "type": "object",
+      "required": ["model", "inputTokens", "outputTokens", "costUsd"],
+      "properties": {
+        "model": { "type": "string" },
+        "inputTokens": { "type": "integer", "minimum": 0 },
+        "outputTokens": { "type": "integer", "minimum": 0 },
+        "costUsd": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "description": "Estimated; null when the model's price is unknown."
+        }
+      },
+      "additionalProperties": false
+    },
+    "RunError": {
+      "type": "object",
+      "required": ["v", "type", "runId", "seq", "ts", "payload"],
+      "properties": {
+        "v": { "const": 1 },
+        "type": { "const": "run.error" },
+        "runId": {
+          "type": ["string", "null"],
+          "description": "Null when the failing message never started a run, such as bad_message."
+        },
+        "seq": { "type": "integer", "minimum": 0 },
+        "ts": { "$ref": "#/$defs/Ts" },
+        "payload": {
+          "title": "RunErrorPayload",
+          "type": "object",
+          "required": ["code", "message", "retryable", "stage", "reasons", "guardrails", "suggestion"],
+          "properties": {
+            "code": {
+              "enum": [
+                "bad_message",
+                "bad_request",
+                "no_matches",
+                "cancelled",
+                "stage_failed",
+                "timeout",
+                "budget_exceeded",
+                "guardrail_failed",
+                "quota_exceeded",
+                "provider_error",
+                "interrupted",
+                "retell_unavailable"
+              ]
+            },
+            "message": { "type": "string", "description": "Shown to the user as is." },
+            "retryable": { "type": "boolean" },
+            "stage": {
+              "anyOf": [
+                { "$ref": "common.json#/$defs/StageId" },
+                { "type": "null" }
+              ]
+            },
+            "reasons": {
+              "type": "array",
+              "items": { "type": "string" },
+              "description": "Specific causes, such as the guardrail failures on the last attempt."
+            },
+            "guardrails": {
+              "anyOf": [
+                { "$ref": "../pipeline/guardrail-report.json" },
+                { "type": "null" }
+              ]
+            },
+            "suggestion": {
+              "anyOf": [
+                { "$ref": "#/$defs/RangeSuggestion" },
+                { "type": "null" }
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "RangeSuggestion": {
+      "type": "object",
+      "description": "A range worth trying instead, offered as a one-click button.",
+      "required": ["label", "range"],
+      "properties": {
+        "label": { "type": "string" },
+        "range": { "$ref": "common.json#/$defs/RangeRequest" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

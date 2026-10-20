@@ -1,0 +1,86 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.passage {
+  padding: 4px 0 4px 20px;
+  border-left: 3px solid var(--accent);
+  font: 19px/1.6 var(--font-prose);
+}
+
+.headline {
+  margin-bottom: 0.6em;
+  font: 600 28px/1.2 var(--font-prose);
+  letter-spacing: -0.005em;
+}
+
+.passage p + p {
+  margin-top: 0.9em;
+}
+
+/* Each line on its own line; a line too long for the screen wraps with a hanging indent. */
+.stanza .line {
+  display: block;
+  padding-left: 1.25em;
+  text-indent: -1.25em;
+}
+
+.pending {
+  color: transparent;
+}
+
+.grounded {
+  border-radius: 3px;
+  text-decoration: underline dotted var(--accent);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+  cursor: help;
+}
+
+.grounded:hover,
+.grounded.active {
+  background: var(--accent-soft);
+}
+
+.tools {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tools .btn[aria-pressed='true'] {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.working-panel {
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-sunk);
+}
+
+.working-panel ul {
+  margin: 6px 0 0;
+  padding-left: 18px;
+}
+
+.working-panel li + li {
+  margin-top: 6px;
+}
+
+.working-panel a {
+  margin-left: 4px;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .passage {
+    padding-left: 14px;
+    font-size: 18px;
+  }
+
+  .headline {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,554 @@
+{
+  "$schema": "../mock-script.json",
+  "id": "guardrail-failed",
+  "title": "Guardrail failure after repair",
+  "description": "Picks Manchester City 3–2 Ipswich Town. The poem fails the grounding check, the repair attempt fails it again, and the run ends with guardrail_failed. Nothing is shown.",
+  "start": {
+    "sport": "football",
+    "league": "eng.1",
+    "range": {
+      "granularity": "week",
+      "anchor": "2026-10-12"
+    },
+    "style": "sonnet",
+    "output": "text",
+    "llm": {
+      "mode": "byok",
+      "provider": "gemini",
+      "model": "gemini/gemini-flash",
+      "apiKey": "mock-key-not-real"
+    }
+  },
+  "steps": [
+    {
+      "delayMs": 150,
+      "send": {
+        "v": 1,
+        "type": "run.accepted",
+        "runId": "r_mock_guardrail",
+        "seq": 1,
+        "ts": "2026-10-20T09:00:00.150Z",
+        "payload": {
+          "stages": [
+            {
+              "id": "resolve_range",
+              "label": "Resolve the date range"
+            },
+            {
+              "id": "fetch_matches",
+              "label": "Find completed matches"
+            },
+            {
+              "id": "score_matches",
+              "label": "Load events and score drama"
+            },
+            {
+              "id": "pick_match",
+              "label": "Pick the match"
+            },
+            {
+              "id": "search_coverage",
+              "label": "Search match coverage"
+            },
+            {
+              "id": "pick_moment",
+              "label": "Pick the moment"
+            },
+            {
+              "id": "build_fact_sheet",
+              "label": "Build the fact sheet"
+            },
+            {
+              "id": "generate",
+              "label": "Write the poem"
+            },
+            {
+              "id": "guardrails",
+              "label": "Check the output"
+            },
+            {
+              "id": "done",
+              "label": "Done"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_guardrail",
+        "seq": 2,
+        "ts": "2026-10-20T09:00:00.250Z",
+        "payload": {
+          "stage": "resolve_range",
+          "status": "running",
+          "message": "Resolving the week",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 150,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_guardrail",
+        "seq": 3,
+        "ts": "2026-10-20T09:00:00.400Z",
+        "payload": {
+          "stage": "resolve_range",
+          "status": "done",
+          "message": "Mon 12 Oct – Sun 18 Oct 2026, London time",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_guardrail",
+        "seq": 4,
+        "ts": "2026-10-20T09:00:00.500Z",
+        "payload": {
+          "stage": "fetch_matches",
+          "status": "running",
+          "message": "Asking ESPN for Premier League results",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 900,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_guardrail",
+        "seq": 5,
+        "ts": "2026-10-20T09:00:01.400Z",
+        "payload": {
+          "stage": "fetch_matches",
+          "status": "done",
+          "message": "10 completed matches",
+          "progress": null,
+          "detail": "Tottenham Hotspur v Coventry City kicked off on Mon 19 Oct, so it belongs to the next week."
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_guardrail",
+        "seq": 6,
+        "ts": "2026-10-20T09:00:01.500Z",
+        "payload": {
+          "stage": "score_matches",
+          "status": "running",
+          "message": "Loading match events",
+          "progress": 0.0,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 700,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_guardrail",
+        "seq": 7,
+        "ts": "2026-10-20T09:00:02.200Z",
+        "payload": {
+          "stage": "score_matches",
+          "status": "running",
+          "message": "3 of 10 matches loaded",
+          "progress": 0.3,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 900,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_guardrail",
+        "seq": 8,
+        "ts": "2026-10-20T09:00:03.100Z",
+        "payload": {
+          "stage": "score_matches",
+          "status": "running",
+          "message": "7 of 10 matches loaded",
+          "progress": 0.7,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 700,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_guardrail",
+        "seq": 9,
+        "ts": "2026-10-20T09:00:03.800Z",
+        "payload": {
+          "stage": "score_matches",
+          "status": "done",
+          "message": "10 of 10 matches loaded",
+          "progress": 1.0,
+          "detail": "Strongest drama signals: Brentford 1–2 Liverpool (came from behind, 2 red cards) · Manchester City 3–2 Ipswich Town (5 goals, penalty in the 90th minute) · Coventry City 4–1 Newcastle United (5 goals, penalty)"
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_guardrail",
+        "seq": 10,
+        "ts": "2026-10-20T09:00:03.900Z",
+        "payload": {
+          "stage": "pick_match",
+          "status": "running",
+          "message": "Short-listing 3 of 10 matches",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 1400,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_guardrail",
+        "seq": 11,
+        "ts": "2026-10-20T09:00:05.300Z",
+        "payload": {
+          "stage": "pick_match",
+          "status": "running",
+          "message": "Searching coverage: Manchester City v Ipswich Town",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 1100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_guardrail",
+        "seq": 12,
+        "ts": "2026-10-20T09:00:06.400Z",
+        "payload": {
+          "stage": "pick_match",
+          "status": "running",
+          "message": "Searching coverage: Brentford v Liverpool",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 1600,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_guardrail",
+        "seq": 13,
+        "ts": "2026-10-20T09:00:08.000Z",
+        "payload": {
+          "stage": "pick_match",
+          "status": "done",
+          "message": "Picked Manchester City v Ipswich Town · drama",
+          "progress": null,
+          "detail": "Five goals, and Ipswich scored a 90th-minute penalty after a VAR check to set up a nervous finish."
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_guardrail",
+        "seq": 14,
+        "ts": "2026-10-20T09:00:08.100Z",
+        "payload": {
+          "stage": "search_coverage",
+          "status": "running",
+          "message": "Searching match coverage",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 1200,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_guardrail",
+        "seq": 15,
+        "ts": "2026-10-20T09:00:09.300Z",
+        "payload": {
+          "stage": "search_coverage",
+          "status": "done",
+          "message": "2 sources kept",
+          "progress": null,
+          "detail": "Reused 1 result from the pick stage."
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_guardrail",
+        "seq": 16,
+        "ts": "2026-10-20T09:00:09.400Z",
+        "payload": {
+          "stage": "pick_moment",
+          "status": "running",
+          "message": "Reading the timeline",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 1400,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_guardrail",
+        "seq": 17,
+        "ts": "2026-10-20T09:00:10.800Z",
+        "payload": {
+          "stage": "pick_moment",
+          "status": "done",
+          "message": "Flemming's 90th-minute penalty",
+          "progress": null,
+          "detail": "Haaland's second (69') makes it 3–1; Flemming scores from the spot (90') after a VAR check."
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_guardrail",
+        "seq": 18,
+        "ts": "2026-10-20T09:00:10.900Z",
+        "payload": {
+          "stage": "build_fact_sheet",
+          "status": "running",
+          "message": "Merging events and coverage",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 2000,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_guardrail",
+        "seq": 19,
+        "ts": "2026-10-20T09:00:12.900Z",
+        "payload": {
+          "stage": "build_fact_sheet",
+          "status": "done",
+          "message": "13 facts from 2 sources",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_guardrail",
+        "seq": 20,
+        "ts": "2026-10-20T09:00:13.000Z",
+        "payload": {
+          "stage": "generate",
+          "status": "running",
+          "message": "Writing the headline and poem",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 4100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_guardrail",
+        "seq": 21,
+        "ts": "2026-10-20T09:00:17.100Z",
+        "payload": {
+          "stage": "generate",
+          "status": "done",
+          "message": "Poem written",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_guardrail",
+        "seq": 22,
+        "ts": "2026-10-20T09:00:17.200Z",
+        "payload": {
+          "stage": "guardrails",
+          "status": "running",
+          "message": "Running 7 checks",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 1800,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_guardrail",
+        "seq": 23,
+        "ts": "2026-10-20T09:00:19.000Z",
+        "payload": {
+          "stage": "guardrails",
+          "status": "running",
+          "message": "Attempt 1: grounding failed, rewriting",
+          "progress": 0.5,
+          "detail": "Unsupported claim: \"Haaland completed his hat-trick\" (he scored twice)."
+        }
+      }
+    },
+    {
+      "delayMs": 4300,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_guardrail",
+        "seq": 24,
+        "ts": "2026-10-20T09:00:23.300Z",
+        "payload": {
+          "stage": "guardrails",
+          "status": "running",
+          "message": "Checking attempt 2",
+          "progress": 0.75,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 1700,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_guardrail",
+        "seq": 25,
+        "ts": "2026-10-20T09:00:25.000Z",
+        "payload": {
+          "stage": "guardrails",
+          "status": "failed",
+          "message": "Grounding failed on both attempts",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 50,
+      "send": {
+        "v": 1,
+        "type": "run.error",
+        "runId": "r_mock_guardrail",
+        "seq": 26,
+        "ts": "2026-10-20T09:00:25.050Z",
+        "payload": {
+          "code": "guardrail_failed",
+          "message": "The poem failed the fact check twice, so it was not shown. Try again or pick another form.",
+          "retryable": true,
+          "stage": "guardrails",
+          "reasons": [
+            "Unsupported claim: \"the referee pointed to the spot for handball\" (the match data does not say why the penalty was given)."
+          ],
+          "guardrails": {
+            "passed": false,
+            "attempts": 2,
+            "checks": [
+              {
+                "id": "score",
+                "label": "Score",
+                "status": "pass",
+                "detail": null
+              },
+              {
+                "id": "names",
+                "label": "Names",
+                "status": "pass",
+                "detail": null
+              },
+              {
+                "id": "quotes",
+                "label": "Quotes",
+                "status": "pass",
+                "detail": null
+              },
+              {
+                "id": "overlap",
+                "label": "Originality",
+                "status": "pass",
+                "detail": null
+              },
+              {
+                "id": "form",
+                "label": "Length and form",
+                "status": "pass",
+                "detail": null
+              },
+              {
+                "id": "grounding",
+                "label": "Grounding",
+                "status": "fail",
+                "detail": "1 unsupported claim"
+              },
+              {
+                "id": "moderation",
+                "label": "Safety",
+                "status": "pass",
+                "detail": null
+              }
+            ]
+          },
+          "suggestion": null
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "$schema": "../mock-script.json",
+  "id": "session",
+  "title": "Session handshake",
+  "description": "The session.ready the backend sends after session.hello. Phase 0 has no free runs, so freeRunsLeft is null.",
+  "start": null,
+  "steps": [
+    {
+      "delayMs": 80,
+      "send": {
+        "v": 1,
+        "type": "session.ready",
+        "runId": null,
+        "seq": 0,
+        "ts": "2026-10-20T09:00:00.080Z",
+        "payload": {
+          "freeRunsLeft": null,
+          "competitions": [
+            {
+              "sport": "football",
+              "sportLabel": "Football",
+              "league": "eng.1",
+              "leagueLabel": "English Premier League",
+              "coverage": "full_events"
+            }
+          ],
+          "styles": [
+            {
+              "id": "ballad",
+              "label": "Ballad",
+              "description": "Story-telling quatrains, rhymed ABCB.",
+              "family": "formal"
+            },
+            {
+              "id": "sonnet",
+              "label": "Shakespearean sonnet",
+              "description": "Fourteen lines, rhymed ABAB CDCD EFEF GG, with a closing couplet.",
+              "family": "formal"
+            },
+            {
+              "id": "villanelle",
+              "label": "Villanelle",
+              "description": "Nineteen lines on two rhymes, with two refrains that keep returning.",
+              "family": "formal"
+            },
+            {
+              "id": "mock_heroic",
+              "label": "Mock-heroic couplets",
+              "description": "Grand rhyming couplets for a small affair, in the manner of an 18th-century epic spoof.",
+              "family": "formal"
+            },
+            {
+              "id": "limericks",
+              "label": "Limericks",
+              "description": "Three five-line limericks, rhymed AABBA.",
+              "family": "light"
+            },
+            {
+              "id": "clerihews",
+              "label": "Clerihews",
+              "description": "Four-line comic verses, rhymed AABB, each opening with a player's name.",
+              "family": "light"
+            },
+            {
+              "id": "terrace_chant",
+              "label": "Terrace chant",
+              "description": "Rhyming couplets to sing from the stands, ending in a chorus.",
+              "family": "light"
+            },
+            {
+              "id": "nursery_rhyme",
+              "label": "Nursery rhyme",
+              "description": "Sing-song couplets, rhymed AABB, after the old playground rhymes.",
+              "family": "light"
+            }
+          ],
+          "models": [
+            {
+              "id": "gemini/gemini-flash",
+              "provider": "gemini",
+              "label": "Gemini Flash",
+              "tools": true,
+              "json": true,
+              "imageCompanion": "gemini/gemini-flash-image",
+              "freeTierNote": "Free tier limits apply"
+            },
+            {
+              "id": "anthropic/claude-haiku",
+              "provider": "anthropic",
+              "label": "Claude Haiku",
+              "tools": true,
+              "json": true,
+              "imageCompanion": null,
+              "freeTierNote": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,424 @@
+{
+  "$schema": "../mock-script.json",
+  "id": "retell",
+  "title": "Retell in another style",
+  "description": "Retells the success run as limericks, reusing its fact sheet. The mock swaps in the take for whichever style was asked for, from takes.json.",
+  "start": {
+    "fromRunId": "r_mock_success",
+    "style": "limericks",
+    "output": "text",
+    "llm": {
+      "mode": "byok",
+      "provider": "gemini",
+      "model": "gemini/gemini-flash",
+      "apiKey": "mock-key-not-real"
+    }
+  },
+  "steps": [
+    {
+      "delayMs": 150,
+      "send": {
+        "v": 1,
+        "type": "run.accepted",
+        "runId": "r_mock_retell",
+        "seq": 1,
+        "ts": "2026-10-20T09:00:00.150Z",
+        "payload": {
+          "stages": [
+            {
+              "id": "generate",
+              "label": "Write the poem"
+            },
+            {
+              "id": "guardrails",
+              "label": "Check the output"
+            },
+            {
+              "id": "done",
+              "label": "Done"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_retell",
+        "seq": 2,
+        "ts": "2026-10-20T09:00:00.250Z",
+        "payload": {
+          "stage": "generate",
+          "status": "running",
+          "message": "Writing the headline and poem",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 2600,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_retell",
+        "seq": 3,
+        "ts": "2026-10-20T09:00:02.850Z",
+        "payload": {
+          "stage": "generate",
+          "status": "done",
+          "message": "Poem written",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_retell",
+        "seq": 4,
+        "ts": "2026-10-20T09:00:02.950Z",
+        "payload": {
+          "stage": "guardrails",
+          "status": "running",
+          "message": "Running 7 checks",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 1700,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_retell",
+        "seq": 5,
+        "ts": "2026-10-20T09:00:04.650Z",
+        "payload": {
+          "stage": "guardrails",
+          "status": "done",
+          "message": "7 of 7 checks passed on the first attempt",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 100,
+      "send": {
+        "v": 1,
+        "type": "stage.update",
+        "runId": "r_mock_retell",
+        "seq": 6,
+        "ts": "2026-10-20T09:00:04.750Z",
+        "payload": {
+          "stage": "done",
+          "status": "done",
+          "message": "Done",
+          "progress": null,
+          "detail": null
+        }
+      }
+    },
+    {
+      "delayMs": 50,
+      "send": {
+        "v": 1,
+        "type": "run.result",
+        "runId": "r_mock_retell",
+        "seq": 7,
+        "ts": "2026-10-20T09:00:04.800Z",
+        "payload": {
+          "output": "text",
+          "text": {
+            "headline": {
+              "text": "Three Limericks From a Nine-Man Afternoon",
+              "factIds": [
+                "f4",
+                "f10"
+              ]
+            },
+            "stanzas": [
+              {
+                "lines": [
+                  {
+                    "text": "Keane Lewis-Potter, though small,",
+                    "factIds": [
+                      "f2"
+                    ]
+                  },
+                  {
+                    "text": "outjumped every Red for the ball;",
+                    "factIds": [
+                      "f2"
+                    ]
+                  },
+                  {
+                    "text": "from Igor's high cross",
+                    "factIds": [
+                      "f2"
+                    ]
+                  },
+                  {
+                    "text": "he showed who was boss,",
+                    "factIds": []
+                  },
+                  {
+                    "text": "and the Bees were one up, standing tall.",
+                    "factIds": [
+                      "f2"
+                    ]
+                  }
+                ]
+              },
+              {
+                "lines": [
+                  {
+                    "text": "Then Yarmoliuk, hot in the head,",
+                    "factIds": [
+                      "f4"
+                    ]
+                  },
+                  {
+                    "text": "leaned in at poor Jacquet instead;",
+                    "factIds": [
+                      "f5"
+                    ]
+                  },
+                  {
+                    "text": "the screen took a look,",
+                    "factIds": [
+                      "f5"
+                    ]
+                  },
+                  {
+                    "text": "and Brooks, by the book,",
+                    "factIds": [
+                      "f4"
+                    ]
+                  },
+                  {
+                    "text": "showed a card that was terribly red.",
+                    "factIds": [
+                      "f4"
+                    ]
+                  }
+                ]
+              },
+              {
+                "lines": [
+                  {
+                    "text": "Muñoz equalised with his left,",
+                    "factIds": [
+                      "f6"
+                    ]
+                  },
+                  {
+                    "text": "then Isak, back fit, scored with heft;",
+                    "factIds": [
+                      "f7",
+                      "f9"
+                    ]
+                  },
+                  {
+                    "text": "when Janelt saw red",
+                    "factIds": [
+                      "f10"
+                    ]
+                  },
+                  {
+                    "text": "all the Bees' hopes had fled:",
+                    "factIds": []
+                  },
+                  {
+                    "text": "two–one to the Reds, Bees bereft.",
+                    "factIds": [
+                      "f1"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "imageUrl": null,
+          "style": "limericks",
+          "match": {
+            "matchId": "401879262",
+            "sport": "football",
+            "competition": "English Premier League",
+            "title": "Brentford v Liverpool",
+            "participants": [
+              "Brentford",
+              "Liverpool"
+            ],
+            "finalResult": "Brentford 1–2 Liverpool",
+            "startTime": "2026-10-17T14:00:00Z",
+            "venue": "Gtech Community Stadium"
+          },
+          "angle": "drama",
+          "moment": "Liverpool's comeback against ten, then nine, men",
+          "facts": [
+            {
+              "id": "f1",
+              "text": "Final score: Brentford 1–2 Liverpool, at the Gtech Community Stadium on Saturday 17 October 2026, kick-off 3pm.",
+              "kind": "score",
+              "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879262"
+            },
+            {
+              "id": "f2",
+              "text": "44': Keane Lewis-Potter headed Igor Thiago's cross into the top right corner. Brentford 1, Liverpool 0. Lewis-Potter is among the smallest players on the pitch.",
+              "kind": "event",
+              "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879262"
+            },
+            {
+              "id": "f3",
+              "text": "Two minutes before the opener, referee John Brooks gave Liverpool a penalty for a trip by Dango Ouattara on Alexis Mac Allister, then overturned it after a VAR review showed Ouattara touched the ball.",
+              "kind": "context",
+              "sourceUrl": "https://www.espn.com/soccer/report/_/gameId/401879262"
+            },
+            {
+              "id": "f4",
+              "text": "45+8': Yehor Yarmoliuk (Brentford) was sent off for violent conduct.",
+              "kind": "event",
+              "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879262"
+            },
+            {
+              "id": "f5",
+              "text": "VAR spotted Yarmoliuk aiming a headbutting action at Jérémy Jacquet as they grappled at a corner.",
+              "kind": "context",
+              "sourceUrl": "https://www.espn.com/soccer/report/_/gameId/401879262"
+            },
+            {
+              "id": "f6",
+              "text": "62': Víctor Muñoz, sent racing down the right by Florian Wirtz on a fast break, cut inside and scored with a left-footed shot into the bottom corner. Brentford 1, Liverpool 1.",
+              "kind": "event",
+              "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879262"
+            },
+            {
+              "id": "f7",
+              "text": "70': Alexander Isak scored from very close range with his left foot after Bradley Barcola headed the ball back to him. Brentford 1, Liverpool 2.",
+              "kind": "event",
+              "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879262"
+            },
+            {
+              "id": "f8",
+              "text": "The winner began with a deep cross from Alexis Mac Allister towards the far post.",
+              "kind": "context",
+              "sourceUrl": "https://www.espn.com/soccer/report/_/gameId/401879262"
+            },
+            {
+              "id": "f9",
+              "text": "Isak had missed Liverpool's previous two matches through injury; the winner was his fifth goal of the season.",
+              "kind": "context",
+              "sourceUrl": "https://www.espn.com/soccer/report/_/gameId/401879262"
+            },
+            {
+              "id": "f10",
+              "text": "90+2': Vitaly Janelt (Brentford) was sent off for a second yellow card, for pulling back Rio Ngumoha. Brentford finished with nine men.",
+              "kind": "event",
+              "sourceUrl": "https://www.espn.com/soccer/report/_/gameId/401879262"
+            },
+            {
+              "id": "f11",
+              "text": "Bradley Barcola, a £123m signing, had a free run on goal after a Janelt mistake, tried to chip goalkeeper Caoimhín Kelleher and stabbed the ball wide.",
+              "kind": "context",
+              "sourceUrl": "https://www.espn.com/soccer/report/_/gameId/401879262"
+            },
+            {
+              "id": "f12",
+              "text": "Home fans behind the goal sang \"what a waste of money\" after Barcola's miss.",
+              "kind": "quote",
+              "sourceUrl": "https://www.espn.com/soccer/report/_/gameId/401879262"
+            },
+            {
+              "id": "f13",
+              "text": "Dominik Szoboszlai went off injured after 32 minutes.",
+              "kind": "context",
+              "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879262"
+            },
+            {
+              "id": "f14",
+              "text": "Liverpool had 59.9% of possession and 21 shots to Brentford's 10.",
+              "kind": "context",
+              "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879262"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Alexander Isak completes Liverpool comeback at nine-man Brentford",
+              "url": "https://www.espn.com/soccer/report/_/gameId/401879262",
+              "publisher": "ESPN",
+              "publishedAt": "2026-10-17T16:07:00Z"
+            },
+            {
+              "title": "Brentford v Liverpool: match events",
+              "url": "https://www.espn.com/soccer/match/_/gameId/401879262",
+              "publisher": "ESPN",
+              "publishedAt": null
+            }
+          ],
+          "guardrails": {
+            "passed": true,
+            "attempts": 1,
+            "checks": [
+              {
+                "id": "score",
+                "label": "Score",
+                "status": "pass",
+                "detail": "Every score matches the match data"
+              },
+              {
+                "id": "names",
+                "label": "Names",
+                "status": "pass",
+                "detail": "8 people named, all in the match roster"
+              },
+              {
+                "id": "quotes",
+                "label": "Quotes",
+                "status": "pass",
+                "detail": "No quotes used"
+              },
+              {
+                "id": "overlap",
+                "label": "Originality",
+                "status": "pass",
+                "detail": "Longest span shared with a source: 4 words; 8-gram overlap 0.0%"
+              },
+              {
+                "id": "form",
+                "label": "Length and form",
+                "status": "pass",
+                "detail": "3 limericks, 15 lines, AABBA; 84 words"
+              },
+              {
+                "id": "grounding",
+                "label": "Grounding",
+                "status": "pass",
+                "detail": "14 lines with factual claims, all supported"
+              },
+              {
+                "id": "moderation",
+                "label": "Safety",
+                "status": "pass",
+                "detail": null
+              }
+            ]
+          },
+          "usage": {
+            "model": "gemini/gemini-flash",
+            "inputTokens": 6120,
+            "outputTokens": 940,
+            "costUsd": 0.0011
+          }
+        }
+      }
+    }
+  ]
+}

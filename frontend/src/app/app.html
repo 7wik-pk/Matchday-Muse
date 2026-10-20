@@ -1,0 +1,90 @@
+<header class="topbar">
+  <div class="brand">
+    <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+      <circle cx="16" cy="16" r="14" />
+      <path d="M16 2v28M2 16h28" />
+      <circle cx="16" cy="16" r="5" />
+    </svg>
+    <h1>Matchday <em>Muse</em></h1>
+  </div>
+  <div class="topbar-actions">
+    @if (mock) {
+      <app-mock-bar [busy]="store.active()" (play)="playMock()" />
+    }
+    @if (connectionNote(); as note) {
+      <span class="chip">{{ note }}</span>
+    }
+    <button type="button" class="btn llm" (click)="drawerOpen.set(true)">
+      <span class="dot" [class.on]="settings.hasKey()" aria-hidden="true"></span>
+      Your LLM · {{ llmLabel() }}
+    </button>
+  </div>
+</header>
+
+<main class="page">
+  <app-controls
+    [session]="session()"
+    [phase]="run().phase"
+    [timeZone]="store.timeZone"
+    [imageBlockedReason]="imageBlockedReason()"
+    [(competition)]="competition"
+    [(range)]="range"
+    [(style)]="style"
+    [(outputKind)]="outputKind"
+    (generate)="generate()"
+    (cancel)="store.cancel()"
+  />
+
+  <div class="workspace">
+    <app-stage-panel [stages]="run().stages" />
+
+    <section class="outcome" aria-live="polite">
+      @if (store.selectedTake(); as take) {
+        <app-result-card
+          [takes]="store.takes()"
+          [take]="take"
+          [styles]="session()?.styles ?? []"
+          [timeZone]="store.timeZone"
+          [revealedIds]="revealedIds()"
+          [busy]="store.active()"
+          [pendingStyle]="pendingStyle()"
+          [retellError]="retellError()"
+          (select)="store.selectedRunId.set($event)"
+          (retell)="retell($event)"
+          (retryRetell)="retry()"
+          (revealed)="markRevealed($event)"
+        />
+      } @else if (run().error; as error) {
+        <app-error-card
+          [error]="error"
+          [stages]="run().stages"
+          (retry)="retry()"
+          (trySuggestion)="trySuggestion($event)"
+        />
+      } @else if (run().phase === 'idle') {
+        <article class="intro card">
+          <h2>The week's best match, in rhyme.</h2>
+          <p>
+            Pick a range and a form, then Generate. Matchday Muse reads every result in the range,
+            picks the most dramatic or funniest match, and retells it as a poem. Every line is
+            checked against the match data before you see it.
+          </p>
+        </article>
+      } @else {
+        <article class="working card" aria-busy="true">
+          <p class="eyebrow">Working</p>
+          <p class="working-message">{{ workingMessage() }}</p>
+          <div class="skeleton" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </article>
+      }
+    </section>
+  </div>
+</main>
+
+<app-settings-drawer [(open)]="drawerOpen" [models]="models()" />
+
+@if (run().prompt; as prompt) {
+  <app-prompt-modal [prompt]="prompt" (answer)="answer($event)" />
+}

@@ -1,0 +1,171 @@
+.topbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 20px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 18px 24px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mark {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+}
+
+h1 {
+  font: 600 24px/1 var(--font-prose);
+  letter-spacing: -0.01em;
+}
+
+h1 em {
+  color: var(--accent);
+  font-weight: 400;
+}
+
+.topbar-actions {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  min-width: 0;
+}
+
+app-mock-bar {
+  flex: 0 1 auto;
+}
+
+@media (max-width: 600px) {
+  .topbar-actions {
+    justify-content: flex-start;
+  }
+
+  app-mock-bar {
+    flex: 1 1 100%;
+  }
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ink-faint);
+}
+
+.dot.on {
+  background: var(--accent);
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 20px 24px 48px;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 340px minmax(0, 1fr);
+  align-items: start;
+  gap: 20px;
+}
+
+.intro,
+.working {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 28px;
+}
+
+.intro h2 {
+  font: 600 26px/1.25 var(--font-prose);
+}
+
+.intro p {
+  max-width: 60ch;
+  color: var(--ink-muted);
+}
+
+.working-message {
+  font: 19px/1.4 var(--font-prose);
+}
+
+.skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.skeleton span {
+  height: 12px;
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--surface-sunk) 30%,
+    var(--line) 50%,
+    var(--surface-sunk) 70%
+  );
+  background-size: 300% 100%;
+  animation: shimmer 1.6s ease-in-out infinite;
+}
+
+.skeleton span:last-child {
+  width: 60%;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton span {
+    animation: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .workspace {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* Show the outcome first once there is one; the stages follow. */
+  .outcome {
+    order: -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .topbar {
+    padding: 14px 16px 0;
+  }
+
+  .page {
+    padding: 16px 16px 40px;
+  }
+
+  .intro,
+  .working {
+    padding: 20px;
+  }
+}

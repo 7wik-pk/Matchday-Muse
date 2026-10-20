@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MockTakes",
+  "description": "contracts/ws/examples/takes.json: one run.result per style preset, all for the same match. The frontend's MockWsService swaps a script's run.result for the take in the requested style, so every preset can be seen without a script per style.",
+  "type": "object",
+  "required": ["description", "takes"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "description": { "type": "string" },
+    "takes": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "server-message.json#/$defs/RunResultPayload" }
+    }
+  },
+  "additionalProperties": false
+}

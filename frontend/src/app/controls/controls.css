@@ -1,0 +1,82 @@
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 16px 20px;
+  padding: 16px 20px;
+}
+
+.competition,
+.style {
+  flex: 1 1 180px;
+}
+
+.range,
+.output {
+  flex: none;
+}
+
+.output .hint {
+  max-width: 170px;
+}
+
+.range-row,
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stepper input {
+  width: 150px;
+}
+
+.step {
+  min-height: 34px;
+  padding: 0 8px;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.style-description,
+.range-label {
+  min-height: 1.5em;
+}
+
+.go {
+  flex: none;
+  align-self: center;
+  margin-left: auto;
+}
+
+.go .btn {
+  min-width: 120px;
+}
+
+@media (max-width: 600px) {
+  .controls {
+    padding: 16px;
+  }
+
+  .controls > * {
+    flex: 1 1 100%;
+  }
+
+  .range-row {
+    flex-wrap: wrap;
+  }
+
+  .stepper {
+    flex: 1;
+  }
+
+  .stepper input {
+    flex: 1;
+    width: auto;
+    min-width: 0;
+  }
+
+  .go .btn {
+    width: 100%;
+  }
+}

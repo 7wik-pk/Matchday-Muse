@@ -1,0 +1,77 @@
+<!-- Each word is rendered once; the reveal only toggles a class, so the text
+     never changes under a screen reader. The words carry their own spaces. -->
+<ng-template #words let-s>
+  @for (word of s.words; track $index) {
+    <span [class.pending]="s.start + $index >= shown()">{{ word }}</span>
+  }
+</ng-template>
+
+<ng-template #line let-s>
+  @if (grounded(s)) {
+    <span
+      class="line grounded"
+      tabindex="0"
+      [class.active]="activeKey() === s.key"
+      (mouseenter)="activeKey.set(s.key)"
+      (focus)="activeKey.set(s.key)"
+      (click)="activeKey.set(s.key)"
+    >
+      <ng-container *ngTemplateOutlet="words; context: { $implicit: s }" />
+    </span>
+  } @else {
+    <span class="line"><ng-container *ngTemplateOutlet="words; context: { $implicit: s }" /></span>
+  }
+</ng-template>
+
+<div class="passage" [class.working]="working()" (click)="skip()">
+  <h2 class="headline">
+    <ng-container *ngTemplateOutlet="line; context: { $implicit: headline() }" />
+  </h2>
+  @for (stanza of stanzas(); track $index) {
+    <p class="stanza">
+      @for (l of stanza; track l.key) {
+        <ng-container *ngTemplateOutlet="line; context: { $implicit: l }" />
+      }
+    </p>
+  }
+</div>
+
+<div class="tools">
+  @if (done()) {
+    <button
+      type="button"
+      class="btn quiet"
+      [attr.aria-pressed]="working()"
+      (click)="toggleWorking()"
+    >
+      Show your working
+    </button>
+  } @else {
+    <button type="button" class="btn quiet" (click)="skip()">Show it all</button>
+  }
+</div>
+
+@if (working()) {
+  <aside class="working-panel" aria-live="polite" aria-label="The facts behind the poem">
+    @if (activeFacts(); as facts) {
+      @if (facts.length) {
+        <p class="eyebrow">The facts behind this line</p>
+        <ul>
+          @for (fact of facts; track fact.id) {
+            <li>
+              {{ fact.text }}
+              <a [href]="fact.sourceUrl" target="_blank" rel="noopener noreferrer">{{
+                fact.sourceTitle
+              }}</a>
+            </li>
+          }
+        </ul>
+      } @else {
+        <p class="hint">
+          Point at, tap or tab to an underlined line to see the facts it rests on. Lines without an
+          underline are colour: voice and atmosphere, not claims.
+        </p>
+      }
+    }
+  </aside>
+}
