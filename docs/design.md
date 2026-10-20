@@ -16,7 +16,7 @@ A user picks a sport and league (default: Football, English Premier League), a d
 
 **Learning and resume goals:** build an MCP server in Go; orchestrate LLM calls with structured outputs and tool calling; support multiple LLM providers via LiteLLM; implement guardrails; measure quality with evals; deploy with Terraform; add tracing later.
 
-**Walking skeleton (Phase 0):** the whole product end to end, thinly. The Angular UI comes first, built against mock WebSocket runs replayed from contract examples, so the screens and the protocol are settled before any backend exists. Then the real pieces replace the mock one by one: a FastAPI WebSocket endpoint, the Go MCP server over stdio, the Python pipeline with core guardrails, your own key from the settings drawer, and a baseline Inspect eval. No database and no docker-compose yet. This covers MCP, tool calling, structured output, guardrails, evals and the UI.
+**Walking skeleton (Phase 0):** the whole product end to end, thinly. The Angular UI comes first, built against mock WebSocket runs replayed from contract examples, so the screens and the protocol are settled before any backend exists. Then the real pieces replace the mock one by one: a FastAPI WebSocket endpoint, the Go MCP server, the Python pipeline with core guardrails, your own key from the settings drawer, and a baseline Inspect eval. The stack runs in docker compose from the start, so each service gets its image as it lands; no database yet. This covers MCP, tool calling, structured output, guardrails, evals and the UI.
 
 **MVP scope (Phase 1):** EPL only via the ESPN adapter; text only; paste-your-own-key; Exa or Tavily search; WebSocket stage streaming; Angular UI; docker-compose locally; the full guardrail set; Go tests, pytest and an Inspect eval that meets its targets.
 
@@ -30,7 +30,7 @@ The concept is sound, but the scope has grown from a one-day build into several 
 
 | Issue | Risk | Decision |
 | --- | --- | --- |
-| Scope creep | Nothing ships; half-built everything | Phase 0 is a walking skeleton: UI first against mocks, then a thin real pipeline behind it, no database; Phase 1 is EPL, text and docker-compose only; the house key and free runs wait for the public deployment in Phase 3 |
+| Scope creep | Nothing ships; half-built everything | Phase 0 is a walking skeleton: UI first against mocks, then a thin real pipeline behind it, no database; Phase 1 is EPL and text only; the house key and free runs wait for the public deployment in Phase 3 |
 | Agent-driven code drifts across Go, Python and TypeScript | Mismatched JSON shapes between services | Contracts first: Go structs own the MCP tool schemas (the Go SDK infers them) and are exported to `contracts/mcp/`; WebSocket and pipeline schemas are hand-written JSON Schema; all generated into each language |
 | Picking from final scores only | Late winners, VAR drama and funny moments are invisible; the comedy angle almost never wins | Fetch events for every candidate (cheap, cached), compute deterministic drama signals, and let `pick_match` search coverage for a short list |
 | The core feature goes unmeasured | Evals score grounding and style but never whether the pick was good | Parked for now (see [TODO.md](../TODO.md)); the golden set is already built from whole weeks so pick metrics can be added without re-freezing data |
@@ -103,23 +103,24 @@ One monorepo, with shared contracts at the root so all three languages generate 
 ```
 matchday-muse/
   AGENTS.md                 # instructions for coding agents (see last section)
-  Makefile                  # make dev | dev-frontend | test | eval | gen | lint | diagrams
-  docker-compose.yml        # full local stack
+  Makefile                  # make dev | down | logs | dev-mcp | test | eval | gen | lint | diagrams
+  compose.yaml              # full local stack (docker compose watch)
   .env.example              # every variable, documented
   contracts/                # SOURCE OF TRUTH, JSON Schema
     package.json            # ajv; `npm test` runs scripts/validate.mjs
-    mcp/                    # GENERATED from Go structs: tool inputs and outputs, Event, Match
+    mcp/                    # GENERATED from Go structs: one file per tool, as tools/list returns it
     ws/                     # common.json, client-message.json, server-message.json, mock-script.json
       examples/             # scripted runs as message sequences: frontend mocks + protocol tests
     pipeline/               # FactSheet, MatchPick, MomentPick, GuardrailReport
   mcp-server/               # Go
     cmd/server/main.go
     cmd/schemagen/main.go   # exports tool schemas to contracts/mcp/
-    internal/tools/         # MCP tool handlers
+    cmd/record/main.go      # records ESPN responses into testdata/
+    internal/tools/         # MCP tool definitions and handlers
     internal/sports/        # Adapter interface + espn/, openf1/, cricsheet/
     internal/search/        # Provider interface + exa/, tavily/, fixture/
     internal/cache/         # on-disk response cache
-    testdata/               # recorded API responses
+    testdata/               # recorded ESPN responses; search corpus (embedded)
   backend/                  # Python, FastAPI, uv
     app/main.py             # HTTP + WebSocket endpoints
     app/pipeline/           # stages, state machine, signals, prompts/
@@ -145,7 +146,7 @@ matchday-muse/
 **Conventions**
 
 - Contracts first: change a schema in `contracts/` (or, for MCP tools, the Go struct), run `make gen`, then write code. Generated code is never hand-edited.
-- MCP tool schemas have one owner: the Go structs. The official Go SDK infers each tool's input and output schema from its Go types; `cmd/schemagen` runs the same inference (`jsonschema.For` from `github.com/google/jsonschema-go`) and writes `contracts/mcp/`, so Python and TypeScript generate from exactly what the server advertises. Go code generation from JSON Schema is the weakest of the three toolchains, so it is avoided.
+- MCP tool schemas have one owner: the Go structs. The server infers each tool's input and output schema from its Go types (`jsonschema.For` from `github.com/google/jsonschema-go`, as the SDK does, with lists made non-nullable and a few bounds added). `cmd/schemagen` starts the server in memory, calls `tools/list` through a real client and writes each tool to `contracts/mcp/<tool>.json`, so Python and TypeScript generate from exactly what the server advertises. `make test` fails if the files are stale. Go code generation from JSON Schema is the weakest of the three toolchains, so it is avoided.
 - `contracts/ws/` and `contracts/pipeline/` are hand-written JSON Schema. Pydantic models are generated with datamodel-code-generator; TypeScript types with json-schema-to-typescript.
 - Schemas used as LLM structured outputs (`MatchPick`, `MomentPick`, `FactSheet`, judge verdicts) stay inside the strict-mode subset every provider accepts through LiteLLM: `additionalProperties: false`, every property required (use a nullable type instead of an optional field), no `oneOf`, and no `format`, pattern or length constraints that some providers reject (validate those in Pydantic after parsing instead). A pytest checks each one.
 - Prompts live as versioned files (`prompts/pick_match.v1.md`). The prompt version is logged with every run and used in eval reports.
@@ -160,22 +161,27 @@ The Go server is a thin, deterministic data layer: it fetches, normalises and ca
 | Tool | Input | Output |
 | --- | --- | --- |
 | `list_competitions` | none | Supported sports and leagues, with each adapter's coverage level |
-| `find_matches` | `sport`, `league`, `from`, `to` (UTC ISO) | Completed matches: id, teams or participants, kickoff time, `end_estimate`, final score, one-line summary |
-| `get_match_events` | `sport`, `match_id` | `[]Event` timeline plus `coverage`: `full_events`, `round_stats` or `scores_only` |
-| `search_coverage` | `query`, `max_results`, optional `published_after` | Results: title, URL, published date, cleaned content (truncated) |
+| `find_matches` | `sport`, `league`, `from`, `to` (RFC 3339; kickoff in `[from, to)`, at most 32 days) | Completed matches in kickoff order: id, title, `final_result`, participants with scores, kickoff time, `end_estimate`, venue, one-line summary |
+| `get_match_events` | `sport`, `league`, `match_id` | The match, `[]Event` timeline, `coverage` (`full_events`, `round_stats` or `scores_only`), `team_stats` and `sources` (the match page and match report to cite) |
+| `search_coverage` | `query`, `max_results` (default 5, max 10), optional `published_after` | Provider name; results: title, URL, published date, cleaned content (truncated to 2,000 characters) |
 
-**Normalised event type** (shared across sports, defined in `contracts/mcp/event.json`)
+Bad arguments and source failures come back as tool errors (`isError: true`) with a message saying what to fix, so the LLM in `pick_match` can correct a call.
+
+**Normalised event type** (shared across sports; exported in `contracts/mcp/get_match_events.json`)
 
 ```go
 type Event struct {
     Clock       string   `json:"clock"`       // "67'", "Lap 42", "Over 18.4", "R2 3:12"
-    Type        string   `json:"type"`        // goal, card, sub, wicket, pit, safety_car...
-    Actors      []string `json:"actors"`
+    Type        string   `json:"type"`        // goal, red_card, sub, var, woodwork, wicket, pit...
+    Team        string   `json:"team,omitempty"`
+    Actors      []string `json:"actors"`      // main actor first: scorer, then assister
     Description string   `json:"description"`
-    ScoreAfter  string   `json:"score_after,omitempty"`
+    ScoreAfter  string   `json:"score_after,omitempty"` // home-away, after goals and at breaks
     SourceRef   string   `json:"source_ref"`  // provenance for grounding checks
 }
 ```
+
+For football the timeline is ESPN's full commentary, not just its key events, so shots, woodwork, VAR reviews and fouls are there for the drama signals; stoppages for treatment are dropped.
 
 **Sport adapters** — one Go interface, one package per source:
 
@@ -183,7 +189,7 @@ type Event struct {
 type SportAdapter interface {
     Competitions() []Competition
     FindMatches(ctx context.Context, league string, from, to time.Time) ([]Match, error)
-    MatchEvents(ctx context.Context, matchID string) (Timeline, error)
+    MatchEvents(ctx context.Context, league, matchID string) (Timeline, error)
 }
 ```
 
@@ -206,24 +212,28 @@ type SearchProvider interface {
 providers := map[string]func(cfg Config) SearchProvider{
     "exa":     exa.New,     // EXA_API_KEY
     "tavily":  tavily.New,  // TAVILY_API_KEY
-    "fixture": fixture.New, // replays testdata/, no network
+    "fixture": fixture.New, // a fixed corpus, no network
 }
 ```
 
-An unknown value fails at startup with a clear error. Both real providers map to the same `SearchResult` shape; provider-specific options (Exa's content mode, Tavily's search depth) stay inside each package. The `fixture` provider is what tests and evals use.
+The `fixture` provider ranks a fixed corpus of results by keyword overlap with the query (title words count three times), so any query the LLM writes gets a deterministic answer. Its default corpus is the week's ESPN match reports, headline and one-line description only, recorded alongside the match data and embedded in the binary; `SEARCH_FIXTURE_DIR` points it at another corpus, such as a golden week's frozen search results.
+
+An unknown value fails at startup with a clear error, and so does a planned one that is not built yet (`exa` and `tavily` until Phase 1). Both real providers map to the same `SearchResult` shape; provider-specific options (Exa's content mode, Tavily's search depth) stay inside each package. The `fixture` provider is what tests and evals use.
 
 **Raw-data cache**
 
 - On-disk (local) or a GCS bucket (cloud), keyed by a hash of the request.
-- TTL by data age: fixture lists for the current week 15 minutes; completed matches and search results 7 days; golden-set data pinned forever.
+- TTL by data age: a day's fixture list 15 minutes until the day is 3 days old, then 7 days; a match 15 minutes until it is completed, then 7 days; search results 7 days; golden-set data pinned forever.
 - Respect sources: a short delay between ESPN calls, a descriptive User-Agent, no bulk redistribution.
+- Every outbound call uses a go-resty client: base URL, timeout, headers, a body-size limit and two retries on network and 5xx errors are set once per source, and its request hooks space out and log the calls.
 
 **Transports and security**
 
-- `MCP_TRANSPORT=stdio` for Claude Desktop, MCP Inspector and local debugging.
-- `MCP_TRANSPORT=http` (Streamable HTTP) inside docker-compose and Cloud Run; private network only, plus a shared bearer token (`MCP_AUTH_TOKEN`).
+- `MCP_TRANSPORT=stdio` for Claude Desktop, MCP Inspector (`make dev-mcp`) and local debugging. Logs go to stderr, since stdout carries the protocol.
+- `MCP_TRANSPORT=http` (Streamable HTTP) inside docker compose and Cloud Run: `/mcp` behind a shared bearer token (`MCP_AUTH_TOKEN`, at least 32 characters, compared in constant time), plus an unauthenticated `/healthz`. Sessions are stateless, since no tool calls back to the client, so any instance can answer any request. Private network only; compose publishes the port on localhost alone, for MCP Inspector.
+- The image is a static binary on distroless (`nonroot`), with no shell; `mcp-server healthcheck` probes `/healthz` for the container healthcheck.
 
-**Tests:** table-driven `go test` per adapter against `testdata/` recordings (record once with go-vcr or a small recorder), plus a schema test that marshals every tool output and validates it against the exported `contracts/mcp/` schemas.
+**Tests:** table-driven `go test` per adapter against `testdata/` recordings, served by a local HTTP server that 404s on anything unrecorded. `cmd/record` (`make record-espn`) fetches a week through the adapter itself and saves each response trimmed to the fields the adapter reads, so testdata stays small (about 0.5 MB a week) and holds no article text. Tool tests call every tool through an in-memory MCP client session and validate each output against the exported `contracts/mcp/` schemas; one test checks, for every recorded match, that the timeline's goals add up to the final score.
 
 ## Python backend and pipeline
 
@@ -321,7 +331,7 @@ Phase 0 builds three that differ in shape (`ballad`, `sonnet`, `limericks`): an 
 
 **Retell:** a finished run can be retold in another style, or in the same one for another take, with `run.retell`. The backend reuses that run's `MatchPick`, `MomentPick` and `FactSheet` and runs only `generate`, `guardrails` and `done`, so a retell takes seconds and costs one writer call and one judge call (plus a repair if needed). The source run must have ended in `run.result` and belong to the same session; otherwise the retell ends with `run.error` code `retell_unavailable`. A retell is a run of its own, with its own `runId` and `retell_of` pointing at the source. In Phase 0 the fact sheet lives in memory for the life of the socket; from Phase 1 it is stored on the `runs` row.
 
-**Phase 0 backend:** the same FastAPI app and WebSocket protocol, with runs and their events held in memory instead of Postgres. The backend launches the Go MCP server as a subprocess over stdio, so `make dev` needs only `uvicorn` and `ng serve`.
+**Phase 0 backend:** the same FastAPI app and WebSocket protocol, with runs and their events held in memory instead of Postgres. In docker compose it reaches the `mcp-server` service over Streamable HTTP; run outside Docker (tests, evals) it can launch the server over stdio instead.
 
 ## WebSocket protocol
 
@@ -401,7 +411,7 @@ A single-page app in current Angular (standalone components, signals, the new co
 - Match facts in the scripts are real (ESPN data for the week of Mon 12 Oct 2026); the poems, token counts and costs are made up.
 - The scripts: `session` (the `session.ready` handshake), `success` (a ballad), `no-matches`, `guardrail-failed` (fails after one repair), `quota-exceeded` (a `prompt.request` mid-run), `cancelled`, `stage-failed`, and `retell` (answers every `run.retell`).
 - `takes.json` (format: `contracts/ws/mock-takes.json`) holds one `run.result` per style preset for Brentford 1–2 Liverpool, all from one 14-fact sheet, each line linked to its facts. They double as reference outputs for the presets. `make test` checks there is exactly one per style and that any script result for the same match and style matches its take.
-- `MockWsService` implements the same interface as `WsService` and replays a script with three rewrites: timestamps become the moment each message is sent, each replay gets its own `runId`, and the `run.result` becomes the take in the requested style (keeping the script's usage), so every preset and every retell can be seen. `make dev-frontend` (`ng serve`) uses it while `environment.wsUrl` is null. `?mock=<script>` opens a script and plays it at once, and `?speed=<n>` replays n times faster, the poem reveal included (0 for instant), so every screen state can be opened directly while designing. In mock mode a bar in the header picks the script and speed, and the controls are set to the script's own `run.start`. A Cancel pressed where a script has no `await` step ends the run with `cancelled` straight away.
+- `MockWsService` implements the same interface as `WsService` and replays a script with three rewrites: timestamps become the moment each message is sent, each replay gets its own `runId`, and the `run.result` becomes the take in the requested style (keeping the script's usage), so every preset and every retell can be seen. `make dev` (the `frontend` service, `ng serve`) uses it while `environment.wsUrl` is null. `?mock=<script>` opens a script and plays it at once, and `?speed=<n>` replays n times faster, the poem reveal included (0 for instant), so every screen state can be opened directly while designing. In mock mode a bar in the header picks the script and speed, and the controls are set to the script's own `run.start`. A Cancel pressed where a script has no `await` step ends the run with `cancelled` straight away.
 - Once the backend exists, the same scripts become pytest fixtures: the real backend, run with the fixture search provider and a mock LLM, must emit the same message types in the same stage order.
 
 **Tests:** Vitest (Angular's default runner) with jsdom. The reducer, the mock replay, each component and the whole app are tested against the scripted runs; `make test-frontend` runs them. Phase 1 adds one Playwright smoke test against the real backend with the fixture search provider and a mock LLM.
@@ -564,21 +574,21 @@ Phase 4 adds `generation_cache` (see Future: shared result cache). Migrations ar
 
 ## Infrastructure
 
-Local runs on docker-compose; the cloud runs on GCP via Terraform. The same container images serve both, so what you test locally is what you deploy.
+Local runs on docker compose; the cloud runs on GCP via Terraform. The same container images serve both, so what you test locally is what you deploy.
 
 **Production shape:** the backend container also serves the built Angular app. One public origin means cookies, WebSockets and the API need no CORS setup. The MCP server and LiteLLM Proxy are private.
 
-**docker-compose services** (`docker-compose.yml`)
+**docker compose services** (`compose.yaml`)
 
 | Service | Image | Port | Notes |
 | --- | --- | --- | --- |
-| `postgres` | postgres:16 | 5432 | Databases `app` and `litellm`; named volume |
-| `mcp-server` | built from `mcp-server/` | 8081 | `MCP_TRANSPORT=http`; cache on a volume |
+| `mcp-server` | `mcp-server/Dockerfile`: Go build, distroless runtime | 8081 | Phase 0. `MCP_TRANSPORT=http`; cache on the `mcp-cache` volume; healthcheck; rebuilt on Go changes |
+| `frontend` | `frontend/Dockerfile`, `dev` target: node, `ng serve` | 4200 | Phase 0. Dev only; `src/` and `contracts/ws/` sync into the container for hot reload; later proxies `/api` and `/ws` to `backend` |
+| `backend` | built from `backend/` | 8000 | Phase 0, when it lands. FastAPI + WebSocket; from Phase 1 runs Alembic on start and serves the `frontend` image's `build` target |
+| `postgres` | postgres:16 | 5432 | Phase 1. Databases `app` and `litellm`; named volume |
 | `litellm` | official LiteLLM Proxy image | 4000 | Phase 3. Reads `infra/litellm/config.yaml`; house key from `.env` |
-| `backend` | built from `backend/` | 8000 | FastAPI + WebSocket; runs Alembic on start |
-| `frontend` | node, `ng serve` | 4200 | Dev only; proxies `/api` and `/ws` to `backend` for hot reload |
 
-Profiles: `--profile offline` sets `SEARCH_PROVIDER=fixture` and a mock LLM, for demos and tests without keys. `make dev` brings everything up.
+The stack runs on Podman or Docker: `make dev` uses `podman compose` when Podman is installed, else `docker compose`, and the healthcheck lives in `compose.yaml` because Podman builds OCI images, which have no `HEALTHCHECK`. `podman compose` needs the `docker-compose` provider, since `podman-compose` does not support `watch`. Ports are published on 127.0.0.1 only. `make dev` creates `.env` from `.env.example` with a fresh `MCP_AUTH_TOKEN` if there is none, then runs `compose up --build --watch`; `make down` stops it. Profiles: `--profile offline` sets `SEARCH_PROVIDER=fixture` and a mock LLM, for demos and tests without keys. Tests (`make test`) still run on the host, offline.
 
 **GCP resources** (`infra/terraform/`)
 
@@ -659,9 +669,12 @@ Every variable lives in `.env.example` with a comment; services fail fast at sta
 | `SEARCH_PROVIDER` | mcp-server | `exa` / `tavily` / `fixture` | Selects the search adapter |
 | `EXA_API_KEY` | mcp-server |  | Required when provider is `exa` |
 | `TAVILY_API_KEY` | mcp-server |  | Required when provider is `tavily` |
-| `MCP_TRANSPORT` | mcp-server | `http` / `stdio` | Transport mode |
-| `MCP_AUTH_TOKEN` | mcp-server, backend |  | Shared bearer token for HTTP transport |
-| `CACHE_DIR` / `CACHE_BUCKET` | mcp-server | `/data/cache` / `gs://…` | Raw-data cache location |
+| `SEARCH_FIXTURE_DIR` | mcp-server | `evals/golden/2026-w42/search` | Corpus for the `fixture` provider; unset uses the embedded one |
+| `MCP_TRANSPORT` | mcp-server | `stdio` / `http` | Transport mode; the image defaults to `http` |
+| `MCP_HTTP_ADDR` | mcp-server | `:8081` | Listen address for `http` |
+| `MCP_AUTH_TOKEN` | mcp-server, backend |  | Shared bearer token for HTTP transport, at least 32 characters; `make .env` generates one |
+| `CACHE_DIR` / `CACHE_BUCKET` | mcp-server | `/data/cache` / `gs://…` | Raw-data cache location; locally defaults to the user cache directory |
+| `LOG_LEVEL` | mcp-server | `info` | `debug` logs every ESPN request |
 | `ENABLED_SPORTS` | mcp-server | `football` | Phase gating: `football,f1,cricket` later |
 | `DATABASE_URL` | backend | `postgresql+psycopg://…/app` | App database |
 | `MCP_SERVER_URL` | backend | `http://mcp-server:8081/mcp` | MCP endpoint |
@@ -687,8 +700,8 @@ Build in five phases and move on only when a phase's gate passes. Phase 0 is the
 
 | Phase | Theme | Scope |
 | --- | --- | --- |
-| **0 · Walking skeleton** | EPL, UI-first, local | WebSocket contracts and scripted example runs. Angular UI (controls, stage panel, result card, settings drawer, prompt modal) built against `MockWsService`. Go MCP server over stdio: ESPN football adapter, `fixture` search, on-disk cache, `cmd/schemagen`. FastAPI WebSocket backend with runs in memory, all 10 stages, drama signals and `pick_match` tool calling, using the key from the settings drawer via the LiteLLM SDK. Headline, beats and annotated lines; 3 style presets (ballad, sonnet, limericks). Core guardrails: score, names, quotes, overlap, length and form, grounding judge, repair loop. 5 golden weeks; Inspect baseline report |
-| **1 · MVP** | EPL, text, docker-compose | All 8 style presets; retell. Exa and Tavily search; Streamable HTTP transport with bearer token. Postgres (`sessions`, `runs`, `run_events`). Moderation check; quota parsing and its prompt modal. docker-compose with an offline profile; golden set grows to 10 weeks; judge calibration; Playwright smoke test |
+| **0 · Walking skeleton** | EPL, UI-first, local | WebSocket contracts and scripted example runs. Angular UI (controls, stage panel, result card, settings drawer, prompt modal) built against `MockWsService`. Go MCP server over stdio and Streamable HTTP: ESPN football adapter, `fixture` search, on-disk cache, `cmd/schemagen`. Docker images and docker compose for every service as it lands. FastAPI WebSocket backend with runs in memory, all 10 stages, drama signals and `pick_match` tool calling, using the key from the settings drawer via the LiteLLM SDK. Headline, beats and annotated lines; 3 style presets (ballad, sonnet, limericks). Core guardrails: score, names, quotes, overlap, length and form, grounding judge, repair loop. 5 golden weeks; Inspect baseline report |
+| **1 · MVP** | EPL, text | All 8 style presets; retell. Exa and Tavily search. Postgres (`sessions`, `runs`, `run_events`) in compose. Moderation check; quota parsing and its prompt modal. An offline compose profile; golden set grows to 10 weeks; judge calibration; Playwright smoke test |
 | **2 · Breadth** | Sports and images | OpenF1 and Cricsheet adapters; golden set adds 5 F1 race weekends and 5 cricket weeks. Image output where the provider has an image model; image guardrails. OpenRouter Connect (OAuth PKCE); retrieval injection filter |
 | **3 · Cloud** | Public deployment and red-teaming | Terraform on GCP: 3 Cloud Run services, Cloud SQL, Storage, Secret Manager. GitHub Actions deploy with Workload Identity Federation. House key with 3 free runs: LiteLLM Proxy, per-IP cap, global spend cap. Run resume and replay over WebSockets. promptfoo red-team suite and model matrix in CI |
 | **4 · Insight** | Cache and tracing | Shared result cache; Langfuse traces and scores. AFL and UFC adapters. Drama-signal weights tuned once pick quality is measured (TODO.md). Free-text styles behind moderation |
@@ -709,7 +722,8 @@ Build in five phases and move on only when a phase's gate passes. Phase 0 is the
 - [x] Scripted example runs in `contracts/ws/examples/`, validated by `make test`
 - [x] Angular UI against `MockWsService`: controls, stage panel, result card, settings drawer, prompt modal; component tests driven by the scripts
 - [x] The poem in contracts, mocks and UI: `headline`, stanzas of lines with fact ids and `facts` in `run.result`; `run.retell` and `retell_unavailable`; style families; the reveal, Show your working and retell tabs; a take per preset and a retell script; stage messages without the final score
-- [ ] Go MCP server: SDK setup, `fixture` search, ESPN football adapter with recorded testdata, `find_matches` and `get_match_events`, on-disk cache, `cmd/schemagen`; try it in MCP Inspector over stdio
+- [x] Go MCP server: SDK setup, `fixture` search, ESPN football adapter with recorded testdata, `find_matches` and `get_match_events`, on-disk cache, `cmd/schemagen`; try it in MCP Inspector over stdio
+- [x] Docker images (`mcp-server`, `frontend`) and `compose.yaml` with watch; Streamable HTTP transport with bearer token and `/healthz`
 - [ ] Backend: FastAPI WebSocket endpoint with runs in memory, MCP client over stdio, data stages, drama signals, mock LLM; protocol tests against the scripted runs; switch the UI from the mock to the real socket
 - [ ] LLM stages via the LiteLLM SDK (pick match with tool calling, pick moment, fact sheet, generate) with v1 prompts and three style presets (ballad, sonnet, limericks); BYO key from the settings drawer
 - [ ] Guardrails: score parser, NER name check, quote check, overlap, length and form, grounding judge with rubric returning per-line fact ids, repair loop
@@ -718,11 +732,11 @@ Build in five phases and move on only when a phase's gate passes. Phase 0 is the
 **Phase 1 build order**
 
 - [ ] The other 5 style presets with their rubrics and allowlists; retell over stored fact sheets
-- [ ] Exa and Tavily providers behind `SEARCH_PROVIDER`; HTTP transport with bearer token
+- [ ] Exa and Tavily providers behind `SEARCH_PROVIDER`
 - [ ] Postgres: SQLAlchemy models and Alembic, session cookie, `run_events` written alongside the socket
-- [ ] docker-compose with Postgres, mcp-server, backend and frontend; `--profile offline`
+- [ ] Postgres in compose; backend image serving the built frontend; `--profile offline`
 - [ ] Moderation check; quota parsing with a captured real Gemini 429 as a fixture, wired to the prompt modal
-- [ ] Playwright smoke test against docker-compose
+- [ ] Playwright smoke test against docker compose
 - [ ] Golden set grows to 10 weeks; judge calibration on 30 hand-labelled outputs; eval report against targets
 - [ ] README: architecture diagram, how to run, eval results, guardrail thresholds and known limitations
 
@@ -746,13 +760,14 @@ Copy the block below into `AGENTS.md` at the repo root (and link it from `CLAUDE
 6. The pipeline is a fixed state machine; do not add autonomous loops. Only pick_match calls tools, max 4 per run.
 7. Every stage emits stage.update messages exactly as defined in contracts/ws/.
 8. Never display output that failed a guardrail.
-9. Go: standard library first, table-driven tests, errors wrapped with context.
+9. Go: standard library first, except HTTP: every outbound API call uses the go-resty client (`github.com/go-resty/resty/v2`). Table-driven tests, errors wrapped with context.
 10. Python: type hints everywhere, Pydantic v2, ruff + mypy clean.
 11. Angular: standalone components and signals; types imported from generated contracts.
 
 ## Commands
-- make dev    # docker-compose up with hot reload
+- make dev    # docker compose up --build --watch (make down to stop)
 - make test   # go test, pytest, frontend unit tests (offline)
+- make dev-mcp  # MCP Inspector on the Go server
 - make eval   # inspect eval on evals/golden (needs a real LLM key)
 - make gen    # regenerate types from contracts/
 - make lint

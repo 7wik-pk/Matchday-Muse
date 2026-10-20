@@ -1,0 +1,8 @@
+# Build context for frontend/Dockerfile (the repo root).
+.git
+**/node_modules
+frontend/.angular
+frontend/dist
+mcp-server
+docs
+.env

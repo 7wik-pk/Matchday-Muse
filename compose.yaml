@@ -1,0 +1,55 @@
+# The local stack, for Docker or Podman. `make dev` runs `compose up --build --watch`:
+# frontend source changes sync into the running dev server, and Go changes
+# rebuild the MCP server image.
+name: matchday-muse
+
+services:
+  mcp-server:
+    build: ./mcp-server
+    image: matchday-muse/mcp-server:dev
+    environment:
+      MCP_AUTH_TOKEN: ${MCP_AUTH_TOKEN:?set MCP_AUTH_TOKEN in .env; make .env creates one}
+      SEARCH_PROVIDER: ${SEARCH_PROVIDER:-fixture}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+    volumes:
+      - mcp-cache:/data/cache
+    healthcheck:
+      test: ["CMD", "/mcp-server", "healthcheck"]
+      interval: 10s
+      timeout: 5s
+      start_period: 5s
+      retries: 3
+    ports:
+      # Published on localhost only, for MCP Inspector on the host.
+      - "127.0.0.1:8081:8081"
+    develop:
+      watch:
+        - action: rebuild
+          path: ./mcp-server
+          ignore:
+            - bin/
+            - testdata/espn/
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+      target: dev
+    image: matchday-muse/frontend:dev
+    ports:
+      - "127.0.0.1:4200:4200"
+    develop:
+      watch:
+        - action: sync
+          path: ./frontend/src
+          target: /app/frontend/src
+        - action: sync
+          path: ./contracts/ws
+          target: /app/contracts/ws
+        - action: rebuild
+          path: ./frontend/package-lock.json
+        - action: rebuild
+          path: ./frontend/angular.json
+
+volumes:
+  mcp-cache:

@@ -3,7 +3,8 @@
 Angular 22: standalone components, signals, zoneless. See the Angular frontend section of [docs/design.md](../docs/design.md#angular-frontend).
 
 ```sh
-make dev-frontend     # from the repo root: ng serve on http://localhost:4200
+make dev              # from the repo root: the stack in docker compose; ng serve on http://localhost:4200
+cd frontend && npx ng serve   # or on the host, without Docker
 make test-frontend    # Vitest + jsdom, offline
 ```
 

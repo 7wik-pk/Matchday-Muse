@@ -1,4 +1,4 @@
-// Compiles every schema in contracts/, then checks each scripted run in
+// Compiles every schema in contracts/, MCP tool schemas included, then checks each scripted run in
 // ws/examples/, and the per-style takes in ws/examples/takes.json, against the
 // schemas and the rules that the schemas alone cannot express. Exits non-zero
 // on any failure.
@@ -37,6 +37,23 @@ for (const file of schemaFiles) {
     ajv.getSchema(idFor(file));
   } catch (err) {
     fail(relative(root, file), `does not compile: ${err.message}`);
+  }
+}
+
+// contracts/mcp/ holds tool descriptors generated from the Go server; their
+// input and output schemas must compile here too, since Python and
+// TypeScript generate from them.
+const mcpFiles = readdirSync(join(root, 'mcp'))
+  .filter((name) => name.endsWith('.json'))
+  .map((name) => join(root, 'mcp', name));
+for (const file of mcpFiles) {
+  const tool = readJson(file);
+  for (const key of ['inputSchema', 'outputSchema']) {
+    try {
+      ajv.compile(tool[key]);
+    } catch (err) {
+      fail(`${relative(root, file)} ${key}`, `does not compile: ${err.message}`);
+    }
   }
 }
 
@@ -241,5 +258,5 @@ if (failures.length) {
   process.exit(1);
 }
 console.log(
-  `ok: ${schemaFiles.length} schemas, ${exampleFiles.length} scripted runs, ${styleIds.length} takes`,
+  `ok: ${schemaFiles.length} schemas, ${mcpFiles.length} MCP tools, ${exampleFiles.length} scripted runs, ${styleIds.length} takes`,
 );
