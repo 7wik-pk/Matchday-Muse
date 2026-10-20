@@ -1,0 +1,1073 @@
+{
+ "coverage": "full_events",
+ "events": [
+  {
+   "actors": [],
+   "clock": "0'",
+   "description": "First Half begins.",
+   "source_ref": "espn:401878774:play:53475371",
+   "type": "kickoff"
+  },
+  {
+   "actors": [
+    "Regan Slater",
+    "Thierno Barry"
+   ],
+   "clock": "4'",
+   "description": "Foul by Regan Slater (Hull City).",
+   "source_ref": "espn:401878774:play:53475727",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Regan Slater",
+    "Thierno Barry"
+   ],
+   "clock": "4'",
+   "description": "Thierno Barry (Everton) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878774:play:53475727",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "James Garner"
+   ],
+   "clock": "5'",
+   "description": "Attempt missed. James Garner (Everton) right footed shot from outside the box is just a bit too high from a direct free kick.",
+   "source_ref": "espn:401878774:play:53475828",
+   "team": "Everton",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [],
+   "clock": "5'",
+   "description": "Corner, Everton. Conceded by Konstantinos Tzolakis.",
+   "source_ref": "espn:401878774:play:53476067",
+   "team": "Everton",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Matt Crooks",
+    "Jack Grealish"
+   ],
+   "clock": "8'",
+   "description": "Foul by Matt Crooks (Hull City).",
+   "source_ref": "espn:401878774:play:53476407",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matt Crooks",
+    "Jack Grealish"
+   ],
+   "clock": "8'",
+   "description": "Jack Grealish (Everton) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878774:play:53476407",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jack Grealish",
+    "Kiernan Dewsbury-Hall"
+   ],
+   "clock": "9'",
+   "description": "Attempt saved. Jack Grealish (Everton) right footed shot from outside the box is saved in the centre of the goal by Konstantinos Tzolakis (Hull City). Assisted by Kiernan Dewsbury-Hall.",
+   "source_ref": "espn:401878774:play:53476412",
+   "team": "Everton",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [],
+   "clock": "10'",
+   "description": "Corner, Hull City. Conceded by Harrison Armstrong.",
+   "source_ref": "espn:401878774:play:53476639",
+   "team": "Hull City",
+   "type": "corner"
+  },
+  {
+   "actors": [],
+   "clock": "12'",
+   "description": "Corner, Hull City. Conceded by James Tarkowski.",
+   "source_ref": "espn:401878774:play:53476831",
+   "team": "Hull City",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Matt Crooks",
+    "Jack Grealish"
+   ],
+   "clock": "13'",
+   "description": "Foul by Matt Crooks (Hull City).",
+   "source_ref": "espn:401878774:play:53477258",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matt Crooks",
+    "Jack Grealish"
+   ],
+   "clock": "13'",
+   "description": "Jack Grealish (Everton) wins a free kick on the left wing.",
+   "source_ref": "espn:401878774:play:53477258",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matt Crooks"
+   ],
+   "clock": "13'",
+   "description": "Matt Crooks (Hull City) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401878774:play:53477259",
+   "team": "Hull City",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Oliver McBurnie",
+    "Kiernan Dewsbury-Hall"
+   ],
+   "clock": "18'",
+   "description": "Foul by Oliver McBurnie (Hull City).",
+   "source_ref": "espn:401878774:play:53477961",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Oliver McBurnie",
+    "Kiernan Dewsbury-Hall"
+   ],
+   "clock": "18'",
+   "description": "Kiernan Dewsbury-Hall (Everton) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878774:play:53477961",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ainsley Maitland-Niles"
+   ],
+   "clock": "19'",
+   "description": "Offside, Everton. Thierno Barry is caught offside.",
+   "source_ref": "espn:401878774:play:53478077",
+   "team": "Everton",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Oliver McBurnie",
+    "James Tarkowski"
+   ],
+   "clock": "20'",
+   "description": "Foul by Oliver McBurnie (Hull City).",
+   "source_ref": "espn:401878774:play:53478264",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Oliver McBurnie",
+    "James Tarkowski"
+   ],
+   "clock": "20'",
+   "description": "James Tarkowski (Everton) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878774:play:53478264",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Oliver McBurnie"
+   ],
+   "clock": "21'",
+   "description": "Oliver McBurnie (Hull City) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401878774:play:53478424",
+   "team": "Hull City",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Joe Gelhardt",
+    "Sorba Thomas"
+   ],
+   "clock": "22'",
+   "description": "Attempt saved. Joe Gelhardt (Hull City) right footed shot from the right side of the box is saved in the centre of the goal. Assisted by Sorba Thomas.",
+   "source_ref": "espn:401878774:play:53478433",
+   "team": "Hull City",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Nobel Mendy",
+    "Thierno Barry"
+   ],
+   "clock": "25'",
+   "description": "Foul by Nobel Mendy (Hull City).",
+   "source_ref": "espn:401878774:play:53478788",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Nobel Mendy",
+    "Thierno Barry"
+   ],
+   "clock": "25'",
+   "description": "Thierno Barry (Everton) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878774:play:53478788",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "26'",
+   "description": "Corner, Everton. Conceded by Lewie Coyle.",
+   "source_ref": "espn:401878774:play:53478991",
+   "team": "Everton",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Thierno Barry",
+    "James Garner"
+   ],
+   "clock": "27'",
+   "description": "Attempt saved. Thierno Barry (Everton) header from very close range is saved in the top centre of the goal by Konstantinos Tzolakis (Hull City). Assisted by James Garner with a cross.",
+   "source_ref": "espn:401878774:play:53479021",
+   "team": "Everton",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Jarrad Branthwaite"
+   ],
+   "clock": "27'",
+   "description": "Attempt missed. Jarrad Branthwaite (Everton) left footed shot from the left side of the six yard box is high and wide to the right following a corner.",
+   "source_ref": "espn:401878774:play:53479022",
+   "team": "Everton",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Sorba Thomas",
+    "Harrison Armstrong"
+   ],
+   "clock": "28'",
+   "description": "Foul by Regan Slater (Hull City).",
+   "source_ref": "espn:401878774:play:53479254",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Sorba Thomas",
+    "Harrison Armstrong"
+   ],
+   "clock": "28'",
+   "description": "Harrison Armstrong (Everton) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878774:play:53479254",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Joe Gelhardt",
+    "Jarrad Branthwaite"
+   ],
+   "clock": "29'",
+   "description": "Foul by Joe Gelhardt (Hull City).",
+   "source_ref": "espn:401878774:play:53479338",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Joe Gelhardt",
+    "Jarrad Branthwaite"
+   ],
+   "clock": "29'",
+   "description": "Jarrad Branthwaite (Everton) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878774:play:53479338",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "James Tarkowski",
+    "Sorba Thomas"
+   ],
+   "clock": "30'",
+   "description": "Sorba Thomas (Hull City) wins a free kick on the left wing.",
+   "source_ref": "espn:401878774:play:53479345",
+   "team": "Everton",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "James Tarkowski",
+    "Sorba Thomas"
+   ],
+   "clock": "30'",
+   "description": "Foul by James Tarkowski (Everton).",
+   "source_ref": "espn:401878774:play:53479345",
+   "team": "Everton",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "32'",
+   "description": "Corner, Hull City. Conceded by Ainsley Maitland-Niles.",
+   "source_ref": "espn:401878774:play:53479579",
+   "team": "Hull City",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Joe Gelhardt",
+    "Kiernan Dewsbury-Hall"
+   ],
+   "clock": "33'",
+   "description": "Foul by Joe Gelhardt (Hull City).",
+   "source_ref": "espn:401878774:play:53479764",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Joe Gelhardt",
+    "Kiernan Dewsbury-Hall"
+   ],
+   "clock": "33'",
+   "description": "Kiernan Dewsbury-Hall (Everton) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878774:play:53479764",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Harrison Armstrong",
+    "Kiernan Dewsbury-Hall"
+   ],
+   "clock": "34'",
+   "description": "Attempt blocked. Harrison Armstrong (Everton) right footed shot from the centre of the box is blocked. Assisted by Kiernan Dewsbury-Hall.",
+   "source_ref": "espn:401878774:play:53479816",
+   "team": "Everton",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Harrison Armstrong"
+   ],
+   "clock": "34'",
+   "description": "Offside, Everton. Brennan Johnson is caught offside.",
+   "source_ref": "espn:401878774:play:53480207",
+   "team": "Everton",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Brennan Johnson"
+   ],
+   "clock": "34'",
+   "description": "GOAL OVERTURNED BY VAR: Brennan Johnson (Everton) scores but the goal is ruled out after a VAR review.",
+   "source_ref": "espn:401878774:play:53479817",
+   "team": "Everton",
+   "type": "var"
+  },
+  {
+   "actors": [
+    "Brennan Johnson"
+   ],
+   "clock": "34'",
+   "description": "VAR Decision: No Goal Hull City 0-0 Everton.",
+   "source_ref": "espn:401878774:play:53480109",
+   "team": "Everton",
+   "type": "var"
+  },
+  {
+   "actors": [
+    "Sorba Thomas",
+    "Ryan Giles"
+   ],
+   "clock": "40'",
+   "description": "Attempt blocked. Sorba Thomas (Hull City) right footed shot from the left side of the box is blocked. Assisted by Ryan Giles.",
+   "source_ref": "espn:401878774:play:53480468",
+   "team": "Hull City",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Thierno Barry",
+    "Harrison Armstrong"
+   ],
+   "clock": "41'",
+   "description": "Attempt blocked. Thierno Barry (Everton) right footed shot from the right side of the box is blocked. Assisted by Harrison Armstrong.",
+   "source_ref": "espn:401878774:play:53480749",
+   "team": "Everton",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "41'",
+   "description": "Corner, Everton. Conceded by John Egan.",
+   "source_ref": "espn:401878774:play:53480751",
+   "team": "Everton",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Michael Keane",
+    "James Garner"
+   ],
+   "clock": "42'",
+   "description": "Attempt blocked. Michael Keane (Everton) header from the centre of the box is blocked. Assisted by James Garner with a cross.",
+   "source_ref": "espn:401878774:play:53480758",
+   "team": "Everton",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "42'",
+   "description": "Corner, Everton. Conceded by John Egan.",
+   "source_ref": "espn:401878774:play:53480760",
+   "team": "Everton",
+   "type": "corner"
+  },
+  {
+   "actors": [],
+   "clock": "42'",
+   "description": "Corner, Hull City. Conceded by James Garner.",
+   "source_ref": "espn:401878774:play:53480839",
+   "team": "Hull City",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Joe Gelhardt",
+    "Oliver McBurnie"
+   ],
+   "clock": "44'",
+   "description": "Attempt blocked. Joe Gelhardt (Hull City) left footed shot from the centre of the box is blocked. Assisted by Oliver McBurnie.",
+   "source_ref": "espn:401878774:play:53481060",
+   "team": "Hull City",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "44'",
+   "description": "Corner, Hull City. Conceded by James Tarkowski.",
+   "source_ref": "espn:401878774:play:53481063",
+   "team": "Hull City",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Nobel Mendy",
+    "Sorba Thomas"
+   ],
+   "clock": "44'",
+   "description": "Attempt missed. Nobel Mendy (Hull City) header from very close range is too high. Assisted by Sorba Thomas with a cross following a corner.",
+   "source_ref": "espn:401878774:play:53481200",
+   "team": "Hull City",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Joe Gelhardt",
+    "John Egan"
+   ],
+   "clock": "45+1'",
+   "description": "Attempt saved. Joe Gelhardt (Hull City) right footed shot from the centre of the box is saved in the centre of the goal by Jordan Pickford (Everton). Assisted by John Egan with a through ball.",
+   "source_ref": "espn:401878774:play:53481440",
+   "team": "Hull City",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Jack Grealish",
+    "Ainsley Maitland-Niles"
+   ],
+   "clock": "45+1'",
+   "description": "Attempt missed. Jack Grealish (Everton) right footed shot from the left side of the box is high and wide to the right. Assisted by Ainsley Maitland-Niles.",
+   "source_ref": "espn:401878774:play:53481478",
+   "team": "Everton",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Thierno Barry",
+    "Jack Grealish"
+   ],
+   "clock": "45+2'",
+   "description": "Attempt missed. Thierno Barry (Everton) header from the right side of the six yard box is just a bit too high. Assisted by Jack Grealish with a cross.",
+   "source_ref": "espn:401878774:play:53481548",
+   "team": "Everton",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Brennan Johnson",
+    "Harrison Armstrong"
+   ],
+   "clock": "45+4'",
+   "description": "Attempt blocked. Brennan Johnson (Everton) left footed shot from the right side of the box is blocked. Assisted by Harrison Armstrong.",
+   "source_ref": "espn:401878774:play:53481760",
+   "team": "Everton",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "45+4'",
+   "description": "Corner, Everton. Conceded by Nobel Mendy.",
+   "source_ref": "espn:401878774:play:53481762",
+   "team": "Everton",
+   "type": "corner"
+  },
+  {
+   "actors": [],
+   "clock": "45'",
+   "description": "Second Half begins Hull City 0, Everton 0.",
+   "source_ref": "espn:401878774:play:53482806",
+   "type": "second_half"
+  },
+  {
+   "actors": [
+    "Joe Gelhardt",
+    "Sorba Thomas"
+   ],
+   "clock": "48'",
+   "description": "Goal! Hull City 1, Everton 0. Joe Gelhardt (Hull City) left footed shot from the centre of the box to the bottom right corner. Assisted by Sorba Thomas with a through ball following a fast break.",
+   "score_after": "1-0",
+   "source_ref": "espn:401878774:play:53483202",
+   "team": "Hull City",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Harrison Armstrong",
+    "Jack Grealish"
+   ],
+   "clock": "51'",
+   "description": "Attempt saved. Harrison Armstrong (Everton) right footed shot from outside the box is saved in the centre of the goal by Konstantinos Tzolakis (Hull City). Assisted by Jack Grealish.",
+   "source_ref": "espn:401878774:play:53483575",
+   "team": "Everton",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [],
+   "clock": "52'",
+   "description": "Corner, Hull City. Conceded by Jarrad Branthwaite.",
+   "source_ref": "espn:401878774:play:53483588",
+   "team": "Hull City",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Lewie Coyle",
+    "Jack Grealish"
+   ],
+   "clock": "53'",
+   "description": "Foul by Lewie Coyle (Hull City).",
+   "source_ref": "espn:401878774:play:53483782",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lewie Coyle",
+    "Jack Grealish"
+   ],
+   "clock": "53'",
+   "description": "Jack Grealish (Everton) wins a free kick on the left wing.",
+   "source_ref": "espn:401878774:play:53483782",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Thierno Barry",
+    "Brennan Johnson"
+   ],
+   "clock": "53'",
+   "description": "Attempt saved. Thierno Barry (Everton) header from the centre of the box is saved in the centre of the goal by Konstantinos Tzolakis (Hull City). Assisted by Brennan Johnson with a cross.",
+   "source_ref": "espn:401878774:play:53483788",
+   "team": "Everton",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [],
+   "clock": "54'",
+   "description": "Corner, Everton. Conceded by John Egan.",
+   "source_ref": "espn:401878774:play:53483814",
+   "team": "Everton",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Kiernan Dewsbury-Hall",
+    "Ainsley Maitland-Niles"
+   ],
+   "clock": "55'",
+   "description": "Goal! Hull City 1, Everton 1. Kiernan Dewsbury-Hall (Everton) header from very close range to the bottom left corner. Assisted by Ainsley Maitland-Niles following a corner.",
+   "score_after": "1-1",
+   "source_ref": "espn:401878774:play:53483915",
+   "team": "Everton",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Joe Gelhardt",
+    "Jarrad Branthwaite"
+   ],
+   "clock": "60'",
+   "description": "Foul by Joe Gelhardt (Hull City).",
+   "source_ref": "espn:401878774:play:53484614",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Joe Gelhardt",
+    "Jarrad Branthwaite"
+   ],
+   "clock": "60'",
+   "description": "Jarrad Branthwaite (Everton) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878774:play:53484614",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ainsley Maitland-Niles"
+   ],
+   "clock": "61'",
+   "description": "Offside, Everton. Brennan Johnson is caught offside.",
+   "source_ref": "espn:401878774:play:53484617",
+   "team": "Everton",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "John Egan"
+   ],
+   "clock": "63'",
+   "description": "Offside, Hull City. Ryan Giles is caught offside.",
+   "source_ref": "espn:401878774:play:53484989",
+   "team": "Hull City",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Elliot Stroud",
+    "Ryan Giles"
+   ],
+   "clock": "64'",
+   "description": "Substitution, Hull City. Elliot Stroud replaces Ryan Giles.",
+   "source_ref": "espn:401878774:play:53485026",
+   "team": "Hull City",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Mohamed Belloumi",
+    "Joe Gelhardt"
+   ],
+   "clock": "64'",
+   "description": "Substitution, Hull City. Mohamed Belloumi replaces Joe Gelhardt.",
+   "source_ref": "espn:401878774:play:53485214",
+   "team": "Hull City",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Tim Iroegbunam",
+    "Matt Crooks"
+   ],
+   "clock": "65'",
+   "description": "Substitution, Hull City. Tim Iroegbunam replaces Matt Crooks.",
+   "source_ref": "espn:401878774:play:53485215",
+   "team": "Hull City",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Tim Iroegbunam",
+    "Harrison Armstrong"
+   ],
+   "clock": "65'",
+   "description": "Foul by Tim Iroegbunam (Hull City).",
+   "source_ref": "espn:401878774:play:53485183",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Tim Iroegbunam",
+    "Harrison Armstrong"
+   ],
+   "clock": "65'",
+   "description": "Harrison Armstrong (Everton) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878774:play:53485183",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ainsley Maitland-Niles"
+   ],
+   "clock": "66'",
+   "description": "Offside, Everton. Thierno Barry is caught offside.",
+   "source_ref": "espn:401878774:play:53485192",
+   "team": "Everton",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Tyrique George",
+    "Brennan Johnson"
+   ],
+   "clock": "66'",
+   "description": "Substitution, Everton. Tyrique George replaces Brennan Johnson.",
+   "source_ref": "espn:401878774:play:53485268",
+   "team": "Everton",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Jack Grealish",
+    "Lewie Coyle"
+   ],
+   "clock": "67'",
+   "description": "Lewie Coyle (Hull City) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878774:play:53485323",
+   "team": "Everton",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jack Grealish",
+    "Lewie Coyle"
+   ],
+   "clock": "67'",
+   "description": "Foul by Jack Grealish (Everton).",
+   "source_ref": "espn:401878774:play:53485323",
+   "team": "Everton",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Thierno Barry",
+    "Kiernan Dewsbury-Hall"
+   ],
+   "clock": "68'",
+   "description": "Goal! Hull City 1, Everton 2. Thierno Barry (Everton) right footed shot from the centre of the box to the top right corner. Assisted by Kiernan Dewsbury-Hall.",
+   "score_after": "1-2",
+   "source_ref": "espn:401878774:play:53485333",
+   "team": "Everton",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "John Egan"
+   ],
+   "clock": "71'",
+   "description": "Attempt missed. John Egan (Hull City) right footed shot from the left side of the box misses to the right.",
+   "source_ref": "espn:401878774:play:53485628",
+   "team": "Hull City",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Mohamed Belloumi",
+    "Kiernan Dewsbury-Hall"
+   ],
+   "clock": "72'",
+   "description": "Foul by Mohamed Belloumi (Hull City).",
+   "source_ref": "espn:401878774:play:53485647",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Mohamed Belloumi",
+    "Kiernan Dewsbury-Hall"
+   ],
+   "clock": "72'",
+   "description": "Kiernan Dewsbury-Hall (Everton) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878774:play:53485647",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Mohamed Belloumi",
+    "Elliot Stroud"
+   ],
+   "clock": "74'",
+   "description": "Goal! Hull City 2, Everton 2. Mohamed Belloumi (Hull City) left footed shot from the centre of the box to the top right corner. Assisted by Elliot Stroud.",
+   "score_after": "2-2",
+   "source_ref": "espn:401878774:play:53485919",
+   "team": "Hull City",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Hidemasa Morita",
+    "Regan Slater"
+   ],
+   "clock": "75'",
+   "description": "Substitution, Hull City. Hidemasa Morita replaces Regan Slater.",
+   "source_ref": "espn:401878774:play:53486049",
+   "team": "Hull City",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Hayden Hackney",
+    "Harrison Armstrong"
+   ],
+   "clock": "78'",
+   "description": "Substitution, Everton. Hayden Hackney replaces Harrison Armstrong.",
+   "source_ref": "espn:401878774:play:53486323",
+   "team": "Everton",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Jake O'Brien",
+    "Ainsley Maitland-Niles"
+   ],
+   "clock": "78'",
+   "description": "Substitution, Everton. Jake O'Brien replaces Ainsley Maitland-Niles.",
+   "source_ref": "espn:401878774:play:53486324",
+   "team": "Everton",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Mohamed Belloumi",
+    "Sorba Thomas"
+   ],
+   "clock": "80'",
+   "description": "Attempt blocked. Mohamed Belloumi (Hull City) left footed shot from the centre of the box is blocked. Assisted by Sorba Thomas.",
+   "source_ref": "espn:401878774:play:53486559",
+   "team": "Hull City",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Jake O'Brien",
+    "Elliot Stroud"
+   ],
+   "clock": "82'",
+   "description": "Elliot Stroud (Hull City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878774:play:53486954",
+   "team": "Everton",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jake O'Brien",
+    "Elliot Stroud"
+   ],
+   "clock": "82'",
+   "description": "Foul by Jake O'Brien (Everton).",
+   "source_ref": "espn:401878774:play:53486954",
+   "team": "Everton",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "85'",
+   "description": "Corner, Hull City. Conceded by Kiernan Dewsbury-Hall.",
+   "source_ref": "espn:401878774:play:53487310",
+   "team": "Hull City",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Robinio Vaz",
+    "Sorba Thomas"
+   ],
+   "clock": "86'",
+   "description": "Substitution, Hull City. Robinio Vaz replaces Sorba Thomas.",
+   "source_ref": "espn:401878774:play:53487477",
+   "team": "Hull City",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Tyler Dibling",
+    "Jack Grealish"
+   ],
+   "clock": "86'",
+   "description": "Substitution, Everton. Tyler Dibling replaces Jack Grealish.",
+   "source_ref": "espn:401878774:play:53487478",
+   "team": "Everton",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Charly Alcaraz",
+    "Thierno Barry"
+   ],
+   "clock": "86'",
+   "description": "Substitution, Everton. Charly Alcaraz replaces Thierno Barry.",
+   "source_ref": "espn:401878774:play:53487593",
+   "team": "Everton",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Charly Alcaraz",
+    "Kiernan Dewsbury-Hall"
+   ],
+   "clock": "89'",
+   "description": "Attempt missed. Charly Alcaraz (Everton) right footed shot from outside the box misses to the left. Assisted by Kiernan Dewsbury-Hall.",
+   "source_ref": "espn:401878774:play:53487869",
+   "team": "Everton",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Oliver McBurnie",
+    "James Tarkowski"
+   ],
+   "clock": "90'",
+   "description": "Foul by Oliver McBurnie (Hull City).",
+   "source_ref": "espn:401878774:play:53488056",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Oliver McBurnie",
+    "James Tarkowski"
+   ],
+   "clock": "90'",
+   "description": "James Tarkowski (Everton) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878774:play:53488056",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Nobel Mendy",
+    "Charly Alcaraz"
+   ],
+   "clock": "90+3'",
+   "description": "Foul by Nobel Mendy (Hull City).",
+   "source_ref": "espn:401878774:play:53488320",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Nobel Mendy",
+    "Charly Alcaraz"
+   ],
+   "clock": "90+3'",
+   "description": "Charly Alcaraz (Everton) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878774:play:53488320",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Michael Keane",
+    "Oliver McBurnie"
+   ],
+   "clock": "90+4'",
+   "description": "Oliver McBurnie (Hull City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878774:play:53488536",
+   "team": "Everton",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Michael Keane",
+    "Oliver McBurnie"
+   ],
+   "clock": "90+4'",
+   "description": "Foul by Michael Keane (Everton).",
+   "source_ref": "espn:401878774:play:53488536",
+   "team": "Everton",
+   "type": "foul"
+  }
+ ],
+ "match": {
+  "end_estimate": "2026-10-11T15:00:00Z",
+  "final_result": "Hull City 2–2 Everton",
+  "id": "401878774",
+  "kickoff": "2026-10-11T13:00:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "HUL",
+    "name": "Hull City",
+    "role": "home",
+    "score": "2",
+    "short_name": "Hull",
+    "winner": false
+   },
+   {
+    "abbreviation": "EVE",
+    "name": "Everton",
+    "role": "away",
+    "score": "2",
+    "short_name": "Everton",
+    "winner": false
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Hull retained their unbeaten home record since returning to the Premier League with an entertaining 2-2 draw against Everton at the MKM Stadium.",
+  "title": "Hull City v Everton",
+  "venue": "The MKM Stadium"
+ },
+ "sources": [
+  {
+   "publisher": "ESPN",
+   "title": "Hull City v Everton: match events",
+   "url": "https://www.espn.com/soccer/match/_/gameId/401878774"
+  },
+  {
+   "published_at": "2026-10-11T15:13:00Z",
+   "publisher": "ESPN",
+   "title": "Mohamed Belloumi strikes to maintain Hull's unbeaten home record against Everton",
+   "url": "https://www.espn.com/soccer/report/_/gameId/401878774"
+  }
+ ],
+ "team_stats": [
+  {
+   "corners": 7,
+   "fouls": 15,
+   "possession_pct": 35.1,
+   "red_cards": 0,
+   "saves": 4,
+   "shots": 9,
+   "shots_on_target": 5,
+   "team": "Hull City",
+   "yellow_cards": 2
+  },
+  {
+   "corners": 6,
+   "fouls": 4,
+   "possession_pct": 64.9,
+   "red_cards": 0,
+   "saves": 2,
+   "shots": 15,
+   "shots_on_target": 7,
+   "team": "Everton",
+   "yellow_cards": 0
+  }
+ ]
+}

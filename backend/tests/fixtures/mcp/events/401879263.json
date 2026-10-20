@@ -1,0 +1,1165 @@
+{
+ "coverage": "full_events",
+ "events": [
+  {
+   "actors": [],
+   "clock": "0'",
+   "description": "First Half begins.",
+   "source_ref": "espn:401879263:play:53889022",
+   "type": "kickoff"
+  },
+  {
+   "actors": [
+    "Tyler Adams"
+   ],
+   "clock": "2'",
+   "description": "Attempt missed. Tyler Adams (Bournemouth) right footed shot from the centre of the box misses to the left.",
+   "source_ref": "espn:401879263:play:53889176",
+   "team": "AFC Bournemouth",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Evanilson",
+    "Lewis Cook"
+   ],
+   "clock": "2'",
+   "description": "Attempt blocked. Evanilson (Bournemouth) left footed shot from outside the box is blocked. Assisted by Lewis Cook.",
+   "source_ref": "espn:401879263:play:53889186",
+   "team": "AFC Bournemouth",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "2'",
+   "description": "Corner, Bournemouth. Conceded by Kevin Danso.",
+   "source_ref": "espn:401879263:play:53889188",
+   "team": "AFC Bournemouth",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Marcus Tavernier",
+    "Evanilson"
+   ],
+   "clock": "6'",
+   "description": "Goal! Bournemouth 1, Sunderland 0. Marcus Tavernier (Bournemouth) header from the centre of the box to the centre of the goal. Assisted by Evanilson.",
+   "score_after": "1-0",
+   "source_ref": "espn:401879263:play:53889659",
+   "team": "AFC Bournemouth",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Noah Sadiki"
+   ],
+   "clock": "8'",
+   "description": "Offside, Sunderland. Trai Hume is caught offside.",
+   "source_ref": "espn:401879263:play:53890067",
+   "team": "Sunderland",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Tyler Adams",
+    "Enzo Le Fée"
+   ],
+   "clock": "9'",
+   "description": "Enzo Le Fée (Sunderland) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879263:play:53890270",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Tyler Adams",
+    "Enzo Le Fée"
+   ],
+   "clock": "9'",
+   "description": "Foul by Tyler Adams (Bournemouth).",
+   "source_ref": "espn:401879263:play:53890270",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Kevin Danso",
+    "Granit Xhaka"
+   ],
+   "clock": "10'",
+   "description": "Attempt missed. Kevin Danso (Sunderland) header from the centre of the box is close, but misses to the right. Assisted by Granit Xhaka following a set piece situation.",
+   "source_ref": "espn:401879263:play:53890276",
+   "team": "Sunderland",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Lewis Cook",
+    "Granit Xhaka"
+   ],
+   "clock": "16'",
+   "description": "Granit Xhaka (Sunderland) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879263:play:53891683",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lewis Cook",
+    "Granit Xhaka"
+   ],
+   "clock": "16'",
+   "description": "Foul by Lewis Cook (Bournemouth).",
+   "source_ref": "espn:401879263:play:53891683",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Kevin Danso",
+    "Evanilson"
+   ],
+   "clock": "17'",
+   "description": "Foul by Kevin Danso (Sunderland).",
+   "source_ref": "espn:401879263:play:53891696",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Kevin Danso",
+    "Evanilson"
+   ],
+   "clock": "17'",
+   "description": "Evanilson (Bournemouth) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879263:play:53891696",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Kevin Danso"
+   ],
+   "clock": "17'",
+   "description": "Kevin Danso (Sunderland) is shown the red card.",
+   "source_ref": "espn:401879263:play:53891697",
+   "team": "Sunderland",
+   "type": "red_card"
+  },
+  {
+   "actors": [
+    "Marcus Tavernier"
+   ],
+   "clock": "20'",
+   "description": "Attempt missed. Marcus Tavernier (Bournemouth) left footed shot from outside the box is too high from a direct free kick.",
+   "source_ref": "espn:401879263:play:53892094",
+   "team": "AFC Bournemouth",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "James Hill",
+    "António Silva"
+   ],
+   "clock": "22'",
+   "description": "Attempt missed. James Hill (Bournemouth) right footed shot from outside the box misses to the left. Assisted by António Silva.",
+   "source_ref": "espn:401879263:play:53892384",
+   "team": "AFC Bournemouth",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "James Hill",
+    "Marcus Tavernier"
+   ],
+   "clock": "22'",
+   "description": "Attempt missed. James Hill (Bournemouth) right footed shot from outside the box misses to the left. Assisted by Marcus Tavernier.",
+   "source_ref": "espn:401879263:play:53892576",
+   "team": "AFC Bournemouth",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Rayan",
+    "Reinildo Mandava"
+   ],
+   "clock": "23'",
+   "description": "Reinildo Mandava (Sunderland) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879263:play:53892580",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Rayan",
+    "Reinildo Mandava"
+   ],
+   "clock": "23'",
+   "description": "Foul by Rayan (Bournemouth).",
+   "source_ref": "espn:401879263:play:53892580",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Rayan",
+    "Noah Sadiki"
+   ],
+   "clock": "24'",
+   "description": "Noah Sadiki (Sunderland) wins a free kick on the left wing.",
+   "source_ref": "espn:401879263:play:53893000",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Rayan",
+    "Noah Sadiki"
+   ],
+   "clock": "24'",
+   "description": "Foul by Rayan (Bournemouth).",
+   "source_ref": "espn:401879263:play:53893000",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "António Silva",
+    "Nordi Mukiele"
+   ],
+   "clock": "26'",
+   "description": "Nordi Mukiele (Sunderland) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879263:play:53893245",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "António Silva",
+    "Nordi Mukiele"
+   ],
+   "clock": "26'",
+   "description": "Foul by António Silva (Bournemouth).",
+   "source_ref": "espn:401879263:play:53893245",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "António Silva"
+   ],
+   "clock": "26'",
+   "description": "António Silva (Bournemouth) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879263:play:53893246",
+   "team": "AFC Bournemouth",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Evanilson",
+    "Reinildo Mandava"
+   ],
+   "clock": "30'",
+   "description": "Reinildo Mandava (Sunderland) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879263:play:53893848",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Evanilson",
+    "Reinildo Mandava"
+   ],
+   "clock": "30'",
+   "description": "Foul by Evanilson (Bournemouth).",
+   "source_ref": "espn:401879263:play:53893848",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Rayan",
+    "Ryan Christie"
+   ],
+   "clock": "32'",
+   "description": "Attempt saved. Rayan (Bournemouth) left footed shot from the right side of the box is saved in the bottom right corner by Robin Roefs (Sunderland). Assisted by Ryan Christie.",
+   "source_ref": "espn:401879263:play:53893868",
+   "team": "AFC Bournemouth",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Adam Smith"
+   ],
+   "clock": "32'",
+   "description": "Attempt missed. Adam Smith (Bournemouth) right footed shot from the centre of the box is high and wide to the right.",
+   "source_ref": "espn:401879263:play:53893870",
+   "team": "AFC Bournemouth",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Evanilson",
+    "James Hill"
+   ],
+   "clock": "33'",
+   "description": "Attempt blocked. Evanilson (Bournemouth) right footed shot from the centre of the box is blocked. Assisted by James Hill.",
+   "source_ref": "espn:401879263:play:53894252",
+   "team": "AFC Bournemouth",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Robin Roefs"
+   ],
+   "clock": "35'",
+   "description": "Offside, Sunderland. Tymur Tutierov is caught offside.",
+   "source_ref": "espn:401879263:play:53894729",
+   "team": "Sunderland",
+   "type": "offside"
+  },
+  {
+   "actors": [],
+   "clock": "36'",
+   "description": "Corner, Bournemouth. Conceded by Nordi Mukiele.",
+   "source_ref": "espn:401879263:play:53894982",
+   "team": "AFC Bournemouth",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Rayan",
+    "Lewis Cook"
+   ],
+   "clock": "37'",
+   "description": "Attempt saved. Rayan (Bournemouth) header from the left side of the six yard box is saved in the bottom left corner by Robin Roefs (Sunderland). Assisted by Lewis Cook with a cross.",
+   "source_ref": "espn:401879263:play:53895099",
+   "team": "AFC Bournemouth",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Enzo Le Fée",
+    "Marcus Tavernier"
+   ],
+   "clock": "37'",
+   "description": "Foul by Enzo Le Fée (Sunderland).",
+   "source_ref": "espn:401879263:play:53895106",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Enzo Le Fée",
+    "Marcus Tavernier"
+   ],
+   "clock": "37'",
+   "description": "Marcus Tavernier (Bournemouth) wins a free kick on the right wing.",
+   "source_ref": "espn:401879263:play:53895106",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "38'",
+   "description": "Corner, Bournemouth. Conceded by Reinildo Mandava.",
+   "source_ref": "espn:401879263:play:53895116",
+   "team": "AFC Bournemouth",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Omar Alderete",
+    "Rayan"
+   ],
+   "clock": "40'",
+   "description": "Foul by Omar Alderete (Sunderland).",
+   "source_ref": "espn:401879263:play:53895681",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Omar Alderete",
+    "Rayan"
+   ],
+   "clock": "40'",
+   "description": "Rayan (Bournemouth) wins a free kick on the right wing.",
+   "source_ref": "espn:401879263:play:53895681",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Omar Alderete"
+   ],
+   "clock": "40'",
+   "description": "Omar Alderete (Sunderland) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879263:play:53895682",
+   "team": "Sunderland",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Rayan",
+    "Adam Smith"
+   ],
+   "clock": "43'",
+   "description": "Attempt missed. Rayan (Bournemouth) right footed shot from the centre of the box is too high. Assisted by Adam Smith with a cross.",
+   "source_ref": "espn:401879263:play:53896062",
+   "team": "AFC Bournemouth",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [],
+   "clock": "44'",
+   "description": "Corner, Sunderland. Conceded by Ryan Christie.",
+   "source_ref": "espn:401879263:play:53896278",
+   "team": "Sunderland",
+   "type": "corner"
+  },
+  {
+   "actors": [],
+   "clock": "45'",
+   "description": "Corner, Bournemouth. Conceded by Granit Xhaka.",
+   "source_ref": "espn:401879263:play:53896805",
+   "team": "AFC Bournemouth",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Rayan"
+   ],
+   "clock": "45+1'",
+   "description": "Attempt saved. Rayan (Bournemouth) left footed shot from outside the box is saved in the top right corner by Robin Roefs (Sunderland).",
+   "source_ref": "espn:401879263:play:53896808",
+   "team": "AFC Bournemouth",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Evanilson",
+    "Marcus Tavernier"
+   ],
+   "clock": "45+1'",
+   "description": "Attempt missed. Evanilson (Bournemouth) left footed shot from a difficult angle and long range on the left is high and wide to the left. Assisted by Marcus Tavernier with a through ball.",
+   "source_ref": "espn:401879263:play:53896824",
+   "team": "AFC Bournemouth",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Rayan",
+    "Enzo Le Fée"
+   ],
+   "clock": "45+4'",
+   "description": "Enzo Le Fée (Sunderland) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879263:play:53897333",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Rayan",
+    "Enzo Le Fée"
+   ],
+   "clock": "45+4'",
+   "description": "Foul by Rayan (Bournemouth).",
+   "source_ref": "espn:401879263:play:53897333",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lewis Cook",
+    "Chris Rigg"
+   ],
+   "clock": "45+6'",
+   "description": "Chris Rigg (Sunderland) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879263:play:53897438",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lewis Cook",
+    "Chris Rigg"
+   ],
+   "clock": "45+6'",
+   "description": "Foul by Lewis Cook (Bournemouth).",
+   "source_ref": "espn:401879263:play:53897438",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lewis Cook"
+   ],
+   "clock": "45+6'",
+   "description": "Lewis Cook (Bournemouth) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879263:play:53897439",
+   "team": "AFC Bournemouth",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Rayan"
+   ],
+   "clock": "46'",
+   "description": "Attempt missed. Rayan (Bournemouth) right footed shot from the right side of the box misses to the left.",
+   "source_ref": "espn:401879263:play:53898878",
+   "team": "AFC Bournemouth",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Evanilson"
+   ],
+   "clock": "48'",
+   "description": "Goal! Bournemouth 2, Sunderland 0. Evanilson (Bournemouth) left footed shot from the centre of the box to the centre of the goal.",
+   "score_after": "2-0",
+   "source_ref": "espn:401879263:play:53899203",
+   "team": "AFC Bournemouth",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Ryan Christie",
+    "Tymur Tutierov"
+   ],
+   "clock": "50'",
+   "description": "Tymur Tutierov (Sunderland) wins a free kick on the right wing.",
+   "source_ref": "espn:401879263:play:53899590",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ryan Christie",
+    "Tymur Tutierov"
+   ],
+   "clock": "50'",
+   "description": "Foul by Ryan Christie (Bournemouth).",
+   "source_ref": "espn:401879263:play:53899590",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Enzo Le Fée",
+    "Ryan Christie"
+   ],
+   "clock": "51'",
+   "description": "Foul by Enzo Le Fée (Sunderland).",
+   "source_ref": "espn:401879263:play:53899688",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Enzo Le Fée",
+    "Ryan Christie"
+   ],
+   "clock": "51'",
+   "description": "Ryan Christie (Bournemouth) wins a free kick on the right wing.",
+   "source_ref": "espn:401879263:play:53899688",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Evanilson",
+    "Adam Smith"
+   ],
+   "clock": "52'",
+   "description": "Attempt missed. Evanilson (Bournemouth) header from the left side of the six yard box misses to the right. Assisted by Adam Smith with a cross.",
+   "source_ref": "espn:401879263:play:53899782",
+   "team": "AFC Bournemouth",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Ryan Christie",
+    "Adrien Truffert"
+   ],
+   "clock": "52'",
+   "description": "Attempt blocked. Ryan Christie (Bournemouth) right footed shot from the centre of the box is blocked. Assisted by Adrien Truffert with a cross.",
+   "source_ref": "espn:401879263:play:53899786",
+   "team": "AFC Bournemouth",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Lewis Cook"
+   ],
+   "clock": "53'",
+   "description": "Attempt blocked. Lewis Cook (Bournemouth) left footed shot from outside the box is blocked.",
+   "source_ref": "espn:401879263:play:53899808",
+   "team": "AFC Bournemouth",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Adrien Truffert",
+    "Enzo Le Fée"
+   ],
+   "clock": "53'",
+   "description": "Enzo Le Fée (Sunderland) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879263:play:53900029",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Adrien Truffert",
+    "Enzo Le Fée"
+   ],
+   "clock": "53'",
+   "description": "Foul by Adrien Truffert (Bournemouth).",
+   "source_ref": "espn:401879263:play:53900029",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ryan Christie",
+    "Evanilson"
+   ],
+   "clock": "57'",
+   "description": "Attempt blocked. Ryan Christie (Bournemouth) left footed shot from the centre of the box is blocked. Assisted by Evanilson.",
+   "source_ref": "espn:401879263:play:53900633",
+   "team": "AFC Bournemouth",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Adrien Truffert",
+    "Chris Rigg"
+   ],
+   "clock": "59'",
+   "description": "Chris Rigg (Sunderland) wins a free kick on the right wing.",
+   "source_ref": "espn:401879263:play:53900974",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Adrien Truffert",
+    "Chris Rigg"
+   ],
+   "clock": "59'",
+   "description": "Foul by Adrien Truffert (Bournemouth).",
+   "source_ref": "espn:401879263:play:53900974",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Habib Diarra",
+    "Tymur Tutierov"
+   ],
+   "clock": "59'",
+   "description": "Substitution, Sunderland. Habib Diarra replaces Tymur Tutierov.",
+   "source_ref": "espn:401879263:play:53901076",
+   "team": "Sunderland",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Luke O'Nien",
+    "Omar Alderete"
+   ],
+   "clock": "59'",
+   "description": "Substitution, Sunderland. Luke O'Nien replaces Omar Alderete.",
+   "source_ref": "espn:401879263:play:53901077",
+   "team": "Sunderland",
+   "type": "sub"
+  },
+  {
+   "actors": [],
+   "clock": "59'",
+   "description": "Corner, Sunderland. Conceded by James Hill.",
+   "source_ref": "espn:401879263:play:53900977",
+   "team": "Sunderland",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Rayan",
+    "Ryan Christie"
+   ],
+   "clock": "61'",
+   "description": "Attempt blocked. Rayan (Bournemouth) left footed shot from the centre of the box is blocked. Assisted by Ryan Christie.",
+   "source_ref": "espn:401879263:play:53901363",
+   "team": "AFC Bournemouth",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Marcus Tavernier",
+    "Ryan Christie"
+   ],
+   "clock": "61'",
+   "description": "Attempt saved. Marcus Tavernier (Bournemouth) right footed shot from the centre of the box is saved in the centre of the goal by Robin Roefs (Sunderland). Assisted by Ryan Christie.",
+   "source_ref": "espn:401879263:play:53901367",
+   "team": "AFC Bournemouth",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [],
+   "clock": "61'",
+   "description": "Corner, Bournemouth. Conceded by Robin Roefs.",
+   "source_ref": "espn:401879263:play:53901369",
+   "team": "AFC Bournemouth",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Ryan Christie",
+    "Lewis Cook"
+   ],
+   "clock": "62'",
+   "description": "Attempt missed. Ryan Christie (Bournemouth) header from the left side of the box is too high. Assisted by Lewis Cook with a cross following a corner.",
+   "source_ref": "espn:401879263:play:53901530",
+   "team": "AFC Bournemouth",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Justin Kluivert",
+    "Lewis Cook"
+   ],
+   "clock": "62'",
+   "description": "Substitution, Bournemouth. Justin Kluivert replaces Lewis Cook.",
+   "source_ref": "espn:401879263:play:53901575",
+   "team": "AFC Bournemouth",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Justin Kluivert",
+    "Luke O'Nien"
+   ],
+   "clock": "63'",
+   "description": "Luke O'Nien (Sunderland) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879263:play:53901741",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Justin Kluivert",
+    "Luke O'Nien"
+   ],
+   "clock": "63'",
+   "description": "Foul by Justin Kluivert (Bournemouth).",
+   "source_ref": "espn:401879263:play:53901741",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Marcus Tavernier",
+    "Enzo Le Fée"
+   ],
+   "clock": "64'",
+   "description": "Enzo Le Fée (Sunderland) wins a free kick on the right wing.",
+   "source_ref": "espn:401879263:play:53901763",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Marcus Tavernier",
+    "Enzo Le Fée"
+   ],
+   "clock": "64'",
+   "description": "Foul by Marcus Tavernier (Bournemouth).",
+   "source_ref": "espn:401879263:play:53901763",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Chris Rigg",
+    "Evanilson"
+   ],
+   "clock": "64'",
+   "description": "Foul by Chris Rigg (Sunderland).",
+   "source_ref": "espn:401879263:play:53901775",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Chris Rigg",
+    "Evanilson"
+   ],
+   "clock": "64'",
+   "description": "Evanilson (Bournemouth) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879263:play:53901775",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Chris Rigg"
+   ],
+   "clock": "65'",
+   "description": "Chris Rigg (Sunderland) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879263:play:53901895",
+   "team": "Sunderland",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Jules Ahoka",
+    "Chris Rigg"
+   ],
+   "clock": "65'",
+   "description": "Substitution, Sunderland. Jules Ahoka replaces Chris Rigg because of an injury.",
+   "source_ref": "espn:401879263:play:53901927",
+   "team": "Sunderland",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Evanilson"
+   ],
+   "clock": "69'",
+   "description": "Attempt missed. Evanilson (Bournemouth) right footed shot from the centre of the box is close, but misses to the right.",
+   "source_ref": "espn:401879263:play:53902402",
+   "team": "AFC Bournemouth",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Jules Ahoka",
+    "Adam Smith"
+   ],
+   "clock": "70'",
+   "description": "Foul by Jules Ahoka (Sunderland).",
+   "source_ref": "espn:401879263:play:53902622",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jules Ahoka",
+    "Adam Smith"
+   ],
+   "clock": "70'",
+   "description": "Adam Smith (Bournemouth) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879263:play:53902622",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Reinildo Mandava",
+    "Rayan"
+   ],
+   "clock": "71'",
+   "description": "Foul by Reinildo Mandava (Sunderland).",
+   "source_ref": "espn:401879263:play:53902659",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Reinildo Mandava",
+    "Rayan"
+   ],
+   "clock": "71'",
+   "description": "Rayan (Bournemouth) wins a free kick on the right wing.",
+   "source_ref": "espn:401879263:play:53902659",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Adrien Truffert",
+    "Ryan Christie"
+   ],
+   "clock": "72'",
+   "description": "Attempt missed. Adrien Truffert (Bournemouth) left footed shot from outside the box is high and wide to the right. Assisted by Ryan Christie following a set piece situation.",
+   "source_ref": "espn:401879263:play:53902748",
+   "team": "AFC Bournemouth",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Enzo Le Fée",
+    "Granit Xhaka"
+   ],
+   "clock": "73'",
+   "description": "Attempt missed. Enzo Le Fée (Sunderland) right footed shot from outside the box misses to the left. Assisted by Granit Xhaka with a headed pass.",
+   "source_ref": "espn:401879263:play:53902983",
+   "team": "Sunderland",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [],
+   "clock": "74'",
+   "description": "Corner, Sunderland. Conceded by António Silva.",
+   "source_ref": "espn:401879263:play:53903005",
+   "team": "Sunderland",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Adam Smith",
+    "Jules Ahoka"
+   ],
+   "clock": "76'",
+   "description": "Jules Ahoka (Sunderland) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879263:play:53903466",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Adam Smith",
+    "Jules Ahoka"
+   ],
+   "clock": "76'",
+   "description": "Foul by Adam Smith (Bournemouth).",
+   "source_ref": "espn:401879263:play:53903466",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ryan Christie",
+    "Habib Diarra"
+   ],
+   "clock": "79'",
+   "description": "Habib Diarra (Sunderland) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879263:play:53903867",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ryan Christie",
+    "Habib Diarra"
+   ],
+   "clock": "79'",
+   "description": "Foul by Ryan Christie (Bournemouth).",
+   "source_ref": "espn:401879263:play:53903867",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ryan Christie"
+   ],
+   "clock": "79'",
+   "description": "Ryan Christie (Bournemouth) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879263:play:53904013",
+   "team": "AFC Bournemouth",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Álvaro Rodríguez",
+    "Evanilson"
+   ],
+   "clock": "79'",
+   "description": "Substitution, Bournemouth. Álvaro Rodríguez replaces Evanilson.",
+   "source_ref": "espn:401879263:play:53904096",
+   "team": "AFC Bournemouth",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Amine Adli",
+    "Marcus Tavernier"
+   ],
+   "clock": "79'",
+   "description": "Substitution, Bournemouth. Amine Adli replaces Marcus Tavernier.",
+   "source_ref": "espn:401879263:play:53904097",
+   "team": "AFC Bournemouth",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Trai Hume"
+   ],
+   "clock": "80'",
+   "description": "Attempt missed. Trai Hume (Sunderland) right footed shot from the right side of the box is high and wide to the left following a set piece situation.",
+   "source_ref": "espn:401879263:play:53904016",
+   "team": "Sunderland",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Amine Adli",
+    "Rayan"
+   ],
+   "clock": "82'",
+   "description": "Attempt missed. Amine Adli (Bournemouth) right footed shot from the centre of the box misses to the left. Assisted by Rayan with a cross.",
+   "source_ref": "espn:401879263:play:53904518",
+   "team": "AFC Bournemouth",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Adrien Truffert"
+   ],
+   "clock": "84'",
+   "description": "Handball by Adrien Truffert (Bournemouth).",
+   "source_ref": "espn:401879263:play:53904883",
+   "team": "AFC Bournemouth",
+   "type": "handball"
+  },
+  {
+   "actors": [
+    "Rayan"
+   ],
+   "clock": "86'",
+   "description": "Attempt blocked. Rayan (Bournemouth) left footed shot from outside the box is blocked.",
+   "source_ref": "espn:401879263:play:53905111",
+   "team": "AFC Bournemouth",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Bafodé Diakité",
+    "Tyler Adams"
+   ],
+   "clock": "89'",
+   "description": "Substitution, Bournemouth. Bafodé Diakité replaces Tyler Adams.",
+   "source_ref": "espn:401879263:play:53905759",
+   "team": "AFC Bournemouth",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Ben Gannon-Doak",
+    "Rayan"
+   ],
+   "clock": "89'",
+   "description": "Substitution, Bournemouth. Ben Gannon-Doak replaces Rayan.",
+   "source_ref": "espn:401879263:play:53905760",
+   "team": "AFC Bournemouth",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Justin Kluivert",
+    "Ben Gannon-Doak"
+   ],
+   "clock": "90'",
+   "description": "Attempt blocked. Justin Kluivert (Bournemouth) right footed shot from the centre of the box is blocked. Assisted by Ben Gannon-Doak.",
+   "source_ref": "espn:401879263:play:53905878",
+   "team": "AFC Bournemouth",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Justin Kluivert"
+   ],
+   "clock": "90+1'",
+   "description": "Attempt missed. Justin Kluivert (Bournemouth) right footed shot from a difficult angle on the left misses to the right.",
+   "source_ref": "espn:401879263:play:53906167",
+   "team": "AFC Bournemouth",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Justin Kluivert"
+   ],
+   "clock": "90+2'",
+   "description": "Attempt missed. Justin Kluivert (Bournemouth) left footed shot from the centre of the box is close, but misses to the right.",
+   "source_ref": "espn:401879263:play:53906177",
+   "team": "AFC Bournemouth",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Ryan Christie"
+   ],
+   "clock": "90+4'",
+   "description": "Offside, Bournemouth. Álvaro Rodríguez is caught offside.",
+   "source_ref": "espn:401879263:play:53906407",
+   "team": "AFC Bournemouth",
+   "type": "offside"
+  },
+  {
+   "actors": [],
+   "clock": "90+7'",
+   "description": "Second Half ends, Bournemouth 2, Sunderland 0.",
+   "score_after": "2-0",
+   "source_ref": "espn:401879263:play:53906624",
+   "type": "full_time"
+  }
+ ],
+ "match": {
+  "end_estimate": "2026-10-18T15:00:00Z",
+  "final_result": "AFC Bournemouth 2–0 Sunderland",
+  "id": "401879263",
+  "kickoff": "2026-10-18T13:00:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "BOU",
+    "name": "AFC Bournemouth",
+    "role": "home",
+    "score": "2",
+    "short_name": "Bournemouth",
+    "winner": true
+   },
+   {
+    "abbreviation": "SUN",
+    "name": "Sunderland",
+    "role": "away",
+    "score": "0",
+    "short_name": "Sunderland",
+    "winner": false
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Evanilson scored and contributed an assist as Bournemouth comfortably beat 10-man Sunderland 2-0 at the Vitality Stadium.",
+  "title": "AFC Bournemouth v Sunderland",
+  "venue": "Vitality Stadium"
+ },
+ "sources": [
+  {
+   "publisher": "ESPN",
+   "title": "AFC Bournemouth v Sunderland: match events",
+   "url": "https://www.espn.com/soccer/match/_/gameId/401879263"
+  },
+  {
+   "published_at": "2026-10-15T22:00:58Z",
+   "publisher": "ESPN",
+   "title": "Bournemouth cruise to 2-0 win over 10-man Sunderland",
+   "url": "https://www.espn.com/soccer/report/_/gameId/401879263"
+  }
+ ],
+ "team_stats": [
+  {
+   "corners": 5,
+   "fouls": 16,
+   "possession_pct": 65.0,
+   "red_cards": 0,
+   "saves": 0,
+   "shots": 29,
+   "shots_on_target": 6,
+   "team": "AFC Bournemouth",
+   "yellow_cards": 3
+  },
+  {
+   "corners": 3,
+   "fouls": 7,
+   "possession_pct": 35.0,
+   "red_cards": 1,
+   "saves": 4,
+   "shots": 3,
+   "shots_on_target": 0,
+   "team": "Sunderland",
+   "yellow_cards": 2
+  }
+ ]
+}

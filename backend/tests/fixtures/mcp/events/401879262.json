@@ -1,0 +1,1197 @@
+{
+ "coverage": "full_events",
+ "events": [
+  {
+   "actors": [],
+   "clock": "0'",
+   "description": "First Half begins.",
+   "source_ref": "espn:401879262:play:53779646",
+   "type": "kickoff"
+  },
+  {
+   "actors": [
+    "Florian Wirtz",
+    "Keane Lewis-Potter"
+   ],
+   "clock": "1'",
+   "description": "Foul by Florian Wirtz (Liverpool).",
+   "source_ref": "espn:401879262:play:53779679",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Florian Wirtz",
+    "Keane Lewis-Potter"
+   ],
+   "clock": "1'",
+   "description": "Keane Lewis-Potter (Brentford) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879262:play:53779679",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ronald Araújo",
+    "Kristoffer Ajer"
+   ],
+   "clock": "2'",
+   "description": "Kristoffer Ajer (Brentford) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879262:play:53779770",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ronald Araújo",
+    "Kristoffer Ajer"
+   ],
+   "clock": "2'",
+   "description": "Foul by Ronald Araujo (Liverpool).",
+   "source_ref": "espn:401879262:play:53779770",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Milos Kerkez"
+   ],
+   "clock": "3'",
+   "description": "Offside, Liverpool. Alexander Isak is caught offside.",
+   "source_ref": "espn:401879262:play:53780217",
+   "team": "Liverpool",
+   "type": "offside"
+  },
+  {
+   "actors": [],
+   "clock": "5'",
+   "description": "Corner, Brentford. Conceded by Víctor Muñoz.",
+   "source_ref": "espn:401879262:play:53780686",
+   "team": "Brentford",
+   "type": "corner"
+  },
+  {
+   "actors": [],
+   "clock": "6'",
+   "description": "Corner, Brentford. Conceded by Virgil van Dijk.",
+   "source_ref": "espn:401879262:play:53780992",
+   "team": "Brentford",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Jaidon Anthony",
+    "Keane Lewis-Potter"
+   ],
+   "clock": "7'",
+   "description": "Attempt blocked. Jaidon Anthony (Brentford) right footed shot from outside the box is blocked. Assisted by Keane Lewis-Potter.",
+   "source_ref": "espn:401879262:play:53781231",
+   "team": "Brentford",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Dominik Szoboszlai",
+    "Florian Wirtz"
+   ],
+   "clock": "8'",
+   "description": "Attempt missed. Dominik Szoboszlai (Liverpool) right footed shot from outside the box is high and wide to the right. Assisted by Florian Wirtz.",
+   "source_ref": "espn:401879262:play:53781539",
+   "team": "Liverpool",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Igor Thiago",
+    "Milos Kerkez"
+   ],
+   "clock": "9'",
+   "description": "Milos Kerkez (Liverpool) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879262:play:53781664",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Igor Thiago",
+    "Milos Kerkez"
+   ],
+   "clock": "9'",
+   "description": "Foul by Igor Thiago (Brentford).",
+   "source_ref": "espn:401879262:play:53781664",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Víctor Muñoz",
+    "Keane Lewis-Potter"
+   ],
+   "clock": "11'",
+   "description": "Foul by Víctor Muñoz (Liverpool).",
+   "source_ref": "espn:401879262:play:53782483",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Víctor Muñoz",
+    "Keane Lewis-Potter"
+   ],
+   "clock": "11'",
+   "description": "Keane Lewis-Potter (Brentford) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879262:play:53782483",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ronald Araújo",
+    "Jaidon Anthony"
+   ],
+   "clock": "12'",
+   "description": "Jaidon Anthony (Brentford) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879262:play:53782502",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ronald Araújo",
+    "Jaidon Anthony"
+   ],
+   "clock": "12'",
+   "description": "Foul by Ronald Araujo (Liverpool).",
+   "source_ref": "espn:401879262:play:53782502",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "15'",
+   "description": "Corner, Liverpool. Conceded by Sepp van den Berg.",
+   "source_ref": "espn:401879262:play:53783366",
+   "team": "Liverpool",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Alexis Mac Allister",
+    "Florian Wirtz"
+   ],
+   "clock": "15'",
+   "description": "Attempt missed. Alexis Mac Allister (Liverpool) right footed shot from outside the box is high and wide to the right. Assisted by Florian Wirtz following a corner.",
+   "source_ref": "espn:401879262:play:53783370",
+   "team": "Liverpool",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Florian Wirtz",
+    "Kristoffer Ajer"
+   ],
+   "clock": "16'",
+   "description": "Kristoffer Ajer (Brentford) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879262:play:53783377",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Florian Wirtz",
+    "Kristoffer Ajer"
+   ],
+   "clock": "16'",
+   "description": "Foul by Florian Wirtz (Liverpool).",
+   "source_ref": "espn:401879262:play:53783377",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Igor Thiago",
+    "Milos Kerkez"
+   ],
+   "clock": "18'",
+   "description": "Foul by Igor Thiago (Brentford).",
+   "source_ref": "espn:401879262:play:53784131",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Igor Thiago",
+    "Milos Kerkez"
+   ],
+   "clock": "18'",
+   "description": "Milos Kerkez (Liverpool) wins a free kick on the left wing.",
+   "source_ref": "espn:401879262:play:53784131",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Michael Kayode",
+    "Dango Ouattara"
+   ],
+   "clock": "19'",
+   "description": "Attempt blocked. Michael Kayode (Brentford) left footed shot from the right side of the box is blocked. Assisted by Dango Ouattara.",
+   "source_ref": "espn:401879262:play:53784645",
+   "team": "Brentford",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "19'",
+   "description": "Corner, Brentford. Conceded by Jérémy Jacquet.",
+   "source_ref": "espn:401879262:play:53784410",
+   "team": "Brentford",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Bradley Barcola"
+   ],
+   "clock": "20'",
+   "description": "Attempt missed. Bradley Barcola (Liverpool) right footed shot from outside the box misses to the left following a fast break.",
+   "source_ref": "espn:401879262:play:53784673",
+   "team": "Liverpool",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Alexander Isak",
+    "Alexis Mac Allister"
+   ],
+   "clock": "23'",
+   "description": "Attempt missed. Alexander Isak (Liverpool) header from the centre of the box is too high. Assisted by Alexis Mac Allister with a cross.",
+   "source_ref": "espn:401879262:play:53784995",
+   "team": "Liverpool",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Florian Wirtz",
+    "Yehor Yarmoliuk"
+   ],
+   "clock": "24'",
+   "description": "Yehor Yarmoliuk (Brentford) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879262:play:53785416",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Florian Wirtz",
+    "Yehor Yarmoliuk"
+   ],
+   "clock": "24'",
+   "description": "Foul by Florian Wirtz (Liverpool).",
+   "source_ref": "espn:401879262:play:53785416",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Igor Thiago"
+   ],
+   "clock": "28'",
+   "description": "Attempt blocked. Igor Thiago (Brentford) right footed shot from the centre of the box is blocked.",
+   "source_ref": "espn:401879262:play:53786259",
+   "team": "Brentford",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Bradley Barcola",
+    "Michael Kayode"
+   ],
+   "clock": "31'",
+   "description": "Michael Kayode (Brentford) wins a free kick on the right wing.",
+   "source_ref": "espn:401879262:play:53786685",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Bradley Barcola",
+    "Michael Kayode"
+   ],
+   "clock": "31'",
+   "description": "Foul by Bradley Barcola (Liverpool).",
+   "source_ref": "espn:401879262:play:53786685",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Bradley Barcola"
+   ],
+   "clock": "31'",
+   "description": "Bradley Barcola (Liverpool) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879262:play:53786940",
+   "team": "Liverpool",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Trey Nyoni",
+    "Dominik Szoboszlai"
+   ],
+   "clock": "32'",
+   "description": "Substitution, Liverpool. Trey Nyoni replaces Dominik Szoboszlai because of an injury.",
+   "source_ref": "espn:401879262:play:53787013",
+   "team": "Liverpool",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Igor Thiago",
+    "Kristoffer Ajer"
+   ],
+   "clock": "33'",
+   "description": "Attempt missed. Igor Thiago (Brentford) header from the left side of the six yard box is too high. Assisted by Kristoffer Ajer with a headed pass following a set piece situation.",
+   "source_ref": "espn:401879262:play:53787409",
+   "team": "Brentford",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Trey Nyoni",
+    "Dango Ouattara"
+   ],
+   "clock": "35'",
+   "description": "Dango Ouattara (Brentford) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879262:play:53787652",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Trey Nyoni",
+    "Dango Ouattara"
+   ],
+   "clock": "35'",
+   "description": "Foul by Trey Nyoni (Liverpool).",
+   "source_ref": "espn:401879262:play:53787652",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Bradley Barcola",
+    "Florian Wirtz"
+   ],
+   "clock": "37'",
+   "description": "Attempt missed. Bradley Barcola (Liverpool) right footed shot from outside the box is high and wide to the right. Assisted by Florian Wirtz.",
+   "source_ref": "espn:401879262:play:53787947",
+   "team": "Liverpool",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Mathias Jensen",
+    "Trey Nyoni"
+   ],
+   "clock": "39'",
+   "description": "Foul by Mathias Jensen (Brentford).",
+   "source_ref": "espn:401879262:play:53788578",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Mathias Jensen",
+    "Trey Nyoni"
+   ],
+   "clock": "39'",
+   "description": "Trey Nyoni (Liverpool) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879262:play:53788578",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Alexis Mac Allister"
+   ],
+   "clock": "41'",
+   "description": "VAR Decision: No Penalty Liverpool.",
+   "source_ref": "espn:401879262:play:53789717",
+   "team": "Liverpool",
+   "type": "var"
+  },
+  {
+   "actors": [
+    "Jaidon Anthony",
+    "Keane Lewis-Potter"
+   ],
+   "clock": "44'",
+   "description": "Attempt blocked. Jaidon Anthony (Brentford) right footed shot from the left side of the box is blocked. Assisted by Keane Lewis-Potter.",
+   "source_ref": "espn:401879262:play:53790112",
+   "team": "Brentford",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Keane Lewis-Potter",
+    "Igor Thiago"
+   ],
+   "clock": "44'",
+   "description": "Goal! Brentford 1, Liverpool 0. Keane Lewis-Potter (Brentford) header from the centre of the box to the top right corner. Assisted by Igor Thiago.",
+   "score_after": "1-0",
+   "source_ref": "espn:401879262:play:53790254",
+   "team": "Brentford",
+   "type": "goal"
+  },
+  {
+   "actors": [],
+   "clock": "45+3'",
+   "description": "Corner, Liverpool. Conceded by Keane Lewis-Potter.",
+   "source_ref": "espn:401879262:play:53791112",
+   "team": "Liverpool",
+   "type": "corner"
+  },
+  {
+   "actors": [],
+   "clock": "45+4'",
+   "description": "Corner, Liverpool. Conceded by Dango Ouattara.",
+   "source_ref": "espn:401879262:play:53791565",
+   "team": "Liverpool",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Florian Wirtz"
+   ],
+   "clock": "45+4'",
+   "description": "Attempt blocked. Florian Wirtz (Liverpool) right footed shot from the right side of the box is blocked.",
+   "source_ref": "espn:401879262:play:53791563",
+   "team": "Liverpool",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Yehor Yarmoliuk"
+   ],
+   "clock": "45+5'",
+   "description": "VAR Decision: Card upgraded Yehor Yarmoliuk (Brentford).",
+   "source_ref": "espn:401879262:play:53791961",
+   "team": "Brentford",
+   "type": "var"
+  },
+  {
+   "actors": [
+    "Yehor Yarmoliuk"
+   ],
+   "clock": "45+8'",
+   "description": "Yehor Yarmoliuk (Brentford) is shown the red card for violent conduct.",
+   "source_ref": "espn:401879262:play:53792221",
+   "team": "Brentford",
+   "type": "red_card"
+  },
+  {
+   "actors": [
+    "Trey Nyoni",
+    "Florian Wirtz"
+   ],
+   "clock": "45+8'",
+   "description": "Attempt blocked. Trey Nyoni (Liverpool) right footed shot from outside the box is blocked. Assisted by Florian Wirtz.",
+   "source_ref": "espn:401879262:play:53792225",
+   "team": "Liverpool",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Michael Kayode"
+   ],
+   "clock": "45+9'",
+   "description": "Offside, Brentford. Dango Ouattara is caught offside.",
+   "source_ref": "espn:401879262:play:53792238",
+   "team": "Brentford",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Milos Kerkez",
+    "Michael Kayode"
+   ],
+   "clock": "45+10'",
+   "description": "Michael Kayode (Brentford) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879262:play:53792246",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Milos Kerkez",
+    "Michael Kayode"
+   ],
+   "clock": "45+10'",
+   "description": "Foul by Milos Kerkez (Liverpool).",
+   "source_ref": "espn:401879262:play:53792246",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Kevin Schade",
+    "Dango Ouattara"
+   ],
+   "clock": "45'",
+   "description": "Substitution, Brentford. Kevin Schade replaces Dango Ouattara.",
+   "source_ref": "espn:401879262:play:53795604",
+   "team": "Brentford",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Mamadou Sangare",
+    "Mathias Jensen"
+   ],
+   "clock": "45'",
+   "description": "Substitution, Brentford. Mamadou Sangaré replaces Mathias Jensen.",
+   "source_ref": "espn:401879262:play:53795605",
+   "team": "Brentford",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Jeremie Frimpong",
+    "Ronald Araújo"
+   ],
+   "clock": "45'",
+   "description": "Substitution, Liverpool. Jeremie Frimpong replaces Ronald Araujo.",
+   "source_ref": "espn:401879262:play:53795543",
+   "team": "Liverpool",
+   "type": "sub"
+  },
+  {
+   "actors": [],
+   "clock": "45'",
+   "description": "Second Half begins Brentford 1, Liverpool 0.",
+   "source_ref": "espn:401879262:play:53795606",
+   "type": "second_half"
+  },
+  {
+   "actors": [
+    "Igor Thiago",
+    "Jérémy Jacquet"
+   ],
+   "clock": "46'",
+   "description": "Foul by Igor Thiago (Brentford).",
+   "source_ref": "espn:401879262:play:53795874",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Igor Thiago",
+    "Jérémy Jacquet"
+   ],
+   "clock": "46'",
+   "description": "Jérémy Jacquet (Liverpool) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879262:play:53795874",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Igor Thiago"
+   ],
+   "clock": "46'",
+   "description": "Igor Thiago (Brentford) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879262:play:53795875",
+   "team": "Brentford",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Jérémy Jacquet",
+    "Jeremie Frimpong"
+   ],
+   "clock": "46'",
+   "description": "Attempt missed. Jérémy Jacquet (Liverpool) right footed shot from outside the box is too high. Assisted by Jeremie Frimpong.",
+   "source_ref": "espn:401879262:play:53795890",
+   "team": "Liverpool",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Alexis Mac Allister",
+    "Florian Wirtz"
+   ],
+   "clock": "49'",
+   "description": "Attempt blocked. Alexis Mac Allister (Liverpool) right footed shot from outside the box is blocked. Assisted by Florian Wirtz.",
+   "source_ref": "espn:401879262:play:53796435",
+   "team": "Liverpool",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Jérémy Jacquet",
+    "Kevin Schade"
+   ],
+   "clock": "49'",
+   "description": "Kevin Schade (Brentford) wins a free kick on the left wing.",
+   "source_ref": "espn:401879262:play:53796689",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jérémy Jacquet",
+    "Kevin Schade"
+   ],
+   "clock": "49'",
+   "description": "Foul by Jérémy Jacquet (Liverpool).",
+   "source_ref": "espn:401879262:play:53796689",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jérémy Jacquet"
+   ],
+   "clock": "49'",
+   "description": "Jérémy Jacquet (Liverpool) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879262:play:53796690",
+   "team": "Liverpool",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Rio Ngumoha",
+    "Jeremie Frimpong"
+   ],
+   "clock": "52'",
+   "description": "Substitution, Liverpool. Rio Ngumoha replaces Jeremie Frimpong because of an injury.",
+   "source_ref": "espn:401879262:play:53797370",
+   "team": "Liverpool",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Jaidon Anthony"
+   ],
+   "clock": "53'",
+   "description": "Attempt saved. Jaidon Anthony (Brentford) right footed shot from the centre of the box is saved in the bottom right corner by Alisson Becker (Liverpool).",
+   "source_ref": "espn:401879262:play:53797634",
+   "team": "Brentford",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Bradley Barcola",
+    "Michael Kayode"
+   ],
+   "clock": "53'",
+   "description": "Michael Kayode (Brentford) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879262:play:53797647",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Bradley Barcola",
+    "Michael Kayode"
+   ],
+   "clock": "53'",
+   "description": "Foul by Bradley Barcola (Liverpool).",
+   "source_ref": "espn:401879262:play:53797647",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Alexis Mac Allister"
+   ],
+   "clock": "53'",
+   "description": "Alexis Mac Allister (Liverpool) is shown the yellow card.",
+   "source_ref": "espn:401879262:play:53798127",
+   "team": "Liverpool",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Trey Nyoni",
+    "Florian Wirtz"
+   ],
+   "clock": "56'",
+   "description": "Attempt missed. Trey Nyoni (Liverpool) left footed shot from the left side of the box misses to the left. Assisted by Florian Wirtz.",
+   "source_ref": "espn:401879262:play:53798353",
+   "team": "Liverpool",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Jaidon Anthony"
+   ],
+   "clock": "58'",
+   "description": "Attempt missed. Jaidon Anthony (Brentford) right footed shot from the centre of the box misses to the right.",
+   "source_ref": "espn:401879262:play:53799123",
+   "team": "Brentford",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Alexis Mac Allister",
+    "Milos Kerkez"
+   ],
+   "clock": "59'",
+   "description": "Attempt saved. Alexis Mac Allister (Liverpool) right footed shot from outside the box is saved in the top right corner by Caoimhín Kelleher (Brentford). Assisted by Milos Kerkez.",
+   "source_ref": "espn:401879262:play:53799328",
+   "team": "Liverpool",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [],
+   "clock": "59'",
+   "description": "Corner, Liverpool. Conceded by Caoimhín Kelleher.",
+   "source_ref": "espn:401879262:play:53799330",
+   "team": "Liverpool",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Virgil van Dijk",
+    "Rio Ngumoha"
+   ],
+   "clock": "59'",
+   "description": "Attempt missed. Virgil van Dijk (Liverpool) right footed shot from the left side of the box is close, but misses to the right. Assisted by Rio Ngumoha with a cross following a corner.",
+   "source_ref": "espn:401879262:play:53799335",
+   "team": "Liverpool",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Kevin Schade"
+   ],
+   "clock": "60'",
+   "description": "Kevin Schade (Brentford) is shown the yellow card.",
+   "source_ref": "espn:401879262:play:53799710",
+   "team": "Brentford",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Víctor Muñoz",
+    "Florian Wirtz"
+   ],
+   "clock": "62'",
+   "description": "Goal! Brentford 1, Liverpool 1. Víctor Muñoz (Liverpool) left footed shot from the right side of the box to the bottom left corner. Assisted by Florian Wirtz following a fast break.",
+   "score_after": "1-1",
+   "source_ref": "espn:401879262:play:53799884",
+   "team": "Liverpool",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Igor Thiago",
+    "Jérémy Jacquet"
+   ],
+   "clock": "63'",
+   "description": "Foul by Igor Thiago (Brentford).",
+   "source_ref": "espn:401879262:play:53800123",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Igor Thiago",
+    "Jérémy Jacquet"
+   ],
+   "clock": "63'",
+   "description": "Jérémy Jacquet (Liverpool) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879262:play:53800123",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Vitaly Janelt"
+   ],
+   "clock": "63'",
+   "description": "Vitaly Janelt (Brentford) is shown the yellow card.",
+   "source_ref": "espn:401879262:play:53800196",
+   "team": "Brentford",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [],
+   "clock": "64'",
+   "description": "Corner, Liverpool. Conceded by Keane Lewis-Potter.",
+   "source_ref": "espn:401879262:play:53800632",
+   "team": "Liverpool",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Víctor Muñoz"
+   ],
+   "clock": "65'",
+   "description": "Attempt missed. Víctor Muñoz (Liverpool) left footed shot from the centre of the box misses to the left following a corner.",
+   "source_ref": "espn:401879262:play:53800638",
+   "team": "Liverpool",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Bradley Barcola",
+    "Florian Wirtz"
+   ],
+   "clock": "66'",
+   "description": "Attempt missed. Bradley Barcola (Liverpool) right footed shot from the centre of the box misses to the right. Assisted by Florian Wirtz.",
+   "source_ref": "espn:401879262:play:53800725",
+   "team": "Liverpool",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [],
+   "clock": "68'",
+   "description": "Corner, Liverpool. Conceded by Igor Thiago.",
+   "source_ref": "espn:401879262:play:53801168",
+   "team": "Liverpool",
+   "type": "corner"
+  },
+  {
+   "actors": [],
+   "clock": "69'",
+   "description": "Corner, Liverpool. Conceded by Kevin Schade.",
+   "source_ref": "espn:401879262:play:53801322",
+   "team": "Liverpool",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Rio Ngumoha",
+    "Florian Wirtz"
+   ],
+   "clock": "69'",
+   "description": "Attempt blocked. Rio Ngumoha (Liverpool) left footed shot from the right side of the box is blocked. Assisted by Florian Wirtz.",
+   "source_ref": "espn:401879262:play:53801328",
+   "team": "Liverpool",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Alexander Isak",
+    "Bradley Barcola"
+   ],
+   "clock": "70'",
+   "description": "Goal! Brentford 1, Liverpool 2. Alexander Isak (Liverpool) left footed shot from very close range to the bottom right corner. Assisted by Bradley Barcola with a headed pass.",
+   "score_after": "1-2",
+   "source_ref": "espn:401879262:play:53801457",
+   "team": "Liverpool",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Aaron Hickey",
+    "Sepp van den Berg"
+   ],
+   "clock": "71'",
+   "description": "Substitution, Brentford. Aaron Hickey replaces Sepp van den Berg.",
+   "source_ref": "espn:401879262:play:53801641",
+   "team": "Brentford",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Mamadou Sangare",
+    "Rio Ngumoha"
+   ],
+   "clock": "71'",
+   "description": "Foul by Mamadou Sangaré (Brentford).",
+   "source_ref": "espn:401879262:play:53801746",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Mamadou Sangare",
+    "Rio Ngumoha"
+   ],
+   "clock": "71'",
+   "description": "Rio Ngumoha (Liverpool) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879262:play:53801746",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Víctor Muñoz",
+    "Trey Nyoni"
+   ],
+   "clock": "72'",
+   "description": "Attempt saved. Víctor Muñoz (Liverpool) right footed shot from outside the box is saved in the centre of the goal by Caoimhín Kelleher (Brentford). Assisted by Trey Nyoni.",
+   "source_ref": "espn:401879262:play:53802098",
+   "team": "Liverpool",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Igor Thiago"
+   ],
+   "clock": "73'",
+   "description": "Attempt missed. Igor Thiago (Brentford) right footed shot from the centre of the box misses to the right.",
+   "source_ref": "espn:401879262:play:53802108",
+   "team": "Brentford",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [],
+   "clock": "75'",
+   "description": "Corner, Liverpool. Conceded by Aaron Hickey.",
+   "source_ref": "espn:401879262:play:53802469",
+   "team": "Liverpool",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Keane Lewis-Potter",
+    "Michael Kayode"
+   ],
+   "clock": "77'",
+   "description": "Attempt missed. Keane Lewis-Potter (Brentford) header from the centre of the box misses to the left. Assisted by Michael Kayode with a cross.",
+   "source_ref": "espn:401879262:play:53803024",
+   "team": "Brentford",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "El Hadji Malick Diouf",
+    "Keane Lewis-Potter"
+   ],
+   "clock": "77'",
+   "description": "Substitution, Brentford. El Hadji Malick Diouf replaces Keane Lewis-Potter.",
+   "source_ref": "espn:401879262:play:53803026",
+   "team": "Brentford",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Mikkel Damsgaard",
+    "Jaidon Anthony"
+   ],
+   "clock": "77'",
+   "description": "Substitution, Brentford. Mikkel Damsgaard replaces Jaidon Anthony.",
+   "source_ref": "espn:401879262:play:53803027",
+   "team": "Brentford",
+   "type": "sub"
+  },
+  {
+   "actors": [],
+   "clock": "78'",
+   "description": "Corner, Liverpool. Conceded by Kristoffer Ajer.",
+   "source_ref": "espn:401879262:play:53803225",
+   "team": "Liverpool",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Bradley Barcola"
+   ],
+   "clock": "79'",
+   "description": "Bradley Barcola (Liverpool) hits the bar with a right footed shot from the left side of the box following a corner.",
+   "source_ref": "espn:401879262:play:53803228",
+   "team": "Liverpool",
+   "type": "woodwork"
+  },
+  {
+   "actors": [
+    "Rio Ngumoha",
+    "Kevin Schade"
+   ],
+   "clock": "79'",
+   "description": "Kevin Schade (Brentford) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879262:play:53803229",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Rio Ngumoha",
+    "Kevin Schade"
+   ],
+   "clock": "79'",
+   "description": "Foul by Rio Ngumoha (Liverpool).",
+   "source_ref": "espn:401879262:play:53803229",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lewis Koumas",
+    "Alexander Isak"
+   ],
+   "clock": "79'",
+   "description": "Substitution, Liverpool. Lewis Koumas replaces Alexander Isak.",
+   "source_ref": "espn:401879262:play:53803514",
+   "team": "Liverpool",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Joe Gomez",
+    "Víctor Muñoz"
+   ],
+   "clock": "79'",
+   "description": "Substitution, Liverpool. Joe Gomez replaces Víctor Muñoz.",
+   "source_ref": "espn:401879262:play:53803515",
+   "team": "Liverpool",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Joe Gomez"
+   ],
+   "clock": "81'",
+   "description": "Offside, Liverpool. Florian Wirtz is caught offside.",
+   "source_ref": "espn:401879262:play:53803747",
+   "team": "Liverpool",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Joe Gomez",
+    "Igor Thiago"
+   ],
+   "clock": "88'",
+   "description": "Igor Thiago (Brentford) wins a free kick on the left wing.",
+   "source_ref": "espn:401879262:play:53805143",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Joe Gomez",
+    "Igor Thiago"
+   ],
+   "clock": "88'",
+   "description": "Foul by Joe Gomez (Liverpool).",
+   "source_ref": "espn:401879262:play:53805143",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Vitaly Janelt",
+    "Rio Ngumoha"
+   ],
+   "clock": "90+1'",
+   "description": "Foul by Vitaly Janelt (Brentford).",
+   "source_ref": "espn:401879262:play:53805492",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Vitaly Janelt",
+    "Rio Ngumoha"
+   ],
+   "clock": "90+1'",
+   "description": "Rio Ngumoha (Liverpool) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879262:play:53805492",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Vitaly Janelt"
+   ],
+   "clock": "90+2'",
+   "description": "Second yellow card to Vitaly Janelt (Brentford) for a bad foul.",
+   "source_ref": "espn:401879262:play:53805493",
+   "team": "Brentford",
+   "type": "red_card"
+  },
+  {
+   "actors": [
+    "Alexis Mac Allister"
+   ],
+   "clock": "90+3'",
+   "description": "Attempt missed. Alexis Mac Allister (Liverpool) right footed shot from outside the box is high and wide to the right from a direct free kick.",
+   "source_ref": "espn:401879262:play:53805609",
+   "team": "Liverpool",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Lewis Koumas",
+    "Virgil van Dijk"
+   ],
+   "clock": "90+4'",
+   "description": "Attempt saved. Lewis Koumas (Liverpool) right footed shot from outside the box is saved in the centre of the goal by Caoimhín Kelleher (Brentford). Assisted by Virgil van Dijk.",
+   "source_ref": "espn:401879262:play:53805658",
+   "team": "Liverpool",
+   "type": "shot_on_target"
+  }
+ ],
+ "match": {
+  "end_estimate": "2026-10-17T16:00:00Z",
+  "final_result": "Brentford 1–2 Liverpool",
+  "id": "401879262",
+  "kickoff": "2026-10-17T14:00:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "BRE",
+    "name": "Brentford",
+    "role": "home",
+    "score": "1",
+    "short_name": "Brentford",
+    "winner": false
+   },
+   {
+    "abbreviation": "LIV",
+    "name": "Liverpool",
+    "role": "away",
+    "score": "2",
+    "short_name": "Liverpool",
+    "winner": true
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Alexander Isak marked his return from injury with the winner as Liverpool came from behind to beat nine-man Brentford 2-1.",
+  "title": "Brentford v Liverpool",
+  "venue": "Gtech Community Stadium"
+ },
+ "sources": [
+  {
+   "publisher": "ESPN",
+   "title": "Brentford v Liverpool: match events",
+   "url": "https://www.espn.com/soccer/match/_/gameId/401879262"
+  },
+  {
+   "published_at": "2026-10-17T16:07:00Z",
+   "publisher": "ESPN",
+   "title": "Alexander Isak completes Liverpool comeback at nine-man Brentford",
+   "url": "https://www.espn.com/soccer/report/_/gameId/401879262"
+  }
+ ],
+ "team_stats": [
+  {
+   "corners": 3,
+   "fouls": 7,
+   "possession_pct": 40.1,
+   "red_cards": 2,
+   "saves": 3,
+   "shots": 10,
+   "shots_on_target": 2,
+   "team": "Brentford",
+   "yellow_cards": 2
+  },
+  {
+   "corners": 9,
+   "fouls": 13,
+   "possession_pct": 59.9,
+   "red_cards": 0,
+   "saves": 1,
+   "shots": 21,
+   "shots_on_target": 5,
+   "team": "Liverpool",
+   "yellow_cards": 3
+  }
+ ]
+}

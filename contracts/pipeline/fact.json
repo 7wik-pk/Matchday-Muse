@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Fact",
+  "description": "One checkable statement about the match. Lines of the poem cite facts by id.",
+  "type": "object",
+  "required": [
+    "id",
+    "text",
+    "kind",
+    "source_ref",
+    "speaker"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "f1, f2 and so on, unique within the fact sheet."
+    },
+    "text": {
+      "type": "string",
+      "description": "One plain sentence, such as: 70': Alexander Isak scored. Brentford 1, Liverpool 2."
+    },
+    "kind": {
+      "enum": [
+        "score",
+        "event",
+        "context",
+        "quote"
+      ]
+    },
+    "source_ref": {
+      "type": "string",
+      "description": "The event's source_ref from get_match_events, or the URL of a search result."
+    },
+    "speaker": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Quotes only: who said it, as the source attributes it; null otherwise."
+    }
+  },
+  "additionalProperties": false
+}

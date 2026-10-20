@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Person",
+  "description": "Someone the poem may name. The roster comes from MCP data only.",
+  "type": "object",
+  "required": [
+    "canonical",
+    "variants"
+  ],
+  "properties": {
+    "canonical": {
+      "type": "string",
+      "description": "Full name, such as Bukayo Saka."
+    },
+    "variants": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Other accepted forms: surname, known-as names."
+    }
+  },
+  "additionalProperties": false
+}

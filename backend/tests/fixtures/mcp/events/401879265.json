@@ -1,0 +1,959 @@
+{
+ "coverage": "full_events",
+ "events": [
+  {
+   "actors": [
+    "Kenny Tete",
+    "Emersonn"
+   ],
+   "clock": "6'",
+   "description": "Emersonn (Ipswich Town) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879265:play:53373189",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Kenny Tete",
+    "Emersonn"
+   ],
+   "clock": "6'",
+   "description": "Foul by Kenny Tete (Fulham).",
+   "source_ref": "espn:401879265:play:53373189",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jaden Philogene",
+    "Oscar Bobb"
+   ],
+   "clock": "8'",
+   "description": "Oscar Bobb (Fulham) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879265:play:53373694",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jaden Philogene",
+    "Oscar Bobb"
+   ],
+   "clock": "8'",
+   "description": "Foul by Jaden Philogene (Ipswich Town).",
+   "source_ref": "espn:401879265:play:53373694",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "11'",
+   "description": "Corner, Ipswich Town. Conceded by Kenny Tete.",
+   "source_ref": "espn:401879265:play:53374434",
+   "team": "Ipswich Town",
+   "type": "corner"
+  },
+  {
+   "actors": [],
+   "clock": "13'",
+   "description": "Corner, Ipswich Town. Conceded by David Affengruber.",
+   "source_ref": "espn:401879265:play:53374879",
+   "team": "Ipswich Town",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Dara O'Shea",
+    "Oscar Bobb"
+   ],
+   "clock": "14'",
+   "description": "Oscar Bobb (Fulham) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879265:play:53375186",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Dara O'Shea",
+    "Oscar Bobb"
+   ],
+   "clock": "14'",
+   "description": "Foul by Dara O'Shea (Ipswich Town).",
+   "source_ref": "espn:401879265:play:53375186",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Alex Iwobi"
+   ],
+   "clock": "15'",
+   "description": "Offside, Fulham. Ryan Sessegnon is caught offside.",
+   "source_ref": "espn:401879265:play:53375307",
+   "team": "Fulham",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Julio Enciso",
+    "Daizen Maeda"
+   ],
+   "clock": "16'",
+   "description": "Attempt missed. Julio Enciso (Ipswich Town) right footed shot from outside the box is close, but misses to the right. Assisted by Daizen Maeda.",
+   "source_ref": "espn:401879265:play:53375552",
+   "team": "Ipswich Town",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Jaden Philogene",
+    "Sasa Lukic"
+   ],
+   "clock": "19'",
+   "description": "Attempt saved. Jaden Philogene (Ipswich Town) right footed shot from the left side of the box is saved in the bottom left corner by Bernd Leno (Fulham). Assisted by Sasa Lukic.",
+   "source_ref": "espn:401879265:play:53376170",
+   "team": "Ipswich Town",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Leif Davis",
+    "Josh King"
+   ],
+   "clock": "19'",
+   "description": "Foul by Leif Davis (Ipswich Town).",
+   "source_ref": "espn:401879265:play:53376650",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Leif Davis",
+    "Josh King"
+   ],
+   "clock": "19'",
+   "description": "Josh King (Fulham) wins a free kick on the right wing.",
+   "source_ref": "espn:401879265:play:53376650",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Leif Davis"
+   ],
+   "clock": "19'",
+   "description": "Leif Davis (Ipswich Town) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879265:play:53376652",
+   "team": "Ipswich Town",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [],
+   "clock": "21'",
+   "description": "Corner, Fulham. Conceded by Abdoul Ouattara.",
+   "source_ref": "espn:401879265:play:53376879",
+   "team": "Fulham",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "David Affengruber",
+    "Alex Iwobi"
+   ],
+   "clock": "22'",
+   "description": "Attempt missed. David Affengruber (Fulham) header from the centre of the box is close, but misses the top right corner. Assisted by Alex Iwobi with a cross following a corner.",
+   "source_ref": "espn:401879265:play:53377000",
+   "team": "Fulham",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Sasa Lukic",
+    "Oscar Bobb"
+   ],
+   "clock": "22'",
+   "description": "Foul by Sasa Lukic (Ipswich Town).",
+   "source_ref": "espn:401879265:play:53377009",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Sasa Lukic",
+    "Oscar Bobb"
+   ],
+   "clock": "22'",
+   "description": "Oscar Bobb (Fulham) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879265:play:53377009",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ryan Sessegnon",
+    "Kenny Tete"
+   ],
+   "clock": "24'",
+   "description": "Attempt missed. Ryan Sessegnon (Fulham) header from the left side of the six yard box is close, but misses to the left. Assisted by Kenny Tete with a cross.",
+   "source_ref": "espn:401879265:play:53377491",
+   "team": "Fulham",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Dara O'Shea",
+    "Josh King"
+   ],
+   "clock": "27'",
+   "description": "Foul by Dara O'Shea (Ipswich Town).",
+   "source_ref": "espn:401879265:play:53377882",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Dara O'Shea",
+    "Josh King"
+   ],
+   "clock": "27'",
+   "description": "Josh King (Fulham) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879265:play:53377882",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Sander Berge"
+   ],
+   "clock": "28'",
+   "description": "Attempt blocked. Sander Berge (Fulham) right footed shot from outside the box is blocked.",
+   "source_ref": "espn:401879265:play:53378154",
+   "team": "Fulham",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Shea Charles"
+   ],
+   "clock": "28'",
+   "description": "Attempt missed. Shea Charles (Fulham) right footed shot from outside the box is high and wide to the right following a set piece situation.",
+   "source_ref": "espn:401879265:play:53378156",
+   "team": "Fulham",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Sander Berge",
+    "Oscar Bobb"
+   ],
+   "clock": "30'",
+   "description": "Attempt saved. Sander Berge (Fulham) right footed shot from the right side of the box is saved in the bottom right corner by Christian Walton (Ipswich Town). Assisted by Oscar Bobb.",
+   "source_ref": "espn:401879265:play:53378786",
+   "team": "Fulham",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [],
+   "clock": "30'",
+   "description": "Corner, Fulham. Conceded by Christian Walton.",
+   "source_ref": "espn:401879265:play:53378788",
+   "team": "Fulham",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Gonzalo García",
+    "Sander Berge"
+   ],
+   "clock": "37'",
+   "description": "Attempt missed. Gonzalo García (Fulham) right footed shot from the left side of the box is close, but misses to the left. Assisted by Sander Berge.",
+   "source_ref": "espn:401879265:play:53380302",
+   "team": "Fulham",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Ryan Sessegnon",
+    "Alex Iwobi"
+   ],
+   "clock": "44'",
+   "description": "Attempt missed. Ryan Sessegnon (Fulham) right footed shot from outside the box is high and wide to the right. Assisted by Alex Iwobi.",
+   "source_ref": "espn:401879265:play:53382170",
+   "team": "Fulham",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Josh King",
+    "Dara O'Shea"
+   ],
+   "clock": "44'",
+   "description": "Dara O'Shea (Ipswich Town) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879265:play:53382422",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Josh King",
+    "Dara O'Shea"
+   ],
+   "clock": "44'",
+   "description": "Foul by Josh King (Fulham).",
+   "source_ref": "espn:401879265:play:53382422",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Josh King"
+   ],
+   "clock": "44'",
+   "description": "Josh King (Fulham) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879265:play:53382423",
+   "team": "Fulham",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [],
+   "clock": "45'",
+   "description": "Second Half begins Ipswich Town 0, Fulham 0.",
+   "source_ref": "espn:401879265:play:53385342",
+   "type": "second_half"
+  },
+  {
+   "actors": [
+    "Calvin Bassey",
+    "Emersonn"
+   ],
+   "clock": "48'",
+   "description": "Emersonn (Ipswich Town) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879265:play:53386092",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Calvin Bassey",
+    "Emersonn"
+   ],
+   "clock": "48'",
+   "description": "Foul by Calvin Bassey (Fulham).",
+   "source_ref": "espn:401879265:play:53386092",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Leif Davis"
+   ],
+   "clock": "50'",
+   "description": "Attempt missed. Leif Davis (Ipswich Town) left footed shot from outside the box is high and wide to the right from a direct free kick.",
+   "source_ref": "espn:401879265:play:53386093",
+   "team": "Ipswich Town",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Calvin Bassey",
+    "Emersonn"
+   ],
+   "clock": "50'",
+   "description": "Foul by Calvin Bassey (Fulham).",
+   "source_ref": "espn:401879265:play:53386281",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Calvin Bassey"
+   ],
+   "clock": "51'",
+   "description": "Calvin Bassey (Fulham) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879265:play:53386481",
+   "team": "Fulham",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Julio Enciso",
+    "Emersonn"
+   ],
+   "clock": "52'",
+   "description": "Attempt saved. Julio Enciso (Ipswich Town) right footed shot from outside the box is saved in the top right corner by Bernd Leno (Fulham). Assisted by Emersonn.",
+   "source_ref": "espn:401879265:play:53386489",
+   "team": "Ipswich Town",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Calvin Bassey",
+    "Emersonn"
+   ],
+   "clock": "53'",
+   "description": "Emersonn (Ipswich Town) wins a free kick on the right wing.",
+   "source_ref": "espn:401879265:play:53387187",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Calvin Bassey",
+    "Emersonn"
+   ],
+   "clock": "53'",
+   "description": "Foul by Calvin Bassey (Fulham).",
+   "source_ref": "espn:401879265:play:53387187",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Gonzalo García",
+    "Josh King"
+   ],
+   "clock": "53'",
+   "description": "Attempt blocked. Gonzalo García (Fulham) right footed shot from the centre of the box is blocked. Assisted by Josh King.",
+   "source_ref": "espn:401879265:play:53387432",
+   "team": "Fulham",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "54'",
+   "description": "Corner, Fulham. Conceded by Issa Diop.",
+   "source_ref": "espn:401879265:play:53387434",
+   "team": "Fulham",
+   "type": "corner"
+  },
+  {
+   "actors": [],
+   "clock": "54'",
+   "description": "Corner, Fulham. Conceded by Florentino.",
+   "source_ref": "espn:401879265:play:53387437",
+   "team": "Fulham",
+   "type": "corner"
+  },
+  {
+   "actors": [],
+   "clock": "55'",
+   "description": "Corner, Fulham. Conceded by Dara O'Shea.",
+   "source_ref": "espn:401879265:play:53387554",
+   "team": "Fulham",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Ryan Sessegnon"
+   ],
+   "clock": "55'",
+   "description": "Goal! Ipswich Town 0, Fulham 1. Ryan Sessegnon (Fulham) left footed shot from outside the box to the bottom right corner following a corner.",
+   "score_after": "0-1",
+   "source_ref": "espn:401879265:play:53387557",
+   "team": "Fulham",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Emersonn",
+    "Julio Enciso"
+   ],
+   "clock": "58'",
+   "description": "Emersonn (Ipswich Town) hits the right post with a header from the centre of the box. Assisted by Julio Enciso with a cross.",
+   "source_ref": "espn:401879265:play:53388408",
+   "team": "Ipswich Town",
+   "type": "woodwork"
+  },
+  {
+   "actors": [
+    "Oscar Bobb",
+    "Josh King"
+   ],
+   "clock": "58'",
+   "description": "Attempt missed. Oscar Bobb (Fulham) left footed shot from the centre of the box is too high. Assisted by Josh King following a fast break.",
+   "source_ref": "espn:401879265:play:53388415",
+   "team": "Fulham",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Gonzalo García",
+    "Alex Iwobi"
+   ],
+   "clock": "60'",
+   "description": "Attempt saved. Gonzalo García (Fulham) header from the centre of the box is saved in the centre of the goal by Christian Walton (Ipswich Town). Assisted by Alex Iwobi with a cross.",
+   "source_ref": "espn:401879265:play:53388701",
+   "team": "Fulham",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Emersonn",
+    "Florentino"
+   ],
+   "clock": "61'",
+   "description": "Attempt missed. Emersonn (Ipswich Town) header from the centre of the box misses to the left. Assisted by Florentino with a cross.",
+   "source_ref": "espn:401879265:play:53389154",
+   "team": "Ipswich Town",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Sasa Lukic",
+    "Oscar Bobb"
+   ],
+   "clock": "63'",
+   "description": "Foul by Sasa Lukic (Ipswich Town).",
+   "source_ref": "espn:401879265:play:53390004",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Sasa Lukic",
+    "Oscar Bobb"
+   ],
+   "clock": "63'",
+   "description": "Oscar Bobb (Fulham) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879265:play:53390004",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Exequiel Palacios",
+    "Florentino"
+   ],
+   "clock": "63'",
+   "description": "Substitution, Ipswich Town. Exequiel Palacios replaces Florentino.",
+   "source_ref": "espn:401879265:play:53390218",
+   "team": "Ipswich Town",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Jack Clarke",
+    "Jaden Philogene"
+   ],
+   "clock": "63'",
+   "description": "Substitution, Ipswich Town. Jack Clarke replaces Jaden Philogene.",
+   "source_ref": "espn:401879265:play:53390219",
+   "team": "Ipswich Town",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "David Affengruber",
+    "Julio Enciso"
+   ],
+   "clock": "68'",
+   "description": "Julio Enciso (Ipswich Town) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879265:play:53390729",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "David Affengruber",
+    "Julio Enciso"
+   ],
+   "clock": "68'",
+   "description": "Foul by David Affengruber (Fulham).",
+   "source_ref": "espn:401879265:play:53390729",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Issa Diop"
+   ],
+   "clock": "68'",
+   "description": "Attempt missed. Issa Diop (Ipswich Town) left footed shot from the centre of the box is close, but misses the top left corner following a set piece situation.",
+   "source_ref": "espn:401879265:play:53391259",
+   "team": "Ipswich Town",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Chuba Akpom",
+    "Julio Enciso"
+   ],
+   "clock": "71'",
+   "description": "Substitution, Ipswich Town. Chuba Akpom replaces Julio Enciso.",
+   "source_ref": "espn:401879265:play:53391518",
+   "team": "Ipswich Town",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Zian Flemming",
+    "Emersonn"
+   ],
+   "clock": "71'",
+   "description": "Substitution, Ipswich Town. Zian Flemming replaces Emersonn.",
+   "source_ref": "espn:401879265:play:53391700",
+   "team": "Ipswich Town",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Manuel Ángel",
+    "Shea Charles"
+   ],
+   "clock": "71'",
+   "description": "Substitution, Fulham. Manuel Ángel replaces Shea Charles.",
+   "source_ref": "espn:401879265:play:53391701",
+   "team": "Fulham",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Rodrigo Muniz",
+    "Josh King"
+   ],
+   "clock": "76'",
+   "description": "Substitution, Fulham. Rodrigo Muniz replaces Josh King.",
+   "source_ref": "espn:401879265:play:53392667",
+   "team": "Fulham",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Kevin",
+    "Oscar Bobb"
+   ],
+   "clock": "76'",
+   "description": "Substitution, Fulham. Kevin replaces Oscar Bobb.",
+   "source_ref": "espn:401879265:play:53392935",
+   "team": "Fulham",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Daizen Maeda",
+    "Alex Iwobi"
+   ],
+   "clock": "80'",
+   "description": "Foul by Daizen Maeda (Ipswich Town).",
+   "source_ref": "espn:401879265:play:53393408",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Daizen Maeda",
+    "Alex Iwobi"
+   ],
+   "clock": "80'",
+   "description": "Alex Iwobi (Fulham) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879265:play:53393408",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Sindre Walle Egeli",
+    "Daizen Maeda"
+   ],
+   "clock": "81'",
+   "description": "Substitution, Ipswich Town. Sindre Egeli replaces Daizen Maeda.",
+   "source_ref": "espn:401879265:play:53393792",
+   "team": "Ipswich Town",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Manuel Ángel",
+    "Abdoul Ouattara"
+   ],
+   "clock": "83'",
+   "description": "Abdoul Ouattara (Ipswich Town) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879265:play:53394282",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Manuel Ángel",
+    "Abdoul Ouattara"
+   ],
+   "clock": "83'",
+   "description": "Foul by Manuel Ángel (Fulham).",
+   "source_ref": "espn:401879265:play:53394282",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Manuel Ángel"
+   ],
+   "clock": "84'",
+   "description": "Manuel Ángel (Fulham) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879265:play:53394283",
+   "team": "Fulham",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Sindre Walle Egeli",
+    "Sasa Lukic"
+   ],
+   "clock": "86'",
+   "description": "Attempt saved. Sindre Egeli (Ipswich Town) left footed shot from the right side of the box is saved in the centre of the goal by Bernd Leno (Fulham). Assisted by Sasa Lukic.",
+   "source_ref": "espn:401879265:play:53394519",
+   "team": "Ipswich Town",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Chuba Akpom"
+   ],
+   "clock": "86'",
+   "description": "Attempt blocked. Chuba Akpom (Ipswich Town) right footed shot from the left side of the six yard box is blocked.",
+   "source_ref": "espn:401879265:play:53394781",
+   "team": "Ipswich Town",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Hugo Larsson",
+    "Gonzalo García"
+   ],
+   "clock": "87'",
+   "description": "Substitution, Fulham. Hugo Larsson replaces Gonzalo García.",
+   "source_ref": "espn:401879265:play:53395122",
+   "team": "Fulham",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Emile Smith Rowe",
+    "Alex Iwobi"
+   ],
+   "clock": "87'",
+   "description": "Substitution, Fulham. Emile Smith Rowe replaces Alex Iwobi.",
+   "source_ref": "espn:401879265:play:53395123",
+   "team": "Fulham",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Abdoul Ouattara"
+   ],
+   "clock": "88'",
+   "description": "Goal! Ipswich Town 1, Fulham 1. Abdoul Ouattara (Ipswich Town) left footed shot from outside the box to the bottom left corner.",
+   "score_after": "1-1",
+   "source_ref": "espn:401879265:play:53395082",
+   "team": "Ipswich Town",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "David Affengruber",
+    "Chuba Akpom"
+   ],
+   "clock": "90+1'",
+   "description": "Chuba Akpom (Ipswich Town) wins a free kick on the left wing.",
+   "source_ref": "espn:401879265:play:53395586",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "David Affengruber",
+    "Chuba Akpom"
+   ],
+   "clock": "90+1'",
+   "description": "Foul by David Affengruber (Fulham).",
+   "source_ref": "espn:401879265:play:53395586",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Dara O'Shea",
+    "Jack Clarke"
+   ],
+   "clock": "90+1'",
+   "description": "Goal! Ipswich Town 2, Fulham 1. Dara O'Shea (Ipswich Town) header from very close range to the bottom left corner. Assisted by Jack Clarke with a cross following a set piece situation.",
+   "score_after": "2-1",
+   "source_ref": "espn:401879265:play:53395758",
+   "team": "Ipswich Town",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Kevin",
+    "Kenny Tete"
+   ],
+   "clock": "90+4'",
+   "description": "Attempt saved. Kevin (Fulham) right footed shot from the centre of the box is saved in the bottom right corner by Christian Walton (Ipswich Town). Assisted by Kenny Tete.",
+   "source_ref": "espn:401879265:play:53396189",
+   "team": "Fulham",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Hugo Larsson"
+   ],
+   "clock": "90+4'",
+   "description": "Attempt blocked. Hugo Larsson (Fulham) right footed shot from the centre of the box is blocked.",
+   "source_ref": "espn:401879265:play:53396359",
+   "team": "Fulham",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Emile Smith Rowe",
+    "Chuba Akpom"
+   ],
+   "clock": "90+4'",
+   "description": "Chuba Akpom (Ipswich Town) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879265:play:53396366",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Emile Smith Rowe",
+    "Chuba Akpom"
+   ],
+   "clock": "90+4'",
+   "description": "Foul by Emile Smith Rowe (Fulham).",
+   "source_ref": "espn:401879265:play:53396366",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Emile Smith Rowe"
+   ],
+   "clock": "90+4'",
+   "description": "Emile Smith Rowe (Fulham) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879265:play:53396367",
+   "team": "Fulham",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "David Affengruber",
+    "Chuba Akpom"
+   ],
+   "clock": "90+6'",
+   "description": "Chuba Akpom (Ipswich Town) wins a free kick on the left wing.",
+   "source_ref": "espn:401879265:play:53396542",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "David Affengruber",
+    "Chuba Akpom"
+   ],
+   "clock": "90+6'",
+   "description": "Foul by David Affengruber (Fulham).",
+   "source_ref": "espn:401879265:play:53396542",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Sasa Lukic",
+    "Kevin"
+   ],
+   "clock": "90+6'",
+   "description": "Foul by Sasa Lukic (Ipswich Town).",
+   "source_ref": "espn:401879265:play:53396549",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Sasa Lukic",
+    "Kevin"
+   ],
+   "clock": "90+6'",
+   "description": "Kevin (Fulham) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879265:play:53396549",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Christian Walton"
+   ],
+   "clock": "90+7'",
+   "description": "Christian Walton (Ipswich Town) is shown the yellow card.",
+   "source_ref": "espn:401879265:play:53397303",
+   "team": "Ipswich Town",
+   "type": "yellow_card"
+  }
+ ],
+ "match": {
+  "end_estimate": "2026-10-10T16:00:00Z",
+  "final_result": "Ipswich Town 2–1 Fulham",
+  "id": "401879265",
+  "kickoff": "2026-10-10T14:00:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "IPS",
+    "name": "Ipswich Town",
+    "role": "home",
+    "score": "2",
+    "short_name": "Ipswich",
+    "winner": true
+   },
+   {
+    "abbreviation": "FUL",
+    "name": "Fulham",
+    "role": "away",
+    "score": "1",
+    "short_name": "Fulham",
+    "winner": false
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Ipswich produced a dramatic turnaround to beat Fulham 2-1 after late goals by Abdoul Ouattara and Dara O'Shea extended Alvaro Arbeloa's winless start to six Premier League matches.",
+  "title": "Ipswich Town v Fulham",
+  "venue": "Portman Road"
+ },
+ "sources": [
+  {
+   "publisher": "ESPN",
+   "title": "Ipswich Town v Fulham: match events",
+   "url": "https://www.espn.com/soccer/match/_/gameId/401879265"
+  },
+  {
+   "published_at": "2026-10-10T16:02:00Z",
+   "publisher": "ESPN",
+   "title": "Ipswich score two late goals to claim dramatic victory against Fulham",
+   "url": "https://www.espn.com/soccer/report/_/gameId/401879265"
+  }
+ ],
+ "team_stats": [
+  {
+   "corners": 2,
+   "fouls": 8,
+   "possession_pct": 47.6,
+   "red_cards": 0,
+   "saves": 3,
+   "shots": 11,
+   "shots_on_target": 5,
+   "team": "Ipswich Town",
+   "yellow_cards": 2
+  },
+  {
+   "corners": 5,
+   "fouls": 10,
+   "possession_pct": 52.4,
+   "red_cards": 0,
+   "saves": 3,
+   "shots": 13,
+   "shots_on_target": 5,
+   "team": "Fulham",
+   "yellow_cards": 4
+  }
+ ]
+}

@@ -1,0 +1,1074 @@
+{
+ "coverage": "full_events",
+ "events": [
+  {
+   "actors": [],
+   "clock": "0'",
+   "description": "First Half begins.",
+   "source_ref": "espn:401878769:play:53909062",
+   "type": "kickoff"
+  },
+  {
+   "actors": [
+    "Daniel Muñoz",
+    "Eberechi Eze"
+   ],
+   "clock": "1'",
+   "description": "Foul by Daniel Muñoz (Nottingham Forest).",
+   "source_ref": "espn:401878769:play:53909135",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Daniel Muñoz",
+    "Eberechi Eze"
+   ],
+   "clock": "1'",
+   "description": "Eberechi Eze (Arsenal) wins a free kick on the left wing.",
+   "source_ref": "espn:401878769:play:53909135",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Liam Delap",
+    "Ezri Konsa"
+   ],
+   "clock": "6'",
+   "description": "Foul by Liam Delap (Nottingham Forest).",
+   "source_ref": "espn:401878769:play:53909655",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Liam Delap",
+    "Ezri Konsa"
+   ],
+   "clock": "6'",
+   "description": "Ezri Konsa (Arsenal) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878769:play:53909655",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Eberechi Eze",
+    "Dan Ndoye"
+   ],
+   "clock": "11'",
+   "description": "Dan Ndoye (Nottingham Forest) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878769:play:53910267",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Eberechi Eze",
+    "Dan Ndoye"
+   ],
+   "clock": "11'",
+   "description": "Foul by Eberechi Eze (Arsenal).",
+   "source_ref": "espn:401878769:play:53910267",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Dan Ndoye",
+    "Gabriel Magalhães"
+   ],
+   "clock": "13'",
+   "description": "Foul by Dan Ndoye (Nottingham Forest).",
+   "source_ref": "espn:401878769:play:53910419",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Dan Ndoye",
+    "Gabriel Magalhães"
+   ],
+   "clock": "13'",
+   "description": "Gabriel Magalhães (Arsenal) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878769:play:53910419",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Neco Williams",
+    "Bukayo Saka"
+   ],
+   "clock": "17'",
+   "description": "Foul by Neco Williams (Nottingham Forest).",
+   "source_ref": "espn:401878769:play:53910791",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Neco Williams",
+    "Bukayo Saka"
+   ],
+   "clock": "17'",
+   "description": "Bukayo Saka (Arsenal) wins a free kick on the right wing.",
+   "source_ref": "espn:401878769:play:53910791",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Neco Williams"
+   ],
+   "clock": "17'",
+   "description": "Neco Williams (Nottingham Forest) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401878769:play:53910872",
+   "team": "Nottingham Forest",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Dan Ndoye",
+    "Liam Delap"
+   ],
+   "clock": "19'",
+   "description": "Attempt missed. Dan Ndoye (Nottingham Forest) right footed shot from the left side of the box misses to the left. Assisted by Liam Delap.",
+   "source_ref": "espn:401878769:play:53911038",
+   "team": "Nottingham Forest",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [],
+   "clock": "19'",
+   "description": "Corner, Nottingham Forest. Conceded by David Raya.",
+   "source_ref": "espn:401878769:play:53911100",
+   "team": "Nottingham Forest",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Jair Paula",
+    "David Raya"
+   ],
+   "clock": "20'",
+   "description": "Foul by Jair Cunha (Nottingham Forest).",
+   "source_ref": "espn:401878769:play:53911103",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jair Paula",
+    "David Raya"
+   ],
+   "clock": "20'",
+   "description": "David Raya (Arsenal) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878769:play:53911103",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Martin Ødegaard"
+   ],
+   "clock": "22'",
+   "description": "Offside, Arsenal. Bukayo Saka is caught offside.",
+   "source_ref": "espn:401878769:play:53911390",
+   "team": "Arsenal",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Liam Delap",
+    "Ben White"
+   ],
+   "clock": "24'",
+   "description": "Foul by Liam Delap (Nottingham Forest).",
+   "source_ref": "espn:401878769:play:53911676",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Liam Delap",
+    "Ben White"
+   ],
+   "clock": "24'",
+   "description": "Ben White (Arsenal) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878769:play:53911676",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "25'",
+   "description": "Corner, Arsenal. Conceded by Jair Cunha.",
+   "source_ref": "espn:401878769:play:53911701",
+   "team": "Arsenal",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Gabriel Magalhães"
+   ],
+   "clock": "26'",
+   "description": "Attempt blocked. Gabriel Magalhães (Arsenal) left footed shot from the centre of the box is blocked.",
+   "source_ref": "espn:401878769:play:53911798",
+   "team": "Arsenal",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Daniel Muñoz",
+    "Gabriel Magalhães"
+   ],
+   "clock": "27'",
+   "description": "Foul by Daniel Muñoz (Nottingham Forest).",
+   "source_ref": "espn:401878769:play:53911812",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Daniel Muñoz",
+    "Gabriel Magalhães"
+   ],
+   "clock": "27'",
+   "description": "Gabriel Magalhães (Arsenal) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878769:play:53911812",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "28'",
+   "description": "Corner, Arsenal. Conceded by Xaver Schlager.",
+   "source_ref": "espn:401878769:play:53911959",
+   "team": "Arsenal",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Kai Havertz",
+    "Xaver Schlager"
+   ],
+   "clock": "30'",
+   "description": "Xaver Schlager (Nottingham Forest) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878769:play:53912195",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Kai Havertz",
+    "Xaver Schlager"
+   ],
+   "clock": "30'",
+   "description": "Foul by Kai Havertz (Arsenal).",
+   "source_ref": "espn:401878769:play:53912195",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "James McAtee",
+    "Ezri Konsa"
+   ],
+   "clock": "30'",
+   "description": "Foul by James McAtee (Nottingham Forest).",
+   "source_ref": "espn:401878769:play:53912205",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "James McAtee",
+    "Ezri Konsa"
+   ],
+   "clock": "30'",
+   "description": "Ezri Konsa (Arsenal) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878769:play:53912205",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Liam Delap",
+    "Daniel Muñoz"
+   ],
+   "clock": "35'",
+   "description": "Attempt missed. Liam Delap (Nottingham Forest) right footed shot from outside the box misses to the right. Assisted by Daniel Muñoz.",
+   "source_ref": "espn:401878769:play:53912632",
+   "team": "Nottingham Forest",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [],
+   "clock": "35'",
+   "description": "Corner, Nottingham Forest. Conceded by Riccardo Calafiori.",
+   "source_ref": "espn:401878769:play:53912634",
+   "team": "Nottingham Forest",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Xaver Schlager",
+    "Bukayo Saka"
+   ],
+   "clock": "36'",
+   "description": "Foul by Xaver Schlager (Nottingham Forest).",
+   "source_ref": "espn:401878769:play:53912768",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Xaver Schlager",
+    "Bukayo Saka"
+   ],
+   "clock": "36'",
+   "description": "Bukayo Saka (Arsenal) wins a free kick on the right wing.",
+   "source_ref": "espn:401878769:play:53912768",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Kai Havertz",
+    "Declan Rice"
+   ],
+   "clock": "37'",
+   "description": "Attempt missed. Kai Havertz (Arsenal) header from the centre of the box is too high. Assisted by Declan Rice with a cross following a set piece situation.",
+   "source_ref": "espn:401878769:play:53912939",
+   "team": "Arsenal",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Nicolás Domínguez",
+    "Eberechi Eze"
+   ],
+   "clock": "40'",
+   "description": "Foul by Nicolás Domínguez (Nottingham Forest).",
+   "source_ref": "espn:401878769:play:53913145",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Nicolás Domínguez",
+    "Eberechi Eze"
+   ],
+   "clock": "40'",
+   "description": "Eberechi Eze (Arsenal) wins a free kick on the left wing.",
+   "source_ref": "espn:401878769:play:53913145",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Kai Havertz",
+    "Martin Ødegaard"
+   ],
+   "clock": "41'",
+   "description": "Attempt missed. Kai Havertz (Arsenal) right footed shot from a difficult angle on the right is close, but misses to the right. Assisted by Martin Ødegaard.",
+   "source_ref": "espn:401878769:play:53913173",
+   "team": "Arsenal",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Declan Rice",
+    "Liam Delap"
+   ],
+   "clock": "44'",
+   "description": "Liam Delap (Nottingham Forest) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878769:play:53913446",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Declan Rice",
+    "Liam Delap"
+   ],
+   "clock": "44'",
+   "description": "Foul by Declan Rice (Arsenal).",
+   "source_ref": "espn:401878769:play:53913446",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Neco Williams",
+    "James McAtee"
+   ],
+   "clock": "45'",
+   "description": "Attempt blocked. Neco Williams (Nottingham Forest) right footed shot from outside the box is blocked. Assisted by James McAtee.",
+   "source_ref": "espn:401878769:play:53913581",
+   "team": "Nottingham Forest",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "45+3'",
+   "description": "Corner, Nottingham Forest. Conceded by Ben White.",
+   "source_ref": "espn:401878769:play:53913685",
+   "team": "Nottingham Forest",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Xaver Schlager"
+   ],
+   "clock": "45+3'",
+   "description": "Attempt missed. Xaver Schlager (Nottingham Forest) left footed shot from outside the box misses to the right following a corner.",
+   "source_ref": "espn:401878769:play:53913688",
+   "team": "Nottingham Forest",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Murillo",
+    "Xaver Schlager"
+   ],
+   "clock": "45+3'",
+   "description": "Attempt blocked. Murillo (Nottingham Forest) left footed shot from the centre of the box is blocked. Assisted by Xaver Schlager.",
+   "source_ref": "espn:401878769:play:53913691",
+   "team": "Nottingham Forest",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "45+5'",
+   "description": "First Half ends, Nottingham Forest 0, Arsenal 0.",
+   "score_after": "0-0",
+   "source_ref": "espn:401878769:play:53913836",
+   "type": "half_time"
+  },
+  {
+   "actors": [
+    "Noni Madueke",
+    "Eberechi Eze"
+   ],
+   "clock": "45'",
+   "description": "Substitution, Arsenal. Noni Madueke replaces Eberechi Eze.",
+   "source_ref": "espn:401878769:play:53914967",
+   "team": "Arsenal",
+   "type": "sub"
+  },
+  {
+   "actors": [],
+   "clock": "45'",
+   "description": "Second Half begins Nottingham Forest 0, Arsenal 0.",
+   "source_ref": "espn:401878769:play:53915003",
+   "type": "second_half"
+  },
+  {
+   "actors": [
+    "James McAtee"
+   ],
+   "clock": "48'",
+   "description": "Attempt missed. James McAtee (Nottingham Forest) left footed shot from outside the box is close, but misses to the left.",
+   "source_ref": "espn:401878769:play:53915188",
+   "team": "Nottingham Forest",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Kai Havertz"
+   ],
+   "clock": "48'",
+   "description": "Handball by Kai Havertz (Arsenal).",
+   "source_ref": "espn:401878769:play:53915189",
+   "team": "Arsenal",
+   "type": "handball"
+  },
+  {
+   "actors": [
+    "James McAtee"
+   ],
+   "clock": "49'",
+   "description": "Attempt missed. James McAtee (Nottingham Forest) left footed shot from outside the box is too high from a direct free kick.",
+   "source_ref": "espn:401878769:play:53915420",
+   "team": "Nottingham Forest",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Noni Madueke",
+    "Gabriel Magalhães"
+   ],
+   "clock": "52'",
+   "description": "Attempt blocked. Noni Madueke (Arsenal) right footed shot from outside the box is blocked. Assisted by Gabriel Magalhães.",
+   "source_ref": "espn:401878769:play:53915916",
+   "team": "Arsenal",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Noni Madueke",
+    "Nicolás Domínguez"
+   ],
+   "clock": "53'",
+   "description": "Nicolás Domínguez (Nottingham Forest) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878769:play:53916011",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Noni Madueke",
+    "Nicolás Domínguez"
+   ],
+   "clock": "53'",
+   "description": "Foul by Noni Madueke (Arsenal).",
+   "source_ref": "espn:401878769:play:53916011",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Noni Madueke"
+   ],
+   "clock": "53'",
+   "description": "Noni Madueke (Arsenal) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401878769:play:53916012",
+   "team": "Arsenal",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Liam Delap",
+    "Jair Paula"
+   ],
+   "clock": "53'",
+   "description": "Attempt blocked. Liam Delap (Nottingham Forest) right footed shot from the right side of the box is blocked. Assisted by Jair Cunha.",
+   "source_ref": "espn:401878769:play:53916017",
+   "team": "Nottingham Forest",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "53'",
+   "description": "Corner, Nottingham Forest. Conceded by Gabriel Magalhães.",
+   "source_ref": "espn:401878769:play:53916019",
+   "team": "Nottingham Forest",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Murillo",
+    "James McAtee"
+   ],
+   "clock": "54'",
+   "description": "Attempt saved. Murillo (Nottingham Forest) header from the centre of the box is saved in the centre of the goal by David Raya (Arsenal). Assisted by James McAtee with a cross.",
+   "source_ref": "espn:401878769:play:53916173",
+   "team": "Nottingham Forest",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [],
+   "clock": "54'",
+   "description": "Corner, Arsenal. Conceded by Xaver Schlager.",
+   "source_ref": "espn:401878769:play:53916182",
+   "team": "Arsenal",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Bukayo Saka",
+    "Neco Williams"
+   ],
+   "clock": "56'",
+   "description": "Neco Williams (Nottingham Forest) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878769:play:53916203",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Bukayo Saka",
+    "Neco Williams"
+   ],
+   "clock": "56'",
+   "description": "Foul by Bukayo Saka (Arsenal).",
+   "source_ref": "espn:401878769:play:53916203",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "59'",
+   "description": "Corner, Nottingham Forest. Conceded by Declan Rice.",
+   "source_ref": "espn:401878769:play:53916581",
+   "team": "Nottingham Forest",
+   "type": "corner"
+  },
+  {
+   "actors": [],
+   "clock": "59'",
+   "description": "Corner, Nottingham Forest. Conceded by Martin Ødegaard.",
+   "source_ref": "espn:401878769:play:53916692",
+   "team": "Nottingham Forest",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Jair Paula"
+   ],
+   "clock": "61'",
+   "description": "Offside, Nottingham Forest. Dan Ndoye is caught offside.",
+   "source_ref": "espn:401878769:play:53916728",
+   "team": "Nottingham Forest",
+   "type": "offside"
+  },
+  {
+   "actors": [],
+   "clock": "61'",
+   "description": "Corner, Arsenal. Conceded by Daniel Muñoz.",
+   "source_ref": "espn:401878769:play:53916836",
+   "team": "Arsenal",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Dan Ndoye",
+    "Murillo"
+   ],
+   "clock": "63'",
+   "description": "Attempt blocked. Dan Ndoye (Nottingham Forest) left footed shot from the right side of the box is blocked. Assisted by Murillo.",
+   "source_ref": "espn:401878769:play:53917042",
+   "team": "Nottingham Forest",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "65'",
+   "description": "Corner, Arsenal. Conceded by Jair Cunha.",
+   "source_ref": "espn:401878769:play:53917151",
+   "team": "Arsenal",
+   "type": "corner"
+  },
+  {
+   "actors": [],
+   "clock": "66'",
+   "description": "Corner, Arsenal. Conceded by James McAtee.",
+   "source_ref": "espn:401878769:play:53917261",
+   "team": "Arsenal",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Jurriën Timber",
+    "Ben White"
+   ],
+   "clock": "66'",
+   "description": "Substitution, Arsenal. Jurriën Timber replaces Ben White.",
+   "source_ref": "espn:401878769:play:53917266",
+   "team": "Arsenal",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Viktor Gyökeres",
+    "Kai Havertz"
+   ],
+   "clock": "66'",
+   "description": "Substitution, Arsenal. Viktor Gyökeres replaces Kai Havertz.",
+   "source_ref": "espn:401878769:play:53917355",
+   "team": "Arsenal",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Mikel Merino",
+    "Bruno Guimarães"
+   ],
+   "clock": "66'",
+   "description": "Substitution, Arsenal. Mikel Merino replaces Bruno Guimarães.",
+   "source_ref": "espn:401878769:play:53917356",
+   "team": "Arsenal",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Gabriel Magalhães",
+    "Declan Rice"
+   ],
+   "clock": "67'",
+   "description": "Attempt missed. Gabriel Magalhães (Arsenal) header from very close range is too high. Assisted by Declan Rice with a cross following a corner.",
+   "source_ref": "espn:401878769:play:53917351",
+   "team": "Arsenal",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [],
+   "clock": "68'",
+   "description": "Corner, Nottingham Forest. Conceded by Jurriën Timber.",
+   "source_ref": "espn:401878769:play:53917465",
+   "team": "Nottingham Forest",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Liam Delap",
+    "Xaver Schlager"
+   ],
+   "clock": "69'",
+   "description": "Attempt saved. Liam Delap (Nottingham Forest) left footed shot from outside the box is saved in the centre of the goal by David Raya (Arsenal). Assisted by Xaver Schlager.",
+   "source_ref": "espn:401878769:play:53917572",
+   "team": "Nottingham Forest",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Declan Rice",
+    "Jurriën Timber"
+   ],
+   "clock": "72'",
+   "description": "Attempt missed. Declan Rice (Arsenal) right footed shot from the centre of the box is too high. Assisted by Jurriën Timber.",
+   "source_ref": "espn:401878769:play:53917802",
+   "team": "Arsenal",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Nicolás Domínguez"
+   ],
+   "clock": "73'",
+   "description": "Offside, Nottingham Forest. Dan Ndoye is caught offside.",
+   "source_ref": "espn:401878769:play:53917938",
+   "team": "Nottingham Forest",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Arnaud Kalimuendo",
+    "Dan Ndoye"
+   ],
+   "clock": "73'",
+   "description": "Substitution, Nottingham Forest. Arnaud Kalimuendo replaces Dan Ndoye.",
+   "source_ref": "espn:401878769:play:53917968",
+   "team": "Nottingham Forest",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Ibrahim Sangaré",
+    "Nicolás Domínguez"
+   ],
+   "clock": "74'",
+   "description": "Substitution, Nottingham Forest. Ibrahim Sangaré replaces Nicolás Domínguez.",
+   "source_ref": "espn:401878769:play:53918119",
+   "team": "Nottingham Forest",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Martin Ødegaard",
+    "Neco Williams"
+   ],
+   "clock": "74'",
+   "description": "Neco Williams (Nottingham Forest) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878769:play:53918041",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Martin Ødegaard",
+    "Neco Williams"
+   ],
+   "clock": "74'",
+   "description": "Foul by Martin Ødegaard (Arsenal).",
+   "source_ref": "espn:401878769:play:53918041",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Neco Williams",
+    "Bukayo Saka"
+   ],
+   "clock": "75'",
+   "description": "Foul by Neco Williams (Nottingham Forest).",
+   "source_ref": "espn:401878769:play:53918060",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Neco Williams",
+    "Bukayo Saka"
+   ],
+   "clock": "75'",
+   "description": "Bukayo Saka (Arsenal) wins a free kick on the right wing.",
+   "source_ref": "espn:401878769:play:53918060",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Viktor Gyökeres",
+    "Bukayo Saka"
+   ],
+   "clock": "79'",
+   "description": "Attempt missed. Viktor Gyökeres (Arsenal) header from the centre of the box misses to the right. Assisted by Bukayo Saka with a cross.",
+   "source_ref": "espn:401878769:play:53918549",
+   "team": "Arsenal",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Noni Madueke",
+    "Declan Rice"
+   ],
+   "clock": "80'",
+   "description": "Goal! Nottingham Forest 0, Arsenal 1. Noni Madueke (Arsenal) right footed shot from the left side of the box to the high centre of the goal. Assisted by Declan Rice.",
+   "score_after": "0-1",
+   "source_ref": "espn:401878769:play:53918645",
+   "team": "Arsenal",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Mikel Merino",
+    "Viktor Gyökeres"
+   ],
+   "clock": "82'",
+   "description": "Attempt blocked. Mikel Merino (Arsenal) left footed shot from outside the box is blocked. Assisted by Viktor Gyökeres.",
+   "source_ref": "espn:401878769:play:53918878",
+   "team": "Arsenal",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Viktor Gyökeres",
+    "Arnaud Kalimuendo"
+   ],
+   "clock": "82'",
+   "description": "Arnaud Kalimuendo (Nottingham Forest) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878769:play:53918933",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Viktor Gyökeres",
+    "Arnaud Kalimuendo"
+   ],
+   "clock": "82'",
+   "description": "Foul by Viktor Gyökeres (Arsenal).",
+   "source_ref": "espn:401878769:play:53918933",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Chris Wood",
+    "Jair Paula"
+   ],
+   "clock": "85'",
+   "description": "Substitution, Nottingham Forest. Chris Wood replaces Jair Cunha because of an injury.",
+   "source_ref": "espn:401878769:play:53919134",
+   "team": "Nottingham Forest",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Callum Hudson-Odoi",
+    "James McAtee"
+   ],
+   "clock": "85'",
+   "description": "Substitution, Nottingham Forest. Callum Hudson-Odoi replaces James McAtee.",
+   "source_ref": "espn:401878769:play:53919264",
+   "team": "Nottingham Forest",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Ibrahim Sangaré",
+    "Mikel Merino"
+   ],
+   "clock": "87'",
+   "description": "Foul by Ibrahim Sangaré (Nottingham Forest).",
+   "source_ref": "espn:401878769:play:53919352",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ibrahim Sangaré",
+    "Mikel Merino"
+   ],
+   "clock": "87'",
+   "description": "Mikel Merino (Arsenal) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878769:play:53919352",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Chris Wood",
+    "Callum Hudson-Odoi"
+   ],
+   "clock": "89'",
+   "description": "Attempt blocked. Chris Wood (Nottingham Forest) left footed shot from the centre of the box is blocked. Assisted by Callum Hudson-Odoi.",
+   "source_ref": "espn:401878769:play:53919433",
+   "team": "Nottingham Forest",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Xaver Schlager",
+    "Mikel Merino"
+   ],
+   "clock": "90'",
+   "description": "Foul by Xaver Schlager (Nottingham Forest).",
+   "source_ref": "espn:401878769:play:53919469",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Xaver Schlager",
+    "Mikel Merino"
+   ],
+   "clock": "90'",
+   "description": "Mikel Merino (Arsenal) wins a free kick on the left wing.",
+   "source_ref": "espn:401878769:play:53919469",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Murillo",
+    "Neco Williams"
+   ],
+   "clock": "90+2'",
+   "description": "Attempt missed. Murillo (Nottingham Forest) right footed shot from the left side of the box is close, but misses to the right. Assisted by Neco Williams.",
+   "source_ref": "espn:401878769:play:53919583",
+   "team": "Nottingham Forest",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Liam Delap",
+    "Murillo"
+   ],
+   "clock": "90+3'",
+   "description": "Attempt blocked. Liam Delap (Nottingham Forest) left footed shot from the left side of the box is blocked. Assisted by Murillo.",
+   "source_ref": "espn:401878769:play:53919648",
+   "team": "Nottingham Forest",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "90+3'",
+   "description": "Corner, Nottingham Forest. Conceded by Ezri Konsa.",
+   "source_ref": "espn:401878769:play:53919650",
+   "team": "Nottingham Forest",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Ibrahim Sangaré",
+    "David Raya"
+   ],
+   "clock": "90+4'",
+   "description": "Foul by Ibrahim Sangaré (Nottingham Forest).",
+   "source_ref": "espn:401878769:play:53919731",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ibrahim Sangaré",
+    "David Raya"
+   ],
+   "clock": "90+4'",
+   "description": "David Raya (Arsenal) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878769:play:53919731",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "90+4'",
+   "description": "Second Half ends, Nottingham Forest 0, Arsenal 1.",
+   "score_after": "0-1",
+   "source_ref": "espn:401878769:play:53919734",
+   "type": "full_time"
+  }
+ ],
+ "match": {
+  "end_estimate": "2026-10-18T17:30:00Z",
+  "final_result": "Nottingham Forest 0–1 Arsenal",
+  "id": "401878769",
+  "kickoff": "2026-10-18T15:30:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "NFO",
+    "name": "Nottingham Forest",
+    "role": "home",
+    "score": "0",
+    "short_name": "Nottm Forest",
+    "winner": false
+   },
+   {
+    "abbreviation": "ARS",
+    "name": "Arsenal",
+    "role": "away",
+    "score": "1",
+    "short_name": "Arsenal",
+    "winner": true
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Noni Madueke climbed off the bench to earn toothless Arsenal a 1-0 win at Nottingham Forest.",
+  "title": "Nottingham Forest v Arsenal",
+  "venue": "The City Ground"
+ },
+ "sources": [
+  {
+   "publisher": "ESPN",
+   "title": "Nottingham Forest v Arsenal: match events",
+   "url": "https://www.espn.com/soccer/match/_/gameId/401878769"
+  },
+  {
+   "published_at": "2026-10-18T17:51:00Z",
+   "publisher": "ESPN",
+   "title": "Noni Madueke sinks Nottingham Forest with Arsenal's only shot on target",
+   "url": "https://www.espn.com/soccer/report/_/gameId/401878769"
+  }
+ ],
+ "team_stats": [
+  {
+   "corners": 8,
+   "fouls": 14,
+   "possession_pct": 26.2,
+   "red_cards": 0,
+   "saves": 0,
+   "shots": 14,
+   "shots_on_target": 2,
+   "team": "Nottingham Forest",
+   "yellow_cards": 1
+  },
+  {
+   "corners": 6,
+   "fouls": 8,
+   "possession_pct": 73.8,
+   "red_cards": 0,
+   "saves": 2,
+   "shots": 9,
+   "shots_on_target": 1,
+   "team": "Arsenal",
+   "yellow_cards": 1
+  }
+ ]
+}

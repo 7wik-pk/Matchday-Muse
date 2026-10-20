@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GroundingVerdict",
+  "description": "LLM output of the grounding judge: the facts behind each numbered line. Drives the grounding check and Show your working.",
+  "type": "object",
+  "required": [
+    "lines"
+  ],
+  "properties": {
+    "lines": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/LineVerdict"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "LineVerdict": {
+      "title": "LineVerdict",
+      "type": "object",
+      "required": [
+        "index",
+        "fact_ids",
+        "unsupported"
+      ],
+      "properties": {
+        "index": {
+          "type": "integer",
+          "description": "0 is the headline; poem lines count from 1."
+        },
+        "fact_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Facts this line rests on; empty for pure colour."
+        },
+        "unsupported": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Factual claims in the line that no fact supports."
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

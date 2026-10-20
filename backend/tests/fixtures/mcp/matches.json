@@ -1,0 +1,602 @@
+[
+ {
+  "end_estimate": "2026-10-10T13:30:00Z",
+  "final_result": "Arsenal 2–1 Leeds United",
+  "id": "401879268",
+  "kickoff": "2026-10-10T11:30:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "ARS",
+    "name": "Arsenal",
+    "role": "home",
+    "score": "2",
+    "short_name": "Arsenal",
+    "winner": true
+   },
+   {
+    "abbreviation": "LEE",
+    "name": "Leeds United",
+    "role": "away",
+    "score": "1",
+    "short_name": "Leeds",
+    "winner": false
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Arsenal struck twice in eight second-half minutes to secure a comeback 2-1 win against Leeds at the Emirates Stadium and move level on points with Manchester City at the Premier League summit.",
+  "title": "Arsenal v Leeds United",
+  "venue": "Emirates Stadium"
+ },
+ {
+  "end_estimate": "2026-10-10T16:00:00Z",
+  "final_result": "Sunderland 0–2 Brighton & Hove Albion",
+  "id": "401878772",
+  "kickoff": "2026-10-10T14:00:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "SUN",
+    "name": "Sunderland",
+    "role": "home",
+    "score": "0",
+    "short_name": "Sunderland",
+    "winner": false
+   },
+   {
+    "abbreviation": "BHA",
+    "name": "Brighton & Hove Albion",
+    "role": "away",
+    "score": "2",
+    "short_name": "Brighton",
+    "winner": true
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Maxim De Cuyper and Jaouen Hadjam were both on the scoresheet as 10-man Brighton clinched a 2-0 win over Sunderland at the Stadium of Light.",
+  "title": "Sunderland v Brighton & Hove Albion",
+  "venue": "Stadium of Light"
+ },
+ {
+  "end_estimate": "2026-10-10T16:00:00Z",
+  "final_result": "Chelsea 5–1 AFC Bournemouth",
+  "id": "401878775",
+  "kickoff": "2026-10-10T14:00:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "CHE",
+    "name": "Chelsea",
+    "role": "home",
+    "score": "5",
+    "short_name": "Chelsea",
+    "winner": true
+   },
+   {
+    "abbreviation": "BOU",
+    "name": "AFC Bournemouth",
+    "role": "away",
+    "score": "1",
+    "short_name": "Bournemouth",
+    "winner": false
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Jordan Henderson was the unlikely hero as Chelsea's entertainers blew Bournemouth away in a comprehensive and chaotic 5-1 win at Stamford Bridge.",
+  "title": "Chelsea v AFC Bournemouth",
+  "venue": "Stamford Bridge"
+ },
+ {
+  "end_estimate": "2026-10-10T16:00:00Z",
+  "final_result": "Aston Villa 2–2 Brentford",
+  "id": "401878776",
+  "kickoff": "2026-10-10T14:00:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "AVL",
+    "name": "Aston Villa",
+    "role": "home",
+    "score": "2",
+    "short_name": "Aston Villa",
+    "winner": false
+   },
+   {
+    "abbreviation": "BRE",
+    "name": "Brentford",
+    "role": "away",
+    "score": "2",
+    "short_name": "Brentford",
+    "winner": false
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Kristoffer Ajer's second-half equaliser ensured Brentford continued their unbeaten start to the Premier League season in an entertaining 2-2 draw at Aston Villa.",
+  "title": "Aston Villa v Brentford",
+  "venue": "Villa Park"
+ },
+ {
+  "end_estimate": "2026-10-10T16:00:00Z",
+  "final_result": "Ipswich Town 2–1 Fulham",
+  "id": "401879265",
+  "kickoff": "2026-10-10T14:00:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "IPS",
+    "name": "Ipswich Town",
+    "role": "home",
+    "score": "2",
+    "short_name": "Ipswich",
+    "winner": true
+   },
+   {
+    "abbreviation": "FUL",
+    "name": "Fulham",
+    "role": "away",
+    "score": "1",
+    "short_name": "Fulham",
+    "winner": false
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Ipswich produced a dramatic turnaround to beat Fulham 2-1 after late goals by Abdoul Ouattara and Dara O'Shea extended Alvaro Arbeloa's winless start to six Premier League matches.",
+  "title": "Ipswich Town v Fulham",
+  "venue": "Portman Road"
+ },
+ {
+  "end_estimate": "2026-10-10T18:30:00Z",
+  "final_result": "Manchester United 1–1 Tottenham Hotspur",
+  "id": "401878773",
+  "kickoff": "2026-10-10T16:30:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "MAN",
+    "name": "Manchester United",
+    "role": "home",
+    "score": "1",
+    "short_name": "Man United",
+    "winner": false
+   },
+   {
+    "abbreviation": "TOT",
+    "name": "Tottenham Hotspur",
+    "role": "away",
+    "score": "1",
+    "short_name": "Spurs",
+    "winner": false
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Dominic Solanke capitalised on weak Manchester United defending as winless Tottenham recovered from Rodrigo Bentancur's dismissal to snatch a late 1-1 draw as boos filled Old Trafford once again.",
+  "title": "Manchester United v Tottenham Hotspur",
+  "venue": "Old Trafford"
+ },
+ {
+  "end_estimate": "2026-10-11T15:00:00Z",
+  "final_result": "Hull City 2–2 Everton",
+  "id": "401878774",
+  "kickoff": "2026-10-11T13:00:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "HUL",
+    "name": "Hull City",
+    "role": "home",
+    "score": "2",
+    "short_name": "Hull",
+    "winner": false
+   },
+   {
+    "abbreviation": "EVE",
+    "name": "Everton",
+    "role": "away",
+    "score": "2",
+    "short_name": "Everton",
+    "winner": false
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Hull retained their unbeaten home record since returning to the Premier League with an entertaining 2-2 draw against Everton at the MKM Stadium.",
+  "title": "Hull City v Everton",
+  "venue": "The MKM Stadium"
+ },
+ {
+  "end_estimate": "2026-10-11T15:00:00Z",
+  "final_result": "Crystal Palace 3–1 Nottingham Forest",
+  "id": "401879266",
+  "kickoff": "2026-10-11T13:00:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "CRY",
+    "name": "Crystal Palace",
+    "role": "home",
+    "score": "3",
+    "short_name": "C Palace",
+    "winner": true
+   },
+   {
+    "abbreviation": "NFO",
+    "name": "Nottingham Forest",
+    "role": "away",
+    "score": "1",
+    "short_name": "Nottm Forest",
+    "winner": false
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Crystal Palace dealt former boss Oliver Glasner a blow after they bounced back to beat Nottingham Forest 3-1 on the Austrian's first return to Selhurst Park.",
+  "title": "Crystal Palace v Nottingham Forest",
+  "venue": "Selhurst Park"
+ },
+ {
+  "end_estimate": "2026-10-11T17:30:00Z",
+  "final_result": "Liverpool 0–3 Manchester City",
+  "id": "401879264",
+  "kickoff": "2026-10-11T15:30:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "LIV",
+    "name": "Liverpool",
+    "role": "home",
+    "score": "0",
+    "short_name": "Liverpool",
+    "winner": false
+   },
+   {
+    "abbreviation": "MNC",
+    "name": "Manchester City",
+    "role": "away",
+    "score": "3",
+    "short_name": "Man City",
+    "winner": true
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Uncertainty may surround Manchester City's future but nothing changed for them on the pitch as the Premier League leaders successfully came through their first public examination since their guilty verdicts.",
+  "title": "Liverpool v Manchester City",
+  "venue": "Anfield"
+ },
+ {
+  "end_estimate": "2026-10-12T21:00:00Z",
+  "final_result": "Coventry City 4–1 Newcastle United",
+  "id": "401879267",
+  "kickoff": "2026-10-12T19:00:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "COV",
+    "name": "Coventry City",
+    "role": "home",
+    "score": "4",
+    "short_name": "Coventry",
+    "winner": true
+   },
+   {
+    "abbreviation": "NEW",
+    "name": "Newcastle United",
+    "role": "away",
+    "score": "1",
+    "short_name": "Newcastle",
+    "winner": false
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Coventry City picked up their first home victory in the Premier League for 25 years with an emphatic 4-1 win over Newcastle United on Monday.",
+  "title": "Coventry City v Newcastle United",
+  "venue": "Coventry Building Society Arena"
+ },
+ {
+  "end_estimate": "2026-10-17T13:30:00Z",
+  "final_result": "Everton 0–2 Chelsea",
+  "id": "401878771",
+  "kickoff": "2026-10-17T11:30:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "EVE",
+    "name": "Everton",
+    "role": "home",
+    "score": "0",
+    "short_name": "Everton",
+    "winner": false
+   },
+   {
+    "abbreviation": "CHE",
+    "name": "Chelsea",
+    "role": "away",
+    "score": "2",
+    "short_name": "Chelsea",
+    "winner": true
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Pedro Neto scored twice in the second half to guide Chelsea to a 2-0 win at Everton on Saturday in a Premier League match marred by a serious-looking head injury to Chelsea goalkeeper Emi Martínez.",
+  "title": "Everton v Chelsea",
+  "venue": "Hill Dickinson Stadium"
+ },
+ {
+  "end_estimate": "2026-10-17T16:00:00Z",
+  "final_result": "Fulham 1–0 Hull City",
+  "id": "401878770",
+  "kickoff": "2026-10-17T14:00:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "FUL",
+    "name": "Fulham",
+    "role": "home",
+    "score": "1",
+    "short_name": "Fulham",
+    "winner": true
+   },
+   {
+    "abbreviation": "HUL",
+    "name": "Hull City",
+    "role": "away",
+    "score": "0",
+    "short_name": "Hull",
+    "winner": false
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Fulham's winless run under Alvaro Arbeloa was finally ended by an entertaining 1-0 victory over Hull at Craven Cottage.",
+  "title": "Fulham v Hull City",
+  "venue": "Craven Cottage"
+ },
+ {
+  "end_estimate": "2026-10-17T16:00:00Z",
+  "final_result": "Manchester City 3–2 Ipswich Town",
+  "id": "401879259",
+  "kickoff": "2026-10-17T14:00:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "MNC",
+    "name": "Manchester City",
+    "role": "home",
+    "score": "3",
+    "short_name": "Man City",
+    "winner": true
+   },
+   {
+    "abbreviation": "IPS",
+    "name": "Ipswich Town",
+    "role": "away",
+    "score": "2",
+    "short_name": "Ipswich",
+    "winner": false
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Erling Haaland struck twice as defiant Manchester City marched on at the top of the Premier League by holding on for a 3-2 win over Ipswich.",
+  "title": "Manchester City v Ipswich Town",
+  "venue": "Etihad Stadium"
+ },
+ {
+  "end_estimate": "2026-10-17T16:00:00Z",
+  "final_result": "Brentford 1–2 Liverpool",
+  "id": "401879262",
+  "kickoff": "2026-10-17T14:00:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "BRE",
+    "name": "Brentford",
+    "role": "home",
+    "score": "1",
+    "short_name": "Brentford",
+    "winner": false
+   },
+   {
+    "abbreviation": "LIV",
+    "name": "Liverpool",
+    "role": "away",
+    "score": "2",
+    "short_name": "Liverpool",
+    "winner": true
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Alexander Isak marked his return from injury with the winner as Liverpool came from behind to beat nine-man Brentford 2-1.",
+  "title": "Brentford v Liverpool",
+  "venue": "Gtech Community Stadium"
+ },
+ {
+  "end_estimate": "2026-10-17T18:30:00Z",
+  "final_result": "Newcastle United 0–1 Aston Villa",
+  "id": "401879258",
+  "kickoff": "2026-10-17T16:30:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "NEW",
+    "name": "Newcastle United",
+    "role": "home",
+    "score": "0",
+    "short_name": "Newcastle",
+    "winner": false
+   },
+   {
+    "abbreviation": "AVL",
+    "name": "Aston Villa",
+    "role": "away",
+    "score": "1",
+    "short_name": "Aston Villa",
+    "winner": true
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Johan Manzambi scored the only goal of the game as Aston Villa clinched a 1-0 win over Newcastle at St James' Park.",
+  "title": "Newcastle United v Aston Villa",
+  "venue": "St. James' Park"
+ },
+ {
+  "end_estimate": "2026-10-18T15:00:00Z",
+  "final_result": "Leeds United 1–1 Manchester United",
+  "id": "401879260",
+  "kickoff": "2026-10-18T13:00:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "LEE",
+    "name": "Leeds United",
+    "role": "home",
+    "score": "1",
+    "short_name": "Leeds",
+    "winner": false
+   },
+   {
+    "abbreviation": "MAN",
+    "name": "Manchester United",
+    "role": "away",
+    "score": "1",
+    "short_name": "Man United",
+    "winner": false
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Dominic Calvert-Lewin's second-half equaliser extended Manchester United's winless Premier League run to five matches as they were held 1-1 by rivals Leeds.",
+  "title": "Leeds United v Manchester United",
+  "venue": "Elland Road"
+ },
+ {
+  "end_estimate": "2026-10-18T15:00:00Z",
+  "final_result": "Brighton & Hove Albion 5–0 Crystal Palace",
+  "id": "401879261",
+  "kickoff": "2026-10-18T13:00:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "BHA",
+    "name": "Brighton & Hove Albion",
+    "role": "home",
+    "score": "5",
+    "short_name": "Brighton",
+    "winner": true
+   },
+   {
+    "abbreviation": "CRY",
+    "name": "Crystal Palace",
+    "role": "away",
+    "score": "0",
+    "short_name": "C Palace",
+    "winner": false
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Diego Gómez sensationally scored from the halfway line as Brighton struck three goals in the opening 10 minutes en route to thrashing bitter rivals Crystal Palace 5-0.",
+  "title": "Brighton & Hove Albion v Crystal Palace",
+  "venue": "American Express Stadium"
+ },
+ {
+  "end_estimate": "2026-10-18T15:00:00Z",
+  "final_result": "AFC Bournemouth 2–0 Sunderland",
+  "id": "401879263",
+  "kickoff": "2026-10-18T13:00:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "BOU",
+    "name": "AFC Bournemouth",
+    "role": "home",
+    "score": "2",
+    "short_name": "Bournemouth",
+    "winner": true
+   },
+   {
+    "abbreviation": "SUN",
+    "name": "Sunderland",
+    "role": "away",
+    "score": "0",
+    "short_name": "Sunderland",
+    "winner": false
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Evanilson scored and contributed an assist as Bournemouth comfortably beat 10-man Sunderland 2-0 at the Vitality Stadium.",
+  "title": "AFC Bournemouth v Sunderland",
+  "venue": "Vitality Stadium"
+ },
+ {
+  "end_estimate": "2026-10-18T17:30:00Z",
+  "final_result": "Nottingham Forest 0–1 Arsenal",
+  "id": "401878769",
+  "kickoff": "2026-10-18T15:30:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "NFO",
+    "name": "Nottingham Forest",
+    "role": "home",
+    "score": "0",
+    "short_name": "Nottm Forest",
+    "winner": false
+   },
+   {
+    "abbreviation": "ARS",
+    "name": "Arsenal",
+    "role": "away",
+    "score": "1",
+    "short_name": "Arsenal",
+    "winner": true
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Noni Madueke climbed off the bench to earn toothless Arsenal a 1-0 win at Nottingham Forest.",
+  "title": "Nottingham Forest v Arsenal",
+  "venue": "The City Ground"
+ },
+ {
+  "end_estimate": "2026-10-19T21:00:00Z",
+  "final_result": "Tottenham Hotspur 3–1 Coventry City",
+  "id": "401879257",
+  "kickoff": "2026-10-19T19:00:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "TOT",
+    "name": "Tottenham Hotspur",
+    "role": "home",
+    "score": "3",
+    "short_name": "Spurs",
+    "winner": true
+   },
+   {
+    "abbreviation": "COV",
+    "name": "Coventry City",
+    "role": "away",
+    "score": "1",
+    "short_name": "Coventry",
+    "winner": false
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Tottenham Hotspur climbed off the bottom of the Premier League after James Maddison's superb 14th-minute opener inspired a 3-1 home win over Coventry City on Monday.",
+  "title": "Tottenham Hotspur v Coventry City",
+  "venue": "Tottenham Hotspur Stadium"
+ }
+]

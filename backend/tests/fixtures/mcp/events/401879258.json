@@ -1,0 +1,1230 @@
+{
+ "coverage": "full_events",
+ "events": [
+  {
+   "actors": [
+    "Nico González",
+    "Johan Manzambi"
+   ],
+   "clock": "2'",
+   "description": "Foul by Nico González (Newcastle United).",
+   "source_ref": "espn:401879258:play:53806999",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Joelinton",
+    "Boubacar Kamara"
+   ],
+   "clock": "2'",
+   "description": "Foul by Joelinton (Newcastle United).",
+   "source_ref": "espn:401879258:play:53807091",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Joelinton",
+    "Boubacar Kamara"
+   ],
+   "clock": "2'",
+   "description": "Boubacar Kamara (Aston Villa) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879258:play:53807091",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Alysson",
+    "Lewis Hall"
+   ],
+   "clock": "3'",
+   "description": "Lewis Hall (Newcastle United) wins a free kick on the left wing.",
+   "source_ref": "espn:401879258:play:53807102",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Alysson",
+    "Lewis Hall"
+   ],
+   "clock": "3'",
+   "description": "Foul by Alysson (Aston Villa).",
+   "source_ref": "espn:401879258:play:53807102",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Boubacar Kamara",
+    "Joelinton"
+   ],
+   "clock": "5'",
+   "description": "Joelinton (Newcastle United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879258:play:53807257",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Boubacar Kamara",
+    "Joelinton"
+   ],
+   "clock": "5'",
+   "description": "Foul by Boubacar Kamara (Aston Villa).",
+   "source_ref": "espn:401879258:play:53807257",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Harvey Barnes"
+   ],
+   "clock": "7'",
+   "description": "Attempt blocked. Harvey Barnes (Newcastle United) right footed shot from outside the box is blocked.",
+   "source_ref": "espn:401879258:play:53807412",
+   "team": "Newcastle United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "8'",
+   "description": "Corner, Newcastle United. Conceded by Aaron Wan-Bissaka.",
+   "source_ref": "espn:401879258:play:53807427",
+   "team": "Newcastle United",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Nicolas Jackson",
+    "Alysson"
+   ],
+   "clock": "9'",
+   "description": "Attempt saved. Nicolas Jackson (Aston Villa) right footed shot from the centre of the box is saved in the centre of the goal by Lukás Hornícek (Newcastle United). Assisted by Alysson.",
+   "source_ref": "espn:401879258:play:53807666",
+   "team": "Aston Villa",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Nico González",
+    "Boubacar Kamara"
+   ],
+   "clock": "11'",
+   "description": "Foul by Nico González (Newcastle United).",
+   "source_ref": "espn:401879258:play:53807884",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Nico González",
+    "Boubacar Kamara"
+   ],
+   "clock": "11'",
+   "description": "Boubacar Kamara (Aston Villa) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879258:play:53807884",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matty Cash",
+    "Joe Willock"
+   ],
+   "clock": "12'",
+   "description": "Joe Willock (Newcastle United) wins a free kick on the left wing.",
+   "source_ref": "espn:401879258:play:53807982",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matty Cash",
+    "Joe Willock"
+   ],
+   "clock": "12'",
+   "description": "Foul by Matty Cash (Aston Villa).",
+   "source_ref": "espn:401879258:play:53807982",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matty Cash",
+    "Harvey Barnes"
+   ],
+   "clock": "14'",
+   "description": "Harvey Barnes (Newcastle United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879258:play:53808002",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matty Cash",
+    "Harvey Barnes"
+   ],
+   "clock": "14'",
+   "description": "Foul by Matty Cash (Aston Villa).",
+   "source_ref": "espn:401879258:play:53808002",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lewis Miley",
+    "Emiliano Buendía"
+   ],
+   "clock": "14'",
+   "description": "Foul by Lewis Miley (Newcastle United).",
+   "source_ref": "espn:401879258:play:53808114",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lewis Miley",
+    "Emiliano Buendía"
+   ],
+   "clock": "14'",
+   "description": "Emiliano Buendía (Aston Villa) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879258:play:53808114",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Joe Willock",
+    "Lewis Hall"
+   ],
+   "clock": "15'",
+   "description": "Attempt missed. Joe Willock (Newcastle United) left footed shot from the left side of the six yard box is close, but misses to the left. Assisted by Lewis Hall.",
+   "source_ref": "espn:401879258:play:53808123",
+   "team": "Newcastle United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Johan Manzambi",
+    "Nicolas Jackson"
+   ],
+   "clock": "16'",
+   "description": "Attempt blocked. Johan Manzambi (Aston Villa) left footed shot from the right side of the box is blocked. Assisted by Nicolas Jackson.",
+   "source_ref": "espn:401879258:play:53808266",
+   "team": "Aston Villa",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Matty Cash",
+    "Johan Manzambi"
+   ],
+   "clock": "16'",
+   "description": "Attempt missed. Matty Cash (Aston Villa) right footed shot from the right side of the box is close, but misses to the right. Assisted by Johan Manzambi.",
+   "source_ref": "espn:401879258:play:53808273",
+   "team": "Aston Villa",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Joe Willock"
+   ],
+   "clock": "16'",
+   "description": "Offside, Newcastle United. Harvey Barnes is caught offside.",
+   "source_ref": "espn:401879258:play:53808370",
+   "team": "Newcastle United",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Joelinton",
+    "Johan Manzambi"
+   ],
+   "clock": "18'",
+   "description": "Foul by Joelinton (Newcastle United).",
+   "source_ref": "espn:401879258:play:53808478",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Joelinton",
+    "Johan Manzambi"
+   ],
+   "clock": "18'",
+   "description": "Johan Manzambi (Aston Villa) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879258:play:53808478",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Joelinton"
+   ],
+   "clock": "18'",
+   "description": "Joelinton (Newcastle United) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879258:play:53808480",
+   "team": "Newcastle United",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Sven Botman"
+   ],
+   "clock": "18'",
+   "description": "Sven Botman (Newcastle United) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879258:play:53808481",
+   "team": "Newcastle United",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Matias Fernandez-Pardo",
+    "João Gomes"
+   ],
+   "clock": "20'",
+   "description": "Foul by Matias Fernandez-Pardo (Newcastle United).",
+   "source_ref": "espn:401879258:play:53808677",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matias Fernandez-Pardo",
+    "João Gomes"
+   ],
+   "clock": "20'",
+   "description": "João Gomes (Aston Villa) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879258:play:53808677",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Boubacar Kamara",
+    "Harvey Barnes"
+   ],
+   "clock": "21'",
+   "description": "Harvey Barnes (Newcastle United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879258:play:53808688",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Boubacar Kamara",
+    "Harvey Barnes"
+   ],
+   "clock": "21'",
+   "description": "Foul by Boubacar Kamara (Aston Villa).",
+   "source_ref": "espn:401879258:play:53808688",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "22'",
+   "description": "Corner, Newcastle United. Conceded by Victor Lindelöf.",
+   "source_ref": "espn:401879258:play:53808760",
+   "team": "Newcastle United",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Yoane Wissa",
+    "Harvey Barnes"
+   ],
+   "clock": "23'",
+   "description": "Attempt blocked. Yoane Wissa (Newcastle United) header from the centre of the box is blocked. Assisted by Harvey Barnes with a cross.",
+   "source_ref": "espn:401879258:play:53808847",
+   "team": "Newcastle United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "João Gomes",
+    "Matias Fernandez-Pardo"
+   ],
+   "clock": "25'",
+   "description": "Foul by João Gomes (Aston Villa).",
+   "source_ref": "espn:401879258:play:53808983",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "João Gomes",
+    "Matias Fernandez-Pardo"
+   ],
+   "clock": "25'",
+   "description": "Matias Fernandez-Pardo (Newcastle United) wins a free kick on the right wing.",
+   "source_ref": "espn:401879258:play:53808983",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "João Gomes"
+   ],
+   "clock": "25'",
+   "description": "João Gomes (Aston Villa) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879258:play:53809087",
+   "team": "Aston Villa",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Yoane Wissa"
+   ],
+   "clock": "26'",
+   "description": "Attempt blocked. Yoane Wissa (Newcastle United) right footed shot from outside the box is blocked.",
+   "source_ref": "espn:401879258:play:53809098",
+   "team": "Newcastle United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Alysson"
+   ],
+   "clock": "28'",
+   "description": "Alysson (Aston Villa) is shown the yellow card.",
+   "source_ref": "espn:401879258:play:53809187",
+   "team": "Aston Villa",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Nicolas Jackson",
+    "Johan Manzambi"
+   ],
+   "clock": "29'",
+   "description": "Attempt blocked. Nicolas Jackson (Aston Villa) right footed shot from the centre of the box is blocked. Assisted by Johan Manzambi.",
+   "source_ref": "espn:401879258:play:53809291",
+   "team": "Aston Villa",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "29'",
+   "description": "Corner, Aston Villa. Conceded by Sven Botman.",
+   "source_ref": "espn:401879258:play:53809292",
+   "team": "Aston Villa",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Matty Cash",
+    "Harvey Barnes"
+   ],
+   "clock": "32'",
+   "description": "Foul by Matty Cash (Aston Villa).",
+   "source_ref": "espn:401879258:play:53809479",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matty Cash",
+    "Harvey Barnes"
+   ],
+   "clock": "32'",
+   "description": "Harvey Barnes (Newcastle United) wins a free kick on the left wing.",
+   "source_ref": "espn:401879258:play:53809479",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Sven Botman",
+    "Lewis Hall"
+   ],
+   "clock": "33'",
+   "description": "Attempt blocked. Sven Botman (Newcastle United) header from the centre of the box is blocked. Assisted by Lewis Hall with a cross.",
+   "source_ref": "espn:401879258:play:53809586",
+   "team": "Newcastle United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Yoane Wissa",
+    "Malick Thiaw"
+   ],
+   "clock": "33'",
+   "description": "Attempt missed. Yoane Wissa (Newcastle United) right footed shot from the centre of the box misses to the left. Assisted by Malick Thiaw following a set piece situation.",
+   "source_ref": "espn:401879258:play:53809590",
+   "team": "Newcastle United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Lukás Hornícek"
+   ],
+   "clock": "35'",
+   "description": "Offside, Newcastle United. Harvey Barnes is caught offside.",
+   "source_ref": "espn:401879258:play:53809747",
+   "team": "Newcastle United",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Johan Manzambi",
+    "João Gomes"
+   ],
+   "clock": "36'",
+   "description": "Goal! Newcastle United 0, Aston Villa 1. Johan Manzambi (Aston Villa) header from very close range to the bottom left corner. Assisted by João Gomes with a cross.",
+   "score_after": "0-1",
+   "source_ref": "espn:401879258:play:53809775",
+   "team": "Aston Villa",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Emiliano Buendía",
+    "Nicolas Jackson"
+   ],
+   "clock": "38'",
+   "description": "Attempt blocked. Emiliano Buendía (Aston Villa) right footed shot from the centre of the box is blocked. Assisted by Nicolas Jackson.",
+   "source_ref": "espn:401879258:play:53810036",
+   "team": "Aston Villa",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "39'",
+   "description": "Corner, Aston Villa. Conceded by Lewis Hall.",
+   "source_ref": "espn:401879258:play:53810040",
+   "team": "Aston Villa",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Boubacar Kamara",
+    "Joelinton"
+   ],
+   "clock": "41'",
+   "description": "Joelinton (Newcastle United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879258:play:53810236",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Boubacar Kamara",
+    "Joelinton"
+   ],
+   "clock": "41'",
+   "description": "Foul by Boubacar Kamara (Aston Villa).",
+   "source_ref": "espn:401879258:play:53810236",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "42'",
+   "description": "Corner, Aston Villa. Conceded by Lewis Miley.",
+   "source_ref": "espn:401879258:play:53810376",
+   "team": "Aston Villa",
+   "type": "corner"
+  },
+  {
+   "actors": [],
+   "clock": "45+3'",
+   "description": "First Half ends, Newcastle United 0, Aston Villa 1.",
+   "score_after": "0-1",
+   "source_ref": "espn:401879258:play:53810765",
+   "type": "half_time"
+  },
+  {
+   "actors": [
+    "John McGinn",
+    "Alysson"
+   ],
+   "clock": "45'",
+   "description": "Substitution, Aston Villa. John McGinn replaces Alysson.",
+   "source_ref": "espn:401879258:play:53811258",
+   "team": "Aston Villa",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Aaron Wan-Bissaka",
+    "Matias Fernandez-Pardo"
+   ],
+   "clock": "48'",
+   "description": "Matias Fernandez-Pardo (Newcastle United) wins a free kick on the right wing.",
+   "source_ref": "espn:401879258:play:53811381",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Aaron Wan-Bissaka",
+    "Matias Fernandez-Pardo"
+   ],
+   "clock": "48'",
+   "description": "Foul by Aaron Wan-Bissaka (Aston Villa).",
+   "source_ref": "espn:401879258:play:53811381",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Sven Botman"
+   ],
+   "clock": "49'",
+   "description": "Attempt saved. Sven Botman (Newcastle United) left footed shot from the centre of the box is saved in the top right corner by Zion Suzuki (Aston Villa).",
+   "source_ref": "espn:401879258:play:53811428",
+   "team": "Newcastle United",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [],
+   "clock": "49'",
+   "description": "Corner, Newcastle United. Conceded by Zion Suzuki.",
+   "source_ref": "espn:401879258:play:53811429",
+   "team": "Newcastle United",
+   "type": "corner"
+  },
+  {
+   "actors": [],
+   "clock": "52'",
+   "description": "Corner, Newcastle United. Conceded by Matty Cash.",
+   "source_ref": "espn:401879258:play:53811550",
+   "team": "Newcastle United",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Nico González",
+    "John McGinn"
+   ],
+   "clock": "53'",
+   "description": "Foul by Nico González (Newcastle United).",
+   "source_ref": "espn:401879258:play:53811651",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Nico González",
+    "John McGinn"
+   ],
+   "clock": "53'",
+   "description": "John McGinn (Aston Villa) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879258:play:53811651",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Nico González"
+   ],
+   "clock": "53'",
+   "description": "Nico González (Newcastle United) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879258:play:53811749",
+   "team": "Newcastle United",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Johan Manzambi"
+   ],
+   "clock": "54'",
+   "description": "Attempt blocked. Johan Manzambi (Aston Villa) left footed shot from the right side of the box is blocked.",
+   "source_ref": "espn:401879258:play:53811768",
+   "team": "Aston Villa",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Yoane Wissa",
+    "Zion Suzuki"
+   ],
+   "clock": "55'",
+   "description": "Foul by Yoane Wissa (Newcastle United).",
+   "source_ref": "espn:401879258:play:53811844",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Yoane Wissa",
+    "Zion Suzuki"
+   ],
+   "clock": "55'",
+   "description": "Zion Suzuki (Aston Villa) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879258:play:53811844",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Yoane Wissa"
+   ],
+   "clock": "55'",
+   "description": "Yoane Wissa (Newcastle United) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879258:play:53811845",
+   "team": "Newcastle United",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Bazoumana Touré",
+    "Matias Fernandez-Pardo"
+   ],
+   "clock": "56'",
+   "description": "Substitution, Newcastle United. Bazoumana Touré replaces Matias Fernandez-Pardo.",
+   "source_ref": "espn:401879258:play:53811909",
+   "team": "Newcastle United",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "William Osula",
+    "Joe Willock"
+   ],
+   "clock": "56'",
+   "description": "Substitution, Newcastle United. William Osula replaces Joe Willock.",
+   "source_ref": "espn:401879258:play:53811910",
+   "team": "Newcastle United",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Malick Thiaw"
+   ],
+   "clock": "59'",
+   "description": "Offside, Newcastle United. Bazoumana Touré is caught offside.",
+   "source_ref": "espn:401879258:play:53812135",
+   "team": "Newcastle United",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Joelinton",
+    "Boubacar Kamara"
+   ],
+   "clock": "61'",
+   "description": "Foul by Joelinton (Newcastle United).",
+   "source_ref": "espn:401879258:play:53812357",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Joelinton",
+    "Boubacar Kamara"
+   ],
+   "clock": "61'",
+   "description": "Boubacar Kamara (Aston Villa) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879258:play:53812357",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Bazoumana Touré",
+    "Aaron Wan-Bissaka"
+   ],
+   "clock": "63'",
+   "description": "Foul by Bazoumana Touré (Newcastle United).",
+   "source_ref": "espn:401879258:play:53812420",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Bazoumana Touré",
+    "Aaron Wan-Bissaka"
+   ],
+   "clock": "63'",
+   "description": "Aaron Wan-Bissaka (Aston Villa) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879258:play:53812420",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Yoane Wissa",
+    "Lewis Miley"
+   ],
+   "clock": "65'",
+   "description": "Attempt missed. Yoane Wissa (Newcastle United) header from the centre of the box is too high. Assisted by Lewis Miley.",
+   "source_ref": "espn:401879258:play:53812532",
+   "team": "Newcastle United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "William Osula",
+    "Lewis Miley"
+   ],
+   "clock": "66'",
+   "description": "Attempt missed. William Osula (Newcastle United) header from the centre of the box misses to the right. Assisted by Lewis Miley with a cross.",
+   "source_ref": "espn:401879258:play:53812704",
+   "team": "Newcastle United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Malick Thiaw",
+    "Emiliano Buendía"
+   ],
+   "clock": "67'",
+   "description": "Foul by Malick Thiaw (Newcastle United).",
+   "source_ref": "espn:401879258:play:53812726",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Malick Thiaw",
+    "Emiliano Buendía"
+   ],
+   "clock": "67'",
+   "description": "Emiliano Buendía (Aston Villa) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879258:play:53812726",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "68'",
+   "description": "Corner, Aston Villa. Conceded by Lewis Miley.",
+   "source_ref": "espn:401879258:play:53812791",
+   "team": "Aston Villa",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Matty Cash",
+    "Nicolas Jackson"
+   ],
+   "clock": "68'",
+   "description": "Attempt missed. Matty Cash (Aston Villa) right footed shot from outside the box is high and wide to the left. Assisted by Nicolas Jackson following a corner.",
+   "source_ref": "espn:401879258:play:53812797",
+   "team": "Aston Villa",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Harvey Barnes",
+    "Lewis Miley"
+   ],
+   "clock": "69'",
+   "description": "Attempt blocked. Harvey Barnes (Newcastle United) right footed shot from outside the box is blocked. Assisted by Lewis Miley.",
+   "source_ref": "espn:401879258:play:53812872",
+   "team": "Newcastle United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Yoane Wissa"
+   ],
+   "clock": "69'",
+   "description": "Attempt blocked. Yoane Wissa (Newcastle United) right footed shot from the centre of the box is blocked.",
+   "source_ref": "espn:401879258:play:53812880",
+   "team": "Newcastle United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Leon Goretzka",
+    "Emiliano Buendía"
+   ],
+   "clock": "72'",
+   "description": "Substitution, Aston Villa. Leon Goretzka replaces Emiliano Buendía.",
+   "source_ref": "espn:401879258:play:53813068",
+   "team": "Aston Villa",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Ross Barkley",
+    "João Gomes"
+   ],
+   "clock": "72'",
+   "description": "Substitution, Aston Villa. Ross Barkley replaces João Gomes.",
+   "source_ref": "espn:401879258:play:53813069",
+   "team": "Aston Villa",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Ibrahim Mbaye",
+    "Johan Manzambi"
+   ],
+   "clock": "72'",
+   "description": "Substitution, Aston Villa. Ibrahim Mbaye replaces Johan Manzambi because of an injury.",
+   "source_ref": "espn:401879258:play:53813070",
+   "team": "Aston Villa",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Nicolas Jackson",
+    "Ibrahim Mbaye"
+   ],
+   "clock": "73'",
+   "description": "Attempt blocked. Nicolas Jackson (Aston Villa) right footed shot from the left side of the box is blocked. Assisted by Ibrahim Mbaye.",
+   "source_ref": "espn:401879258:play:53813181",
+   "team": "Aston Villa",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Ross Barkley"
+   ],
+   "clock": "74'",
+   "description": "Attempt saved. Ross Barkley (Aston Villa) right footed shot from outside the box is saved in the bottom left corner by Lukás Hornícek (Newcastle United).",
+   "source_ref": "espn:401879258:play:53813183",
+   "team": "Aston Villa",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [],
+   "clock": "74'",
+   "description": "Corner, Aston Villa. Conceded by Lukás Hornícek.",
+   "source_ref": "espn:401879258:play:53813185",
+   "team": "Aston Villa",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Bazoumana Touré",
+    "Boubacar Kamara"
+   ],
+   "clock": "75'",
+   "description": "Foul by Bazoumana Touré (Newcastle United).",
+   "source_ref": "espn:401879258:play:53813197",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Bazoumana Touré",
+    "Boubacar Kamara"
+   ],
+   "clock": "75'",
+   "description": "Boubacar Kamara (Aston Villa) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879258:play:53813197",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Pau Torres",
+    "Aaron Wan-Bissaka"
+   ],
+   "clock": "77'",
+   "description": "Substitution, Aston Villa. Pau Torres replaces Aaron Wan-Bissaka because of an injury.",
+   "source_ref": "espn:401879258:play:53813542",
+   "team": "Aston Villa",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Leon Goretzka"
+   ],
+   "clock": "78'",
+   "description": "Attempt blocked. Leon Goretzka (Aston Villa) right footed shot from outside the box is blocked.",
+   "source_ref": "espn:401879258:play:53813516",
+   "team": "Aston Villa",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "William Osula",
+    "Pau Torres"
+   ],
+   "clock": "78'",
+   "description": "Foul by William Osula (Newcastle United).",
+   "source_ref": "espn:401879258:play:53813639",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "William Osula",
+    "Pau Torres"
+   ],
+   "clock": "78'",
+   "description": "Pau Torres (Aston Villa) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879258:play:53813639",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "William Osula"
+   ],
+   "clock": "78'",
+   "description": "William Osula (Newcastle United) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879258:play:53813640",
+   "team": "Newcastle United",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Yoane Wissa",
+    "Joelinton"
+   ],
+   "clock": "80'",
+   "description": "Attempt missed. Yoane Wissa (Newcastle United) right footed shot from the right side of the box is close, but misses to the right. Assisted by Joelinton.",
+   "source_ref": "espn:401879258:play:53813649",
+   "team": "Newcastle United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Ibrahim Mbaye",
+    "Ross Barkley"
+   ],
+   "clock": "83'",
+   "description": "Attempt missed. Ibrahim Mbaye (Aston Villa) left footed shot from a difficult angle on the left is high and wide to the right. Assisted by Ross Barkley.",
+   "source_ref": "espn:401879258:play:53814059",
+   "team": "Aston Villa",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Harvey Barnes",
+    "Bazoumana Touré"
+   ],
+   "clock": "84'",
+   "description": "Attempt blocked. Harvey Barnes (Newcastle United) left footed shot from the centre of the box is blocked. Assisted by Bazoumana Touré.",
+   "source_ref": "espn:401879258:play:53814134",
+   "team": "Newcastle United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Ibrahim Mbaye",
+    "Ross Barkley"
+   ],
+   "clock": "84'",
+   "description": "Attempt blocked. Ibrahim Mbaye (Aston Villa) right footed shot from outside the box is blocked. Assisted by Ross Barkley.",
+   "source_ref": "espn:401879258:play:53814241",
+   "team": "Aston Villa",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Yoane Wissa",
+    "Harvey Barnes"
+   ],
+   "clock": "85'",
+   "description": "Attempt missed. Yoane Wissa (Newcastle United) right footed shot from the centre of the box is close, but misses to the right. Assisted by Harvey Barnes following a fast break.",
+   "source_ref": "espn:401879258:play:53814256",
+   "team": "Newcastle United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Malick Thiaw",
+    "Ibrahim Mbaye"
+   ],
+   "clock": "86'",
+   "description": "Foul by Malick Thiaw (Newcastle United).",
+   "source_ref": "espn:401879258:play:53814414",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Malick Thiaw",
+    "Ibrahim Mbaye"
+   ],
+   "clock": "86'",
+   "description": "Ibrahim Mbaye (Aston Villa) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879258:play:53814414",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Malick Thiaw"
+   ],
+   "clock": "86'",
+   "description": "Malick Thiaw (Newcastle United) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879258:play:53814415",
+   "team": "Newcastle United",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Malick Thiaw"
+   ],
+   "clock": "88'",
+   "description": "Offside, Newcastle United. William Osula is caught offside.",
+   "source_ref": "espn:401879258:play:53814573",
+   "team": "Newcastle United",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Boubacar Kamara",
+    "Nico González"
+   ],
+   "clock": "89'",
+   "description": "Nico González (Newcastle United) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879258:play:53814595",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Boubacar Kamara",
+    "Nico González"
+   ],
+   "clock": "89'",
+   "description": "Foul by Boubacar Kamara (Aston Villa).",
+   "source_ref": "espn:401879258:play:53814595",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ibrahim Mbaye",
+    "Tyrone Mings"
+   ],
+   "clock": "90'",
+   "description": "Attempt missed. Ibrahim Mbaye (Aston Villa) right footed shot from the centre of the box is close, but misses to the left. Assisted by Tyrone Mings.",
+   "source_ref": "espn:401879258:play:53814692",
+   "team": "Aston Villa",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Dan Burn",
+    "Joelinton"
+   ],
+   "clock": "90'",
+   "description": "Substitution, Newcastle United. Dan Burn replaces Joelinton.",
+   "source_ref": "espn:401879258:play:53814774",
+   "team": "Newcastle United",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Nico González",
+    "William Osula"
+   ],
+   "clock": "90+1'",
+   "description": "Attempt blocked. Nico González (Newcastle United) right footed shot from outside the box is blocked. Assisted by William Osula.",
+   "source_ref": "espn:401879258:play:53814770",
+   "team": "Newcastle United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Nicolas Jackson",
+    "John McGinn"
+   ],
+   "clock": "90+4'",
+   "description": "Attempt blocked. Nicolas Jackson (Aston Villa) right footed shot from the right side of the box is blocked. Assisted by John McGinn.",
+   "source_ref": "espn:401879258:play:53815195",
+   "team": "Aston Villa",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Nico González",
+    "Harvey Barnes"
+   ],
+   "clock": "90+5'",
+   "description": "Attempt blocked. Nico González (Newcastle United) right footed shot from outside the box is blocked. Assisted by Harvey Barnes.",
+   "source_ref": "espn:401879258:play:53815278",
+   "team": "Newcastle United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Lewis Miley"
+   ],
+   "clock": "90+5'",
+   "description": "Offside, Newcastle United. Lewis Hall is caught offside.",
+   "source_ref": "espn:401879258:play:53815280",
+   "team": "Newcastle United",
+   "type": "offside"
+  },
+  {
+   "actors": [],
+   "clock": "90+7'",
+   "description": "Second Half ends, Newcastle United 0, Aston Villa 1.",
+   "score_after": "0-1",
+   "source_ref": "espn:401879258:play:53815451",
+   "type": "full_time"
+  }
+ ],
+ "match": {
+  "end_estimate": "2026-10-17T18:30:00Z",
+  "final_result": "Newcastle United 0–1 Aston Villa",
+  "id": "401879258",
+  "kickoff": "2026-10-17T16:30:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "NEW",
+    "name": "Newcastle United",
+    "role": "home",
+    "score": "0",
+    "short_name": "Newcastle",
+    "winner": false
+   },
+   {
+    "abbreviation": "AVL",
+    "name": "Aston Villa",
+    "role": "away",
+    "score": "1",
+    "short_name": "Aston Villa",
+    "winner": true
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Johan Manzambi scored the only goal of the game as Aston Villa clinched a 1-0 win over Newcastle at St James' Park.",
+  "title": "Newcastle United v Aston Villa",
+  "venue": "St. James' Park"
+ },
+ "sources": [
+  {
+   "publisher": "ESPN",
+   "title": "Newcastle United v Aston Villa: match events",
+   "url": "https://www.espn.com/soccer/match/_/gameId/401879258"
+  },
+  {
+   "published_at": "2026-10-17T18:36:00Z",
+   "publisher": "ESPN",
+   "title": "Johan Manzambi fires Aston Villa to victory at St. James' Park",
+   "url": "https://www.espn.com/soccer/report/_/gameId/401879258"
+  }
+ ],
+ "team_stats": [
+  {
+   "corners": 4,
+   "fouls": 14,
+   "possession_pct": 49.3,
+   "red_cards": 0,
+   "saves": 2,
+   "shots": 16,
+   "shots_on_target": 1,
+   "team": "Newcastle United",
+   "yellow_cards": 6
+  },
+  {
+   "corners": 5,
+   "fouls": 11,
+   "possession_pct": 50.7,
+   "red_cards": 0,
+   "saves": 1,
+   "shots": 15,
+   "shots_on_target": 3,
+   "team": "Aston Villa",
+   "yellow_cards": 2
+  }
+ ]
+}

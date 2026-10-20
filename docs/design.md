@@ -6,7 +6,7 @@ Oct 19, 2026 · @Sathwik
 
 Matchday Muse (working title) picks the most dramatic or funny moment from recent sport and retells it as a short rhyming poem (a headline and 8 to 30 lines, in a form such as a ballad, a sonnet or limericks), or optionally an image. It is an educational project that exercises MCP, LLM tool use, guardrails, evals, IaC and observability.
 
-A user picks a sport and league (default: Football, English Premier League), a date range (default: the current week) and a style. The system then:
+A user picks a sport and league (default: Football, Premier League), a date range (default: the current week) and a style. The system then:
 
 1. Fetches every completed match in the range, with its play-by-play, from a Go MCP server.
 2. Computes deterministic drama signals per match (late goals, lead changes, red cards), then lets an LLM choose the most promising match, checking web coverage of a short list through tool calls.
@@ -121,14 +121,17 @@ matchday-muse/
     internal/search/        # Provider interface + exa/, tavily/, fixture/
     internal/cache/         # on-disk response cache
     testdata/               # recorded ESPN responses; search corpus (embedded)
-  backend/                  # Python, FastAPI, uv
+  backend/                  # Python 3.14, FastAPI, uv
     app/main.py             # HTTP + WebSocket endpoints
-    app/pipeline/           # stages, state machine, signals, prompts/
-    app/llm/                # LiteLLM wrapper, model registry, quota handling
+    app/ws/session.py       # one socket: handshake, the active run, finished runs to retell
+    app/pipeline/           # stages and state machine (run.py), ranges, signals, prompts/
+    app/llm/                # the LLM stages as one interface: mock now, LiteLLM next
+    app/sports.py           # MCP client: typed calls over Streamable HTTP or stdio
+    app/contracts/          # GENERATED Pydantic models from contracts/ (make gen)
     app/guardrails/
-    app/mcp_client.py
     app/db/                 # SQLAlchemy models, Alembic migrations
-    tests/                  # pytest
+    scripts/                # gen_contracts.py, freeze_mcp.py
+    tests/                  # pytest; fixtures/mcp/ holds frozen MCP responses
   frontend/                 # Angular 22; src/app/mocks/ replays contracts/ws/examples/;
                             # src/app/contracts/contracts.ts is GENERATED (make gen)
   docs/
@@ -247,33 +250,45 @@ The pipeline is an explicit state machine of fixed stages, not a free-roaming ag
 2. `fetch_matches` — `find_matches` via MCP; keep completed matches only. Zero matches ends the run with `run.error` code `no_matches` and a one-click `suggestion`: the week containing the day for a day range, otherwise the previous week or month.
 3. `score_matches` — `get_match_events` for every candidate (about 10 calls for an EPL week, served from cache after the first run; progress reads "7 of 10 matches loaded"), then compute deterministic drama signals per match: goals after the 85th minute, lead changes, comebacks from two or more down, red cards, penalties (scored and missed), own goals, VAR reversals where the feed marks them, and margin. Months with more than 60 matches keep the 60 with the highest signal total, with a note.
 4. `pick_match` (LLM, tools) — input: one line per match with its score and signals. The model short-lists up to 3 matches and may call `search_coverage` on them to look for funny, bizarre or controversial angles that event data cannot show (a goalkeeper's own goal, a manager's touchline meltdown), within the tool-call cap. Output `MatchPick`: `match_id`, `reason`, `angle` (`comedy` or `drama`), `shortlist`.
-5. `search_coverage` — 1 to 2 `search_coverage` queries for the picked match built from teams, date and competition, reusing any results `pick_match` already fetched; keep the top 5 results.
+5. `search_coverage` — 1 to 2 `search_coverage` queries for the picked match built from teams, date and competition, reusing any results `pick_match` already fetched; keep the top 5 results that name every team (others are about some other match).
 6. `pick_moment` (LLM) — choose the moment or sequence from the timeline already loaded in stage 3, plus the 2 to 5 beats the poem will follow. Output `MomentPick`: event refs, `beats`, `why_it_matters`.
 7. `build_fact_sheet` (LLM, structured output) — merge events and coverage into a `FactSheet`. Every fact carries a `source_ref` (event id or URL).
 8. `generate` (LLM, structured output) — write the headline and poem from the fact sheet, the beats and a style preset only; raw articles are never in this prompt. See The poem below.
 9. `guardrails` — run the output checks on every line (see Guardrails); one repair attempt with the failure reasons, then fail closed.
 10. `done` — return the headline and poem as annotated lines, the facts behind them, the sources, guardrail results, tokens and cost.
 
-**Core models** (`contracts/pipeline/`)
+**Core models** (`contracts/pipeline/`, one JSON Schema file each; Pydantic models generated into `backend/app/contracts/pipeline/`)
+
+The LLM stages' structured outputs are `MatchPick`, `MomentPick`, `FactDraft`, `Poem` and `GroundingVerdict`; `make test` checks they stay inside the strict-mode subset. `FactSheet` is not an LLM output: the pipeline assembles it from the `FactDraft` plus MCP data (the canonical result, the roster, the sources), so the model can never alter those.
 
 ```python
 class Fact(BaseModel):
     id: str                  # f1, f2...
     text: str                # "Saka scored in the 90+3rd minute"
     kind: Literal["score", "event", "context", "quote"]
-    source_ref: str          # event id or URL
+    source_ref: str          # an event's source_ref, or a search result's URL
     speaker: str | None      # quotes only: who said it, as attributed in the source
 
 class Person(BaseModel):
     canonical: str           # "Bukayo Saka"
     variants: list[str]      # ["Saka", "Bukayo"]: surname, known-as names
 
-class MomentPick(BaseModel):
+class MatchPick(BaseModel):              # LLM: pick_match
+    match_id: str
+    reason: str
+    angle: Literal["drama", "comedy"]
+    shortlist: list[str]
+
+class MomentPick(BaseModel):             # LLM: pick_moment
+    title: str               # one line naming the moment; shown on the result card
     event_refs: list[str]    # the moment itself
-    beats: list[str]         # 2 to 5 event ids in match order, including the moment
+    beats: list[str]         # 2 to 5 event refs in match order, including the moment
     why_it_matters: str
 
-class FactSheet(BaseModel):
+class FactDraft(BaseModel):              # LLM: build_fact_sheet
+    facts: list[Fact]
+
+class FactSheet(BaseModel):              # assembled by the pipeline
     match_id: str
     competition: str
     teams_or_participants: list[str]
@@ -283,12 +298,16 @@ class FactSheet(BaseModel):
     facts: list[Fact]
     sources: list[SourceLink]
 
-class LineVerdict(BaseModel):     # the grounding judge's output, one per line
+class Poem(BaseModel):                   # LLM: generate
+    headline: str
+    stanzas: list[PoemStanza]            # PoemStanza: lines: list[str]
+
+class LineVerdict(BaseModel):            # the grounding judge's output, one per line
     index: int               # 0 is the headline
     fact_ids: list[str]      # facts this line rests on; empty for pure colour
     unsupported: list[str]   # factual claims no fact supports
 
-class GroundingVerdict(BaseModel):
+class GroundingVerdict(BaseModel):       # LLM: the grounding judge
     lines: list[LineVerdict]
 ```
 
@@ -331,7 +350,11 @@ Phase 0 builds three that differ in shape (`ballad`, `sonnet`, `limericks`): an 
 
 **Retell:** a finished run can be retold in another style, or in the same one for another take, with `run.retell`. The backend reuses that run's `MatchPick`, `MomentPick` and `FactSheet` and runs only `generate`, `guardrails` and `done`, so a retell takes seconds and costs one writer call and one judge call (plus a repair if needed). The source run must have ended in `run.result` and belong to the same session; otherwise the retell ends with `run.error` code `retell_unavailable`. A retell is a run of its own, with its own `runId` and `retell_of` pointing at the source. In Phase 0 the fact sheet lives in memory for the life of the socket; from Phase 1 it is stored on the `runs` row.
 
-**Phase 0 backend:** the same FastAPI app and WebSocket protocol, with runs and their events held in memory instead of Postgres. In docker compose it reaches the `mcp-server` service over Streamable HTTP; run outside Docker (tests, evals) it can launch the server over stdio instead.
+**Phase 0 backend:** the same FastAPI app and WebSocket protocol, with runs and their events held in memory instead of Postgres. In docker compose it reaches the `mcp-server` service over Streamable HTTP (`MCP_SERVER_URL` plus the bearer token); outside Docker it can launch the server over stdio instead (`MCP_SERVER_COMMAND`). Each run opens one MCP session and closes it when the run ends; `list_competitions` is fetched once per process, and if it fails the socket closes with 1011 so the client reconnects and says hello again.
+
+Until the LiteLLM stages land, `MockLlm` stands in for every LLM call: it picks the match with the highest drama-signal total, the winner's decisive goal as the moment, and writes a "poem" that is the beats' facts, one stanza each, opening with a line that says no LLM wrote it. The guardrails stage reports all seven checks as skipped. Everything else (ranges, MCP calls, signals, coverage, the fact sheet's assembly and validation, the result's facts and sources) is the real code.
+
+**Tests:** pytest drives the socket the way the UI does, with sports data replayed from `tests/fixtures/mcp/` (frozen through the real client by `make freeze-mcp`), and checks every server message against `contracts/ws/` with jsonschema. The protocol tests compare the backend with the scripted runs: `session.ready` must equal the scripted one, a full run's stage list must equal `success`'s, a retell's must equal `retell`'s, and an empty day must produce `no-matches`' message and suggestion. One test runs the real Go server over stdio for the tools that need no network. ruff and strict mypy run alongside.
 
 ## WebSocket protocol
 
@@ -381,7 +404,7 @@ A single-page app in current Angular (standalone components, signals, the new co
 **Main screen, top to bottom**
 
 1. **Controls bar**
-   - Sport and league select, populated from `session.ready` / `list_competitions`. Default: Football, English Premier League.
+   - Sport and league select, populated from `session.ready` / `list_competitions`. Default: Football, Premier League.
    - Range: a granularity toggle (Day, Week, Month) plus a date or month picker. Default: the week containing today if it already has completed matches, otherwise the previous week (so Monday morning never opens on an empty week), in the browser's timezone. Until the backend can say which weeks have results, the UI approximates this as "last week on a Monday, this week otherwise". The label always shows the resolved dates ("Mon 12 Oct – Sun 18 Oct 2026, London time").
    - Style preset select, grouped by family (Formal verse, Light verse).
    - Output toggle: Text or Image. Image is disabled, with a tooltip saying why, when the current model's provider has no image model, and always for free runs.
@@ -411,7 +434,7 @@ A single-page app in current Angular (standalone components, signals, the new co
 - Match facts in the scripts are real (ESPN data for the week of Mon 12 Oct 2026); the poems, token counts and costs are made up.
 - The scripts: `session` (the `session.ready` handshake), `success` (a ballad), `no-matches`, `guardrail-failed` (fails after one repair), `quota-exceeded` (a `prompt.request` mid-run), `cancelled`, `stage-failed`, and `retell` (answers every `run.retell`).
 - `takes.json` (format: `contracts/ws/mock-takes.json`) holds one `run.result` per style preset for Brentford 1–2 Liverpool, all from one 14-fact sheet, each line linked to its facts. They double as reference outputs for the presets. `make test` checks there is exactly one per style and that any script result for the same match and style matches its take.
-- `MockWsService` implements the same interface as `WsService` and replays a script with three rewrites: timestamps become the moment each message is sent, each replay gets its own `runId`, and the `run.result` becomes the take in the requested style (keeping the script's usage), so every preset and every retell can be seen. `make dev` (the `frontend` service, `ng serve`) uses it while `environment.wsUrl` is null. `?mock=<script>` opens a script and plays it at once, and `?speed=<n>` replays n times faster, the poem reveal included (0 for instant), so every screen state can be opened directly while designing. In mock mode a bar in the header picks the script and speed, and the controls are set to the script's own `run.start`. A Cancel pressed where a script has no `await` step ends the run with `cancelled` straight away.
+- `MockWsService` implements the same interface as `WsService` and replays a script with three rewrites: timestamps become the moment each message is sent, each replay gets its own `runId`, and the `run.result` becomes the take in the requested style (keeping the script's usage), so every preset and every retell can be seen. The app uses the real socket (`environment.wsUrl` is `/ws` on the page's own origin, which `ng serve` proxies to the backend via `proxy.conf.mjs`), and `?mock=<script>` switches to the mock: it opens a script and plays it at once, and `?speed=<n>` replays n times faster, the poem reveal included (0 for instant), so every screen state can be opened directly while designing. In mock mode a bar in the header picks the script and speed, and the controls are set to the script's own `run.start`. A Cancel pressed where a script has no `await` step ends the run with `cancelled` straight away.
 - Once the backend exists, the same scripts become pytest fixtures: the real backend, run with the fixture search provider and a mock LLM, must emit the same message types in the same stage order.
 
 **Tests:** Vitest (Angular's default runner) with jsdom. The reducer, the mock replay, each component and the whole app are tested against the scripted runs; `make test-frontend` runs them. Phase 1 adds one Playwright smoke test against the real backend with the fixture search provider and a mock LLM.
@@ -584,7 +607,7 @@ Local runs on docker compose; the cloud runs on GCP via Terraform. The same cont
 | --- | --- | --- | --- |
 | `mcp-server` | `mcp-server/Dockerfile`, `dev` target: Go toolchain | 8081 | Phase 0. `MCP_TRANSPORT=http`; source mounted read-only at `/src`; watch restarts it on Go changes and it recompiles on start (about 2 s, build cache on a volume); raw-data cache on the `mcp-cache` volume; healthcheck |
 | `frontend` | `frontend/Dockerfile`, `dev` target: node, `ng serve` | 4200 | Phase 0. Dev only; `src/` and `contracts/ws/` mounted read-only, so `ng serve` hot-reloads on its own; later proxies `/api` and `/ws` to `backend` |
-| `backend` | built from `backend/` | 8000 | Phase 0, when it lands. FastAPI + WebSocket; from Phase 1 runs Alembic on start and serves the `frontend` image's `build` target |
+| `backend` | `backend/Dockerfile`, `dev` target: Python 3.14, uv | 8000 | Phase 0. FastAPI + WebSocket; `app/` mounted read-only, uvicorn reloads on changes; waits for `mcp-server` to be healthy. From Phase 1 runs Alembic on start and serves the `frontend` image's `build` target |
 | `postgres` | postgres:16 | 5432 | Phase 1. Databases `app` and `litellm`; named volume |
 | `litellm` | official LiteLLM Proxy image | 4000 | Phase 3. Reads `infra/litellm/config.yaml`; house key from `.env` |
 
@@ -684,7 +707,8 @@ Every variable lives in `.env.example` with a comment; services fail fast at sta
 | `FREE_RUNS_PER_SESSION` | backend | `3` | Phase 3. Free-run allowance |
 | `HOUSE_RUNS_PER_IP_PER_DAY` | backend | `10` | Phase 3. Per-IP backstop |
 | `SESSION_SECRET` | backend |  | Signs session cookies |
-| `MOCK_LLM` | backend | `false` | Offline mode for tests and demos |
+| `MCP_SERVER_COMMAND` | backend | `../mcp-server/bin/mcp-server` | Launch the MCP server over stdio instead of `MCP_SERVER_URL` (outside Docker) |
+| `MOCK_LLM` | backend | `true` | The mock LLM stages; `false` arrives with the LiteLLM stages |
 | `LLM_MODEL` | backend | `gemini/gemini-flash` | Default model for local runs and evals when the browser sends no model |
 | `LLM_API_KEY` | backend |  | Development fallback key, used when `run.start` asks for `llm.mode: house` (the browser has no key) and by `make eval`. Never set in the cloud |
 | `LITELLM_MASTER_KEY` | litellm |  | Phase 3. Proxy admin key |
@@ -717,14 +741,14 @@ Build in five phases and move on only when a phase's gate passes. Phase 0 is the
 
 **Phase 0 build order** (roughly one vibe-coding session per item)
 
-- [ ] Repo skeleton: monorepo layout, Makefile, `.env.example`, `AGENTS.md`
-- [ ] Contracts: WebSocket envelope and messages, pipeline schemas (`FactSheet`, `MatchPick`, `MomentPick`, `GuardrailReport`) with the strict-mode check; `make gen` for Python and TypeScript
+- [x] Repo skeleton: monorepo layout, Makefile, `.env.example`, `AGENTS.md` (imported by `CLAUDE.md`)
+- [x] Contracts: WebSocket envelope and messages, pipeline schemas (`FactSheet`, `MatchPick`, `MomentPick`, `FactDraft`, `Poem`, `GroundingVerdict`, `GuardrailReport`) with the strict-mode check; `make gen` for Python and TypeScript
 - [x] Scripted example runs in `contracts/ws/examples/`, validated by `make test`
 - [x] Angular UI against `MockWsService`: controls, stage panel, result card, settings drawer, prompt modal; component tests driven by the scripts
 - [x] The poem in contracts, mocks and UI: `headline`, stanzas of lines with fact ids and `facts` in `run.result`; `run.retell` and `retell_unavailable`; style families; the reveal, Show your working and retell tabs; a take per preset and a retell script; stage messages without the final score
 - [x] Go MCP server: SDK setup, `fixture` search, ESPN football adapter with recorded testdata, `find_matches` and `get_match_events`, on-disk cache, `cmd/schemagen`; try it in MCP Inspector over stdio
 - [x] Docker images (`mcp-server`, `frontend`) and `compose.yaml` with watch; Streamable HTTP transport with bearer token and `/healthz`
-- [ ] Backend: FastAPI WebSocket endpoint with runs in memory, MCP client over stdio, data stages, drama signals, mock LLM; protocol tests against the scripted runs; switch the UI from the mock to the real socket
+- [x] Backend: FastAPI WebSocket endpoint with runs in memory, MCP client over Streamable HTTP and stdio, data stages, drama signals, mock LLM; protocol tests against the scripted runs; switch the UI from the mock to the real socket; `backend` service in compose
 - [ ] LLM stages via the LiteLLM SDK (pick match with tool calling, pick moment, fact sheet, generate) with v1 prompts and three style presets (ballad, sonnet, limericks); BYO key from the settings drawer
 - [ ] Guardrails: score parser, NER name check, quote check, overlap, length and form, grounding judge with rubric returning per-line fact ids, repair loop
 - [ ] Golden set of 5 EPL weeks frozen as fixtures and hand-labelled; Inspect task and scorers; baseline eval report
@@ -742,39 +766,7 @@ Build in five phases and move on only when a phase's gate passes. Phase 0 is the
 
 ## Agent instructions and open questions
 
-Copy the block below into `AGENTS.md` at the repo root (and link it from `CLAUDE.md` or your agent's equivalent) so every coding session starts from the same rules.
-
-```markdown
-# AGENTS.md — Matchday Muse
-
-## Read first
-- docs/design.md (the design doc). Build only the current phase.
-- contracts/ is the source of truth for every cross-service shape.
-
-## Rules
-1. Contracts first: edit contracts/ws or contracts/pipeline (or the Go structs, for MCP tools), run `make gen`, then code. Never hand-edit generated files, including contracts/mcp/.
-2. Every external call (sports APIs, search, LLM) goes through an interface with a fixture/mock implementation.
-3. Tests must pass offline: `make test` uses SEARCH_PROVIDER=fixture and MOCK_LLM=true.
-4. No secrets in code, logs, test fixtures or the database. BYO API keys are never persisted or logged.
-5. Prompts live in backend/app/pipeline/prompts/*.vN.md; bump the version on any change.
-6. The pipeline is a fixed state machine; do not add autonomous loops. Only pick_match calls tools, max 4 per run.
-7. Every stage emits stage.update messages exactly as defined in contracts/ws/.
-8. Never display output that failed a guardrail.
-9. Go: standard library first, except HTTP: every outbound API call uses the go-resty client (`github.com/go-resty/resty/v2`). Table-driven tests, errors wrapped with context.
-10. Python: type hints everywhere, Pydantic v2, ruff + mypy clean.
-11. Angular: standalone components and signals; types imported from generated contracts.
-
-## Commands
-- make dev    # docker compose up --build --watch (make down to stop)
-- make test   # go test, pytest, frontend unit tests (offline)
-- make dev-mcp  # MCP Inspector on the Go server
-- make eval   # inspect eval on evals/golden (needs a real LLM key)
-- make gen    # regenerate types from contracts/
-- make lint
-
-## Definition of done for any task
-Tests added and passing offline, contracts unchanged or regenerated, README updated if behaviour changed.
-```
+The rules every coding session starts from live in [`AGENTS.md`](../AGENTS.md) at the repo root, which `CLAUDE.md` imports. Among them: if `REVIEW.md` is not empty, the agent stops and asks the user to review and clear it before starting new work.
 
 **Open questions**
 

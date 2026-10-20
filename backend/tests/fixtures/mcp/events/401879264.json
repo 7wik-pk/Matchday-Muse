@@ -1,0 +1,1367 @@
+{
+ "coverage": "full_events",
+ "events": [
+  {
+   "actors": [],
+   "clock": "0'",
+   "description": "First Half begins.",
+   "source_ref": "espn:401879264:play:53490496",
+   "type": "kickoff"
+  },
+  {
+   "actors": [
+    "Elliot Anderson",
+    "Florian Wirtz"
+   ],
+   "clock": "1'",
+   "description": "Florian Wirtz (Liverpool) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879264:play:53490558",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Elliot Anderson",
+    "Florian Wirtz"
+   ],
+   "clock": "1'",
+   "description": "Foul by Elliot Anderson (Manchester City).",
+   "source_ref": "espn:401879264:play:53490558",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Víctor Muñoz",
+    "Ronald Araújo"
+   ],
+   "clock": "2'",
+   "description": "Attempt blocked. Víctor Muñoz (Liverpool) right footed shot from the right side of the box is blocked. Assisted by Ronald Araujo.",
+   "source_ref": "espn:401879264:play:53490661",
+   "team": "Liverpool",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Florian Wirtz"
+   ],
+   "clock": "3'",
+   "description": "Offside, Liverpool. Milos Kerkez is caught offside.",
+   "source_ref": "espn:401879264:play:53490780",
+   "team": "Liverpool",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Víctor Muñoz",
+    "Elliot Anderson"
+   ],
+   "clock": "6'",
+   "description": "Elliot Anderson (Manchester City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879264:play:53490863",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Víctor Muñoz",
+    "Elliot Anderson"
+   ],
+   "clock": "6'",
+   "description": "Foul by Víctor Muñoz (Liverpool).",
+   "source_ref": "espn:401879264:play:53490863",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Iliman Ndiaye",
+    "Milos Kerkez"
+   ],
+   "clock": "6'",
+   "description": "Foul by Iliman Ndiaye (Manchester City).",
+   "source_ref": "espn:401879264:play:53491038",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Iliman Ndiaye",
+    "Milos Kerkez"
+   ],
+   "clock": "6'",
+   "description": "Milos Kerkez (Liverpool) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879264:play:53491038",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Marc Guéhi"
+   ],
+   "clock": "8'",
+   "description": "Handball by Marc Guéhi (Manchester City).",
+   "source_ref": "espn:401879264:play:53491077",
+   "team": "Manchester City",
+   "type": "handball"
+  },
+  {
+   "actors": [
+    "Ronald Araújo"
+   ],
+   "clock": "8'",
+   "description": "Ronald Araujo (Liverpool) is shown the yellow card.",
+   "source_ref": "espn:401879264:play:53491141",
+   "team": "Liverpool",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [],
+   "clock": "9'",
+   "description": "Corner, Liverpool. Conceded by Elliot Anderson.",
+   "source_ref": "espn:401879264:play:53491269",
+   "team": "Liverpool",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Florian Wirtz",
+    "Iliman Ndiaye"
+   ],
+   "clock": "11'",
+   "description": "Iliman Ndiaye (Manchester City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879264:play:53491358",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Florian Wirtz",
+    "Iliman Ndiaye"
+   ],
+   "clock": "11'",
+   "description": "Foul by Florian Wirtz (Liverpool).",
+   "source_ref": "espn:401879264:play:53491358",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Rúben Dias",
+    "Lewis Koumas"
+   ],
+   "clock": "12'",
+   "description": "Foul by Rúben Dias (Manchester City).",
+   "source_ref": "espn:401879264:play:53491368",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Rúben Dias",
+    "Lewis Koumas"
+   ],
+   "clock": "12'",
+   "description": "Lewis Koumas (Liverpool) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879264:play:53491368",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Antoine Semenyo"
+   ],
+   "clock": "16'",
+   "description": "Handball by Antoine Semenyo (Manchester City).",
+   "source_ref": "espn:401879264:play:53491925",
+   "team": "Manchester City",
+   "type": "handball"
+  },
+  {
+   "actors": [
+    "Víctor Muñoz"
+   ],
+   "clock": "17'",
+   "description": "Handball by Víctor Muñoz (Liverpool).",
+   "source_ref": "espn:401879264:play:53491933",
+   "team": "Liverpool",
+   "type": "handball"
+  },
+  {
+   "actors": [],
+   "clock": "19'",
+   "description": "Corner, Manchester City. Conceded by Jérémy Jacquet.",
+   "source_ref": "espn:401879264:play:53492000",
+   "team": "Manchester City",
+   "type": "corner"
+  },
+  {
+   "actors": [],
+   "clock": "20'",
+   "description": "Corner, Liverpool. Conceded by Matheus Nunes.",
+   "source_ref": "espn:401879264:play:53492110",
+   "team": "Liverpool",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Jérémy Jacquet"
+   ],
+   "clock": "21'",
+   "description": "Attempt saved. Jérémy Jacquet (Liverpool) right footed shot from very close range is saved in the centre of the goal by Gianluigi Donnarumma (Manchester City).",
+   "source_ref": "espn:401879264:play:53493126",
+   "team": "Liverpool",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Lewis Koumas",
+    "Elliot Anderson"
+   ],
+   "clock": "22'",
+   "description": "Elliot Anderson (Manchester City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879264:play:53492363",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lewis Koumas",
+    "Elliot Anderson"
+   ],
+   "clock": "22'",
+   "description": "Foul by Lewis Koumas (Liverpool).",
+   "source_ref": "espn:401879264:play:53492363",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Florian Wirtz",
+    "Erling Haaland"
+   ],
+   "clock": "25'",
+   "description": "Erling Haaland (Manchester City) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879264:play:53492649",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Florian Wirtz",
+    "Erling Haaland"
+   ],
+   "clock": "25'",
+   "description": "Foul by Florian Wirtz (Liverpool).",
+   "source_ref": "espn:401879264:play:53492649",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lewis Koumas",
+    "Marc Guéhi"
+   ],
+   "clock": "26'",
+   "description": "Marc Guéhi (Manchester City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879264:play:53492821",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lewis Koumas",
+    "Marc Guéhi"
+   ],
+   "clock": "26'",
+   "description": "Foul by Lewis Koumas (Liverpool).",
+   "source_ref": "espn:401879264:play:53492821",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Rúben Dias"
+   ],
+   "clock": "29'",
+   "description": "Offside, Manchester City. Enzo Fernández is caught offside.",
+   "source_ref": "espn:401879264:play:53493247",
+   "team": "Manchester City",
+   "type": "offside"
+  },
+  {
+   "actors": [],
+   "clock": "31'",
+   "description": "Corner, Liverpool. Conceded by Nico O'Reilly.",
+   "source_ref": "espn:401879264:play:53493332",
+   "team": "Liverpool",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Alexis Mac Allister",
+    "Florian Wirtz"
+   ],
+   "clock": "32'",
+   "description": "Attempt blocked. Alexis Mac Allister (Liverpool) header from the centre of the box is blocked. Assisted by Florian Wirtz with a cross.",
+   "source_ref": "espn:401879264:play:53494207",
+   "team": "Liverpool",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "32'",
+   "description": "Corner, Liverpool. Conceded by Erling Haaland.",
+   "source_ref": "espn:401879264:play:53493337",
+   "team": "Liverpool",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Virgil van Dijk",
+    "Elliot Anderson"
+   ],
+   "clock": "32'",
+   "description": "Foul by Virgil van Dijk (Liverpool).",
+   "source_ref": "espn:401879264:play:53493467",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Virgil van Dijk",
+    "Elliot Anderson"
+   ],
+   "clock": "32'",
+   "description": "Elliot Anderson (Manchester City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879264:play:53493467",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Víctor Muñoz",
+    "Ryan Gravenberch"
+   ],
+   "clock": "33'",
+   "description": "Attempt saved. Víctor Muñoz (Liverpool) left footed shot from outside the box is saved in the centre of the goal by Gianluigi Donnarumma (Manchester City). Assisted by Ryan Gravenberch.",
+   "source_ref": "espn:401879264:play:53493475",
+   "team": "Liverpool",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Lewis Koumas",
+    "Marc Guéhi"
+   ],
+   "clock": "33'",
+   "description": "Foul by Lewis Koumas (Liverpool).",
+   "source_ref": "espn:401879264:play:53493560",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lewis Koumas",
+    "Marc Guéhi"
+   ],
+   "clock": "33'",
+   "description": "Marc Guéhi (Manchester City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879264:play:53493560",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Enzo Fernández",
+    "Rayan Cherki"
+   ],
+   "clock": "35'",
+   "description": "Attempt saved. Enzo Fernández (Manchester City) right footed shot from outside the box is saved in the bottom right corner by Alisson Becker (Liverpool). Assisted by Rayan Cherki.",
+   "source_ref": "espn:401879264:play:53493617",
+   "team": "Manchester City",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Rúben Dias",
+    "Florian Wirtz"
+   ],
+   "clock": "35'",
+   "description": "Florian Wirtz (Liverpool) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879264:play:53493677",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Rúben Dias",
+    "Florian Wirtz"
+   ],
+   "clock": "35'",
+   "description": "Foul by Rúben Dias (Manchester City).",
+   "source_ref": "espn:401879264:play:53493677",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Iliman Ndiaye",
+    "Virgil van Dijk"
+   ],
+   "clock": "36'",
+   "description": "Virgil van Dijk (Liverpool) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879264:play:53493684",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Iliman Ndiaye",
+    "Virgil van Dijk"
+   ],
+   "clock": "36'",
+   "description": "Foul by Iliman Ndiaye (Manchester City).",
+   "source_ref": "espn:401879264:play:53493684",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Rayan Cherki",
+    "Elliot Anderson"
+   ],
+   "clock": "38'",
+   "description": "Attempt missed. Rayan Cherki (Manchester City) left footed shot from the right side of the box misses to the left. Assisted by Elliot Anderson.",
+   "source_ref": "espn:401879264:play:53493953",
+   "team": "Manchester City",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Alexis Mac Allister",
+    "Iliman Ndiaye"
+   ],
+   "clock": "39'",
+   "description": "Foul by Alexis Mac Allister (Liverpool).",
+   "source_ref": "espn:401879264:play:53494058",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Alexis Mac Allister",
+    "Iliman Ndiaye"
+   ],
+   "clock": "39'",
+   "description": "Iliman Ndiaye (Manchester City) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879264:play:53494058",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Antoine Semenyo",
+    "Marc Guéhi"
+   ],
+   "clock": "40'",
+   "description": "Attempt missed. Antoine Semenyo (Manchester City) right footed shot from outside the box is too high. Assisted by Marc Guéhi.",
+   "source_ref": "espn:401879264:play:53494069",
+   "team": "Manchester City",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Erling Haaland",
+    "Virgil van Dijk"
+   ],
+   "clock": "41'",
+   "description": "Virgil van Dijk (Liverpool) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879264:play:53494222",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Erling Haaland",
+    "Virgil van Dijk"
+   ],
+   "clock": "41'",
+   "description": "Foul by Erling Haaland (Manchester City).",
+   "source_ref": "espn:401879264:play:53494222",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ryan Gravenberch",
+    "Enzo Fernández"
+   ],
+   "clock": "43'",
+   "description": "Foul by Ryan Gravenberch (Liverpool).",
+   "source_ref": "espn:401879264:play:53494478",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ryan Gravenberch",
+    "Enzo Fernández"
+   ],
+   "clock": "43'",
+   "description": "Enzo Fernández (Manchester City) wins a free kick on the left wing.",
+   "source_ref": "espn:401879264:play:53494478",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "44'",
+   "description": "Corner, Manchester City. Conceded by Milos Kerkez.",
+   "source_ref": "espn:401879264:play:53494601",
+   "team": "Manchester City",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Florian Wirtz"
+   ],
+   "clock": "45+1'",
+   "description": "Attempt blocked. Florian Wirtz (Liverpool) right footed shot from outside the box is blocked.",
+   "source_ref": "espn:401879264:play:53494699",
+   "team": "Liverpool",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "45'",
+   "description": "Second Half begins Liverpool 0, Manchester City 0.",
+   "source_ref": "espn:401879264:play:53495703",
+   "type": "second_half"
+  },
+  {
+   "actors": [
+    "Ryan Gravenberch",
+    "Elliot Anderson"
+   ],
+   "clock": "47'",
+   "description": "Foul by Ryan Gravenberch (Liverpool).",
+   "source_ref": "espn:401879264:play:53495838",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ryan Gravenberch",
+    "Elliot Anderson"
+   ],
+   "clock": "47'",
+   "description": "Elliot Anderson (Manchester City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879264:play:53495838",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ryan Gravenberch"
+   ],
+   "clock": "47'",
+   "description": "Ryan Gravenberch (Liverpool) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879264:play:53495898",
+   "team": "Liverpool",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Lewis Koumas",
+    "Bradley Barcola"
+   ],
+   "clock": "48'",
+   "description": "Attempt saved. Lewis Koumas (Liverpool) left footed shot from the centre of the box is saved in the centre of the goal by Gianluigi Donnarumma (Manchester City). Assisted by Bradley Barcola.",
+   "source_ref": "espn:401879264:play:53495903",
+   "team": "Liverpool",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Bradley Barcola"
+   ],
+   "clock": "48'",
+   "description": "Attempt blocked. Bradley Barcola (Liverpool) right footed shot from the centre of the box is blocked.",
+   "source_ref": "espn:401879264:play:53495905",
+   "team": "Liverpool",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Ryan Gravenberch",
+    "Alexis Mac Allister"
+   ],
+   "clock": "49'",
+   "description": "Attempt saved. Ryan Gravenberch (Liverpool) right footed shot from outside the box is saved in the bottom left corner by Gianluigi Donnarumma (Manchester City). Assisted by Alexis Mac Allister.",
+   "source_ref": "espn:401879264:play:53495957",
+   "team": "Liverpool",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Alexis Mac Allister",
+    "Bradley Barcola"
+   ],
+   "clock": "49'",
+   "description": "Attempt missed. Alexis Mac Allister (Liverpool) right footed shot from outside the box is close, but misses to the right. Assisted by Bradley Barcola.",
+   "source_ref": "espn:401879264:play:53495961",
+   "team": "Liverpool",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [],
+   "clock": "51'",
+   "description": "Corner, Manchester City. Conceded by Víctor Muñoz.",
+   "source_ref": "espn:401879264:play:53496277",
+   "team": "Manchester City",
+   "type": "corner"
+  },
+  {
+   "actors": [],
+   "clock": "52'",
+   "description": "Corner, Manchester City. Conceded by Jérémy Jacquet.",
+   "source_ref": "espn:401879264:play:53496342",
+   "team": "Manchester City",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Florian Wirtz",
+    "Elliot Anderson"
+   ],
+   "clock": "53'",
+   "description": "Foul by Florian Wirtz (Liverpool).",
+   "source_ref": "espn:401879264:play:53496353",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Florian Wirtz",
+    "Elliot Anderson"
+   ],
+   "clock": "53'",
+   "description": "Elliot Anderson (Manchester City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879264:play:53496353",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Rúben Dias"
+   ],
+   "clock": "53'",
+   "description": "Offside, Manchester City. Antoine Semenyo is caught offside.",
+   "source_ref": "espn:401879264:play:53496354",
+   "team": "Manchester City",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Ronald Araújo"
+   ],
+   "clock": "54'",
+   "description": "Offside, Liverpool. Lewis Koumas is caught offside.",
+   "source_ref": "espn:401879264:play:53496399",
+   "team": "Liverpool",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Florian Wirtz",
+    "Ryan Gravenberch"
+   ],
+   "clock": "55'",
+   "description": "Attempt missed. Florian Wirtz (Liverpool) right footed shot from outside the box is close, but misses to the right. Assisted by Ryan Gravenberch following a fast break.",
+   "source_ref": "espn:401879264:play:53496640",
+   "team": "Liverpool",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Jérémy Doku",
+    "Iliman Ndiaye"
+   ],
+   "clock": "56'",
+   "description": "Substitution, Manchester City. Jérémy Doku replaces Iliman Ndiaye.",
+   "source_ref": "espn:401879264:play:53496799",
+   "team": "Manchester City",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Erling Haaland",
+    "Bradley Barcola"
+   ],
+   "clock": "57'",
+   "description": "Bradley Barcola (Liverpool) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879264:play:53496798",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Erling Haaland",
+    "Bradley Barcola"
+   ],
+   "clock": "57'",
+   "description": "Foul by Erling Haaland (Manchester City).",
+   "source_ref": "espn:401879264:play:53496798",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Nico O'Reilly",
+    "Víctor Muñoz"
+   ],
+   "clock": "58'",
+   "description": "Víctor Muñoz (Liverpool) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879264:play:53496894",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Nico O'Reilly",
+    "Víctor Muñoz"
+   ],
+   "clock": "58'",
+   "description": "Foul by Nico O'Reilly (Manchester City).",
+   "source_ref": "espn:401879264:play:53496894",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Nico O'Reilly"
+   ],
+   "clock": "58'",
+   "description": "Nico O'Reilly (Manchester City) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879264:play:53496895",
+   "team": "Manchester City",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Jérémy Doku",
+    "Florian Wirtz"
+   ],
+   "clock": "59'",
+   "description": "Florian Wirtz (Liverpool) wins a free kick on the right wing.",
+   "source_ref": "espn:401879264:play:53497001",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jérémy Doku",
+    "Florian Wirtz"
+   ],
+   "clock": "59'",
+   "description": "Foul by Jérémy Doku (Manchester City).",
+   "source_ref": "espn:401879264:play:53497001",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Alexis Mac Allister",
+    "Florian Wirtz"
+   ],
+   "clock": "59'",
+   "description": "Attempt missed. Alexis Mac Allister (Liverpool) right footed shot from the centre of the box is close, but misses to the right. Assisted by Florian Wirtz with a cross following a set piece situation.",
+   "source_ref": "espn:401879264:play:53497003",
+   "team": "Liverpool",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Ryan Gravenberch",
+    "Elliot Anderson"
+   ],
+   "clock": "60'",
+   "description": "Foul by Ryan Gravenberch (Liverpool).",
+   "source_ref": "espn:401879264:play:53497103",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ryan Gravenberch",
+    "Elliot Anderson"
+   ],
+   "clock": "60'",
+   "description": "Elliot Anderson (Manchester City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879264:play:53497103",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Erling Haaland",
+    "Antoine Semenyo"
+   ],
+   "clock": "60'",
+   "description": "Attempt missed. Erling Haaland (Manchester City) right footed shot from the right side of the box misses to the left. Assisted by Antoine Semenyo.",
+   "source_ref": "espn:401879264:play:53497108",
+   "team": "Manchester City",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Ryan Gravenberch",
+    "Alexis Mac Allister"
+   ],
+   "clock": "62'",
+   "description": "Attempt saved. Ryan Gravenberch (Liverpool) right footed shot from outside the box is saved in the centre of the goal by Gianluigi Donnarumma (Manchester City). Assisted by Alexis Mac Allister.",
+   "source_ref": "espn:401879264:play:53497198",
+   "team": "Liverpool",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Ryan Gravenberch",
+    "Jérémy Doku"
+   ],
+   "clock": "62'",
+   "description": "Foul by Ryan Gravenberch (Liverpool).",
+   "source_ref": "espn:401879264:play:53497319",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ryan Gravenberch",
+    "Jérémy Doku"
+   ],
+   "clock": "62'",
+   "description": "Jérémy Doku (Manchester City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879264:play:53497319",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ryan Gravenberch"
+   ],
+   "clock": "62'",
+   "description": "Second yellow card to Ryan Gravenberch (Liverpool) for a bad foul.",
+   "source_ref": "espn:401879264:play:53497320",
+   "team": "Liverpool",
+   "type": "red_card"
+  },
+  {
+   "actors": [
+    "Jérémy Doku",
+    "Enzo Fernández"
+   ],
+   "clock": "65'",
+   "description": "Attempt blocked. Jérémy Doku (Manchester City) right footed shot from the left side of the box is blocked. Assisted by Enzo Fernández.",
+   "source_ref": "espn:401879264:play:53497467",
+   "team": "Manchester City",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Erling Haaland"
+   ],
+   "clock": "65'",
+   "description": "Goal! Liverpool 0, Manchester City 1. Erling Haaland (Manchester City) left footed shot from the centre of the box to the centre of the goal.",
+   "score_after": "0-1",
+   "source_ref": "espn:401879264:play:53497468",
+   "team": "Manchester City",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Trey Nyoni",
+    "Florian Wirtz"
+   ],
+   "clock": "66'",
+   "description": "Substitution, Liverpool. Trey Nyoni replaces Florian Wirtz.",
+   "source_ref": "espn:401879264:play:53497584",
+   "team": "Liverpool",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Josko Gvardiol",
+    "Nico O'Reilly"
+   ],
+   "clock": "66'",
+   "description": "Substitution, Manchester City. Josko Gvardiol replaces Nico O'Reilly.",
+   "source_ref": "espn:401879264:play:53497585",
+   "team": "Manchester City",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Josko Gvardiol",
+    "Ronald Araújo"
+   ],
+   "clock": "67'",
+   "description": "Ronald Araujo (Liverpool) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879264:play:53497675",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Josko Gvardiol",
+    "Ronald Araújo"
+   ],
+   "clock": "67'",
+   "description": "Foul by Josko Gvardiol (Manchester City).",
+   "source_ref": "espn:401879264:play:53497675",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jérémy Doku",
+    "Elliot Anderson"
+   ],
+   "clock": "68'",
+   "description": "Goal! Liverpool 0, Manchester City 2. Jérémy Doku (Manchester City) right footed shot from the left side of the box to the top right corner. Assisted by Elliot Anderson.",
+   "score_after": "0-2",
+   "source_ref": "espn:401879264:play:53497710",
+   "team": "Manchester City",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Rayan Cherki",
+    "Jérémy Doku"
+   ],
+   "clock": "70'",
+   "description": "Attempt blocked. Rayan Cherki (Manchester City) right footed shot from outside the box is blocked. Assisted by Jérémy Doku.",
+   "source_ref": "espn:401879264:play:53497846",
+   "team": "Manchester City",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "71'",
+   "description": "Corner, Manchester City. Conceded by Víctor Muñoz.",
+   "source_ref": "espn:401879264:play:53497950",
+   "team": "Manchester City",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Elliot Anderson"
+   ],
+   "clock": "72'",
+   "description": "Attempt missed. Elliot Anderson (Manchester City) left footed shot from outside the box is close, but misses to the right following a corner.",
+   "source_ref": "espn:401879264:play:53497954",
+   "team": "Manchester City",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [],
+   "clock": "73'",
+   "description": "Corner, Liverpool. Conceded by Elliot Anderson.",
+   "source_ref": "espn:401879264:play:53498071",
+   "team": "Liverpool",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Josko Gvardiol",
+    "Jérémy Doku"
+   ],
+   "clock": "74'",
+   "description": "Attempt missed. Josko Gvardiol (Manchester City) left footed shot from the left side of the box is too high. Assisted by Jérémy Doku.",
+   "source_ref": "espn:401879264:play:53498116",
+   "team": "Manchester City",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Jeremie Frimpong",
+    "Ronald Araújo"
+   ],
+   "clock": "75'",
+   "description": "Substitution, Liverpool. Jeremie Frimpong replaces Ronald Araujo.",
+   "source_ref": "espn:401879264:play:53498206",
+   "team": "Liverpool",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Rio Ngumoha",
+    "Lewis Koumas"
+   ],
+   "clock": "75'",
+   "description": "Substitution, Liverpool. Rio Ngumoha replaces Lewis Koumas.",
+   "source_ref": "espn:401879264:play:53498207",
+   "team": "Liverpool",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Antoine Semenyo",
+    "Milos Kerkez"
+   ],
+   "clock": "76'",
+   "description": "Milos Kerkez (Liverpool) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879264:play:53498288",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Antoine Semenyo",
+    "Milos Kerkez"
+   ],
+   "clock": "76'",
+   "description": "Foul by Antoine Semenyo (Manchester City).",
+   "source_ref": "espn:401879264:play:53498288",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Rayan Cherki",
+    "Josko Gvardiol"
+   ],
+   "clock": "78'",
+   "description": "Goal! Liverpool 0, Manchester City 3. Rayan Cherki (Manchester City) right footed shot from very close range to the centre of the goal. Assisted by Josko Gvardiol with a headed pass.",
+   "score_after": "0-3",
+   "source_ref": "espn:401879264:play:53498421",
+   "team": "Manchester City",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Allan Elias",
+    "Erling Haaland"
+   ],
+   "clock": "80'",
+   "description": "Substitution, Manchester City. Allan replaces Erling Haaland.",
+   "source_ref": "espn:401879264:play:53498536",
+   "team": "Manchester City",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Ayyoub Bouaddi",
+    "Enzo Fernández"
+   ],
+   "clock": "80'",
+   "description": "Substitution, Manchester City. Ayyoub Bouaddi replaces Enzo Fernández.",
+   "source_ref": "espn:401879264:play:53498537",
+   "team": "Manchester City",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Jérémy Jacquet",
+    "Jérémy Doku"
+   ],
+   "clock": "84'",
+   "description": "Foul by Jérémy Jacquet (Liverpool).",
+   "source_ref": "espn:401879264:play:53498828",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jérémy Jacquet",
+    "Jérémy Doku"
+   ],
+   "clock": "84'",
+   "description": "Jérémy Doku (Manchester City) wins a free kick on the left wing.",
+   "source_ref": "espn:401879264:play:53498828",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Trey Nyoni",
+    "Jérémy Doku"
+   ],
+   "clock": "85'",
+   "description": "Foul by Trey Nyoni (Liverpool).",
+   "source_ref": "espn:401879264:play:53498919",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Trey Nyoni",
+    "Jérémy Doku"
+   ],
+   "clock": "85'",
+   "description": "Jérémy Doku (Manchester City) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879264:play:53498919",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ayyoub Bouaddi",
+    "Víctor Muñoz"
+   ],
+   "clock": "86'",
+   "description": "Víctor Muñoz (Liverpool) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879264:play:53499150",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ayyoub Bouaddi",
+    "Víctor Muñoz"
+   ],
+   "clock": "86'",
+   "description": "Foul by Ayyoub Bouaddi (Manchester City).",
+   "source_ref": "espn:401879264:play:53499150",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ayyoub Bouaddi"
+   ],
+   "clock": "86'",
+   "description": "Ayyoub Bouaddi (Manchester City) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879264:play:53499151",
+   "team": "Manchester City",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Alexis Mac Allister"
+   ],
+   "clock": "87'",
+   "description": "Attempt saved. Alexis Mac Allister (Liverpool) right footed shot from outside the box is saved in the top left corner by Gianluigi Donnarumma (Manchester City).",
+   "source_ref": "espn:401879264:play:53499193",
+   "team": "Liverpool",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Joe Gomez",
+    "Jérémy Jacquet"
+   ],
+   "clock": "88'",
+   "description": "Substitution, Liverpool. Joe Gomez replaces Jérémy Jacquet.",
+   "source_ref": "espn:401879264:play:53499340",
+   "team": "Liverpool",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Federico Chiesa",
+    "Bradley Barcola"
+   ],
+   "clock": "88'",
+   "description": "Substitution, Liverpool. Federico Chiesa replaces Bradley Barcola.",
+   "source_ref": "espn:401879264:play:53499341",
+   "team": "Liverpool",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Rayan Cherki",
+    "Ayyoub Bouaddi"
+   ],
+   "clock": "89'",
+   "description": "Attempt blocked. Rayan Cherki (Manchester City) left footed shot from outside the box is blocked. Assisted by Ayyoub Bouaddi.",
+   "source_ref": "espn:401879264:play:53499313",
+   "team": "Manchester City",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Ayyoub Bouaddi"
+   ],
+   "clock": "89'",
+   "description": "Attempt missed. Ayyoub Bouaddi (Manchester City) right footed shot from outside the box is high and wide to the right.",
+   "source_ref": "espn:401879264:play:53499318",
+   "team": "Manchester City",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Alexis Mac Allister",
+    "Elliot Anderson"
+   ],
+   "clock": "89'",
+   "description": "Foul by Alexis Mac Allister (Liverpool).",
+   "source_ref": "espn:401879264:play:53499406",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Alexis Mac Allister",
+    "Elliot Anderson"
+   ],
+   "clock": "89'",
+   "description": "Elliot Anderson (Manchester City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879264:play:53499406",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Virgil van Dijk",
+    "Rayan Cherki"
+   ],
+   "clock": "90+1'",
+   "description": "Foul by Virgil van Dijk (Liverpool).",
+   "source_ref": "espn:401879264:play:53499510",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Virgil van Dijk",
+    "Rayan Cherki"
+   ],
+   "clock": "90+1'",
+   "description": "Rayan Cherki (Manchester City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879264:play:53499510",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Virgil van Dijk"
+   ],
+   "clock": "90+1'",
+   "description": "Virgil van Dijk (Liverpool) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879264:play:53499581",
+   "team": "Liverpool",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Alexis Mac Allister",
+    "Elliot Anderson"
+   ],
+   "clock": "90+2'",
+   "description": "Foul by Alexis Mac Allister (Liverpool).",
+   "source_ref": "espn:401879264:play:53499587",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Alexis Mac Allister",
+    "Elliot Anderson"
+   ],
+   "clock": "90+2'",
+   "description": "Elliot Anderson (Manchester City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879264:play:53499587",
+   "team": "Liverpool",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Rayan Cherki",
+    "Ayyoub Bouaddi"
+   ],
+   "clock": "90+3'",
+   "description": "Attempt blocked. Rayan Cherki (Manchester City) left footed shot from the right side of the box is blocked. Assisted by Ayyoub Bouaddi.",
+   "source_ref": "espn:401879264:play:53499599",
+   "team": "Manchester City",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "90+3'",
+   "description": "Corner, Manchester City. Conceded by Milos Kerkez.",
+   "source_ref": "espn:401879264:play:53499601",
+   "team": "Manchester City",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Elliot Anderson",
+    "Rayan Cherki"
+   ],
+   "clock": "90+4'",
+   "description": "Attempt missed. Elliot Anderson (Manchester City) right footed shot from outside the box misses to the right. Assisted by Rayan Cherki following a corner.",
+   "source_ref": "espn:401879264:play:53499634",
+   "team": "Manchester City",
+   "type": "shot_off_target"
+  }
+ ],
+ "match": {
+  "end_estimate": "2026-10-11T17:30:00Z",
+  "final_result": "Liverpool 0–3 Manchester City",
+  "id": "401879264",
+  "kickoff": "2026-10-11T15:30:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "LIV",
+    "name": "Liverpool",
+    "role": "home",
+    "score": "0",
+    "short_name": "Liverpool",
+    "winner": false
+   },
+   {
+    "abbreviation": "MNC",
+    "name": "Manchester City",
+    "role": "away",
+    "score": "3",
+    "short_name": "Man City",
+    "winner": true
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Uncertainty may surround Manchester City's future but nothing changed for them on the pitch as the Premier League leaders successfully came through their first public examination since their guilty verdicts.",
+  "title": "Liverpool v Manchester City",
+  "venue": "Anfield"
+ },
+ "sources": [
+  {
+   "publisher": "ESPN",
+   "title": "Liverpool v Manchester City: match events",
+   "url": "https://www.espn.com/soccer/match/_/gameId/401879264"
+  },
+  {
+   "published_at": "2026-10-07T22:15:26Z",
+   "publisher": "ESPN",
+   "title": "Manchester City beat Liverpool with ease in first match after guilty verdicts",
+   "url": "https://www.espn.com/soccer/report/_/gameId/401879264"
+  }
+ ],
+ "team_stats": [
+  {
+   "corners": 5,
+   "fouls": 19,
+   "possession_pct": 35.4,
+   "red_cards": 1,
+   "saves": 1,
+   "shots": 13,
+   "shots_on_target": 6,
+   "team": "Liverpool",
+   "yellow_cards": 2
+  },
+  {
+   "corners": 6,
+   "fouls": 14,
+   "possession_pct": 64.6,
+   "red_cards": 0,
+   "saves": 6,
+   "shots": 15,
+   "shots_on_target": 4,
+   "team": "Manchester City",
+   "yellow_cards": 2
+  }
+ ]
+}

@@ -1,7 +1,7 @@
 # The local stack, for Docker or Podman. `make dev` runs `compose up --build --watch`.
-# Source directories are mounted read-only: the frontend dev server
-# hot-reloads on its own, and watch restarts the MCP server, which recompiles
-# on start. (Watch's sync and rebuild actions misbehave on Podman, so neither
+# Source directories are mounted read-only: the frontend dev server and
+# uvicorn reload on their own, and watch restarts the MCP server, which
+# recompiles on start. (Watch's sync and rebuild actions misbehave on Podman, so neither
 # is used.) After changing dependencies, rerun `make dev`. `make images`
 # builds the deployable images.
 name: matchday-muse
@@ -39,12 +39,33 @@ services:
             - testdata/espn/
             - "**/*_test.go"
 
+  backend:
+    build:
+      context: ./backend
+      target: dev
+    image: matchday-muse/backend:dev
+    environment:
+      MCP_SERVER_URL: http://mcp-server:8081/mcp
+      MCP_AUTH_TOKEN: ${MCP_AUTH_TOKEN:?set MCP_AUTH_TOKEN in .env; make .env creates one}
+      MOCK_LLM: ${MOCK_LLM:-true}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+    volumes:
+      - ./backend/app:/app/app:ro
+    ports:
+      - "127.0.0.1:8000:8000"
+    depends_on:
+      mcp-server:
+        condition: service_healthy
+
   frontend:
     build:
       context: .
       dockerfile: frontend/Dockerfile
       target: dev
     image: matchday-muse/frontend:dev
+    environment:
+      # ng serve proxies /ws here.
+      BACKEND_URL: http://backend:8000
     volumes:
       - ./frontend/src:/app/frontend/src:ro
       - ./contracts/ws:/app/contracts/ws:ro

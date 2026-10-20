@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FactSheet",
+  "description": "Everything generate may draw on, and everything the guardrails check against. Kept with the run so it can be retold.",
+  "type": "object",
+  "required": [
+    "match_id",
+    "competition",
+    "teams_or_participants",
+    "final_result",
+    "roster",
+    "moment",
+    "facts",
+    "sources"
+  ],
+  "properties": {
+    "match_id": {
+      "type": "string"
+    },
+    "competition": {
+      "type": "string"
+    },
+    "teams_or_participants": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "final_result": {
+      "type": "string",
+      "description": "Canonical, from MCP data only, such as Brentford 1–2 Liverpool."
+    },
+    "roster": {
+      "type": "array",
+      "items": {
+        "$ref": "person.json"
+      },
+      "description": "Every person allowed in the output."
+    },
+    "moment": {
+      "$ref": "moment-pick.json"
+    },
+    "facts": {
+      "type": "array",
+      "items": {
+        "$ref": "fact.json"
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "$ref": "source-link.json"
+      }
+    }
+  },
+  "additionalProperties": false
+}

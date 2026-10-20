@@ -1,6 +1,8 @@
-.PHONY: test test-contracts test-mcp test-frontend gen dev down logs images dev-mcp record-espn diagrams
+.PHONY: test test-contracts test-mcp test-backend test-frontend gen freeze-mcp dev down logs images dev-mcp record-espn diagrams
 
-test: test-contracts test-mcp test-frontend
+test: test-contracts test-mcp test-backend test-frontend
+
+UV ?= uv
 
 # Podman when it is installed, otherwise Docker; override with COMPOSE=...
 COMPOSE ?= $(if $(shell command -v podman 2>/dev/null),podman compose,docker compose)
@@ -24,18 +26,30 @@ test-mcp:
 	cd mcp-server && test -z "$$(gofmt -l .)" || { gofmt -l .; echo "gofmt needed"; exit 1; }
 	cd mcp-server && go vet ./... && go test ./... && go run ./cmd/schemagen -check
 
+# FastAPI backend: formatting, lint, strict types, tests (offline: MCP
+# responses replayed from tests/fixtures/, plus the Go server over stdio for
+# the tools that need no network), and a check that app/contracts/ is fresh.
+test-backend:
+	cd backend && $(UV) sync --frozen --quiet
+	cd backend && $(UV) run ruff format --check --quiet . && $(UV) run ruff check --quiet .
+	cd backend && $(UV) run mypy app tests scripts
+	cd backend && $(UV) run pytest -q
+	cd backend && $(UV) run python scripts/gen_contracts.py --check
+
 # Angular unit and component tests, driven by the scripted runs.
 test-frontend: frontend/node_modules
 	cd frontend && npx ng test --watch=false
 
-# Exports the MCP tool schemas to contracts/mcp/, then regenerates types from
-# contracts/. Python joins when the backend exists.
+# Exports the MCP tool schemas to contracts/mcp/, then regenerates the
+# TypeScript and Python types from contracts/.
 gen: contracts/node_modules
 	cd mcp-server && go run ./cmd/schemagen
 	cd contracts && npm run gen --silent
+	cd backend && $(UV) run python scripts/gen_contracts.py
 
-# The stack in compose: the UI at http://localhost:4200 (scripted runs,
-# ?mock=<script>&speed=<n>) and the MCP server at http://localhost:8081/mcp.
+# The stack in compose: the UI at http://localhost:4200 on the real backend
+# (?mock=<script>&speed=<n> replays a scripted run instead), the backend at
+# localhost:8000 and the MCP server at http://localhost:8081/mcp.
 # Source changes sync or rebuild while it runs; Ctrl-C stops it.
 dev: .env
 	$(COMPOSE) up --build --watch
@@ -51,6 +65,7 @@ logs:
 ENGINE ?= $(firstword $(COMPOSE))
 images:
 	$(ENGINE) build -t matchday-muse/mcp-server:latest mcp-server
+	$(ENGINE) build -t matchday-muse/backend:latest backend
 	$(ENGINE) build -t matchday-muse/frontend-build:latest --target build -f frontend/Dockerfile .
 
 # A local .env with a fresh MCP token. Never overwrites an existing one.
@@ -62,6 +77,12 @@ images:
 dev-mcp:
 	cd mcp-server && go build -o bin/mcp-server ./cmd/server
 	npx -y @modelcontextprotocol/inspector@2.9.0 mcp-server/bin/mcp-server
+
+# Re-records the backend's MCP fixtures through the real client and Go server
+# (needs the network for ESPN).
+freeze-mcp:
+	cd mcp-server && go build -o bin/mcp-server ./cmd/server
+	cd backend && $(UV) run python scripts/freeze_mcp.py ../mcp-server/bin/mcp-server
 
 # Re-records ESPN responses into mcp-server/testdata/ (needs the network).
 # The tests expect the week of Mon 12 Oct 2026.

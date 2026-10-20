@@ -1,7 +1,7 @@
 import { AppConfig } from '../app/config';
 
 export const environment: AppConfig = {
-  // No backend yet, so the app replays the scripted runs. Once the backend
-  // exists, set this to the /ws URL; ?mock=<script> still forces the mock.
-  wsUrl: null,
+  // The backend's socket on this origin; ng serve proxies /ws to it
+  // (proxy.conf.mjs). ?mock=<script> still replays a scripted run instead.
+  wsUrl: `${location.protocol === 'https:' ? 'wss:' : 'ws:'}//${location.host}/ws`,
 };

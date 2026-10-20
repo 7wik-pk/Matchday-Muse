@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MomentPick",
+  "description": "LLM output of pick_moment: the moment the poem centres on, and the beats it follows.",
+  "type": "object",
+  "required": [
+    "title",
+    "event_refs",
+    "beats",
+    "why_it_matters"
+  ],
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "One line naming the moment, such as: The comeback, from the red card to the winner."
+    },
+    "event_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "source_refs of the events that make up the moment itself."
+    },
+    "beats": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "2 to 5 event source_refs in match order, including the moment."
+    },
+    "why_it_matters": {
+      "type": "string",
+      "description": "One or two sentences."
+    }
+  },
+  "additionalProperties": false
+}

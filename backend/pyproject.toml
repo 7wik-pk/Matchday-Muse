@@ -1,0 +1,54 @@
+[project]
+name = "matchday-muse-backend"
+version = "0.1.0"
+description = "FastAPI WebSocket backend and pipeline for Matchday Muse."
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi==0.151.0",
+    "mcp==2.3.0",
+    "pydantic==2.14.1",
+    "pydantic-settings==2.16.1",
+    "uvicorn[standard]==0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "datamodel-code-generator==0.86.0",
+    "httpx==0.28.1",
+    "jsonschema==4.26.0",
+    "mypy==2.4.0",
+    "pytest==9.1.1",
+    "ruff==0.17.1",
+    "types-jsonschema==4.26.0.20261006",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py314"
+extend-exclude = ["app/contracts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+# En dashes are deliberate: final results read "Brentford 1–2 Liverpool".
+ignore = ["RUF001", "RUF002", "RUF003"]
+
+[tool.mypy]
+python_version = "3.14"
+strict = true
+plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+module = "app.contracts.*"
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_untyped_defs = false
+disallow_incomplete_defs = false

@@ -1,0 +1,1321 @@
+{
+ "coverage": "full_events",
+ "events": [
+  {
+   "actors": [],
+   "clock": "0'",
+   "description": "First Half begins.",
+   "source_ref": "espn:401879257:play:53961870",
+   "type": "kickoff"
+  },
+  {
+   "actors": [
+    "Brandon Thomas-Asante",
+    "Sidiki Cherif"
+   ],
+   "clock": "1'",
+   "description": "Attempt missed. Brandon Thomas-Asante (Coventry City) right footed shot from a difficult angle on the right misses to the left. Assisted by Sidiki Cherif with a headed pass.",
+   "source_ref": "espn:401879257:play:53961926",
+   "team": "Coventry City",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Jan Paul van Hecke",
+    "Brandon Thomas-Asante"
+   ],
+   "clock": "4'",
+   "description": "Brandon Thomas-Asante (Coventry City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879257:play:53962111",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jan Paul van Hecke",
+    "Brandon Thomas-Asante"
+   ],
+   "clock": "4'",
+   "description": "Foul by Jan Paul van Hecke (Tottenham Hotspur).",
+   "source_ref": "espn:401879257:play:53962111",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "James Maddison"
+   ],
+   "clock": "6'",
+   "description": "Offside, Tottenham Hotspur. Dominic Solanke is caught offside.",
+   "source_ref": "espn:401879257:play:53962144",
+   "team": "Tottenham Hotspur",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Sandro Tonali",
+    "Jack Rudoni"
+   ],
+   "clock": "7'",
+   "description": "Jack Rudoni (Coventry City) wins a free kick on the left wing.",
+   "source_ref": "espn:401879257:play:53962197",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Sandro Tonali",
+    "Jack Rudoni"
+   ],
+   "clock": "7'",
+   "description": "Foul by Sandro Tonali (Tottenham Hotspur).",
+   "source_ref": "espn:401879257:play:53962197",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Brandon Thomas-Asante"
+   ],
+   "clock": "8'",
+   "description": "Attempt blocked. Brandon Thomas-Asante (Coventry City) right footed shot from the centre of the box is blocked.",
+   "source_ref": "espn:401879257:play:53962227",
+   "team": "Coventry City",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Tatsuhiro Sakamoto",
+    "Milan van Ewijk"
+   ],
+   "clock": "10'",
+   "description": "Attempt blocked. Tatsuhiro Sakamoto (Coventry City) left footed shot from the centre of the box is blocked. Assisted by Milan van Ewijk.",
+   "source_ref": "espn:401879257:play:53962306",
+   "team": "Coventry City",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "10'",
+   "description": "Corner, Coventry City. Conceded by Jan Paul van Hecke.",
+   "source_ref": "espn:401879257:play:53962308",
+   "team": "Coventry City",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Tatsuhiro Sakamoto",
+    "Antonín Kinsky"
+   ],
+   "clock": "11'",
+   "description": "Foul by Tatsuhiro Sakamoto (Coventry City).",
+   "source_ref": "espn:401879257:play:53962331",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Tatsuhiro Sakamoto",
+    "Antonín Kinsky"
+   ],
+   "clock": "11'",
+   "description": "Antonín Kinsky (Tottenham Hotspur) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879257:play:53962331",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Dominic Solanke"
+   ],
+   "clock": "12'",
+   "description": "Attempt blocked. Dominic Solanke (Tottenham Hotspur) right footed shot from the centre of the box is blocked.",
+   "source_ref": "espn:401879257:play:53962353",
+   "team": "Tottenham Hotspur",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "James Maddison",
+    "Mohammed Kudus"
+   ],
+   "clock": "14'",
+   "description": "Goal! Tottenham Hotspur 1, Coventry City 0. James Maddison (Tottenham Hotspur) right footed shot from outside the box to the top left corner. Assisted by Mohammed Kudus.",
+   "score_after": "1-0",
+   "source_ref": "espn:401879257:play:53962522",
+   "team": "Tottenham Hotspur",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Archie Gray",
+    "James Maddison"
+   ],
+   "clock": "16'",
+   "description": "Attempt blocked. Archie Gray (Tottenham Hotspur) left footed shot from the centre of the box is blocked. Assisted by James Maddison.",
+   "source_ref": "espn:401879257:play:53962638",
+   "team": "Tottenham Hotspur",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Archie Gray"
+   ],
+   "clock": "17'",
+   "description": "Offside, Tottenham Hotspur. Mohammed Kudus is caught offside.",
+   "source_ref": "espn:401879257:play:53962687",
+   "team": "Tottenham Hotspur",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Micky van de Ven"
+   ],
+   "clock": "18'",
+   "description": "Offside, Tottenham Hotspur. Andy Robertson is caught offside.",
+   "source_ref": "espn:401879257:play:53962771",
+   "team": "Tottenham Hotspur",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Caleb Yirenkyi",
+    "James Maddison"
+   ],
+   "clock": "19'",
+   "description": "Foul by Caleb Yirenkyi (Coventry City).",
+   "source_ref": "espn:401879257:play:53962802",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Caleb Yirenkyi",
+    "James Maddison"
+   ],
+   "clock": "19'",
+   "description": "James Maddison (Tottenham Hotspur) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879257:play:53962802",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Caleb Yirenkyi",
+    "Archie Gray"
+   ],
+   "clock": "20'",
+   "description": "Foul by Caleb Yirenkyi (Coventry City).",
+   "source_ref": "espn:401879257:play:53962823",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Caleb Yirenkyi",
+    "Archie Gray"
+   ],
+   "clock": "20'",
+   "description": "Archie Gray (Tottenham Hotspur) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879257:play:53962823",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Caleb Yirenkyi"
+   ],
+   "clock": "20'",
+   "description": "Caleb Yirenkyi (Coventry City) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879257:play:53962840",
+   "team": "Coventry City",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Dominic Solanke",
+    "Caleb Yirenkyi"
+   ],
+   "clock": "22'",
+   "description": "Brandon Thomas-Asante (Coventry City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879257:play:53963006",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Dominic Solanke",
+    "Caleb Yirenkyi"
+   ],
+   "clock": "22'",
+   "description": "Foul by Dominic Solanke (Tottenham Hotspur).",
+   "source_ref": "espn:401879257:play:53963006",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Dominic Solanke"
+   ],
+   "clock": "22'",
+   "description": "Dominic Solanke (Tottenham Hotspur) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879257:play:53963007",
+   "team": "Tottenham Hotspur",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Micky van de Ven",
+    "Sidiki Cherif"
+   ],
+   "clock": "24'",
+   "description": "Sidiki Cherif (Coventry City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879257:play:53963118",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Micky van de Ven",
+    "Sidiki Cherif"
+   ],
+   "clock": "24'",
+   "description": "Foul by Micky van de Ven (Tottenham Hotspur).",
+   "source_ref": "espn:401879257:play:53963118",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Tatsuhiro Sakamoto"
+   ],
+   "clock": "28'",
+   "description": "Tatsuhiro Sakamoto (Coventry City) wins a free kick on the right wing.",
+   "source_ref": "espn:401879257:play:53963293",
+   "team": "Coventry City",
+   "type": "other"
+  },
+  {
+   "actors": [
+    "Micky van de Ven",
+    "Tatsuhiro Sakamoto"
+   ],
+   "clock": "28'",
+   "description": "Foul by Micky van de Ven (Tottenham Hotspur).",
+   "source_ref": "espn:401879257:play:53963330",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "30'",
+   "description": "Corner, Tottenham Hotspur. Conceded by Caleb Yirenkyi.",
+   "source_ref": "espn:401879257:play:53963426",
+   "team": "Tottenham Hotspur",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Matt Grimes",
+    "James Maddison"
+   ],
+   "clock": "34'",
+   "description": "Foul by Matt Grimes (Coventry City).",
+   "source_ref": "espn:401879257:play:53963618",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matt Grimes",
+    "James Maddison"
+   ],
+   "clock": "34'",
+   "description": "James Maddison (Tottenham Hotspur) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879257:play:53963618",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jack Rudoni",
+    "Jan Paul van Hecke"
+   ],
+   "clock": "35'",
+   "description": "Dangerous play by Jack Rudoni (Coventry City).",
+   "source_ref": "espn:401879257:play:53963725",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jack Rudoni",
+    "Jan Paul van Hecke"
+   ],
+   "clock": "35'",
+   "description": "Jan Paul van Hecke (Tottenham Hotspur) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879257:play:53963725",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Sidiki Cherif"
+   ],
+   "clock": "36'",
+   "description": "Attempt blocked. Sidiki Cherif (Coventry City) right footed shot from outside the box is blocked.",
+   "source_ref": "espn:401879257:play:53963736",
+   "team": "Coventry City",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "36'",
+   "description": "Corner, Coventry City. Conceded by Jan Paul van Hecke.",
+   "source_ref": "espn:401879257:play:53963738",
+   "team": "Coventry City",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "James Maddison",
+    "Archie Gray"
+   ],
+   "clock": "39'",
+   "description": "Attempt blocked. James Maddison (Tottenham Hotspur) left footed shot from the right side of the box is blocked. Assisted by Archie Gray.",
+   "source_ref": "espn:401879257:play:53963917",
+   "team": "Tottenham Hotspur",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Dominic Solanke",
+    "Sandro Tonali"
+   ],
+   "clock": "39'",
+   "description": "Attempt missed. Dominic Solanke (Tottenham Hotspur) left footed shot from the centre of the box is too high. Assisted by Sandro Tonali with a through ball.",
+   "source_ref": "espn:401879257:play:53963926",
+   "team": "Tottenham Hotspur",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Sidiki Cherif",
+    "Sandro Tonali"
+   ],
+   "clock": "41'",
+   "description": "Foul by Sidiki Cherif (Coventry City).",
+   "source_ref": "espn:401879257:play:53963939",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Sidiki Cherif",
+    "Sandro Tonali"
+   ],
+   "clock": "41'",
+   "description": "Sandro Tonali (Tottenham Hotspur) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879257:play:53963939",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "James Maddison"
+   ],
+   "clock": "41'",
+   "description": "Offside, Tottenham Hotspur. Mohammed Kudus is caught offside.",
+   "source_ref": "espn:401879257:play:53964006",
+   "team": "Tottenham Hotspur",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Brandon Thomas-Asante",
+    "James Maddison"
+   ],
+   "clock": "41'",
+   "description": "Foul by Brandon Thomas-Asante (Coventry City).",
+   "source_ref": "espn:401879257:play:53964009",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Brandon Thomas-Asante",
+    "James Maddison"
+   ],
+   "clock": "41'",
+   "description": "James Maddison (Tottenham Hotspur) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879257:play:53964009",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "44'",
+   "description": "Corner, Coventry City. Conceded by Micky van de Ven.",
+   "source_ref": "espn:401879257:play:53964116",
+   "team": "Coventry City",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Jay Da Silva",
+    "Mohammed Kudus"
+   ],
+   "clock": "45'",
+   "description": "Foul by Jay Dasilva (Coventry City).",
+   "source_ref": "espn:401879257:play:53964132",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jay Da Silva",
+    "Mohammed Kudus"
+   ],
+   "clock": "45'",
+   "description": "Mohammed Kudus (Tottenham Hotspur) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879257:play:53964132",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jay Da Silva"
+   ],
+   "clock": "45'",
+   "description": "Jay Dasilva (Coventry City) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879257:play:53964133",
+   "team": "Coventry City",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Archie Gray",
+    "Brandon Thomas-Asante"
+   ],
+   "clock": "45+1'",
+   "description": "Brandon Thomas-Asante (Coventry City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879257:play:53964227",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Archie Gray",
+    "Brandon Thomas-Asante"
+   ],
+   "clock": "45+1'",
+   "description": "Foul by Archie Gray (Tottenham Hotspur).",
+   "source_ref": "espn:401879257:play:53964227",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "45+4'",
+   "description": "First Half ends, Tottenham Hotspur 1, Coventry City 0.",
+   "score_after": "1-0",
+   "source_ref": "espn:401879257:play:53964358",
+   "type": "half_time"
+  },
+  {
+   "actors": [
+    "Dominic Solanke",
+    "Milan van Ewijk"
+   ],
+   "clock": "46'",
+   "description": "Milan van Ewijk (Coventry City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879257:play:53964860",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Dominic Solanke",
+    "Milan van Ewijk"
+   ],
+   "clock": "46'",
+   "description": "Foul by Dominic Solanke (Tottenham Hotspur).",
+   "source_ref": "espn:401879257:play:53964860",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jack Rudoni",
+    "James Maddison"
+   ],
+   "clock": "47'",
+   "description": "Foul by Jack Rudoni (Coventry City).",
+   "source_ref": "espn:401879257:play:53964917",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jack Rudoni",
+    "James Maddison"
+   ],
+   "clock": "47'",
+   "description": "James Maddison (Tottenham Hotspur) wins a free kick on the left wing.",
+   "source_ref": "espn:401879257:play:53964917",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Omar Marmoush",
+    "Tatsuhiro Sakamoto"
+   ],
+   "clock": "48'",
+   "description": "Tatsuhiro Sakamoto (Coventry City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879257:play:53964958",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Omar Marmoush",
+    "Tatsuhiro Sakamoto"
+   ],
+   "clock": "48'",
+   "description": "Foul by Omar Marmoush (Tottenham Hotspur).",
+   "source_ref": "espn:401879257:play:53964958",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Dominic Solanke",
+    "Ethan Pinnock"
+   ],
+   "clock": "49'",
+   "description": "Ethan Pinnock (Coventry City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879257:play:53964995",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Dominic Solanke",
+    "Ethan Pinnock"
+   ],
+   "clock": "49'",
+   "description": "Foul by Dominic Solanke (Tottenham Hotspur).",
+   "source_ref": "espn:401879257:play:53964995",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jack Rudoni",
+    "Caleb Yirenkyi"
+   ],
+   "clock": "49'",
+   "description": "Attempt missed. Jack Rudoni (Coventry City) right footed shot from the left side of the box misses to the right. Assisted by Caleb Yirenkyi following a fast break.",
+   "source_ref": "espn:401879257:play:53965049",
+   "team": "Coventry City",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Jack Rudoni",
+    "Brandon Thomas-Asante"
+   ],
+   "clock": "49'",
+   "description": "Goal! Tottenham Hotspur 1, Coventry City 1. Jack Rudoni (Coventry City) right footed shot from the left side of the six yard box to the bottom left corner. Assisted by Brandon Thomas-Asante following a fast break.",
+   "score_after": "1-1",
+   "source_ref": "espn:401879257:play:53965051",
+   "team": "Coventry City",
+   "type": "goal"
+  },
+  {
+   "actors": [],
+   "clock": "52'",
+   "description": "Corner, Tottenham Hotspur. Conceded by Bobby Thomas.",
+   "source_ref": "espn:401879257:play:53965122",
+   "team": "Tottenham Hotspur",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Micky van de Ven",
+    "Mohammed Kudus"
+   ],
+   "clock": "52'",
+   "description": "Attempt missed. Micky van de Ven (Tottenham Hotspur) right footed shot from the centre of the box misses to the left. Assisted by Mohammed Kudus with a cross following a corner.",
+   "source_ref": "espn:401879257:play:53965148",
+   "team": "Tottenham Hotspur",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Sandro Tonali"
+   ],
+   "clock": "52'",
+   "description": "Attempt missed. Sandro Tonali (Tottenham Hotspur) right footed shot from the centre of the box is too high following a corner.",
+   "source_ref": "espn:401879257:play:53965149",
+   "team": "Tottenham Hotspur",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Omar Marmoush"
+   ],
+   "clock": "54'",
+   "description": "Attempt saved. Omar Marmoush (Tottenham Hotspur) right footed shot from the left side of the box is saved in the centre of the goal by Carl Rushworth (Coventry City).",
+   "source_ref": "espn:401879257:play:53965193",
+   "team": "Tottenham Hotspur",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Caleb Yirenkyi",
+    "Mohammed Kudus"
+   ],
+   "clock": "55'",
+   "description": "Foul by Caleb Yirenkyi (Coventry City).",
+   "source_ref": "espn:401879257:play:53965226",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Caleb Yirenkyi",
+    "Mohammed Kudus"
+   ],
+   "clock": "55'",
+   "description": "Mohammed Kudus (Tottenham Hotspur) wins a free kick on the right wing.",
+   "source_ref": "espn:401879257:play:53965226",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Sandro Tonali"
+   ],
+   "clock": "55'",
+   "description": "Attempt missed. Sandro Tonali (Tottenham Hotspur) left footed shot from outside the box is too high.",
+   "source_ref": "espn:401879257:play:53965232",
+   "team": "Tottenham Hotspur",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Omar Marmoush",
+    "Andy Robertson"
+   ],
+   "clock": "58'",
+   "description": "Goal! Tottenham Hotspur 2, Coventry City 1. Omar Marmoush (Tottenham Hotspur) right footed shot from outside the box to the bottom right corner. Assisted by Andy Robertson.",
+   "score_after": "2-1",
+   "source_ref": "espn:401879257:play:53965367",
+   "team": "Tottenham Hotspur",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Taiwo Awoniyi",
+    "Sidiki Cherif"
+   ],
+   "clock": "60'",
+   "description": "Substitution, Coventry City. Taiwo Awoniyi replaces Sidiki Cherif.",
+   "source_ref": "espn:401879257:play:53965440",
+   "team": "Coventry City",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Frank Onyeka",
+    "Caleb Yirenkyi"
+   ],
+   "clock": "60'",
+   "description": "Substitution, Coventry City. Frank Onyeka replaces Caleb Yirenkyi.",
+   "source_ref": "espn:401879257:play:53965441",
+   "team": "Coventry City",
+   "type": "sub"
+  },
+  {
+   "actors": [],
+   "clock": "61'",
+   "description": "Corner, Tottenham Hotspur. Conceded by Milan van Ewijk.",
+   "source_ref": "espn:401879257:play:53965478",
+   "team": "Tottenham Hotspur",
+   "type": "corner"
+  },
+  {
+   "actors": [],
+   "clock": "62'",
+   "description": "Corner, Tottenham Hotspur. Conceded by Jack Rudoni.",
+   "source_ref": "espn:401879257:play:53965526",
+   "team": "Tottenham Hotspur",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Mohammed Kudus",
+    "Sandro Tonali"
+   ],
+   "clock": "62'",
+   "description": "Attempt missed. Mohammed Kudus (Tottenham Hotspur) left footed shot from outside the box misses to the left. Assisted by Sandro Tonali with a headed pass.",
+   "source_ref": "espn:401879257:play:53965539",
+   "team": "Tottenham Hotspur",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Jack Rudoni",
+    "Sandro Tonali"
+   ],
+   "clock": "64'",
+   "description": "Foul by Jack Rudoni (Coventry City).",
+   "source_ref": "espn:401879257:play:53965595",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jack Rudoni",
+    "Sandro Tonali"
+   ],
+   "clock": "64'",
+   "description": "Sandro Tonali (Tottenham Hotspur) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879257:play:53965595",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jack Rudoni"
+   ],
+   "clock": "64'",
+   "description": "Jack Rudoni (Coventry City) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879257:play:53965596",
+   "team": "Coventry City",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Dominic Solanke",
+    "Jan Paul van Hecke"
+   ],
+   "clock": "64'",
+   "description": "Attempt blocked. Dominic Solanke (Tottenham Hotspur) left footed shot from the centre of the box is blocked. Assisted by Jan Paul van Hecke.",
+   "source_ref": "espn:401879257:play:53965601",
+   "team": "Tottenham Hotspur",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Omar Marmoush",
+    "Frank Onyeka"
+   ],
+   "clock": "65'",
+   "description": "Frank Onyeka (Coventry City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879257:play:53965618",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Omar Marmoush",
+    "Frank Onyeka"
+   ],
+   "clock": "65'",
+   "description": "Foul by Omar Marmoush (Tottenham Hotspur).",
+   "source_ref": "espn:401879257:play:53965618",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "James Maddison"
+   ],
+   "clock": "65'",
+   "description": "Offside, Tottenham Hotspur. Dominic Solanke is caught offside.",
+   "source_ref": "espn:401879257:play:53965631",
+   "team": "Tottenham Hotspur",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Taiwo Awoniyi",
+    "Milan van Ewijk"
+   ],
+   "clock": "67'",
+   "description": "Attempt missed. Taiwo Awoniyi (Coventry City) header from the centre of the box misses to the right. Assisted by Milan van Ewijk with a cross.",
+   "source_ref": "espn:401879257:play:53965751",
+   "team": "Coventry City",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Bobby Thomas",
+    "Frank Onyeka"
+   ],
+   "clock": "68'",
+   "description": "Attempt blocked. Bobby Thomas (Coventry City) header from the centre of the box is blocked. Assisted by Frank Onyeka.",
+   "source_ref": "espn:401879257:play:53965810",
+   "team": "Coventry City",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Ben Davies",
+    "Andy Robertson"
+   ],
+   "clock": "69'",
+   "description": "Substitution, Tottenham Hotspur. Ben Davies replaces Andy Robertson because of an injury.",
+   "source_ref": "espn:401879257:play:53965919",
+   "team": "Tottenham Hotspur",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Conor Gallagher",
+    "James Maddison"
+   ],
+   "clock": "69'",
+   "description": "Substitution, Tottenham Hotspur. Conor Gallagher replaces James Maddison.",
+   "source_ref": "espn:401879257:play:53965920",
+   "team": "Tottenham Hotspur",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Mateus Fernandes",
+    "Tosin Adarabioyo"
+   ],
+   "clock": "71'",
+   "description": "Substitution, Tottenham Hotspur. Mateus Fernandes replaces Tosin Adarabioyo because of an injury.",
+   "source_ref": "espn:401879257:play:53965957",
+   "team": "Tottenham Hotspur",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Ethan Pinnock",
+    "Milan van Ewijk"
+   ],
+   "clock": "72'",
+   "description": "Attempt missed. Ethan Pinnock (Coventry City) header from the centre of the box misses to the right. Assisted by Milan van Ewijk.",
+   "source_ref": "espn:401879257:play:53966123",
+   "team": "Coventry City",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Archie Gray",
+    "Brandon Thomas-Asante"
+   ],
+   "clock": "72'",
+   "description": "Brandon Thomas-Asante (Coventry City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879257:play:53966014",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Archie Gray",
+    "Brandon Thomas-Asante"
+   ],
+   "clock": "72'",
+   "description": "Foul by Archie Gray (Tottenham Hotspur).",
+   "source_ref": "espn:401879257:play:53966014",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jack Rudoni"
+   ],
+   "clock": "75'",
+   "description": "Offside, Coventry City. Brandon Thomas-Asante is caught offside.",
+   "source_ref": "espn:401879257:play:53966226",
+   "team": "Coventry City",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Frank Onyeka",
+    "Omar Marmoush"
+   ],
+   "clock": "76'",
+   "description": "Foul by Frank Onyeka (Coventry City).",
+   "source_ref": "espn:401879257:play:53966252",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Frank Onyeka",
+    "Omar Marmoush"
+   ],
+   "clock": "76'",
+   "description": "Omar Marmoush (Tottenham Hotspur) wins a free kick on the left wing.",
+   "source_ref": "espn:401879257:play:53966252",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ephron Mason-Clark",
+    "Brandon Thomas-Asante"
+   ],
+   "clock": "78'",
+   "description": "Substitution, Coventry City. Ephron Mason-Clark replaces Brandon Thomas-Asante.",
+   "source_ref": "espn:401879257:play:53966392",
+   "team": "Coventry City",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Gustavo Hamer",
+    "Tatsuhiro Sakamoto"
+   ],
+   "clock": "78'",
+   "description": "Substitution, Coventry City. Gustavo Hamer replaces Tatsuhiro Sakamoto.",
+   "source_ref": "espn:401879257:play:53966393",
+   "team": "Coventry City",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Dominic Solanke"
+   ],
+   "clock": "79'",
+   "description": "Offside, Tottenham Hotspur. Mohammed Kudus is caught offside.",
+   "source_ref": "espn:401879257:play:53966452",
+   "team": "Tottenham Hotspur",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Mohammed Kudus",
+    "Archie Gray"
+   ],
+   "clock": "80'",
+   "description": "Attempt missed. Mohammed Kudus (Tottenham Hotspur) left footed shot from the right side of the box is close, but misses the top left corner. Assisted by Archie Gray.",
+   "source_ref": "espn:401879257:play:53966489",
+   "team": "Tottenham Hotspur",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Mateus Fernandes"
+   ],
+   "clock": "82'",
+   "description": "Attempt saved. Mateus Fernandes (Tottenham Hotspur) right footed shot from outside the box is saved in the centre of the goal by Carl Rushworth (Coventry City).",
+   "source_ref": "espn:401879257:play:53966507",
+   "team": "Tottenham Hotspur",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Dominic Solanke",
+    "Frank Onyeka"
+   ],
+   "clock": "83'",
+   "description": "Frank Onyeka (Coventry City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879257:play:53966549",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Dominic Solanke",
+    "Frank Onyeka"
+   ],
+   "clock": "83'",
+   "description": "Foul by Dominic Solanke (Tottenham Hotspur).",
+   "source_ref": "espn:401879257:play:53966549",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Taiwo Awoniyi",
+    "Jay Da Silva"
+   ],
+   "clock": "85'",
+   "description": "Attempt missed. Taiwo Awoniyi (Coventry City) header from the centre of the box misses to the right. Assisted by Jay Dasilva with a cross.",
+   "source_ref": "espn:401879257:play:53966734",
+   "team": "Coventry City",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Mathys Tel",
+    "Omar Marmoush"
+   ],
+   "clock": "87'",
+   "description": "Substitution, Tottenham Hotspur. Mathys Tel replaces Omar Marmoush because of an injury.",
+   "source_ref": "espn:401879257:play:53966838",
+   "team": "Tottenham Hotspur",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Dejan Kulusevski",
+    "Mohammed Kudus"
+   ],
+   "clock": "87'",
+   "description": "Substitution, Tottenham Hotspur. Dejan Kulusevski replaces Mohammed Kudus.",
+   "source_ref": "espn:401879257:play:53966839",
+   "team": "Tottenham Hotspur",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Kaine Kesler Hayden",
+    "Jack Rudoni"
+   ],
+   "clock": "87'",
+   "description": "Substitution, Coventry City. Kaine Kesler-Hayden replaces Jack Rudoni.",
+   "source_ref": "espn:401879257:play:53966840",
+   "team": "Coventry City",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Dejan Kulusevski",
+    "Ephron Mason-Clark"
+   ],
+   "clock": "89'",
+   "description": "Ephron Mason-Clark (Coventry City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879257:play:53966896",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Dejan Kulusevski",
+    "Ephron Mason-Clark"
+   ],
+   "clock": "89'",
+   "description": "Foul by Dejan Kulusevski (Tottenham Hotspur).",
+   "source_ref": "espn:401879257:play:53966896",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ben Davies",
+    "Kaine Kesler Hayden"
+   ],
+   "clock": "89'",
+   "description": "Kaine Kesler-Hayden (Coventry City) wins a free kick on the right wing.",
+   "source_ref": "espn:401879257:play:53966913",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ben Davies",
+    "Kaine Kesler Hayden"
+   ],
+   "clock": "89'",
+   "description": "Foul by Ben Davies (Tottenham Hotspur).",
+   "source_ref": "espn:401879257:play:53966913",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Bobby Thomas",
+    "Gustavo Hamer"
+   ],
+   "clock": "90'",
+   "description": "Attempt missed. Bobby Thomas (Coventry City) header from the centre of the box misses to the right. Assisted by Gustavo Hamer with a cross following a set piece situation.",
+   "source_ref": "espn:401879257:play:53966916",
+   "team": "Coventry City",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Conor Gallagher",
+    "Frank Onyeka"
+   ],
+   "clock": "90+1'",
+   "description": "Frank Onyeka (Coventry City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879257:play:53966989",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Conor Gallagher",
+    "Frank Onyeka"
+   ],
+   "clock": "90+1'",
+   "description": "Foul by Conor Gallagher (Tottenham Hotspur).",
+   "source_ref": "espn:401879257:play:53966989",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Taiwo Awoniyi",
+    "Ephron Mason-Clark"
+   ],
+   "clock": "90+1'",
+   "description": "Attempt missed. Taiwo Awoniyi (Coventry City) header from the left side of the six yard box misses to the right. Assisted by Ephron Mason-Clark with a cross.",
+   "source_ref": "espn:401879257:play:53967206",
+   "team": "Coventry City",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Mathys Tel",
+    "Antonín Kinsky"
+   ],
+   "clock": "90+2'",
+   "description": "Attempt missed. Mathys Tel (Tottenham Hotspur) right footed shot from the left side of the box is close, but misses to the right. Assisted by Antonín Kinsky.",
+   "source_ref": "espn:401879257:play:53967068",
+   "team": "Tottenham Hotspur",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [],
+   "clock": "90+4'",
+   "description": "Corner, Coventry City. Conceded by Archie Gray.",
+   "source_ref": "espn:401879257:play:53967120",
+   "team": "Coventry City",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Jay Da Silva",
+    "Archie Gray"
+   ],
+   "clock": "90+5'",
+   "description": "Foul by Jay Dasilva (Coventry City).",
+   "source_ref": "espn:401879257:play:53967185",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jay Da Silva",
+    "Archie Gray"
+   ],
+   "clock": "90+5'",
+   "description": "Archie Gray (Tottenham Hotspur) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879257:play:53967185",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ben Davies",
+    "Dominic Solanke"
+   ],
+   "clock": "90+6'",
+   "description": "Goal! Tottenham Hotspur 3, Coventry City 1. Ben Davies (Tottenham Hotspur) left footed shot from outside the box to the bottom left corner. Assisted by Dominic Solanke.",
+   "score_after": "3-1",
+   "source_ref": "espn:401879257:play:53967216",
+   "team": "Tottenham Hotspur",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Bobby Thomas",
+    "Dejan Kulusevski"
+   ],
+   "clock": "90+7'",
+   "description": "Foul by Bobby Thomas (Coventry City).",
+   "source_ref": "espn:401879257:play:53967261",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Bobby Thomas",
+    "Dejan Kulusevski"
+   ],
+   "clock": "90+7'",
+   "description": "Dejan Kulusevski (Tottenham Hotspur) wins a free kick on the right wing.",
+   "source_ref": "espn:401879257:play:53967261",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "90+9'",
+   "description": "Second Half ends, Tottenham Hotspur 3, Coventry City 1.",
+   "score_after": "3-1",
+   "source_ref": "espn:401879257:play:53967273",
+   "type": "full_time"
+  }
+ ],
+ "match": {
+  "end_estimate": "2026-10-19T21:00:00Z",
+  "final_result": "Tottenham Hotspur 3–1 Coventry City",
+  "id": "401879257",
+  "kickoff": "2026-10-19T19:00:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "TOT",
+    "name": "Tottenham Hotspur",
+    "role": "home",
+    "score": "3",
+    "short_name": "Spurs",
+    "winner": true
+   },
+   {
+    "abbreviation": "COV",
+    "name": "Coventry City",
+    "role": "away",
+    "score": "1",
+    "short_name": "Coventry",
+    "winner": false
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Tottenham Hotspur climbed off the bottom of the Premier League after James Maddison's superb 14th-minute opener inspired a 3-1 home win over Coventry City on Monday.",
+  "title": "Tottenham Hotspur v Coventry City",
+  "venue": "Tottenham Hotspur Stadium"
+ },
+ "sources": [
+  {
+   "publisher": "ESPN",
+   "title": "Tottenham Hotspur v Coventry City: match events",
+   "url": "https://www.espn.com/soccer/match/_/gameId/401879257"
+  },
+  {
+   "published_at": "2026-10-19T21:08:00Z",
+   "publisher": "ESPN",
+   "title": "Kulusevski returns as Spurs get first Premier League win of season",
+   "url": "https://www.espn.com/soccer/report/_/gameId/401879257"
+  }
+ ],
+ "team_stats": [
+  {
+   "corners": 4,
+   "fouls": 15,
+   "possession_pct": 65.4,
+   "red_cards": 0,
+   "saves": 0,
+   "shots": 16,
+   "shots_on_target": 5,
+   "team": "Tottenham Hotspur",
+   "yellow_cards": 1
+  },
+  {
+   "corners": 4,
+   "fouls": 14,
+   "possession_pct": 34.6,
+   "red_cards": 0,
+   "saves": 2,
+   "shots": 12,
+   "shots_on_target": 1,
+   "team": "Coventry City",
+   "yellow_cards": 3
+  }
+ ]
+}

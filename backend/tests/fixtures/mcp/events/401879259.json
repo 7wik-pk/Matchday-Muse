@@ -1,0 +1,1171 @@
+{
+ "coverage": "full_events",
+ "events": [
+  {
+   "actors": [
+    "Jacob Greaves",
+    "Mateo Kovacic"
+   ],
+   "clock": "2'",
+   "description": "Foul by Jacob Greaves (Ipswich Town).",
+   "source_ref": "espn:401879259:play:53780436",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Florentino",
+    "Jérémy Doku"
+   ],
+   "clock": "4'",
+   "description": "Foul by Florentino (Ipswich Town).",
+   "source_ref": "espn:401879259:play:53780884",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Florentino",
+    "Jérémy Doku"
+   ],
+   "clock": "4'",
+   "description": "Jérémy Doku (Manchester City) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879259:play:53780884",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jacob Greaves",
+    "Iliman Ndiaye"
+   ],
+   "clock": "5'",
+   "description": "Foul by Jacob Greaves (Ipswich Town).",
+   "source_ref": "espn:401879259:play:53781171",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jacob Greaves",
+    "Iliman Ndiaye"
+   ],
+   "clock": "5'",
+   "description": "Iliman Ndiaye (Manchester City) wins a free kick on the right wing.",
+   "source_ref": "espn:401879259:play:53781171",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Rúben Dias",
+    "Phil Foden"
+   ],
+   "clock": "6'",
+   "description": "Attempt missed. Rúben Dias (Manchester City) header from very close range is close, but misses to the right. Assisted by Phil Foden with a cross following a set piece situation.",
+   "source_ref": "espn:401879259:play:53781179",
+   "team": "Manchester City",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Ayyoub Bouaddi",
+    "Jacob Greaves"
+   ],
+   "clock": "8'",
+   "description": "Jacob Greaves (Ipswich Town) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879259:play:53782219",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ayyoub Bouaddi",
+    "Jacob Greaves"
+   ],
+   "clock": "8'",
+   "description": "Foul by Ayyoub Bouaddi (Manchester City).",
+   "source_ref": "espn:401879259:play:53782219",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Rúben Dias",
+    "Emersonn"
+   ],
+   "clock": "9'",
+   "description": "Emersonn (Ipswich Town) wins a free kick on the left wing.",
+   "source_ref": "espn:401879259:play:53782223",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Rúben Dias",
+    "Emersonn"
+   ],
+   "clock": "9'",
+   "description": "Foul by Rúben Dias (Manchester City).",
+   "source_ref": "espn:401879259:play:53782223",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Leif Davis"
+   ],
+   "clock": "9'",
+   "description": "Offside, Ipswich Town. Emersonn is caught offside.",
+   "source_ref": "espn:401879259:play:53782454",
+   "team": "Ipswich Town",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Abdoul Ouattara",
+    "Jérémy Doku"
+   ],
+   "clock": "14'",
+   "description": "Foul by Abdoul Ouattara (Ipswich Town).",
+   "source_ref": "espn:401879259:play:53783178",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Abdoul Ouattara",
+    "Jérémy Doku"
+   ],
+   "clock": "14'",
+   "description": "Jérémy Doku (Manchester City) wins a free kick on the left wing.",
+   "source_ref": "espn:401879259:play:53783178",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Rúben Dias",
+    "Mateo Kovacic"
+   ],
+   "clock": "17'",
+   "description": "Attempt saved. Rúben Dias (Manchester City) right footed shot from outside the box is saved in the top centre of the goal by Christian Walton (Ipswich Town). Assisted by Mateo Kovacic.",
+   "source_ref": "espn:401879259:play:53784461",
+   "team": "Manchester City",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Phil Foden",
+    "Jérémy Doku"
+   ],
+   "clock": "19'",
+   "description": "Goal! Manchester City 1, Ipswich Town 0. Phil Foden (Manchester City) left footed shot from the centre of the box to the centre of the goal. Assisted by Jérémy Doku following a fast break.",
+   "score_after": "1-0",
+   "source_ref": "espn:401879259:play:53784695",
+   "team": "Manchester City",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Daizen Maeda",
+    "Abdoul Ouattara"
+   ],
+   "clock": "21'",
+   "description": "Goal! Manchester City 1, Ipswich Town 1. Daizen Maeda (Ipswich Town) left footed shot from the centre of the box to the bottom right corner. Assisted by Abdoul Ouattara.",
+   "score_after": "1-1",
+   "source_ref": "espn:401879259:play:53785336",
+   "team": "Ipswich Town",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Phil Foden",
+    "Nico O'Reilly"
+   ],
+   "clock": "23'",
+   "description": "Attempt missed. Phil Foden (Manchester City) header from the centre of the box misses to the left. Assisted by Nico O'Reilly with a cross.",
+   "source_ref": "espn:401879259:play:53785664",
+   "team": "Manchester City",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Nico O'Reilly",
+    "Abdoul Ouattara"
+   ],
+   "clock": "24'",
+   "description": "Abdoul Ouattara (Ipswich Town) wins a free kick on the right wing.",
+   "source_ref": "espn:401879259:play:53785798",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Nico O'Reilly",
+    "Abdoul Ouattara"
+   ],
+   "clock": "24'",
+   "description": "Foul by Nico O'Reilly (Manchester City).",
+   "source_ref": "espn:401879259:play:53785798",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Leif Davis"
+   ],
+   "clock": "24'",
+   "description": "Offside, Ipswich Town. Dara O'Shea is caught offside.",
+   "source_ref": "espn:401879259:play:53785802",
+   "team": "Ipswich Town",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Julio Enciso",
+    "Matheus Nunes"
+   ],
+   "clock": "26'",
+   "description": "Foul by Julio Enciso (Ipswich Town).",
+   "source_ref": "espn:401879259:play:53786079",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Julio Enciso",
+    "Matheus Nunes"
+   ],
+   "clock": "26'",
+   "description": "Matheus Nunes (Manchester City) wins a free kick on the right wing.",
+   "source_ref": "espn:401879259:play:53786079",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Emersonn",
+    "Christian Walton"
+   ],
+   "clock": "29'",
+   "description": "Attempt missed. Emersonn (Ipswich Town) right footed shot from outside the box misses to the right. Assisted by Christian Walton.",
+   "source_ref": "espn:401879259:play:53786792",
+   "team": "Ipswich Town",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Florentino",
+    "Iliman Ndiaye"
+   ],
+   "clock": "31'",
+   "description": "Foul by Florentino (Ipswich Town).",
+   "source_ref": "espn:401879259:play:53787073",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Florentino",
+    "Iliman Ndiaye"
+   ],
+   "clock": "31'",
+   "description": "Iliman Ndiaye (Manchester City) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879259:play:53787073",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Erling Haaland",
+    "Phil Foden"
+   ],
+   "clock": "33'",
+   "description": "Attempt blocked. Erling Haaland (Manchester City) left footed shot from the left side of the box is blocked. Assisted by Phil Foden with a through ball.",
+   "source_ref": "espn:401879259:play:53787439",
+   "team": "Manchester City",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "33'",
+   "description": "Corner, Manchester City. Conceded by Jacob Greaves.",
+   "source_ref": "espn:401879259:play:53787441",
+   "team": "Manchester City",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Erling Haaland",
+    "Rúben Dias"
+   ],
+   "clock": "34'",
+   "description": "Attempt blocked. Erling Haaland (Manchester City) left footed shot from the centre of the box is blocked. Assisted by Rúben Dias.",
+   "source_ref": "espn:401879259:play:53787950",
+   "team": "Manchester City",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Erling Haaland",
+    "Mateo Kovacic"
+   ],
+   "clock": "34'",
+   "description": "Goal! Manchester City 2, Ipswich Town 1. Erling Haaland (Manchester City) header from the centre of the box to the bottom left corner. Assisted by Mateo Kovacic with a cross.",
+   "score_after": "2-1",
+   "source_ref": "espn:401879259:play:53787956",
+   "team": "Manchester City",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Emersonn",
+    "Mateo Kovacic"
+   ],
+   "clock": "36'",
+   "description": "Foul by Emersonn (Ipswich Town).",
+   "source_ref": "espn:401879259:play:53788358",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Emersonn",
+    "Mateo Kovacic"
+   ],
+   "clock": "36'",
+   "description": "Mateo Kovacic (Manchester City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879259:play:53788358",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Iliman Ndiaye",
+    "Mateo Kovacic"
+   ],
+   "clock": "40'",
+   "description": "Attempt blocked. Iliman Ndiaye (Manchester City) left footed shot from the right side of the box is blocked. Assisted by Mateo Kovacic.",
+   "source_ref": "espn:401879259:play:53789632",
+   "team": "Manchester City",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Jérémy Doku"
+   ],
+   "clock": "40'",
+   "description": "Attempt blocked. Jérémy Doku (Manchester City) left footed shot from the centre of the box is blocked.",
+   "source_ref": "espn:401879259:play:53789633",
+   "team": "Manchester City",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Rúben Dias",
+    "Marc Guéhi"
+   ],
+   "clock": "43'",
+   "description": "Attempt saved. Rúben Dias (Manchester City) right footed shot from outside the box is saved in the top right corner by Christian Walton (Ipswich Town). Assisted by Marc Guéhi.",
+   "source_ref": "espn:401879259:play:53790495",
+   "team": "Manchester City",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Rúben Dias",
+    "Julio Enciso"
+   ],
+   "clock": "45+2'",
+   "description": "Julio Enciso (Ipswich Town) wins a free kick on the left wing.",
+   "source_ref": "espn:401879259:play:53791183",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Rúben Dias",
+    "Julio Enciso"
+   ],
+   "clock": "45+2'",
+   "description": "Foul by Rúben Dias (Manchester City).",
+   "source_ref": "espn:401879259:play:53791183",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "45'",
+   "description": "Second Half begins Manchester City 2, Ipswich Town 1.",
+   "source_ref": "espn:401879259:play:53793713",
+   "type": "second_half"
+  },
+  {
+   "actors": [
+    "Emersonn",
+    "Marc Guéhi"
+   ],
+   "clock": "46'",
+   "description": "Foul by Emersonn (Ipswich Town).",
+   "source_ref": "espn:401879259:play:53793981",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Emersonn",
+    "Marc Guéhi"
+   ],
+   "clock": "46'",
+   "description": "Marc Guéhi (Manchester City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879259:play:53793981",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jérémy Doku",
+    "Dara O'Shea"
+   ],
+   "clock": "47'",
+   "description": "Dara O'Shea (Ipswich Town) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879259:play:53793989",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jérémy Doku",
+    "Dara O'Shea"
+   ],
+   "clock": "47'",
+   "description": "Foul by Jérémy Doku (Manchester City).",
+   "source_ref": "espn:401879259:play:53793989",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Florentino",
+    "Ayyoub Bouaddi"
+   ],
+   "clock": "48'",
+   "description": "Foul by Florentino (Ipswich Town).",
+   "source_ref": "espn:401879259:play:53794248",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Florentino",
+    "Ayyoub Bouaddi"
+   ],
+   "clock": "48'",
+   "description": "Ayyoub Bouaddi (Manchester City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879259:play:53794248",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "48'",
+   "description": "Corner, Ipswich Town. Conceded by Matheus Nunes.",
+   "source_ref": "espn:401879259:play:53794265",
+   "team": "Ipswich Town",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Jacob Greaves",
+    "Leif Davis"
+   ],
+   "clock": "49'",
+   "description": "Attempt missed. Jacob Greaves (Ipswich Town) header from the centre of the box is high and wide to the left. Assisted by Leif Davis with a cross following a corner.",
+   "source_ref": "espn:401879259:play:53794658",
+   "team": "Ipswich Town",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Enzo Fernández",
+    "Mateo Kovacic"
+   ],
+   "clock": "50'",
+   "description": "Substitution, Manchester City. Enzo Fernández replaces Mateo Kovacic because of an injury.",
+   "source_ref": "espn:401879259:play:53794936",
+   "team": "Manchester City",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Julio Enciso",
+    "Ayyoub Bouaddi"
+   ],
+   "clock": "51'",
+   "description": "Foul by Julio Enciso (Ipswich Town).",
+   "source_ref": "espn:401879259:play:53795294",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Julio Enciso",
+    "Ayyoub Bouaddi"
+   ],
+   "clock": "51'",
+   "description": "Ayyoub Bouaddi (Manchester City) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879259:play:53795294",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Abdoul Ouattara",
+    "Emersonn"
+   ],
+   "clock": "52'",
+   "description": "Attempt missed. Abdoul Ouattara (Ipswich Town) left footed shot from the right side of the box misses to the left. Assisted by Emersonn.",
+   "source_ref": "espn:401879259:play:53795313",
+   "team": "Ipswich Town",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Marc Guéhi",
+    "Emersonn"
+   ],
+   "clock": "54'",
+   "description": "Emersonn (Ipswich Town) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879259:play:53795848",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Marc Guéhi",
+    "Emersonn"
+   ],
+   "clock": "54'",
+   "description": "Foul by Marc Guéhi (Manchester City).",
+   "source_ref": "espn:401879259:play:53795848",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "54'",
+   "description": "Corner, Ipswich Town. Conceded by Marc Guéhi.",
+   "source_ref": "espn:401879259:play:53796084",
+   "team": "Ipswich Town",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Emersonn",
+    "Leif Davis"
+   ],
+   "clock": "55'",
+   "description": "Attempt missed. Emersonn (Ipswich Town) header from the left side of the six yard box is close, but misses to the left. Assisted by Leif Davis with a cross following a corner.",
+   "source_ref": "espn:401879259:play:53796088",
+   "team": "Ipswich Town",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [],
+   "clock": "56'",
+   "description": "Corner, Manchester City. Conceded by Florentino.",
+   "source_ref": "espn:401879259:play:53796324",
+   "team": "Manchester City",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Nico O'Reilly",
+    "Phil Foden"
+   ],
+   "clock": "56'",
+   "description": "Attempt missed. Nico O'Reilly (Manchester City) header from the left side of the six yard box misses to the right. Assisted by Phil Foden with a cross following a corner.",
+   "source_ref": "espn:401879259:play:53796621",
+   "team": "Manchester City",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Phil Foden",
+    "Enzo Fernández"
+   ],
+   "clock": "57'",
+   "description": "Attempt blocked. Phil Foden (Manchester City) left footed shot from outside the box is blocked. Assisted by Enzo Fernández.",
+   "source_ref": "espn:401879259:play:53796633",
+   "team": "Manchester City",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Leif Davis"
+   ],
+   "clock": "60'",
+   "description": "Handball by Leif Davis (Ipswich Town).",
+   "source_ref": "espn:401879259:play:53797443",
+   "team": "Ipswich Town",
+   "type": "handball"
+  },
+  {
+   "actors": [
+    "Daizen Maeda"
+   ],
+   "clock": "60'",
+   "description": "Offside, Ipswich Town. Abdoul Ouattara is caught offside.",
+   "source_ref": "espn:401879259:play:53797827",
+   "team": "Ipswich Town",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Josko Gvardiol",
+    "Nico O'Reilly"
+   ],
+   "clock": "61'",
+   "description": "Substitution, Manchester City. Josko Gvardiol replaces Nico O'Reilly.",
+   "source_ref": "espn:401879259:play:53797884",
+   "team": "Manchester City",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Daizen Maeda",
+    "Jérémy Doku"
+   ],
+   "clock": "63'",
+   "description": "Foul by Daizen Maeda (Ipswich Town).",
+   "source_ref": "espn:401879259:play:53798235",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Daizen Maeda",
+    "Jérémy Doku"
+   ],
+   "clock": "63'",
+   "description": "Jérémy Doku (Manchester City) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879259:play:53798235",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Enzo Fernández"
+   ],
+   "clock": "64'",
+   "description": "Attempt missed. Enzo Fernández (Manchester City) right footed shot from outside the box is too high from a direct free kick.",
+   "source_ref": "espn:401879259:play:53798429",
+   "team": "Manchester City",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Emersonn",
+    "Exequiel Palacios"
+   ],
+   "clock": "67'",
+   "description": "Attempt missed. Emersonn (Ipswich Town) right footed shot from the right side of the box is high and wide to the right. Assisted by Exequiel Palacios following a fast break.",
+   "source_ref": "espn:401879259:play:53799489",
+   "team": "Ipswich Town",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Erling Haaland",
+    "Iliman Ndiaye"
+   ],
+   "clock": "69'",
+   "description": "Goal! Manchester City 3, Ipswich Town 1. Erling Haaland (Manchester City) left footed shot from the centre of the box to the centre of the goal. Assisted by Iliman Ndiaye following a fast break.",
+   "score_after": "3-1",
+   "source_ref": "espn:401879259:play:53799868",
+   "team": "Manchester City",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Azor Matusiwa",
+    "Florentino"
+   ],
+   "clock": "71'",
+   "description": "Substitution, Ipswich Town. Azor Matusiwa replaces Florentino.",
+   "source_ref": "espn:401879259:play:53800126",
+   "team": "Ipswich Town",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Fatawu Issahaku",
+    "Daizen Maeda"
+   ],
+   "clock": "71'",
+   "description": "Substitution, Ipswich Town. Abdul Fatawu replaces Daizen Maeda.",
+   "source_ref": "espn:401879259:play:53800127",
+   "team": "Ipswich Town",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Abdoul Ouattara"
+   ],
+   "clock": "73'",
+   "description": "Abdoul Ouattara (Ipswich Town) is shown the yellow card.",
+   "source_ref": "espn:401879259:play:53800487",
+   "team": "Ipswich Town",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Abdukodir Khusanov",
+    "Matheus Nunes"
+   ],
+   "clock": "76'",
+   "description": "Substitution, Manchester City. Abdukodir Khusanov replaces Matheus Nunes because of an injury.",
+   "source_ref": "espn:401879259:play:53801361",
+   "team": "Manchester City",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Elliot Anderson",
+    "Phil Foden"
+   ],
+   "clock": "77'",
+   "description": "Substitution, Manchester City. Elliot Anderson replaces Phil Foden.",
+   "source_ref": "espn:401879259:play:53801362",
+   "team": "Manchester City",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Antoine Semenyo",
+    "Jérémy Doku"
+   ],
+   "clock": "77'",
+   "description": "Substitution, Manchester City. Antoine Semenyo replaces Jérémy Doku.",
+   "source_ref": "espn:401879259:play:53801480",
+   "team": "Manchester City",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Zian Flemming",
+    "Emersonn"
+   ],
+   "clock": "78'",
+   "description": "Substitution, Ipswich Town. Zian Flemming replaces Emersonn.",
+   "source_ref": "espn:401879259:play:53801481",
+   "team": "Ipswich Town",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Chuba Akpom",
+    "Julio Enciso"
+   ],
+   "clock": "78'",
+   "description": "Substitution, Ipswich Town. Chuba Akpom replaces Julio Enciso.",
+   "source_ref": "espn:401879259:play:53801482",
+   "team": "Ipswich Town",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Zian Flemming",
+    "Jacob Greaves"
+   ],
+   "clock": "80'",
+   "description": "Attempt saved. Zian Flemming (Ipswich Town) left footed shot from the centre of the box is saved in the bottom left corner by Gianluigi Donnarumma (Manchester City). Assisted by Jacob Greaves with a headed pass.",
+   "source_ref": "espn:401879259:play:53802026",
+   "team": "Ipswich Town",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Azor Matusiwa"
+   ],
+   "clock": "80'",
+   "description": "Offside, Ipswich Town. Jacob Greaves is caught offside.",
+   "source_ref": "espn:401879259:play:53802030",
+   "team": "Ipswich Town",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Exequiel Palacios",
+    "Elliot Anderson"
+   ],
+   "clock": "82'",
+   "description": "Foul by Exequiel Palacios (Ipswich Town).",
+   "source_ref": "espn:401879259:play:53802603",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Exequiel Palacios",
+    "Elliot Anderson"
+   ],
+   "clock": "82'",
+   "description": "Elliot Anderson (Manchester City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879259:play:53802603",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Enzo Fernández"
+   ],
+   "clock": "84'",
+   "description": "Offside, Manchester City. Antoine Semenyo is caught offside.",
+   "source_ref": "espn:401879259:play:53802875",
+   "team": "Manchester City",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Enzo Fernández",
+    "Erling Haaland"
+   ],
+   "clock": "85'",
+   "description": "Attempt saved. Enzo Fernández (Manchester City) right footed shot from the centre of the box is saved in the bottom left corner by Christian Walton (Ipswich Town). Assisted by Erling Haaland.",
+   "source_ref": "espn:401879259:play:53803032",
+   "team": "Manchester City",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Iliman Ndiaye",
+    "Erling Haaland"
+   ],
+   "clock": "85'",
+   "description": "Iliman Ndiaye (Manchester City) hits the bar with a right footed shot from the centre of the box. Assisted by Erling Haaland with a headed pass.",
+   "source_ref": "espn:401879259:play:53803036",
+   "team": "Manchester City",
+   "type": "woodwork"
+  },
+  {
+   "actors": [
+    "Iliman Ndiaye"
+   ],
+   "clock": "85'",
+   "description": "Attempt missed. Iliman Ndiaye (Manchester City) header from very close range misses to the left.",
+   "source_ref": "espn:401879259:play:53803038",
+   "team": "Manchester City",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Iliman Ndiaye"
+   ],
+   "clock": "85'",
+   "description": "Offside, Manchester City. Enzo Fernández is caught offside.",
+   "source_ref": "espn:401879259:play:53803575",
+   "team": "Manchester City",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Erling Haaland",
+    "Enzo Fernández"
+   ],
+   "clock": "85'",
+   "description": "GOAL OVERTURNED BY VAR: Erling Haaland (Manchester City) scores but the goal is ruled out after a VAR review.",
+   "source_ref": "espn:401879259:play:53803042",
+   "team": "Manchester City",
+   "type": "var"
+  },
+  {
+   "actors": [
+    "Erling Haaland"
+   ],
+   "clock": "85'",
+   "description": "VAR Decision: No Goal Manchester City 3-1 Ipswich Town.",
+   "source_ref": "espn:401879259:play:53803372",
+   "team": "Manchester City",
+   "type": "var"
+  },
+  {
+   "actors": [
+    "Marc Guéhi",
+    "Fatawu Issahaku"
+   ],
+   "clock": "87'",
+   "description": "Penalty Ipswich Town. Abdul Fatawu draws a foul in the penalty area.",
+   "source_ref": "espn:401879259:play:53804116",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Marc Guéhi",
+    "Fatawu Issahaku"
+   ],
+   "clock": "87'",
+   "description": "Penalty conceded by Marc Guéhi (Manchester City) after a foul in the penalty area.",
+   "source_ref": "espn:401879259:play:53804116",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Fatawu Issahaku"
+   ],
+   "clock": "88'",
+   "description": "VAR Decision: Penalty Ipswich Town.",
+   "source_ref": "espn:401879259:play:53804123",
+   "team": "Ipswich Town",
+   "type": "var"
+  },
+  {
+   "actors": [
+    "Zian Flemming"
+   ],
+   "clock": "90'",
+   "description": "Goal! Manchester City 3, Ipswich Town 2. Zian Flemming (Ipswich Town) converts the penalty with a right footed shot to the centre of the goal.",
+   "score_after": "3-2",
+   "source_ref": "espn:401879259:play:53804128",
+   "team": "Ipswich Town",
+   "type": "penalty_goal"
+  },
+  {
+   "actors": [
+    "Jack Clarke",
+    "Jacob Greaves"
+   ],
+   "clock": "90+1'",
+   "description": "Substitution, Ipswich Town. Jack Clarke replaces Jacob Greaves.",
+   "source_ref": "espn:401879259:play:53804321",
+   "team": "Ipswich Town",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Dara O'Shea",
+    "Elliot Anderson"
+   ],
+   "clock": "90+3'",
+   "description": "Foul by Dara O'Shea (Ipswich Town).",
+   "source_ref": "espn:401879259:play:53804618",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Dara O'Shea",
+    "Elliot Anderson"
+   ],
+   "clock": "90+3'",
+   "description": "Elliot Anderson (Manchester City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879259:play:53804618",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Zian Flemming",
+    "Elliot Anderson"
+   ],
+   "clock": "90+3'",
+   "description": "Foul by Zian Flemming (Ipswich Town).",
+   "source_ref": "espn:401879259:play:53804625",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Zian Flemming",
+    "Elliot Anderson"
+   ],
+   "clock": "90+3'",
+   "description": "Elliot Anderson (Manchester City) wins a free kick on the left wing.",
+   "source_ref": "espn:401879259:play:53804625",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Iliman Ndiaye",
+    "Erling Haaland"
+   ],
+   "clock": "90+6'",
+   "description": "Attempt missed. Iliman Ndiaye (Manchester City) left footed shot from the centre of the box is close, but misses to the left. Assisted by Erling Haaland.",
+   "source_ref": "espn:401879259:play:53805014",
+   "team": "Manchester City",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Josko Gvardiol",
+    "Fatawu Issahaku"
+   ],
+   "clock": "90+7'",
+   "description": "Abdul Fatawu (Ipswich Town) wins a free kick on the right wing.",
+   "source_ref": "espn:401879259:play:53805234",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Josko Gvardiol",
+    "Fatawu Issahaku"
+   ],
+   "clock": "90+7'",
+   "description": "Foul by Josko Gvardiol (Manchester City).",
+   "source_ref": "espn:401879259:play:53805234",
+   "team": "Manchester City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Josko Gvardiol"
+   ],
+   "clock": "90+7'",
+   "description": "Josko Gvardiol (Manchester City) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879259:play:53805235",
+   "team": "Manchester City",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Leif Davis"
+   ],
+   "clock": "90+7'",
+   "description": "Offside, Ipswich Town. Dara O'Shea is caught offside.",
+   "source_ref": "espn:401879259:play:53805236",
+   "team": "Ipswich Town",
+   "type": "offside"
+  },
+  {
+   "actors": [],
+   "clock": "90+10'",
+   "description": "Corner, Ipswich Town. Conceded by Josko Gvardiol.",
+   "source_ref": "espn:401879259:play:53805484",
+   "team": "Ipswich Town",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Erling Haaland",
+    "Enzo Fernández"
+   ],
+   "clock": "90+11'",
+   "description": "Attempt blocked. Erling Haaland (Manchester City) left footed shot from the right side of the box is blocked. Assisted by Enzo Fernández.",
+   "source_ref": "espn:401879259:play:53805555",
+   "team": "Manchester City",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Leif Davis",
+    "Ayyoub Bouaddi"
+   ],
+   "clock": "90+12'",
+   "description": "Foul by Leif Davis (Ipswich Town).",
+   "source_ref": "espn:401879259:play:53805688",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Leif Davis",
+    "Ayyoub Bouaddi"
+   ],
+   "clock": "90+12'",
+   "description": "Ayyoub Bouaddi (Manchester City) wins a free kick on the right wing.",
+   "source_ref": "espn:401879259:play:53805688",
+   "team": "Ipswich Town",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Leif Davis"
+   ],
+   "clock": "90+12'",
+   "description": "Leif Davis (Ipswich Town) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879259:play:53805689",
+   "team": "Ipswich Town",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [],
+   "clock": "90+13'",
+   "description": "Second Half ends, Manchester City 3, Ipswich Town 2.",
+   "score_after": "3-2",
+   "source_ref": "espn:401879259:play:53805695",
+   "type": "full_time"
+  }
+ ],
+ "match": {
+  "end_estimate": "2026-10-17T16:00:00Z",
+  "final_result": "Manchester City 3–2 Ipswich Town",
+  "id": "401879259",
+  "kickoff": "2026-10-17T14:00:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "MNC",
+    "name": "Manchester City",
+    "role": "home",
+    "score": "3",
+    "short_name": "Man City",
+    "winner": true
+   },
+   {
+    "abbreviation": "IPS",
+    "name": "Ipswich Town",
+    "role": "away",
+    "score": "2",
+    "short_name": "Ipswich",
+    "winner": false
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Erling Haaland struck twice as defiant Manchester City marched on at the top of the Premier League by holding on for a 3-2 win over Ipswich.",
+  "title": "Manchester City v Ipswich Town",
+  "venue": "Etihad Stadium"
+ },
+ "sources": [
+  {
+   "publisher": "ESPN",
+   "title": "Manchester City v Ipswich Town: match events",
+   "url": "https://www.espn.com/soccer/match/_/gameId/401879259"
+  },
+  {
+   "published_at": "2026-10-17T16:27:00Z",
+   "publisher": "ESPN",
+   "title": "Erling Haaland brace helps Man City hold off Ipswich at defiant Etihad Stadium",
+   "url": "https://www.espn.com/soccer/report/_/gameId/401879259"
+  }
+ ],
+ "team_stats": [
+  {
+   "corners": 2,
+   "fouls": 8,
+   "possession_pct": 69.8,
+   "red_cards": 0,
+   "saves": 1,
+   "shots": 19,
+   "shots_on_target": 6,
+   "team": "Manchester City",
+   "yellow_cards": 1
+  },
+  {
+   "corners": 3,
+   "fouls": 16,
+   "possession_pct": 30.2,
+   "red_cards": 0,
+   "saves": 4,
+   "shots": 8,
+   "shots_on_target": 3,
+   "team": "Ipswich Town",
+   "yellow_cards": 2
+  }
+ ]
+}

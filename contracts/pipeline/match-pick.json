@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MatchPick",
+  "description": "LLM output of pick_match: the match to retell and why.",
+  "type": "object",
+  "required": [
+    "match_id",
+    "reason",
+    "angle",
+    "shortlist"
+  ],
+  "properties": {
+    "match_id": {
+      "type": "string",
+      "description": "One of the candidate match ids."
+    },
+    "reason": {
+      "type": "string",
+      "description": "One or two sentences, shown under the pick stage."
+    },
+    "angle": {
+      "enum": [
+        "drama",
+        "comedy"
+      ]
+    },
+    "shortlist": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Up to 3 candidate match ids considered, best first, including match_id."
+    }
+  },
+  "additionalProperties": false
+}

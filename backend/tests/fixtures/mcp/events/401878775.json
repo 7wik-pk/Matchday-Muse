@@ -1,0 +1,1011 @@
+{
+ "coverage": "full_events",
+ "events": [
+  {
+   "actors": [],
+   "clock": "0'",
+   "description": "First Half begins.",
+   "source_ref": "espn:401878775:play:53371739",
+   "type": "kickoff"
+  },
+  {
+   "actors": [
+    "Marcus Tavernier",
+    "Moisés Caicedo"
+   ],
+   "clock": "1'",
+   "description": "Moisés Caicedo (Chelsea) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878775:play:53371813",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Marcus Tavernier",
+    "Moisés Caicedo"
+   ],
+   "clock": "1'",
+   "description": "Foul by Marcus Tavernier (Bournemouth).",
+   "source_ref": "espn:401878775:play:53371813",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jordan Henderson",
+    "Cole Palmer"
+   ],
+   "clock": "2'",
+   "description": "Goal! Chelsea 1, Bournemouth 0. Jordan Henderson (Chelsea) right footed shot from outside the box to the bottom left corner. Assisted by Cole Palmer.",
+   "score_after": "1-0",
+   "source_ref": "espn:401878775:play:53371891",
+   "team": "Chelsea",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Pedro Neto",
+    "Cole Palmer"
+   ],
+   "clock": "3'",
+   "description": "Attempt saved. Pedro Neto (Chelsea) left footed shot from the right side of the box is saved in the centre of the goal by Djordje Petrovic (Bournemouth). Assisted by Cole Palmer.",
+   "source_ref": "espn:401878775:play:53372270",
+   "team": "Chelsea",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Morgan Rogers",
+    "Jordan Henderson"
+   ],
+   "clock": "3'",
+   "description": "Goal! Chelsea 2, Bournemouth 0. Morgan Rogers (Chelsea) right footed shot from the left side of the box to the top right corner. Assisted by Jordan Henderson.",
+   "score_after": "2-0",
+   "source_ref": "espn:401878775:play:53372278",
+   "team": "Chelsea",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Ryan Christie",
+    "Moisés Caicedo"
+   ],
+   "clock": "5'",
+   "description": "Foul by Ryan Christie (Bournemouth).",
+   "source_ref": "espn:401878775:play:53373316",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ryan Christie",
+    "Moisés Caicedo"
+   ],
+   "clock": "5'",
+   "description": "Moisés Caicedo (Chelsea) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878775:play:53373316",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Rayan",
+    "Marcus Tavernier"
+   ],
+   "clock": "6'",
+   "description": "Attempt missed. Rayan (Bournemouth) left footed shot from the left side of the box is high and wide to the left. Assisted by Marcus Tavernier.",
+   "source_ref": "espn:401878775:play:53373126",
+   "team": "AFC Bournemouth",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Marcus Tavernier",
+    "Cole Palmer"
+   ],
+   "clock": "10'",
+   "description": "Foul by Marcus Tavernier (Bournemouth).",
+   "source_ref": "espn:401878775:play:53374436",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Marcus Tavernier",
+    "Cole Palmer"
+   ],
+   "clock": "10'",
+   "description": "Cole Palmer (Chelsea) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878775:play:53374436",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Marcus Tavernier"
+   ],
+   "clock": "10'",
+   "description": "Marcus Tavernier (Bournemouth) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401878775:play:53374437",
+   "team": "AFC Bournemouth",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [],
+   "clock": "12'",
+   "description": "Corner, Chelsea. Conceded by James Hill.",
+   "source_ref": "espn:401878775:play:53374622",
+   "team": "Chelsea",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "António Silva",
+    "João Pedro"
+   ],
+   "clock": "14'",
+   "description": "Foul by António Silva (Bournemouth).",
+   "source_ref": "espn:401878775:play:53375078",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "António Silva",
+    "João Pedro"
+   ],
+   "clock": "14'",
+   "description": "João Pedro (Chelsea) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878775:play:53375078",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "20'",
+   "description": "Corner, Bournemouth. Conceded by Moisés Caicedo.",
+   "source_ref": "espn:401878775:play:53376826",
+   "team": "AFC Bournemouth",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Tyler Adams",
+    "Cole Palmer"
+   ],
+   "clock": "22'",
+   "description": "Cole Palmer (Chelsea) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878775:play:53377025",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Tyler Adams",
+    "Cole Palmer"
+   ],
+   "clock": "22'",
+   "description": "Foul by Tyler Adams (Bournemouth).",
+   "source_ref": "espn:401878775:play:53377025",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Pedro Neto"
+   ],
+   "clock": "23'",
+   "description": "Attempt blocked. Pedro Neto (Chelsea) left footed shot from the centre of the box is blocked.",
+   "source_ref": "espn:401878775:play:53377252",
+   "team": "Chelsea",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Jordan Henderson"
+   ],
+   "clock": "23'",
+   "description": "Attempt missed. Jordan Henderson (Chelsea) right footed shot from outside the box is high and wide to the left.",
+   "source_ref": "espn:401878775:play:53377254",
+   "team": "Chelsea",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Levi Colwill",
+    "Evanilson"
+   ],
+   "clock": "27'",
+   "description": "Evanilson (Bournemouth) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878775:play:53377950",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Levi Colwill",
+    "Evanilson"
+   ],
+   "clock": "27'",
+   "description": "Foul by Levi Colwill (Chelsea).",
+   "source_ref": "espn:401878775:play:53377950",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Morgan Rogers"
+   ],
+   "clock": "27'",
+   "description": "Attempt blocked. Morgan Rogers (Chelsea) right footed shot from the centre of the box is blocked.",
+   "source_ref": "espn:401878775:play:53378567",
+   "team": "Chelsea",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "James Hill",
+    "Morgan Rogers"
+   ],
+   "clock": "28'",
+   "description": "Foul by James Hill (Bournemouth).",
+   "source_ref": "espn:401878775:play:53378308",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "James Hill",
+    "Morgan Rogers"
+   ],
+   "clock": "28'",
+   "description": "Morgan Rogers (Chelsea) wins a free kick on the left wing.",
+   "source_ref": "espn:401878775:play:53378308",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Cole Palmer",
+    "Ryan Christie"
+   ],
+   "clock": "31'",
+   "description": "Ryan Christie (Bournemouth) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878775:play:53379192",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Cole Palmer",
+    "Ryan Christie"
+   ],
+   "clock": "31'",
+   "description": "Foul by Cole Palmer (Chelsea).",
+   "source_ref": "espn:401878775:play:53379192",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "34'",
+   "description": "Corner, Bournemouth. Conceded by Maxence Lacroix.",
+   "source_ref": "espn:401878775:play:53379898",
+   "team": "AFC Bournemouth",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Rayan",
+    "Adrien Truffert"
+   ],
+   "clock": "35'",
+   "description": "Attempt saved. Rayan (Bournemouth) left footed shot from the left side of the box is saved in the centre of the goal by Emiliano Martínez (Chelsea). Assisted by Adrien Truffert with a through ball.",
+   "source_ref": "espn:401878775:play:53379913",
+   "team": "AFC Bournemouth",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Ryan Christie"
+   ],
+   "clock": "36'",
+   "description": "Attempt saved. Ryan Christie (Bournemouth) left footed shot from outside the box is saved in the centre of the goal by Emiliano Martínez (Chelsea).",
+   "source_ref": "espn:401878775:play:53380177",
+   "team": "AFC Bournemouth",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Tyler Adams",
+    "Cole Palmer"
+   ],
+   "clock": "37'",
+   "description": "Foul by Tyler Adams (Bournemouth).",
+   "source_ref": "espn:401878775:play:53380657",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Tyler Adams",
+    "Cole Palmer"
+   ],
+   "clock": "37'",
+   "description": "Cole Palmer (Chelsea) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878775:play:53380657",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Josh Acheampong",
+    "Rayan"
+   ],
+   "clock": "39'",
+   "description": "Rayan (Bournemouth) wins a free kick on the left wing.",
+   "source_ref": "espn:401878775:play:53380845",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Josh Acheampong",
+    "Rayan"
+   ],
+   "clock": "39'",
+   "description": "Foul by Josh Acheampong (Chelsea).",
+   "source_ref": "espn:401878775:play:53380845",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Adrien Truffert",
+    "Pedro Neto"
+   ],
+   "clock": "42'",
+   "description": "Foul by Adrien Truffert (Bournemouth).",
+   "source_ref": "espn:401878775:play:53381765",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Adrien Truffert",
+    "Pedro Neto"
+   ],
+   "clock": "42'",
+   "description": "Pedro Neto (Chelsea) wins a free kick on the right wing.",
+   "source_ref": "espn:401878775:play:53381765",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Adrien Truffert"
+   ],
+   "clock": "42'",
+   "description": "Adrien Truffert (Bournemouth) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401878775:play:53382296",
+   "team": "AFC Bournemouth",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Moisés Caicedo",
+    "Jordan Henderson"
+   ],
+   "clock": "43'",
+   "description": "Attempt missed. Moisés Caicedo (Chelsea) header from the centre of the box misses to the left. Assisted by Jordan Henderson with a cross following a set piece situation.",
+   "source_ref": "espn:401878775:play:53382299",
+   "team": "Chelsea",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Cole Palmer",
+    "Ryan Christie"
+   ],
+   "clock": "44'",
+   "description": "Ryan Christie (Bournemouth) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878775:play:53382320",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Cole Palmer",
+    "Ryan Christie"
+   ],
+   "clock": "44'",
+   "description": "Foul by Cole Palmer (Chelsea).",
+   "source_ref": "espn:401878775:play:53382320",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Pep Chavarría",
+    "David Brooks"
+   ],
+   "clock": "45+1'",
+   "description": "David Brooks (Bournemouth) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878775:play:53382733",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Pep Chavarría",
+    "David Brooks"
+   ],
+   "clock": "45+1'",
+   "description": "Foul by Pep Chavarría (Chelsea).",
+   "source_ref": "espn:401878775:play:53382733",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "45+1'",
+   "description": "Corner, Bournemouth. Conceded by Levi Colwill.",
+   "source_ref": "espn:401878775:play:53383077",
+   "team": "AFC Bournemouth",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "António Silva",
+    "Adrien Truffert"
+   ],
+   "clock": "45+2'",
+   "description": "Attempt saved. António Silva (Bournemouth) header from the centre of the box is saved in the bottom left corner by Emiliano Martínez (Chelsea). Assisted by Adrien Truffert with a cross.",
+   "source_ref": "espn:401878775:play:53383083",
+   "team": "AFC Bournemouth",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [],
+   "clock": "45+3'",
+   "description": "First Half ends, Chelsea 2, Bournemouth 0.",
+   "score_after": "2-0",
+   "source_ref": "espn:401878775:play:53383471",
+   "type": "half_time"
+  },
+  {
+   "actors": [
+    "Ben Gannon-Doak",
+    "David Brooks"
+   ],
+   "clock": "45'",
+   "description": "Substitution, Bournemouth. Ben Gannon-Doak replaces David Brooks.",
+   "source_ref": "espn:401878775:play:53385502",
+   "team": "AFC Bournemouth",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "João Pedro",
+    "Pedro Neto"
+   ],
+   "clock": "46'",
+   "description": "Goal! Chelsea 3, Bournemouth 0. João Pedro (Chelsea) right footed shot from the centre of the box to the top right corner. Assisted by Pedro Neto.",
+   "score_after": "3-0",
+   "source_ref": "espn:401878775:play:53385608",
+   "team": "Chelsea",
+   "type": "goal"
+  },
+  {
+   "actors": [],
+   "clock": "51'",
+   "description": "Corner, Bournemouth. Conceded by Pedro Neto.",
+   "source_ref": "espn:401878775:play:53386851",
+   "team": "AFC Bournemouth",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "António Silva",
+    "Ryan Christie"
+   ],
+   "clock": "51'",
+   "description": "Attempt blocked. António Silva (Bournemouth) header from very close range is blocked. Assisted by Ryan Christie with a headed pass.",
+   "source_ref": "espn:401878775:play:53387341",
+   "team": "AFC Bournemouth",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Evanilson"
+   ],
+   "clock": "51'",
+   "description": "Goal! Chelsea 3, Bournemouth 1. Evanilson (Bournemouth) right footed shot from very close range to the high centre of the goal following a corner.",
+   "score_after": "3-1",
+   "source_ref": "espn:401878775:play:53387106",
+   "team": "AFC Bournemouth",
+   "type": "goal"
+  },
+  {
+   "actors": [],
+   "clock": "55'",
+   "description": "Corner, Bournemouth. Conceded by Pep Chavarría.",
+   "source_ref": "espn:401878775:play:53387690",
+   "team": "AFC Bournemouth",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Tyler Adams",
+    "Moisés Caicedo"
+   ],
+   "clock": "56'",
+   "description": "Foul by Tyler Adams (Bournemouth).",
+   "source_ref": "espn:401878775:play:53388070",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Tyler Adams",
+    "Moisés Caicedo"
+   ],
+   "clock": "56'",
+   "description": "Moisés Caicedo (Chelsea) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878775:play:53388070",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Moisés Caicedo",
+    "Ryan Christie"
+   ],
+   "clock": "58'",
+   "description": "Ryan Christie (Bournemouth) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878775:play:53388763",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Moisés Caicedo",
+    "Ryan Christie"
+   ],
+   "clock": "58'",
+   "description": "Foul by Moisés Caicedo (Chelsea).",
+   "source_ref": "espn:401878775:play:53388763",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Evanilson",
+    "Ben Gannon-Doak"
+   ],
+   "clock": "61'",
+   "description": "Attempt missed. Evanilson (Bournemouth) left footed shot from outside the box misses to the right. Assisted by Ben Gannon-Doak.",
+   "source_ref": "espn:401878775:play:53389372",
+   "team": "AFC Bournemouth",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Tyler Adams",
+    "João Pedro"
+   ],
+   "clock": "62'",
+   "description": "Foul by Tyler Adams (Bournemouth).",
+   "source_ref": "espn:401878775:play:53390152",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Tyler Adams",
+    "João Pedro"
+   ],
+   "clock": "62'",
+   "description": "João Pedro (Chelsea) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878775:play:53390152",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Tyler Adams"
+   ],
+   "clock": "62'",
+   "description": "Tyler Adams (Bournemouth) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401878775:play:53390153",
+   "team": "AFC Bournemouth",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "João Pedro",
+    "Pep Chavarría"
+   ],
+   "clock": "67'",
+   "description": "Goal! Chelsea 4, Bournemouth 1. João Pedro (Chelsea) right footed shot from the centre of the box to the top left corner. Assisted by Pep Chavarría with a cross.",
+   "score_after": "4-1",
+   "source_ref": "espn:401878775:play:53391136",
+   "team": "Chelsea",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Ryan Christie",
+    "Cole Palmer"
+   ],
+   "clock": "68'",
+   "description": "Foul by Ryan Christie (Bournemouth).",
+   "source_ref": "espn:401878775:play:53391403",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ryan Christie",
+    "Cole Palmer"
+   ],
+   "clock": "68'",
+   "description": "Cole Palmer (Chelsea) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878775:play:53391403",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ryan Christie"
+   ],
+   "clock": "69'",
+   "description": "Ryan Christie (Bournemouth) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401878775:play:53391521",
+   "team": "AFC Bournemouth",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Jordan Henderson"
+   ],
+   "clock": "70'",
+   "description": "Goal! Chelsea 5, Bournemouth 1. Jordan Henderson (Chelsea) from a free kick with a right footed shot to the top right corner.",
+   "score_after": "5-1",
+   "source_ref": "espn:401878775:play:53391731",
+   "team": "Chelsea",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Romeo Lavia",
+    "Moisés Caicedo"
+   ],
+   "clock": "72'",
+   "description": "Substitution, Chelsea. Roméo Lavia replaces Moisés Caicedo.",
+   "source_ref": "espn:401878775:play:53392278",
+   "team": "Chelsea",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Marco Palestra",
+    "João Pedro"
+   ],
+   "clock": "72'",
+   "description": "Substitution, Chelsea. Marco Palestra replaces João Pedro.",
+   "source_ref": "espn:401878775:play:53392279",
+   "team": "Chelsea",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Juanlu Sanchez",
+    "Adam Smith"
+   ],
+   "clock": "72'",
+   "description": "Substitution, Bournemouth. Juanlu Sánchez replaces Adam Smith.",
+   "source_ref": "espn:401878775:play:53392430",
+   "team": "AFC Bournemouth",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Álvaro Rodríguez",
+    "Marcus Tavernier"
+   ],
+   "clock": "72'",
+   "description": "Substitution, Bournemouth. Álvaro Rodríguez replaces Marcus Tavernier.",
+   "source_ref": "espn:401878775:play:53392431",
+   "team": "AFC Bournemouth",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Lewis Cook",
+    "Ryan Christie"
+   ],
+   "clock": "73'",
+   "description": "Substitution, Bournemouth. Lewis Cook replaces Ryan Christie.",
+   "source_ref": "espn:401878775:play:53392280",
+   "team": "AFC Bournemouth",
+   "type": "sub"
+  },
+  {
+   "actors": [],
+   "clock": "78'",
+   "description": "Corner, Bournemouth. Conceded by Jordan Henderson.",
+   "source_ref": "espn:401878775:play:53393267",
+   "team": "AFC Bournemouth",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Morgan Rogers",
+    "Evanilson"
+   ],
+   "clock": "80'",
+   "description": "Evanilson (Bournemouth) wins a free kick on the right wing.",
+   "source_ref": "espn:401878775:play:53393565",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Morgan Rogers",
+    "Evanilson"
+   ],
+   "clock": "80'",
+   "description": "Foul by Morgan Rogers (Chelsea).",
+   "source_ref": "espn:401878775:play:53393565",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Danny Welbeck",
+    "Pedro Neto"
+   ],
+   "clock": "83'",
+   "description": "Substitution, Chelsea. Danny Welbeck replaces Pedro Neto.",
+   "source_ref": "espn:401878775:play:53394355",
+   "team": "Chelsea",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Estêvão",
+    "Morgan Rogers"
+   ],
+   "clock": "84'",
+   "description": "Substitution, Chelsea. Estêvão replaces Morgan Rogers.",
+   "source_ref": "espn:401878775:play:53394720",
+   "team": "Chelsea",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Julio Soler",
+    "Adrien Truffert"
+   ],
+   "clock": "84'",
+   "description": "Substitution, Bournemouth. Julio Soler replaces Adrien Truffert.",
+   "source_ref": "espn:401878775:play:53394721",
+   "team": "AFC Bournemouth",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Evanilson",
+    "Ben Gannon-Doak"
+   ],
+   "clock": "85'",
+   "description": "Attempt missed. Evanilson (Bournemouth) header from the centre of the box is high and wide to the left. Assisted by Ben Gannon-Doak with a cross.",
+   "source_ref": "espn:401878775:play:53394692",
+   "team": "AFC Bournemouth",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Julio Soler",
+    "Estêvão"
+   ],
+   "clock": "87'",
+   "description": "Estêvão (Chelsea) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878775:play:53395299",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Julio Soler",
+    "Estêvão"
+   ],
+   "clock": "87'",
+   "description": "Foul by Julio Soler (Bournemouth).",
+   "source_ref": "espn:401878775:play:53395299",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Malo Gusto",
+    "Cole Palmer"
+   ],
+   "clock": "88'",
+   "description": "Substitution, Chelsea. Malo Gusto replaces Cole Palmer.",
+   "source_ref": "espn:401878775:play:53395314",
+   "team": "Chelsea",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Álvaro Rodríguez"
+   ],
+   "clock": "88'",
+   "description": "Attempt blocked. Álvaro Rodríguez (Bournemouth) left footed shot from outside the box is blocked.",
+   "source_ref": "espn:401878775:play:53395309",
+   "team": "AFC Bournemouth",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "88'",
+   "description": "Corner, Bournemouth. Conceded by Jordan Henderson.",
+   "source_ref": "espn:401878775:play:53395607",
+   "team": "AFC Bournemouth",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Evanilson",
+    "Romeo Lavia"
+   ],
+   "clock": "90'",
+   "description": "Foul by Evanilson (Bournemouth).",
+   "source_ref": "espn:401878775:play:53395789",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Evanilson",
+    "Romeo Lavia"
+   ],
+   "clock": "90'",
+   "description": "Roméo Lavia (Chelsea) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878775:play:53395789",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Tyler Adams",
+    "Romeo Lavia"
+   ],
+   "clock": "90+1'",
+   "description": "Foul by Tyler Adams (Bournemouth).",
+   "source_ref": "espn:401878775:play:53395799",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Tyler Adams",
+    "Romeo Lavia"
+   ],
+   "clock": "90+1'",
+   "description": "Roméo Lavia (Chelsea) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878775:play:53395799",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Pep Chavarría"
+   ],
+   "clock": "90+2'",
+   "description": "Offside, Chelsea. Estêvão is caught offside.",
+   "source_ref": "espn:401878775:play:53396229",
+   "team": "Chelsea",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Lewis Cook",
+    "Malo Gusto"
+   ],
+   "clock": "90+5'",
+   "description": "Foul by Lewis Cook (Bournemouth).",
+   "source_ref": "espn:401878775:play:53396673",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lewis Cook",
+    "Malo Gusto"
+   ],
+   "clock": "90+5'",
+   "description": "Malo Gusto (Chelsea) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878775:play:53396673",
+   "team": "AFC Bournemouth",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "90+6'",
+   "description": "Second Half ends, Chelsea 5, Bournemouth 1.",
+   "score_after": "5-1",
+   "source_ref": "espn:401878775:play:53396703",
+   "type": "full_time"
+  }
+ ],
+ "match": {
+  "end_estimate": "2026-10-10T16:00:00Z",
+  "final_result": "Chelsea 5–1 AFC Bournemouth",
+  "id": "401878775",
+  "kickoff": "2026-10-10T14:00:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "CHE",
+    "name": "Chelsea",
+    "role": "home",
+    "score": "5",
+    "short_name": "Chelsea",
+    "winner": true
+   },
+   {
+    "abbreviation": "BOU",
+    "name": "AFC Bournemouth",
+    "role": "away",
+    "score": "1",
+    "short_name": "Bournemouth",
+    "winner": false
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Jordan Henderson was the unlikely hero as Chelsea's entertainers blew Bournemouth away in a comprehensive and chaotic 5-1 win at Stamford Bridge.",
+  "title": "Chelsea v AFC Bournemouth",
+  "venue": "Stamford Bridge"
+ },
+ "sources": [
+  {
+   "publisher": "ESPN",
+   "title": "Chelsea v AFC Bournemouth: match events",
+   "url": "https://www.espn.com/soccer/match/_/gameId/401878775"
+  },
+  {
+   "published_at": "2026-10-10T15:53:00Z",
+   "publisher": "ESPN",
+   "title": "Jordan Henderson, 36, nets unlikely brace as Chelsea thrash Bournemouth",
+   "url": "https://www.espn.com/soccer/report/_/gameId/401878775"
+  }
+ ],
+ "team_stats": [
+  {
+   "corners": 1,
+   "fouls": 7,
+   "possession_pct": 49.9,
+   "red_cards": 0,
+   "saves": 3,
+   "shots": 10,
+   "shots_on_target": 6,
+   "team": "Chelsea",
+   "yellow_cards": 0
+  },
+  {
+   "corners": 7,
+   "fouls": 15,
+   "possession_pct": 50.1,
+   "red_cards": 0,
+   "saves": 1,
+   "shots": 9,
+   "shots_on_target": 4,
+   "team": "AFC Bournemouth",
+   "yellow_cards": 4
+  }
+ ]
+}

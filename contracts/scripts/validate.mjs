@@ -40,6 +40,48 @@ for (const file of schemaFiles) {
   }
 }
 
+// Schemas used as LLM structured outputs must stay inside the subset every
+// provider accepts through LiteLLM: closed objects with every property
+// required (nullable types instead of optional fields), no oneOf/anyOf/allOf,
+// and no format, pattern, length or range keywords (Pydantic checks those
+// after parsing). $refs to other pipeline files are followed.
+const LLM_OUTPUT_SCHEMAS = ['match-pick', 'moment-pick', 'fact-draft', 'poem', 'grounding-verdict'];
+const UNSUPPORTED = ['oneOf', 'anyOf', 'allOf', 'not', 'format', 'pattern', 'minLength', 'maxLength',
+  'minItems', 'maxItems', 'minimum', 'maximum', 'exclusiveMinimum', 'exclusiveMaximum', 'default'];
+
+function checkStrict(file, node, path, seen) {
+  if (Array.isArray(node)) {
+    node.forEach((child, i) => checkStrict(file, child, `${path}/${i}`, seen));
+    return;
+  }
+  if (!node || typeof node !== 'object') return;
+  const where = `${relative(root, file)}${path || '/'}`;
+  for (const key of UNSUPPORTED) {
+    if (key in node) fail(where, `"${key}" is not allowed in an LLM output schema`);
+  }
+  if (node.type === 'object' || node.properties) {
+    if (node.additionalProperties !== false) fail(where, 'objects must set additionalProperties: false');
+    const props = Object.keys(node.properties ?? {});
+    const required = new Set(node.required ?? []);
+    const optional = props.filter((p) => !required.has(p));
+    if (optional.length) fail(where, `every property must be required (use a nullable type): ${optional}`);
+  }
+  if (typeof node.$ref === 'string' && !node.$ref.startsWith('#')) {
+    const target = join(dirname(file), node.$ref);
+    if (!seen.has(target)) {
+      seen.add(target);
+      checkStrict(target, readJson(target), '', seen);
+    }
+  }
+  for (const [key, child] of Object.entries(node)) {
+    if (key !== '$ref') checkStrict(file, child, `${path}/${key}`, seen);
+  }
+}
+for (const name of LLM_OUTPUT_SCHEMAS) {
+  const file = join(root, 'pipeline', `${name}.json`);
+  checkStrict(file, readJson(file), '', new Set([file]));
+}
+
 // contracts/mcp/ holds tool descriptors generated from the Go server; their
 // input and output schemas must compile here too, since Python and
 // TypeScript generate from them.

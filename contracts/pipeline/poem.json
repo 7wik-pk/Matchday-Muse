@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Poem",
+  "description": "LLM output of generate: the headline and the poem as stanzas of lines, so line boundaries never depend on parsing text.",
+  "type": "object",
+  "required": [
+    "headline",
+    "stanzas"
+  ],
+  "properties": {
+    "headline": {
+      "type": "string",
+      "description": "Up to 10 words; does not give away the final result."
+    },
+    "stanzas": {
+      "type": "array",
+      "items": {
+        "title": "PoemStanza",
+        "type": "object",
+        "required": [
+          "lines"
+        ],
+        "properties": {
+          "lines": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

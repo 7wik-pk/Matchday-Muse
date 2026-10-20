@@ -1,0 +1,1146 @@
+{
+ "coverage": "full_events",
+ "events": [
+  {
+   "actors": [
+    "Kiernan Dewsbury-Hall",
+    "Pedro Neto"
+   ],
+   "clock": "2'",
+   "description": "Pedro Neto (Chelsea) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878771:play:53762920",
+   "team": "Everton",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Kiernan Dewsbury-Hall",
+    "Pedro Neto"
+   ],
+   "clock": "2'",
+   "description": "Foul by Kiernan Dewsbury-Hall (Everton).",
+   "source_ref": "espn:401878771:play:53762920",
+   "team": "Everton",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "James Garner",
+    "Moisés Caicedo"
+   ],
+   "clock": "2'",
+   "description": "Foul by James Garner (Everton).",
+   "source_ref": "espn:401878771:play:53762965",
+   "team": "Everton",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "James Garner",
+    "Moisés Caicedo"
+   ],
+   "clock": "2'",
+   "description": "Moisés Caicedo (Chelsea) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878771:play:53762965",
+   "team": "Everton",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Morgan Rogers"
+   ],
+   "clock": "8'",
+   "description": "Handball by Morgan Rogers (Chelsea).",
+   "source_ref": "espn:401878771:play:53763551",
+   "team": "Chelsea",
+   "type": "handball"
+  },
+  {
+   "actors": [
+    "Moisés Caicedo",
+    "Kiernan Dewsbury-Hall"
+   ],
+   "clock": "9'",
+   "description": "Kiernan Dewsbury-Hall (Everton) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878771:play:53763607",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Moisés Caicedo",
+    "Kiernan Dewsbury-Hall"
+   ],
+   "clock": "9'",
+   "description": "Foul by Moisés Caicedo (Chelsea).",
+   "source_ref": "espn:401878771:play:53763607",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Pedro Neto",
+    "Vitaliy Mykolenko"
+   ],
+   "clock": "10'",
+   "description": "Vitalii Mykolenko (Everton) wins a free kick on the left wing.",
+   "source_ref": "espn:401878771:play:53763783",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Pedro Neto",
+    "Vitaliy Mykolenko"
+   ],
+   "clock": "10'",
+   "description": "Foul by Pedro Neto (Chelsea).",
+   "source_ref": "espn:401878771:play:53763783",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Kiernan Dewsbury-Hall"
+   ],
+   "clock": "11'",
+   "description": "Offside, Everton. Jack Grealish is caught offside.",
+   "source_ref": "espn:401878771:play:53763866",
+   "team": "Everton",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Moisés Caicedo",
+    "Kiernan Dewsbury-Hall"
+   ],
+   "clock": "12'",
+   "description": "Kiernan Dewsbury-Hall (Everton) wins a free kick on the left wing.",
+   "source_ref": "espn:401878771:play:53763964",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Moisés Caicedo",
+    "Kiernan Dewsbury-Hall"
+   ],
+   "clock": "12'",
+   "description": "Foul by Moisés Caicedo (Chelsea).",
+   "source_ref": "espn:401878771:play:53763964",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Cole Palmer",
+    "Pedro Neto"
+   ],
+   "clock": "15'",
+   "description": "Attempt saved. Cole Palmer (Chelsea) left footed shot from outside the box is saved in the bottom right corner by Jordan Pickford (Everton). Assisted by Pedro Neto.",
+   "source_ref": "espn:401878771:play:53764265",
+   "team": "Chelsea",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [],
+   "clock": "16'",
+   "description": "Corner, Everton. Conceded by Morgan Rogers.",
+   "source_ref": "espn:401878771:play:53764418",
+   "team": "Everton",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Jordan Henderson",
+    "Pedro Neto"
+   ],
+   "clock": "21'",
+   "description": "Attempt blocked. Jordan Henderson (Chelsea) right footed shot from the centre of the box is blocked. Assisted by Pedro Neto.",
+   "source_ref": "espn:401878771:play:53764903",
+   "team": "Chelsea",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "João Pedro",
+    "James Tarkowski"
+   ],
+   "clock": "22'",
+   "description": "James Tarkowski (Everton) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878771:play:53765590",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "João Pedro",
+    "James Tarkowski"
+   ],
+   "clock": "22'",
+   "description": "Foul by João Pedro (Chelsea).",
+   "source_ref": "espn:401878771:play:53765590",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Harrison Armstrong",
+    "Josh Acheampong"
+   ],
+   "clock": "23'",
+   "description": "Foul by Harrison Armstrong (Everton).",
+   "source_ref": "espn:401878771:play:53765191",
+   "team": "Everton",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Harrison Armstrong",
+    "Josh Acheampong"
+   ],
+   "clock": "23'",
+   "description": "Josh Acheampong (Chelsea) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878771:play:53765191",
+   "team": "Everton",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Harrison Armstrong"
+   ],
+   "clock": "23'",
+   "description": "Harrison Armstrong (Everton) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401878771:play:53765192",
+   "team": "Everton",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "James Garner"
+   ],
+   "clock": "25'",
+   "description": "Offside, Everton. Kiernan Dewsbury-Hall is caught offside.",
+   "source_ref": "espn:401878771:play:53765209",
+   "team": "Everton",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Merlin Röhl",
+    "Kiernan Dewsbury-Hall"
+   ],
+   "clock": "26'",
+   "description": "Attempt saved. Merlin Röhl (Everton) right footed shot from the right side of the box is saved in the centre of the goal by Emiliano Martínez (Chelsea). Assisted by Kiernan Dewsbury-Hall.",
+   "source_ref": "espn:401878771:play:53765373",
+   "team": "Everton",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [],
+   "clock": "26'",
+   "description": "Corner, Everton. Conceded by Emiliano Martínez.",
+   "source_ref": "espn:401878771:play:53765419",
+   "team": "Everton",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Pedro Neto"
+   ],
+   "clock": "27'",
+   "description": "Pedro Neto (Chelsea) is shown the yellow card.",
+   "source_ref": "espn:401878771:play:53765420",
+   "team": "Chelsea",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Thierno Barry",
+    "Jack Grealish"
+   ],
+   "clock": "27'",
+   "description": "Attempt saved. Thierno Barry (Everton) header from the centre of the box is saved in the centre of the goal by Emiliano Martínez (Chelsea). Assisted by Jack Grealish with a cross.",
+   "source_ref": "espn:401878771:play:53765425",
+   "team": "Everton",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Cole Palmer",
+    "James Tarkowski"
+   ],
+   "clock": "29'",
+   "description": "James Tarkowski (Everton) wins a free kick on the right wing.",
+   "source_ref": "espn:401878771:play:53765739",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Cole Palmer",
+    "James Tarkowski"
+   ],
+   "clock": "29'",
+   "description": "Foul by Cole Palmer (Chelsea).",
+   "source_ref": "espn:401878771:play:53765739",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jack Grealish",
+    "James Tarkowski"
+   ],
+   "clock": "30'",
+   "description": "Attempt saved. Jack Grealish (Everton) right footed shot from the left side of the box is saved in the top centre of the goal by Emiliano Martínez (Chelsea). Assisted by James Tarkowski.",
+   "source_ref": "espn:401878771:play:53765744",
+   "team": "Everton",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [],
+   "clock": "30'",
+   "description": "Corner, Everton. Conceded by Emiliano Martínez.",
+   "source_ref": "espn:401878771:play:53765746",
+   "team": "Everton",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Josh Acheampong",
+    "Thierno Barry"
+   ],
+   "clock": "32'",
+   "description": "Thierno Barry (Everton) wins a free kick on the left wing.",
+   "source_ref": "espn:401878771:play:53766100",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Josh Acheampong",
+    "Thierno Barry"
+   ],
+   "clock": "32'",
+   "description": "Foul by Josh Acheampong (Chelsea).",
+   "source_ref": "espn:401878771:play:53766100",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Josh Acheampong"
+   ],
+   "clock": "32'",
+   "description": "Josh Acheampong (Chelsea) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401878771:play:53766179",
+   "team": "Chelsea",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "James Tarkowski",
+    "Jorrel Hato"
+   ],
+   "clock": "33'",
+   "description": "Foul by James Tarkowski (Everton).",
+   "source_ref": "espn:401878771:play:53766181",
+   "team": "Everton",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "James Tarkowski",
+    "Jorrel Hato"
+   ],
+   "clock": "33'",
+   "description": "Moisés Caicedo (Chelsea) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878771:play:53766181",
+   "team": "Everton",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "James Tarkowski"
+   ],
+   "clock": "34'",
+   "description": "James Tarkowski (Everton) is shown the yellow card.",
+   "source_ref": "espn:401878771:play:53766406",
+   "team": "Everton",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Morgan Rogers"
+   ],
+   "clock": "34'",
+   "description": "Morgan Rogers (Chelsea) is shown the yellow card.",
+   "source_ref": "espn:401878771:play:53766407",
+   "team": "Chelsea",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Thierno Barry",
+    "Vitaliy Mykolenko"
+   ],
+   "clock": "37'",
+   "description": "Attempt saved. Thierno Barry (Everton) right footed shot from the centre of the box is saved in the centre of the goal by Emiliano Martínez (Chelsea). Assisted by Vitalii Mykolenko.",
+   "source_ref": "espn:401878771:play:53766973",
+   "team": "Everton",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [],
+   "clock": "40'",
+   "description": "Corner, Chelsea. Conceded by Harrison Armstrong.",
+   "source_ref": "espn:401878771:play:53767165",
+   "team": "Chelsea",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Moisés Caicedo",
+    "Jordan Henderson"
+   ],
+   "clock": "40'",
+   "description": "Moisés Caicedo (Chelsea) hits the bar with a right footed shot from the right side of the box. Assisted by Jordan Henderson following a corner.",
+   "source_ref": "espn:401878771:play:53767288",
+   "team": "Chelsea",
+   "type": "woodwork"
+  },
+  {
+   "actors": [
+    "Maxence Lacroix",
+    "Vitaliy Mykolenko"
+   ],
+   "clock": "40'",
+   "description": "Vitalii Mykolenko (Everton) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878771:play:53767289",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Maxence Lacroix",
+    "Vitaliy Mykolenko"
+   ],
+   "clock": "40'",
+   "description": "Foul by Maxence Lacroix (Chelsea).",
+   "source_ref": "espn:401878771:play:53767289",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ainsley Maitland-Niles",
+    "Morgan Rogers"
+   ],
+   "clock": "45'",
+   "description": "Foul by Ainsley Maitland-Niles (Everton).",
+   "source_ref": "espn:401878771:play:53767880",
+   "team": "Everton",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ainsley Maitland-Niles",
+    "Morgan Rogers"
+   ],
+   "clock": "45'",
+   "description": "Morgan Rogers (Chelsea) wins a free kick on the left wing.",
+   "source_ref": "espn:401878771:play:53767880",
+   "team": "Everton",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Pedro Neto",
+    "Cole Palmer"
+   ],
+   "clock": "45+1'",
+   "description": "Attempt saved. Pedro Neto (Chelsea) left footed shot from outside the box is saved in the top centre of the goal by Jordan Pickford (Everton). Assisted by Cole Palmer.",
+   "source_ref": "espn:401878771:play:53768048",
+   "team": "Chelsea",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [],
+   "clock": "45+1'",
+   "description": "Corner, Chelsea. Conceded by Jordan Pickford.",
+   "source_ref": "espn:401878771:play:53768050",
+   "team": "Chelsea",
+   "type": "corner"
+  },
+  {
+   "actors": [],
+   "clock": "45+2'",
+   "description": "Corner, Chelsea. Conceded by Vitalii Mykolenko.",
+   "source_ref": "espn:401878771:play:53768053",
+   "team": "Chelsea",
+   "type": "corner"
+  },
+  {
+   "actors": [],
+   "clock": "45+2'",
+   "description": "Corner, Chelsea. Conceded by Vitalii Mykolenko.",
+   "source_ref": "espn:401878771:play:53768163",
+   "team": "Chelsea",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Maxence Lacroix",
+    "Jorrel Hato"
+   ],
+   "clock": "45+3'",
+   "description": "Attempt blocked. Maxence Lacroix (Chelsea) header from very close range is blocked. Assisted by Jordan Henderson with a cross.",
+   "source_ref": "espn:401878771:play:53768165",
+   "team": "Chelsea",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "45+4'",
+   "description": "First Half ends, Everton 0, Chelsea 0.",
+   "score_after": "0-0",
+   "source_ref": "espn:401878771:play:53768297",
+   "type": "half_time"
+  },
+  {
+   "actors": [],
+   "clock": "45'",
+   "description": "Second Half begins Everton 0, Chelsea 0.",
+   "source_ref": "espn:401878771:play:53769427",
+   "type": "second_half"
+  },
+  {
+   "actors": [
+    "Pedro Neto"
+   ],
+   "clock": "46'",
+   "description": "Goal! Everton 0, Chelsea 1. Pedro Neto (Chelsea) left footed shot from the centre of the box to the bottom right corner.",
+   "score_after": "0-1",
+   "source_ref": "espn:401878771:play:53769547",
+   "team": "Chelsea",
+   "type": "goal"
+  },
+  {
+   "actors": [],
+   "clock": "52'",
+   "description": "Corner, Chelsea. Conceded by Harrison Armstrong.",
+   "source_ref": "espn:401878771:play:53770124",
+   "team": "Chelsea",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Cole Palmer",
+    "Pedro Neto"
+   ],
+   "clock": "53'",
+   "description": "Attempt blocked. Cole Palmer (Chelsea) left footed shot from outside the box is blocked. Assisted by Pedro Neto.",
+   "source_ref": "espn:401878771:play:53770309",
+   "team": "Chelsea",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Ainsley Maitland-Niles",
+    "Morgan Rogers"
+   ],
+   "clock": "55'",
+   "description": "Foul by Ainsley Maitland-Niles (Everton).",
+   "source_ref": "espn:401878771:play:53770581",
+   "team": "Everton",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ainsley Maitland-Niles",
+    "Morgan Rogers"
+   ],
+   "clock": "55'",
+   "description": "Morgan Rogers (Chelsea) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878771:play:53770581",
+   "team": "Everton",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Tyrique George",
+    "Ainsley Maitland-Niles"
+   ],
+   "clock": "55'",
+   "description": "Substitution, Everton. Tyrique George replaces Ainsley Maitland-Niles.",
+   "source_ref": "espn:401878771:play:53770768",
+   "team": "Everton",
+   "type": "sub"
+  },
+  {
+   "actors": [],
+   "clock": "56'",
+   "description": "Corner, Chelsea. Conceded by Merlin Röhl.",
+   "source_ref": "espn:401878771:play:53770703",
+   "team": "Chelsea",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Morgan Rogers",
+    "Pedro Neto"
+   ],
+   "clock": "56'",
+   "description": "Attempt blocked. Morgan Rogers (Chelsea) right footed shot from the centre of the box is blocked. Assisted by Pedro Neto.",
+   "source_ref": "espn:401878771:play:53770704",
+   "team": "Chelsea",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Morgan Rogers",
+    "Moisés Caicedo"
+   ],
+   "clock": "56'",
+   "description": "Attempt missed. Morgan Rogers (Chelsea) right footed shot from outside the box misses to the right. Assisted by Moisés Caicedo following a corner.",
+   "source_ref": "espn:401878771:play:53770952",
+   "team": "Chelsea",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Cole Palmer",
+    "Morgan Rogers"
+   ],
+   "clock": "57'",
+   "description": "Attempt missed. Cole Palmer (Chelsea) left footed shot from outside the box is too high. Assisted by Morgan Rogers.",
+   "source_ref": "espn:401878771:play:53770972",
+   "team": "Chelsea",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Pedro Neto",
+    "Vitaliy Mykolenko"
+   ],
+   "clock": "61'",
+   "description": "Vitalii Mykolenko (Everton) wins a free kick on the left wing.",
+   "source_ref": "espn:401878771:play:53771509",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Pedro Neto",
+    "Vitaliy Mykolenko"
+   ],
+   "clock": "61'",
+   "description": "Foul by Pedro Neto (Chelsea).",
+   "source_ref": "espn:401878771:play:53771509",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "James Tarkowski"
+   ],
+   "clock": "63'",
+   "description": "Offside, Everton. Jack Grealish is caught offside.",
+   "source_ref": "espn:401878771:play:53771620",
+   "team": "Everton",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "João Pedro",
+    "Pedro Neto"
+   ],
+   "clock": "64'",
+   "description": "Attempt missed. João Pedro (Chelsea) left footed shot from outside the box misses to the left. Assisted by Pedro Neto.",
+   "source_ref": "espn:401878771:play:53771791",
+   "team": "Chelsea",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Moisés Caicedo",
+    "Harrison Armstrong"
+   ],
+   "clock": "65'",
+   "description": "Harrison Armstrong (Everton) wins a free kick on the left wing.",
+   "source_ref": "espn:401878771:play:53771904",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Moisés Caicedo",
+    "Harrison Armstrong"
+   ],
+   "clock": "65'",
+   "description": "Foul by Moisés Caicedo (Chelsea).",
+   "source_ref": "espn:401878771:play:53771904",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Cole Palmer"
+   ],
+   "clock": "65'",
+   "description": "Cole Palmer (Chelsea) is shown the yellow card.",
+   "source_ref": "espn:401878771:play:53771947",
+   "team": "Chelsea",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Jarrad Branthwaite",
+    "Emiliano Martínez"
+   ],
+   "clock": "66'",
+   "description": "Foul by Jarrad Branthwaite (Everton).",
+   "source_ref": "espn:401878771:play:53771949",
+   "team": "Everton",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jarrad Branthwaite",
+    "Emiliano Martínez"
+   ],
+   "clock": "66'",
+   "description": "Emiliano Martínez (Chelsea) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878771:play:53771949",
+   "team": "Everton",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Mike Penders",
+    "Emiliano Martínez"
+   ],
+   "clock": "75'",
+   "description": "Substitution, Chelsea. Mike Penders replaces Emiliano Martínez because of an injury.",
+   "source_ref": "espn:401878771:play:53773082",
+   "team": "Chelsea",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "João Pedro",
+    "Vitaliy Mykolenko"
+   ],
+   "clock": "76'",
+   "description": "Vitalii Mykolenko (Everton) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878771:play:53773122",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "João Pedro",
+    "Vitaliy Mykolenko"
+   ],
+   "clock": "76'",
+   "description": "Foul by João Pedro (Chelsea).",
+   "source_ref": "espn:401878771:play:53773122",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jordan Henderson",
+    "Kiernan Dewsbury-Hall"
+   ],
+   "clock": "77'",
+   "description": "Kiernan Dewsbury-Hall (Everton) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878771:play:53773278",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jordan Henderson",
+    "Kiernan Dewsbury-Hall"
+   ],
+   "clock": "77'",
+   "description": "Foul by Jordan Henderson (Chelsea).",
+   "source_ref": "espn:401878771:play:53773278",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Levi Colwill"
+   ],
+   "clock": "80'",
+   "description": "Offside, Chelsea. Morgan Rogers is caught offside.",
+   "source_ref": "espn:401878771:play:53773586",
+   "team": "Chelsea",
+   "type": "offside"
+  },
+  {
+   "actors": [],
+   "clock": "81'",
+   "description": "Corner, Chelsea. Conceded by James Tarkowski.",
+   "source_ref": "espn:401878771:play:53773931",
+   "team": "Chelsea",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "João Pedro",
+    "Jordan Henderson"
+   ],
+   "clock": "82'",
+   "description": "Attempt saved. João Pedro (Chelsea) header from the left side of the six yard box is saved in the top left corner by Jordan Pickford (Everton). Assisted by Jordan Henderson with a cross.",
+   "source_ref": "espn:401878771:play:53773934",
+   "team": "Chelsea",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Cole Palmer",
+    "Josh Acheampong"
+   ],
+   "clock": "82'",
+   "description": "Attempt missed. Cole Palmer (Chelsea) left footed shot from outside the box misses to the left. Assisted by Josh Acheampong following a corner.",
+   "source_ref": "espn:401878771:play:53774048",
+   "team": "Chelsea",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [],
+   "clock": "83'",
+   "description": "Corner, Everton. Conceded by Maxence Lacroix.",
+   "source_ref": "espn:401878771:play:53774073",
+   "team": "Everton",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Christian Nørgaard",
+    "Harrison Armstrong"
+   ],
+   "clock": "85'",
+   "description": "Substitution, Everton. Christian Nørgaard replaces Harrison Armstrong.",
+   "source_ref": "espn:401878771:play:53774414",
+   "team": "Everton",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Brennan Johnson",
+    "Jack Grealish"
+   ],
+   "clock": "85'",
+   "description": "Substitution, Everton. Brennan Johnson replaces Jack Grealish.",
+   "source_ref": "espn:401878771:play:53774415",
+   "team": "Everton",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "João Pedro",
+    "Cole Palmer"
+   ],
+   "clock": "86'",
+   "description": "Attempt saved. João Pedro (Chelsea) right footed shot from the centre of the box is saved in the centre of the goal by Jordan Pickford (Everton). Assisted by Cole Palmer.",
+   "source_ref": "espn:401878771:play:53774631",
+   "team": "Chelsea",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Cole Palmer"
+   ],
+   "clock": "86'",
+   "description": "Attempt missed. Cole Palmer (Chelsea) header from the centre of the box is close, but misses to the left following a fast break.",
+   "source_ref": "espn:401878771:play:53774633",
+   "team": "Chelsea",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Cole Palmer",
+    "Morgan Rogers"
+   ],
+   "clock": "87'",
+   "description": "Attempt blocked. Cole Palmer (Chelsea) left footed shot from a difficult angle on the left is blocked. Assisted by Morgan Rogers.",
+   "source_ref": "espn:401878771:play:53774651",
+   "team": "Chelsea",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Jarrad Branthwaite"
+   ],
+   "clock": "88'",
+   "description": "Attempt missed. Jarrad Branthwaite (Everton) right footed shot from the centre of the box misses to the left.",
+   "source_ref": "espn:401878771:play:53774754",
+   "team": "Everton",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Thierno Barry",
+    "Vitaliy Mykolenko"
+   ],
+   "clock": "88'",
+   "description": "Attempt saved. Thierno Barry (Everton) header from the centre of the box is saved in the top centre of the goal by Mike Penders (Chelsea). Assisted by Vitalii Mykolenko with a cross.",
+   "source_ref": "espn:401878771:play:53774759",
+   "team": "Everton",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Christian Nørgaard",
+    "Cole Palmer"
+   ],
+   "clock": "89'",
+   "description": "Foul by Christian Nørgaard (Everton).",
+   "source_ref": "espn:401878771:play:53774909",
+   "team": "Everton",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Christian Nørgaard",
+    "Cole Palmer"
+   ],
+   "clock": "89'",
+   "description": "Cole Palmer (Chelsea) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878771:play:53774909",
+   "team": "Everton",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Christian Nørgaard"
+   ],
+   "clock": "89'",
+   "description": "Christian Nørgaard (Everton) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401878771:play:53774910",
+   "team": "Everton",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Jordan Henderson"
+   ],
+   "clock": "90'",
+   "description": "Attempt blocked. Jordan Henderson (Chelsea) right footed shot from outside the box is blocked.",
+   "source_ref": "espn:401878771:play:53775059",
+   "team": "Chelsea",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Pedro Neto"
+   ],
+   "clock": "90'",
+   "description": "Goal! Everton 0, Chelsea 2. Pedro Neto (Chelsea) left footed shot from the centre of the box to the bottom left corner following a set piece situation.",
+   "score_after": "0-2",
+   "source_ref": "espn:401878771:play:53775060",
+   "team": "Chelsea",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Danny Welbeck",
+    "João Pedro"
+   ],
+   "clock": "90+2'",
+   "description": "Substitution, Chelsea. Danny Welbeck replaces João Pedro.",
+   "source_ref": "espn:401878771:play:53775265",
+   "team": "Chelsea",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Marco Palestra",
+    "Jorrel Hato"
+   ],
+   "clock": "90+2'",
+   "description": "Substitution, Chelsea. Marco Palestra replaces Jorrel Hato.",
+   "source_ref": "espn:401878771:play:53775266",
+   "team": "Chelsea",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Romeo Lavia",
+    "Moisés Caicedo"
+   ],
+   "clock": "90+2'",
+   "description": "Substitution, Chelsea. Roméo Lavia replaces Moisés Caicedo.",
+   "source_ref": "espn:401878771:play:53775267",
+   "team": "Chelsea",
+   "type": "sub"
+  },
+  {
+   "actors": [],
+   "clock": "90+7'",
+   "description": "Corner, Everton. Conceded by Pedro Neto.",
+   "source_ref": "espn:401878771:play:53775767",
+   "team": "Everton",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Morgan Rogers",
+    "James Tarkowski"
+   ],
+   "clock": "90+8'",
+   "description": "James Tarkowski (Everton) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878771:play:53775915",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Morgan Rogers",
+    "James Tarkowski"
+   ],
+   "clock": "90+8'",
+   "description": "Foul by Morgan Rogers (Chelsea).",
+   "source_ref": "espn:401878771:play:53775915",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Maxence Lacroix",
+    "Thierno Barry"
+   ],
+   "clock": "90+9'",
+   "description": "Thierno Barry (Everton) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878771:play:53775932",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Maxence Lacroix",
+    "Thierno Barry"
+   ],
+   "clock": "90+9'",
+   "description": "Foul by Maxence Lacroix (Chelsea).",
+   "source_ref": "espn:401878771:play:53775932",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Christian Nørgaard"
+   ],
+   "clock": "90+9'",
+   "description": "Offside, Everton. James Tarkowski is caught offside.",
+   "source_ref": "espn:401878771:play:53775938",
+   "team": "Everton",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Cole Palmer",
+    "Jarrad Branthwaite"
+   ],
+   "clock": "90+11'",
+   "description": "Jarrad Branthwaite (Everton) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878771:play:53776428",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Cole Palmer",
+    "Jarrad Branthwaite"
+   ],
+   "clock": "90+11'",
+   "description": "Foul by Cole Palmer (Chelsea).",
+   "source_ref": "espn:401878771:play:53776428",
+   "team": "Chelsea",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Geovany Quenda",
+    "Pedro Neto"
+   ],
+   "clock": "90+12'",
+   "description": "Substitution, Chelsea. Geovany Quenda replaces Pedro Neto.",
+   "source_ref": "espn:401878771:play:53776524",
+   "team": "Chelsea",
+   "type": "sub"
+  }
+ ],
+ "match": {
+  "end_estimate": "2026-10-17T13:30:00Z",
+  "final_result": "Everton 0–2 Chelsea",
+  "id": "401878771",
+  "kickoff": "2026-10-17T11:30:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "EVE",
+    "name": "Everton",
+    "role": "home",
+    "score": "0",
+    "short_name": "Everton",
+    "winner": false
+   },
+   {
+    "abbreviation": "CHE",
+    "name": "Chelsea",
+    "role": "away",
+    "score": "2",
+    "short_name": "Chelsea",
+    "winner": true
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Pedro Neto scored twice in the second half to guide Chelsea to a 2-0 win at Everton on Saturday in a Premier League match marred by a serious-looking head injury to Chelsea goalkeeper Emi Martínez.",
+  "title": "Everton v Chelsea",
+  "venue": "Hill Dickinson Stadium"
+ },
+ "sources": [
+  {
+   "publisher": "ESPN",
+   "title": "Everton v Chelsea: match events",
+   "url": "https://www.espn.com/soccer/match/_/gameId/401878771"
+  },
+  {
+   "published_at": "2026-10-17T14:16:00Z",
+   "publisher": "ESPN",
+   "title": "Pedro Neto nets brace as Chelsea end Everton's unbeaten run",
+   "url": "https://www.espn.com/soccer/report/_/gameId/401878771"
+  }
+ ],
+ "team_stats": [
+  {
+   "corners": 5,
+   "fouls": 8,
+   "possession_pct": 47.2,
+   "red_cards": 0,
+   "saves": 4,
+   "shots": 6,
+   "shots_on_target": 5,
+   "team": "Everton",
+   "yellow_cards": 3
+  },
+  {
+   "corners": 7,
+   "fouls": 15,
+   "possession_pct": 52.8,
+   "red_cards": 0,
+   "saves": 5,
+   "shots": 18,
+   "shots_on_target": 7,
+   "team": "Chelsea",
+   "yellow_cards": 4
+  }
+ ]
+}

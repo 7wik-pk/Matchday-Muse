@@ -1,0 +1,1061 @@
+{
+ "coverage": "full_events",
+ "events": [
+  {
+   "actors": [
+    "Pascal Gross"
+   ],
+   "clock": "4'",
+   "description": "Handball by Pascal Groß (Brighton and Hove Albion).",
+   "source_ref": "espn:401878772:play:53372541",
+   "team": "Brighton & Hove Albion",
+   "type": "handball"
+  },
+  {
+   "actors": [
+    "Granit Xhaka"
+   ],
+   "clock": "5'",
+   "description": "Offside, Sunderland. Wilson Isidor is caught offside.",
+   "source_ref": "espn:401878772:play:53372999",
+   "team": "Sunderland",
+   "type": "offside"
+  },
+  {
+   "actors": [],
+   "clock": "6'",
+   "description": "Corner, Sunderland. Conceded by Luka Vuskovic.",
+   "source_ref": "espn:401878772:play:53373015",
+   "team": "Sunderland",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Kevin Danso",
+    "Enzo Le Fée"
+   ],
+   "clock": "7'",
+   "description": "Attempt blocked. Kevin Danso (Sunderland) with an attempt from very close range is blocked. Assisted by Enzo Le Fée with a cross.",
+   "source_ref": "espn:401878772:play:53373755",
+   "team": "Sunderland",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Diego Gómez"
+   ],
+   "clock": "8'",
+   "description": "Attempt saved. Diego Gómez (Brighton and Hove Albion) right footed shot from the left side of the box is saved in the bottom left corner by Robin Roefs (Sunderland).",
+   "source_ref": "espn:401878772:play:53373422",
+   "team": "Brighton & Hove Albion",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [],
+   "clock": "8'",
+   "description": "Corner, Brighton and Hove Albion. Conceded by Kevin Danso.",
+   "source_ref": "espn:401878772:play:53373759",
+   "team": "Brighton & Hove Albion",
+   "type": "corner"
+  },
+  {
+   "actors": [],
+   "clock": "9'",
+   "description": "Corner, Brighton and Hove Albion. Conceded by Robin Roefs.",
+   "source_ref": "espn:401878772:play:53373762",
+   "team": "Brighton & Hove Albion",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Luka Vuskovic",
+    "Pascal Gross"
+   ],
+   "clock": "10'",
+   "description": "Attempt missed. Luka Vuskovic (Brighton and Hove Albion) header from the left side of the six yard box is too high. Assisted by Pascal Groß with a cross following a corner.",
+   "source_ref": "espn:401878772:play:53374032",
+   "team": "Brighton & Hove Albion",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Yasin Ayari"
+   ],
+   "clock": "11'",
+   "description": "Attempt missed. Yasin Ayari (Brighton and Hove Albion) left footed shot from outside the box misses to the left.",
+   "source_ref": "espn:401878772:play:53374325",
+   "team": "Brighton & Hove Albion",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Diego Gómez",
+    "Charalambos Kostoulas"
+   ],
+   "clock": "12'",
+   "description": "Attempt blocked. Diego Gómez (Brighton and Hove Albion) right footed shot from outside the box is blocked. Assisted by Charalampos Kostoulas.",
+   "source_ref": "espn:401878772:play:53374770",
+   "team": "Brighton & Hove Albion",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Chema Andrés",
+    "Granit Xhaka"
+   ],
+   "clock": "13'",
+   "description": "Foul by Chema Andrés (Brighton and Hove Albion).",
+   "source_ref": "espn:401878772:play:53375258",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Chema Andrés",
+    "Granit Xhaka"
+   ],
+   "clock": "13'",
+   "description": "Granit Xhaka (Sunderland) wins a free kick on the right wing.",
+   "source_ref": "espn:401878772:play:53375258",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Granit Xhaka"
+   ],
+   "clock": "13'",
+   "description": "Offside, Sunderland. Nordi Mukiele is caught offside.",
+   "source_ref": "espn:401878772:play:53375259",
+   "team": "Sunderland",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Noah Sadiki"
+   ],
+   "clock": "14'",
+   "description": "Offside, Sunderland. Nordi Mukiele is caught offside.",
+   "source_ref": "espn:401878772:play:53375265",
+   "team": "Sunderland",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Thomas Meunier",
+    "Chema Andrés"
+   ],
+   "clock": "15'",
+   "description": "Foul by Thomas Meunier (Sunderland).",
+   "source_ref": "espn:401878772:play:53375640",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Thomas Meunier",
+    "Chema Andrés"
+   ],
+   "clock": "15'",
+   "description": "Chema Andrés (Brighton and Hove Albion) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878772:play:53375640",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Charalambos Kostoulas",
+    "Pascal Gross"
+   ],
+   "clock": "20'",
+   "description": "Attempt blocked. Charalampos Kostoulas (Brighton and Hove Albion) right footed shot from outside the box is blocked. Assisted by Pascal Groß.",
+   "source_ref": "espn:401878772:play:53376576",
+   "team": "Brighton & Hove Albion",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Charalambos Kostoulas",
+    "Reinildo Mandava"
+   ],
+   "clock": "21'",
+   "description": "Foul by Charalampos Kostoulas (Brighton and Hove Albion).",
+   "source_ref": "espn:401878772:play:53376951",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Charalambos Kostoulas",
+    "Reinildo Mandava"
+   ],
+   "clock": "21'",
+   "description": "Reinildo Mandava (Sunderland) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878772:play:53376951",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Wilson Isidor",
+    "Enzo Le Fée"
+   ],
+   "clock": "22'",
+   "description": "Attempt blocked. Wilson Isidor (Sunderland) right footed shot from the left side of the six yard box is blocked. Assisted by Enzo Le Fée with a cross.",
+   "source_ref": "espn:401878772:play:53376961",
+   "team": "Sunderland",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "22'",
+   "description": "Corner, Sunderland. Conceded by Pascal Struijk.",
+   "source_ref": "espn:401878772:play:53377308",
+   "team": "Sunderland",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Wilson Isidor",
+    "Luka Vuskovic"
+   ],
+   "clock": "27'",
+   "description": "Foul by Wilson Isidor (Sunderland).",
+   "source_ref": "espn:401878772:play:53378066",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Wilson Isidor",
+    "Luka Vuskovic"
+   ],
+   "clock": "27'",
+   "description": "Luka Vuskovic (Brighton and Hove Albion) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878772:play:53378066",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Thomas Meunier",
+    "Nordi Mukiele"
+   ],
+   "clock": "29'",
+   "description": "Attempt blocked. Thomas Meunier (Sunderland) right footed shot from the centre of the box is blocked. Assisted by Noah Sadiki.",
+   "source_ref": "espn:401878772:play:53378629",
+   "team": "Sunderland",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Kevin Danso",
+    "Ferdi Kadioglu"
+   ],
+   "clock": "31'",
+   "description": "Ferdi Kadioglu (Brighton and Hove Albion) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878772:play:53379109",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Kevin Danso",
+    "Ferdi Kadioglu"
+   ],
+   "clock": "31'",
+   "description": "Foul by Kevin Danso (Sunderland).",
+   "source_ref": "espn:401878772:play:53379109",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "32'",
+   "description": "Corner, Brighton and Hove Albion. Conceded by Kevin Danso.",
+   "source_ref": "espn:401878772:play:53379127",
+   "team": "Brighton & Hove Albion",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Malick Fofana",
+    "Thomas Meunier"
+   ],
+   "clock": "34'",
+   "description": "Substitution, Sunderland. Malick Fofana replaces Thomas Meunier because of an injury.",
+   "source_ref": "espn:401878772:play:53379892",
+   "team": "Sunderland",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Olivier Boscagli",
+    "Trai Hume"
+   ],
+   "clock": "36'",
+   "description": "Foul by Olivier Boscagli (Brighton and Hove Albion).",
+   "source_ref": "espn:401878772:play:53380447",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Olivier Boscagli",
+    "Trai Hume"
+   ],
+   "clock": "36'",
+   "description": "Trai Hume (Sunderland) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878772:play:53380447",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Olivier Boscagli"
+   ],
+   "clock": "36'",
+   "description": "Olivier Boscagli (Brighton and Hove Albion) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401878772:play:53380448",
+   "team": "Brighton & Hove Albion",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [],
+   "clock": "37'",
+   "description": "Corner, Sunderland. Conceded by Pascal Struijk.",
+   "source_ref": "espn:401878772:play:53380457",
+   "team": "Sunderland",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Malick Fofana"
+   ],
+   "clock": "38'",
+   "description": "Offside, Sunderland. Nilson Angulo is caught offside.",
+   "source_ref": "espn:401878772:play:53380461",
+   "team": "Sunderland",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Nordi Mukiele",
+    "Kevin Danso"
+   ],
+   "clock": "39'",
+   "description": "Attempt saved. Nordi Mukiele (Sunderland) right footed shot from more than 35 yards is saved in the bottom right corner by Bart Verbruggen (Brighton and Hove Albion). Assisted by Kevin Danso.",
+   "source_ref": "espn:401878772:play:53380703",
+   "team": "Sunderland",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Enzo Le Fée",
+    "Pascal Struijk"
+   ],
+   "clock": "40'",
+   "description": "Pascal Struijk (Brighton and Hove Albion) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878772:play:53381141",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Enzo Le Fée",
+    "Pascal Struijk"
+   ],
+   "clock": "40'",
+   "description": "Foul by Enzo Le Fée (Sunderland).",
+   "source_ref": "espn:401878772:play:53381141",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Pascal Gross",
+    "Noah Sadiki"
+   ],
+   "clock": "45+1'",
+   "description": "Foul by Pascal Groß (Brighton and Hove Albion).",
+   "source_ref": "espn:401878772:play:53382856",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Pascal Gross",
+    "Noah Sadiki"
+   ],
+   "clock": "45+1'",
+   "description": "Noah Sadiki (Sunderland) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878772:play:53382856",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Nilson Angulo",
+    "Olivier Boscagli"
+   ],
+   "clock": "45+2'",
+   "description": "Olivier Boscagli (Brighton and Hove Albion) wins a free kick on the left wing.",
+   "source_ref": "espn:401878772:play:53383257",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Nilson Angulo",
+    "Olivier Boscagli"
+   ],
+   "clock": "45+2'",
+   "description": "Foul by Nilson Angulo (Sunderland).",
+   "source_ref": "espn:401878772:play:53383257",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Pascal Struijk",
+    "Olivier Boscagli"
+   ],
+   "clock": "45+3'",
+   "description": "Pascal Struijk (Brighton and Hove Albion) hits the left post with a header from the centre of the box. Assisted by Olivier Boscagli with a cross following a set piece situation.",
+   "source_ref": "espn:401878772:play:53383260",
+   "team": "Brighton & Hove Albion",
+   "type": "woodwork"
+  },
+  {
+   "actors": [],
+   "clock": "45+3'",
+   "description": "First Half ends, Sunderland 0, Brighton and Hove Albion 0.",
+   "score_after": "0-0",
+   "source_ref": "espn:401878772:play:53383274",
+   "type": "half_time"
+  },
+  {
+   "actors": [],
+   "clock": "45'",
+   "description": "Second Half begins Sunderland 0, Brighton and Hove Albion 0.",
+   "source_ref": "espn:401878772:play:53385529",
+   "type": "second_half"
+  },
+  {
+   "actors": [
+    "Diego Gómez"
+   ],
+   "clock": "46'",
+   "description": "Attempt saved. Diego Gómez (Brighton and Hove Albion) right footed shot from outside the box is saved in the centre of the goal by Robin Roefs (Sunderland).",
+   "source_ref": "espn:401878772:play:53385665",
+   "team": "Brighton & Hove Albion",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Chema Andrés",
+    "Enzo Le Fée"
+   ],
+   "clock": "47'",
+   "description": "Foul by Chema Andrés (Brighton and Hove Albion).",
+   "source_ref": "espn:401878772:play:53385940",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Chema Andrés",
+    "Enzo Le Fée"
+   ],
+   "clock": "47'",
+   "description": "Enzo Le Fée (Sunderland) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878772:play:53385940",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Wilson Isidor"
+   ],
+   "clock": "48'",
+   "description": "Offside, Sunderland. Nilson Angulo is caught offside.",
+   "source_ref": "espn:401878772:play:53386234",
+   "team": "Sunderland",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Nordi Mukiele",
+    "Yasin Ayari"
+   ],
+   "clock": "51'",
+   "description": "Yasin Ayari (Brighton and Hove Albion) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878772:play:53386673",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Nordi Mukiele",
+    "Yasin Ayari"
+   ],
+   "clock": "51'",
+   "description": "Foul by Nordi Mukiele (Sunderland).",
+   "source_ref": "espn:401878772:play:53386673",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Pascal Struijk",
+    "Wilson Isidor"
+   ],
+   "clock": "52'",
+   "description": "Foul by Pascal Struijk (Brighton and Hove Albion).",
+   "source_ref": "espn:401878772:play:53387069",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Pascal Struijk",
+    "Wilson Isidor"
+   ],
+   "clock": "52'",
+   "description": "Wilson Isidor (Sunderland) wins a free kick on the right wing.",
+   "source_ref": "espn:401878772:play:53387069",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Maxim De Cuyper",
+    "Pascal Gross"
+   ],
+   "clock": "53'",
+   "description": "Goal! Sunderland 0, Brighton and Hove Albion 1. Maxim De Cuyper (Brighton and Hove Albion) left footed shot from the centre of the box to the bottom left corner. Assisted by Pascal Groß.",
+   "score_after": "0-1",
+   "source_ref": "espn:401878772:play:53387546",
+   "team": "Brighton & Hove Albion",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Pascal Struijk",
+    "Wilson Isidor"
+   ],
+   "clock": "55'",
+   "description": "Foul by Pascal Struijk (Brighton and Hove Albion).",
+   "source_ref": "espn:401878772:play:53388961",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Pascal Struijk",
+    "Wilson Isidor"
+   ],
+   "clock": "55'",
+   "description": "Wilson Isidor (Sunderland) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878772:play:53388961",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Pascal Struijk"
+   ],
+   "clock": "56'",
+   "description": "VAR Decision: Card upgraded Pascal Struijk (Brighton and Hove Albion).",
+   "source_ref": "espn:401878772:play:53388331",
+   "team": "Brighton & Hove Albion",
+   "type": "var"
+  },
+  {
+   "actors": [
+    "Pascal Struijk"
+   ],
+   "clock": "57'",
+   "description": "Pascal Struijk (Brighton and Hove Albion) is shown the red card.",
+   "source_ref": "espn:401878772:play:53388963",
+   "team": "Brighton & Hove Albion",
+   "type": "red_card"
+  },
+  {
+   "actors": [
+    "Granit Xhaka"
+   ],
+   "clock": "59'",
+   "description": "Attempt saved. Granit Xhaka (Sunderland) left footed shot from outside the box is saved in the bottom right corner by Bart Verbruggen (Brighton and Hove Albion).",
+   "source_ref": "espn:401878772:play:53388964",
+   "team": "Sunderland",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Lewis Dunk",
+    "Charalambos Kostoulas"
+   ],
+   "clock": "60'",
+   "description": "Substitution, Brighton and Hove Albion. Lewis Dunk replaces Charalampos Kostoulas.",
+   "source_ref": "espn:401878772:play:53389507",
+   "team": "Brighton & Hove Albion",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Diego Gómez"
+   ],
+   "clock": "61'",
+   "description": "Attempt missed. Diego Gómez (Brighton and Hove Albion) right footed shot from more than 40 yards on the right wing misses to the left following a fast break.",
+   "source_ref": "espn:401878772:play:53389655",
+   "team": "Brighton & Hove Albion",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Nilson Angulo",
+    "Chema Andrés"
+   ],
+   "clock": "63'",
+   "description": "Chema Andrés (Brighton and Hove Albion) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878772:play:53389992",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Nilson Angulo",
+    "Chema Andrés"
+   ],
+   "clock": "63'",
+   "description": "Foul by Nilson Angulo (Sunderland).",
+   "source_ref": "espn:401878772:play:53389992",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Pascal Gross",
+    "Noah Sadiki"
+   ],
+   "clock": "63'",
+   "description": "Foul by Pascal Groß (Brighton and Hove Albion).",
+   "source_ref": "espn:401878772:play:53390248",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Pascal Gross",
+    "Noah Sadiki"
+   ],
+   "clock": "63'",
+   "description": "Noah Sadiki (Sunderland) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878772:play:53390248",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Granit Xhaka",
+    "Noah Sadiki"
+   ],
+   "clock": "65'",
+   "description": "Attempt missed. Granit Xhaka (Sunderland) left footed shot from outside the box is high and wide to the left. Assisted by Noah Sadiki.",
+   "source_ref": "espn:401878772:play:53390532",
+   "team": "Sunderland",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Malick Fofana",
+    "Reinildo Mandava"
+   ],
+   "clock": "67'",
+   "description": "Attempt saved. Malick Fofana (Sunderland) right footed shot from the left side of the box is saved in the centre of the goal by Bart Verbruggen (Brighton and Hove Albion). Assisted by Reinildo Mandava.",
+   "source_ref": "espn:401878772:play:53390857",
+   "team": "Sunderland",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Costinha",
+    "Olivier Boscagli"
+   ],
+   "clock": "68'",
+   "description": "Substitution, Brighton and Hove Albion. Costinha replaces Olivier Boscagli.",
+   "source_ref": "espn:401878772:play:53391187",
+   "team": "Brighton & Hove Albion",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Malick Yalcouyé",
+    "Maxim De Cuyper"
+   ],
+   "clock": "68'",
+   "description": "Substitution, Brighton and Hove Albion. Malick Yalcouyé replaces Maxim De Cuyper.",
+   "source_ref": "espn:401878772:play:53391482",
+   "team": "Brighton & Hove Albion",
+   "type": "sub"
+  },
+  {
+   "actors": [],
+   "clock": "68'",
+   "description": "Corner, Sunderland. Conceded by Malick Yalcouyé.",
+   "source_ref": "espn:401878772:play:53391462",
+   "team": "Sunderland",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Yasin Ayari",
+    "Diego Gómez"
+   ],
+   "clock": "71'",
+   "description": "Attempt missed. Yasin Ayari (Brighton and Hove Albion) right footed shot from outside the box misses to the left. Assisted by Diego Gómez following a fast break.",
+   "source_ref": "espn:401878772:play:53392054",
+   "team": "Brighton & Hove Albion",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Granit Xhaka",
+    "Reinildo Mandava"
+   ],
+   "clock": "72'",
+   "description": "Attempt missed. Granit Xhaka (Sunderland) left footed shot from outside the box is too high. Assisted by Reinildo Mandava.",
+   "source_ref": "espn:401878772:play:53392071",
+   "team": "Sunderland",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Dayann Methalie",
+    "Reinildo Mandava"
+   ],
+   "clock": "73'",
+   "description": "Substitution, Sunderland. Dayann Méthalie replaces Reinildo Mandava.",
+   "source_ref": "espn:401878772:play:53392354",
+   "team": "Sunderland",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Jocelin Ta Bi",
+    "Nilson Angulo"
+   ],
+   "clock": "73'",
+   "description": "Substitution, Sunderland. Jocelin Ta Bi replaces Nilson Angulo.",
+   "source_ref": "espn:401878772:play:53392355",
+   "team": "Sunderland",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Nordi Mukiele",
+    "Noah Sadiki"
+   ],
+   "clock": "74'",
+   "description": "Attempt blocked. Nordi Mukiele (Sunderland) right footed shot from outside the box is blocked. Assisted by Noah Sadiki.",
+   "source_ref": "espn:401878772:play:53392452",
+   "team": "Sunderland",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Wilson Isidor",
+    "Enzo Le Fée"
+   ],
+   "clock": "75'",
+   "description": "Attempt blocked. Wilson Isidor (Sunderland) right footed shot from outside the box is blocked. Assisted by Enzo Le Fée with a cross.",
+   "source_ref": "espn:401878772:play:53392690",
+   "team": "Sunderland",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "75'",
+   "description": "Corner, Brighton and Hove Albion. Conceded by Dayann Méthalie.",
+   "source_ref": "espn:401878772:play:53392866",
+   "team": "Brighton & Hove Albion",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Luka Vuskovic",
+    "Lewis Dunk"
+   ],
+   "clock": "76'",
+   "description": "Attempt missed. Luka Vuskovic (Brighton and Hove Albion) right footed shot from the centre of the box misses to the right. Assisted by Lewis Dunk following a corner.",
+   "source_ref": "espn:401878772:play:53392870",
+   "team": "Brighton & Hove Albion",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Pascal Gross"
+   ],
+   "clock": "78'",
+   "description": "Attempt missed. Pascal Groß (Brighton and Hove Albion) right footed shot from more than 35 yards is high and wide to the right following a fast break.",
+   "source_ref": "espn:401878772:play:53393194",
+   "team": "Brighton & Hove Albion",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Nordi Mukiele",
+    "Kevin Danso"
+   ],
+   "clock": "78'",
+   "description": "Attempt blocked. Nordi Mukiele (Sunderland) right footed shot from outside the box is blocked. Assisted by Kevin Danso.",
+   "source_ref": "espn:401878772:play:53393279",
+   "team": "Sunderland",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Pascal Gross",
+    "Granit Xhaka"
+   ],
+   "clock": "79'",
+   "description": "Foul by Pascal Groß (Brighton and Hove Albion).",
+   "source_ref": "espn:401878772:play:53393287",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Pascal Gross",
+    "Granit Xhaka"
+   ],
+   "clock": "79'",
+   "description": "Granit Xhaka (Sunderland) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878772:play:53393287",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Costinha",
+    "Malick Fofana"
+   ],
+   "clock": "79'",
+   "description": "Foul by Costinha (Brighton and Hove Albion).",
+   "source_ref": "espn:401878772:play:53393485",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Costinha",
+    "Malick Fofana"
+   ],
+   "clock": "79'",
+   "description": "Malick Fofana (Sunderland) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878772:play:53393485",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Enzo Le Fée",
+    "Noah Sadiki"
+   ],
+   "clock": "80'",
+   "description": "Attempt blocked. Enzo Le Fée (Sunderland) right footed shot from outside the box is blocked. Assisted by Noah Sadiki.",
+   "source_ref": "espn:401878772:play:53393799",
+   "team": "Sunderland",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "80'",
+   "description": "Corner, Sunderland. Conceded by Malick Yalcouyé.",
+   "source_ref": "espn:401878772:play:53393801",
+   "team": "Sunderland",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Juan Angulo",
+    "Enzo Le Fée"
+   ],
+   "clock": "81'",
+   "description": "Substitution, Sunderland. Juan Angulo replaces Enzo Le Fée.",
+   "source_ref": "espn:401878772:play:53393806",
+   "team": "Sunderland",
+   "type": "sub"
+  },
+  {
+   "actors": [],
+   "clock": "84'",
+   "description": "Corner, Sunderland. Conceded by Costinha.",
+   "source_ref": "espn:401878772:play:53394442",
+   "team": "Sunderland",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Jaouen Hadjam",
+    "Diego Gómez"
+   ],
+   "clock": "88'",
+   "description": "Substitution, Brighton and Hove Albion. Jaouen Hadjam replaces Diego Gómez.",
+   "source_ref": "espn:401878772:play:53395249",
+   "team": "Brighton & Hove Albion",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Georginio Rutter",
+    "Yasin Ayari"
+   ],
+   "clock": "88'",
+   "description": "Substitution, Brighton and Hove Albion. Georginio Rutter replaces Yasin Ayari.",
+   "source_ref": "espn:401878772:play:53395490",
+   "team": "Brighton & Hove Albion",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Georginio Rutter",
+    "Nordi Mukiele"
+   ],
+   "clock": "90'",
+   "description": "Foul by Georginio Rutter (Brighton and Hove Albion).",
+   "source_ref": "espn:401878772:play:53395892",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Georginio Rutter",
+    "Nordi Mukiele"
+   ],
+   "clock": "90'",
+   "description": "Nordi Mukiele (Sunderland) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878772:play:53395892",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "90+1'",
+   "description": "Corner, Sunderland. Conceded by Georginio Rutter.",
+   "source_ref": "espn:401878772:play:53395909",
+   "team": "Sunderland",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Jaouen Hadjam",
+    "Georginio Rutter"
+   ],
+   "clock": "90+3'",
+   "description": "Goal! Sunderland 0, Brighton and Hove Albion 2. Jaouen Hadjam (Brighton and Hove Albion) left footed shot from the left side of the box to the bottom right corner. Assisted by Georginio Rutter following a fast break.",
+   "score_after": "0-2",
+   "source_ref": "espn:401878772:play:53396318",
+   "team": "Brighton & Hove Albion",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Noah Sadiki",
+    "Ferdi Kadioglu"
+   ],
+   "clock": "90+6'",
+   "description": "Ferdi Kadioglu (Brighton and Hove Albion) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878772:play:53396796",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Noah Sadiki",
+    "Ferdi Kadioglu"
+   ],
+   "clock": "90+6'",
+   "description": "Foul by Noah Sadiki (Sunderland).",
+   "source_ref": "espn:401878772:play:53396796",
+   "team": "Sunderland",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "90+7'",
+   "description": "Corner, Brighton and Hove Albion. Conceded by Kevin Danso.",
+   "source_ref": "espn:401878772:play:53396972",
+   "team": "Brighton & Hove Albion",
+   "type": "corner"
+  }
+ ],
+ "match": {
+  "end_estimate": "2026-10-10T16:00:00Z",
+  "final_result": "Sunderland 0–2 Brighton & Hove Albion",
+  "id": "401878772",
+  "kickoff": "2026-10-10T14:00:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "SUN",
+    "name": "Sunderland",
+    "role": "home",
+    "score": "0",
+    "short_name": "Sunderland",
+    "winner": false
+   },
+   {
+    "abbreviation": "BHA",
+    "name": "Brighton & Hove Albion",
+    "role": "away",
+    "score": "2",
+    "short_name": "Brighton",
+    "winner": true
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Maxim De Cuyper and Jaouen Hadjam were both on the scoresheet as 10-man Brighton clinched a 2-0 win over Sunderland at the Stadium of Light.",
+  "title": "Sunderland v Brighton & Hove Albion",
+  "venue": "Stadium of Light"
+ },
+ "sources": [
+  {
+   "publisher": "ESPN",
+   "title": "Sunderland v Brighton & Hove Albion: match events",
+   "url": "https://www.espn.com/soccer/match/_/gameId/401878772"
+  },
+  {
+   "published_at": "2026-10-10T16:09:00Z",
+   "publisher": "ESPN",
+   "title": "Brighton keep pressure on Man City, Arsenal with 2-0 Sunderland win",
+   "url": "https://www.espn.com/soccer/report/_/gameId/401878772"
+  }
+ ],
+ "team_stats": [
+  {
+   "corners": 7,
+   "fouls": 8,
+   "possession_pct": 62.3,
+   "red_cards": 0,
+   "saves": 2,
+   "shots": 12,
+   "shots_on_target": 3,
+   "team": "Sunderland",
+   "yellow_cards": 0
+  },
+  {
+   "corners": 5,
+   "fouls": 12,
+   "possession_pct": 37.7,
+   "red_cards": 1,
+   "saves": 3,
+   "shots": 13,
+   "shots_on_target": 4,
+   "team": "Brighton & Hove Albion",
+   "yellow_cards": 1
+  }
+ ]
+}

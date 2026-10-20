@@ -1,0 +1,1374 @@
+{
+ "coverage": "full_events",
+ "events": [
+  {
+   "actors": [],
+   "clock": "0'",
+   "description": "First Half begins.",
+   "source_ref": "espn:401879268:play:53359414",
+   "type": "kickoff"
+  },
+  {
+   "actors": [
+    "Dominic Calvert-Lewin",
+    "Gabriel Magalhães"
+   ],
+   "clock": "1'",
+   "description": "Gabriel Magalhães (Arsenal) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879268:play:53359466",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Dominic Calvert-Lewin",
+    "Gabriel Magalhães"
+   ],
+   "clock": "1'",
+   "description": "Foul by Dominic Calvert-Lewin (Leeds United).",
+   "source_ref": "espn:401879268:play:53359466",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Noni Madueke"
+   ],
+   "clock": "2'",
+   "description": "Offside, Arsenal. Bukayo Saka is caught offside.",
+   "source_ref": "espn:401879268:play:53359487",
+   "team": "Arsenal",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Ezri Konsa",
+    "Dominic Calvert-Lewin"
+   ],
+   "clock": "3'",
+   "description": "Dominic Calvert-Lewin (Leeds United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879268:play:53359553",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ezri Konsa",
+    "Dominic Calvert-Lewin"
+   ],
+   "clock": "3'",
+   "description": "Foul by Ezri Konsa (Arsenal).",
+   "source_ref": "espn:401879268:play:53359553",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Gabriel Gudmundsson",
+    "Bukayo Saka"
+   ],
+   "clock": "4'",
+   "description": "Foul by Gabriel Gudmundsson (Leeds United).",
+   "source_ref": "espn:401879268:play:53359684",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Gabriel Gudmundsson",
+    "Bukayo Saka"
+   ],
+   "clock": "4'",
+   "description": "Bukayo Saka (Arsenal) wins a free kick on the right wing.",
+   "source_ref": "espn:401879268:play:53359684",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Bukayo Saka"
+   ],
+   "clock": "6'",
+   "description": "Offside, Arsenal. Ben White is caught offside.",
+   "source_ref": "espn:401879268:play:53359770",
+   "team": "Arsenal",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Dominic Calvert-Lewin",
+    "Ben White"
+   ],
+   "clock": "6'",
+   "description": "Foul by Dominic Calvert-Lewin (Leeds United).",
+   "source_ref": "espn:401879268:play:53359874",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Dominic Calvert-Lewin",
+    "Ben White"
+   ],
+   "clock": "6'",
+   "description": "Ben White (Arsenal) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879268:play:53359874",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Myles Lewis-Skelly"
+   ],
+   "clock": "7'",
+   "description": "Offside, Arsenal. Noni Madueke is caught offside.",
+   "source_ref": "espn:401879268:play:53359882",
+   "team": "Arsenal",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Gabriel Magalhães",
+    "Jayden Bogle"
+   ],
+   "clock": "8'",
+   "description": "Jayden Bogle (Leeds United) wins a free kick on the right wing.",
+   "source_ref": "espn:401879268:play:53359985",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Gabriel Magalhães",
+    "Jayden Bogle"
+   ],
+   "clock": "8'",
+   "description": "Foul by Gabriel Magalhães (Arsenal).",
+   "source_ref": "espn:401879268:play:53359985",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "James Justin",
+    "Anton Stach"
+   ],
+   "clock": "8'",
+   "description": "Attempt blocked. James Justin (Leeds United) header from the centre of the box is blocked. Assisted by Anton Stach with a cross.",
+   "source_ref": "espn:401879268:play:53360038",
+   "team": "Leeds United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Noah Okafor"
+   ],
+   "clock": "8'",
+   "description": "Attempt blocked. Noah Okafor (Leeds United) right footed shot from the centre of the box is blocked.",
+   "source_ref": "espn:401879268:play:53360255",
+   "team": "Leeds United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "8'",
+   "description": "Corner, Leeds United. Conceded by Bukayo Saka.",
+   "source_ref": "espn:401879268:play:53360040",
+   "team": "Leeds United",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Gabriel Gudmundsson"
+   ],
+   "clock": "11'",
+   "description": "Offside, Leeds United. Anton Stach is caught offside.",
+   "source_ref": "espn:401879268:play:53360324",
+   "team": "Leeds United",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Noah Okafor",
+    "Ezri Konsa"
+   ],
+   "clock": "15'",
+   "description": "Foul by Noah Okafor (Leeds United).",
+   "source_ref": "espn:401879268:play:53360729",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Noah Okafor",
+    "Ezri Konsa"
+   ],
+   "clock": "15'",
+   "description": "Ezri Konsa (Arsenal) wins a free kick on the right wing.",
+   "source_ref": "espn:401879268:play:53360729",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Martin Ødegaard"
+   ],
+   "clock": "17'",
+   "description": "Offside, Arsenal. Ben White is caught offside.",
+   "source_ref": "espn:401879268:play:53360894",
+   "team": "Arsenal",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Myles Lewis-Skelly",
+    "Anton Stach"
+   ],
+   "clock": "19'",
+   "description": "Anton Stach (Leeds United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879268:play:53361198",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Myles Lewis-Skelly",
+    "Anton Stach"
+   ],
+   "clock": "19'",
+   "description": "Foul by Myles Lewis-Skelly (Arsenal).",
+   "source_ref": "espn:401879268:play:53361198",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Kai Havertz",
+    "Noni Madueke"
+   ],
+   "clock": "21'",
+   "description": "Attempt saved. Kai Havertz (Arsenal) header from the centre of the box is saved in the centre of the goal by James Trafford (Leeds United). Assisted by Noni Madueke with a cross.",
+   "source_ref": "espn:401879268:play:53361317",
+   "team": "Arsenal",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Dominic Calvert-Lewin",
+    "Ezri Konsa"
+   ],
+   "clock": "21'",
+   "description": "Foul by Dominic Calvert-Lewin (Leeds United).",
+   "source_ref": "espn:401879268:play:53361463",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Dominic Calvert-Lewin",
+    "Ezri Konsa"
+   ],
+   "clock": "21'",
+   "description": "Ezri Konsa (Arsenal) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879268:play:53361463",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Myles Lewis-Skelly",
+    "Bukayo Saka"
+   ],
+   "clock": "23'",
+   "description": "Attempt blocked. Myles Lewis-Skelly (Arsenal) left footed shot from outside the box is blocked. Assisted by Bukayo Saka.",
+   "source_ref": "espn:401879268:play:53361512",
+   "team": "Arsenal",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Riccardo Calafiori",
+    "James Justin"
+   ],
+   "clock": "23'",
+   "description": "James Justin (Leeds United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879268:play:53361654",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Riccardo Calafiori",
+    "James Justin"
+   ],
+   "clock": "23'",
+   "description": "Foul by Riccardo Calafiori (Arsenal).",
+   "source_ref": "espn:401879268:play:53361654",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Anton Stach",
+    "Gabriel Gudmundsson"
+   ],
+   "clock": "25'",
+   "description": "Attempt blocked. Anton Stach (Leeds United) right footed shot from the right side of the six yard box is blocked. Assisted by Gabriel Gudmundsson with a cross.",
+   "source_ref": "espn:401879268:play:53361713",
+   "team": "Leeds United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Jayden Bogle"
+   ],
+   "clock": "27'",
+   "description": "Attempt saved. Jayden Bogle (Leeds United) right footed shot from the left side of the six yard box is saved in the centre of the goal by David Raya (Arsenal).",
+   "source_ref": "espn:401879268:play:53361940",
+   "team": "Leeds United",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [],
+   "clock": "27'",
+   "description": "Corner, Leeds United. Conceded by David Raya.",
+   "source_ref": "espn:401879268:play:53361999",
+   "team": "Leeds United",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Ethan Ampadu",
+    "David Raya"
+   ],
+   "clock": "27'",
+   "description": "Foul by Ethan Ampadu (Leeds United).",
+   "source_ref": "espn:401879268:play:53362001",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ethan Ampadu",
+    "David Raya"
+   ],
+   "clock": "27'",
+   "description": "David Raya (Arsenal) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879268:play:53362001",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "David Raya"
+   ],
+   "clock": "28'",
+   "description": "Offside, Arsenal. Kai Havertz is caught offside.",
+   "source_ref": "espn:401879268:play:53362002",
+   "team": "Arsenal",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Noni Madueke",
+    "Riccardo Calafiori"
+   ],
+   "clock": "29'",
+   "description": "Attempt missed. Noni Madueke (Arsenal) right footed shot from the centre of the box misses to the right. Assisted by Riccardo Calafiori with a cross.",
+   "source_ref": "espn:401879268:play:53362096",
+   "team": "Arsenal",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Ezri Konsa",
+    "Dominic Calvert-Lewin"
+   ],
+   "clock": "29'",
+   "description": "Dominic Calvert-Lewin (Leeds United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879268:play:53362100",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ezri Konsa",
+    "Dominic Calvert-Lewin"
+   ],
+   "clock": "29'",
+   "description": "Foul by Ezri Konsa (Arsenal).",
+   "source_ref": "espn:401879268:play:53362100",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Bukayo Saka",
+    "Ao Tanaka"
+   ],
+   "clock": "33'",
+   "description": "Ao Tanaka (Leeds United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879268:play:53362497",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Bukayo Saka",
+    "Ao Tanaka"
+   ],
+   "clock": "33'",
+   "description": "Foul by Bukayo Saka (Arsenal).",
+   "source_ref": "espn:401879268:play:53362497",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Bukayo Saka",
+    "James Justin"
+   ],
+   "clock": "34'",
+   "description": "James Justin (Leeds United) wins a free kick on the left wing.",
+   "source_ref": "espn:401879268:play:53362563",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Bukayo Saka",
+    "James Justin"
+   ],
+   "clock": "34'",
+   "description": "Foul by Bukayo Saka (Arsenal).",
+   "source_ref": "espn:401879268:play:53362563",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ethan Ampadu"
+   ],
+   "clock": "35'",
+   "description": "Attempt saved. Ethan Ampadu (Leeds United) header from outside the box is saved in the top centre of the goal by David Raya (Arsenal).",
+   "source_ref": "espn:401879268:play:53362656",
+   "team": "Leeds United",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Ao Tanaka",
+    "Myles Lewis-Skelly"
+   ],
+   "clock": "36'",
+   "description": "Foul by Ao Tanaka (Leeds United).",
+   "source_ref": "espn:401879268:play:53362802",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ao Tanaka",
+    "Myles Lewis-Skelly"
+   ],
+   "clock": "36'",
+   "description": "Myles Lewis-Skelly (Arsenal) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879268:play:53362802",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ao Tanaka"
+   ],
+   "clock": "36'",
+   "description": "Ao Tanaka (Leeds United) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879268:play:53362804",
+   "team": "Leeds United",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Ao Tanaka",
+    "Myles Lewis-Skelly"
+   ],
+   "clock": "37'",
+   "description": "Foul by Ao Tanaka (Leeds United).",
+   "source_ref": "espn:401879268:play:53362807",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ao Tanaka",
+    "Myles Lewis-Skelly"
+   ],
+   "clock": "37'",
+   "description": "Myles Lewis-Skelly (Arsenal) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879268:play:53362807",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Dominic Calvert-Lewin"
+   ],
+   "clock": "37'",
+   "description": "Offside, Leeds United. Noah Okafor is caught offside.",
+   "source_ref": "espn:401879268:play:53362981",
+   "team": "Leeds United",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Ethan Ampadu",
+    "Ben White"
+   ],
+   "clock": "38'",
+   "description": "Foul by Ethan Ampadu (Leeds United).",
+   "source_ref": "espn:401879268:play:53363109",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ethan Ampadu",
+    "Ben White"
+   ],
+   "clock": "38'",
+   "description": "Ben White (Arsenal) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879268:play:53363109",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ethan Ampadu"
+   ],
+   "clock": "38'",
+   "description": "Ethan Ampadu (Leeds United) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879268:play:53363110",
+   "team": "Leeds United",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Tarik Muharemovic"
+   ],
+   "clock": "40'",
+   "description": "Offside, Leeds United. Jayden Bogle is caught offside.",
+   "source_ref": "espn:401879268:play:53363122",
+   "team": "Leeds United",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Kai Havertz",
+    "Noni Madueke"
+   ],
+   "clock": "42'",
+   "description": "Attempt missed. Kai Havertz (Arsenal) header from the centre of the box is high and wide to the right. Assisted by Noni Madueke with a cross.",
+   "source_ref": "espn:401879268:play:53363329",
+   "team": "Arsenal",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Gabriel Gudmundsson",
+    "Jayden Bogle"
+   ],
+   "clock": "44'",
+   "description": "Attempt saved. Gabriel Gudmundsson (Leeds United) left footed shot from a difficult angle on the left is saved in the bottom left corner by David Raya (Arsenal). Assisted by Jayden Bogle with a cross.",
+   "source_ref": "espn:401879268:play:53363459",
+   "team": "Leeds United",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Anton Stach",
+    "Ethan Ampadu"
+   ],
+   "clock": "45'",
+   "description": "Attempt missed. Anton Stach (Leeds United) header from the left side of the box is close, but misses to the right. Assisted by Ethan Ampadu.",
+   "source_ref": "espn:401879268:play:53363626",
+   "team": "Leeds United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Nico Elvedi",
+    "Martin Ødegaard"
+   ],
+   "clock": "45+2'",
+   "description": "Foul by Nico Elvedi (Leeds United).",
+   "source_ref": "espn:401879268:play:53363829",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Nico Elvedi",
+    "Martin Ødegaard"
+   ],
+   "clock": "45+2'",
+   "description": "Martin Ødegaard (Arsenal) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879268:play:53363829",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "45+3'",
+   "description": "First Half ends, Arsenal 0, Leeds United 0.",
+   "score_after": "0-0",
+   "source_ref": "espn:401879268:play:53363974",
+   "type": "half_time"
+  },
+  {
+   "actors": [
+    "Ben White"
+   ],
+   "clock": "46'",
+   "description": "Offside, Arsenal. Bukayo Saka is caught offside.",
+   "source_ref": "espn:401879268:play:53364301",
+   "team": "Arsenal",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Jayden Bogle"
+   ],
+   "clock": "46'",
+   "description": "Handball by Jayden Bogle (Leeds United).",
+   "source_ref": "espn:401879268:play:53364304",
+   "team": "Leeds United",
+   "type": "handball"
+  },
+  {
+   "actors": [
+    "Riccardo Calafiori"
+   ],
+   "clock": "49'",
+   "description": "Offside, Arsenal. Noni Madueke is caught offside.",
+   "source_ref": "espn:401879268:play:53364455",
+   "team": "Arsenal",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Dominic Calvert-Lewin"
+   ],
+   "clock": "50'",
+   "description": "Offside, Leeds United. Jayden Bogle is caught offside.",
+   "source_ref": "espn:401879268:play:53364534",
+   "team": "Leeds United",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Anton Stach",
+    "Myles Lewis-Skelly"
+   ],
+   "clock": "50'",
+   "description": "Foul by Anton Stach (Leeds United).",
+   "source_ref": "espn:401879268:play:53364536",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Anton Stach",
+    "Myles Lewis-Skelly"
+   ],
+   "clock": "50'",
+   "description": "Myles Lewis-Skelly (Arsenal) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879268:play:53364536",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Martin Ødegaard",
+    "Noni Madueke"
+   ],
+   "clock": "51'",
+   "description": "Attempt saved. Martin Ødegaard (Arsenal) left footed shot from the centre of the box is saved in the bottom right corner by James Trafford (Leeds United). Assisted by Noni Madueke.",
+   "source_ref": "espn:401879268:play:53364611",
+   "team": "Arsenal",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "James Justin",
+    "Jayden Bogle"
+   ],
+   "clock": "52'",
+   "description": "Attempt missed. James Justin (Leeds United) left footed shot from outside the box is close, but misses the top left corner. Assisted by Jayden Bogle.",
+   "source_ref": "espn:401879268:play:53364740",
+   "team": "Leeds United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Ao Tanaka",
+    "Ethan Ampadu"
+   ],
+   "clock": "53'",
+   "description": "Attempt saved. Ao Tanaka (Leeds United) right footed shot from outside the box is saved in the top centre of the goal by David Raya (Arsenal). Assisted by Ethan Ampadu.",
+   "source_ref": "espn:401879268:play:53364756",
+   "team": "Leeds United",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [],
+   "clock": "53'",
+   "description": "Corner, Leeds United. Conceded by David Raya.",
+   "source_ref": "espn:401879268:play:53364854",
+   "team": "Leeds United",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Anton Stach",
+    "Declan Rice"
+   ],
+   "clock": "54'",
+   "description": "Foul by Anton Stach (Leeds United).",
+   "source_ref": "espn:401879268:play:53364860",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Anton Stach",
+    "Declan Rice"
+   ],
+   "clock": "54'",
+   "description": "Declan Rice (Arsenal) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879268:play:53364860",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "James Justin",
+    "Gabriel Gudmundsson"
+   ],
+   "clock": "55'",
+   "description": "Goal! Arsenal 0, Leeds United 1. James Justin (Leeds United) right footed shot from the right side of the box to the top left corner. Assisted by Gabriel Gudmundsson with a cross.",
+   "score_after": "0-1",
+   "source_ref": "espn:401879268:play:53365035",
+   "team": "Leeds United",
+   "type": "goal"
+  },
+  {
+   "actors": [],
+   "clock": "58'",
+   "description": "Corner, Leeds United. Conceded by Ezri Konsa.",
+   "source_ref": "espn:401879268:play:53365248",
+   "team": "Leeds United",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Tarik Muharemovic",
+    "Bukayo Saka"
+   ],
+   "clock": "59'",
+   "description": "Foul by Tarik Muharemovic (Leeds United).",
+   "source_ref": "espn:401879268:play:53365407",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Tarik Muharemovic",
+    "Bukayo Saka"
+   ],
+   "clock": "59'",
+   "description": "Bukayo Saka (Arsenal) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879268:play:53365407",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Tarik Muharemovic"
+   ],
+   "clock": "59'",
+   "description": "Tarik Muharemovic (Leeds United) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879268:play:53365408",
+   "team": "Leeds United",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Noni Madueke",
+    "Riccardo Calafiori"
+   ],
+   "clock": "62'",
+   "description": "Attempt blocked. Noni Madueke (Arsenal) right footed shot from the left side of the box is blocked. Assisted by Riccardo Calafiori.",
+   "source_ref": "espn:401879268:play:53365550",
+   "team": "Arsenal",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Riccardo Calafiori",
+    "Ben White"
+   ],
+   "clock": "62'",
+   "description": "Goal! Arsenal 1, Leeds United 1. Riccardo Calafiori (Arsenal) left footed shot from very close range to the high centre of the goal. Assisted by Ben White with a headed pass.",
+   "score_after": "1-1",
+   "source_ref": "espn:401879268:play:53365582",
+   "team": "Arsenal",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Jurriën Timber",
+    "Ben White"
+   ],
+   "clock": "63'",
+   "description": "Substitution, Arsenal. Jurriën Timber replaces Ben White.",
+   "source_ref": "espn:401879268:play:53365723",
+   "team": "Arsenal",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Viktor Gyökeres",
+    "Kai Havertz"
+   ],
+   "clock": "63'",
+   "description": "Substitution, Arsenal. Viktor Gyökeres replaces Kai Havertz.",
+   "source_ref": "espn:401879268:play:53365724",
+   "team": "Arsenal",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Bruno Guimarães",
+    "Myles Lewis-Skelly"
+   ],
+   "clock": "63'",
+   "description": "Substitution, Arsenal. Bruno Guimarães replaces Myles Lewis-Skelly.",
+   "source_ref": "espn:401879268:play:53365725",
+   "team": "Arsenal",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Gabriel Gudmundsson"
+   ],
+   "clock": "64'",
+   "description": "Attempt missed. Gabriel Gudmundsson (Leeds United) left footed shot from outside the box is too high.",
+   "source_ref": "espn:401879268:play:53365876",
+   "team": "Leeds United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Anton Stach",
+    "Bruno Guimarães"
+   ],
+   "clock": "65'",
+   "description": "Foul by Anton Stach (Leeds United).",
+   "source_ref": "espn:401879268:play:53365881",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Anton Stach",
+    "Bruno Guimarães"
+   ],
+   "clock": "65'",
+   "description": "Bruno Guimarães (Arsenal) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879268:play:53365881",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "65'",
+   "description": "Corner, Arsenal. Conceded by Ethan Ampadu.",
+   "source_ref": "espn:401879268:play:53366025",
+   "team": "Arsenal",
+   "type": "corner"
+  },
+  {
+   "actors": [],
+   "clock": "66'",
+   "description": "Corner, Arsenal. Conceded by Tarik Muharemovic.",
+   "source_ref": "espn:401879268:play:53366039",
+   "team": "Arsenal",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Riccardo Calafiori"
+   ],
+   "clock": "67'",
+   "description": "Attempt missed. Riccardo Calafiori (Arsenal) left footed shot from the centre of the box misses to the left following a corner.",
+   "source_ref": "espn:401879268:play:53366115",
+   "team": "Arsenal",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "James Justin",
+    "Bruno Guimarães"
+   ],
+   "clock": "70'",
+   "description": "Foul by James Justin (Leeds United).",
+   "source_ref": "espn:401879268:play:53366247",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "James Justin",
+    "Bruno Guimarães"
+   ],
+   "clock": "70'",
+   "description": "Bruno Guimarães (Arsenal) wins a free kick on the right wing.",
+   "source_ref": "espn:401879268:play:53366247",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Bruno Guimarães",
+    "Declan Rice"
+   ],
+   "clock": "70'",
+   "description": "Goal! Arsenal 2, Leeds United 1. Bruno Guimarães (Arsenal) right footed shot from outside the box to the bottom left corner. Assisted by Declan Rice.",
+   "score_after": "2-1",
+   "source_ref": "espn:401879268:play:53366332",
+   "team": "Arsenal",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Harry Wilson",
+    "Ao Tanaka"
+   ],
+   "clock": "71'",
+   "description": "Substitution, Leeds United. Harry Wilson replaces Ao Tanaka.",
+   "source_ref": "espn:401879268:play:53366401",
+   "team": "Leeds United",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Brenden Aaronson",
+    "Noah Okafor"
+   ],
+   "clock": "71'",
+   "description": "Substitution, Leeds United. Brenden Aaronson replaces Noah Okafor.",
+   "source_ref": "espn:401879268:play:53366402",
+   "team": "Leeds United",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Noni Madueke",
+    "Harry Wilson"
+   ],
+   "clock": "73'",
+   "description": "Harry Wilson (Leeds United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879268:play:53366679",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Noni Madueke",
+    "Harry Wilson"
+   ],
+   "clock": "73'",
+   "description": "Foul by Noni Madueke (Arsenal).",
+   "source_ref": "espn:401879268:play:53366679",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Declan Rice",
+    "Ethan Ampadu"
+   ],
+   "clock": "75'",
+   "description": "Ethan Ampadu (Leeds United) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879268:play:53366698",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Declan Rice",
+    "Ethan Ampadu"
+   ],
+   "clock": "75'",
+   "description": "Foul by Declan Rice (Arsenal).",
+   "source_ref": "espn:401879268:play:53366698",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Bukayo Saka",
+    "Viktor Gyökeres"
+   ],
+   "clock": "75'",
+   "description": "Attempt missed. Bukayo Saka (Arsenal) left footed shot from outside the box is just a bit too high. Assisted by Viktor Gyökeres following a fast break.",
+   "source_ref": "espn:401879268:play:53366786",
+   "team": "Arsenal",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Brenden Aaronson",
+    "Ezri Konsa"
+   ],
+   "clock": "76'",
+   "description": "Foul by Brenden Aaronson (Leeds United).",
+   "source_ref": "espn:401879268:play:53366867",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Brenden Aaronson",
+    "Ezri Konsa"
+   ],
+   "clock": "76'",
+   "description": "Ezri Konsa (Arsenal) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879268:play:53366867",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jurriën Timber",
+    "Gabriel Gudmundsson"
+   ],
+   "clock": "77'",
+   "description": "Gabriel Gudmundsson (Leeds United) wins a free kick on the left wing.",
+   "source_ref": "espn:401879268:play:53366917",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jurriën Timber",
+    "Gabriel Gudmundsson"
+   ],
+   "clock": "77'",
+   "description": "Foul by Jurriën Timber (Arsenal).",
+   "source_ref": "espn:401879268:play:53366917",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "James Justin",
+    "Bruno Guimarães"
+   ],
+   "clock": "78'",
+   "description": "Foul by James Justin (Leeds United).",
+   "source_ref": "espn:401879268:play:53367143",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "James Justin",
+    "Bruno Guimarães"
+   ],
+   "clock": "78'",
+   "description": "Bruno Guimarães (Arsenal) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879268:play:53367143",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "James Justin"
+   ],
+   "clock": "78'",
+   "description": "James Justin (Leeds United) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879268:play:53367144",
+   "team": "Leeds United",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Lukas Nmecha",
+    "James Justin"
+   ],
+   "clock": "79'",
+   "description": "Substitution, Leeds United. Lukas Nmecha replaces James Justin.",
+   "source_ref": "espn:401879268:play:53367159",
+   "team": "Leeds United",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Brenden Aaronson",
+    "Bukayo Saka"
+   ],
+   "clock": "80'",
+   "description": "Foul by Brenden Aaronson (Leeds United).",
+   "source_ref": "espn:401879268:play:53367326",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Brenden Aaronson",
+    "Bukayo Saka"
+   ],
+   "clock": "80'",
+   "description": "Bukayo Saka (Arsenal) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879268:play:53367326",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Piero Hincapié",
+    "Riccardo Calafiori"
+   ],
+   "clock": "82'",
+   "description": "Substitution, Arsenal. Piero Hincapié replaces Riccardo Calafiori.",
+   "source_ref": "espn:401879268:play:53367473",
+   "team": "Arsenal",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Martin Ødegaard"
+   ],
+   "clock": "83'",
+   "description": "Attempt saved. Martin Ødegaard (Arsenal) right footed shot from very close range is saved in the bottom left corner by James Trafford (Leeds United).",
+   "source_ref": "espn:401879268:play:53367665",
+   "team": "Arsenal",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Harry Wilson",
+    "Declan Rice"
+   ],
+   "clock": "83'",
+   "description": "Foul by Harry Wilson (Leeds United).",
+   "source_ref": "espn:401879268:play:53367547",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Harry Wilson",
+    "Declan Rice"
+   ],
+   "clock": "83'",
+   "description": "Declan Rice (Arsenal) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879268:play:53367547",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Martin Ødegaard"
+   ],
+   "clock": "84'",
+   "description": "Martin Ødegaard (Arsenal) is shown the yellow card.",
+   "source_ref": "espn:401879268:play:53367669",
+   "team": "Arsenal",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Jean-Mattéo Bahoya",
+    "Jayden Bogle"
+   ],
+   "clock": "86'",
+   "description": "Substitution, Leeds United. Jean-Mattéo Bahoya replaces Jayden Bogle.",
+   "source_ref": "espn:401879268:play:53367897",
+   "team": "Leeds United",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Jaka Bijol",
+    "Nico Elvedi"
+   ],
+   "clock": "86'",
+   "description": "Substitution, Leeds United. Jaka Bijol replaces Nico Elvedi.",
+   "source_ref": "espn:401879268:play:53368030",
+   "team": "Leeds United",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Viktor Gyökeres",
+    "Ethan Ampadu"
+   ],
+   "clock": "87'",
+   "description": "Ethan Ampadu (Leeds United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879268:play:53368101",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Viktor Gyökeres",
+    "Ethan Ampadu"
+   ],
+   "clock": "87'",
+   "description": "Foul by Viktor Gyökeres (Arsenal).",
+   "source_ref": "espn:401879268:play:53368101",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Mikel Merino",
+    "Martin Ødegaard"
+   ],
+   "clock": "90'",
+   "description": "Substitution, Arsenal. Mikel Merino replaces Martin Ødegaard.",
+   "source_ref": "espn:401879268:play:53368203",
+   "team": "Arsenal",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Noni Madueke",
+    "Bukayo Saka"
+   ],
+   "clock": "90+2'",
+   "description": "Attempt blocked. Noni Madueke (Arsenal) left footed shot from outside the box is blocked. Assisted by Bukayo Saka.",
+   "source_ref": "espn:401879268:play:53368386",
+   "team": "Arsenal",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Bruno Guimarães",
+    "Anton Stach"
+   ],
+   "clock": "90+3'",
+   "description": "Anton Stach (Leeds United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879268:play:53368576",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Bruno Guimarães",
+    "Anton Stach"
+   ],
+   "clock": "90+3'",
+   "description": "Foul by Bruno Guimarães (Arsenal).",
+   "source_ref": "espn:401879268:play:53368576",
+   "team": "Arsenal",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Bukayo Saka",
+    "Viktor Gyökeres"
+   ],
+   "clock": "90+6'",
+   "description": "Attempt saved. Bukayo Saka (Arsenal) left footed shot from outside the box is saved in the bottom left corner by James Trafford (Leeds United). Assisted by Viktor Gyökeres.",
+   "source_ref": "espn:401879268:play:53368847",
+   "team": "Arsenal",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [],
+   "clock": "90+6'",
+   "description": "Corner, Arsenal. Conceded by James Trafford.",
+   "source_ref": "espn:401879268:play:53368876",
+   "team": "Arsenal",
+   "type": "corner"
+  },
+  {
+   "actors": [],
+   "clock": "90+6'",
+   "description": "Second Half ends, Arsenal 2, Leeds United 1.",
+   "score_after": "2-1",
+   "source_ref": "espn:401879268:play:53368905",
+   "type": "full_time"
+  }
+ ],
+ "match": {
+  "end_estimate": "2026-10-10T13:30:00Z",
+  "final_result": "Arsenal 2–1 Leeds United",
+  "id": "401879268",
+  "kickoff": "2026-10-10T11:30:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "ARS",
+    "name": "Arsenal",
+    "role": "home",
+    "score": "2",
+    "short_name": "Arsenal",
+    "winner": true
+   },
+   {
+    "abbreviation": "LEE",
+    "name": "Leeds United",
+    "role": "away",
+    "score": "1",
+    "short_name": "Leeds",
+    "winner": false
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Arsenal struck twice in eight second-half minutes to secure a comeback 2-1 win against Leeds at the Emirates Stadium and move level on points with Manchester City at the Premier League summit.",
+  "title": "Arsenal v Leeds United",
+  "venue": "Emirates Stadium"
+ },
+ "sources": [
+  {
+   "publisher": "ESPN",
+   "title": "Arsenal v Leeds United: match events",
+   "url": "https://www.espn.com/soccer/match/_/gameId/401879268"
+  },
+  {
+   "published_at": "2026-10-07T22:06:04Z",
+   "publisher": "ESPN",
+   "title": "Calafiori, Guimarães help Arsenal come from behind to beat Leeds",
+   "url": "https://www.espn.com/soccer/report/_/gameId/401879268"
+  }
+ ],
+ "team_stats": [
+  {
+   "corners": 3,
+   "fouls": 12,
+   "possession_pct": 58.2,
+   "red_cards": 0,
+   "saves": 4,
+   "shots": 13,
+   "shots_on_target": 6,
+   "team": "Arsenal",
+   "yellow_cards": 1
+  },
+  {
+   "corners": 4,
+   "fouls": 20,
+   "possession_pct": 41.8,
+   "red_cards": 0,
+   "saves": 4,
+   "shots": 11,
+   "shots_on_target": 5,
+   "team": "Leeds United",
+   "yellow_cards": 4
+  }
+ ]
+}

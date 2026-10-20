@@ -1,0 +1,1127 @@
+{
+ "coverage": "full_events",
+ "events": [
+  {
+   "actors": [
+    "Alex Iwobi",
+    "Josh King"
+   ],
+   "clock": "3'",
+   "description": "Attempt blocked. Alex Iwobi (Fulham) right footed shot from the left side of the box is blocked. Assisted by Josh King.",
+   "source_ref": "espn:401878770:play:53780057",
+   "team": "Fulham",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "3'",
+   "description": "Corner, Fulham. Conceded by Matt Crooks.",
+   "source_ref": "espn:401878770:play:53780059",
+   "team": "Fulham",
+   "type": "corner"
+  },
+  {
+   "actors": [],
+   "clock": "6'",
+   "description": "Corner, Fulham. Conceded by Sorba Thomas.",
+   "source_ref": "espn:401878770:play:53781031",
+   "team": "Fulham",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Oscar Bobb",
+    "Josh King"
+   ],
+   "clock": "7'",
+   "description": "Attempt blocked. Oscar Bobb (Fulham) left footed shot from the centre of the box is blocked. Assisted by Josh King.",
+   "source_ref": "espn:401878770:play:53781271",
+   "team": "Fulham",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "8'",
+   "description": "Corner, Fulham. Conceded by Lucas Herrington.",
+   "source_ref": "espn:401878770:play:53781700",
+   "team": "Fulham",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Matt Crooks",
+    "Oscar Bobb"
+   ],
+   "clock": "12'",
+   "description": "Foul by Matt Crooks (Hull City).",
+   "source_ref": "espn:401878770:play:53782751",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matt Crooks",
+    "Oscar Bobb"
+   ],
+   "clock": "12'",
+   "description": "Oscar Bobb (Fulham) wins a free kick on the left wing.",
+   "source_ref": "espn:401878770:play:53782751",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Gonzalo García",
+    "John Egan"
+   ],
+   "clock": "13'",
+   "description": "John Egan (Hull City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878770:play:53782753",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Gonzalo García",
+    "John Egan"
+   ],
+   "clock": "13'",
+   "description": "Foul by Gonzalo García (Fulham).",
+   "source_ref": "espn:401878770:play:53782753",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Oliver McBurnie",
+    "Calvin Bassey"
+   ],
+   "clock": "13'",
+   "description": "Foul by Oliver McBurnie (Hull City).",
+   "source_ref": "espn:401878770:play:53782757",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Oliver McBurnie",
+    "Calvin Bassey"
+   ],
+   "clock": "13'",
+   "description": "Calvin Bassey (Fulham) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878770:play:53782757",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Josh King",
+    "Alex Iwobi"
+   ],
+   "clock": "16'",
+   "description": "Attempt blocked. Josh King (Fulham) right footed shot from the right side of the box is blocked. Assisted by Alex Iwobi.",
+   "source_ref": "espn:401878770:play:53783438",
+   "team": "Fulham",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Lucas Herrington",
+    "Josh King"
+   ],
+   "clock": "17'",
+   "description": "Foul by Lucas Herrington (Hull City).",
+   "source_ref": "espn:401878770:play:53784190",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lucas Herrington",
+    "Josh King"
+   ],
+   "clock": "17'",
+   "description": "Josh King (Fulham) wins a free kick on the right wing.",
+   "source_ref": "espn:401878770:play:53784190",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matt Crooks",
+    "Shea Charles"
+   ],
+   "clock": "18'",
+   "description": "Foul by Matt Crooks (Hull City).",
+   "source_ref": "espn:401878770:play:53784219",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matt Crooks",
+    "Shea Charles"
+   ],
+   "clock": "18'",
+   "description": "Shea Charles (Fulham) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878770:play:53784219",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "18'",
+   "description": "Corner, Fulham. Conceded by Lucas Herrington.",
+   "source_ref": "espn:401878770:play:53784332",
+   "team": "Fulham",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Calvin Bassey",
+    "Mohamed Belloumi"
+   ],
+   "clock": "20'",
+   "description": "Mohamed Belloumi (Hull City) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878770:play:53784573",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Calvin Bassey",
+    "Mohamed Belloumi"
+   ],
+   "clock": "20'",
+   "description": "Foul by Calvin Bassey (Fulham).",
+   "source_ref": "espn:401878770:play:53784573",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Mohamed Belloumi"
+   ],
+   "clock": "20'",
+   "description": "Offside, Hull City. John Egan is caught offside.",
+   "source_ref": "espn:401878770:play:53784759",
+   "team": "Hull City",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Lucas Herrington",
+    "Josh King"
+   ],
+   "clock": "22'",
+   "description": "Foul by Lucas Herrington (Hull City).",
+   "source_ref": "espn:401878770:play:53784941",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lucas Herrington",
+    "Josh King"
+   ],
+   "clock": "22'",
+   "description": "Josh King (Fulham) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878770:play:53784941",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lucas Herrington"
+   ],
+   "clock": "22'",
+   "description": "Lucas Herrington (Hull City) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401878770:play:53784942",
+   "team": "Hull City",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Oscar Bobb"
+   ],
+   "clock": "23'",
+   "description": "Attempt saved. Oscar Bobb (Fulham) left footed shot from outside the box is saved in the bottom left corner by Konstantinos Tzolakis (Hull City).",
+   "source_ref": "espn:401878770:play:53785330",
+   "team": "Fulham",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Calvin Bassey",
+    "Konstantinos Tzolakis"
+   ],
+   "clock": "23'",
+   "description": "Konstantinos Tzolakis (Hull City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878770:play:53785550",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Calvin Bassey",
+    "Konstantinos Tzolakis"
+   ],
+   "clock": "23'",
+   "description": "Foul by Calvin Bassey (Fulham).",
+   "source_ref": "espn:401878770:play:53785550",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Shea Charles",
+    "Mohamed Belloumi"
+   ],
+   "clock": "25'",
+   "description": "Mohamed Belloumi (Hull City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878770:play:53785588",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Shea Charles",
+    "Mohamed Belloumi"
+   ],
+   "clock": "25'",
+   "description": "Foul by Shea Charles (Fulham).",
+   "source_ref": "espn:401878770:play:53785588",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Sander Berge",
+    "Oscar Bobb"
+   ],
+   "clock": "25'",
+   "description": "Attempt blocked. Sander Berge (Fulham) right footed shot from the right side of the box is blocked. Assisted by Oscar Bobb.",
+   "source_ref": "espn:401878770:play:53785742",
+   "team": "Fulham",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Mohamed Belloumi"
+   ],
+   "clock": "26'",
+   "description": "Attempt blocked. Mohamed Belloumi (Hull City) left footed shot from outside the box is blocked.",
+   "source_ref": "espn:401878770:play:53785835",
+   "team": "Hull City",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Josh King",
+    "Regan Slater"
+   ],
+   "clock": "27'",
+   "description": "Regan Slater (Hull City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878770:play:53785849",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Josh King",
+    "Regan Slater"
+   ],
+   "clock": "27'",
+   "description": "Foul by Josh King (Fulham).",
+   "source_ref": "espn:401878770:play:53785849",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Josh King"
+   ],
+   "clock": "27'",
+   "description": "Josh King (Fulham) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401878770:play:53786304",
+   "team": "Fulham",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Regan Slater"
+   ],
+   "clock": "27'",
+   "description": "Regan Slater (Hull City) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401878770:play:53786550",
+   "team": "Hull City",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "David Affengruber"
+   ],
+   "clock": "29'",
+   "description": "Offside, Fulham. Oscar Bobb is caught offside.",
+   "source_ref": "espn:401878770:play:53786551",
+   "team": "Fulham",
+   "type": "offside"
+  },
+  {
+   "actors": [],
+   "clock": "30'",
+   "description": "Corner, Hull City. Conceded by Antonee Robinson.",
+   "source_ref": "espn:401878770:play:53786577",
+   "team": "Hull City",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Regan Slater"
+   ],
+   "clock": "31'",
+   "description": "Offside, Hull City. Semi Ajayi is caught offside.",
+   "source_ref": "espn:401878770:play:53786918",
+   "team": "Hull City",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Matt Crooks",
+    "Calvin Bassey"
+   ],
+   "clock": "32'",
+   "description": "Foul by Matt Crooks (Hull City).",
+   "source_ref": "espn:401878770:play:53786936",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matt Crooks",
+    "Calvin Bassey"
+   ],
+   "clock": "32'",
+   "description": "Calvin Bassey (Fulham) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878770:play:53786936",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Alex Iwobi",
+    "Sander Berge"
+   ],
+   "clock": "33'",
+   "description": "Goal! Fulham 1, Hull City 0. Alex Iwobi (Fulham) right footed shot from the centre of the box to the bottom right corner. Assisted by Sander Berge.",
+   "score_after": "1-0",
+   "source_ref": "espn:401878770:play:53787248",
+   "team": "Fulham",
+   "type": "goal"
+  },
+  {
+   "actors": [],
+   "clock": "39'",
+   "description": "Corner, Fulham. Conceded by John Egan.",
+   "source_ref": "espn:401878770:play:53788678",
+   "team": "Fulham",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Calvin Bassey",
+    "Alex Iwobi"
+   ],
+   "clock": "39'",
+   "description": "Attempt missed. Calvin Bassey (Fulham) header from the centre of the box is too high. Assisted by Alex Iwobi with a cross following a corner.",
+   "source_ref": "espn:401878770:play:53789038",
+   "team": "Fulham",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Oscar Bobb",
+    "Gonzalo García"
+   ],
+   "clock": "40'",
+   "description": "Attempt blocked. Oscar Bobb (Fulham) left footed shot from the right side of the box is blocked. Assisted by Gonzalo García.",
+   "source_ref": "espn:401878770:play:53789045",
+   "team": "Fulham",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "40'",
+   "description": "Corner, Fulham. Conceded by Lucas Herrington.",
+   "source_ref": "espn:401878770:play:53789047",
+   "team": "Fulham",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Alex Iwobi"
+   ],
+   "clock": "41'",
+   "description": "Attempt missed. Alex Iwobi (Fulham) left footed shot from the left side of the box is close, but misses to the right following a corner.",
+   "source_ref": "espn:401878770:play:53789311",
+   "team": "Fulham",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Josh King",
+    "Oscar Bobb"
+   ],
+   "clock": "42'",
+   "description": "Attempt saved. Josh King (Fulham) right footed shot from a difficult angle on the right is saved in the centre of the goal by Konstantinos Tzolakis (Hull City). Assisted by Oscar Bobb.",
+   "source_ref": "espn:401878770:play:53789759",
+   "team": "Fulham",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Regan Slater"
+   ],
+   "clock": "43'",
+   "description": "Attempt missed. Regan Slater (Hull City) right footed shot from outside the box is high and wide to the right.",
+   "source_ref": "espn:401878770:play:53790066",
+   "team": "Hull City",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [],
+   "clock": "45+1'",
+   "description": "Corner, Fulham. Conceded by Brooke Norton-Cuffy.",
+   "source_ref": "espn:401878770:play:53790686",
+   "team": "Fulham",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Calvin Bassey",
+    "Konstantinos Tzolakis"
+   ],
+   "clock": "45+2'",
+   "description": "Konstantinos Tzolakis (Hull City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878770:play:53790875",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Calvin Bassey",
+    "Konstantinos Tzolakis"
+   ],
+   "clock": "45+2'",
+   "description": "Foul by Gonzalo García (Fulham).",
+   "source_ref": "espn:401878770:play:53790875",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "45+2'",
+   "description": "First Half ends, Fulham 1, Hull City 0.",
+   "score_after": "1-0",
+   "source_ref": "espn:401878770:play:53790893",
+   "type": "half_time"
+  },
+  {
+   "actors": [
+    "Tim Iroegbunam",
+    "Lucas Herrington"
+   ],
+   "clock": "45'",
+   "description": "Substitution, Hull City. Tim Iroegbunam replaces Lucas Herrington.",
+   "source_ref": "espn:401878770:play:53793152",
+   "team": "Hull City",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Mohamed Belloumi",
+    "Calvin Bassey"
+   ],
+   "clock": "48'",
+   "description": "Foul by Mohamed Belloumi (Hull City).",
+   "source_ref": "espn:401878770:play:53793490",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Mohamed Belloumi",
+    "Calvin Bassey"
+   ],
+   "clock": "48'",
+   "description": "Calvin Bassey (Fulham) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878770:play:53793490",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Sander Berge",
+    "Matt Crooks"
+   ],
+   "clock": "49'",
+   "description": "Matt Crooks (Hull City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878770:play:53793684",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Sander Berge",
+    "Matt Crooks"
+   ],
+   "clock": "49'",
+   "description": "Foul by Sander Berge (Fulham).",
+   "source_ref": "espn:401878770:play:53793684",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "David Affengruber",
+    "Oliver McBurnie"
+   ],
+   "clock": "51'",
+   "description": "Oliver McBurnie (Hull City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878770:play:53794281",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "David Affengruber",
+    "Oliver McBurnie"
+   ],
+   "clock": "51'",
+   "description": "Foul by David Affengruber (Fulham).",
+   "source_ref": "espn:401878770:play:53794281",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "52'",
+   "description": "Corner, Hull City. Conceded by David Affengruber.",
+   "source_ref": "espn:401878770:play:53794666",
+   "team": "Hull City",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Tim Iroegbunam",
+    "Josh King"
+   ],
+   "clock": "53'",
+   "description": "Foul by Tim Iroegbunam (Hull City).",
+   "source_ref": "espn:401878770:play:53794670",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Tim Iroegbunam",
+    "Josh King"
+   ],
+   "clock": "53'",
+   "description": "Josh King (Fulham) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878770:play:53794670",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Josh King",
+    "Shea Charles"
+   ],
+   "clock": "53'",
+   "description": "Attempt saved. Josh King (Fulham) right footed shot from the centre of the box is saved in the centre of the goal by Konstantinos Tzolakis (Hull City). Assisted by Shea Charles.",
+   "source_ref": "espn:401878770:play:53794792",
+   "team": "Fulham",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Sander Berge",
+    "Regan Slater"
+   ],
+   "clock": "56'",
+   "description": "Regan Slater (Hull City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878770:play:53795743",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Sander Berge",
+    "Regan Slater"
+   ],
+   "clock": "56'",
+   "description": "Foul by Sander Berge (Fulham).",
+   "source_ref": "espn:401878770:play:53795743",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Alex Iwobi",
+    "Gonzalo García"
+   ],
+   "clock": "58'",
+   "description": "Attempt saved. Alex Iwobi (Fulham) right footed shot from the centre of the box is saved in the centre of the goal by Konstantinos Tzolakis (Hull City). Assisted by Gonzalo García with a headed pass.",
+   "source_ref": "espn:401878770:play:53796103",
+   "team": "Fulham",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Sorba Thomas"
+   ],
+   "clock": "59'",
+   "description": "Sorba Thomas (Hull City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878770:play:53796355",
+   "team": "Hull City",
+   "type": "other"
+  },
+  {
+   "actors": [
+    "Timothy Castagne",
+    "Sorba Thomas"
+   ],
+   "clock": "59'",
+   "description": "Foul by Timothy Castagne (Fulham).",
+   "source_ref": "espn:401878770:play:53796737",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lewie Coyle"
+   ],
+   "clock": "61'",
+   "description": "Attempt missed. Lewie Coyle (Hull City) right footed shot from the right side of the box misses to the left.",
+   "source_ref": "espn:401878770:play:53796755",
+   "team": "Hull City",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Robinio Vaz",
+    "Matt Crooks"
+   ],
+   "clock": "68'",
+   "description": "Substitution, Hull City. Robinio Vaz replaces Matt Crooks.",
+   "source_ref": "espn:401878770:play:53798802",
+   "team": "Hull City",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Joe Gelhardt",
+    "Sorba Thomas"
+   ],
+   "clock": "68'",
+   "description": "Substitution, Hull City. Joe Gelhardt replaces Sorba Thomas.",
+   "source_ref": "espn:401878770:play:53799183",
+   "team": "Hull City",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Ryan Giles",
+    "Brooke Norton-Cuffy"
+   ],
+   "clock": "68'",
+   "description": "Substitution, Hull City. Ryan Giles replaces Brooke Norton-Cuffy.",
+   "source_ref": "espn:401878770:play:53799184",
+   "team": "Hull City",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Alex Iwobi",
+    "Oscar Bobb"
+   ],
+   "clock": "70'",
+   "description": "Attempt missed. Alex Iwobi (Fulham) right footed shot from outside the box is close, but misses to the left. Assisted by Oscar Bobb.",
+   "source_ref": "espn:401878770:play:53799381",
+   "team": "Fulham",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [],
+   "clock": "73'",
+   "description": "Corner, Fulham. Conceded by Ryan Giles.",
+   "source_ref": "espn:401878770:play:53800082",
+   "team": "Fulham",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Shea Charles",
+    "Josh King"
+   ],
+   "clock": "73'",
+   "description": "Attempt blocked. Shea Charles (Fulham) right footed shot from outside the box is blocked. Assisted by Josh King.",
+   "source_ref": "espn:401878770:play:53800088",
+   "team": "Fulham",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Gonzalo García",
+    "Alex Iwobi"
+   ],
+   "clock": "74'",
+   "description": "Gonzalo García (Fulham) hits the bar with a header from very close range. Assisted by Alex Iwobi with a cross.",
+   "source_ref": "espn:401878770:play:53800097",
+   "team": "Fulham",
+   "type": "woodwork"
+  },
+  {
+   "actors": [
+    "Oscar Bobb"
+   ],
+   "clock": "74'",
+   "description": "Attempt missed. Oscar Bobb (Fulham) left footed shot from the left side of the box misses to the left.",
+   "source_ref": "espn:401878770:play:53800281",
+   "team": "Fulham",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [],
+   "clock": "74'",
+   "description": "Corner, Fulham. Conceded by John Egan.",
+   "source_ref": "espn:401878770:play:53800283",
+   "team": "Fulham",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Hidemasa Morita",
+    "Regan Slater"
+   ],
+   "clock": "75'",
+   "description": "Substitution, Hull City. Hidemasa Morita replaces Regan Slater.",
+   "source_ref": "espn:401878770:play:53800332",
+   "team": "Hull City",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Hidemasa Morita",
+    "Josh King"
+   ],
+   "clock": "76'",
+   "description": "Foul by Hidemasa Morita (Hull City).",
+   "source_ref": "espn:401878770:play:53800867",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Josh King"
+   ],
+   "clock": "76'",
+   "description": "Josh King (Fulham) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878770:play:53800663",
+   "team": "Fulham",
+   "type": "other"
+  },
+  {
+   "actors": [
+    "Oscar Bobb",
+    "Antonee Robinson"
+   ],
+   "clock": "78'",
+   "description": "Attempt missed. Oscar Bobb (Fulham) left footed shot from outside the box is too high. Assisted by Antonee Robinson with a headed pass.",
+   "source_ref": "espn:401878770:play:53800875",
+   "team": "Fulham",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Ryan Sessegnon",
+    "Josh King"
+   ],
+   "clock": "78'",
+   "description": "Substitution, Fulham. Ryan Sessegnon replaces Josh King because of an injury.",
+   "source_ref": "espn:401878770:play:53801137",
+   "team": "Fulham",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Tom Cairney",
+    "Oscar Bobb"
+   ],
+   "clock": "78'",
+   "description": "Substitution, Fulham. Tom Cairney replaces Oscar Bobb because of an injury.",
+   "source_ref": "espn:401878770:play:53801138",
+   "team": "Fulham",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Mohamed Belloumi",
+    "Hidemasa Morita"
+   ],
+   "clock": "79'",
+   "description": "Attempt missed. Mohamed Belloumi (Hull City) left footed shot from outside the box is close, but misses to the right. Assisted by Hidemasa Morita.",
+   "source_ref": "espn:401878770:play:53801122",
+   "team": "Hull City",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [],
+   "clock": "83'",
+   "description": "Corner, Fulham. Conceded by Semi Ajayi.",
+   "source_ref": "espn:401878770:play:53802275",
+   "team": "Fulham",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Sander Berge",
+    "Robinio Vaz"
+   ],
+   "clock": "84'",
+   "description": "Robinio Vaz (Hull City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878770:play:53802286",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Sander Berge",
+    "Robinio Vaz"
+   ],
+   "clock": "84'",
+   "description": "Foul by Sander Berge (Fulham).",
+   "source_ref": "espn:401878770:play:53802286",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Sander Berge"
+   ],
+   "clock": "84'",
+   "description": "Sander Berge (Fulham) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401878770:play:53802287",
+   "team": "Fulham",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "César Palacios",
+    "Gonzalo García"
+   ],
+   "clock": "85'",
+   "description": "Substitution, Fulham. César Palacios replaces Gonzalo García.",
+   "source_ref": "espn:401878770:play:53802594",
+   "team": "Fulham",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Joe Gelhardt",
+    "Timothy Castagne"
+   ],
+   "clock": "88'",
+   "description": "Foul by Joe Gelhardt (Hull City).",
+   "source_ref": "espn:401878770:play:53802925",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Joe Gelhardt",
+    "Timothy Castagne"
+   ],
+   "clock": "88'",
+   "description": "Timothy Castagne (Fulham) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878770:play:53802925",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "David Affengruber",
+    "Robinio Vaz"
+   ],
+   "clock": "90'",
+   "description": "Robinio Vaz (Hull City) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878770:play:53803350",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "David Affengruber",
+    "Robinio Vaz"
+   ],
+   "clock": "90'",
+   "description": "Foul by David Affengruber (Fulham).",
+   "source_ref": "espn:401878770:play:53803350",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Mohamed Belloumi"
+   ],
+   "clock": "90+1'",
+   "description": "Attempt missed. Mohamed Belloumi (Hull City) left footed shot from outside the box is too high from a direct free kick.",
+   "source_ref": "espn:401878770:play:53803729",
+   "team": "Hull City",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Robinio Vaz",
+    "David Affengruber"
+   ],
+   "clock": "90+1'",
+   "description": "Foul by Robinio Vaz (Hull City).",
+   "source_ref": "espn:401878770:play:53803965",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Robinio Vaz",
+    "David Affengruber"
+   ],
+   "clock": "90+1'",
+   "description": "David Affengruber (Fulham) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878770:play:53803965",
+   "team": "Hull City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Tom Cairney",
+    "César Palacios"
+   ],
+   "clock": "90+3'",
+   "description": "Attempt saved. Tom Cairney (Fulham) left footed shot from outside the box is saved in the bottom right corner by Konstantinos Tzolakis (Hull City). Assisted by César Palacios.",
+   "source_ref": "espn:401878770:play:53803985",
+   "team": "Fulham",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Ryan Sessegnon",
+    "Robinio Vaz"
+   ],
+   "clock": "90+4'",
+   "description": "Robinio Vaz (Hull City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878770:play:53804186",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ryan Sessegnon",
+    "Robinio Vaz"
+   ],
+   "clock": "90+4'",
+   "description": "Foul by Ryan Sessegnon (Fulham).",
+   "source_ref": "espn:401878770:play:53804186",
+   "team": "Fulham",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ryan Sessegnon"
+   ],
+   "clock": "90+4'",
+   "description": "Ryan Sessegnon (Fulham) is shown the red card.",
+   "source_ref": "espn:401878770:play:53804187",
+   "team": "Fulham",
+   "type": "red_card"
+  },
+  {
+   "actors": [
+    "Robinio Vaz"
+   ],
+   "clock": "90+7'",
+   "description": "Robinio Vaz went off injured after Hull City had used all subs.",
+   "source_ref": "espn:401878770:play:53805420",
+   "team": "Hull City",
+   "type": "injury"
+  }
+ ],
+ "match": {
+  "end_estimate": "2026-10-17T16:00:00Z",
+  "final_result": "Fulham 1–0 Hull City",
+  "id": "401878770",
+  "kickoff": "2026-10-17T14:00:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "FUL",
+    "name": "Fulham",
+    "role": "home",
+    "score": "1",
+    "short_name": "Fulham",
+    "winner": true
+   },
+   {
+    "abbreviation": "HUL",
+    "name": "Hull City",
+    "role": "away",
+    "score": "0",
+    "short_name": "Hull",
+    "winner": false
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Fulham's winless run under Alvaro Arbeloa was finally ended by an entertaining 1-0 victory over Hull at Craven Cottage.",
+  "title": "Fulham v Hull City",
+  "venue": "Craven Cottage"
+ },
+ "sources": [
+  {
+   "publisher": "ESPN",
+   "title": "Fulham v Hull City: match events",
+   "url": "https://www.espn.com/soccer/match/_/gameId/401878770"
+  },
+  {
+   "published_at": "2026-10-17T16:01:00Z",
+   "publisher": "ESPN",
+   "title": "Alex Iwobi goal earns Alvaro Arbeloa's Fulham their first Premier League win",
+   "url": "https://www.espn.com/soccer/report/_/gameId/401878770"
+  }
+ ],
+ "team_stats": [
+  {
+   "corners": 10,
+   "fouls": 13,
+   "possession_pct": 76.2,
+   "red_cards": 1,
+   "saves": 0,
+   "shots": 18,
+   "shots_on_target": 6,
+   "team": "Fulham",
+   "yellow_cards": 2
+  },
+  {
+   "corners": 2,
+   "fouls": 11,
+   "possession_pct": 23.8,
+   "red_cards": 0,
+   "saves": 5,
+   "shots": 5,
+   "shots_on_target": 0,
+   "team": "Hull City",
+   "yellow_cards": 2
+  }
+ ]
+}

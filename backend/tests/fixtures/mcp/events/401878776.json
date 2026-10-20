@@ -1,0 +1,1338 @@
+{
+ "coverage": "full_events",
+ "events": [
+  {
+   "actors": [
+    "El Hadji Malick Diouf",
+    "Boubacar Kamara"
+   ],
+   "clock": "2'",
+   "description": "Foul by El Hadji Malick Diouf (Brentford).",
+   "source_ref": "espn:401878776:play:53371919",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "El Hadji Malick Diouf",
+    "Boubacar Kamara"
+   ],
+   "clock": "2'",
+   "description": "Boubacar Kamara (Aston Villa) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878776:play:53371919",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Kevin Schade",
+    "Igor Thiago"
+   ],
+   "clock": "4'",
+   "description": "Attempt missed. Kevin Schade (Brentford) right footed shot from outside the box is high and wide to the right. Assisted by Igor Thiago following a fast break.",
+   "source_ref": "espn:401878776:play:53372372",
+   "team": "Brentford",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Yehor Yarmoliuk",
+    "Johan Manzambi"
+   ],
+   "clock": "8'",
+   "description": "Foul by Yehor Yarmoliuk (Brentford).",
+   "source_ref": "espn:401878776:play:53373413",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Yehor Yarmoliuk",
+    "Johan Manzambi"
+   ],
+   "clock": "8'",
+   "description": "Johan Manzambi (Aston Villa) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878776:play:53373413",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Nicolas Jackson",
+    "Johan Manzambi"
+   ],
+   "clock": "9'",
+   "description": "Attempt blocked. Nicolas Jackson (Aston Villa) left footed shot from the left side of the box is blocked. Assisted by Johan Manzambi.",
+   "source_ref": "espn:401878776:play:53373881",
+   "team": "Aston Villa",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Johan Manzambi",
+    "Emiliano Buendía"
+   ],
+   "clock": "9'",
+   "description": "Attempt missed. Johan Manzambi (Aston Villa) right footed shot from outside the box is too high. Assisted by Emiliano Buendía.",
+   "source_ref": "espn:401878776:play:53373896",
+   "team": "Aston Villa",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Yehor Yarmoliuk"
+   ],
+   "clock": "10'",
+   "description": "Goal! Aston Villa 0, Brentford 1. Yehor Yarmoliuk (Brentford) right footed shot from the centre of the box to the centre of the goal.",
+   "score_after": "0-1",
+   "source_ref": "espn:401878776:play:53374215",
+   "team": "Brentford",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Yehor Yarmoliuk",
+    "João Gomes"
+   ],
+   "clock": "12'",
+   "description": "Foul by Yehor Yarmoliuk (Brentford).",
+   "source_ref": "espn:401878776:play:53374655",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Yehor Yarmoliuk",
+    "João Gomes"
+   ],
+   "clock": "12'",
+   "description": "João Gomes (Aston Villa) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878776:play:53374655",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Emiliano Buendía",
+    "John McGinn"
+   ],
+   "clock": "12'",
+   "description": "Attempt blocked. Emiliano Buendía (Aston Villa) left footed shot from outside the box is blocked. Assisted by John McGinn.",
+   "source_ref": "espn:401878776:play:53374658",
+   "team": "Aston Villa",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Nicolas Jackson"
+   ],
+   "clock": "12'",
+   "description": "Goal! Aston Villa 1, Brentford 1. Nicolas Jackson (Aston Villa) right footed shot from the centre of the box to the bottom right corner.",
+   "score_after": "1-1",
+   "source_ref": "espn:401878776:play:53374659",
+   "team": "Aston Villa",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "El Hadji Malick Diouf",
+    "John McGinn"
+   ],
+   "clock": "13'",
+   "description": "Foul by El Hadji Malick Diouf (Brentford).",
+   "source_ref": "espn:401878776:play:53375119",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "El Hadji Malick Diouf",
+    "John McGinn"
+   ],
+   "clock": "13'",
+   "description": "John McGinn (Aston Villa) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878776:play:53375119",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matty Cash",
+    "Kristoffer Ajer"
+   ],
+   "clock": "14'",
+   "description": "Kristoffer Ajer (Brentford) wins a free kick on the left wing.",
+   "source_ref": "espn:401878776:play:53375124",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matty Cash",
+    "Kristoffer Ajer"
+   ],
+   "clock": "14'",
+   "description": "Foul by Matty Cash (Aston Villa).",
+   "source_ref": "espn:401878776:play:53375124",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Kevin Schade"
+   ],
+   "clock": "17'",
+   "description": "Attempt missed. Kevin Schade (Brentford) header from the centre of the box is close, but misses to the left.",
+   "source_ref": "espn:401878776:play:53375913",
+   "team": "Brentford",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Jaidon Anthony",
+    "Emiliano Buendía"
+   ],
+   "clock": "18'",
+   "description": "Foul by Jaidon Anthony (Brentford).",
+   "source_ref": "espn:401878776:play:53376213",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jaidon Anthony",
+    "Emiliano Buendía"
+   ],
+   "clock": "18'",
+   "description": "Emiliano Buendía (Aston Villa) wins a free kick on the left wing.",
+   "source_ref": "espn:401878776:play:53376213",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Igor Thiago",
+    "Emiliano Buendía"
+   ],
+   "clock": "20'",
+   "description": "Foul by Igor Thiago (Brentford).",
+   "source_ref": "espn:401878776:play:53376438",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Igor Thiago",
+    "Emiliano Buendía"
+   ],
+   "clock": "20'",
+   "description": "Emiliano Buendía (Aston Villa) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878776:play:53376438",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matteo Ruggeri",
+    "Jaidon Anthony"
+   ],
+   "clock": "21'",
+   "description": "Jaidon Anthony (Brentford) wins a free kick on the right wing.",
+   "source_ref": "espn:401878776:play:53376911",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matteo Ruggeri",
+    "Jaidon Anthony"
+   ],
+   "clock": "21'",
+   "description": "Foul by Matteo Ruggeri (Aston Villa).",
+   "source_ref": "espn:401878776:play:53376911",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "22'",
+   "description": "Corner, Brentford. Conceded by Matty Cash.",
+   "source_ref": "espn:401878776:play:53377182",
+   "team": "Brentford",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Nicolas Jackson"
+   ],
+   "clock": "23'",
+   "description": "Offside, Aston Villa. Matteo Ruggeri is caught offside.",
+   "source_ref": "espn:401878776:play:53377191",
+   "team": "Aston Villa",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Yehor Yarmoliuk"
+   ],
+   "clock": "29'",
+   "description": "Offside, Brentford. Igor Thiago is caught offside.",
+   "source_ref": "espn:401878776:play:53378595",
+   "team": "Brentford",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Johan Manzambi",
+    "Emiliano Buendía"
+   ],
+   "clock": "31'",
+   "description": "Attempt blocked. Johan Manzambi (Aston Villa) right footed shot from the centre of the box is blocked. Assisted by Emiliano Buendía.",
+   "source_ref": "espn:401878776:play:53378832",
+   "team": "Aston Villa",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Johan Manzambi"
+   ],
+   "clock": "31'",
+   "description": "Attempt saved. Johan Manzambi (Aston Villa) right footed shot from the centre of the box is saved in the centre of the goal by Caoimhín Kelleher (Brentford).",
+   "source_ref": "espn:401878776:play:53378836",
+   "team": "Aston Villa",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Emiliano Buendía"
+   ],
+   "clock": "31'",
+   "description": "Attempt missed. Emiliano Buendía (Aston Villa) left footed shot from the centre of the box is too high.",
+   "source_ref": "espn:401878776:play:53379034",
+   "team": "Aston Villa",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Jaidon Anthony",
+    "Keane Lewis-Potter"
+   ],
+   "clock": "32'",
+   "description": "Attempt saved. Jaidon Anthony (Brentford) right footed shot from the right side of the box is saved in the top centre of the goal by Zion Suzuki (Aston Villa). Assisted by Keane Lewis-Potter.",
+   "source_ref": "espn:401878776:play:53379049",
+   "team": "Brentford",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Yehor Yarmoliuk",
+    "Johan Manzambi"
+   ],
+   "clock": "32'",
+   "description": "Johan Manzambi (Aston Villa) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878776:play:53384012",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Yehor Yarmoliuk",
+    "Johan Manzambi"
+   ],
+   "clock": "32'",
+   "description": "Foul by Yehor Yarmoliuk (Brentford).",
+   "source_ref": "espn:401878776:play:53384012",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "El Hadji Malick Diouf",
+    "John McGinn"
+   ],
+   "clock": "34'",
+   "description": "John McGinn (Aston Villa) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878776:play:53379829",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "El Hadji Malick Diouf",
+    "John McGinn"
+   ],
+   "clock": "34'",
+   "description": "Foul by El Hadji Malick Diouf (Brentford).",
+   "source_ref": "espn:401878776:play:53379829",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jaidon Anthony",
+    "Emiliano Buendía"
+   ],
+   "clock": "35'",
+   "description": "Emiliano Buendía (Aston Villa) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878776:play:53379835",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jaidon Anthony",
+    "Emiliano Buendía"
+   ],
+   "clock": "35'",
+   "description": "Foul by Jaidon Anthony (Brentford).",
+   "source_ref": "espn:401878776:play:53379835",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Igor Thiago",
+    "Emiliano Buendía"
+   ],
+   "clock": "35'",
+   "description": "Emiliano Buendía (Aston Villa) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878776:play:53379841",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Igor Thiago",
+    "Emiliano Buendía"
+   ],
+   "clock": "35'",
+   "description": "Foul by Igor Thiago (Brentford).",
+   "source_ref": "espn:401878776:play:53379841",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Igor Thiago"
+   ],
+   "clock": "35'",
+   "description": "Igor Thiago (Brentford) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401878776:play:53380249",
+   "team": "Brentford",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "John McGinn",
+    "El Hadji Malick Diouf"
+   ],
+   "clock": "39'",
+   "description": "Foul by John McGinn (Aston Villa).",
+   "source_ref": "espn:401878776:play:53381246",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "John McGinn",
+    "El Hadji Malick Diouf"
+   ],
+   "clock": "39'",
+   "description": "El Hadji Malick Diouf (Brentford) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878776:play:53381246",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jannik Schuster",
+    "John McGinn"
+   ],
+   "clock": "41'",
+   "description": "John McGinn (Aston Villa) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878776:play:53381782",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jannik Schuster",
+    "John McGinn"
+   ],
+   "clock": "41'",
+   "description": "Foul by Jannik Schuster (Brentford).",
+   "source_ref": "espn:401878776:play:53381782",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Nicolas Jackson",
+    "Johan Manzambi"
+   ],
+   "clock": "45+2'",
+   "description": "Attempt missed. Nicolas Jackson (Aston Villa) right footed shot from the centre of the box is too high. Assisted by Johan Manzambi.",
+   "source_ref": "espn:401878776:play:53383144",
+   "team": "Aston Villa",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Kevin Schade",
+    "Igor Thiago"
+   ],
+   "clock": "45+2'",
+   "description": "Attempt missed. Kevin Schade (Brentford) left footed shot from the left side of the box is high and wide to the left. Assisted by Igor Thiago.",
+   "source_ref": "espn:401878776:play:53383325",
+   "team": "Brentford",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Emiliano Buendía",
+    "Keane Lewis-Potter"
+   ],
+   "clock": "45+3'",
+   "description": "Foul by Emiliano Buendía (Aston Villa).",
+   "source_ref": "espn:401878776:play:53383516",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Emiliano Buendía",
+    "Keane Lewis-Potter"
+   ],
+   "clock": "45+3'",
+   "description": "Keane Lewis-Potter (Brentford) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878776:play:53383516",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Emiliano Buendía"
+   ],
+   "clock": "45+3'",
+   "description": "Emiliano Buendía (Aston Villa) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401878776:play:53383517",
+   "team": "Aston Villa",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Jannik Schuster",
+    "John McGinn"
+   ],
+   "clock": "45+4'",
+   "description": "John McGinn (Aston Villa) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878776:play:53383747",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jannik Schuster",
+    "John McGinn"
+   ],
+   "clock": "45+4'",
+   "description": "Foul by Jannik Schuster (Brentford).",
+   "source_ref": "espn:401878776:play:53383747",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Nicolas Jackson",
+    "Matteo Ruggeri"
+   ],
+   "clock": "45+5'",
+   "description": "Attempt saved. Nicolas Jackson (Aston Villa) right footed shot from the left side of the box is saved in the bottom left corner by Caoimhín Kelleher (Brentford). Assisted by Matteo Ruggeri.",
+   "source_ref": "espn:401878776:play:53383764",
+   "team": "Aston Villa",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "John McGinn"
+   ],
+   "clock": "45+5'",
+   "description": "Attempt saved. John McGinn (Aston Villa) left footed shot from the centre of the box is saved in the centre of the goal by Caoimhín Kelleher (Brentford).",
+   "source_ref": "espn:401878776:play:53383765",
+   "team": "Aston Villa",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Aaron Wan-Bissaka",
+    "Matteo Ruggeri"
+   ],
+   "clock": "45'",
+   "description": "Substitution, Aston Villa. Aaron Wan-Bissaka replaces Matteo Ruggeri because of an injury.",
+   "source_ref": "espn:401878776:play:53386120",
+   "team": "Aston Villa",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Aaron Hickey",
+    "Jannik Schuster"
+   ],
+   "clock": "45'",
+   "description": "Substitution, Brentford. Aaron Hickey replaces Jannik Schuster.",
+   "source_ref": "espn:401878776:play:53386122",
+   "team": "Brentford",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Yehor Yarmoliuk",
+    "João Gomes"
+   ],
+   "clock": "47'",
+   "description": "João Gomes (Aston Villa) wins a free kick on the left wing.",
+   "source_ref": "espn:401878776:play:53386343",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Yehor Yarmoliuk",
+    "João Gomes"
+   ],
+   "clock": "47'",
+   "description": "Foul by Yehor Yarmoliuk (Brentford).",
+   "source_ref": "espn:401878776:play:53386343",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Yehor Yarmoliuk"
+   ],
+   "clock": "48'",
+   "description": "Handball by Yehor Yarmoliuk (Brentford).",
+   "source_ref": "espn:401878776:play:53386631",
+   "team": "Brentford",
+   "type": "handball"
+  },
+  {
+   "actors": [
+    "Keane Lewis-Potter",
+    "João Gomes"
+   ],
+   "clock": "49'",
+   "description": "João Gomes (Aston Villa) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878776:play:53387340",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Keane Lewis-Potter",
+    "João Gomes"
+   ],
+   "clock": "49'",
+   "description": "Foul by Keane Lewis-Potter (Brentford).",
+   "source_ref": "espn:401878776:play:53387340",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Kevin Schade",
+    "Igor Thiago"
+   ],
+   "clock": "49'",
+   "description": "Attempt saved. Kevin Schade (Brentford) right footed shot from the centre of the box is saved in the centre of the goal by Zion Suzuki (Aston Villa). Assisted by Igor Thiago with a headed pass.",
+   "source_ref": "espn:401878776:play:53387359",
+   "team": "Brentford",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Keane Lewis-Potter",
+    "El Hadji Malick Diouf"
+   ],
+   "clock": "50'",
+   "description": "Attempt blocked. Keane Lewis-Potter (Brentford) right footed shot from the left side of the box is blocked. Assisted by El Hadji Malick Diouf.",
+   "source_ref": "espn:401878776:play:53387367",
+   "team": "Brentford",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Yehor Yarmoliuk",
+    "Boubacar Kamara"
+   ],
+   "clock": "50'",
+   "description": "Boubacar Kamara (Aston Villa) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878776:play:53387375",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Yehor Yarmoliuk",
+    "Boubacar Kamara"
+   ],
+   "clock": "50'",
+   "description": "Foul by Yehor Yarmoliuk (Brentford).",
+   "source_ref": "espn:401878776:play:53387375",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Mamadou Sangare",
+    "Kevin Schade"
+   ],
+   "clock": "52'",
+   "description": "Substitution, Brentford. Mamadou Sangaré replaces Kevin Schade because of an injury.",
+   "source_ref": "espn:401878776:play:53387748",
+   "team": "Brentford",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Igor Thiago",
+    "Michael Kayode"
+   ],
+   "clock": "54'",
+   "description": "Attempt missed. Igor Thiago (Brentford) right footed shot from the centre of the box is high and wide to the right. Assisted by Michael Kayode with a cross.",
+   "source_ref": "espn:401878776:play:53388307",
+   "team": "Brentford",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Vitaly Janelt",
+    "Matty Cash"
+   ],
+   "clock": "55'",
+   "description": "Matty Cash (Aston Villa) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878776:play:53388717",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Vitaly Janelt",
+    "Matty Cash"
+   ],
+   "clock": "55'",
+   "description": "Foul by Vitaly Janelt (Brentford).",
+   "source_ref": "espn:401878776:play:53388717",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "El Hadji Malick Diouf"
+   ],
+   "clock": "57'",
+   "description": "Attempt missed. El Hadji Malick Diouf (Brentford) left footed shot from outside the box is too high.",
+   "source_ref": "espn:401878776:play:53389060",
+   "team": "Brentford",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Emiliano Buendía",
+    "Nicolas Jackson"
+   ],
+   "clock": "58'",
+   "description": "Attempt missed. Emiliano Buendía (Aston Villa) right footed shot from the left side of the box is close, but misses to the left. Assisted by Nicolas Jackson.",
+   "source_ref": "espn:401878776:play:53389611",
+   "team": "Aston Villa",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Johan Manzambi",
+    "John McGinn"
+   ],
+   "clock": "60'",
+   "description": "Attempt blocked. Johan Manzambi (Aston Villa) right footed shot from outside the box is blocked. Assisted by John McGinn.",
+   "source_ref": "espn:401878776:play:53390057",
+   "team": "Aston Villa",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Johan Manzambi",
+    "Aaron Wan-Bissaka"
+   ],
+   "clock": "60'",
+   "description": "Attempt missed. Johan Manzambi (Aston Villa) right footed shot from the left side of the box is close, but misses to the left. Assisted by Aaron Wan-Bissaka.",
+   "source_ref": "espn:401878776:play:53390301",
+   "team": "Aston Villa",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Emiliano Buendía",
+    "Boubacar Kamara"
+   ],
+   "clock": "62'",
+   "description": "Attempt blocked. Emiliano Buendía (Aston Villa) right footed shot from outside the box is blocked. Assisted by Boubacar Kamara.",
+   "source_ref": "espn:401878776:play:53390320",
+   "team": "Aston Villa",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "62'",
+   "description": "Corner, Aston Villa. Conceded by Kristoffer Ajer.",
+   "source_ref": "espn:401878776:play:53390608",
+   "team": "Aston Villa",
+   "type": "corner"
+  },
+  {
+   "actors": [],
+   "clock": "63'",
+   "description": "Corner, Brentford. Conceded by Zion Suzuki.",
+   "source_ref": "espn:401878776:play:53390621",
+   "team": "Brentford",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Michael Kayode",
+    "Boubacar Kamara"
+   ],
+   "clock": "64'",
+   "description": "Foul by Michael Kayode (Brentford).",
+   "source_ref": "espn:401878776:play:53391287",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Michael Kayode",
+    "Boubacar Kamara"
+   ],
+   "clock": "64'",
+   "description": "Boubacar Kamara (Aston Villa) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878776:play:53391287",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ibrahim Mbaye",
+    "Emiliano Buendía"
+   ],
+   "clock": "64'",
+   "description": "Substitution, Aston Villa. Ibrahim Mbaye replaces Emiliano Buendía.",
+   "source_ref": "espn:401878776:play:53391308",
+   "team": "Aston Villa",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Dango Ouattara",
+    "Keane Lewis-Potter"
+   ],
+   "clock": "67'",
+   "description": "Substitution, Brentford. Dango Ouattara replaces Keane Lewis-Potter.",
+   "source_ref": "espn:401878776:play:53391613",
+   "team": "Brentford",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Mathias Jensen",
+    "Yehor Yarmoliuk"
+   ],
+   "clock": "67'",
+   "description": "Substitution, Brentford. Mathias Jensen replaces Yehor Yarmoliuk.",
+   "source_ref": "espn:401878776:play:53391882",
+   "team": "Brentford",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Aaron Hickey",
+    "John McGinn"
+   ],
+   "clock": "68'",
+   "description": "Foul by Aaron Hickey (Brentford).",
+   "source_ref": "espn:401878776:play:53391859",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Aaron Hickey",
+    "John McGinn"
+   ],
+   "clock": "68'",
+   "description": "John McGinn (Aston Villa) wins a free kick on the right wing.",
+   "source_ref": "espn:401878776:play:53391859",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Johan Manzambi",
+    "Nicolas Jackson"
+   ],
+   "clock": "70'",
+   "description": "Attempt blocked. Johan Manzambi (Aston Villa) right footed shot from the left side of the box is blocked. Assisted by Nicolas Jackson.",
+   "source_ref": "espn:401878776:play:53392188",
+   "team": "Aston Villa",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Tyrone Mings",
+    "Igor Thiago"
+   ],
+   "clock": "70'",
+   "description": "Igor Thiago (Brentford) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878776:play:53392390",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Tyrone Mings",
+    "Igor Thiago"
+   ],
+   "clock": "70'",
+   "description": "Foul by Tyrone Mings (Aston Villa).",
+   "source_ref": "espn:401878776:play:53392390",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "El Hadji Malick Diouf",
+    "Matty Cash"
+   ],
+   "clock": "71'",
+   "description": "Matty Cash (Aston Villa) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878776:play:53392400",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "El Hadji Malick Diouf",
+    "Matty Cash"
+   ],
+   "clock": "71'",
+   "description": "Foul by El Hadji Malick Diouf (Brentford).",
+   "source_ref": "espn:401878776:play:53392400",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matty Cash",
+    "Mathias Jensen"
+   ],
+   "clock": "72'",
+   "description": "Foul by Matty Cash (Aston Villa).",
+   "source_ref": "espn:401878776:play:53392641",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matty Cash",
+    "Mathias Jensen"
+   ],
+   "clock": "72'",
+   "description": "Mathias Jensen (Brentford) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878776:play:53392641",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matty Cash"
+   ],
+   "clock": "72'",
+   "description": "Matty Cash (Aston Villa) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401878776:play:53392642",
+   "team": "Aston Villa",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Jaidon Anthony",
+    "Mathias Jensen"
+   ],
+   "clock": "73'",
+   "description": "Attempt missed. Jaidon Anthony (Brentford) header from the left side of the six yard box is too high. Assisted by Mathias Jensen with a cross.",
+   "source_ref": "espn:401878776:play:53392898",
+   "team": "Brentford",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Vitaly Janelt",
+    "Boubacar Kamara"
+   ],
+   "clock": "75'",
+   "description": "Boubacar Kamara (Aston Villa) wins a free kick on the right wing.",
+   "source_ref": "espn:401878776:play:53393149",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Vitaly Janelt",
+    "Boubacar Kamara"
+   ],
+   "clock": "75'",
+   "description": "Foul by Vitaly Janelt (Brentford).",
+   "source_ref": "espn:401878776:play:53393149",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Vitaly Janelt"
+   ],
+   "clock": "75'",
+   "description": "Vitaly Janelt (Brentford) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401878776:play:53393310",
+   "team": "Brentford",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "John McGinn",
+    "Johan Manzambi"
+   ],
+   "clock": "77'",
+   "description": "Goal! Aston Villa 2, Brentford 1. John McGinn (Aston Villa) right footed shot from the left side of the box to the bottom right corner. Assisted by Johan Manzambi.",
+   "score_after": "2-1",
+   "source_ref": "espn:401878776:play:53393543",
+   "team": "Aston Villa",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Kristoffer Ajer"
+   ],
+   "clock": "79'",
+   "description": "Attempt blocked. Kristoffer Ajer (Brentford) right footed shot from the left side of the box is blocked.",
+   "source_ref": "espn:401878776:play:53394046",
+   "team": "Brentford",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Kristoffer Ajer",
+    "Jaidon Anthony"
+   ],
+   "clock": "79'",
+   "description": "Goal! Aston Villa 2, Brentford 2. Kristoffer Ajer (Brentford) right footed shot from the centre of the box to the bottom left corner. Assisted by Jaidon Anthony.",
+   "score_after": "2-2",
+   "source_ref": "espn:401878776:play:53394058",
+   "team": "Brentford",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Michael Kayode",
+    "Nicolas Jackson"
+   ],
+   "clock": "81'",
+   "description": "Nicolas Jackson (Aston Villa) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878776:play:53394864",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Michael Kayode",
+    "Nicolas Jackson"
+   ],
+   "clock": "81'",
+   "description": "Foul by Michael Kayode (Brentford).",
+   "source_ref": "espn:401878776:play:53394864",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Michael Kayode"
+   ],
+   "clock": "82'",
+   "description": "Michael Kayode (Brentford) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401878776:play:53394865",
+   "team": "Brentford",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Johan Manzambi"
+   ],
+   "clock": "83'",
+   "description": "Attempt blocked. Johan Manzambi (Aston Villa) right footed shot from outside the box is blocked.",
+   "source_ref": "espn:401878776:play:53394866",
+   "team": "Aston Villa",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "John McGinn",
+    "Ibrahim Mbaye"
+   ],
+   "clock": "84'",
+   "description": "Attempt saved. John McGinn (Aston Villa) left footed shot from the centre of the box is saved in the bottom left corner by Caoimhín Kelleher (Brentford). Assisted by Ibrahim Mbaye.",
+   "source_ref": "espn:401878776:play:53395057",
+   "team": "Aston Villa",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "John McGinn",
+    "El Hadji Malick Diouf"
+   ],
+   "clock": "84'",
+   "description": "Foul by John McGinn (Aston Villa).",
+   "source_ref": "espn:401878776:play:53395061",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "John McGinn",
+    "El Hadji Malick Diouf"
+   ],
+   "clock": "84'",
+   "description": "El Hadji Malick Diouf (Brentford) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878776:play:53395061",
+   "team": "Aston Villa",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Kristoffer Ajer"
+   ],
+   "clock": "84'",
+   "description": "Kristoffer Ajer (Brentford) is shown the yellow card.",
+   "source_ref": "espn:401878776:play:53395400",
+   "team": "Brentford",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Callum Wilson",
+    "Jaidon Anthony"
+   ],
+   "clock": "85'",
+   "description": "Substitution, Brentford. Callum Wilson replaces Jaidon Anthony.",
+   "source_ref": "espn:401878776:play:53395417",
+   "team": "Brentford",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Ross Barkley",
+    "João Gomes"
+   ],
+   "clock": "86'",
+   "description": "Substitution, Aston Villa. Ross Barkley replaces João Gomes.",
+   "source_ref": "espn:401878776:play:53395418",
+   "team": "Aston Villa",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Alysson",
+    "Johan Manzambi"
+   ],
+   "clock": "86'",
+   "description": "Substitution, Aston Villa. Alysson replaces Johan Manzambi.",
+   "source_ref": "espn:401878776:play:53395655",
+   "team": "Aston Villa",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Dango Ouattara",
+    "Mamadou Sangare"
+   ],
+   "clock": "86'",
+   "description": "Attempt missed. Dango Ouattara (Brentford) left footed shot from the right side of the box misses to the right. Assisted by Mamadou Sangaré following a set piece situation.",
+   "source_ref": "espn:401878776:play:53395634",
+   "team": "Brentford",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Boubacar Kamara"
+   ],
+   "clock": "87'",
+   "description": "Attempt missed. Boubacar Kamara (Aston Villa) right footed shot from the right side of the box is too high.",
+   "source_ref": "espn:401878776:play:53395652",
+   "team": "Aston Villa",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Mamadou Sangare",
+    "Boubacar Kamara"
+   ],
+   "clock": "89'",
+   "description": "Boubacar Kamara (Aston Villa) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878776:play:53396276",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Mamadou Sangare",
+    "Boubacar Kamara"
+   ],
+   "clock": "89'",
+   "description": "Foul by Mamadou Sangaré (Brentford).",
+   "source_ref": "espn:401878776:play:53396276",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "El Hadji Malick Diouf"
+   ],
+   "clock": "90+5'",
+   "description": "Attempt blocked. El Hadji Malick Diouf (Brentford) right footed shot from the left side of the box is blocked.",
+   "source_ref": "espn:401878776:play:53396957",
+   "team": "Brentford",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Callum Wilson",
+    "Zion Suzuki"
+   ],
+   "clock": "90+5'",
+   "description": "Zion Suzuki (Aston Villa) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878776:play:53397023",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Callum Wilson",
+    "Zion Suzuki"
+   ],
+   "clock": "90+5'",
+   "description": "Foul by Callum Wilson (Brentford).",
+   "source_ref": "espn:401878776:play:53397023",
+   "team": "Brentford",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Callum Wilson"
+   ],
+   "clock": "90+5'",
+   "description": "Callum Wilson (Brentford) is shown the yellow card.",
+   "source_ref": "espn:401878776:play:53397024",
+   "team": "Brentford",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Ibrahim Mbaye",
+    "Ross Barkley"
+   ],
+   "clock": "90+6'",
+   "description": "Attempt saved. Ibrahim Mbaye (Aston Villa) left footed shot from a difficult angle on the left is saved in the top left corner by Caoimhín Kelleher (Brentford). Assisted by Ross Barkley.",
+   "source_ref": "espn:401878776:play:53397033",
+   "team": "Aston Villa",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [],
+   "clock": "90+6'",
+   "description": "Corner, Aston Villa. Conceded by Caoimhín Kelleher.",
+   "source_ref": "espn:401878776:play:53397092",
+   "team": "Aston Villa",
+   "type": "corner"
+  },
+  {
+   "actors": [],
+   "clock": "90+7'",
+   "description": "Second Half ends, Aston Villa 2, Brentford 2.",
+   "score_after": "2-2",
+   "source_ref": "espn:401878776:play:53397105",
+   "type": "full_time"
+  }
+ ],
+ "match": {
+  "end_estimate": "2026-10-10T16:00:00Z",
+  "final_result": "Aston Villa 2–2 Brentford",
+  "id": "401878776",
+  "kickoff": "2026-10-10T14:00:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "AVL",
+    "name": "Aston Villa",
+    "role": "home",
+    "score": "2",
+    "short_name": "Aston Villa",
+    "winner": false
+   },
+   {
+    "abbreviation": "BRE",
+    "name": "Brentford",
+    "role": "away",
+    "score": "2",
+    "short_name": "Brentford",
+    "winner": false
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Kristoffer Ajer's second-half equaliser ensured Brentford continued their unbeaten start to the Premier League season in an entertaining 2-2 draw at Aston Villa.",
+  "title": "Aston Villa v Brentford",
+  "venue": "Villa Park"
+ },
+ "sources": [
+  {
+   "publisher": "ESPN",
+   "title": "Aston Villa v Brentford: match events",
+   "url": "https://www.espn.com/soccer/match/_/gameId/401878776"
+  },
+  {
+   "published_at": "2026-10-10T16:03:00Z",
+   "publisher": "ESPN",
+   "title": "Brentford stay unbeaten after back-and-forth slugfest with Aston Villa",
+   "url": "https://www.espn.com/soccer/report/_/gameId/401878776"
+  }
+ ],
+ "team_stats": [
+  {
+   "corners": 2,
+   "fouls": 7,
+   "possession_pct": 52.1,
+   "red_cards": 0,
+   "saves": 3,
+   "shots": 20,
+   "shots_on_target": 7,
+   "team": "Aston Villa",
+   "yellow_cards": 2
+  },
+  {
+   "corners": 2,
+   "fouls": 24,
+   "possession_pct": 47.9,
+   "red_cards": 0,
+   "saves": 5,
+   "shots": 14,
+   "shots_on_target": 4,
+   "team": "Brentford",
+   "yellow_cards": 5
+  }
+ ]
+}

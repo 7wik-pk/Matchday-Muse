@@ -1,0 +1,949 @@
+{
+ "coverage": "full_events",
+ "events": [
+  {
+   "actors": [],
+   "clock": "0'",
+   "description": "First Half begins.",
+   "source_ref": "espn:401879267:play:53551559",
+   "type": "kickoff"
+  },
+  {
+   "actors": [
+    "Jacob Murphy",
+    "Jack Rudoni"
+   ],
+   "clock": "1'",
+   "description": "Jack Rudoni (Coventry City) wins a free kick on the left wing.",
+   "source_ref": "espn:401879267:play:53551587",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jacob Murphy",
+    "Jack Rudoni"
+   ],
+   "clock": "1'",
+   "description": "Foul by Jacob Murphy (Newcastle United).",
+   "source_ref": "espn:401879267:play:53551587",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Yoane Wissa",
+    "Jack Rudoni"
+   ],
+   "clock": "2'",
+   "description": "Jack Rudoni (Coventry City) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879267:play:53551592",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Yoane Wissa",
+    "Jack Rudoni"
+   ],
+   "clock": "2'",
+   "description": "Foul by Yoane Wissa (Newcastle United).",
+   "source_ref": "espn:401879267:play:53551592",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lukás Hornícek",
+    "Sidiki Cherif"
+   ],
+   "clock": "4'",
+   "description": "Penalty Coventry City. Sidiki Cherif draws a foul in the penalty area.",
+   "source_ref": "espn:401879267:play:53551912",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lukás Hornícek",
+    "Sidiki Cherif"
+   ],
+   "clock": "4'",
+   "description": "Penalty conceded by Lukás Hornícek (Newcastle United) after a foul in the penalty area.",
+   "source_ref": "espn:401879267:play:53551912",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jack Rudoni"
+   ],
+   "clock": "6'",
+   "description": "Goal! Coventry City 1, Newcastle United 0. Jack Rudoni (Coventry City) converts the penalty with a left footed shot to the bottom right corner.",
+   "score_after": "1-0",
+   "source_ref": "espn:401879267:play:53551972",
+   "team": "Coventry City",
+   "type": "penalty_goal"
+  },
+  {
+   "actors": [
+    "Nico González",
+    "Brandon Thomas-Asante"
+   ],
+   "clock": "8'",
+   "description": "Brandon Thomas-Asante (Coventry City) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879267:play:53552252",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Nico González",
+    "Brandon Thomas-Asante"
+   ],
+   "clock": "8'",
+   "description": "Foul by Nico González (Newcastle United).",
+   "source_ref": "espn:401879267:play:53552252",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Milan van Ewijk"
+   ],
+   "clock": "10'",
+   "description": "Offside, Coventry City. Sidiki Cherif is caught offside.",
+   "source_ref": "espn:401879267:play:53552344",
+   "team": "Coventry City",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Harvey Barnes",
+    "Nico González"
+   ],
+   "clock": "10'",
+   "description": "Attempt blocked. Harvey Barnes (Newcastle United) right footed shot from outside the box is blocked. Assisted by Nico González.",
+   "source_ref": "espn:401879267:play:53552356",
+   "team": "Newcastle United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Lewis Hall"
+   ],
+   "clock": "11'",
+   "description": "Offside, Newcastle United. Harvey Barnes is caught offside.",
+   "source_ref": "espn:401879267:play:53552483",
+   "team": "Newcastle United",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Harvey Barnes",
+    "Joe Willock"
+   ],
+   "clock": "13'",
+   "description": "Attempt saved. Harvey Barnes (Newcastle United) right footed shot from the centre of the box is saved in the centre of the goal by Carl Rushworth (Coventry City). Assisted by Joe Willock.",
+   "source_ref": "espn:401879267:play:53552664",
+   "team": "Newcastle United",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Milan van Ewijk",
+    "Harvey Barnes"
+   ],
+   "clock": "14'",
+   "description": "Foul by Milan van Ewijk (Coventry City).",
+   "source_ref": "espn:401879267:play:53552776",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Milan van Ewijk",
+    "Harvey Barnes"
+   ],
+   "clock": "14'",
+   "description": "Harvey Barnes (Newcastle United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879267:play:53552776",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lewis Hall"
+   ],
+   "clock": "16'",
+   "description": "Offside, Newcastle United. Joe Willock is caught offside.",
+   "source_ref": "espn:401879267:play:53552841",
+   "team": "Newcastle United",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Nico González"
+   ],
+   "clock": "20'",
+   "description": "Offside, Newcastle United. Jacob Murphy is caught offside.",
+   "source_ref": "espn:401879267:play:53553269",
+   "team": "Newcastle United",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Joe Willock",
+    "Lewis Hall"
+   ],
+   "clock": "23'",
+   "description": "Attempt blocked. Joe Willock (Newcastle United) right footed shot from the left side of the box is blocked. Assisted by Lewis Hall.",
+   "source_ref": "espn:401879267:play:53553571",
+   "team": "Newcastle United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Harvey Barnes"
+   ],
+   "clock": "23'",
+   "description": "Attempt missed. Harvey Barnes (Newcastle United) right footed shot from the centre of the box misses to the left.",
+   "source_ref": "espn:401879267:play:53553575",
+   "team": "Newcastle United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Jack Rudoni"
+   ],
+   "clock": "23'",
+   "description": "Offside, Coventry City. Ephron Mason-Clark is caught offside.",
+   "source_ref": "espn:401879267:play:53553702",
+   "team": "Coventry City",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Matt Grimes",
+    "Jacob Murphy"
+   ],
+   "clock": "24'",
+   "description": "Foul by Matt Grimes (Coventry City).",
+   "source_ref": "espn:401879267:play:53553848",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matt Grimes",
+    "Jacob Murphy"
+   ],
+   "clock": "24'",
+   "description": "Jacob Murphy (Newcastle United) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879267:play:53553848",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Sidiki Cherif",
+    "Milan van Ewijk"
+   ],
+   "clock": "29'",
+   "description": "Attempt saved. Sidiki Cherif (Coventry City) right footed shot from the right side of the box is saved in the bottom right corner by Lukás Hornícek (Newcastle United). Assisted by Milan van Ewijk.",
+   "source_ref": "espn:401879267:play:53554301",
+   "team": "Coventry City",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Jacob Murphy"
+   ],
+   "clock": "30'",
+   "description": "Attempt missed. Jacob Murphy (Newcastle United) right footed shot from outside the box is too high.",
+   "source_ref": "espn:401879267:play:53554470",
+   "team": "Newcastle United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Jacob Murphy",
+    "Harvey Barnes"
+   ],
+   "clock": "31'",
+   "description": "Attempt missed. Jacob Murphy (Newcastle United) right footed shot from the right side of the six yard box misses to the left. Assisted by Harvey Barnes with a cross.",
+   "source_ref": "espn:401879267:play:53554560",
+   "team": "Newcastle United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [],
+   "clock": "31'",
+   "description": "Corner, Newcastle United. Conceded by Bobby Thomas.",
+   "source_ref": "espn:401879267:play:53554608",
+   "team": "Newcastle United",
+   "type": "corner"
+  },
+  {
+   "actors": [],
+   "clock": "32'",
+   "description": "Corner, Newcastle United. Conceded by Jack Rudoni.",
+   "source_ref": "espn:401879267:play:53554715",
+   "team": "Newcastle United",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Yoane Wissa",
+    "Caleb Yirenkyi"
+   ],
+   "clock": "33'",
+   "description": "Caleb Yirenkyi (Coventry City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879267:play:53554820",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Yoane Wissa",
+    "Caleb Yirenkyi"
+   ],
+   "clock": "33'",
+   "description": "Foul by Yoane Wissa (Newcastle United).",
+   "source_ref": "espn:401879267:play:53554820",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Joe Willock",
+    "Brandon Thomas-Asante"
+   ],
+   "clock": "36'",
+   "description": "Brandon Thomas-Asante (Coventry City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879267:play:53554991",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Joe Willock",
+    "Brandon Thomas-Asante"
+   ],
+   "clock": "36'",
+   "description": "Foul by Joe Willock (Newcastle United).",
+   "source_ref": "espn:401879267:play:53554991",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Joe Willock",
+    "Harvey Barnes"
+   ],
+   "clock": "38'",
+   "description": "Attempt blocked. Joe Willock (Newcastle United) right footed shot from the centre of the box is blocked. Assisted by Harvey Barnes.",
+   "source_ref": "espn:401879267:play:53555273",
+   "team": "Newcastle United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "38'",
+   "description": "Corner, Newcastle United. Conceded by Caleb Yirenkyi.",
+   "source_ref": "espn:401879267:play:53555274",
+   "team": "Newcastle United",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Joe Willock"
+   ],
+   "clock": "39'",
+   "description": "Offside, Newcastle United. Matias Fernandez-Pardo is caught offside.",
+   "source_ref": "espn:401879267:play:53555458",
+   "team": "Newcastle United",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Joe Willock",
+    "Caleb Yirenkyi"
+   ],
+   "clock": "40'",
+   "description": "Caleb Yirenkyi (Coventry City) wins a free kick on the right wing.",
+   "source_ref": "espn:401879267:play:53555619",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Joe Willock",
+    "Caleb Yirenkyi"
+   ],
+   "clock": "40'",
+   "description": "Foul by Joe Willock (Newcastle United).",
+   "source_ref": "espn:401879267:play:53555619",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matt Grimes",
+    "Lewis Hall"
+   ],
+   "clock": "42'",
+   "description": "Foul by Matt Grimes (Coventry City).",
+   "source_ref": "espn:401879267:play:53555809",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matt Grimes",
+    "Lewis Hall"
+   ],
+   "clock": "42'",
+   "description": "Lewis Hall (Newcastle United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879267:play:53555809",
+   "team": "Coventry City",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matias Fernandez-Pardo",
+    "Nico González"
+   ],
+   "clock": "43'",
+   "description": "Attempt blocked. Matias Fernandez-Pardo (Newcastle United) right footed shot from the centre of the box is blocked. Assisted by Nico González with a through ball.",
+   "source_ref": "espn:401879267:play:53555937",
+   "team": "Newcastle United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Joe Willock",
+    "Nico González"
+   ],
+   "clock": "44'",
+   "description": "Attempt blocked. Joe Willock (Newcastle United) right footed shot from outside the box is blocked. Assisted by Nico González.",
+   "source_ref": "espn:401879267:play:53556143",
+   "team": "Newcastle United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "45+3'",
+   "description": "First Half ends, Coventry City 1, Newcastle United 0.",
+   "score_after": "1-0",
+   "source_ref": "espn:401879267:play:53556572",
+   "type": "half_time"
+  },
+  {
+   "actors": [
+    "Sidiki Cherif"
+   ],
+   "clock": "48'",
+   "description": "Goal! Coventry City 2, Newcastle United 0. Sidiki Cherif (Coventry City) right footed shot from outside the box to the bottom right corner.",
+   "score_after": "2-0",
+   "source_ref": "espn:401879267:play:53558245",
+   "team": "Coventry City",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Joe Willock",
+    "Jacob Murphy"
+   ],
+   "clock": "50'",
+   "description": "Attempt missed. Joe Willock (Newcastle United) header from the left side of the six yard box is close, but misses the top left corner. Assisted by Jacob Murphy with a cross.",
+   "source_ref": "espn:401879267:play:53558553",
+   "team": "Newcastle United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Yoane Wissa",
+    "Harvey Barnes"
+   ],
+   "clock": "53'",
+   "description": "Attempt saved. Yoane Wissa (Newcastle United) right footed shot from outside the box is saved in the bottom right corner by Carl Rushworth (Coventry City). Assisted by Harvey Barnes.",
+   "source_ref": "espn:401879267:play:53558841",
+   "team": "Newcastle United",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Sidiki Cherif"
+   ],
+   "clock": "55'",
+   "description": "Attempt blocked. Sidiki Cherif (Coventry City) right footed shot from the centre of the box is blocked.",
+   "source_ref": "espn:401879267:play:53559039",
+   "team": "Coventry City",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Joe Willock",
+    "Jacob Murphy"
+   ],
+   "clock": "59'",
+   "description": "Attempt missed. Joe Willock (Newcastle United) right footed shot from the centre of the box is too high. Assisted by Jacob Murphy.",
+   "source_ref": "espn:401879267:play:53559416",
+   "team": "Newcastle United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Amar Dedic",
+    "Lewis Miley"
+   ],
+   "clock": "59'",
+   "description": "Substitution, Newcastle United. Amar Dedic replaces Lewis Miley.",
+   "source_ref": "espn:401879267:play:53559639",
+   "team": "Newcastle United",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Bazoumana Touré",
+    "Jacob Murphy"
+   ],
+   "clock": "59'",
+   "description": "Substitution, Newcastle United. Bazoumana Touré replaces Jacob Murphy.",
+   "source_ref": "espn:401879267:play:53559640",
+   "team": "Newcastle United",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Joelinton",
+    "Joe Willock"
+   ],
+   "clock": "59'",
+   "description": "Substitution, Newcastle United. Joelinton replaces Joe Willock.",
+   "source_ref": "espn:401879267:play:53559641",
+   "team": "Newcastle United",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Tatsuhiro Sakamoto",
+    "Ephron Mason-Clark"
+   ],
+   "clock": "61'",
+   "description": "Substitution, Coventry City. Tatsuhiro Sakamoto replaces Ephron Mason-Clark.",
+   "source_ref": "espn:401879267:play:53559700",
+   "team": "Coventry City",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Bazoumana Touré"
+   ],
+   "clock": "61'",
+   "description": "Attempt saved. Bazoumana Touré (Newcastle United) left footed shot from outside the box is saved in the bottom right corner by Carl Rushworth (Coventry City).",
+   "source_ref": "espn:401879267:play:53559836",
+   "team": "Newcastle United",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Joelinton",
+    "Milan van Ewijk"
+   ],
+   "clock": "63'",
+   "description": "Milan van Ewijk (Coventry City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879267:play:53560102",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Joelinton",
+    "Milan van Ewijk"
+   ],
+   "clock": "63'",
+   "description": "Foul by Joelinton (Newcastle United).",
+   "source_ref": "espn:401879267:play:53560102",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "64'",
+   "description": "Corner, Coventry City. Conceded by Amar Dedic.",
+   "source_ref": "espn:401879267:play:53560113",
+   "team": "Coventry City",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Milan van Ewijk"
+   ],
+   "clock": "66'",
+   "description": "Milan van Ewijk (Coventry City) is shown the yellow card.",
+   "source_ref": "espn:401879267:play:53560148",
+   "team": "Coventry City",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Lewis Hall"
+   ],
+   "clock": "66'",
+   "description": "Offside, Newcastle United. Harvey Barnes is caught offside.",
+   "source_ref": "espn:401879267:play:53560257",
+   "team": "Newcastle United",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Nico González",
+    "Jack Rudoni"
+   ],
+   "clock": "69'",
+   "description": "Jack Rudoni (Coventry City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879267:play:53560527",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Nico González",
+    "Jack Rudoni"
+   ],
+   "clock": "69'",
+   "description": "Foul by Nico González (Newcastle United).",
+   "source_ref": "espn:401879267:play:53560527",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Sven Botman",
+    "Nico González"
+   ],
+   "clock": "70'",
+   "description": "Goal! Coventry City 2, Newcastle United 1. Sven Botman (Newcastle United) left footed shot from outside the box to the top left corner. Assisted by Nico González.",
+   "score_after": "2-1",
+   "source_ref": "espn:401879267:play:53560705",
+   "team": "Newcastle United",
+   "type": "goal"
+  },
+  {
+   "actors": [],
+   "clock": "72'",
+   "description": "Corner, Newcastle United. Conceded by Caleb Yirenkyi.",
+   "source_ref": "espn:401879267:play:53561046",
+   "team": "Newcastle United",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Lewis Hall",
+    "Nico González"
+   ],
+   "clock": "72'",
+   "description": "Attempt saved. Lewis Hall (Newcastle United) left footed shot from outside the box is saved in the centre of the goal by Carl Rushworth (Coventry City). Assisted by Nico González.",
+   "source_ref": "espn:401879267:play:53561054",
+   "team": "Newcastle United",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Yoane Wissa"
+   ],
+   "clock": "75'",
+   "description": "Attempt blocked. Yoane Wissa (Newcastle United) right footed shot from the centre of the box is blocked.",
+   "source_ref": "espn:401879267:play:53561386",
+   "team": "Newcastle United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "77'",
+   "description": "Corner, Newcastle United. Conceded by Milan van Ewijk.",
+   "source_ref": "espn:401879267:play:53561629",
+   "team": "Newcastle United",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Frank Onyeka",
+    "Caleb Yirenkyi"
+   ],
+   "clock": "78'",
+   "description": "Substitution, Coventry City. Frank Onyeka replaces Caleb Yirenkyi.",
+   "source_ref": "espn:401879267:play:53561735",
+   "team": "Coventry City",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Ellis Simms",
+    "Sidiki Cherif"
+   ],
+   "clock": "78'",
+   "description": "Substitution, Coventry City. Ellis Simms replaces Sidiki Cherif.",
+   "source_ref": "espn:401879267:play:53561888",
+   "team": "Coventry City",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "William Osula",
+    "Yoane Wissa"
+   ],
+   "clock": "78'",
+   "description": "Substitution, Newcastle United. William Osula replaces Yoane Wissa.",
+   "source_ref": "espn:401879267:play:53561890",
+   "team": "Newcastle United",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Bazoumana Touré",
+    "Matias Fernandez-Pardo"
+   ],
+   "clock": "80'",
+   "description": "Attempt missed. Bazoumana Touré (Newcastle United) left footed shot from the right side of the box is high and wide to the left. Assisted by Matias Fernandez-Pardo.",
+   "source_ref": "espn:401879267:play:53561965",
+   "team": "Newcastle United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Ellis Simms",
+    "Brandon Thomas-Asante"
+   ],
+   "clock": "81'",
+   "description": "Goal! Coventry City 3, Newcastle United 1. Ellis Simms (Coventry City) right footed shot from the centre of the box to the bottom right corner. Assisted by Brandon Thomas-Asante.",
+   "score_after": "3-1",
+   "source_ref": "espn:401879267:play:53562133",
+   "team": "Coventry City",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Joelinton"
+   ],
+   "clock": "81'",
+   "description": "Joelinton (Newcastle United) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879267:play:53562294",
+   "team": "Newcastle United",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Victor Torp",
+    "Jack Rudoni"
+   ],
+   "clock": "83'",
+   "description": "Substitution, Coventry City. Victor Torp replaces Jack Rudoni.",
+   "source_ref": "espn:401879267:play:53562296",
+   "team": "Coventry City",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Stephen Mfuni",
+    "Matt Grimes"
+   ],
+   "clock": "83'",
+   "description": "Substitution, Coventry City. Stephen Mfuni replaces Matt Grimes.",
+   "source_ref": "espn:401879267:play:53562297",
+   "team": "Coventry City",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Brandon Thomas-Asante"
+   ],
+   "clock": "84'",
+   "description": "Attempt blocked. Brandon Thomas-Asante (Coventry City) right footed shot from outside the box is blocked.",
+   "source_ref": "espn:401879267:play:53562506",
+   "team": "Coventry City",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Frank Onyeka"
+   ],
+   "clock": "84'",
+   "description": "Attempt blocked. Frank Onyeka (Coventry City) right footed shot from outside the box is blocked.",
+   "source_ref": "espn:401879267:play:53562508",
+   "team": "Coventry City",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "84'",
+   "description": "Corner, Coventry City. Conceded by Malick Thiaw.",
+   "source_ref": "espn:401879267:play:53562650",
+   "team": "Coventry City",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Stephen Mfuni",
+    "Victor Torp"
+   ],
+   "clock": "85'",
+   "description": "Attempt saved. Stephen Mfuni (Coventry City) header from very close range is saved in the centre of the goal by Lukás Hornícek (Newcastle United). Assisted by Victor Torp with a cross.",
+   "source_ref": "espn:401879267:play:53562654",
+   "team": "Coventry City",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Stephen Mfuni",
+    "Jay Da Silva"
+   ],
+   "clock": "86'",
+   "description": "Goal! Coventry City 4, Newcastle United 1. Stephen Mfuni (Coventry City) left footed shot from the left side of the box to the bottom right corner. Assisted by Jay Dasilva.",
+   "score_after": "4-1",
+   "source_ref": "espn:401879267:play:53562744",
+   "team": "Coventry City",
+   "type": "goal"
+  },
+  {
+   "actors": [],
+   "clock": "88'",
+   "description": "Corner, Newcastle United. Conceded by Milan van Ewijk.",
+   "source_ref": "espn:401879267:play:53562865",
+   "team": "Newcastle United",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "William Osula",
+    "Nico González"
+   ],
+   "clock": "90'",
+   "description": "Attempt missed. William Osula (Newcastle United) left footed shot from the left side of the box is too high. Assisted by Nico González.",
+   "source_ref": "espn:401879267:play:53563077",
+   "team": "Newcastle United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Dan Burn",
+    "Bazoumana Touré"
+   ],
+   "clock": "90'",
+   "description": "Substitution, Newcastle United. Dan Burn replaces Bazoumana Touré because of an injury.",
+   "source_ref": "espn:401879267:play:53563200",
+   "team": "Newcastle United",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Amar Dedic",
+    "Harvey Barnes"
+   ],
+   "clock": "90+2'",
+   "description": "Attempt blocked. Amar Dedic (Newcastle United) right footed shot from outside the box is blocked. Assisted by Harvey Barnes.",
+   "source_ref": "espn:401879267:play:53563292",
+   "team": "Newcastle United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Matias Fernandez-Pardo",
+    "Tatsuhiro Sakamoto"
+   ],
+   "clock": "90+3'",
+   "description": "Tatsuhiro Sakamoto (Coventry City) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879267:play:53563437",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matias Fernandez-Pardo",
+    "Tatsuhiro Sakamoto"
+   ],
+   "clock": "90+3'",
+   "description": "Foul by Matias Fernandez-Pardo (Newcastle United).",
+   "source_ref": "espn:401879267:play:53563437",
+   "team": "Newcastle United",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "90+5'",
+   "description": "Second Half ends, Coventry City 4, Newcastle United 1.",
+   "score_after": "4-1",
+   "source_ref": "espn:401879267:play:53563517",
+   "type": "full_time"
+  }
+ ],
+ "match": {
+  "end_estimate": "2026-10-12T21:00:00Z",
+  "final_result": "Coventry City 4–1 Newcastle United",
+  "id": "401879267",
+  "kickoff": "2026-10-12T19:00:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "COV",
+    "name": "Coventry City",
+    "role": "home",
+    "score": "4",
+    "short_name": "Coventry",
+    "winner": true
+   },
+   {
+    "abbreviation": "NEW",
+    "name": "Newcastle United",
+    "role": "away",
+    "score": "1",
+    "short_name": "Newcastle",
+    "winner": false
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Coventry City picked up their first home victory in the Premier League for 25 years with an emphatic 4-1 win over Newcastle United on Monday.",
+  "title": "Coventry City v Newcastle United",
+  "venue": "Coventry Building Society Arena"
+ },
+ "sources": [
+  {
+   "publisher": "ESPN",
+   "title": "Coventry City v Newcastle United: match events",
+   "url": "https://www.espn.com/soccer/match/_/gameId/401879267"
+  },
+  {
+   "published_at": "2026-10-12T21:11:00Z",
+   "publisher": "ESPN",
+   "title": "Coventry put four past Newcastle to climb out of relegation zone",
+   "url": "https://www.espn.com/soccer/report/_/gameId/401879267"
+  }
+ ],
+ "team_stats": [
+  {
+   "corners": 2,
+   "fouls": 3,
+   "possession_pct": 33.3,
+   "red_cards": 0,
+   "saves": 4,
+   "shots": 9,
+   "shots_on_target": 6,
+   "team": "Coventry City",
+   "yellow_cards": 1
+  },
+  {
+   "corners": 6,
+   "fouls": 10,
+   "possession_pct": 66.7,
+   "red_cards": 0,
+   "saves": 2,
+   "shots": 19,
+   "shots_on_target": 6,
+   "team": "Newcastle United",
+   "yellow_cards": 1
+  }
+ ]
+}

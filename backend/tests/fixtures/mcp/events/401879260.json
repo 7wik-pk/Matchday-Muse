@@ -1,0 +1,991 @@
+{
+ "coverage": "full_events",
+ "events": [
+  {
+   "actors": [],
+   "clock": "0'",
+   "description": "First Half begins.",
+   "source_ref": "espn:401879260:play:53889135",
+   "type": "kickoff"
+  },
+  {
+   "actors": [
+    "Youri Tielemans",
+    "Gabriel Gudmundsson"
+   ],
+   "clock": "2'",
+   "description": "Gabriel Gudmundsson (Leeds United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879260:play:53889159",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Youri Tielemans",
+    "Gabriel Gudmundsson"
+   ],
+   "clock": "2'",
+   "description": "Foul by Youri Tielemans (Manchester United).",
+   "source_ref": "espn:401879260:play:53889159",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ethan Ampadu",
+    "Carlos Baleba"
+   ],
+   "clock": "4'",
+   "description": "Carlos Baleba (Manchester United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879260:play:53889459",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ethan Ampadu",
+    "Carlos Baleba"
+   ],
+   "clock": "4'",
+   "description": "Foul by Ethan Ampadu (Leeds United).",
+   "source_ref": "espn:401879260:play:53889459",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ao Tanaka",
+    "Andrey Santos"
+   ],
+   "clock": "9'",
+   "description": "Andrey Santos (Manchester United) wins a free kick on the right wing.",
+   "source_ref": "espn:401879260:play:53890229",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ao Tanaka",
+    "Andrey Santos"
+   ],
+   "clock": "9'",
+   "description": "Foul by Ao Tanaka (Leeds United).",
+   "source_ref": "espn:401879260:play:53890229",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ethan Ampadu",
+    "Bryan Mbeumo"
+   ],
+   "clock": "11'",
+   "description": "Bryan Mbeumo (Manchester United) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879260:play:53890559",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ethan Ampadu",
+    "Bryan Mbeumo"
+   ],
+   "clock": "11'",
+   "description": "Foul by Ethan Ampadu (Leeds United).",
+   "source_ref": "espn:401879260:play:53890559",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lisandro Martínez"
+   ],
+   "clock": "12'",
+   "description": "Attempt blocked. Lisandro Martínez (Manchester United) right footed shot from outside the box is blocked.",
+   "source_ref": "espn:401879260:play:53890984",
+   "team": "Manchester United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Noah Okafor"
+   ],
+   "clock": "13'",
+   "description": "Offside, Leeds United. Dominic Calvert-Lewin is caught offside.",
+   "source_ref": "espn:401879260:play:53891011",
+   "team": "Leeds United",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Bruno Fernandes"
+   ],
+   "clock": "17'",
+   "description": "Bruno Fernandes (Manchester United) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879260:play:53891640",
+   "team": "Manchester United",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Gabriel Gudmundsson",
+    "Andrey Santos"
+   ],
+   "clock": "19'",
+   "description": "Andrey Santos (Manchester United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879260:play:53892042",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Gabriel Gudmundsson",
+    "Andrey Santos"
+   ],
+   "clock": "19'",
+   "description": "Foul by Gabriel Gudmundsson (Leeds United).",
+   "source_ref": "espn:401879260:play:53892042",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Gabriel Gudmundsson"
+   ],
+   "clock": "19'",
+   "description": "Gabriel Gudmundsson (Leeds United) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879260:play:53892163",
+   "team": "Leeds United",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Bryan Mbeumo",
+    "James Justin"
+   ],
+   "clock": "25'",
+   "description": "Foul by Bryan Mbeumo (Manchester United).",
+   "source_ref": "espn:401879260:play:53893103",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Bryan Mbeumo",
+    "James Justin"
+   ],
+   "clock": "25'",
+   "description": "James Justin (Leeds United) wins a free kick on the right wing.",
+   "source_ref": "espn:401879260:play:53893103",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Nico Elvedi",
+    "Anton Stach"
+   ],
+   "clock": "26'",
+   "description": "Attempt saved. Nico Elvedi (Leeds United) header from the centre of the box is saved in the top right corner by Senne Lammens (Manchester United). Assisted by Anton Stach with a cross.",
+   "source_ref": "espn:401879260:play:53893183",
+   "team": "Leeds United",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Bryan Mbeumo",
+    "Youri Tielemans"
+   ],
+   "clock": "27'",
+   "description": "Attempt missed. Bryan Mbeumo (Manchester United) header from the centre of the box is close, but misses to the right. Assisted by Youri Tielemans with a cross.",
+   "source_ref": "espn:401879260:play:53893375",
+   "team": "Manchester United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [],
+   "clock": "28'",
+   "description": "Corner, Manchester United. Conceded by Tarik Muharemovic.",
+   "source_ref": "espn:401879260:play:53893493",
+   "team": "Manchester United",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Dominic Calvert-Lewin",
+    "Leny Yoro"
+   ],
+   "clock": "30'",
+   "description": "Leny Yoro (Manchester United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879260:play:53893774",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Dominic Calvert-Lewin",
+    "Leny Yoro"
+   ],
+   "clock": "30'",
+   "description": "Foul by Dominic Calvert-Lewin (Leeds United).",
+   "source_ref": "espn:401879260:play:53893774",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Youri Tielemans",
+    "Ao Tanaka"
+   ],
+   "clock": "32'",
+   "description": "Foul by Youri Tielemans (Manchester United).",
+   "source_ref": "espn:401879260:play:53894453",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Youri Tielemans",
+    "Ao Tanaka"
+   ],
+   "clock": "32'",
+   "description": "Ao Tanaka (Leeds United) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879260:play:53894453",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Bryan Mbeumo",
+    "Youri Tielemans"
+   ],
+   "clock": "33'",
+   "description": "Attempt saved. Bryan Mbeumo (Manchester United) right footed shot from the left side of the box is saved in the centre of the goal by James Trafford (Leeds United). Assisted by Youri Tielemans with a through ball.",
+   "source_ref": "espn:401879260:play:53894484",
+   "team": "Manchester United",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Ao Tanaka"
+   ],
+   "clock": "35'",
+   "description": "Offside, Leeds United. Dominic Calvert-Lewin is caught offside.",
+   "source_ref": "espn:401879260:play:53894695",
+   "team": "Leeds United",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Bryan Mbeumo",
+    "Youri Tielemans"
+   ],
+   "clock": "35'",
+   "description": "Goal! Leeds United 0, Manchester United 1. Bryan Mbeumo (Manchester United) left footed shot from the centre of the box to the bottom left corner. Assisted by Youri Tielemans with a cross.",
+   "score_after": "0-1",
+   "source_ref": "espn:401879260:play:53894818",
+   "team": "Manchester United",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Ao Tanaka",
+    "Dominic Calvert-Lewin"
+   ],
+   "clock": "37'",
+   "description": "Attempt saved. Ao Tanaka (Leeds United) right footed shot from outside the box is saved in the centre of the goal by Senne Lammens (Manchester United). Assisted by Dominic Calvert-Lewin.",
+   "source_ref": "espn:401879260:play:53895117",
+   "team": "Leeds United",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Jayden Bogle",
+    "Diogo Dalot"
+   ],
+   "clock": "38'",
+   "description": "Diogo Dalot (Manchester United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879260:play:53895133",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jayden Bogle",
+    "Diogo Dalot"
+   ],
+   "clock": "38'",
+   "description": "Foul by Jayden Bogle (Leeds United).",
+   "source_ref": "espn:401879260:play:53895133",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Dominic Calvert-Lewin",
+    "Jayden Bogle"
+   ],
+   "clock": "39'",
+   "description": "Attempt missed. Dominic Calvert-Lewin (Leeds United) header from the centre of the box is close, but misses to the right. Assisted by Jayden Bogle with a through ball.",
+   "source_ref": "espn:401879260:play:53895476",
+   "team": "Leeds United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Jayden Bogle",
+    "Ethan Ampadu"
+   ],
+   "clock": "42'",
+   "description": "Attempt saved. Jayden Bogle (Leeds United) right footed shot from the centre of the box is saved in the centre of the goal by Senne Lammens (Manchester United). Assisted by Ethan Ampadu.",
+   "source_ref": "espn:401879260:play:53896079",
+   "team": "Leeds United",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Dominic Calvert-Lewin",
+    "Harry Maguire"
+   ],
+   "clock": "45+2'",
+   "description": "Harry Maguire (Manchester United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879260:play:53897152",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Dominic Calvert-Lewin",
+    "Harry Maguire"
+   ],
+   "clock": "45+2'",
+   "description": "Foul by Dominic Calvert-Lewin (Leeds United).",
+   "source_ref": "espn:401879260:play:53897152",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "45+2'",
+   "description": "First Half ends, Leeds United 0, Manchester United 1.",
+   "score_after": "0-1",
+   "source_ref": "espn:401879260:play:53897153",
+   "type": "half_time"
+  },
+  {
+   "actors": [
+    "Noussair Mazraoui",
+    "Lisandro Martínez"
+   ],
+   "clock": "45'",
+   "description": "Substitution, Manchester United. Noussair Mazraoui replaces Lisandro Martínez.",
+   "source_ref": "espn:401879260:play:53898281",
+   "team": "Manchester United",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Ao Tanaka",
+    "Amad Diallo"
+   ],
+   "clock": "46'",
+   "description": "Amad Diallo (Manchester United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879260:play:53898411",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ao Tanaka",
+    "Amad Diallo"
+   ],
+   "clock": "46'",
+   "description": "Foul by Ao Tanaka (Leeds United).",
+   "source_ref": "espn:401879260:play:53898411",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Dominic Calvert-Lewin",
+    "James Justin"
+   ],
+   "clock": "50'",
+   "description": "Attempt missed. Dominic Calvert-Lewin (Leeds United) with an attempt from the centre of the box misses to the left. Assisted by James Justin with a cross.",
+   "source_ref": "espn:401879260:play:53899016",
+   "team": "Leeds United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [],
+   "clock": "51'",
+   "description": "Corner, Leeds United. Conceded by Noussair Mazraoui.",
+   "source_ref": "espn:401879260:play:53899155",
+   "team": "Leeds United",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Tarik Muharemovic",
+    "Anton Stach"
+   ],
+   "clock": "51'",
+   "description": "Attempt missed. Tarik Muharemovic (Leeds United) header from the centre of the box misses to the left. Assisted by Anton Stach with a cross following a corner.",
+   "source_ref": "espn:401879260:play:53899319",
+   "team": "Leeds United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Dominic Calvert-Lewin",
+    "Tarik Muharemovic"
+   ],
+   "clock": "51'",
+   "description": "Goal! Leeds United 1, Manchester United 1. Dominic Calvert-Lewin (Leeds United) right footed shot from the centre of the box to the centre of the goal. Assisted by Tarik Muharemovic following a corner.",
+   "score_after": "1-1",
+   "source_ref": "espn:401879260:play:53899320",
+   "team": "Leeds United",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Youri Tielemans"
+   ],
+   "clock": "55'",
+   "description": "Youri Tielemans (Manchester United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879260:play:53899693",
+   "team": "Manchester United",
+   "type": "other"
+  },
+  {
+   "actors": [
+    "Ethan Ampadu",
+    "Youri Tielemans"
+   ],
+   "clock": "55'",
+   "description": "Foul by Ethan Ampadu (Leeds United).",
+   "source_ref": "espn:401879260:play:53899923",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ao Tanaka"
+   ],
+   "clock": "56'",
+   "description": "Attempt missed. Ao Tanaka (Leeds United) right footed shot from outside the box is too high.",
+   "source_ref": "espn:401879260:play:53899940",
+   "team": "Leeds United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Carlos Baleba",
+    "Dominic Calvert-Lewin"
+   ],
+   "clock": "58'",
+   "description": "Foul by Carlos Baleba (Manchester United).",
+   "source_ref": "espn:401879260:play:53900385",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Carlos Baleba",
+    "Andrey Santos"
+   ],
+   "clock": "59'",
+   "description": "Attempt missed. Carlos Baleba (Manchester United) left footed shot from outside the box misses to the left. Assisted by Andrey Santos.",
+   "source_ref": "espn:401879260:play:53900541",
+   "team": "Manchester United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Dominic Calvert-Lewin"
+   ],
+   "clock": "61'",
+   "description": "Handball by Dominic Calvert-Lewin (Leeds United).",
+   "source_ref": "espn:401879260:play:53900969",
+   "team": "Leeds United",
+   "type": "handball"
+  },
+  {
+   "actors": [],
+   "clock": "63'",
+   "description": "Corner, Leeds United. Conceded by Harry Maguire.",
+   "source_ref": "espn:401879260:play:53901134",
+   "team": "Leeds United",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Noah Okafor",
+    "Anton Stach"
+   ],
+   "clock": "63'",
+   "description": "Attempt missed. Noah Okafor (Leeds United) left footed shot from the left side of the box is high and wide to the left. Assisted by Anton Stach with a cross following a corner.",
+   "source_ref": "espn:401879260:play:53901136",
+   "team": "Leeds United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Bruno Fernandes",
+    "Leny Yoro"
+   ],
+   "clock": "65'",
+   "description": "Attempt missed. Bruno Fernandes (Manchester United) right footed shot from the right side of the box is close, but misses to the left. Assisted by Leny Yoro.",
+   "source_ref": "espn:401879260:play:53901525",
+   "team": "Manchester United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Jayden Bogle",
+    "Harry Maguire"
+   ],
+   "clock": "67'",
+   "description": "Harry Maguire (Manchester United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879260:play:53901840",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jayden Bogle",
+    "Harry Maguire"
+   ],
+   "clock": "67'",
+   "description": "Foul by Jayden Bogle (Leeds United).",
+   "source_ref": "espn:401879260:play:53901840",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ao Tanaka",
+    "Andrey Santos"
+   ],
+   "clock": "70'",
+   "description": "Andrey Santos (Manchester United) wins a free kick on the right wing.",
+   "source_ref": "espn:401879260:play:53902072",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ao Tanaka",
+    "Andrey Santos"
+   ],
+   "clock": "70'",
+   "description": "Foul by Ao Tanaka (Leeds United).",
+   "source_ref": "espn:401879260:play:53902072",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Youri Tielemans",
+    "Andrey Santos"
+   ],
+   "clock": "71'",
+   "description": "Attempt blocked. Youri Tielemans (Manchester United) right footed shot from outside the box is blocked. Assisted by Andrey Santos.",
+   "source_ref": "espn:401879260:play:53902334",
+   "team": "Manchester United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Bruno Fernandes",
+    "Diogo Dalot"
+   ],
+   "clock": "71'",
+   "description": "Attempt saved. Bruno Fernandes (Manchester United) right footed shot from outside the box is saved in the centre of the goal by James Trafford (Leeds United). Assisted by Diogo Dalot.",
+   "source_ref": "espn:401879260:play:53902442",
+   "team": "Manchester United",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Anton Stach"
+   ],
+   "clock": "72'",
+   "description": "Attempt missed. Anton Stach (Leeds United) left footed shot from the centre of the box is too high.",
+   "source_ref": "espn:401879260:play:53902462",
+   "team": "Leeds United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Carlos Baleba",
+    "Jayden Bogle"
+   ],
+   "clock": "73'",
+   "description": "Foul by Carlos Baleba (Manchester United).",
+   "source_ref": "espn:401879260:play:53902613",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Carlos Baleba",
+    "Jayden Bogle"
+   ],
+   "clock": "73'",
+   "description": "Jayden Bogle (Leeds United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879260:play:53902613",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lukas Nmecha",
+    "Noah Okafor"
+   ],
+   "clock": "74'",
+   "description": "Substitution, Leeds United. Lukas Nmecha replaces Noah Okafor.",
+   "source_ref": "espn:401879260:play:53902785",
+   "team": "Leeds United",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Mason Mount",
+    "Carlos Baleba"
+   ],
+   "clock": "74'",
+   "description": "Substitution, Manchester United. Mason Mount replaces Carlos Baleba.",
+   "source_ref": "espn:401879260:play:53902786",
+   "team": "Manchester United",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Amad Diallo",
+    "Diogo Dalot"
+   ],
+   "clock": "76'",
+   "description": "Attempt blocked. Amad Diallo (Manchester United) left footed shot from the right side of the box is blocked. Assisted by Diogo Dalot.",
+   "source_ref": "espn:401879260:play:53902867",
+   "team": "Manchester United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "76'",
+   "description": "Corner, Manchester United. Conceded by James Justin.",
+   "source_ref": "espn:401879260:play:53902869",
+   "team": "Manchester United",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Mason Mount",
+    "Bruno Fernandes"
+   ],
+   "clock": "76'",
+   "description": "Attempt blocked. Mason Mount (Manchester United) right footed shot from the centre of the box is blocked. Assisted by Bruno Fernandes.",
+   "source_ref": "espn:401879260:play:53902969",
+   "team": "Manchester United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Anton Stach",
+    "Mason Mount"
+   ],
+   "clock": "80'",
+   "description": "Mason Mount (Manchester United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879260:play:53903652",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Anton Stach",
+    "Mason Mount"
+   ],
+   "clock": "80'",
+   "description": "Foul by Anton Stach (Leeds United).",
+   "source_ref": "espn:401879260:play:53903652",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Sean Longstaff",
+    "Ao Tanaka"
+   ],
+   "clock": "81'",
+   "description": "Substitution, Leeds United. Sean Longstaff replaces Ao Tanaka.",
+   "source_ref": "espn:401879260:play:53904012",
+   "team": "Leeds United",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Matheus Cunha",
+    "Youri Tielemans"
+   ],
+   "clock": "84'",
+   "description": "Substitution, Manchester United. Matheus Cunha replaces Youri Tielemans.",
+   "source_ref": "espn:401879260:play:53904310",
+   "team": "Manchester United",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Lukas Nmecha",
+    "Leny Yoro"
+   ],
+   "clock": "84'",
+   "description": "Leny Yoro (Manchester United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879260:play:53904581",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lukas Nmecha",
+    "Leny Yoro"
+   ],
+   "clock": "84'",
+   "description": "Foul by Lukas Nmecha (Leeds United).",
+   "source_ref": "espn:401879260:play:53904581",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matheus Cunha"
+   ],
+   "clock": "85'",
+   "description": "Offside, Manchester United. Amad Diallo is caught offside.",
+   "source_ref": "espn:401879260:play:53904583",
+   "team": "Manchester United",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Harry Maguire"
+   ],
+   "clock": "86'",
+   "description": "Offside, Manchester United. Amad Diallo is caught offside.",
+   "source_ref": "espn:401879260:play:53904590",
+   "team": "Manchester United",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Ethan Ampadu",
+    "Mason Mount"
+   ],
+   "clock": "87'",
+   "description": "Mason Mount (Manchester United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879260:play:53904850",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ethan Ampadu",
+    "Mason Mount"
+   ],
+   "clock": "87'",
+   "description": "Foul by Ethan Ampadu (Leeds United).",
+   "source_ref": "espn:401879260:play:53904850",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "87'",
+   "description": "Corner, Manchester United. Conceded by Ethan Ampadu.",
+   "source_ref": "espn:401879260:play:53904870",
+   "team": "Manchester United",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Bruno Fernandes",
+    "Noussair Mazraoui"
+   ],
+   "clock": "88'",
+   "description": "Attempt blocked. Bruno Fernandes (Manchester United) right footed shot from outside the box is blocked. Assisted by Noussair Mazraoui.",
+   "source_ref": "espn:401879260:play:53905040",
+   "team": "Manchester United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Amad Diallo",
+    "Diogo Dalot"
+   ],
+   "clock": "88'",
+   "description": "Attempt missed. Amad Diallo (Manchester United) left footed shot from outside the box is high and wide to the left. Assisted by Diogo Dalot.",
+   "source_ref": "espn:401879260:play:53905046",
+   "team": "Manchester United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Matheus Cunha"
+   ],
+   "clock": "89'",
+   "description": "Offside, Manchester United. Bryan Mbeumo is caught offside.",
+   "source_ref": "espn:401879260:play:53905451",
+   "team": "Manchester United",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Lukas Nmecha",
+    "Tarik Muharemovic"
+   ],
+   "clock": "90+1'",
+   "description": "Attempt blocked. Lukas Nmecha (Leeds United) right footed shot from the centre of the box is blocked. Assisted by Tarik Muharemovic with a headed pass.",
+   "source_ref": "espn:401879260:play:53905654",
+   "team": "Leeds United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Anton Stach"
+   ],
+   "clock": "90+1'",
+   "description": "Attempt blocked. Anton Stach (Leeds United) left footed shot from the centre of the box is blocked.",
+   "source_ref": "espn:401879260:play:53905662",
+   "team": "Leeds United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Ethan Ampadu",
+    "Amad Diallo"
+   ],
+   "clock": "90+2'",
+   "description": "Amad Diallo (Manchester United) wins a free kick on the right wing.",
+   "source_ref": "espn:401879260:play:53905981",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ethan Ampadu",
+    "Amad Diallo"
+   ],
+   "clock": "90+2'",
+   "description": "Foul by Ethan Ampadu (Leeds United).",
+   "source_ref": "espn:401879260:play:53905981",
+   "team": "Leeds United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ethan Ampadu"
+   ],
+   "clock": "90+2'",
+   "description": "Ethan Ampadu (Leeds United) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879260:play:53905982",
+   "team": "Leeds United",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Andrey Santos"
+   ],
+   "clock": "90+2'",
+   "description": "Andrey Santos (Manchester United) is shown the yellow card.",
+   "source_ref": "espn:401879260:play:53905983",
+   "team": "Manchester United",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Matheus Cunha",
+    "Mason Mount"
+   ],
+   "clock": "90+4'",
+   "description": "Attempt blocked. Matheus Cunha (Manchester United) right footed shot from outside the box is blocked. Assisted by Mason Mount.",
+   "source_ref": "espn:401879260:play:53906156",
+   "team": "Manchester United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "90+5'",
+   "description": "Second Half ends, Leeds United 1, Manchester United 1.",
+   "score_after": "1-1",
+   "source_ref": "espn:401879260:play:53906274",
+   "type": "full_time"
+  }
+ ],
+ "match": {
+  "end_estimate": "2026-10-18T15:00:00Z",
+  "final_result": "Leeds United 1–1 Manchester United",
+  "id": "401879260",
+  "kickoff": "2026-10-18T13:00:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "LEE",
+    "name": "Leeds United",
+    "role": "home",
+    "score": "1",
+    "short_name": "Leeds",
+    "winner": false
+   },
+   {
+    "abbreviation": "MAN",
+    "name": "Manchester United",
+    "role": "away",
+    "score": "1",
+    "short_name": "Man United",
+    "winner": false
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Dominic Calvert-Lewin's second-half equaliser extended Manchester United's winless Premier League run to five matches as they were held 1-1 by rivals Leeds.",
+  "title": "Leeds United v Manchester United",
+  "venue": "Elland Road"
+ },
+ "sources": [
+  {
+   "publisher": "ESPN",
+   "title": "Leeds United v Manchester United: match events",
+   "url": "https://www.espn.com/soccer/match/_/gameId/401879260"
+  },
+  {
+   "published_at": "2026-10-18T15:09:00Z",
+   "publisher": "ESPN",
+   "title": "Dominic Calvert-Lewin denies Man United a first Premier League win since Aug. 30",
+   "url": "https://www.espn.com/soccer/report/_/gameId/401879260"
+  }
+ ],
+ "team_stats": [
+  {
+   "corners": 2,
+   "fouls": 16,
+   "possession_pct": 61.3,
+   "red_cards": 0,
+   "saves": 2,
+   "shots": 12,
+   "shots_on_target": 5,
+   "team": "Leeds United",
+   "yellow_cards": 2
+  },
+  {
+   "corners": 3,
+   "fouls": 5,
+   "possession_pct": 38.7,
+   "red_cards": 0,
+   "saves": 3,
+   "shots": 13,
+   "shots_on_target": 3,
+   "team": "Manchester United",
+   "yellow_cards": 2
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+[
+ {
+  "coverage": "full_events",
+  "league": "eng.1",
+  "name": "Premier League",
+  "source": "ESPN",
+  "sport": "football"
+ }
+]

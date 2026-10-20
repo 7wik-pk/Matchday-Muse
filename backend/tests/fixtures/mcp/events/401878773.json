@@ -1,0 +1,1269 @@
+{
+ "coverage": "full_events",
+ "events": [
+  {
+   "actors": [],
+   "clock": "0'",
+   "description": "First Half begins.",
+   "source_ref": "espn:401878773:play:53398566",
+   "type": "kickoff"
+  },
+  {
+   "actors": [
+    "Lucas Bergvall",
+    "Bryan Mbeumo"
+   ],
+   "clock": "2'",
+   "description": "Bryan Mbeumo (Manchester United) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878773:play:53398639",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lucas Bergvall",
+    "Bryan Mbeumo"
+   ],
+   "clock": "2'",
+   "description": "Foul by Lucas Bergvall (Tottenham Hotspur).",
+   "source_ref": "espn:401878773:play:53398639",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Dominic Solanke"
+   ],
+   "clock": "3'",
+   "description": "Attempt saved. Dominic Solanke (Tottenham Hotspur) right footed shot from the centre of the box is saved in the centre of the goal by Senne Lammens (Manchester United).",
+   "source_ref": "espn:401878773:play:53398732",
+   "team": "Tottenham Hotspur",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Dominic Solanke",
+    "Senne Lammens"
+   ],
+   "clock": "3'",
+   "description": "Senne Lammens (Manchester United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878773:play:53398963",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Dominic Solanke",
+    "Senne Lammens"
+   ],
+   "clock": "3'",
+   "description": "Foul by Dominic Solanke (Tottenham Hotspur).",
+   "source_ref": "espn:401878773:play:53398963",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Conor Gallagher",
+    "Harry Maguire"
+   ],
+   "clock": "4'",
+   "description": "Harry Maguire (Manchester United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878773:play:53398809",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Conor Gallagher",
+    "Harry Maguire"
+   ],
+   "clock": "4'",
+   "description": "Foul by Conor Gallagher (Tottenham Hotspur).",
+   "source_ref": "espn:401878773:play:53398809",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Conor Gallagher"
+   ],
+   "clock": "4'",
+   "description": "Conor Gallagher (Tottenham Hotspur) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401878773:play:53398810",
+   "team": "Tottenham Hotspur",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Dominic Solanke",
+    "Marcos Senesi"
+   ],
+   "clock": "6'",
+   "description": "Attempt blocked. Dominic Solanke (Tottenham Hotspur) left footed shot from outside the box is blocked. Assisted by Marcos Senesi.",
+   "source_ref": "espn:401878773:play:53398894",
+   "team": "Tottenham Hotspur",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Marcos Senesi",
+    "Youri Tielemans"
+   ],
+   "clock": "6'",
+   "description": "Youri Tielemans (Manchester United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878773:play:53398967",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Marcos Senesi",
+    "Youri Tielemans"
+   ],
+   "clock": "6'",
+   "description": "Foul by Marcos Senesi (Tottenham Hotspur).",
+   "source_ref": "espn:401878773:play:53398967",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Luke Shaw",
+    "Mohammed Kudus"
+   ],
+   "clock": "7'",
+   "description": "Foul by Luke Shaw (Manchester United).",
+   "source_ref": "espn:401878773:play:53398973",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Luke Shaw",
+    "Mohammed Kudus"
+   ],
+   "clock": "7'",
+   "description": "Mohammed Kudus (Tottenham Hotspur) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878773:play:53398973",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Sávio",
+    "Youri Tielemans"
+   ],
+   "clock": "10'",
+   "description": "Youri Tielemans (Manchester United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878773:play:53399272",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Sávio",
+    "Youri Tielemans"
+   ],
+   "clock": "10'",
+   "description": "Foul by Sávio (Tottenham Hotspur).",
+   "source_ref": "espn:401878773:play:53399272",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matheus Cunha",
+    "Archie Gray"
+   ],
+   "clock": "14'",
+   "description": "Foul by Matheus Cunha (Manchester United).",
+   "source_ref": "espn:401878773:play:53399719",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matheus Cunha",
+    "Archie Gray"
+   ],
+   "clock": "14'",
+   "description": "Archie Gray (Tottenham Hotspur) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878773:play:53399719",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lucas Bergvall",
+    "Marcos Senesi"
+   ],
+   "clock": "17'",
+   "description": "Attempt missed. Lucas Bergvall (Tottenham Hotspur) right footed shot from outside the box is high and wide to the right. Assisted by Marcos Senesi.",
+   "source_ref": "espn:401878773:play:53399819",
+   "team": "Tottenham Hotspur",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Conor Gallagher",
+    "Dominic Solanke"
+   ],
+   "clock": "19'",
+   "description": "Attempt blocked. Conor Gallagher (Tottenham Hotspur) right footed shot from a difficult angle on the left is blocked. Assisted by Dominic Solanke.",
+   "source_ref": "espn:401878773:play:53400006",
+   "team": "Tottenham Hotspur",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Mohammed Kudus",
+    "Sávio"
+   ],
+   "clock": "21'",
+   "description": "Attempt missed. Mohammed Kudus (Tottenham Hotspur) left footed shot from the centre of the box is close, but misses to the left. Assisted by Sávio.",
+   "source_ref": "espn:401878773:play:53400144",
+   "team": "Tottenham Hotspur",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Conor Gallagher"
+   ],
+   "clock": "22'",
+   "description": "Offside, Tottenham Hotspur. Destiny Udogie is caught offside.",
+   "source_ref": "espn:401878773:play:53400238",
+   "team": "Tottenham Hotspur",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Lisandro Martínez",
+    "Dominic Solanke"
+   ],
+   "clock": "24'",
+   "description": "Foul by Lisandro Martínez (Manchester United).",
+   "source_ref": "espn:401878773:play:53400435",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lisandro Martínez",
+    "Dominic Solanke"
+   ],
+   "clock": "24'",
+   "description": "Dominic Solanke (Tottenham Hotspur) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878773:play:53400435",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lucas Bergvall",
+    "Matheus Cunha"
+   ],
+   "clock": "24'",
+   "description": "Matheus Cunha (Manchester United) wins a free kick on the left wing.",
+   "source_ref": "espn:401878773:play:53400506",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lucas Bergvall",
+    "Matheus Cunha"
+   ],
+   "clock": "24'",
+   "description": "Foul by Lucas Bergvall (Tottenham Hotspur).",
+   "source_ref": "espn:401878773:play:53400506",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Kobbie Mainoo"
+   ],
+   "clock": "25'",
+   "description": "Offside, Manchester United. Lisandro Martínez is caught offside.",
+   "source_ref": "espn:401878773:play:53400511",
+   "team": "Manchester United",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Bryan Mbeumo",
+    "Archie Gray"
+   ],
+   "clock": "28'",
+   "description": "Foul by Bryan Mbeumo (Manchester United).",
+   "source_ref": "espn:401878773:play:53400692",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Bryan Mbeumo",
+    "Archie Gray"
+   ],
+   "clock": "28'",
+   "description": "Archie Gray (Tottenham Hotspur) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878773:play:53400692",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Youri Tielemans"
+   ],
+   "clock": "30'",
+   "description": "Offside, Manchester United. Luke Shaw is caught offside.",
+   "source_ref": "espn:401878773:play:53401202",
+   "team": "Manchester United",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Youri Tielemans",
+    "Conor Gallagher"
+   ],
+   "clock": "32'",
+   "description": "Foul by Youri Tielemans (Manchester United).",
+   "source_ref": "espn:401878773:play:53401112",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Youri Tielemans",
+    "Conor Gallagher"
+   ],
+   "clock": "32'",
+   "description": "Conor Gallagher (Tottenham Hotspur) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878773:play:53401112",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "33'",
+   "description": "Corner, Tottenham Hotspur. Conceded by Luke Shaw.",
+   "source_ref": "espn:401878773:play:53401210",
+   "team": "Tottenham Hotspur",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Sandro Tonali"
+   ],
+   "clock": "34'",
+   "description": "Attempt blocked. Sandro Tonali (Tottenham Hotspur) right footed shot from outside the box is blocked.",
+   "source_ref": "espn:401878773:play:53401213",
+   "team": "Tottenham Hotspur",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Amad Diallo",
+    "Bryan Mbeumo"
+   ],
+   "clock": "34'",
+   "description": "Attempt saved. Amad Diallo (Manchester United) left footed shot from the left side of the box is saved in the centre of the goal by Antonín Kinsky (Tottenham Hotspur). Assisted by Bryan Mbeumo.",
+   "source_ref": "espn:401878773:play:53401270",
+   "team": "Manchester United",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Matheus Cunha",
+    "Conor Gallagher"
+   ],
+   "clock": "36'",
+   "description": "Foul by Matheus Cunha (Manchester United).",
+   "source_ref": "espn:401878773:play:53401590",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Matheus Cunha",
+    "Conor Gallagher"
+   ],
+   "clock": "36'",
+   "description": "Conor Gallagher (Tottenham Hotspur) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878773:play:53401590",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Bryan Mbeumo",
+    "Marcos Senesi"
+   ],
+   "clock": "37'",
+   "description": "Foul by Bryan Mbeumo (Manchester United).",
+   "source_ref": "espn:401878773:play:53401604",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Bryan Mbeumo",
+    "Marcos Senesi"
+   ],
+   "clock": "37'",
+   "description": "Marcos Senesi (Tottenham Hotspur) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878773:play:53401604",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Mohammed Kudus",
+    "Youri Tielemans"
+   ],
+   "clock": "40'",
+   "description": "Youri Tielemans (Manchester United) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878773:play:53402042",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Mohammed Kudus",
+    "Youri Tielemans"
+   ],
+   "clock": "40'",
+   "description": "Foul by Mohammed Kudus (Tottenham Hotspur).",
+   "source_ref": "espn:401878773:play:53402042",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Conor Gallagher"
+   ],
+   "clock": "42'",
+   "description": "Attempt saved. Conor Gallagher (Tottenham Hotspur) right footed shot from the right side of the six yard box is saved in the centre of the goal by Senne Lammens (Manchester United).",
+   "source_ref": "espn:401878773:play:53402187",
+   "team": "Tottenham Hotspur",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Conor Gallagher",
+    "Lisandro Martínez"
+   ],
+   "clock": "42'",
+   "description": "Lisandro Martínez (Manchester United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878773:play:53402310",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Conor Gallagher",
+    "Lisandro Martínez"
+   ],
+   "clock": "42'",
+   "description": "Foul by Dominic Solanke (Tottenham Hotspur).",
+   "source_ref": "espn:401878773:play:53402310",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lucas Bergvall",
+    "Youri Tielemans"
+   ],
+   "clock": "43'",
+   "description": "Youri Tielemans (Manchester United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878773:play:53402312",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lucas Bergvall",
+    "Youri Tielemans"
+   ],
+   "clock": "43'",
+   "description": "Foul by Lucas Bergvall (Tottenham Hotspur).",
+   "source_ref": "espn:401878773:play:53402312",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "48'",
+   "description": "Corner, Manchester United. Conceded by Jan Paul van Hecke.",
+   "source_ref": "espn:401878773:play:53403893",
+   "team": "Manchester United",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Amad Diallo"
+   ],
+   "clock": "49'",
+   "description": "Attempt missed. Amad Diallo (Manchester United) left footed shot from outside the box is high and wide to the left following a corner.",
+   "source_ref": "espn:401878773:play:53403948",
+   "team": "Manchester United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Bruno Fernandes",
+    "Destiny Udogie"
+   ],
+   "clock": "50'",
+   "description": "Foul by Bruno Fernandes (Manchester United).",
+   "source_ref": "espn:401878773:play:53404118",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Bruno Fernandes",
+    "Destiny Udogie"
+   ],
+   "clock": "50'",
+   "description": "Destiny Udogie (Tottenham Hotspur) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878773:play:53404118",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Dominic Solanke",
+    "Sávio"
+   ],
+   "clock": "51'",
+   "description": "Attempt missed. Dominic Solanke (Tottenham Hotspur) right footed shot from the centre of the box is too high. Assisted by Sávio with a cross.",
+   "source_ref": "espn:401878773:play:53404134",
+   "team": "Tottenham Hotspur",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Jan Paul van Hecke",
+    "Bruno Fernandes"
+   ],
+   "clock": "52'",
+   "description": "Bruno Fernandes (Manchester United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878773:play:53404173",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jan Paul van Hecke",
+    "Bruno Fernandes"
+   ],
+   "clock": "52'",
+   "description": "Foul by Jan Paul van Hecke (Tottenham Hotspur).",
+   "source_ref": "espn:401878773:play:53404173",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Archie Gray",
+    "Matheus Cunha"
+   ],
+   "clock": "53'",
+   "description": "Matheus Cunha (Manchester United) wins a free kick on the left wing.",
+   "source_ref": "espn:401878773:play:53404264",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Archie Gray",
+    "Matheus Cunha"
+   ],
+   "clock": "53'",
+   "description": "Foul by Archie Gray (Tottenham Hotspur).",
+   "source_ref": "espn:401878773:play:53404264",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "54'",
+   "description": "Corner, Manchester United. Conceded by Sandro Tonali.",
+   "source_ref": "espn:401878773:play:53404356",
+   "team": "Manchester United",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Sávio",
+    "Conor Gallagher"
+   ],
+   "clock": "57'",
+   "description": "Attempt blocked. Sávio (Tottenham Hotspur) left footed shot from the left side of the box is blocked. Assisted by Conor Gallagher.",
+   "source_ref": "espn:401878773:play:53404780",
+   "team": "Tottenham Hotspur",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "57'",
+   "description": "Corner, Tottenham Hotspur. Conceded by Leny Yoro.",
+   "source_ref": "espn:401878773:play:53404782",
+   "team": "Tottenham Hotspur",
+   "type": "corner"
+  },
+  {
+   "actors": [],
+   "clock": "58'",
+   "description": "Corner, Tottenham Hotspur. Conceded by Harry Maguire.",
+   "source_ref": "espn:401878773:play:53404786",
+   "team": "Tottenham Hotspur",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Mohammed Kudus"
+   ],
+   "clock": "59'",
+   "description": "Attempt blocked. Mohammed Kudus (Tottenham Hotspur) left footed shot from outside the box is blocked.",
+   "source_ref": "espn:401878773:play:53404789",
+   "team": "Tottenham Hotspur",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Joshua Zirkzee",
+    "Amad Diallo"
+   ],
+   "clock": "59'",
+   "description": "Substitution, Manchester United. Joshua Zirkzee replaces Amad Diallo.",
+   "source_ref": "espn:401878773:play:53404933",
+   "team": "Manchester United",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Diogo Dalot",
+    "Leny Yoro"
+   ],
+   "clock": "59'",
+   "description": "Substitution, Manchester United. Diogo Dalot replaces Leny Yoro.",
+   "source_ref": "espn:401878773:play:53404934",
+   "team": "Manchester United",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Carlos Baleba",
+    "Youri Tielemans"
+   ],
+   "clock": "59'",
+   "description": "Substitution, Manchester United. Carlos Baleba replaces Youri Tielemans.",
+   "source_ref": "espn:401878773:play:53404935",
+   "team": "Manchester United",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Mohammed Kudus",
+    "Matheus Cunha"
+   ],
+   "clock": "60'",
+   "description": "Matheus Cunha (Manchester United) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878773:play:53404904",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Mohammed Kudus",
+    "Matheus Cunha"
+   ],
+   "clock": "60'",
+   "description": "Foul by Mohammed Kudus (Tottenham Hotspur).",
+   "source_ref": "espn:401878773:play:53404904",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Joshua Zirkzee",
+    "Bruno Fernandes"
+   ],
+   "clock": "62'",
+   "description": "Attempt blocked. Joshua Zirkzee (Manchester United) left footed shot from the left side of the six yard box is blocked. Assisted by Bruno Fernandes with a through ball.",
+   "source_ref": "espn:401878773:play:53405041",
+   "team": "Manchester United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "62'",
+   "description": "Corner, Manchester United. Conceded by Sandro Tonali.",
+   "source_ref": "espn:401878773:play:53405138",
+   "team": "Manchester United",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Carlos Baleba"
+   ],
+   "clock": "62'",
+   "description": "Attempt missed. Carlos Baleba (Manchester United) right footed shot from the centre of the box is high and wide to the right following a corner.",
+   "source_ref": "espn:401878773:play:53405142",
+   "team": "Manchester United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Bruno Fernandes",
+    "Joshua Zirkzee"
+   ],
+   "clock": "63'",
+   "description": "Attempt missed. Bruno Fernandes (Manchester United) right footed shot from the right side of the box is close, but misses to the right. Assisted by Joshua Zirkzee.",
+   "source_ref": "espn:401878773:play:53405245",
+   "team": "Manchester United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Conor Gallagher"
+   ],
+   "clock": "65'",
+   "description": "Offside, Tottenham Hotspur. Destiny Udogie is caught offside.",
+   "source_ref": "espn:401878773:play:53405351",
+   "team": "Tottenham Hotspur",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Rodrigo Bentancur",
+    "Lucas Bergvall"
+   ],
+   "clock": "66'",
+   "description": "Substitution, Tottenham Hotspur. Rodrigo Bentancur replaces Lucas Bergvall.",
+   "source_ref": "espn:401878773:play:53405469",
+   "team": "Tottenham Hotspur",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Omar Marmoush",
+    "Mohammed Kudus"
+   ],
+   "clock": "66'",
+   "description": "Substitution, Tottenham Hotspur. Omar Marmoush replaces Mohammed Kudus.",
+   "source_ref": "espn:401878773:play:53405470",
+   "team": "Tottenham Hotspur",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Conor Gallagher",
+    "Carlos Baleba"
+   ],
+   "clock": "67'",
+   "description": "Foul by Conor Gallagher (Tottenham Hotspur).",
+   "source_ref": "espn:401878773:play:53405514",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Conor Gallagher",
+    "Carlos Baleba"
+   ],
+   "clock": "67'",
+   "description": "Carlos Baleba (Manchester United) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878773:play:53405514",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Sávio"
+   ],
+   "clock": "69'",
+   "description": "Attempt blocked. Sávio (Tottenham Hotspur) right footed shot from the centre of the box is blocked.",
+   "source_ref": "espn:401878773:play:53405650",
+   "team": "Tottenham Hotspur",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "69'",
+   "description": "Corner, Tottenham Hotspur. Conceded by Kobbie Mainoo.",
+   "source_ref": "espn:401878773:play:53405652",
+   "team": "Tottenham Hotspur",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Carlos Baleba",
+    "Sávio"
+   ],
+   "clock": "70'",
+   "description": "Dominic Solanke (Tottenham Hotspur) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878773:play:53405753",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Carlos Baleba",
+    "Sávio"
+   ],
+   "clock": "70'",
+   "description": "Foul by Carlos Baleba (Manchester United).",
+   "source_ref": "espn:401878773:play:53405753",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Harry Maguire",
+    "Diogo Dalot"
+   ],
+   "clock": "72'",
+   "description": "Attempt blocked. Harry Maguire (Manchester United) right footed shot from outside the box is blocked. Assisted by Diogo Dalot.",
+   "source_ref": "espn:401878773:play:53405959",
+   "team": "Manchester United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Bryan Mbeumo",
+    "Matheus Cunha"
+   ],
+   "clock": "73'",
+   "description": "Goal! Manchester United 1, Tottenham Hotspur 0. Bryan Mbeumo (Manchester United) left footed shot from the left side of the box to the bottom right corner. Assisted by Matheus Cunha.",
+   "score_after": "1-0",
+   "source_ref": "espn:401878773:play:53405965",
+   "team": "Manchester United",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "James Maddison",
+    "Conor Gallagher"
+   ],
+   "clock": "74'",
+   "description": "Substitution, Tottenham Hotspur. James Maddison replaces Conor Gallagher.",
+   "source_ref": "espn:401878773:play:53406101",
+   "team": "Tottenham Hotspur",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Micky van de Ven",
+    "Destiny Udogie"
+   ],
+   "clock": "74'",
+   "description": "Substitution, Tottenham Hotspur. Micky van de Ven replaces Destiny Udogie.",
+   "source_ref": "espn:401878773:play:53406102",
+   "team": "Tottenham Hotspur",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Sandro Tonali",
+    "Bruno Fernandes"
+   ],
+   "clock": "75'",
+   "description": "Foul by Sandro Tonali (Tottenham Hotspur).",
+   "source_ref": "espn:401878773:play:53406112",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Sandro Tonali",
+    "Bruno Fernandes"
+   ],
+   "clock": "75'",
+   "description": "Bruno Fernandes (Manchester United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878773:play:53406112",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Bruno Fernandes"
+   ],
+   "clock": "77'",
+   "description": "Bruno Fernandes (Manchester United) wins a free kick on the left wing.",
+   "source_ref": "espn:401878773:play:53406253",
+   "team": "Manchester United",
+   "type": "other"
+  },
+  {
+   "actors": [
+    "Jan Paul van Hecke",
+    "Bruno Fernandes"
+   ],
+   "clock": "77'",
+   "description": "Foul by Jan Paul van Hecke (Tottenham Hotspur).",
+   "source_ref": "espn:401878773:play:53406399",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Rodrigo Bentancur"
+   ],
+   "clock": "78'",
+   "description": "Rodrigo Bentancur (Tottenham Hotspur) is shown the red card for violent conduct.",
+   "source_ref": "espn:401878773:play:53406400",
+   "team": "Tottenham Hotspur",
+   "type": "red_card"
+  },
+  {
+   "actors": [
+    "Jan Paul van Hecke"
+   ],
+   "clock": "78'",
+   "description": "Jan Paul van Hecke (Tottenham Hotspur) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401878773:play:53406401",
+   "team": "Tottenham Hotspur",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Luke Shaw"
+   ],
+   "clock": "78'",
+   "description": "Luke Shaw (Manchester United) is shown the yellow card.",
+   "source_ref": "espn:401878773:play:53406402",
+   "team": "Manchester United",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Bruno Fernandes",
+    "Jan Paul van Hecke"
+   ],
+   "clock": "83'",
+   "description": "Jan Paul van Hecke (Tottenham Hotspur) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878773:play:53406837",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Bruno Fernandes",
+    "Jan Paul van Hecke"
+   ],
+   "clock": "83'",
+   "description": "Foul by Bruno Fernandes (Manchester United).",
+   "source_ref": "espn:401878773:play:53406837",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Bruno Fernandes"
+   ],
+   "clock": "84'",
+   "description": "Bruno Fernandes (Manchester United) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401878773:play:53406928",
+   "team": "Manchester United",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Bryan Mbeumo",
+    "Carlos Baleba"
+   ],
+   "clock": "85'",
+   "description": "Attempt saved. Bryan Mbeumo (Manchester United) right footed shot from the right side of the box is saved in the bottom right corner by Antonín Kinsky (Tottenham Hotspur). Assisted by Carlos Baleba.",
+   "source_ref": "espn:401878773:play:53407064",
+   "team": "Manchester United",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [],
+   "clock": "86'",
+   "description": "Corner, Manchester United. Conceded by Antonín Kinsky.",
+   "source_ref": "espn:401878773:play:53407066",
+   "team": "Manchester United",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Harry Maguire",
+    "Bruno Fernandes"
+   ],
+   "clock": "86'",
+   "description": "Attempt missed. Harry Maguire (Manchester United) header from the centre of the box misses to the left. Assisted by Bruno Fernandes with a cross following a corner.",
+   "source_ref": "espn:401878773:play:53407170",
+   "team": "Manchester United",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Lisandro Martínez",
+    "James Maddison"
+   ],
+   "clock": "87'",
+   "description": "James Maddison (Tottenham Hotspur) wins a free kick in the attacking half.",
+   "source_ref": "espn:401878773:play:53407182",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lisandro Martínez",
+    "James Maddison"
+   ],
+   "clock": "87'",
+   "description": "Foul by Lisandro Martínez (Manchester United).",
+   "source_ref": "espn:401878773:play:53407182",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Lisandro Martínez"
+   ],
+   "clock": "87'",
+   "description": "Lisandro Martínez (Manchester United) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401878773:play:53407260",
+   "team": "Manchester United",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Mateus Fernandes",
+    "Marcos Senesi"
+   ],
+   "clock": "89'",
+   "description": "Substitution, Tottenham Hotspur. Mateus Fernandes replaces Marcos Senesi.",
+   "source_ref": "espn:401878773:play:53407438",
+   "team": "Tottenham Hotspur",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Matheus Cunha",
+    "Diogo Dalot"
+   ],
+   "clock": "90'",
+   "description": "Attempt blocked. Matheus Cunha (Manchester United) right footed shot from the centre of the box is blocked. Assisted by Diogo Dalot.",
+   "source_ref": "espn:401878773:play:53407424",
+   "team": "Manchester United",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Dominic Solanke",
+    "Sandro Tonali"
+   ],
+   "clock": "90+2'",
+   "description": "Goal! Manchester United 1, Tottenham Hotspur 1. Dominic Solanke (Tottenham Hotspur) header from the centre of the box to the bottom right corner. Assisted by Sandro Tonali with a cross.",
+   "score_after": "1-1",
+   "source_ref": "espn:401878773:play:53407813",
+   "team": "Tottenham Hotspur",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Harry Maguire",
+    "Carlos Baleba"
+   ],
+   "clock": "90+4'",
+   "description": "Attempt saved. Harry Maguire (Manchester United) right footed shot from outside the box is saved in the centre of the goal by Antonín Kinsky (Tottenham Hotspur). Assisted by Carlos Baleba.",
+   "source_ref": "espn:401878773:play:53407923",
+   "team": "Manchester United",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Kobbie Mainoo",
+    "Sávio"
+   ],
+   "clock": "90+5'",
+   "description": "Foul by Kobbie Mainoo (Manchester United).",
+   "source_ref": "espn:401878773:play:53408065",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Kobbie Mainoo",
+    "Sávio"
+   ],
+   "clock": "90+5'",
+   "description": "Sávio (Tottenham Hotspur) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878773:play:53408065",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Marcus Rashford",
+    "Matheus Cunha"
+   ],
+   "clock": "90+5'",
+   "description": "Substitution, Manchester United. Marcus Rashford replaces Matheus Cunha.",
+   "source_ref": "espn:401878773:play:53408295",
+   "team": "Manchester United",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Ayden Heaven",
+    "Luke Shaw"
+   ],
+   "clock": "90+5'",
+   "description": "Substitution, Manchester United. Ayden Heaven replaces Luke Shaw.",
+   "source_ref": "espn:401878773:play:53408296",
+   "team": "Manchester United",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Diogo Dalot",
+    "Sandro Tonali"
+   ],
+   "clock": "90+6'",
+   "description": "Foul by Diogo Dalot (Manchester United).",
+   "source_ref": "espn:401878773:play:53408290",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Diogo Dalot",
+    "Sandro Tonali"
+   ],
+   "clock": "90+6'",
+   "description": "Sandro Tonali (Tottenham Hotspur) wins a free kick on the left wing.",
+   "source_ref": "espn:401878773:play:53408290",
+   "team": "Manchester United",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Diogo Dalot"
+   ],
+   "clock": "90+6'",
+   "description": "Diogo Dalot (Manchester United) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401878773:play:53408291",
+   "team": "Manchester United",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Archie Gray",
+    "Ayden Heaven"
+   ],
+   "clock": "90+8'",
+   "description": "Ayden Heaven (Manchester United) wins a free kick in the defensive half.",
+   "source_ref": "espn:401878773:play:53408529",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Archie Gray",
+    "Ayden Heaven"
+   ],
+   "clock": "90+8'",
+   "description": "Foul by Archie Gray (Tottenham Hotspur).",
+   "source_ref": "espn:401878773:play:53408529",
+   "team": "Tottenham Hotspur",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Archie Gray"
+   ],
+   "clock": "90+8'",
+   "description": "Archie Gray (Tottenham Hotspur) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401878773:play:53408598",
+   "team": "Tottenham Hotspur",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Carlos Baleba",
+    "Diogo Dalot"
+   ],
+   "clock": "90+9'",
+   "description": "Attempt missed. Carlos Baleba (Manchester United) left footed shot from outside the box is high and wide to the left. Assisted by Diogo Dalot.",
+   "source_ref": "espn:401878773:play:53408605",
+   "team": "Manchester United",
+   "type": "shot_off_target"
+  }
+ ],
+ "match": {
+  "end_estimate": "2026-10-10T18:30:00Z",
+  "final_result": "Manchester United 1–1 Tottenham Hotspur",
+  "id": "401878773",
+  "kickoff": "2026-10-10T16:30:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "MAN",
+    "name": "Manchester United",
+    "role": "home",
+    "score": "1",
+    "short_name": "Man United",
+    "winner": false
+   },
+   {
+    "abbreviation": "TOT",
+    "name": "Tottenham Hotspur",
+    "role": "away",
+    "score": "1",
+    "short_name": "Spurs",
+    "winner": false
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Dominic Solanke capitalised on weak Manchester United defending as winless Tottenham recovered from Rodrigo Bentancur's dismissal to snatch a late 1-1 draw as boos filled Old Trafford once again.",
+  "title": "Manchester United v Tottenham Hotspur",
+  "venue": "Old Trafford"
+ },
+ "sources": [
+  {
+   "publisher": "ESPN",
+   "title": "Manchester United v Tottenham Hotspur: match events",
+   "url": "https://www.espn.com/soccer/match/_/gameId/401878773"
+  },
+  {
+   "published_at": "2026-10-07T22:12:13Z",
+   "publisher": "ESPN",
+   "title": "Solanke rescues point for 10-man Spurs as hapless Man United flatter to deceive again",
+   "url": "https://www.espn.com/soccer/report/_/gameId/401878773"
+  }
+ ],
+ "team_stats": [
+  {
+   "corners": 4,
+   "fouls": 13,
+   "possession_pct": 49.6,
+   "red_cards": 0,
+   "saves": 2,
+   "shots": 12,
+   "shots_on_target": 4,
+   "team": "Manchester United",
+   "yellow_cards": 4
+  },
+  {
+   "corners": 4,
+   "fouls": 16,
+   "possession_pct": 50.4,
+   "red_cards": 1,
+   "saves": 3,
+   "shots": 12,
+   "shots_on_target": 3,
+   "team": "Tottenham Hotspur",
+   "yellow_cards": 3
+  }
+ ]
+}

@@ -1,0 +1,1111 @@
+{
+ "coverage": "full_events",
+ "events": [
+  {
+   "actors": [
+    "Anan Khalaili",
+    "Lewis Dunk"
+   ],
+   "clock": "3'",
+   "description": "Lewis Dunk (Brighton and Hove Albion) wins a free kick on the left wing.",
+   "source_ref": "espn:401879261:play:53889315",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jaydee Canvot"
+   ],
+   "clock": "4'",
+   "description": "Own Goal by Jaydee Canvot, Crystal Palace. Brighton and Hove Albion 1, Crystal Palace 0.",
+   "score_after": "1-0",
+   "source_ref": "espn:401879261:play:53889392",
+   "team": "Brighton & Hove Albion",
+   "type": "own_goal"
+  },
+  {
+   "actors": [
+    "Maxim De Cuyper",
+    "Daichi Kamada"
+   ],
+   "clock": "6'",
+   "description": "Foul by Maxim De Cuyper (Brighton and Hove Albion).",
+   "source_ref": "espn:401879261:play:53889711",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Maxim De Cuyper",
+    "Daichi Kamada"
+   ],
+   "clock": "6'",
+   "description": "Daichi Kamada (Crystal Palace) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879261:play:53889711",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Luka Vuskovic",
+    "Quinten Timber"
+   ],
+   "clock": "7'",
+   "description": "Foul by Luka Vuskovic (Brighton and Hove Albion).",
+   "source_ref": "espn:401879261:play:53889831",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Luka Vuskovic",
+    "Quinten Timber"
+   ],
+   "clock": "7'",
+   "description": "Quinten Timber (Crystal Palace) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879261:play:53889831",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Diego Gómez",
+    "Olivier Boscagli"
+   ],
+   "clock": "7'",
+   "description": "Goal! Brighton and Hove Albion 2, Crystal Palace 0. Diego Gómez (Brighton and Hove Albion) right footed shot from more than 35 yards to the high centre of the goal. Assisted by Olivier Boscagli following a fast break.",
+   "score_after": "2-0",
+   "source_ref": "espn:401879261:play:53890010",
+   "team": "Brighton & Hove Albion",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Yasin Ayari",
+    "Charalambos Kostoulas"
+   ],
+   "clock": "10'",
+   "description": "Goal! Brighton and Hove Albion 3, Crystal Palace 0. Yasin Ayari (Brighton and Hove Albion) right footed shot from the centre of the box to the bottom left corner. Assisted by Charalampos Kostoulas.",
+   "score_after": "3-0",
+   "source_ref": "espn:401879261:play:53890334",
+   "team": "Brighton & Hove Albion",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Anan Khalaili",
+    "Jaydee Canvot"
+   ],
+   "clock": "12'",
+   "description": "Attempt saved. Anan Khalaili (Crystal Palace) right footed shot from the right side of the box is saved in the centre of the goal by Bart Verbruggen (Brighton and Hove Albion). Assisted by Jaydee Canvot.",
+   "source_ref": "espn:401879261:play:53890911",
+   "team": "Crystal Palace",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [],
+   "clock": "12'",
+   "description": "Corner, Crystal Palace. Conceded by Lewis Dunk.",
+   "source_ref": "espn:401879261:play:53890914",
+   "team": "Crystal Palace",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Jørgen Strand Larsen",
+    "Maxim De Cuyper"
+   ],
+   "clock": "13'",
+   "description": "Foul by Jørgen Strand Larsen (Crystal Palace).",
+   "source_ref": "espn:401879261:play:53891245",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jørgen Strand Larsen",
+    "Maxim De Cuyper"
+   ],
+   "clock": "13'",
+   "description": "Maxim De Cuyper (Brighton and Hove Albion) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879261:play:53891245",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jørgen Strand Larsen",
+    "Luka Vuskovic"
+   ],
+   "clock": "15'",
+   "description": "Foul by Jørgen Strand Larsen (Crystal Palace).",
+   "source_ref": "espn:401879261:play:53891316",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jørgen Strand Larsen",
+    "Luka Vuskovic"
+   ],
+   "clock": "15'",
+   "description": "Luka Vuskovic (Brighton and Hove Albion) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879261:play:53891316",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Pascal Gross",
+    "Olivier Boscagli"
+   ],
+   "clock": "16'",
+   "description": "Attempt blocked. Pascal Groß (Brighton and Hove Albion) right footed shot from the centre of the box is blocked. Assisted by Olivier Boscagli.",
+   "source_ref": "espn:401879261:play:53891524",
+   "team": "Brighton & Hove Albion",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Pascal Gross"
+   ],
+   "clock": "18'",
+   "description": "Offside, Brighton and Hove Albion. Ferdi Kadioglu is caught offside.",
+   "source_ref": "espn:401879261:play:53891856",
+   "team": "Brighton & Hove Albion",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Luka Vuskovic",
+    "Jørgen Strand Larsen"
+   ],
+   "clock": "19'",
+   "description": "Jørgen Strand Larsen (Crystal Palace) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879261:play:53892050",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Luka Vuskovic",
+    "Jørgen Strand Larsen"
+   ],
+   "clock": "19'",
+   "description": "Foul by Luka Vuskovic (Brighton and Hove Albion).",
+   "source_ref": "espn:401879261:play:53892050",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Yéremy Pino"
+   ],
+   "clock": "20'",
+   "description": "Attempt blocked. Yéremy Pino (Crystal Palace) right footed shot from outside the box is blocked.",
+   "source_ref": "espn:401879261:play:53892253",
+   "team": "Crystal Palace",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Charalambos Kostoulas",
+    "Maxim De Cuyper"
+   ],
+   "clock": "20'",
+   "description": "Attempt saved. Charalampos Kostoulas (Brighton and Hove Albion) right footed shot from outside the box is saved in the centre of the goal by Walter Benítez (Crystal Palace). Assisted by Maxim De Cuyper.",
+   "source_ref": "espn:401879261:play:53892260",
+   "team": "Brighton & Hove Albion",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Yasin Ayari",
+    "Jaydee Canvot"
+   ],
+   "clock": "23'",
+   "description": "Jaydee Canvot (Crystal Palace) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879261:play:53892825",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Yasin Ayari",
+    "Jaydee Canvot"
+   ],
+   "clock": "23'",
+   "description": "Foul by Yasin Ayari (Brighton and Hove Albion).",
+   "source_ref": "espn:401879261:play:53892825",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Yasin Ayari",
+    "Lewis Dunk"
+   ],
+   "clock": "23'",
+   "description": "Attempt saved. Yasin Ayari (Brighton and Hove Albion) right footed shot from outside the box is saved in the bottom right corner by Walter Benítez (Crystal Palace). Assisted by Lewis Dunk.",
+   "source_ref": "espn:401879261:play:53892848",
+   "team": "Brighton & Hove Albion",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Yasin Ayari"
+   ],
+   "clock": "24'",
+   "description": "Offside, Brighton and Hove Albion. Maxim De Cuyper is caught offside.",
+   "source_ref": "espn:401879261:play:53892870",
+   "team": "Brighton & Hove Albion",
+   "type": "offside"
+  },
+  {
+   "actors": [],
+   "clock": "25'",
+   "description": "Corner, Brighton and Hove Albion. Conceded by Honest Ahanor.",
+   "source_ref": "espn:401879261:play:53893114",
+   "team": "Brighton & Hove Albion",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Maxim De Cuyper",
+    "Honest Ahanor"
+   ],
+   "clock": "26'",
+   "description": "Honest Ahanor (Crystal Palace) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879261:play:53893222",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Maxim De Cuyper",
+    "Honest Ahanor"
+   ],
+   "clock": "26'",
+   "description": "Foul by Maxim De Cuyper (Brighton and Hove Albion).",
+   "source_ref": "espn:401879261:play:53893222",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Pascal Gross",
+    "Yéremy Pino"
+   ],
+   "clock": "29'",
+   "description": "Yéremy Pino (Crystal Palace) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879261:play:53893447",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Pascal Gross",
+    "Yéremy Pino"
+   ],
+   "clock": "29'",
+   "description": "Foul by Pascal Groß (Brighton and Hove Albion).",
+   "source_ref": "espn:401879261:play:53893447",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Pascal Gross"
+   ],
+   "clock": "29'",
+   "description": "Pascal Groß (Brighton and Hove Albion) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879261:play:53893718",
+   "team": "Brighton & Hove Albion",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Chema Andrés",
+    "Adam Wharton"
+   ],
+   "clock": "32'",
+   "description": "Adam Wharton (Crystal Palace) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879261:play:53894385",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Chema Andrés",
+    "Adam Wharton"
+   ],
+   "clock": "32'",
+   "description": "Foul by Chema Andrés (Brighton and Hove Albion).",
+   "source_ref": "espn:401879261:play:53894385",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Yasin Ayari",
+    "Maxim De Cuyper"
+   ],
+   "clock": "33'",
+   "description": "Attempt blocked. Yasin Ayari (Brighton and Hove Albion) right footed shot from outside the box is blocked. Assisted by Maxim De Cuyper.",
+   "source_ref": "espn:401879261:play:53894495",
+   "team": "Brighton & Hove Albion",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "33'",
+   "description": "Corner, Brighton and Hove Albion. Conceded by Chris Richards.",
+   "source_ref": "espn:401879261:play:53894497",
+   "team": "Brighton & Hove Albion",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Pascal Gross"
+   ],
+   "clock": "34'",
+   "description": "Attempt missed. Pascal Groß (Brighton and Hove Albion) left footed shot from the left side of the box is too high following a corner.",
+   "source_ref": "espn:401879261:play:53894699",
+   "team": "Brighton & Hove Albion",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Ferdi Kadioglu",
+    "Pascal Gross"
+   ],
+   "clock": "38'",
+   "description": "Attempt saved. Ferdi Kadioglu (Brighton and Hove Albion) right footed shot from outside the box is saved in the top centre of the goal by Walter Benítez (Crystal Palace). Assisted by Pascal Groß.",
+   "source_ref": "espn:401879261:play:53895305",
+   "team": "Brighton & Hove Albion",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [],
+   "clock": "39'",
+   "description": "Corner, Brighton and Hove Albion. Conceded by Walter Benítez.",
+   "source_ref": "espn:401879261:play:53895307",
+   "team": "Brighton & Hove Albion",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Anan Khalaili",
+    "Chris Richards"
+   ],
+   "clock": "44'",
+   "description": "Attempt missed. Anan Khalaili (Crystal Palace) header from the right side of the box is high and wide to the right. Assisted by Chris Richards.",
+   "source_ref": "espn:401879261:play:53896477",
+   "team": "Crystal Palace",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Dwight McNeil",
+    "Quinten Timber"
+   ],
+   "clock": "45'",
+   "description": "Substitution, Crystal Palace. Dwight McNeil replaces Quinten Timber.",
+   "source_ref": "espn:401879261:play:53898244",
+   "team": "Crystal Palace",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Anan Khalaili",
+    "Maxim De Cuyper"
+   ],
+   "clock": "46'",
+   "description": "Foul by Anan Khalaili (Crystal Palace).",
+   "source_ref": "espn:401879261:play:53898428",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Anan Khalaili",
+    "Maxim De Cuyper"
+   ],
+   "clock": "46'",
+   "description": "Maxim De Cuyper (Brighton and Hove Albion) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879261:play:53898428",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Charalambos Kostoulas",
+    "Luka Vuskovic"
+   ],
+   "clock": "47'",
+   "description": "Attempt missed. Charalampos Kostoulas (Brighton and Hove Albion) right footed shot from outside the box is close, but misses to the left. Assisted by Luka Vuskovic following a fast break.",
+   "source_ref": "espn:401879261:play:53898558",
+   "team": "Brighton & Hove Albion",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Yasin Ayari"
+   ],
+   "clock": "49'",
+   "description": "Attempt blocked. Yasin Ayari (Brighton and Hove Albion) right footed shot from the centre of the box is blocked.",
+   "source_ref": "espn:401879261:play:53898756",
+   "team": "Brighton & Hove Albion",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Charalambos Kostoulas"
+   ],
+   "clock": "49'",
+   "description": "Goal! Brighton and Hove Albion 4, Crystal Palace 0. Charalampos Kostoulas (Brighton and Hove Albion) left footed shot from the centre of the box to the bottom left corner.Goal confirmed following VAR Review.",
+   "score_after": "4-0",
+   "source_ref": "espn:401879261:play:53898759",
+   "team": "Brighton & Hove Albion",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Daichi Kamada",
+    "Olivier Boscagli"
+   ],
+   "clock": "51'",
+   "description": "Foul by Daichi Kamada (Crystal Palace).",
+   "source_ref": "espn:401879261:play:53899324",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Daichi Kamada",
+    "Olivier Boscagli"
+   ],
+   "clock": "51'",
+   "description": "Olivier Boscagli (Brighton and Hove Albion) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879261:play:53899324",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Daichi Kamada"
+   ],
+   "clock": "51'",
+   "description": "Daichi Kamada (Crystal Palace) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879261:play:53899201",
+   "team": "Crystal Palace",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Jefferson Lerma",
+    "Honest Ahanor"
+   ],
+   "clock": "53'",
+   "description": "Substitution, Crystal Palace. Jefferson Lerma replaces Honest Ahanor.",
+   "source_ref": "espn:401879261:play:53899395",
+   "team": "Crystal Palace",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Maxim De Cuyper",
+    "Anan Khalaili"
+   ],
+   "clock": "53'",
+   "description": "Anan Khalaili (Crystal Palace) wins a free kick on the right wing.",
+   "source_ref": "espn:401879261:play:53899607",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Maxim De Cuyper",
+    "Anan Khalaili"
+   ],
+   "clock": "53'",
+   "description": "Foul by Maxim De Cuyper (Brighton and Hove Albion).",
+   "source_ref": "espn:401879261:play:53899607",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "54'",
+   "description": "Corner, Crystal Palace. Conceded by Olivier Boscagli.",
+   "source_ref": "espn:401879261:play:53899812",
+   "team": "Crystal Palace",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Chris Richards",
+    "Yasin Ayari"
+   ],
+   "clock": "56'",
+   "description": "Foul by Chris Richards (Crystal Palace).",
+   "source_ref": "espn:401879261:play:53900036",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Chris Richards",
+    "Yasin Ayari"
+   ],
+   "clock": "56'",
+   "description": "Yasin Ayari (Brighton and Hove Albion) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879261:play:53900036",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Luka Vuskovic"
+   ],
+   "clock": "57'",
+   "description": "Attempt missed. Luka Vuskovic (Brighton and Hove Albion) right footed shot from outside the box is too high following a set piece situation.",
+   "source_ref": "espn:401879261:play:53900039",
+   "team": "Brighton & Hove Albion",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Luka Vuskovic",
+    "Jørgen Strand Larsen"
+   ],
+   "clock": "57'",
+   "description": "Jørgen Strand Larsen (Crystal Palace) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879261:play:53900201",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Luka Vuskovic",
+    "Jørgen Strand Larsen"
+   ],
+   "clock": "57'",
+   "description": "Foul by Luka Vuskovic (Brighton and Hove Albion).",
+   "source_ref": "espn:401879261:play:53900201",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Dwight McNeil"
+   ],
+   "clock": "58'",
+   "description": "Handball by Dwight McNeil (Crystal Palace).",
+   "source_ref": "espn:401879261:play:53900222",
+   "team": "Crystal Palace",
+   "type": "handball"
+  },
+  {
+   "actors": [
+    "Jefferson Lerma",
+    "Maxim De Cuyper"
+   ],
+   "clock": "60'",
+   "description": "Foul by Jefferson Lerma (Crystal Palace).",
+   "source_ref": "espn:401879261:play:53900830",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jefferson Lerma",
+    "Maxim De Cuyper"
+   ],
+   "clock": "60'",
+   "description": "Maxim De Cuyper (Brighton and Hove Albion) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879261:play:53900830",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jean-Philippe Mateta",
+    "Jørgen Strand Larsen"
+   ],
+   "clock": "61'",
+   "description": "Substitution, Crystal Palace. Jean-Philippe Mateta replaces Jørgen Strand Larsen.",
+   "source_ref": "espn:401879261:play:53900855",
+   "team": "Crystal Palace",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Eddie Nketiah",
+    "Yéremy Pino"
+   ],
+   "clock": "61'",
+   "description": "Substitution, Crystal Palace. Eddie Nketiah replaces Yéremy Pino.",
+   "source_ref": "espn:401879261:play:53900856",
+   "team": "Crystal Palace",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Charalambos Kostoulas",
+    "Olivier Boscagli"
+   ],
+   "clock": "61'",
+   "description": "Attempt blocked. Charalampos Kostoulas (Brighton and Hove Albion) right footed shot from outside the box is blocked. Assisted by Olivier Boscagli.",
+   "source_ref": "espn:401879261:play:53900834",
+   "team": "Brighton & Hove Albion",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Jean-Philippe Mateta",
+    "Dwight McNeil"
+   ],
+   "clock": "63'",
+   "description": "Jean-Philippe Mateta (Crystal Palace) hits the bar with a left footed shot from the centre of the box. Assisted by Dwight McNeil.",
+   "source_ref": "espn:401879261:play:53901099",
+   "team": "Crystal Palace",
+   "type": "woodwork"
+  },
+  {
+   "actors": [
+    "Chema Andrés",
+    "Daichi Kamada"
+   ],
+   "clock": "64'",
+   "description": "Daichi Kamada (Crystal Palace) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879261:play:53901622",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Chema Andrés",
+    "Daichi Kamada"
+   ],
+   "clock": "64'",
+   "description": "Foul by Chema Andrés (Brighton and Hove Albion).",
+   "source_ref": "espn:401879261:play:53901622",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Chema Andrés"
+   ],
+   "clock": "64'",
+   "description": "Chema Andrés (Brighton and Hove Albion) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879261:play:53901623",
+   "team": "Brighton & Hove Albion",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Jaydee Canvot",
+    "Charalambos Kostoulas"
+   ],
+   "clock": "65'",
+   "description": "Foul by Jaydee Canvot (Crystal Palace).",
+   "source_ref": "espn:401879261:play:53901632",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jaydee Canvot",
+    "Charalambos Kostoulas"
+   ],
+   "clock": "65'",
+   "description": "Charalampos Kostoulas (Brighton and Hove Albion) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879261:play:53901632",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jaydee Canvot",
+    "Charalambos Kostoulas"
+   ],
+   "clock": "68'",
+   "description": "Foul by Jaydee Canvot (Crystal Palace).",
+   "source_ref": "espn:401879261:play:53901926",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jaydee Canvot",
+    "Charalambos Kostoulas"
+   ],
+   "clock": "68'",
+   "description": "Charalampos Kostoulas (Brighton and Hove Albion) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879261:play:53901926",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Luka Vuskovic"
+   ],
+   "clock": "69'",
+   "description": "Attempt missed. Luka Vuskovic (Brighton and Hove Albion) header from the centre of the box misses to the right following a set piece situation.",
+   "source_ref": "espn:401879261:play:53902019",
+   "team": "Brighton & Hove Albion",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Eddie Nketiah",
+    "Ferdi Kadioglu"
+   ],
+   "clock": "69'",
+   "description": "Foul by Eddie Nketiah (Crystal Palace).",
+   "source_ref": "espn:401879261:play:53902022",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Eddie Nketiah",
+    "Ferdi Kadioglu"
+   ],
+   "clock": "69'",
+   "description": "Ferdi Kadioglu (Brighton and Hove Albion) wins a free kick on the right wing.",
+   "source_ref": "espn:401879261:play:53902022",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "70'",
+   "description": "Corner, Brighton and Hove Albion. Conceded by Jefferson Lerma.",
+   "source_ref": "espn:401879261:play:53902216",
+   "team": "Brighton & Hove Albion",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Jack Hinshelwood",
+    "Pascal Gross"
+   ],
+   "clock": "71'",
+   "description": "Substitution, Brighton and Hove Albion. Jack Hinshelwood replaces Pascal Groß.",
+   "source_ref": "espn:401879261:play:53902413",
+   "team": "Brighton & Hove Albion",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Georginio Rutter",
+    "Charalambos Kostoulas"
+   ],
+   "clock": "71'",
+   "description": "Substitution, Brighton and Hove Albion. Georginio Rutter replaces Charalampos Kostoulas.",
+   "source_ref": "espn:401879261:play:53902414",
+   "team": "Brighton & Hove Albion",
+   "type": "sub"
+  },
+  {
+   "actors": [],
+   "clock": "73'",
+   "description": "Corner, Crystal Palace. Conceded by Olivier Boscagli.",
+   "source_ref": "espn:401879261:play:53902664",
+   "team": "Crystal Palace",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Jefferson Lerma",
+    "Adam Wharton"
+   ],
+   "clock": "74'",
+   "description": "Jefferson Lerma (Crystal Palace) hits the left post with a header from very close range. Assisted by Adam Wharton with a cross following a corner.",
+   "source_ref": "espn:401879261:play:53902667",
+   "team": "Crystal Palace",
+   "type": "woodwork"
+  },
+  {
+   "actors": [
+    "Georginio Rutter",
+    "Maxim De Cuyper"
+   ],
+   "clock": "74'",
+   "description": "Attempt saved. Georginio Rutter (Brighton and Hove Albion) right footed shot from outside the box is saved in the top right corner by Walter Benítez (Crystal Palace). Assisted by Maxim De Cuyper.",
+   "source_ref": "espn:401879261:play:53902875",
+   "team": "Brighton & Hove Albion",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Dwight McNeil"
+   ],
+   "clock": "75'",
+   "description": "Offside, Crystal Palace. Eddie Nketiah is caught offside.",
+   "source_ref": "espn:401879261:play:53902880",
+   "team": "Crystal Palace",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Diego Gómez",
+    "Jaydee Canvot"
+   ],
+   "clock": "78'",
+   "description": "Jaydee Canvot (Crystal Palace) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879261:play:53903247",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Diego Gómez",
+    "Jaydee Canvot"
+   ],
+   "clock": "78'",
+   "description": "Foul by Diego Gómez (Brighton and Hove Albion).",
+   "source_ref": "espn:401879261:play:53903247",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "79'",
+   "description": "Corner, Crystal Palace. Conceded by Chema Andrés.",
+   "source_ref": "espn:401879261:play:53903562",
+   "team": "Crystal Palace",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Will Hughes",
+    "Daichi Kamada"
+   ],
+   "clock": "81'",
+   "description": "Substitution, Crystal Palace. Will Hughes replaces Daichi Kamada.",
+   "source_ref": "espn:401879261:play:53903814",
+   "team": "Crystal Palace",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Jaouen Hadjam",
+    "Olivier Boscagli"
+   ],
+   "clock": "81'",
+   "description": "Substitution, Brighton and Hove Albion. Jaouen Hadjam replaces Olivier Boscagli.",
+   "source_ref": "espn:401879261:play:53903815",
+   "team": "Brighton & Hove Albion",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Malick Yalcouyé",
+    "Yasin Ayari"
+   ],
+   "clock": "81'",
+   "description": "Substitution, Brighton and Hove Albion. Malick Yalcouyé replaces Yasin Ayari.",
+   "source_ref": "espn:401879261:play:53904120",
+   "team": "Brighton & Hove Albion",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Maxim De Cuyper",
+    "Eddie Nketiah"
+   ],
+   "clock": "82'",
+   "description": "Eddie Nketiah (Crystal Palace) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879261:play:53904206",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Maxim De Cuyper",
+    "Eddie Nketiah"
+   ],
+   "clock": "82'",
+   "description": "Foul by Maxim De Cuyper (Brighton and Hove Albion).",
+   "source_ref": "espn:401879261:play:53904206",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "83'",
+   "description": "Corner, Brighton and Hove Albion. Conceded by Tyrick Mitchell.",
+   "source_ref": "espn:401879261:play:53904214",
+   "team": "Brighton & Hove Albion",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Luka Vuskovic",
+    "Maxim De Cuyper"
+   ],
+   "clock": "84'",
+   "description": "Attempt saved. Luka Vuskovic (Brighton and Hove Albion) header from the left side of the six yard box is saved in the bottom left corner by Walter Benítez (Crystal Palace). Assisted by Maxim De Cuyper with a cross.",
+   "source_ref": "espn:401879261:play:53904217",
+   "team": "Brighton & Hove Albion",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Jack Hinshelwood"
+   ],
+   "clock": "84'",
+   "description": "Goal! Brighton and Hove Albion 5, Crystal Palace 0. Jack Hinshelwood (Brighton and Hove Albion) right footed shot from very close range to the top left corner following a corner.",
+   "score_after": "5-0",
+   "source_ref": "espn:401879261:play:53904218",
+   "team": "Brighton & Hove Albion",
+   "type": "goal"
+  },
+  {
+   "actors": [],
+   "clock": "87'",
+   "description": "Corner, Brighton and Hove Albion. Conceded by Chris Richards.",
+   "source_ref": "espn:401879261:play:53904966",
+   "team": "Brighton & Hove Albion",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Jack Hinshelwood",
+    "Jean-Philippe Mateta"
+   ],
+   "clock": "88'",
+   "description": "Jean-Philippe Mateta (Crystal Palace) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879261:play:53905137",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jack Hinshelwood",
+    "Jean-Philippe Mateta"
+   ],
+   "clock": "88'",
+   "description": "Foul by Jack Hinshelwood (Brighton and Hove Albion).",
+   "source_ref": "espn:401879261:play:53905137",
+   "team": "Brighton & Hove Albion",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "90'",
+   "description": "Corner, Brighton and Hove Albion. Conceded by Anan Khalaili.",
+   "source_ref": "espn:401879261:play:53905260",
+   "team": "Brighton & Hove Albion",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Michael Svoboda",
+    "Lewis Dunk"
+   ],
+   "clock": "90'",
+   "description": "Substitution, Brighton and Hove Albion. Michael Svoboda replaces Lewis Dunk.",
+   "source_ref": "espn:401879261:play:53905639",
+   "team": "Brighton & Hove Albion",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Anan Khalaili"
+   ],
+   "clock": "90+2'",
+   "description": "Offside, Crystal Palace. Jean-Philippe Mateta is caught offside.",
+   "source_ref": "espn:401879261:play:53905795",
+   "team": "Crystal Palace",
+   "type": "offside"
+  },
+  {
+   "actors": [],
+   "clock": "90+3'",
+   "description": "Corner, Brighton and Hove Albion. Conceded by Chris Richards.",
+   "source_ref": "espn:401879261:play:53906064",
+   "team": "Brighton & Hove Albion",
+   "type": "corner"
+  },
+  {
+   "actors": [],
+   "clock": "90+4'",
+   "description": "Corner, Crystal Palace. Conceded by Ferdi Kadioglu.",
+   "source_ref": "espn:401879261:play:53906102",
+   "team": "Crystal Palace",
+   "type": "corner"
+  }
+ ],
+ "match": {
+  "end_estimate": "2026-10-18T15:00:00Z",
+  "final_result": "Brighton & Hove Albion 5–0 Crystal Palace",
+  "id": "401879261",
+  "kickoff": "2026-10-18T13:00:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "BHA",
+    "name": "Brighton & Hove Albion",
+    "role": "home",
+    "score": "5",
+    "short_name": "Brighton",
+    "winner": true
+   },
+   {
+    "abbreviation": "CRY",
+    "name": "Crystal Palace",
+    "role": "away",
+    "score": "0",
+    "short_name": "C Palace",
+    "winner": false
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Diego Gómez sensationally scored from the halfway line as Brighton struck three goals in the opening 10 minutes en route to thrashing bitter rivals Crystal Palace 5-0.",
+  "title": "Brighton & Hove Albion v Crystal Palace",
+  "venue": "American Express Stadium"
+ },
+ "sources": [
+  {
+   "publisher": "ESPN",
+   "title": "Brighton & Hove Albion v Crystal Palace: match events",
+   "url": "https://www.espn.com/soccer/match/_/gameId/401879261"
+  },
+  {
+   "published_at": "2026-10-15T22:01:59Z",
+   "publisher": "ESPN",
+   "title": "Five-goal Brighton run rampant over rivals Crystal Palace",
+   "url": "https://www.espn.com/soccer/report/_/gameId/401879261"
+  }
+ ],
+ "team_stats": [
+  {
+   "corners": 8,
+   "fouls": 13,
+   "possession_pct": 57.2,
+   "red_cards": 0,
+   "saves": 1,
+   "shots": 17,
+   "shots_on_target": 9,
+   "team": "Brighton & Hove Albion",
+   "yellow_cards": 2
+  },
+  {
+   "corners": 5,
+   "fouls": 11,
+   "possession_pct": 42.8,
+   "red_cards": 0,
+   "saves": 5,
+   "shots": 5,
+   "shots_on_target": 1,
+   "team": "Crystal Palace",
+   "yellow_cards": 1
+  }
+ ]
+}

@@ -1,0 +1,1212 @@
+{
+ "coverage": "full_events",
+ "events": [
+  {
+   "actors": [],
+   "clock": "0'",
+   "description": "First Half begins.",
+   "source_ref": "espn:401879266:play:53475324",
+   "type": "kickoff"
+  },
+  {
+   "actors": [
+    "Yéremy Pino",
+    "Daniel Muñoz"
+   ],
+   "clock": "1'",
+   "description": "Daniel Muñoz (Nottingham Forest) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879266:play:53475482",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Yéremy Pino",
+    "Daniel Muñoz"
+   ],
+   "clock": "1'",
+   "description": "Foul by Yéremy Pino (Crystal Palace).",
+   "source_ref": "espn:401879266:play:53475482",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Adam Wharton"
+   ],
+   "clock": "1'",
+   "description": "Offside, Crystal Palace. Daichi Kamada is caught offside.",
+   "source_ref": "espn:401879266:play:53475488",
+   "team": "Crystal Palace",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Jefferson Lerma",
+    "Dan Ndoye"
+   ],
+   "clock": "2'",
+   "description": "Foul by Jefferson Lerma (Crystal Palace).",
+   "source_ref": "espn:401879266:play:53475540",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jefferson Lerma",
+    "Dan Ndoye"
+   ],
+   "clock": "2'",
+   "description": "Dan Ndoye (Nottingham Forest) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879266:play:53475540",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Dan Ndoye"
+   ],
+   "clock": "3'",
+   "description": "Goal! Crystal Palace 0, Nottingham Forest 1. Dan Ndoye (Nottingham Forest) right footed shot from the left side of the box to the bottom right corner.",
+   "score_after": "0-1",
+   "source_ref": "espn:401879266:play:53475690",
+   "team": "Nottingham Forest",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Quinten Timber",
+    "Ola Aina"
+   ],
+   "clock": "6'",
+   "description": "Foul by Quinten Timber (Crystal Palace).",
+   "source_ref": "espn:401879266:play:53475933",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Quinten Timber",
+    "Ola Aina"
+   ],
+   "clock": "6'",
+   "description": "Ola Aina (Nottingham Forest) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879266:play:53475933",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Murillo"
+   ],
+   "clock": "7'",
+   "description": "Attempt blocked. Murillo (Nottingham Forest) left footed shot from the centre of the box is blocked.",
+   "source_ref": "espn:401879266:play:53476108",
+   "team": "Nottingham Forest",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Jørgen Strand Larsen",
+    "Anan Khalaili"
+   ],
+   "clock": "8'",
+   "description": "Attempt saved. Jørgen Strand Larsen (Crystal Palace) left footed shot from the centre of the box is saved in the top centre of the goal by Matz Sels (Nottingham Forest). Assisted by Anan Khalaili with a cross.",
+   "source_ref": "espn:401879266:play:53476331",
+   "team": "Crystal Palace",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Jørgen Strand Larsen"
+   ],
+   "clock": "8'",
+   "description": "Attempt blocked. Jørgen Strand Larsen (Crystal Palace) right footed shot from the right side of the six yard box is blocked.",
+   "source_ref": "espn:401879266:play:53476335",
+   "team": "Crystal Palace",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "8'",
+   "description": "Corner, Crystal Palace. Conceded by Ousmane Diomande.",
+   "source_ref": "espn:401879266:play:53476339",
+   "team": "Crystal Palace",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Jefferson Lerma",
+    "Chris Richards"
+   ],
+   "clock": "9'",
+   "description": "Attempt missed. Jefferson Lerma (Crystal Palace) header from the left side of the box misses to the left. Assisted by Chris Richards.",
+   "source_ref": "espn:401879266:play:53476506",
+   "team": "Crystal Palace",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Quinten Timber",
+    "Daichi Kamada"
+   ],
+   "clock": "11'",
+   "description": "Attempt missed. Quinten Timber (Crystal Palace) left footed shot from outside the box is high and wide to the left. Assisted by Daichi Kamada following a fast break.",
+   "source_ref": "espn:401879266:play:53476799",
+   "team": "Crystal Palace",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Jefferson Lerma",
+    "Liam Delap"
+   ],
+   "clock": "16'",
+   "description": "Foul by Jefferson Lerma (Crystal Palace).",
+   "source_ref": "espn:401879266:play:53477688",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jefferson Lerma",
+    "Liam Delap"
+   ],
+   "clock": "16'",
+   "description": "Liam Delap (Nottingham Forest) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879266:play:53477688",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jefferson Lerma"
+   ],
+   "clock": "16'",
+   "description": "Jefferson Lerma (Crystal Palace) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879266:play:53477689",
+   "team": "Crystal Palace",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "James McAtee"
+   ],
+   "clock": "18'",
+   "description": "Attempt blocked. James McAtee (Nottingham Forest) left footed shot from outside the box is blocked.",
+   "source_ref": "espn:401879266:play:53477872",
+   "team": "Nottingham Forest",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Murillo",
+    "Ousmane Diomande"
+   ],
+   "clock": "18'",
+   "description": "Attempt blocked. Murillo (Nottingham Forest) left footed shot from the centre of the box is blocked. Assisted by Ousmane Diomande.",
+   "source_ref": "espn:401879266:play:53478005",
+   "team": "Nottingham Forest",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "18'",
+   "description": "Corner, Nottingham Forest. Conceded by Chris Richards.",
+   "source_ref": "espn:401879266:play:53478009",
+   "team": "Nottingham Forest",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Xaver Schlager",
+    "James McAtee"
+   ],
+   "clock": "18'",
+   "description": "Attempt blocked. Xaver Schlager (Nottingham Forest) right footed shot from the centre of the box is blocked. Assisted by James McAtee with a cross.",
+   "source_ref": "espn:401879266:play:53478013",
+   "team": "Nottingham Forest",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Quinten Timber",
+    "Ola Aina"
+   ],
+   "clock": "19'",
+   "description": "Foul by Quinten Timber (Crystal Palace).",
+   "source_ref": "espn:401879266:play:53478035",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Quinten Timber",
+    "Ola Aina"
+   ],
+   "clock": "19'",
+   "description": "Ola Aina (Nottingham Forest) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879266:play:53478035",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Murillo"
+   ],
+   "clock": "20'",
+   "description": "Attempt missed. Murillo (Nottingham Forest) left footed shot from the left side of the box is just a bit too high following a set piece situation.",
+   "source_ref": "espn:401879266:play:53478234",
+   "team": "Nottingham Forest",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Dan Ndoye",
+    "Morgan Gibbs-White"
+   ],
+   "clock": "21'",
+   "description": "Attempt saved. Dan Ndoye (Nottingham Forest) header from the centre of the box is saved in the top left corner by Walter Benítez (Crystal Palace). Assisted by Morgan Gibbs-White with a cross.",
+   "source_ref": "espn:401879266:play:53478305",
+   "team": "Nottingham Forest",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [],
+   "clock": "21'",
+   "description": "Corner, Nottingham Forest. Conceded by Walter Benítez.",
+   "source_ref": "espn:401879266:play:53478307",
+   "team": "Nottingham Forest",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Ousmane Diomande"
+   ],
+   "clock": "21'",
+   "description": "Attempt blocked. Ousmane Diomande (Nottingham Forest) right footed shot from the centre of the box is blocked.",
+   "source_ref": "espn:401879266:play:53478421",
+   "team": "Nottingham Forest",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "22'",
+   "description": "Corner, Nottingham Forest. Conceded by Jørgen Strand Larsen.",
+   "source_ref": "espn:401879266:play:53478423",
+   "team": "Nottingham Forest",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Liam Delap",
+    "Adam Wharton"
+   ],
+   "clock": "22'",
+   "description": "Adam Wharton (Crystal Palace) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879266:play:53478600",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Liam Delap",
+    "Adam Wharton"
+   ],
+   "clock": "22'",
+   "description": "Foul by Liam Delap (Nottingham Forest).",
+   "source_ref": "espn:401879266:play:53478600",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Daniel Muñoz",
+    "Tyrick Mitchell"
+   ],
+   "clock": "23'",
+   "description": "Tyrick Mitchell (Crystal Palace) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879266:play:53478611",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Daniel Muñoz",
+    "Tyrick Mitchell"
+   ],
+   "clock": "23'",
+   "description": "Foul by Daniel Muñoz (Nottingham Forest).",
+   "source_ref": "espn:401879266:play:53478611",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jefferson Lerma",
+    "Dan Ndoye"
+   ],
+   "clock": "26'",
+   "description": "Foul by Jefferson Lerma (Crystal Palace).",
+   "source_ref": "espn:401879266:play:53478953",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Jefferson Lerma",
+    "Dan Ndoye"
+   ],
+   "clock": "26'",
+   "description": "Dan Ndoye (Nottingham Forest) wins a free kick on the left wing.",
+   "source_ref": "espn:401879266:play:53478953",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Daniel Muñoz",
+    "Neco Williams"
+   ],
+   "clock": "27'",
+   "description": "Attempt missed. Daniel Muñoz (Nottingham Forest) right footed shot from the centre of the box misses to the left. Assisted by Neco Williams.",
+   "source_ref": "espn:401879266:play:53479110",
+   "team": "Nottingham Forest",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Quinten Timber",
+    "Ola Aina"
+   ],
+   "clock": "29'",
+   "description": "Foul by Quinten Timber (Crystal Palace).",
+   "source_ref": "espn:401879266:play:53479322",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Quinten Timber",
+    "Ola Aina"
+   ],
+   "clock": "29'",
+   "description": "Ola Aina (Nottingham Forest) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879266:play:53479322",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Morgan Gibbs-White",
+    "Xaver Schlager"
+   ],
+   "clock": "32'",
+   "description": "Attempt missed. Morgan Gibbs-White (Nottingham Forest) right footed shot from the right side of the box is close, but misses to the right. Assisted by Xaver Schlager following a fast break.",
+   "source_ref": "espn:401879266:play:53479557",
+   "team": "Nottingham Forest",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Morgan Gibbs-White",
+    "Daniel Muñoz"
+   ],
+   "clock": "35'",
+   "description": "Attempt blocked. Morgan Gibbs-White (Nottingham Forest) right footed shot from outside the box is blocked. Assisted by Daniel Muñoz.",
+   "source_ref": "espn:401879266:play:53479932",
+   "team": "Nottingham Forest",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Liam Delap"
+   ],
+   "clock": "35'",
+   "description": "Attempt saved. Liam Delap (Nottingham Forest) right footed shot from very close range is saved in the centre of the goal by Walter Benítez (Crystal Palace).",
+   "source_ref": "espn:401879266:play:53479934",
+   "team": "Nottingham Forest",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Morgan Gibbs-White",
+    "Quinten Timber"
+   ],
+   "clock": "35'",
+   "description": "Quinten Timber (Crystal Palace) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879266:play:53480047",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Morgan Gibbs-White",
+    "Quinten Timber"
+   ],
+   "clock": "35'",
+   "description": "Foul by Daniel Muñoz (Nottingham Forest).",
+   "source_ref": "espn:401879266:play:53480047",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Liam Delap",
+    "Daniel Muñoz"
+   ],
+   "clock": "40'",
+   "description": "Attempt missed. Liam Delap (Nottingham Forest) header from the centre of the box is high and wide to the left. Assisted by Daniel Muñoz with a cross.",
+   "source_ref": "espn:401879266:play:53480592",
+   "team": "Nottingham Forest",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Daichi Kamada",
+    "Quinten Timber"
+   ],
+   "clock": "41'",
+   "description": "Goal! Crystal Palace 1, Nottingham Forest 1. Daichi Kamada (Crystal Palace) left footed shot from the centre of the box to the bottom left corner. Assisted by Quinten Timber.",
+   "score_after": "1-1",
+   "source_ref": "espn:401879266:play:53480731",
+   "team": "Crystal Palace",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Xaver Schlager",
+    "Quinten Timber"
+   ],
+   "clock": "43'",
+   "description": "Quinten Timber (Crystal Palace) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879266:play:53480927",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Xaver Schlager",
+    "Quinten Timber"
+   ],
+   "clock": "43'",
+   "description": "Foul by Xaver Schlager (Nottingham Forest).",
+   "source_ref": "espn:401879266:play:53480927",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Daniel Muñoz",
+    "Yéremy Pino"
+   ],
+   "clock": "44'",
+   "description": "Yéremy Pino (Crystal Palace) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879266:play:53481992",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Daniel Muñoz",
+    "Yéremy Pino"
+   ],
+   "clock": "44'",
+   "description": "Foul by Daniel Muñoz (Nottingham Forest).",
+   "source_ref": "espn:401879266:play:53481992",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Anan Khalaili",
+    "Xaver Schlager"
+   ],
+   "clock": "45+1'",
+   "description": "Foul by Anan Khalaili (Crystal Palace).",
+   "source_ref": "espn:401879266:play:53481339",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Anan Khalaili",
+    "Xaver Schlager"
+   ],
+   "clock": "45+1'",
+   "description": "Xaver Schlager (Nottingham Forest) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879266:play:53481339",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Tyrick Mitchell",
+    "Yéremy Pino"
+   ],
+   "clock": "45+3'",
+   "description": "Attempt saved. Tyrick Mitchell (Crystal Palace) left footed shot from outside the box is saved in the top centre of the goal by Matz Sels (Nottingham Forest). Assisted by Yéremy Pino with a headed pass.",
+   "source_ref": "espn:401879266:play:53481634",
+   "team": "Crystal Palace",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [],
+   "clock": "45+3'",
+   "description": "Corner, Crystal Palace. Conceded by Matz Sels.",
+   "source_ref": "espn:401879266:play:53481636",
+   "team": "Crystal Palace",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Jefferson Lerma",
+    "Adam Wharton"
+   ],
+   "clock": "45+4'",
+   "description": "Goal! Crystal Palace 2, Nottingham Forest 1. Jefferson Lerma (Crystal Palace) header from very close range to the centre of the goal. Assisted by Adam Wharton with a cross following a corner.",
+   "score_after": "2-1",
+   "source_ref": "espn:401879266:play:53481719",
+   "team": "Crystal Palace",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Xaver Schlager"
+   ],
+   "clock": "45+6'",
+   "description": "Attempt missed. Xaver Schlager (Nottingham Forest) right footed shot from outside the box misses to the left.",
+   "source_ref": "espn:401879266:play:53481949",
+   "team": "Nottingham Forest",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Neco Williams"
+   ],
+   "clock": "45+6'",
+   "description": "Attempt blocked. Neco Williams (Nottingham Forest) right footed shot from outside the box is blocked.",
+   "source_ref": "espn:401879266:play:53481951",
+   "team": "Nottingham Forest",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Dan Ndoye"
+   ],
+   "clock": "45+6'",
+   "description": "Attempt missed. Dan Ndoye (Nottingham Forest) right footed shot from the centre of the box is too high.",
+   "source_ref": "espn:401879266:play:53481953",
+   "team": "Nottingham Forest",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [],
+   "clock": "45+7'",
+   "description": "First Half ends, Crystal Palace 2, Nottingham Forest 1.",
+   "score_after": "2-1",
+   "source_ref": "espn:401879266:play:53481956",
+   "type": "half_time"
+  },
+  {
+   "actors": [],
+   "clock": "45'",
+   "description": "Second Half begins Crystal Palace 2, Nottingham Forest 1.",
+   "source_ref": "espn:401879266:play:53482825",
+   "type": "second_half"
+  },
+  {
+   "actors": [
+    "Daniel Muñoz",
+    "Quinten Timber"
+   ],
+   "clock": "46'",
+   "description": "Quinten Timber (Crystal Palace) wins a free kick in the defensive half.",
+   "source_ref": "espn:401879266:play:53482909",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Daniel Muñoz",
+    "Quinten Timber"
+   ],
+   "clock": "46'",
+   "description": "Foul by Daniel Muñoz (Nottingham Forest).",
+   "source_ref": "espn:401879266:play:53482909",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "48'",
+   "description": "Corner, Nottingham Forest. Conceded by Anan Khalaili.",
+   "source_ref": "espn:401879266:play:53483062",
+   "team": "Nottingham Forest",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Xaver Schlager",
+    "Morgan Gibbs-White"
+   ],
+   "clock": "49'",
+   "description": "Attempt blocked. Xaver Schlager (Nottingham Forest) left footed shot from the right side of the six yard box is blocked. Assisted by Morgan Gibbs-White.",
+   "source_ref": "espn:401879266:play:53483221",
+   "team": "Nottingham Forest",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Murillo"
+   ],
+   "clock": "49'",
+   "description": "Attempt saved. Murillo (Nottingham Forest) header from the right side of the six yard box is saved in the bottom right corner by Walter Benítez (Crystal Palace).",
+   "source_ref": "espn:401879266:play:53483225",
+   "team": "Nottingham Forest",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Daichi Kamada",
+    "Neco Williams"
+   ],
+   "clock": "50'",
+   "description": "Foul by Daichi Kamada (Crystal Palace).",
+   "source_ref": "espn:401879266:play:53483243",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Daichi Kamada",
+    "Neco Williams"
+   ],
+   "clock": "50'",
+   "description": "Neco Williams (Nottingham Forest) wins a free kick on the left wing.",
+   "source_ref": "espn:401879266:play:53483243",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ola Aina",
+    "Dan Ndoye"
+   ],
+   "clock": "50'",
+   "description": "Attempt missed. Ola Aina (Nottingham Forest) right footed shot from outside the box misses to the right. Assisted by Dan Ndoye.",
+   "source_ref": "espn:401879266:play:53483475",
+   "team": "Nottingham Forest",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Chris Richards",
+    "Liam Delap"
+   ],
+   "clock": "52'",
+   "description": "Foul by Chris Richards (Crystal Palace).",
+   "source_ref": "espn:401879266:play:53483619",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Chris Richards",
+    "Liam Delap"
+   ],
+   "clock": "52'",
+   "description": "Liam Delap (Nottingham Forest) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879266:play:53483619",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ousmane Diomande",
+    "Jørgen Strand Larsen"
+   ],
+   "clock": "54'",
+   "description": "Jørgen Strand Larsen (Crystal Palace) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879266:play:53483957",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ousmane Diomande",
+    "Jørgen Strand Larsen"
+   ],
+   "clock": "54'",
+   "description": "Foul by Ousmane Diomande (Nottingham Forest).",
+   "source_ref": "espn:401879266:play:53483957",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "55'",
+   "description": "Corner, Crystal Palace. Conceded by Matz Sels.",
+   "source_ref": "espn:401879266:play:53483961",
+   "team": "Crystal Palace",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Jefferson Lerma",
+    "Yéremy Pino"
+   ],
+   "clock": "56'",
+   "description": "Attempt saved. Jefferson Lerma (Crystal Palace) header from the centre of the box is saved in the centre of the goal by Matz Sels (Nottingham Forest). Assisted by Yéremy Pino with a cross.",
+   "source_ref": "espn:401879266:play:53484018",
+   "team": "Crystal Palace",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Morgan Gibbs-White"
+   ],
+   "clock": "56'",
+   "description": "Offside, Nottingham Forest. Daniel Muñoz is caught offside.",
+   "source_ref": "espn:401879266:play:53484030",
+   "team": "Nottingham Forest",
+   "type": "offside"
+  },
+  {
+   "actors": [],
+   "clock": "57'",
+   "description": "Corner, Nottingham Forest. Conceded by Anan Khalaili.",
+   "source_ref": "espn:401879266:play:53484307",
+   "team": "Nottingham Forest",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Jørgen Strand Larsen"
+   ],
+   "clock": "59'",
+   "description": "Attempt saved. Jørgen Strand Larsen (Crystal Palace) left footed shot from the centre of the box is saved in the centre of the goal by Matz Sels (Nottingham Forest).",
+   "source_ref": "espn:401879266:play:53484529",
+   "team": "Crystal Palace",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Yéremy Pino"
+   ],
+   "clock": "59'",
+   "description": "Goal! Crystal Palace 3, Nottingham Forest 1. Yéremy Pino (Crystal Palace) right footed shot from the centre of the box to the bottom right corner.",
+   "score_after": "3-1",
+   "source_ref": "espn:401879266:play:53484530",
+   "team": "Crystal Palace",
+   "type": "goal"
+  },
+  {
+   "actors": [
+    "Yéremy Pino"
+   ],
+   "clock": "60'",
+   "description": "Yéremy Pino (Crystal Palace) is shown the yellow card for excessive celebration.",
+   "source_ref": "espn:401879266:play:53484604",
+   "team": "Crystal Palace",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Adam Wharton"
+   ],
+   "clock": "62'",
+   "description": "Offside, Crystal Palace. Yéremy Pino is caught offside.",
+   "source_ref": "espn:401879266:play:53484748",
+   "team": "Crystal Palace",
+   "type": "offside"
+  },
+  {
+   "actors": [
+    "Dan Ndoye",
+    "Matz Sels"
+   ],
+   "clock": "65'",
+   "description": "Attempt missed. Dan Ndoye (Nottingham Forest) left footed shot from the left side of the box is close, but misses to the left. Assisted by Matz Sels following a fast break.",
+   "source_ref": "espn:401879266:play:53485174",
+   "team": "Nottingham Forest",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Ibrahim Sangaré",
+    "Xaver Schlager"
+   ],
+   "clock": "66'",
+   "description": "Substitution, Nottingham Forest. Ibrahim Sangaré replaces Xaver Schlager.",
+   "source_ref": "espn:401879266:play:53485313",
+   "team": "Nottingham Forest",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Neco Williams",
+    "Ibrahim Sangaré"
+   ],
+   "clock": "68'",
+   "description": "Neco Williams (Nottingham Forest) hits the left post with a right footed shot from outside the box. Assisted by Ibrahim Sangaré.",
+   "source_ref": "espn:401879266:play:53485400",
+   "team": "Nottingham Forest",
+   "type": "woodwork"
+  },
+  {
+   "actors": [
+    "Neco Williams",
+    "Liam Delap"
+   ],
+   "clock": "70'",
+   "description": "Attempt blocked. Neco Williams (Nottingham Forest) right footed shot from outside the box is blocked. Assisted by Liam Delap.",
+   "source_ref": "espn:401879266:play:53485624",
+   "team": "Nottingham Forest",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [
+    "Callum Hudson-Odoi",
+    "Dan Ndoye"
+   ],
+   "clock": "72'",
+   "description": "Substitution, Nottingham Forest. Callum Hudson-Odoi replaces Dan Ndoye.",
+   "source_ref": "espn:401879266:play:53485779",
+   "team": "Nottingham Forest",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Chris Wood",
+    "Liam Delap"
+   ],
+   "clock": "72'",
+   "description": "Substitution, Nottingham Forest. Chris Wood replaces Liam Delap.",
+   "source_ref": "espn:401879266:play:53485843",
+   "team": "Nottingham Forest",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Honest Ahanor",
+    "Jefferson Lerma"
+   ],
+   "clock": "72'",
+   "description": "Substitution, Crystal Palace. Honest Ahanor replaces Jefferson Lerma.",
+   "source_ref": "espn:401879266:play:53485844",
+   "team": "Crystal Palace",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Ola Aina",
+    "Jørgen Strand Larsen"
+   ],
+   "clock": "73'",
+   "description": "Jørgen Strand Larsen (Crystal Palace) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879266:play:53485822",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ola Aina",
+    "Jørgen Strand Larsen"
+   ],
+   "clock": "73'",
+   "description": "Foul by Ola Aina (Nottingham Forest).",
+   "source_ref": "espn:401879266:play:53485822",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Ola Aina"
+   ],
+   "clock": "73'",
+   "description": "Ola Aina (Nottingham Forest) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879266:play:53485992",
+   "team": "Nottingham Forest",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Anan Khalaili",
+    "Yéremy Pino"
+   ],
+   "clock": "74'",
+   "description": "Attempt blocked. Anan Khalaili (Crystal Palace) header from the right side of the box is blocked. Assisted by Yéremy Pino.",
+   "source_ref": "espn:401879266:play:53485995",
+   "team": "Crystal Palace",
+   "type": "shot_blocked"
+  },
+  {
+   "actors": [],
+   "clock": "74'",
+   "description": "Corner, Crystal Palace. Conceded by Murillo.",
+   "source_ref": "espn:401879266:play:53485997",
+   "team": "Crystal Palace",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Anan Khalaili",
+    "Adam Wharton"
+   ],
+   "clock": "74'",
+   "description": "Attempt missed. Anan Khalaili (Crystal Palace) header from very close range is just a bit too high. Assisted by Adam Wharton with a cross following a corner.",
+   "source_ref": "espn:401879266:play:53486000",
+   "team": "Crystal Palace",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [],
+   "clock": "76'",
+   "description": "Corner, Nottingham Forest. Conceded by Anan Khalaili.",
+   "source_ref": "espn:401879266:play:53486173",
+   "team": "Nottingham Forest",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Chris Wood",
+    "Morgan Gibbs-White"
+   ],
+   "clock": "80'",
+   "description": "Attempt saved. Chris Wood (Nottingham Forest) header from the centre of the box is saved in the top centre of the goal by Walter Benítez (Crystal Palace). Assisted by Morgan Gibbs-White with a cross.",
+   "source_ref": "espn:401879266:play:53486684",
+   "team": "Nottingham Forest",
+   "type": "shot_on_target"
+  },
+  {
+   "actors": [
+    "Ismaïla Sarr",
+    "Yéremy Pino"
+   ],
+   "clock": "83'",
+   "description": "Substitution, Crystal Palace. Ismaïla Sarr replaces Yéremy Pino.",
+   "source_ref": "espn:401879266:play:53487206",
+   "team": "Crystal Palace",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Eddie Nketiah",
+    "Jørgen Strand Larsen"
+   ],
+   "clock": "83'",
+   "description": "Substitution, Crystal Palace. Eddie Nketiah replaces Jørgen Strand Larsen.",
+   "source_ref": "espn:401879266:play:53487207",
+   "team": "Crystal Palace",
+   "type": "sub"
+  },
+  {
+   "actors": [
+    "Arnaud Kalimuendo",
+    "Ola Aina"
+   ],
+   "clock": "83'",
+   "description": "Substitution, Nottingham Forest. Arnaud Kalimuendo replaces Ola Aina.",
+   "source_ref": "espn:401879266:play:53487208",
+   "team": "Nottingham Forest",
+   "type": "sub"
+  },
+  {
+   "actors": [],
+   "clock": "87'",
+   "description": "Corner, Nottingham Forest. Conceded by Honest Ahanor.",
+   "source_ref": "espn:401879266:play:53487712",
+   "team": "Nottingham Forest",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Chris Wood"
+   ],
+   "clock": "89'",
+   "description": "Handball by Chris Wood (Nottingham Forest).",
+   "source_ref": "espn:401879266:play:53487851",
+   "team": "Nottingham Forest",
+   "type": "handball"
+  },
+  {
+   "actors": [
+    "Eddie Nketiah",
+    "Ibrahim Sangaré"
+   ],
+   "clock": "90'",
+   "description": "Foul by Eddie Nketiah (Crystal Palace).",
+   "source_ref": "espn:401879266:play:53487943",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Eddie Nketiah",
+    "Ibrahim Sangaré"
+   ],
+   "clock": "90'",
+   "description": "Ibrahim Sangaré (Nottingham Forest) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879266:play:53487943",
+   "team": "Crystal Palace",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Dwight McNeil",
+    "Daichi Kamada"
+   ],
+   "clock": "90'",
+   "description": "Substitution, Crystal Palace. Dwight McNeil replaces Daichi Kamada.",
+   "source_ref": "espn:401879266:play:53488236",
+   "team": "Crystal Palace",
+   "type": "sub"
+  },
+  {
+   "actors": [],
+   "clock": "90+1'",
+   "description": "Corner, Crystal Palace. Conceded by Murillo.",
+   "source_ref": "espn:401879266:play:53488212",
+   "team": "Crystal Palace",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Chris Richards",
+    "Adam Wharton"
+   ],
+   "clock": "90+2'",
+   "description": "Attempt missed. Chris Richards (Crystal Palace) header from the centre of the box misses to the left. Assisted by Adam Wharton with a cross following a corner.",
+   "source_ref": "espn:401879266:play:53488404",
+   "team": "Crystal Palace",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [
+    "Murillo",
+    "Ismaïla Sarr"
+   ],
+   "clock": "90+3'",
+   "description": "Ismaïla Sarr (Crystal Palace) wins a free kick in the attacking half.",
+   "source_ref": "espn:401879266:play:53488460",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [
+    "Murillo",
+    "Ismaïla Sarr"
+   ],
+   "clock": "90+3'",
+   "description": "Foul by Murillo (Nottingham Forest).",
+   "source_ref": "espn:401879266:play:53488460",
+   "team": "Nottingham Forest",
+   "type": "foul"
+  },
+  {
+   "actors": [],
+   "clock": "90+4'",
+   "description": "Corner, Nottingham Forest. Conceded by Chris Richards.",
+   "source_ref": "espn:401879266:play:53488528",
+   "team": "Nottingham Forest",
+   "type": "corner"
+  },
+  {
+   "actors": [
+    "Murillo"
+   ],
+   "clock": "90+4'",
+   "description": "Murillo (Nottingham Forest) is shown the yellow card for a bad foul.",
+   "source_ref": "espn:401879266:play:53488564",
+   "team": "Nottingham Forest",
+   "type": "yellow_card"
+  },
+  {
+   "actors": [
+    "Daniel Muñoz",
+    "James McAtee"
+   ],
+   "clock": "90+5'",
+   "description": "Attempt missed. Daniel Muñoz (Nottingham Forest) header from the centre of the box misses to the left. Assisted by James McAtee with a cross following a corner.",
+   "source_ref": "espn:401879266:play:53488567",
+   "team": "Nottingham Forest",
+   "type": "shot_off_target"
+  },
+  {
+   "actors": [],
+   "clock": "90+5'",
+   "description": "Second Half ends, Crystal Palace 3, Nottingham Forest 1.",
+   "score_after": "3-1",
+   "source_ref": "espn:401879266:play:53488585",
+   "type": "full_time"
+  }
+ ],
+ "match": {
+  "end_estimate": "2026-10-11T15:00:00Z",
+  "final_result": "Crystal Palace 3–1 Nottingham Forest",
+  "id": "401879266",
+  "kickoff": "2026-10-11T13:00:00Z",
+  "league": "eng.1",
+  "participants": [
+   {
+    "abbreviation": "CRY",
+    "name": "Crystal Palace",
+    "role": "home",
+    "score": "3",
+    "short_name": "C Palace",
+    "winner": true
+   },
+   {
+    "abbreviation": "NFO",
+    "name": "Nottingham Forest",
+    "role": "away",
+    "score": "1",
+    "short_name": "Nottm Forest",
+    "winner": false
+   }
+  ],
+  "sport": "football",
+  "status": "completed",
+  "summary": "Crystal Palace dealt former boss Oliver Glasner a blow after they bounced back to beat Nottingham Forest 3-1 on the Austrian's first return to Selhurst Park.",
+  "title": "Crystal Palace v Nottingham Forest",
+  "venue": "Selhurst Park"
+ },
+ "sources": [
+  {
+   "publisher": "ESPN",
+   "title": "Crystal Palace v Nottingham Forest: match events",
+   "url": "https://www.espn.com/soccer/match/_/gameId/401879266"
+  },
+  {
+   "published_at": "2026-10-11T15:12:00Z",
+   "publisher": "ESPN",
+   "title": "Crystal Palace come from behind to beat Nottingham Forest 3-1, spoil Oliver Glasner's return to Selhurst Park",
+   "url": "https://www.espn.com/soccer/report/_/gameId/401879266"
+  }
+ ],
+ "team_stats": [
+  {
+   "corners": 5,
+   "fouls": 11,
+   "possession_pct": 43.4,
+   "red_cards": 0,
+   "saves": 4,
+   "shots": 13,
+   "shots_on_target": 7,
+   "team": "Crystal Palace",
+   "yellow_cards": 2
+  },
+  {
+   "corners": 8,
+   "fouls": 10,
+   "possession_pct": 56.6,
+   "red_cards": 0,
+   "saves": 4,
+   "shots": 24,
+   "shots_on_target": 6,
+   "team": "Nottingham Forest",
+   "yellow_cards": 2
+  }
+ ]
+}
