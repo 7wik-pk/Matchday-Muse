@@ -1,0 +1,15 @@
+/* At 35px the chip's outer edges are 16.1px apart, the title's cap height
+   (Newsreader 600 at 24px), so the chip's top and bottom line up with the
+   capitals and the baseline (see h1 in app.css). */
+:host {
+  display: block;
+  width: 35px;
+  height: 35px;
+  color: var(--accent);
+}
+
+.logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

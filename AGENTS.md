@@ -22,13 +22,18 @@ If `REVIEW.md` at the repo root is not empty, stop before starting any new work.
 10. Python: type hints everywhere, Pydantic v2, ruff + strict mypy clean.
 11. Angular: standalone components and signals; types imported from generated contracts.
 12. compose.yaml must work on Podman and Docker: mount source read-only and use watch's `restart` action only (its `sync` and `rebuild` break on Podman); healthchecks go in compose.yaml.
+13. LLM: only models in the registry (`backend/app/presets.py`) may run, and each needs a `REASONING_EFFORT` entry (a test enforces it). Import LiteLLM only through `app/llm/live.py`, which stops it loading `.env` files. Never log keys; scrub them from provider errors.
+14. Guardrails: a new check, or a change to one, must still pass the 8 sample poems in `contracts/ws/examples/takes.json`; craft (rhyme, metre, where the result lands) is for evals, never a run-time check.
+15. Keep CHANGELOG.md's Unreleased section and the design doc's decision log current as work lands.
 
 ## Commands
-- make dev      # the stack in compose (Podman or Docker), with reload; make down to stop
-- make test     # contracts, Go, backend and frontend tests, offline
-- make gen      # regenerate contracts/mcp/ and the TypeScript and Python types
-- make dev-mcp  # MCP Inspector on the Go server over stdio
-- make images   # the deployable images
+- make dev         # the stack in compose (Podman or Docker), with reload; make down to stop, make logs to follow
+- make test        # contracts, Go, backend and frontend tests, offline
+- make gen         # regenerate contracts/mcp/ and the TypeScript and Python types
+- make dev-mcp     # MCP Inspector on the Go server over stdio
+- make images      # the deployable images
+- make freeze-mcp  # re-record the backend's MCP fixtures (needs the network)
+- make record-espn # re-record the Go server's ESPN testdata (needs the network)
 
 ## Definition of done for any task
 Tests added and passing offline, contracts unchanged or regenerated, README updated if behaviour changed.

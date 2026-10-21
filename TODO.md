@@ -23,6 +23,21 @@ Work that is planned but deliberately not scheduled into a phase yet. When an it
 
 **Unblocks:** tuning the drama-signal weights (roadmap Phase 4), which needs a pick score to tune against.
 
+### A named-entity model for the name check
+
+**Now:** the names guardrail treats capitalised words in mid-line as names and checks them against the roster, the facts, the teams and their nicknames, the venue and the form's stock figures (`backend/app/guardrails/checks.py`). It is deterministic, fast and has no heavy dependency, but it is a heuristic:
+
+- It skips line starts, sentence starts and the headline, so an invented name there is caught only by the grounding judge.
+- A place or nickname missing from `app/guardrails/vocab.py` (a club outside the list, a city) is a false alarm, which costs a repair attempt and can fail the run.
+
+**The work, when evals justify it:**
+
+- [ ] Measure first: from the golden-set runs, count the names check's false alarms (a fail on a fine poem) and misses (an invented person that got through). Track its repair rate, as the design doc asks for every check.
+- [ ] If either is material, compare replacements on the same poems:
+  - spaCy (`en_core_web_trf` or `_sm`) PERSON entities. A large dependency, and taggers are unreliable on verse.
+  - The grounding judge listing the people each line names, as an extra field in `GroundingVerdict`, checked deterministically against the roster. No new dependency, since the call already happens; it costs a contract change and a few output tokens.
+- [ ] Keep the current check as a fallback for keyless and mock runs.
+
 ### Decide what "week" means for far-from-UK users
 
 **Found while building the mocks:** a calendar week in the user's timezone can split a league's matchweek. In Melbourne (UTC+11 in October), the week of Mon 12 Oct 2026 contains 9 EPL matches from two different matchweeks: the tail of one (the three Sunday 11 Oct games, which kick off from midnight Monday local time, and the Monday-night game) and the Saturday 17 Oct games of the next. The Sunday 18 Oct games fall into the following week. The same week in London time is one clean set of 10 matches.

@@ -77,7 +77,8 @@ def test_full_run(client: TestClient, sports: FixtureSports) -> None:
     lines = [p["text"]["headline"], *(line for s in p["text"]["stanzas"] for line in s["lines"])]
     assert all(set(line["factIds"]) <= fact_ids for line in lines)
     assert any(line["factIds"] for line in lines)
-    assert p["guardrails"]["passed"] and {c["status"] for c in p["guardrails"]["checks"]} == {"skipped"}
+    statuses = {c["id"]: c["status"] for c in p["guardrails"]["checks"]}
+    assert p["guardrails"]["passed"] and statuses == {**dict.fromkeys(statuses, "pass"), "moderation": "skipped"}
 
 
 def test_retell_reuses_the_story(client: TestClient, sports: FixtureSports) -> None:
@@ -256,3 +257,16 @@ def test_coverage_about_other_matches_is_dropped(client: TestClient) -> None:
         result = until_end(ws)[-1]
     urls = [s["url"] for s in result["payload"]["sources"]]
     assert all(u.endswith("/401879262") for u in urls), urls
+
+
+@pytest.mark.parametrize(
+    "style",
+    ["ballad", "sonnet", "villanelle", "mock_heroic", "limericks", "clerihews", "terrace_chant", "nursery_rhyme"],
+)
+def test_the_mock_passes_the_checks_in_every_form(client: TestClient, style: str) -> None:
+    with client.websocket_connect("/ws") as ws:
+        hello(ws)
+        start(ws, style=style)
+        result = until_end(ws)[-1]
+    assert result["type"] == "run.result", result["payload"]
+    assert result["payload"]["guardrails"]["attempts"] == 1

@@ -5,6 +5,7 @@ token budget are tested without a key or a network."""
 import json
 from collections.abc import Callable
 from dataclasses import dataclass, field
+from pathlib import Path
 from typing import Any
 
 import anyio
@@ -13,10 +14,13 @@ from fastapi.testclient import TestClient
 from litellm.exceptions import AuthenticationError, RateLimitError, ServiceUnavailableError
 
 from app.config import Settings
+from app.contracts.pipeline.fact_draft import FactDraft
+from app.contracts.pipeline.grounding_verdict import GroundingVerdict
 from app.contracts.pipeline.match_pick import MatchPick
 from app.contracts.ws.client_message import ByokLlm, HouseLlm
+from app.llm.analysis_cache import AnalysisCache
 from app.llm.base import LlmFailure
-from app.llm.live import MAX_TOOL_CALLS, LiteLlm, results_block
+from app.llm.live import MAX_TOOL_CALLS, LiteLlm, results_block, short_ids
 from app.main import create_app, llm_factory
 from app.pipeline.signals import compute
 from app.sports import SportsData
@@ -81,8 +85,13 @@ class Model:
         return self.reply(kwargs)
 
 
-def live(model: Model, budget: int = 100_000) -> LiteLlm:
-    return LiteLlm("gemini/gemini-flash-latest", KEY, budget=budget, complete=model, cost=lambda **_: 0.001)
+def live(
+    model: Model,
+    budget: int = 100_000,
+    cache: AnalysisCache | None = None,
+    name: str = "gemini/gemini-flash-latest",
+) -> LiteLlm:
+    return LiteLlm(name, KEY, budget=budget, complete=model, cost=lambda **_: 0.001, analysis_cache=cache)
 
 
 def brentford_week(sports: FixtureSports) -> list[Any]:
@@ -243,8 +252,22 @@ ANSWERS: dict[str, Any] = {
     "Poem": {
         "headline": "The Bees Who Lost Their Sting",
         "stanzas": [
-            {"lines": ["A red card came before the break,", "and Brentford's ten held firm,"]},
-            {"lines": ["till Muñoz struck the sixty-second,", "and Isak made them squirm."]},
+            {
+                "lines": [
+                    "A red card came before the break,",
+                    "and Brentford's ten held firm,",
+                    "till Muñoz struck the sixty-second,",
+                    "and Isak made them squirm.",
+                ]
+            },
+            {
+                "lines": [
+                    "The Bees had led through Lewis-Potter,",
+                    "but Liverpool would not yield;",
+                    "two goals to one, the Reds went home,",
+                    "the masters of the field.",
+                ]
+            },
         ],
     },
     "GroundingVerdict": {
@@ -254,6 +277,10 @@ ANSWERS: dict[str, Any] = {
             {"index": 2, "fact_ids": [], "unsupported": []},
             {"index": 3, "fact_ids": ["f3"], "unsupported": []},
             {"index": 4, "fact_ids": ["f4", "f99"], "unsupported": []},
+            {"index": 5, "fact_ids": [], "unsupported": []},
+            {"index": 6, "fact_ids": [], "unsupported": []},
+            {"index": 7, "fact_ids": ["f1"], "unsupported": []},
+            {"index": 8, "fact_ids": [], "unsupported": []},
         ]
     },
 }
@@ -265,8 +292,8 @@ def scripted(kw: dict[str, Any]) -> Resp:
     return text(json.dumps(ANSWERS[kw["response_format"].__name__]))
 
 
-def socket_run(sports: SportsData, model: Model) -> list[dict[str, Any]]:
-    app = create_app(factory(sports), lambda _choice: live(model))
+def socket_run(sports: SportsData, model: Model, make: Callable[[], LiteLlm] | None = None) -> list[dict[str, Any]]:
+    app = create_app(factory(sports), lambda _choice: make() if make else live(model))
     with TestClient(app) as client, client.websocket_connect("/ws") as ws:
         hello(ws)
         ws.send_json({"v": 1, "type": "run.start", "runId": None, "payload": start_payload()})
@@ -280,7 +307,10 @@ def test_full_run_on_litellm(sports: FixtureSports) -> None:
     p = result["payload"]
     assert p["text"]["headline"]["text"] == "The Bees Who Lost Their Sting"
     lines = [line for s in p["text"]["stanzas"] for line in s["lines"]]
-    assert [line["factIds"] for line in lines] == [["f2"], [], ["f3"], ["f4"]], "unknown f99 dropped"
+    assert [line["factIds"] for line in lines][:4] == [["f2"], [], ["f3"], ["f4"]], "unknown f99 dropped"
+    assert p["guardrails"]["passed"] and p["guardrails"]["attempts"] == 1
+    statuses = {c["id"]: c["status"] for c in p["guardrails"]["checks"]}
+    assert statuses == {**dict.fromkeys(statuses, "pass"), "moderation": "skipped"}
     assert p["moment"] == "The comeback, from the red card to the winner"
     assert p["usage"]["model"] == "gemini/gemini-flash-latest"
     assert p["usage"]["inputTokens"] > 0
@@ -407,7 +437,9 @@ def test_noise_events_stay_out_of_prompts(sports: FixtureSports) -> None:
     lines = event_lines(timeline).splitlines()
     assert len(lines) < len(timeline.events) / 2
     assert not any(" foul" in line.split(":")[2][:6] for line in lines if line.count(":") > 2)
-    assert any("53801457" in line for line in lines), "the winner is still there"
+    winner = next(i for i, ref in short_ids(timeline).items() if ref.endswith("53801457"))
+    assert any(line.startswith(f"[{winner}] ") for line in lines), "the winner is still there"
+    assert "espn:" not in "\n".join(lines), "prompts carry short ids, not source refs"
 
 
 # Keeping hidden reasoning to a minimum.
@@ -459,3 +491,121 @@ def test_bracketed_refs_from_the_model_are_accepted(sports: FixtureSports) -> No
     assert result["type"] == "run.result", result["payload"]
     urls = {f["sourceUrl"] for f in result["payload"]["facts"]}
     assert urls == {"https://www.espn.com/soccer/match/_/gameId/401879262"}
+
+
+# The guardrails' repair attempt.
+
+INVENTED = {
+    **ANSWERS["Poem"],
+    "stanzas": [
+        {
+            "lines": [
+                "A red card came before the break,",
+                "and young Smithson held them firm,",
+                *ANSWERS["Poem"]["stanzas"][0]["lines"][2:],
+            ]
+        },
+        ANSWERS["Poem"]["stanzas"][1],
+    ],
+}
+
+
+def poems(*replies: dict[str, Any]) -> Model:
+    """Answers the writer with each poem in turn, the last one for good."""
+    queue = list(replies)
+
+    def reply(kw: dict[str, Any]) -> Resp:
+        if "tools" in kw:
+            return text("No search needed.")
+        name = kw["response_format"].__name__
+        if name == "Poem":
+            return text(json.dumps(queue.pop(0) if len(queue) > 1 else queue[0]))
+        return text(json.dumps(ANSWERS[name]))
+
+    return Model(reply)
+
+
+def test_a_failed_check_gets_one_rewrite(sports: FixtureSports) -> None:
+    model = poems(INVENTED, ANSWERS["Poem"])
+    messages = socket_run(sports, model)
+    result = messages[-1]
+    assert result["type"] == "run.result", result["payload"]
+    assert result["payload"]["guardrails"]["attempts"] == 2
+    notes = [m["payload"]["message"] for m in messages if m["type"] == "stage.update"]
+    assert "Attempt 1: names failed, rewriting" in notes
+    assert "6 checks passed after one rewrite; 1 not built yet" in notes
+    repair = [
+        c
+        for c in model.calls
+        if c.get("response_format") is not None and "previous attempt" in c["messages"][1]["content"]
+    ]
+    assert len(repair) == 1 and "Smithson" in repair[0]["messages"][1]["content"]
+    judged = [c for c in model.calls if c.get("response_format") is GroundingVerdict]
+    assert len(judged) == 1, "the judge skips a poem that already failed the cheap checks"
+
+
+def test_failing_twice_shows_nothing(sports: FixtureSports) -> None:
+    messages = socket_run(sports, poems(INVENTED))
+    assert not any(m["type"] == "run.result" for m in messages)
+    failed = [m["payload"] for m in messages if m["type"] == "stage.update" and m["payload"]["status"] == "failed"]
+    assert [(f["stage"], f["message"]) for f in failed] == [("guardrails", "Names failed on both attempts")]
+    error = messages[-1]["payload"]
+    assert (error["code"], error["retryable"]) == ("guardrail_failed", True)
+    assert error["guardrails"]["passed"] is False and error["guardrails"]["attempts"] == 2
+    assert any("Smithson" in r for r in error["reasons"])
+
+
+# Short event ids in prompts.
+
+
+def test_the_model_sees_short_ids_and_the_pipeline_gets_refs(sports: FixtureSports) -> None:
+    timeline = anyio.run(sports.get_match_events, "football", "eng.1", "401879262")
+    short = {ref: i for i, ref in short_ids(timeline).items()}
+    moment = ANSWERS["MomentPick"]
+    answers = {
+        **ANSWERS,
+        "MomentPick": {
+            **moment,
+            "event_refs": [short[r] for r in moment["event_refs"]],
+            "beats": [f"[{short[r]}]" for r in moment["beats"]],
+        },
+        "FactDraft": {
+            "facts": [
+                {**f, "source_ref": short.get(f["source_ref"], f["source_ref"])} for f in ANSWERS["FactDraft"]["facts"]
+            ]
+        },
+    }
+
+    def reply(kw: dict[str, Any]) -> Resp:
+        if "tools" in kw:
+            return text("No search needed.")
+        return text(json.dumps(answers[kw["response_format"].__name__]))
+
+    model = Model(reply)
+    result = socket_run(sports, model)[-1]
+    assert result["type"] == "run.result", result["payload"]
+    facts_prompt = next(c for c in model.calls if c.get("response_format") is FactDraft)["messages"][1]["content"]
+    assert "espn:" not in facts_prompt and f"Beats: {short[moment['beats'][0]]}" in facts_prompt
+
+
+# The development analysis cache.
+
+
+def test_a_repeat_run_reuses_the_analysis(sports: FixtureSports, tmp_path: Path) -> None:
+    cache = AnalysisCache(tmp_path)
+    first, second = Model(scripted), Model(scripted)
+    socket_run(sports, first, lambda: live(first, cache=cache))
+    messages = socket_run(sports, second, lambda: live(second, cache=cache))
+    assert messages[-1]["type"] == "run.result"
+
+    def asked(model: Model) -> list[str]:
+        return [c["response_format"].__name__ if "response_format" in c else "tools" for c in model.calls]
+
+    assert {"tools", "MatchPick", "MomentPick", "FactDraft"} <= set(asked(first))
+    assert asked(second) == ["Poem", "GroundingVerdict"]
+    notes = [m["payload"]["message"] for m in messages if m["type"] == "stage.update"]
+    assert notes.count("Reusing this stage's answer from an earlier run") == 3
+
+    other = Model(scripted)
+    socket_run(sports, other, lambda: live(other, cache=cache, name="gemini/gemini-3.5-flash"))
+    assert "MatchPick" in asked(other), "another model is a cache miss"

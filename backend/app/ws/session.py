@@ -367,7 +367,7 @@ class Session:
                         retryable=f.retryable,
                         stage=f.stage,
                         reasons=f.reasons,
-                        guardrails=None,
+                        guardrails=f.guardrails,
                         suggestion=f.suggestion,
                     ),
                 )

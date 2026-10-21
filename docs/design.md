@@ -18,7 +18,7 @@ A user picks a sport and league (default: Football, Premier League), a date rang
 
 **Walking skeleton (Phase 0):** the whole product end to end, thinly. The Angular UI comes first, built against mock WebSocket runs replayed from contract examples, so the screens and the protocol are settled before any backend exists. Then the real pieces replace the mock one by one: a FastAPI WebSocket endpoint, the Go MCP server, the Python pipeline with core guardrails, your own key from the settings drawer, and a baseline Inspect eval. The stack runs in docker compose from the start, so each service gets its image as it lands; no database yet. This covers MCP, tool calling, structured output, guardrails, evals and the UI.
 
-**MVP scope (Phase 1):** EPL only via the ESPN adapter; text only; paste-your-own-key; Exa or Tavily search; WebSocket stage streaming; Angular UI; docker-compose locally; the full guardrail set; Go tests, pytest and an Inspect eval that meets its targets.
+**MVP scope (Phase 1):** EPL only via the ESPN adapter; text only; paste-your-own-key; Exa or Tavily search; WebSocket stage streaming; Angular UI; Postgres for sessions and runs, in the same compose stack; the full guardrail set, moderation included; Go tests, pytest and an Inspect eval that meets its targets.
 
 **Later phases:** F1 and cricket adapters, images and OpenRouter OAuth (Phase 2); Terraform on GCP, the house key with 3 free runs, run resume and promptfoo red-teaming in CI (Phase 3); the shared result cache, Langfuse, AFL and UFC adapters and drama-signal weights tuned once pick quality is measured (Phase 4). See Build roadmap; parked work is in [TODO.md](../TODO.md).
 
@@ -34,7 +34,7 @@ The concept is sound, but the scope has grown from a one-day build into several 
 | Agent-driven code drifts across Go, Python and TypeScript | Mismatched JSON shapes between services | Contracts first: Go structs own the MCP tool schemas (the Go SDK infers them) and are exported to `contracts/mcp/`; WebSocket and pipeline schemas are hand-written JSON Schema; all generated into each language |
 | Picking from final scores only | Late winners, VAR drama and funny moments are invisible; the comedy angle almost never wins | Fetch events for every candidate (cheap, cached), compute deterministic drama signals, and let `pick_match` search coverage for a short list |
 | The core feature goes unmeasured | Evals score grounding and style but never whether the pick was good | Parked for now (see [TODO.md](../TODO.md)); the golden set is already built from whole weeks so pick metrics can be added without re-freezing data |
-| Deterministic output checks on stylised verse | "Zeus", "thrice to twice" and verbatim quotes trip the checks; most runs fail after one repair | Person-entity matching with name variants and per-style allowlists; score parser with number words; attributed quotes verified rather than penalised |
+| Deterministic output checks on stylised verse | "Zeus", "thrice to twice" and verbatim quotes trip the checks; most runs fail after one repair | A name check that accepts roster names and variants, club nicknames and grounds, and per-form stock figures; a score parser with number words that ignores order and passing moves; quotes verified word for word against quote facts. The 8 sample poems are the false-alarm test |
 | Rhyming forms | Rhyme pressure bends facts and names to fit ("scored with heft" is colour, "scored a hat-trick" to rhyme with "trick" is a false claim); rhyme detectors fail on names like "Yarmoliuk" | Grounding and name checks apply to every line as usual, and the repair prompt names the line; rhyme and metre are eval metrics, never guardrails; rhyme detection falls back to spelling for names the pronouncing dictionary lacks |
 | Free-text style prompts | Prompt injection, living-artist imitation, unscoreable evals | Curated style presets in Phase 1; free text later, behind moderation |
 | Web pages fed to the LLM | Indirect prompt injection from search results | Retrieved text is data: delimited, truncated, never given tool access |
@@ -43,7 +43,24 @@ The concept is sound, but the scope has grown from a one-day build into several 
 | BYO keys pass through the backend | Keys leak into logs or traces | Keys live only in browser session storage and request memory; redaction in logs, LiteLLM callbacks and (later) Langfuse |
 | Evals hit live APIs | Flaky, non-reproducible scores, quota burn | Record and replay fixtures; the Go server's raw-data cache freezes golden-set inputs |
 | Self-hosting Langfuse | Langfuse needs ClickHouse, Redis, Postgres and blob storage | Use the Langfuse Cloud free Hobby tier |
-| IaC for local hosting | Terraform's Docker provider adds little over compose | docker-compose locally; Terraform for the cloud only |
+| IaC for local hosting | Terraform's Docker provider adds little over compose | docker compose locally; Terraform for the cloud only |
+| Free LLM tiers are small and busy | Overloads ("high demand") and per-minute limits fail runs; hidden reasoning tokens eat quota | Retries for overloads and short rate-limit waits; the lowest reasoning effort each model allows; noise events left out of prompts; free-tier models (Gemini, Groq) in the registry |
+| A model string chosen in the browser | Some LiteLLM prefixes reach local endpoints (`ollama/…`), so an arbitrary model is a server-side request forgery risk | Only registry models may run; anything else is rejected with `bad_request` |
+| Small models garble structured output | Ids copied with their prompt brackets, replies that miss the schema | Pipeline-side normalisation of event ids, one schema retry per call, then a clean stage failure |
+
+**Decision log** (dated; newest first, until the git history and this document make it redundant)
+
+- 2026-10-21 · The logo: a chip with a pitch on its die between typographic quotes in the chip's own character (rounded-square heads, tails ending flat at the outline weight), quotes at 85%, the chip sized for a constant gap. Drawn as code (`docs/brand/make_logo.py`) rather than with an image model, so it stays crisp at 16 px, takes the theme colour, and its proportions can be changed and regenerated.
+- 2026-10-21 · To spare free-tier quotas: a development cache of the analysis stages (pick, moment, fact draft), so a repeat run of a week makes only the poem and judge calls; the grounding judge runs only when the deterministic checks pass; prompts carry short event ids (`e12`) instead of source refs. A same-provider model fallback on quota errors is under consideration.
+- 2026-10-21 · The guardrails' name check is a deterministic capitalised-word check against the match's people, teams, nicknames, venue and the form's stock figures, not spaCy NER; a named-entity model is future scope ([TODO.md](../TODO.md)). The writer prompt stays at v1 (a rhyme-letter labelling seen once from GPT-OSS 20B is not worth a prompt change yet).
+- 2026-10-21 · Every LLM call sends the lowest reasoning effort the model allows ("minimal" for Gemini 3 and GPT-5, "low" for GPT-OSS, nothing for Claude). Gemini 3.5 Flash and Groq's GPT-OSS 120B and 20B join the registry for free-tier testing.
+- 2026-10-21 · Retries: overloads twice (2 s, 6 s); rate limits only when the provider's suggested wait is ≤ 30 s. The OpenAI SDK's own retries (OpenAI models only) are kept. Every failed run is logged with its code, stage and reasons.
+- 2026-10-20 · No `temperature` is sent: Gemini 3 is deprecating it and GPT-5 takes only the default.
+- 2026-10-20 · `MOCK_LLM` defaults to false; with no key the UI says so before a run starts.
+- 2026-10-20 · The backend runs on Python 3.14 with uv; Pydantic models are generated from `contracts/` (datamodel-code-generator), never written by hand.
+- 2026-10-20 · Containers run on Podman or Docker; source is mounted read-only and watch only restarts, because compose watch's `sync` and `rebuild` break on Podman. Compose starts in Phase 0, not Phase 1, and the MCP server's Streamable HTTP transport (bearer token, `/healthz`) came forward with it.
+- 2026-10-20 · Every outbound HTTP call in Go uses go-resty.
+- 2026-10-20 · The style presets are eight rhyming forms; prose styles, spoofs and haiku are dropped. "Switch model" ends the run, and the user retries on the new model.
 
 **Assumptions to confirm**
 
@@ -85,12 +102,12 @@ The browser talks only to the backend; the MCP server, LiteLLM Proxy and Postgre
 
 Source: [`diagrams/architecture.mmd`](diagrams/architecture.mmd). After editing it, re-render with `make diagrams` (Mermaid CLI, `mmdc`).
 
-Dashed: added in Phase 3 or later. Shaded: where all LLM judgement and guardrails run. In Phase 0 the backend launches the MCP server as a subprocess over stdio and keeps runs in memory, so there is no Postgres yet.
+Dashed: added in Phase 3 or later. Shaded: where all LLM judgement and guardrails run. In Phase 0 the backend reaches the MCP server over Streamable HTTP inside docker compose (or launches it over stdio outside Docker, as tests do) and keeps runs in memory, so there is no Postgres yet.
 
 **Request flow for one run**
 
 1. The browser opens `/ws`, sends `session.hello`, then `run.start`.
-2. The backend records the run in Postgres and starts the pipeline.
+2. The backend starts the pipeline (and, from Phase 1, records the run in Postgres).
 3. Data stages call the Go MCP server, which serves from its cache or calls ESPN and Exa or Tavily.
 4. LLM stages call the LiteLLM SDK with the user's key, or (from Phase 3) the LiteLLM Proxy for free runs.
 5. Each stage appends to `run_events` and pushes `stage.update` to the socket.
@@ -137,6 +154,7 @@ matchday-muse/
   docs/
     design.md               # this document
     diagrams/               # Mermaid sources + rendered PNGs (make diagrams)
+    brand/                  # make_logo.py and the logo SVGs it draws (make brand)
   evals/
     golden/                 # hand-verified weeks: reference match, expected facts
     inspect/                # Inspect tasks, solvers, scorers
@@ -240,7 +258,7 @@ An unknown value fails at startup with a clear error, and so does a planned one 
 
 ## Python backend and pipeline
 
-The pipeline is an explicit state machine of fixed stages, not a free-roaming agent loop: each stage has typed inputs and outputs, emits WebSocket events, and can be tested and evaluated on its own. LLM judgement is confined to four calls (pick match, pick moment, fact sheet, write) plus one judge. Only `pick_match` may call tools.
+The pipeline is an explicit state machine of fixed stages, not a free-roaming agent loop: each stage has typed inputs and outputs, emits WebSocket events, and can be tested and evaluated on its own. LLM judgement is confined to four calls (pick match, pick moment, fact sheet, write) plus the grounding judge, and one rewrite when a guardrail fails; `pick_match` adds a decision call after its searches. Only `pick_match` may call tools.
 
 **Stack:** FastAPI (HTTP + WebSocket), Pydantic v2, SQLAlchemy + Alembic on Postgres, the `mcp` Python SDK as client, LiteLLM, uv for packaging.
 
@@ -346,7 +364,9 @@ Phase 0 builds three that differ in shape (`ballad`, `sonnet`, `limericks`): an 
 
 **Agent loop and tool calls:** `pick_match` uses LiteLLM tool calling with the `search_coverage` MCP tool's `query` parameter as a function definition, capped at 4 searches and a 60-second timeout; each search shows in the stage panel ("Searching coverage: …"). The decision is then a separate structured-output call with no tools, given the match lines and everything found, since providers differ in whether tools and a response schema can share a call. Tool results enter the prompt inside `<search_results>` tags, truncated, with `<` and `>` escaped so retrieved text cannot close the tags; every prompt says that text inside them is data, never instructions. `search_coverage` reuses what `pick_match` found about the chosen match. Every run has a token budget (`LLM_RUN_TOKEN_BUDGET`); exceeding it fails the run cleanly with `budget_exceeded`.
 
-**LLM calls** (`app/llm/live.py`): every other call is a structured-output call whose `response_format` is the Pydantic model generated from `contracts/pipeline/`. A reply that does not parse gets one retry with the validation errors, then fails the stage. No `temperature` is sent: Gemini 3 is deprecating it and GPT-5 takes only the default. Overloaded providers (5xx, Gemini's "high demand", Anthropic's 529) get two more tries, after 2 and 6 seconds; a rate limit is retried, up to twice, only when the provider's suggested wait (a `retry-after` header, or the delay Gemini and Groq write into the error) is 30 seconds or less, so a used-up daily quota fails at once. Each wait shows in the stage panel ("Gemini is busy; trying again in 6 s"). Provider errors that remain map to `run.error` codes: a persistent overload to `provider_error` (retryable), rate limits and spent quotas to `quota_exceeded` (retryable), a rejected key to `provider_error` (not retryable), timeouts to `timeout`, an over-long prompt to `budget_exceeded`. Every failed run is logged with its code, stage and reasons. Prompts leave out the timeline's noise (fouls, corners, offsides, "wins a free kick"), which halves the largest ones. The key is passed per call, held only by the run's LLM object, and scrubbed from error text. LiteLLM is imported with `LITELLM_MODE=PRODUCTION` and `LITELLM_LOCAL_MODEL_COST_MAP=True`: otherwise it loads any `.env` file it finds into the process environment and fetches its price list from GitHub. A browser's model must be in the registry, since some LiteLLM prefixes reach local endpoints. Prompts are versioned files in `app/pipeline/prompts/` (one per call, plus one per style preset), and the versions are logged with every run.
+**LLM calls** (`app/llm/live.py`): every other call is a structured-output call whose `response_format` is the Pydantic model generated from `contracts/pipeline/`. A reply that does not parse gets one retry with the validation errors, then fails the stage. No `temperature` is sent: Gemini 3 is deprecating it and GPT-5 takes only the default. Overloaded providers (5xx, Gemini's "high demand", Anthropic's 529) get two more tries, after 2 and 6 seconds; a rate limit is retried, up to twice, only when the provider's suggested wait (a `retry-after` header, or the delay Gemini and Groq write into the error) is 30 seconds or less, so a used-up daily quota fails at once. Each wait shows in the stage panel ("Gemini is busy; trying again in 6 s"). Provider errors that remain map to `run.error` codes: a persistent overload to `provider_error` (retryable), rate limits and spent quotas to `quota_exceeded` (retryable), a rejected key to `provider_error` (not retryable), timeouts to `timeout`, an over-long prompt to `budget_exceeded`. Every failed run is logged with its code, stage and reasons. Prompts leave out the timeline's noise (fouls, corners, offsides, "wins a free kick"), which halves the largest ones, and name events by short ids (`e1`, `e2` in match order) rather than source refs like `espn:401879262:play:53801457`, saving around 400 tokens a timeline; the LLM layer maps the ids back, so the pipeline and the fact sheet only ever see source refs.
+
+**Development analysis cache** (`app/llm/analysis_cache.py`): with `ANALYSIS_CACHE_DIR` set, as compose sets it, the pick, the moment and the fact draft are stored on disk, keyed on the stage, the model, its reasoning effort, the exact prompts and the exact match data. Running a week again with the same model reuses them, so it makes only the poem and judge calls (about 2 instead of 7), and the stage panel says "Reusing this stage's answer from an earlier run". The poem is always written fresh. A different model, a prompt edit or new match data misses; entries never expire, since the inputs are completed matches. This is not the Phase 4 shared result cache, which serves finished poems to other users; that one lives in Postgres and is keyed on the request. Off unless the variable is set, so it never runs in the cloud by accident. The key is passed per call, held only by the run's LLM object, and scrubbed from error text. LiteLLM is imported with `LITELLM_MODE=PRODUCTION` and `LITELLM_LOCAL_MODEL_COST_MAP=True`: otherwise it loads any `.env` file it finds into the process environment and fetches its price list from GitHub. A browser's model must be in the registry, since some LiteLLM prefixes reach local endpoints. Prompts are versioned files in `app/pipeline/prompts/` (one per call, plus one per style preset), and the versions are logged with every run.
 
 **Run state:** each run is a `runs` row; every stage event is appended to `run_events`. In Phases 0 and 1 a run is tied to its socket: a dropped socket cancels the run at the next stage boundary, and the event log serves debugging and the stage history. From Phase 3 a reconnecting client resumes the run and replays missed events from Postgres. On startup the backend marks any run still `running` as failed with code `interrupted`.
 
@@ -421,8 +441,8 @@ A single-page app in current Angular (standalone components, signals, the new co
 
 **Settings drawer ("Your LLM")**
 
-- Provider select (Gemini, OpenAI, Anthropic, others from the registry), model select filtered to models with tool calling and JSON output, and an API key field.
-- A "Get a free Gemini key" link to Google AI Studio, with the help line: do not attach a billing account to the project if you want to stay on the free tier.
+- Provider select (Gemini, Anthropic, OpenAI and Groq, from the registry), model select filtered to models with tool calling and JSON output, and an API key field.
+- A "Get a free Gemini key" link to Google AI Studio, with the help line: do not attach a billing account to the project if you want to stay on the free tier. For Groq, a "Get a free Groq key" link and a note that the free tier limits tokens per minute.
 - Phase 2: a "Connect OpenRouter" button (OAuth PKCE).
 - The key is kept in `sessionStorage` only, with a "forget key" button.
 
@@ -437,7 +457,7 @@ A single-page app in current Angular (standalone components, signals, the new co
 - The scripts: `session` (the `session.ready` handshake), `success` (a ballad), `no-matches`, `guardrail-failed` (fails after one repair), `quota-exceeded` (a `prompt.request` mid-run), `cancelled`, `stage-failed`, and `retell` (answers every `run.retell`).
 - `takes.json` (format: `contracts/ws/mock-takes.json`) holds one `run.result` per style preset for Brentford 1–2 Liverpool, all from one 14-fact sheet, each line linked to its facts. They double as reference outputs for the presets. `make test` checks there is exactly one per style and that any script result for the same match and style matches its take.
 - `MockWsService` implements the same interface as `WsService` and replays a script with three rewrites: timestamps become the moment each message is sent, each replay gets its own `runId`, and the `run.result` becomes the take in the requested style (keeping the script's usage), so every preset and every retell can be seen. The app uses the real socket (`environment.wsUrl` is `/ws` on the page's own origin, which `ng serve` proxies to the backend via `proxy.conf.mjs`), and `?mock=<script>` switches to the mock: it opens a script and plays it at once, and `?speed=<n>` replays n times faster, the poem reveal included (0 for instant), so every screen state can be opened directly while designing. In mock mode a bar in the header picks the script and speed, and the controls are set to the script's own `run.start`. A Cancel pressed where a script has no `await` step ends the run with `cancelled` straight away.
-- Once the backend exists, the same scripts become pytest fixtures: the real backend, run with the fixture search provider and a mock LLM, must emit the same message types in the same stage order.
+- The same scripts check the real backend: its protocol tests require the same `session.ready`, the same stage lists for a full run and a retell, and the same no-matches message and suggestion (see Python backend and pipeline, Tests).
 
 **Tests:** Vitest (Angular's default runner) with jsdom. The reducer, the mock replay, each component and the whole app are tested against the scripted runs; `make test-frontend` runs them. Phase 1 adds one Playwright smoke test against the real backend with the fixture search provider and a mock LLM.
 
@@ -488,6 +508,8 @@ Entries are seeded from LiteLLM's model capability helpers and overridden by han
 
 The raw provider error body must be reachable through LiteLLM's exception; verify this early with a deliberately exhausted free Gemini key and keep the captured error as a test fixture.
 
+**Phase 0 handling:** no prompt modal yet. A rate limit whose suggested wait (`Retry-After`, Gemini's `retryDelay`, Groq's "try again in N s") is 30 seconds or less is waited out and retried, at most twice per call, with the wait shown in the stage panel; anything longer, such as a spent daily quota, ends the run with `quota_exceeded` and the provider's message. Real Gemini 429s have now been seen in testing (per-minute limits within a few runs of each other), but none is captured as a fixture yet. The modal and the `PerMinute`/`PerDay` split above are Phase 1.
+
 **OpenRouter OAuth (Phase 2):** a PKCE flow mints a user-controlled key. The frontend does the redirect; the backend exchanges the code; the key goes back to the browser for session storage, as with pasted keys.
 
 ## Guardrails
@@ -505,12 +527,12 @@ Guardrails protect truth and safety, and fail closed. Craft (metre, rhyme, the p
 | Retrieval | Injection heuristics on retrieved text ("ignore previous", tool-call lookalikes) | Deterministic | Drop the result | 2 |
 | Process | Max 4 tool calls per stage, 60 s per stage, per-run token budget | Deterministic | Fail the stage cleanly | 0 |
 | Process | Structured outputs validated with Pydantic; one retry with the validation error | Deterministic | Fail the stage | 0 |
-| Output | Score: a parser finds every score-like statement in the poem, in digits or words ("3–2", "three goals to two"); any that is neither `FactSheet.final_result` nor a `score_after` from the match timeline fails, so a poem may tell the story through intermediate scores ("Brentford 1, Liverpool 0"). If none is found, the grounding judge must confirm the result is stated or clearly implied | Deterministic + judge | Repair | 0 |
-| Output | Names: every PERSON entity (spaCy NER, not a capitalised-span matcher) must match a roster `canonical` or `variants` entry, or the style preset's allowlist | Deterministic | Repair | 0 |
-| Output | Quotes: any quoted speech must match a `quote` fact's text exactly and be attributed to its `speaker`; at most one quote of 25 words or fewer per poem | Deterministic | Repair | 0 |
+| Output | Score: a parser finds every score in the poem, in digits or words ("3–2", "one–nil", "two goals to one"; not "a one-two", "4-4-2" or minutes); any that is neither the final result nor a `score_after` from the match timeline (nor 0–0) fails, so a poem may tell the story through intermediate scores. Order is ignored, since poems often put the winner first; who led is the grounding judge's call. A poem that states no score passes: where the result lands is craft, scored by evals | Deterministic | Repair | 0 |
+| Output | Names: every capitalised word in mid-line must be a person on the roster (or named in a fact, such as a referee from coverage), a team or one of its nicknames and grounds (`app/guardrails/vocab.py`), the venue, the competition, the form's stock figures, or a short generic list (VAR, days, months). Line and sentence starts are skipped, and so is the headline, which is in title case; the grounding judge covers both. A named-entity model may replace this later (see [TODO.md](../TODO.md)) | Deterministic | Repair | 0 |
+| Output | Quotes: any text in double quotation marks must appear word for word in a `quote` fact; at most one quote of 25 words or fewer per poem. Attribution to the right speaker is left to the grounding judge | Deterministic | Repair | 0 |
 | Output | Verbatim overlap vs retrieved articles: longest shared span ≤ 10 words, 8-gram containment ≤ 5%; names, stock phrases and verified quotes excluded | Deterministic | Repair | 0 |
 | Output | Overlap vs a public-domain author corpus when the style names an author | Deterministic | Repair | 2 |
-| Output | Length and form: 8 to 30 lines and at most 300 words; each form has its line and stanza counts (14 lines for a sonnet, 19 for a villanelle, 5 per limerick, 4 per clerihew) | Deterministic | Repair | 0 |
+| Output | Length and form: a headline of at most 10 words, 8 to 30 lines and at most 300 words; each fixed form has its line and stanza counts (14 lines for a sonnet, 19 for a villanelle, 5 per limerick, 4 per clerihew) | Deterministic | Repair | 0 |
 | Output | Grounding: every factual claim maps to a fact id (the judge returns each line's fact ids and any unsupported claims; rubric below) | LLM-as-judge | Repair | 0 |
 | Output | Harassment, slurs, sexual content; speculation about players' private lives, health beyond what the match data reports (an on-field injury in the events is fine) or criminal allegations | Moderation model or judge | Repair, then block | 1 |
 | Image | Prompt built only from the fact sheet; no real names or likenesses (anonymous players in kit colours), no logos or league marks | Prompt construction | n/a | 2 |
@@ -523,6 +545,8 @@ Guardrails protect truth and safety, and fail closed. Craft (metre, rhyme, the p
 - *Colour*: figurative language, emotion and atmosphere ("the crowd held its breath", "fate turned its back on him"). Colour is allowed, except when it implies a checkable fact the sheet contradicts or lacks ("the away end erupted" implies the away side scored; "his last game for the club" claims a transfer).
 
 The judge returns the unsupported factual claims only. The rubric's examples come from the 30 hand-labelled outputs used for judge calibration, and borderline cases found there are added to it.
+
+The checks live in `backend/app/guardrails/checks.py`. The deterministic ones run first; the grounding judge, an LLM call, runs only if they all pass (otherwise its chip reads "Not run: the checks above failed first"), since a failing poem is rewritten anyway. Their false-alarm test is the 8 hand-written sample poems in `contracts/ws/examples/takes.json`: every deterministic check must pass all of them. Moderation reports as skipped until Phase 1. `MockLlm` writes poems that pass every check by construction, so keyless runs and tests still end in a result.
 
 **Repair loop:** on any repairable failure, regenerate once with the specific failure messages appended ("the score must read 3–2"; "remove the name X, not in the match roster"). If the second attempt fails, the run ends with `run.error` code `guardrail_failed` and the reasons. Never show an output that failed a check. Track the repair rate per check from Phase 0: a check that fails often after repair is miscalibrated, not a sign that the writer is bad.
 
@@ -712,6 +736,7 @@ Every variable lives in `.env.example` with a comment; services fail fast at sta
 | `MOCK_LLM` | backend | `false` | `true` runs every LLM stage on the mock: tests, keyless demos |
 | `LLM_MODEL` | backend | `gemini/gemini-flash-latest` | Default model for local runs and evals when the browser sends no model |
 | `LLM_RUN_TOKEN_BUDGET` | backend | `150000` | Tokens one run may spend across its LLM calls |
+| `ANALYSIS_CACHE_DIR` | backend | `/data/analysis-cache` | Development cache of the pick, moment and fact draft; compose sets it to a volume, unset means off |
 | `LLM_API_KEY` | backend |  | Development fallback key, used when `run.start` asks for `llm.mode: house` (the browser has no key) and by `make eval`. Never set in the cloud |
 | `LITELLM_MASTER_KEY` | litellm |  | Phase 3. Proxy admin key |
 | `HOUSE_PROVIDER_API_KEY` | litellm |  | Phase 3. The real provider key behind the house model |
@@ -726,8 +751,8 @@ Build in five phases and move on only when a phase's gate passes. Phase 0 is the
 
 | Phase | Theme | Scope |
 | --- | --- | --- |
-| **0 · Walking skeleton** | EPL, UI-first, local | WebSocket contracts and scripted example runs. Angular UI (controls, stage panel, result card, settings drawer, prompt modal) built against `MockWsService`. Go MCP server over stdio and Streamable HTTP: ESPN football adapter, `fixture` search, on-disk cache, `cmd/schemagen`. Docker images and docker compose for every service as it lands. FastAPI WebSocket backend with runs in memory, all 10 stages, drama signals and `pick_match` tool calling, using the key from the settings drawer via the LiteLLM SDK. Headline, beats and annotated lines; 3 style presets (ballad, sonnet, limericks). Core guardrails: score, names, quotes, overlap, length and form, grounding judge, repair loop. 5 golden weeks; Inspect baseline report |
-| **1 · MVP** | EPL, text | All 8 style presets; retell. Exa and Tavily search. Postgres (`sessions`, `runs`, `run_events`) in compose. Moderation check; quota parsing and its prompt modal. An offline compose profile; golden set grows to 10 weeks; judge calibration; Playwright smoke test |
+| **0 · Walking skeleton** | EPL, UI-first, local | WebSocket contracts and scripted example runs. Angular UI (controls, stage panel, result card, settings drawer, prompt modal) built against `MockWsService`. Go MCP server over stdio and Streamable HTTP: ESPN football adapter, `fixture` search, on-disk cache, `cmd/schemagen`. Docker images and docker compose for every service as it lands. FastAPI WebSocket backend with runs in memory, all 10 stages, drama signals and `pick_match` tool calling, using the key from the settings drawer via the LiteLLM SDK. Headline, beats and annotated lines; v1 prompts for all 8 style presets, with rubrics and evals for 3 (ballad, sonnet, limericks). Core guardrails: score, names, quotes, overlap, length and form, grounding judge, repair loop. 5 golden weeks; Inspect baseline report |
+| **1 · MVP** | EPL, text | Rubrics and evals for all 8 style presets. Exa and Tavily search. Postgres (`sessions`, `runs`, `run_events`) in compose. Moderation check; quota parsing and its prompt modal. An offline compose profile; golden set grows to 10 weeks; judge calibration; Playwright smoke test |
 | **2 · Breadth** | Sports and images | OpenF1 and Cricsheet adapters; golden set adds 5 F1 race weekends and 5 cricket weeks. Image output where the provider has an image model; image guardrails. OpenRouter Connect (OAuth PKCE); retrieval injection filter |
 | **3 · Cloud** | Public deployment and red-teaming | Terraform on GCP: 3 Cloud Run services, Cloud SQL, Storage, Secret Manager. GitHub Actions deploy with Workload Identity Federation. House key with 3 free runs: LiteLLM Proxy, per-IP cap, global spend cap. Run resume and replay over WebSockets. promptfoo red-team suite and model matrix in CI |
 | **4 · Insight** | Cache and tracing | Shared result cache; Langfuse traces and scores. AFL and UFC adapters. Drama-signal weights tuned once pick quality is measured (TODO.md). Free-text styles behind moderation |
@@ -752,12 +777,12 @@ Build in five phases and move on only when a phase's gate passes. Phase 0 is the
 - [x] Docker images (`mcp-server`, `frontend`) and `compose.yaml` with watch; Streamable HTTP transport with bearer token and `/healthz`
 - [x] Backend: FastAPI WebSocket endpoint with runs in memory, MCP client over Streamable HTTP and stdio, data stages, drama signals, mock LLM; protocol tests against the scripted runs; switch the UI from the mock to the real socket; `backend` service in compose
 - [x] LLM stages via the LiteLLM SDK (pick match with tool calling, pick moment, fact sheet, generate, and the grounding judge) with v1 prompts for all eight style presets (rubrics and evals for all but ballad, sonnet and limericks stay in Phase 1); BYO key from the settings drawer, checked against the registry
-- [ ] Guardrails: score parser, NER name check, quote check, overlap, length and form, grounding judge with rubric returning per-line fact ids, repair loop
+- [x] Guardrails: score parser, name check (capitalised words against the roster; NER deferred, see TODO.md), quote check, overlap, length and form, grounding judge with rubric returning per-line fact ids, repair loop
 - [ ] Golden set of 5 EPL weeks frozen as fixtures and hand-labelled; Inspect task and scorers; baseline eval report
 
 **Phase 1 build order**
 
-- [ ] The other 5 style presets with their rubrics and allowlists; retell over stored fact sheets
+- [ ] Rubrics and evals for the other 5 style presets (their prompts and stock-figure lists exist); retell over fact sheets stored in Postgres
 - [ ] Exa and Tavily providers behind `SEARCH_PROVIDER`
 - [ ] Postgres: SQLAlchemy models and Alembic, session cookie, `run_events` written alongside the socket
 - [ ] Postgres in compose; backend image serving the built frontend; `--profile offline`

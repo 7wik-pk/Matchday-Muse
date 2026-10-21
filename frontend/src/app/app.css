@@ -12,20 +12,24 @@
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
-.mark {
-  width: 28px;
-  height: 28px;
-  fill: none;
-  stroke: var(--accent);
-  stroke-width: 2;
-}
-
+/* The title's box is trimmed to cap height and baseline, so centring it lines
+   the capitals up with the logo chip's top and bottom edges. */
 h1 {
   font: 600 24px/1 var(--font-prose);
   letter-spacing: -0.01em;
+  text-box: trim-both cap alphabetic;
+}
+
+/* Without text-box trimming, Newsreader's capitals sit 2.5px (0.104em) above
+   the centre of the line box; move them down by that much. */
+@supports not (text-box: trim-both cap alphabetic) {
+  h1 {
+    position: relative;
+    top: 0.104em;
+  }
 }
 
 h1 em {

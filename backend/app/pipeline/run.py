@@ -15,6 +15,7 @@ from app.contracts.mcp.get_match_events_output import Event
 from app.contracts.mcp.list_competitions_output import Competition
 from app.contracts.mcp.search_coverage_output import Result, SearchCoverageOutput
 from app.contracts.pipeline.fact_sheet import FactSheet
+from app.contracts.pipeline.grounding_verdict import GroundingVerdict
 from app.contracts.pipeline.guardrail_report import GuardrailCheck, GuardrailReport
 from app.contracts.pipeline.match_pick import MatchPick
 from app.contracts.pipeline.moment_pick import MomentPick
@@ -40,6 +41,7 @@ from app.contracts.ws.server_message import (
 from app.contracts.ws.server_message import (
     Usage as ResultUsage,
 )
+from app.guardrails.checks import Check, CheckId, Material, check_grounding, deterministic
 from app.llm.base import Candidate, ErrorCode, Llm, LlmFailure
 from app.pipeline import ranges, signals
 from app.presets import STYLES_BY_ID
@@ -60,15 +62,16 @@ STAGE_LABELS: dict[StageId, str] = {
 RETELL_STAGES: list[StageId] = ["generate", "guardrails", "done"]
 
 # The checks the guardrails stage reports, with their chip labels.
-CHECKS: list[tuple[str, str]] = [
-    ("score", "Score"),
-    ("names", "Names"),
-    ("quotes", "Quotes"),
-    ("overlap", "Originality"),
-    ("form", "Length and form"),
-    ("grounding", "Grounding"),
-    ("moderation", "Safety"),
-]
+LABELS: dict[CheckId, str] = {
+    "score": "Score",
+    "names": "Names",
+    "quotes": "Quotes",
+    "overlap": "Originality",
+    "form": "Length and form",
+    "grounding": "Grounding",
+    "moderation": "Safety",
+}
+CHECKS = list(LABELS)
 
 LOAD_CONCURRENCY = 4
 SHORTLIST = 3
@@ -91,6 +94,7 @@ class RunFailure(Exception):
         stage: StageId | None,
         reasons: Sequence[str] = (),
         suggestion: RangeSuggestion | None = None,
+        guardrails: GuardrailReport | None = None,
     ) -> None:
         super().__init__(message)
         self.code: ErrorCode = code
@@ -99,6 +103,7 @@ class RunFailure(Exception):
         self.stage = stage
         self.reasons = list(reasons)
         self.suggestion = suggestion
+        self.guardrails = guardrails
 
 
 @dataclass
@@ -110,6 +115,8 @@ class Story:
     match: Match
     pick: MatchPick
     sheet: FactSheet
+    scores: list[str]  # every home-away score the match passed through, for the score check
+    coverage: list[str]  # the coverage text the facts drew on, for the originality check
 
 
 class Stages:
@@ -349,7 +356,15 @@ async def run_full(
         )
     await stages.done(f"{len(sheet.facts)} facts from {len(sources)} source{'' if len(sources) == 1 else 's'}")
 
-    story = Story(sport=req.sport, competition=comp.name, match=chosen.match, pick=pick, sheet=sheet)
+    story = Story(
+        sport=req.sport,
+        competition=comp.name,
+        match=chosen.match,
+        pick=pick,
+        sheet=sheet,
+        scores=[e.score_after for e in chosen.timeline.events if e.score_after],
+        coverage=[f"{r.title}. {r.content}" for r in coverage],
+    )
     return await write(story, STYLES_BY_ID[req.style], llm, stages), story
 
 
@@ -372,20 +387,66 @@ async def write(story: Story, style: StylePreset, llm: Llm, stages: Stages) -> R
         )
     await stages.done("Poem written")
 
+    # guardrails: check, and on failure rewrite once with the problems; then fail closed.
     await stages.begin("guardrails", f"Running {len(CHECKS)} checks")
-    verdict = await llm_step(stages, llm.judge_grounding(poem, story.sheet))
-    known = {f.id for f in story.sheet.facts}
-    fact_ids = {v.index: [i for i in v.fact_ids if i in known] for v in verdict.lines}
-    # The checks themselves are the next guardrails roadmap item.
-    report = GuardrailReport(
-        passed=True,
-        attempts=1,
-        checks=[GuardrailCheck(id=cid, label=label, status="skipped", detail="Not built yet") for cid, label in CHECKS],
+    material = Material(
+        sheet=story.sheet, style=style.id, venue=story.match.venue, scores=story.scores, coverage=story.coverage
     )
-    await stages.done(f"Guardrails not built yet: {len(CHECKS)} checks skipped")
+    verdict, checks = await guard(poem, material, llm, stages)
+    if failed := [c for c in checks if c.status == "fail"]:
+        names = " and ".join(LABELS[c.id].lower() for c in failed)
+        await stages.update("running", f"Attempt 1: {names} failed, rewriting", 0.5, failed[0].problems[0])
+        problems = [p for c in failed for p in c.problems]
+        poem = await llm_step(stages, llm.repair_poem(story.sheet, style, poem, problems))
+        await stages.update("running", "Checking attempt 2", 0.75)
+        verdict, checks = await guard(poem, material, llm, stages)
+    attempts = 1 if not failed else 2
+    report = GuardrailReport(
+        passed=all(c.status != "fail" for c in checks),
+        attempts=attempts,
+        checks=[GuardrailCheck(id=c.id, label=LABELS[c.id], status=c.status, detail=c.detail) for c in checks],
+    )
+    if not report.passed:
+        still = [c for c in checks if c.status == "fail"]
+        names = " and ".join(LABELS[c.id] for c in still)
+        await stages.fail(
+            f"{names} failed on both attempts",
+            RunFailure(
+                "guardrail_failed",
+                "The poem failed the checks twice, so it was not shown. Try again or pick another form.",
+                retryable=True,
+                stage="guardrails",
+                reasons=[p for c in still for p in c.problems],
+                guardrails=report,
+            ),
+        )
+    passed = sum(c.status == "pass" for c in checks)
+    skipped = sum(c.status == "skipped" for c in checks)
+    when = "on the first attempt" if attempts == 1 else "after one rewrite"
+    await stages.done(f"{passed} checks passed {when}" + (f"; {skipped} not built yet" if skipped else ""))
 
     await stages.mark_done("done", "Done")
+    known = {f.id for f in story.sheet.facts}
+    assert verdict is not None  # every check passed, so the judge ran
+    fact_ids = {v.index: [i for i in v.fact_ids if i in known] for v in verdict.lines}
     return result_payload(story, style, poem, fact_ids, report, llm)
+
+
+async def guard(
+    poem: Poem, material: Material, llm: Llm, stages: Stages
+) -> tuple[GroundingVerdict | None, list[Check]]:
+    """Every check on one poem. The deterministic ones run first; the grounding
+    judge, an LLM call, runs only if they all pass, since a failing poem is
+    rewritten anyway."""
+    checks = deterministic(poem, material)
+    verdict = None
+    if any(c.status == "fail" for c in checks):
+        checks.append(Check("grounding", "skipped", "Not run: the checks above failed first"))
+    else:
+        verdict = await llm_step(stages, llm.judge_grounding(poem, material.sheet))
+        checks.append(check_grounding(poem, verdict))
+    checks.append(Check("moderation", "skipped", "Arrives in Phase 1"))
+    return verdict, checks
 
 
 async def load_candidates(

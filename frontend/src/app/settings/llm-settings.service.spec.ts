@@ -47,7 +47,11 @@ describe('LlmSettingsService', () => {
   it('restores settings from sessionStorage', () => {
     sessionStorage.setItem(
       STORAGE_KEY,
-      JSON.stringify({ provider: 'gemini', model: 'gemini/gemini-flash-latest', apiKey: 'sk-saved' }),
+      JSON.stringify({
+        provider: 'gemini',
+        model: 'gemini/gemini-flash-latest',
+        apiKey: 'sk-saved',
+      }),
     );
     expect(TestBed.inject(LlmSettingsService).hasKey()).toBe(true);
   });

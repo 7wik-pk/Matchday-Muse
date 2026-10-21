@@ -45,15 +45,21 @@ def llm_factory(settings: Settings) -> Callable[[LlmChoice], Llm]:
     def make(choice: LlmChoice) -> Llm:
         if settings.mock_llm:
             return MockLlm()
+        from app.llm.analysis_cache import AnalysisCache
         from app.llm.live import LiteLlm  # LiteLLM is slow to import; mock runs never need it
 
         budget = settings.llm_run_token_budget
+        cache = AnalysisCache(settings.analysis_cache_dir) if settings.analysis_cache_dir else None
         if isinstance(choice, ByokLlm):
             known = MODELS_BY_ID.get(choice.model)
             if known is None or known.provider != choice.provider:
                 raise LlmFailure("bad_request", f"{choice.model} is not one of the offered models.", retryable=False)
             return LiteLlm(
-                choice.model, choice.api_key, budget=budget, reasoning_effort=REASONING_EFFORT.get(choice.model)
+                choice.model,
+                choice.api_key,
+                budget=budget,
+                reasoning_effort=REASONING_EFFORT.get(choice.model),
+                analysis_cache=cache,
             )
         if settings.llm_api_key is None:
             raise LlmFailure(
@@ -66,6 +72,7 @@ def llm_factory(settings: Settings) -> Callable[[LlmChoice], Llm]:
             settings.llm_api_key.get_secret_value(),
             budget=budget,
             reasoning_effort=REASONING_EFFORT.get(settings.llm_model),
+            analysis_cache=cache,
         )
 
     return make

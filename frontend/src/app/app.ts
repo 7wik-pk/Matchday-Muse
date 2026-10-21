@@ -1,4 +1,5 @@
 import { Component, computed, effect, inject, signal, untracked } from '@angular/core';
+import { Logo } from './brand/logo';
 import { OutputKind, RangeRequest, RunStartPayload, StyleId } from './contracts/contracts';
 import { Controls, competitionKey } from './controls/controls';
 import { ErrorCard } from './error-card/error-card';
@@ -22,7 +23,16 @@ const CONNECTION_NOTES = {
 
 @Component({
   selector: 'app-root',
-  imports: [Controls, ErrorCard, MockBar, PromptModal, ResultCard, SettingsDrawer, StagePanel],
+  imports: [
+    Controls,
+    ErrorCard,
+    Logo,
+    MockBar,
+    PromptModal,
+    ResultCard,
+    SettingsDrawer,
+    StagePanel,
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

@@ -1,6 +1,7 @@
 """Settings, read from the environment once at startup. Every variable is in .env.example."""
 
 from functools import lru_cache
+from pathlib import Path
 from typing import Self
 
 from pydantic import SecretStr, field_validator, model_validator
@@ -23,9 +24,14 @@ class Settings(BaseSettings):
     llm_api_key: SecretStr | None = None
     # Tokens one run may spend across all its LLM calls.
     llm_run_token_budget: int = 150_000
+    # Development only: reuse the pick, moment and fact draft across runs of
+    # the same week and model (app/llm/analysis_cache.py). Unset: off.
+    analysis_cache_dir: Path | None = None
     log_level: str = "info"
 
-    @field_validator("mcp_auth_token", "llm_api_key", "mcp_server_url", "mcp_server_command", mode="before")
+    @field_validator(
+        "mcp_auth_token", "llm_api_key", "mcp_server_url", "mcp_server_command", "analysis_cache_dir", mode="before"
+    )
     @classmethod
     def empty_is_unset(cls, value: object) -> object:
         # compose passes unset variables as empty strings

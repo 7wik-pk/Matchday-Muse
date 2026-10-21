@@ -7,7 +7,7 @@ flowchart TB
     proxy["<b>LiteLLM Proxy</b><br/>Phase 3: house key for free runs<br/>daily budget cap"]
     sports["<b>Sports data APIs</b><br/>ESPN (Phase 0)<br/>OpenF1, Cricsheet later"]
     search["<b>Exa or Tavily</b><br/>chosen by env var<br/>SEARCH_PROVIDER"]
-    providers["<b>LLM providers</b><br/>Gemini · OpenAI<br/>Anthropic · others"]
+    providers["<b>LLM providers</b><br/>Gemini · Groq<br/>Anthropic · OpenAI"]
 
     browser <-->|"WebSocket /ws + HTTPS"| backend
     backend -.-> langfuse

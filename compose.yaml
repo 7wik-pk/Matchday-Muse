@@ -51,9 +51,13 @@ services:
       # Optional: the server's own key, used when the browser sends none.
       LLM_MODEL: ${LLM_MODEL:-gemini/gemini-flash-latest}
       LLM_API_KEY: ${LLM_API_KEY:-}
+      # Reuse the pick, moment and fact draft when a week is run again with
+      # the same model; set ANALYSIS_CACHE_DIR= (empty) in .env to turn off.
+      ANALYSIS_CACHE_DIR: ${ANALYSIS_CACHE_DIR-/data/analysis-cache}
       LOG_LEVEL: ${LOG_LEVEL:-info}
     volumes:
       - ./backend/app:/app/app:ro
+      - analysis-cache:/data/analysis-cache
     ports:
       - "127.0.0.1:8000:8000"
     depends_on:
@@ -78,3 +82,4 @@ services:
 volumes:
   mcp-cache:
   go-build-cache:
+  analysis-cache:

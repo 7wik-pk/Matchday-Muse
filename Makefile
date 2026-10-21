@@ -1,4 +1,4 @@
-.PHONY: test test-contracts test-mcp test-backend test-frontend gen freeze-mcp dev down logs images dev-mcp record-espn diagrams
+.PHONY: test test-contracts test-mcp test-backend test-frontend gen brand freeze-mcp dev down logs images dev-mcp record-espn diagrams
 
 test: test-contracts test-mcp test-backend test-frontend
 
@@ -77,6 +77,16 @@ images:
 dev-mcp:
 	cd mcp-server && go build -o bin/mcp-server ./cmd/server
 	npx -y @modelcontextprotocol/inspector@2.9.0 mcp-server/bin/mcp-server
+
+# Redraws the logo from docs/brand/make_logo.py: the SVGs, the header's inline
+# SVG, and the favicon and touch icon rasters (needs rsvg-convert and ImageMagick).
+brand: frontend/node_modules
+	python3 docs/brand/make_logo.py
+	cd frontend && npx prettier --write --log-level warn src/app/brand/logo.html
+	for s in 16 32 48; do rsvg-convert -w $$s -h $$s docs/brand/logo.svg -o /tmp/mm-favicon-$$s.png; done
+	magick /tmp/mm-favicon-16.png /tmp/mm-favicon-32.png /tmp/mm-favicon-48.png frontend/public/favicon.ico
+	rsvg-convert -w 180 -h 180 docs/brand/app-icon.svg -o frontend/public/apple-touch-icon.png
+	rm -f /tmp/mm-favicon-*.png
 
 # Re-records the backend's MCP fixtures through the real client and Go server
 # (needs the network for ESPN).

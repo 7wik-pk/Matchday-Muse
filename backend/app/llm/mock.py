@@ -1,6 +1,7 @@
 """A deterministic stand-in for the LLM stages, so the pipeline runs end to end
 without a key. Its picks follow the drama signals; its "poem" is the beats'
-facts, one stanza each, and says so in its first line.
+facts in plain sentences, padded to the form's shape, and says so in its
+first lines. It passes every guardrail by construction.
 """
 
 from collections.abc import Awaitable, Callable, Sequence
@@ -21,7 +22,36 @@ from app.sports import SportsData
 
 KEY_EVENTS = GOALS | {"red_card", "penalty_miss", "var"}
 MAX_BEATS = 5
-HOOK = "No LLM yet: the mock writer lines up the facts instead."
+HOOK = ["No model wrote these lines: a mock writer", "sets out the moment's facts in order."]
+FILLER = [
+    "and still the stands sang on,",
+    "while the evening light came down,",
+    "and every song rolled round the ground,",
+    "till the players walked off slow.",
+]
+# Fixed forms' stanza shapes; other forms get quatrains.
+SHAPES = {"sonnet": [4, 4, 4, 2], "villanelle": [3, 3, 3, 3, 3, 4], "limericks": [5, 5, 5], "clerihews": [4, 4, 4]}
+
+
+def event_fact(e: Event) -> str:
+    """One plain sentence per event, naming only the match's people and teams."""
+    who = e.actors[0] if e.actors else "a player"
+    team = e.team or "their side"
+    score = (e.score_after or "").replace("-", "–")
+    match e.type:
+        case "goal":
+            return f"{e.clock}: {who} scored for {team}, making it {score}."
+        case "penalty_goal":
+            return f"{e.clock}: {who} scored a penalty for {team}, making it {score}."
+        case "own_goal":
+            return f"{e.clock}: an own goal by {who} made it {score}."
+        case "red_card":
+            return f"{e.clock}: {who} of {team} was sent off."
+        case "penalty_miss":
+            return f"{e.clock}: {who} missed a penalty."
+        case "var":
+            return f"{e.clock}: a VAR review changed a decision."
+    return f"{e.clock}: {e.description}"
 
 
 def key_events(c: Candidate) -> list[Event]:
@@ -107,7 +137,7 @@ class MockLlm:
         wanted = set(moment.beats) | {e.source_ref for e in key_events(candidate)}
         for e in t.events:
             if e.source_ref in wanted:
-                add(f"{e.clock}: {e.description}", "event", e.source_ref)
+                add(event_fact(e), "event", e.source_ref)
         if len(t.team_stats) == 2:
             a, b = t.team_stats
             add(
@@ -124,15 +154,22 @@ class MockLlm:
     async def write_poem(self, sheet: FactSheet, style: StylePreset) -> Poem:
         by_ref = {f.source_ref: f for f in sheet.facts}
         score = next(f for f in sheet.facts if f.kind == "score")
-        stanzas: list[list[tuple[str, list[str]]]] = [[(HOOK, [])]]
-        stanzas += [[(by_ref[ref].text, [by_ref[ref].id])] for ref in sheet.moment.beats if ref in by_ref]
-        stanzas.append([(score.text, [score.id])])
-        self._line_facts = {text: ids for stanza in stanzas for text, ids in stanza}
-        home, away = [*sheet.teams_or_participants, "", ""][:2]
-        return Poem(
-            headline=f"A mock {style.label.lower()}: {home} v {away}",
-            stanzas=[PoemStanza(lines=[text for text, _ in stanza]) for stanza in stanzas],
-        )
+        content: list[tuple[str, list[str]]] = [(line, []) for line in HOOK]
+        content += [(by_ref[ref].text, [by_ref[ref].id]) for ref in sheet.moment.beats if ref in by_ref]
+        shape = SHAPES.get(style.id) or [4] * max(2, -(-(len(content) + 1) // 4))
+        total = sum(shape)
+        lines = content[: total - 1]
+        lines += [(FILLER[i % len(FILLER)], []) for i in range(total - 1 - len(lines))]
+        lines.append((score.text, [score.id]))
+        self._line_facts = dict(lines)
+        stanzas, start = [], 0
+        for size in shape:
+            stanzas.append(PoemStanza(lines=[text for text, _ in lines[start : start + size]]))
+            start += size
+        return Poem(headline=f"A mock {style.label.lower()}", stanzas=stanzas)
+
+    async def repair_poem(self, sheet: FactSheet, style: StylePreset, poem: Poem, problems: Sequence[str]) -> Poem:
+        return await self.write_poem(sheet, style)
 
     async def judge_grounding(self, poem: Poem, sheet: FactSheet) -> GroundingVerdict:
         lines = [poem.headline] + [line for stanza in poem.stanzas for line in stanza.lines]

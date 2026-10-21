@@ -12,7 +12,7 @@ import json
 import logging
 import os
 import re
-from collections.abc import Awaitable, Callable, Sequence
+from collections.abc import Awaitable, Callable, Iterable, Sequence
 from pathlib import Path
 from typing import Any
 
@@ -47,6 +47,7 @@ from app.contracts.pipeline.match_pick import MatchPick
 from app.contracts.pipeline.moment_pick import MomentPick
 from app.contracts.pipeline.poem import Poem
 from app.contracts.ws.server_message import StylePreset
+from app.llm.analysis_cache import AnalysisCache
 from app.llm.base import Candidate, LlmFailure, Usage
 from app.sports import SportsData, Timeline, ToolError
 
@@ -63,6 +64,7 @@ PROMPT_VERSIONS = {
     "build_fact_sheet": "v1",
     "generate": "v1",
     "judge_grounding": "v1",
+    "repair_poem": "v1",
     "styles": "v1",
 }
 
@@ -129,10 +131,23 @@ def results_block(query: str, results: Sequence[Result]) -> str:
     return f'<search_results query="{escape(query)}">\n{body}\n</search_results>'
 
 
+def short_ids(t: Timeline) -> dict[str, str]:
+    """Each event's source_ref by a short id, e1, e2 and so on in match order.
+    Prompts show the short ids, which cost a fraction of the tokens."""
+    return {f"e{i}": e.source_ref for i, e in enumerate(t.events, start=1)}
+
+
+def to_refs(ids: Iterable[str], t: Timeline) -> list[str]:
+    """The model's short ids as source_refs; anything else is passed through
+    for the pipeline's own checks to judge."""
+    refs = short_ids(t)
+    return [refs.get(i.strip().strip("[]").strip().lower(), i) for i in ids]
+
+
 def event_lines(t: Timeline) -> str:
     return "\n".join(
-        f"[{e.source_ref}] {e.clock} {e.type}{f' ({e.team})' if e.team else ''}: {e.description}"
-        for e in t.events
+        f"[e{i}] {e.clock} {e.type}{f' ({e.team})' if e.team else ''}: {e.description}"
+        for i, e in enumerate(t.events, start=1)
         if e.type not in NOISE_EVENTS
     )
 
@@ -175,6 +190,22 @@ def match_header(c: Candidate) -> str:
     return f"Match: {m.title}, {m.league}, kickoff {m.kickoff}, at {venue}.\nFinal result: {m.final_result}."
 
 
+def poem_brief(sheet: FactSheet) -> str:
+    """What the writer works from: the fact sheet, the beats and the roster."""
+    by_ref = {f.source_ref: f for f in sheet.facts}
+    beats = [f"- {by_ref[r].id}: {by_ref[r].text}" for r in sheet.moment.beats if r in by_ref]
+    roster = "\n".join(
+        f"- {p.canonical}" + (f" (also: {', '.join(p.variants)})" if p.variants else "") for p in sheet.roster
+    )
+    return (
+        f"Competition: {sheet.competition}\nTeams: {', '.join(sheet.teams_or_participants)}\n"
+        f"Final result: {sheet.final_result}\n\nThe moment: {sheet.moment.title}\n"
+        f"Why it matters: {sheet.moment.why_it_matters}\n\nBeats, in match order:\n" + "\n".join(beats) + "\n\n"
+        "Facts (the only claims you may make):\n" + "\n".join(f"- {f.id}: {f.text}" for f in sheet.facts) + "\n\n"
+        f"Roster (the only people you may name):\n{roster}"
+    )
+
+
 _FENCE = re.compile(r"^```(?:json)?\s*|\s*```$")
 
 
@@ -189,6 +220,7 @@ class LiteLlm:
         cost: Callable[..., float] | None = None,
         sleep: Callable[[float], Awaitable[None]] = asyncio.sleep,
         reasoning_effort: str | None = None,
+        analysis_cache: AnalysisCache | None = None,
     ) -> None:
         self.model = model
         self._key = api_key
@@ -200,6 +232,7 @@ class LiteLlm:
         self.notify: Callable[[str], Awaitable[None]] | None = None
         self._sleep = sleep
         self._reasoning = {"reasoning_effort": reasoning_effort} if reasoning_effort else {}
+        self._cache = analysis_cache
         self.provider = PROVIDER_NAMES.get(model.split("/", 1)[0], model.split("/", 1)[0])
 
     # The calls
@@ -211,6 +244,16 @@ class LiteLlm:
         on_search: Callable[[str], Awaitable[None]],
     ) -> MatchPick:
         lines = "\n".join(candidate_line(c) for c in candidates)
+        return await self._cached(
+            "pick_match",
+            MatchPick,
+            [prompt("pick_match"), prompt("pick_match_decide"), lines],
+            lambda: self._pick_match(lines, tools, on_search),
+        )
+
+    async def _pick_match(
+        self, lines: str, tools: SportsData, on_search: Callable[[str], Awaitable[None]]
+    ) -> MatchPick:
         messages: list[dict[str, Any]] = [
             {"role": "system", "content": prompt("pick_match")},
             {"role": "user", "content": f"Matches:\n{lines}"},
@@ -257,11 +300,22 @@ class LiteLlm:
         )
 
     async def pick_moment(self, candidate: Candidate) -> MomentPick:
-        user = f"{match_header(candidate)}\n\nTimeline:\n{event_lines(candidate.timeline)}"
-        return await self._structured(MomentPick, prompt("pick_moment"), user)
+        t = candidate.timeline
+        user = f"{match_header(candidate)}\n\nTimeline:\n{event_lines(t)}"
+
+        async def produce() -> MomentPick:
+            m = await self._structured(MomentPick, prompt("pick_moment"), user)
+            return m.model_copy(update={"event_refs": to_refs(m.event_refs, t), "beats": to_refs(m.beats, t)})
+
+        return await self._cached("pick_moment", MomentPick, [prompt("pick_moment"), user], produce)
 
     async def build_facts(self, candidate: Candidate, moment: MomentPick, coverage: Sequence[Result]) -> FactDraft:
         t = candidate.timeline
+        by_ref = {ref: short_id for short_id, ref in short_ids(t).items()}
+
+        def short(refs: Sequence[str]) -> list[str]:
+            return [by_ref.get(r, r) for r in refs]
+
         stats = "\n".join(
             f"{s.team}: {s.possession_pct:g}% possession, {s.shots} shots ({s.shots_on_target} on target), "
             f"{s.corners} corners, {s.fouls} fouls, {s.yellow_cards} yellow and {s.red_cards} red cards, "
@@ -270,24 +324,32 @@ class LiteLlm:
         )
         user = (
             f"{match_header(candidate)}\nMatch page URL (the source_ref for the final score and statistics): "
-            f"{t.sources[0].url}\n\nMoment: {moment.title}\nMoment refs: {', '.join(moment.event_refs)}\n"
-            f"Beats: {', '.join(moment.beats)}\n\nTimeline:\n{event_lines(t)}\n\nTeam statistics:\n{stats or 'none'}"
-            f"\n\nCoverage:\n{results_block('coverage of this match', coverage)}"
+            f"{t.sources[0].url}\n\nMoment: {moment.title}\nMoment refs: {', '.join(short(moment.event_refs))}\n"
+            f"Beats: {', '.join(short(moment.beats))}\n\nTimeline:\n{event_lines(t)}\n\n"
+            f"Team statistics:\n{stats or 'none'}\n\nCoverage:\n{results_block('coverage of this match', coverage)}"
         )
-        return await self._structured(FactDraft, prompt("build_fact_sheet"), user)
+
+        async def produce() -> FactDraft:
+            draft = await self._structured(FactDraft, prompt("build_fact_sheet"), user)
+            facts = [
+                f.model_copy(update={"source_ref": to_refs([f.source_ref], t)[0]})
+                if not f.source_ref.startswith("http")
+                else f
+                for f in draft.facts
+            ]
+            return FactDraft(facts=facts)
+
+        return await self._cached("build_fact_sheet", FactDraft, [prompt("build_fact_sheet"), user], produce)
 
     async def write_poem(self, sheet: FactSheet, style: StylePreset) -> Poem:
-        by_ref = {f.source_ref: f for f in sheet.facts}
-        beats = [f"- {by_ref[r].id}: {by_ref[r].text}" for r in sheet.moment.beats if r in by_ref]
-        roster = "\n".join(
-            f"- {p.canonical}" + (f" (also: {', '.join(p.variants)})" if p.variants else "") for p in sheet.roster
-        )
+        system = f"{prompt('generate')}\n{style_prompt(style)}"
+        return await self._structured(Poem, system, poem_brief(sheet))
+
+    async def repair_poem(self, sheet: FactSheet, style: StylePreset, poem: Poem, problems: Sequence[str]) -> Poem:
+        previous = "\n\n".join("\n".join(s.lines) for s in poem.stanzas)
         user = (
-            f"Competition: {sheet.competition}\nTeams: {', '.join(sheet.teams_or_participants)}\n"
-            f"Final result: {sheet.final_result}\n\nThe moment: {sheet.moment.title}\n"
-            f"Why it matters: {sheet.moment.why_it_matters}\n\nBeats, in match order:\n" + "\n".join(beats) + "\n\n"
-            "Facts (the only claims you may make):\n" + "\n".join(f"- {f.id}: {f.text}" for f in sheet.facts) + "\n\n"
-            f"Roster (the only people you may name):\n{roster}"
+            f"{poem_brief(sheet)}\n\nYour previous attempt:\nHeadline: {poem.headline}\n\n{previous}\n\n"
+            "The checks it failed:\n" + "\n".join(f"- {p}" for p in problems) + f"\n\n{prompt('repair_poem')}"
         )
         system = f"{prompt('generate')}\n{style_prompt(style)}"
         return await self._structured(Poem, system, user)
@@ -303,6 +365,26 @@ class LiteLlm:
         return await self._structured(GroundingVerdict, prompt("judge_grounding"), user)
 
     # Plumbing
+
+    async def _cached[M: BaseModel](
+        self, stage: str, model: type[M], parts: Sequence[str], produce: Callable[[], Awaitable[M]]
+    ) -> M:
+        """An analysis stage's answer from the cache, or from the model and then cached."""
+        if self._cache is None:
+            return await produce()
+        key = AnalysisCache.key(stage, self.model, json.dumps(self._reasoning, sort_keys=True), *parts)
+        if (hit := self._cache.get(key)) is not None:
+            try:
+                value = model.model_validate_json(hit)
+            except ValidationError:
+                pass  # an entry from older contracts: answer afresh
+            else:
+                if self.notify:
+                    await self.notify("Reusing this stage's answer from an earlier run")
+                return value
+        value = await produce()
+        self._cache.put(key, value.model_dump_json())
+        return value
 
     async def _search(
         self, call: Any, done: int, tools: SportsData, on_search: Callable[[str], Awaitable[None]]
