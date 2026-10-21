@@ -11,7 +11,7 @@ import asyncio
 import contextlib
 import logging
 import secrets
-from collections.abc import Callable
+from collections.abc import Awaitable, Callable
 from contextlib import AbstractAsyncContextManager
 from datetime import UTC, datetime
 from typing import Any
@@ -22,6 +22,7 @@ from pydantic import BaseModel, TypeAdapter, ValidationError
 from app.contracts.mcp.list_competitions_output import Competition
 from app.contracts.ws.client_message import (
     ClientMessage,
+    LlmChoice,
     PromptAnswer,
     RunCancel,
     RunRetell,
@@ -30,6 +31,7 @@ from app.contracts.ws.client_message import (
     RunStartPayload,
     SessionHello,
 )
+from app.contracts.ws.common import StageId
 from app.contracts.ws.server_message import Competition as CompetitionInfo
 from app.contracts.ws.server_message import (
     RunAccepted,
@@ -43,7 +45,7 @@ from app.contracts.ws.server_message import (
     StageUpdate,
     StageUpdatePayload,
 )
-from app.llm.base import Llm
+from app.llm.base import Llm, LlmFailure
 from app.pipeline.run import (
     RETELL_STAGES,
     STAGE_LABELS,
@@ -62,6 +64,7 @@ log = logging.getLogger(__name__)
 CLIENT_MESSAGE: TypeAdapter[ClientMessage] = TypeAdapter(ClientMessage)
 
 type SportsFactory = Callable[[], AbstractAsyncContextManager[SportsData]]
+type RunBody = Callable[[ActiveRun, Stages], Awaitable[tuple[RunResultPayload, Story]]]
 
 
 def now() -> datetime:
@@ -110,7 +113,7 @@ class Session:
         ws: WebSocket,
         sports: SportsFactory,
         competitions: Competitions,
-        llm: Callable[[], Llm],
+        llm: Callable[[LlmChoice], Llm],
     ) -> None:
         self.ws = ws
         self.sports = sports
@@ -136,7 +139,9 @@ class Session:
         async with self.send_lock:
             await self.ws.send_json(wire(message))
 
-    async def session_error(self, code: str, message: str, reasons: list[str] | None = None) -> None:
+    async def session_error(
+        self, code: str, message: str, reasons: list[str] | None = None, *, retryable: bool = False
+    ) -> None:
         await self.send(
             RunError(
                 v=1,
@@ -147,7 +152,7 @@ class Session:
                 payload=RunErrorPayload(
                     code=code,
                     message=message,
-                    retryable=False,
+                    retryable=retryable,
                     stage=None,
                     reasons=reasons or [],
                     guardrails=None,
@@ -228,7 +233,8 @@ class Session:
             payload.style,
             payload.llm.mode,
         )
-        self.launch(lambda run, stages, llm: self.full(payload, run, stages, llm), list(STAGE_LABELS))
+        if llm := await self.make_llm(payload.llm):
+            self.launch(lambda run, stages: self.full(payload, run, stages, llm), list(STAGE_LABELS), llm)
 
     async def retell(self, payload: RunRetellPayload) -> None:
         if self.busy():
@@ -257,10 +263,20 @@ class Session:
             return
         log.info("run.retell from=%s style=%s llm=%s", payload.from_run_id, payload.style, payload.llm.mode)
 
-        async def body(run: ActiveRun, stages: Stages, llm: Llm) -> tuple[RunResultPayload, Story]:
-            return await run_retell(payload, story, llm, stages), story
+        if llm := await self.make_llm(payload.llm):
 
-        self.launch(body, RETELL_STAGES)
+            async def body(run: ActiveRun, stages: Stages) -> tuple[RunResultPayload, Story]:
+                return await run_retell(payload, story, llm, stages), story
+
+            self.launch(body, RETELL_STAGES, llm)
+
+    async def make_llm(self, choice: LlmChoice) -> Llm | None:
+        """The run's LLM, or None after telling the client why there is none."""
+        try:
+            return self.new_llm(choice)
+        except LlmFailure as e:
+            await self.session_error(e.code, e.message, e.reasons, retryable=e.retryable)
+            return None
 
     async def full(
         self, payload: RunStartPayload, run: ActiveRun, stages: Stages, llm: Llm
@@ -270,18 +286,24 @@ class Session:
         async with self.sports() as sports:
             return await run_full(payload, self.timezone, sports, comps, llm, stages)
 
-    def launch(self, body: Callable[..., Any], stages: list[Any]) -> None:
+    def launch(self, body: RunBody, stages: list[StageId], llm: Llm) -> None:
         run = ActiveRun(f"r_{secrets.token_hex(6)}")
         self.active = run
-        run.task = asyncio.create_task(self.drive(run, body, stages))
+        run.task = asyncio.create_task(self.drive(run, body, stages, llm))
 
-    async def drive(self, run: ActiveRun, body: Callable[..., Any], stage_ids: list[Any]) -> None:
+    async def drive(self, run: ActiveRun, body: RunBody, stage_ids: list[StageId], llm: Llm) -> None:
         async def emit(update: StageUpdatePayload) -> None:
             await self.send(
                 StageUpdate(v=1, type="stage.update", run_id=run.run_id, seq=run.next_seq(), ts=now(), payload=update)
             )
 
         stages = Stages(emit, run.cancelled)
+
+        async def notify(message: str) -> None:
+            if stages.current is not None:
+                await stages.update("running", message)
+
+        llm.notify = notify
         try:
             await self.send(
                 RunAccepted(
@@ -293,8 +315,18 @@ class Session:
                     payload=RunAcceptedPayload(stages=stage_infos(stage_ids)),
                 )
             )
-            result, story = await body(run, stages, self.new_llm())
+            result, story = await body(run, stages)
             self.stories[run.run_id] = story
+            u = llm.usage
+            log.info(
+                "run %s done model=%s tokens=%d/%d cost=%s prompts=%s",
+                run.run_id,
+                u.model,
+                u.input_tokens,
+                u.output_tokens,
+                u.cost_usd,
+                ",".join(f"{k}.{v}" for k, v in sorted(llm.prompt_versions.items())) or "none",
+            )
             await self.send(
                 RunResult(v=1, type="run.result", run_id=run.run_id, seq=run.next_seq(), ts=now(), payload=result)
             )
@@ -318,6 +350,8 @@ class Session:
             self.active = None
 
     async def run_error(self, run: ActiveRun, f: RunFailure) -> None:
+        # Reasons are safe to log: LLM errors have the key scrubbed out.
+        log.warning("run %s failed code=%s stage=%s reasons=%s", run.run_id, f.code, f.stage, f.reasons)
         # The socket may already be gone.
         with contextlib.suppress(WebSocketDisconnect, RuntimeError):
             await self.send(

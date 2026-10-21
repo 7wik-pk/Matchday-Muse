@@ -14,10 +14,10 @@ Matchday Muse (working title) picks the most dramatic or funny moment from recen
   - the Angular UI (shown above), with the reveal, "Show your working" and retelling;
   - the Go MCP server, serving Premier League matches from ESPN;
   - the FastAPI backend, running every stage on real match data;
+  - the LLM stages through LiteLLM: picking the match (with coverage searches), the moment, the fact sheet, the poem, and the grounding judge behind Show your working, on your own Gemini, Groq, Anthropic or OpenAI key;
   - all of it in docker compose.
 - **Pending:**
-  - **The LLM stages, through LiteLLM.** Until then a mock stands in, so a real run's "poem" is the key moments' facts, not verse; the poem above is a hand-written sample.
-  - **The guardrail checks.** They currently show as skipped.
+  - **The guardrail checks.** They currently show as skipped, so a poem is shown without its score, names, quotes and form being checked.
   - **A golden set of past weeks and a baseline eval.**
 
 ## Try it
@@ -34,7 +34,7 @@ make test           # contract checks, Go, backend and frontend tests, offline
 
 `make dev` creates `.env` from [.env.example](.env.example) with a fresh `MCP_AUTH_TOKEN` the first time. While it runs, frontend changes hot-reload and Go changes restart the server, which recompiles in a couple of seconds. After changing dependencies, rerun `make dev`. `make images` builds the deployable images.
 
-The poem is a placeholder until the LLM stages land: the mock writer lines up the moment's facts and says so. To replay a scripted run instead of the backend, open `?mock=<script>`, for example `?mock=guardrail-failed&speed=0`; the scripts are in [contracts/ws/examples/](contracts/ws/examples/). See also [backend/README.md](backend/README.md) and [mcp-server/README.md](mcp-server/README.md).
+To write a poem, add your key under **Your LLM** in the top right (free Gemini and Groq keys work). Keys stay in the browser tab's session storage and travel only with each run. Set `MOCK_LLM=true` in `.env` to run without a key: a mock then lines up the moment's facts instead of verse. To replay a scripted run instead of the backend, open `?mock=<script>`, for example `?mock=guardrail-failed&speed=0`; the scripts are in [contracts/ws/examples/](contracts/ws/examples/). See also [backend/README.md](backend/README.md) and [mcp-server/README.md](mcp-server/README.md).
 
 ## How it works
 

@@ -13,6 +13,7 @@ export const PROVIDER_LABELS: Record<string, string> = {
   gemini: 'Google Gemini',
   openai: 'OpenAI',
   anthropic: 'Anthropic',
+  groq: 'Groq',
 };
 
 export const providerLabel = (provider: string) => PROVIDER_LABELS[provider] ?? provider;

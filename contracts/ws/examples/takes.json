@@ -373,7 +373,7 @@
         ]
       },
       "usage": {
-        "model": "gemini/gemini-flash",
+        "model": "gemini/gemini-flash-latest",
         "inputTokens": 21840,
         "outputTokens": 2310,
         "costUsd": 0.0042
@@ -660,7 +660,7 @@
         ]
       },
       "usage": {
-        "model": "gemini/gemini-flash",
+        "model": "gemini/gemini-flash-latest",
         "inputTokens": 21840,
         "outputTokens": 2310,
         "costUsd": 0.0042
@@ -989,7 +989,7 @@
         ]
       },
       "usage": {
-        "model": "gemini/gemini-flash",
+        "model": "gemini/gemini-flash-latest",
         "inputTokens": 21840,
         "outputTokens": 2310,
         "costUsd": 0.0042
@@ -1329,7 +1329,7 @@
         ]
       },
       "usage": {
-        "model": "gemini/gemini-flash",
+        "model": "gemini/gemini-flash-latest",
         "inputTokens": 21840,
         "outputTokens": 2310,
         "costUsd": 0.0042
@@ -1613,7 +1613,7 @@
         ]
       },
       "usage": {
-        "model": "gemini/gemini-flash",
+        "model": "gemini/gemini-flash-latest",
         "inputTokens": 21840,
         "outputTokens": 2310,
         "costUsd": 0.0042
@@ -1937,7 +1937,7 @@
         ]
       },
       "usage": {
-        "model": "gemini/gemini-flash",
+        "model": "gemini/gemini-flash-latest",
         "inputTokens": 21840,
         "outputTokens": 2310,
         "costUsd": 0.0042
@@ -2235,7 +2235,7 @@
         ]
       },
       "usage": {
-        "model": "gemini/gemini-flash",
+        "model": "gemini/gemini-flash-latest",
         "inputTokens": 21840,
         "outputTokens": 2310,
         "costUsd": 0.0042
@@ -2530,7 +2530,7 @@
         ]
       },
       "usage": {
-        "model": "gemini/gemini-flash",
+        "model": "gemini/gemini-flash-latest",
         "inputTokens": 21840,
         "outputTokens": 2310,
         "costUsd": 0.0042

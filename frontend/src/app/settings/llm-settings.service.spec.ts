@@ -22,7 +22,7 @@ describe('LlmSettingsService', () => {
     expect(settings.llm()).toEqual({
       mode: 'byok',
       provider: 'gemini',
-      model: 'gemini/gemini-flash',
+      model: 'gemini/gemini-flash-latest',
       apiKey: 'sk-test',
     });
   });
@@ -34,7 +34,7 @@ describe('LlmSettingsService', () => {
     TestBed.tick();
     expect(JSON.parse(sessionStorage.getItem(STORAGE_KEY)!)).toEqual({
       provider: 'anthropic',
-      model: 'anthropic/claude-haiku',
+      model: 'anthropic/claude-haiku-5-5',
       apiKey: 'sk-test',
     });
 
@@ -47,7 +47,7 @@ describe('LlmSettingsService', () => {
   it('restores settings from sessionStorage', () => {
     sessionStorage.setItem(
       STORAGE_KEY,
-      JSON.stringify({ provider: 'gemini', model: 'gemini/gemini-flash', apiKey: 'sk-saved' }),
+      JSON.stringify({ provider: 'gemini', model: 'gemini/gemini-flash-latest', apiKey: 'sk-saved' }),
     );
     expect(TestBed.inject(LlmSettingsService).hasKey()).toBe(true);
   });
@@ -57,6 +57,6 @@ describe('LlmSettingsService', () => {
     settings.provider.set('anthropic');
     settings.model.set('anthropic/retired-model');
     settings.applyRegistry(await registry());
-    expect(settings.model()).toBe('anthropic/claude-haiku');
+    expect(settings.model()).toBe('anthropic/claude-haiku-5-5');
   });
 });

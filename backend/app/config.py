@@ -3,7 +3,7 @@
 from functools import lru_cache
 from typing import Self
 
-from pydantic import SecretStr, model_validator
+from pydantic import SecretStr, field_validator, model_validator
 from pydantic_settings import BaseSettings
 
 MIN_TOKEN_LENGTH = 32
@@ -16,9 +16,20 @@ class Settings(BaseSettings):
     mcp_server_command: str | None = None
     mcp_auth_token: SecretStr | None = None
 
-    # The real LLM stages arrive in the next roadmap item.
-    mock_llm: bool = True
+    # MOCK_LLM=true runs every LLM stage on MockLlm: tests, demos, no key.
+    mock_llm: bool = False
+    # The development key and model behind llm.mode "house" (Phases 0 to 2).
+    llm_model: str = "gemini/gemini-flash-latest"
+    llm_api_key: SecretStr | None = None
+    # Tokens one run may spend across all its LLM calls.
+    llm_run_token_budget: int = 150_000
     log_level: str = "info"
+
+    @field_validator("mcp_auth_token", "llm_api_key", "mcp_server_url", "mcp_server_command", mode="before")
+    @classmethod
+    def empty_is_unset(cls, value: object) -> object:
+        # compose passes unset variables as empty strings
+        return None if value == "" else value
 
     @model_validator(mode="after")
     def check(self) -> Self:
@@ -28,8 +39,6 @@ class Settings(BaseSettings):
             token = self.mcp_auth_token.get_secret_value() if self.mcp_auth_token else ""
             if len(token) < MIN_TOKEN_LENGTH:
                 raise ValueError(f"MCP_SERVER_URL needs MCP_AUTH_TOKEN of at least {MIN_TOKEN_LENGTH} characters")
-        if not self.mock_llm:
-            raise ValueError("the real LLM stages are not built yet; set MOCK_LLM=true")
         return self
 
 

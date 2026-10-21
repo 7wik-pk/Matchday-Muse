@@ -1,0 +1,1 @@
+Shakespearean sonnet: exactly 14 lines in four stanzas, three quatrains rhymed ABAB CDCD EFEF and a closing couplet GG, roughly in iambic pentameter. An elevated, argumentative voice; the turn comes in the couplet, which lands the result. Stock figures allowed: Fortune, Time.

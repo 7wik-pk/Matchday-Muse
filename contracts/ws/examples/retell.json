@@ -10,7 +10,7 @@
     "llm": {
       "mode": "byok",
       "provider": "gemini",
-      "model": "gemini/gemini-flash",
+      "model": "gemini/gemini-flash-latest",
       "apiKey": "mock-key-not-real"
     }
   },
@@ -412,7 +412,7 @@
             ]
           },
           "usage": {
-            "model": "gemini/gemini-flash",
+            "model": "gemini/gemini-flash-latest",
             "inputTokens": 6120,
             "outputTokens": 940,
             "costUsd": 0.0011

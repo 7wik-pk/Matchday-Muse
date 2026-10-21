@@ -83,6 +83,13 @@
           To stay on the free tier, don't attach a billing account to the Google Cloud project.
         </p>
       </div>
+    } @else if (settings.provider() === 'groq') {
+      <div class="help">
+        <a href="https://console.groq.com/keys" target="_blank" rel="noopener noreferrer">
+          Get a free Groq key
+        </a>
+        <p class="hint">The free tier limits tokens per minute; a busy run may pause to wait.</p>
+      </div>
     }
   </aside>
 }

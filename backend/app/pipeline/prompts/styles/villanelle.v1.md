@@ -1,0 +1,1 @@
+Villanelle: exactly 19 lines on two rhymes, five tercets rhymed ABA and a closing quatrain ABAA. Line 1 returns as lines 6, 12 and 18; line 3 returns as lines 9, 15 and 19. The refrains should bear the weight of the moment. A haunted, circling voice.

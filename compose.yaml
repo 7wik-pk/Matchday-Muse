@@ -47,7 +47,10 @@ services:
     environment:
       MCP_SERVER_URL: http://mcp-server:8081/mcp
       MCP_AUTH_TOKEN: ${MCP_AUTH_TOKEN:?set MCP_AUTH_TOKEN in .env; make .env creates one}
-      MOCK_LLM: ${MOCK_LLM:-true}
+      MOCK_LLM: ${MOCK_LLM:-false}
+      # Optional: the server's own key, used when the browser sends none.
+      LLM_MODEL: ${LLM_MODEL:-gemini/gemini-flash-latest}
+      LLM_API_KEY: ${LLM_API_KEY:-}
       LOG_LEVEL: ${LOG_LEVEL:-info}
     volumes:
       - ./backend/app:/app/app:ro

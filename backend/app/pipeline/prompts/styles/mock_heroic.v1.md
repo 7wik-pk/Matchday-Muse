@@ -1,0 +1,1 @@
+Mock-heroic couplets: 16 to 24 lines in rhyming couplets (AA BB CC), treating a football match as an epic of gods and heroes, in the manner of an 18th-century epic spoof. Grand invocations and epic similes for small events; the joke is the mismatch. Stock figures allowed: the Muse, Fate, the gods. Group the couplets into stanzas of 4 to 8 lines.

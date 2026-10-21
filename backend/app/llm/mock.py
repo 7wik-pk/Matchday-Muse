@@ -3,7 +3,7 @@ without a key. Its picks follow the drama signals; its "poem" is the beats'
 facts, one stanza each, and says so in its first line.
 """
 
-from collections.abc import Sequence
+from collections.abc import Awaitable, Callable, Sequence
 
 from app.contracts.mcp.get_match_events_output import Event
 from app.contracts.mcp.search_coverage_output import Result
@@ -49,9 +49,16 @@ def decisive(c: Candidate) -> Event | None:
 class MockLlm:
     def __init__(self) -> None:
         self.usage = Usage(model="mock")
+        self.prompt_versions: dict[str, str] = {}
+        self.notify: Callable[[str], Awaitable[None]] | None = None
         self._line_facts: dict[str, list[str]] = {}
 
-    async def pick_match(self, candidates: Sequence[Candidate], tools: SportsData) -> MatchPick:
+    async def pick_match(
+        self,
+        candidates: Sequence[Candidate],
+        tools: SportsData,
+        on_search: Callable[[str], Awaitable[None]],
+    ) -> MatchPick:
         ranked = sorted(candidates, key=lambda c: (-c.signals.total, c.match.kickoff, c.match.id))
         best = ranked[0]
         s = best.signals

@@ -4,18 +4,20 @@ finished run's story and runs only generate, guardrails and done.
 """
 
 import asyncio
-from collections.abc import Awaitable, Callable, Sequence
+from collections.abc import Awaitable, Callable, Iterable, Sequence
 from dataclasses import dataclass
+from datetime import datetime
 from typing import Literal, NoReturn
 from urllib.parse import urlparse
 
 from app.contracts.mcp.find_matches_output import Match
 from app.contracts.mcp.get_match_events_output import Event
 from app.contracts.mcp.list_competitions_output import Competition
-from app.contracts.mcp.search_coverage_output import Result
+from app.contracts.mcp.search_coverage_output import Result, SearchCoverageOutput
 from app.contracts.pipeline.fact_sheet import FactSheet
 from app.contracts.pipeline.guardrail_report import GuardrailCheck, GuardrailReport
 from app.contracts.pipeline.match_pick import MatchPick
+from app.contracts.pipeline.moment_pick import MomentPick
 from app.contracts.pipeline.person import Person
 from app.contracts.pipeline.poem import Poem
 from app.contracts.pipeline.source_link import SourceLink
@@ -38,7 +40,7 @@ from app.contracts.ws.server_message import (
 from app.contracts.ws.server_message import (
     Usage as ResultUsage,
 )
-from app.llm.base import Candidate, Llm
+from app.llm.base import Candidate, ErrorCode, Llm, LlmFailure
 from app.pipeline import ranges, signals
 from app.presets import STYLES_BY_ID
 from app.sports import SportsData, Timeline, ToolError
@@ -71,11 +73,6 @@ CHECKS: list[tuple[str, str]] = [
 LOAD_CONCURRENCY = 4
 SHORTLIST = 3
 MAX_SOURCES = 5
-
-type ErrorCode = Literal[
-    "bad_request", "no_matches", "cancelled", "stage_failed", "timeout", "budget_exceeded",
-    "guardrail_failed", "quota_exceeded", "provider_error", "interrupted",
-]  # fmt: skip
 
 
 def stage_infos(stages: Sequence[StageId]) -> list[StageInfo]:
@@ -163,6 +160,50 @@ class Stages:
         raise failure
 
 
+# The stage.update message when an LLM call ends the run.
+LLM_FAILED: dict[ErrorCode, str] = {
+    "quota_exceeded": "Quota used up",
+    "provider_error": "The model provider returned an error",
+    "timeout": "The model did not answer in time",
+    "budget_exceeded": "Token budget used up",
+}
+
+
+async def llm_step[T](stages: Stages, call: Awaitable[T]) -> T:
+    """Runs one LLM call, turning an LlmFailure into the failed stage and run.error."""
+    try:
+        return await call
+    except LlmFailure as e:
+        await stages.fail(
+            LLM_FAILED.get(e.code, "The model's answer did not check out"),
+            RunFailure(e.code, e.message, retryable=e.retryable, stage=stages.current, reasons=e.reasons),
+        )
+
+
+class RecordingSports:
+    """Passes calls through, remembering every search result, so the
+    search_coverage stage can reuse what pick_match already found."""
+
+    def __init__(self, inner: SportsData) -> None:
+        self.inner = inner
+        self.found: dict[str, Result] = {}
+
+    async def list_competitions(self) -> list[Competition]:
+        return await self.inner.list_competitions()
+
+    async def find_matches(self, sport: str, league: str, start: datetime, end: datetime) -> list[Match]:
+        return await self.inner.find_matches(sport, league, start, end)
+
+    async def get_match_events(self, sport: str, league: str, match_id: str) -> Timeline:
+        return await self.inner.get_match_events(sport, league, match_id)
+
+    async def search_coverage(self, query: str, max_results: int = 5) -> SearchCoverageOutput:
+        out = await self.inner.search_coverage(query, max_results)
+        for r in out.results:
+            self.found.setdefault(r.url, r)
+        return out
+
+
 def data_failure(stage: StageId, e: ToolError, what: str) -> RunFailure:
     return RunFailure(
         "stage_failed",
@@ -228,7 +269,12 @@ async def run_full(
 
     # 4. pick_match
     await stages.begin("pick_match", f"Short-listing {min(SHORTLIST, len(candidates))} of {len(candidates)} matches")
-    pick = await llm.pick_match(candidates, sports)
+    recording = RecordingSports(sports)
+
+    async def on_search(query: str) -> None:
+        await stages.update("running", f"Searching coverage: {query}")
+
+    pick = await llm_step(stages, llm.pick_match(candidates, recording, on_search))
     chosen = next((c for c in candidates if c.match.id == pick.match_id), None)
     if chosen is None:
         await stages.fail(
@@ -245,16 +291,23 @@ async def run_full(
 
     # 5. search_coverage
     await stages.begin("search_coverage", "Searching match coverage")
+    reused = about(chosen, recording.found.values())
     try:
-        coverage = await search(chosen, comp, sports)
+        coverage = await search(chosen, comp, sports, reused)
     except ToolError as e:
         await stages.fail("Coverage search failed", data_failure("search_coverage", e, "search match coverage"))
     sources = source_links(chosen.timeline, coverage)
-    await stages.done(f"{len(sources)} source{'' if len(sources) == 1 else 's'} kept")
+    reused_count = len({r.url for r in reused} & {r.url for r in coverage})
+    await stages.done(
+        f"{len(sources)} source{'' if len(sources) == 1 else 's'} kept",
+        detail=f"Reused {reused_count} result{'' if reused_count == 1 else 's'} from the pick stage."
+        if reused_count
+        else None,
+    )
 
     # 6. pick_moment
     await stages.begin("pick_moment", "Reading the timeline")
-    moment = await llm.pick_moment(chosen)
+    moment = clean_moment(await llm_step(stages, llm.pick_moment(chosen)))
     events = {e.source_ref: e for e in chosen.timeline.events}
     unknown = [r for r in [*moment.event_refs, *moment.beats] if r not in events]
     if unknown or not moment.event_refs:
@@ -272,7 +325,7 @@ async def run_full(
 
     # 7. build_fact_sheet
     await stages.begin("build_fact_sheet", "Merging events and coverage")
-    draft = await llm.build_facts(chosen, moment, coverage)
+    draft = await llm_step(stages, llm.build_facts(chosen, moment, coverage))
     sheet = FactSheet(
         match_id=chosen.match.id,
         competition=comp.name,
@@ -280,7 +333,7 @@ async def run_full(
         final_result=chosen.match.final_result,
         roster=roster(chosen.timeline),
         moment=moment,
-        facts=draft.facts,
+        facts=[f.model_copy(update={"source_ref": clean_ref(f.source_ref)}) for f in draft.facts],
         sources=sources,
     )
     if problems := fact_sheet_problems(sheet, chosen.timeline):
@@ -309,7 +362,7 @@ async def run_retell(req: RunRetellPayload, story: Story, llm: Llm, stages: Stag
 async def write(story: Story, style: StylePreset, llm: Llm, stages: Stages) -> RunResultPayload:
     """generate, guardrails and done: shared by full runs and retells."""
     await stages.begin("generate", "Writing the headline and poem")
-    poem = await llm.write_poem(story.sheet, style)
+    poem = await llm_step(stages, llm.write_poem(story.sheet, style))
     if not poem.headline.strip() or not any(line.strip() for s in poem.stanzas for line in s.lines):
         await stages.fail(
             "The poem came back empty",
@@ -320,7 +373,7 @@ async def write(story: Story, style: StylePreset, llm: Llm, stages: Stages) -> R
     await stages.done("Poem written")
 
     await stages.begin("guardrails", f"Running {len(CHECKS)} checks")
-    verdict = await llm.judge_grounding(poem, story.sheet)
+    verdict = await llm_step(stages, llm.judge_grounding(poem, story.sheet))
     known = {f.id for f in story.sheet.facts}
     fact_ids = {v.index: [i for i in v.fact_ids if i in known] for v in verdict.lines}
     # The checks themselves are the next guardrails roadmap item.
@@ -356,17 +409,34 @@ async def load_candidates(
         await stages.fail("Match events did not load", data_failure("score_matches", e, "load match events"))
 
 
-async def search(chosen: Candidate, comp: Competition, sports: SportsData) -> list[Result]:
-    """Two queries built from the teams and competition. A result that does
-    not name every team is about some other match, so it is dropped."""
-    teams = [p.name for p in chosen.match.participants]
-    home, away = teams[:2]
-    seen: dict[str, Result] = {}
+def clean_ref(ref: str) -> str:
+    """An event ref as the model wrote it, minus the square brackets the
+    prompt's timeline puts around refs: smaller models copy those too."""
+    return ref.strip().removeprefix("[").removesuffix("]").strip()
+
+
+def clean_moment(m: MomentPick) -> MomentPick:
+    return m.model_copy(
+        update={"event_refs": [clean_ref(r) for r in m.event_refs], "beats": [clean_ref(r) for r in m.beats]}
+    )
+
+
+def about(chosen: Candidate, results: Iterable[Result]) -> list[Result]:
+    """The results that name every team; the rest are about some other match."""
+    teams = [p.name.casefold() for p in chosen.match.participants]
+    return [r for r in results if all(t in f"{r.title} {r.content}".casefold() for t in teams)]
+
+
+async def search(chosen: Candidate, comp: Competition, sports: SportsData, reused: Sequence[Result]) -> list[Result]:
+    """What pick_match found about this match, then two queries built from the
+    teams and competition; the top results, one per URL."""
+    home, away = (p.name for p in chosen.match.participants[:2])
+    seen: dict[str, Result] = {r.url: r for r in reused}
     for query in (f"{home} {away} {comp.name}", f"{home} v {away}"):
-        for r in (await sports.search_coverage(query, max_results=MAX_SOURCES)).results:
-            text = f"{r.title} {r.content}".casefold()
-            if all(team.casefold() in text for team in teams):
-                seen.setdefault(r.url, r)
+        if len(seen) >= MAX_SOURCES:
+            break
+        for r in about(chosen, (await sports.search_coverage(query, max_results=MAX_SOURCES)).results):
+            seen.setdefault(r.url, r)
     return list(seen.values())[:MAX_SOURCES]
 
 

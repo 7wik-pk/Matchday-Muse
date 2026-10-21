@@ -1,0 +1,1 @@
+Ballad: a story told in quatrains rhymed ABCB (only lines 2 and 4 rhyme), 4 to 7 of them. A plain, swinging storyteller's voice, as in the old folk ballads; past tense; a little repetition is welcome.

@@ -1,6 +1,12 @@
 """Shared fixtures: sports data replayed from tests/fixtures/mcp/, the app on
 top of it, and a validator for server messages against contracts/ws/."""
 
+import os
+
+# As in app/llm/live.py: LiteLLM must not load .env or fetch prices on import.
+os.environ.setdefault("LITELLM_MODE", "PRODUCTION")
+os.environ.setdefault("LITELLM_LOCAL_MODEL_COST_MAP", "True")
+
 import asyncio
 import json
 import threading

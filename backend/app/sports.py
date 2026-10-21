@@ -76,16 +76,37 @@ class McpSportsData:
         return await self._call("search_coverage", args, SearchCoverageOutput)
 
 
+def sole(group: BaseExceptionGroup[BaseException]) -> BaseException:
+    """The one exception inside nested groups, or the group itself when there are several."""
+    leaves = []
+    stack: list[BaseException] = [group]
+    while stack:
+        e = stack.pop()
+        if isinstance(e, BaseExceptionGroup):
+            stack.extend(e.exceptions)
+        else:
+            leaves.append(e)
+    return leaves[0] if len(leaves) == 1 else group
+
+
 @asynccontextmanager
 async def connect(settings: Settings) -> AsyncIterator[SportsData]:
-    """One MCP session, over Streamable HTTP or stdio as configured."""
-    if settings.mcp_server_url:
-        token = settings.mcp_auth_token.get_secret_value() if settings.mcp_auth_token else ""
-        http = create_mcp_http_client(headers={"Authorization": f"Bearer {token}"})
-        async with http, Client(streamable_http_client(settings.mcp_server_url, http_client=http)) as client:
-            yield McpSportsData(client)
-    else:
-        assert settings.mcp_server_command
-        params = StdioServerParameters(command=settings.mcp_server_command)
-        async with Client(params) as client:
-            yield McpSportsData(client)
+    """One MCP session, over Streamable HTTP or stdio as configured.
+
+    The MCP client runs inside anyio task groups, which wrap anything raised
+    in the `async with` body (a RunFailure, a cancellation) in an
+    ExceptionGroup. It is unwrapped here, so callers see what they raised.
+    """
+    try:
+        if settings.mcp_server_url:
+            token = settings.mcp_auth_token.get_secret_value() if settings.mcp_auth_token else ""
+            http = create_mcp_http_client(headers={"Authorization": f"Bearer {token}"})
+            async with http, Client(streamable_http_client(settings.mcp_server_url, http_client=http)) as client:
+                yield McpSportsData(client)
+        else:
+            assert settings.mcp_server_command
+            params = StdioServerParameters(command=settings.mcp_server_command)
+            async with Client(params) as client:
+                yield McpSportsData(client)
+    except BaseExceptionGroup as group:
+        raise sole(group) from None

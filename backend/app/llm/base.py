@@ -4,9 +4,9 @@ Each method is one structured-output call whose schema comes from
 contracts/pipeline/. Only pick_match may call tools.
 """
 
-from collections.abc import Sequence
+from collections.abc import Awaitable, Callable, Sequence
 from dataclasses import dataclass
-from typing import Protocol
+from typing import Literal, Protocol
 
 from app.contracts.mcp.find_matches_output import Match
 from app.contracts.mcp.search_coverage_output import Result
@@ -19,6 +19,23 @@ from app.contracts.pipeline.poem import Poem
 from app.contracts.ws.server_message import StylePreset
 from app.pipeline.signals import Signals
 from app.sports import SportsData, Timeline
+
+# run.error codes, shared by the pipeline and the LLM layer.
+type ErrorCode = Literal[
+    "bad_request", "no_matches", "cancelled", "stage_failed", "timeout", "budget_exceeded",
+    "guardrail_failed", "quota_exceeded", "provider_error", "interrupted",
+]  # fmt: skip
+
+
+class LlmFailure(Exception):
+    """An LLM call that cannot go on: the pipeline turns it into run.error."""
+
+    def __init__(self, code: ErrorCode, message: str, *, retryable: bool, reasons: Sequence[str] = ()) -> None:
+        super().__init__(message)
+        self.code: ErrorCode = code
+        self.message = message
+        self.retryable = retryable
+        self.reasons = list(reasons)
 
 
 @dataclass
@@ -40,8 +57,18 @@ class Usage:
 
 class Llm(Protocol):
     usage: Usage
+    prompt_versions: dict[str, str]  # logged with every run
+    # Set by the pipeline: a line for the stage panel, such as a retry's wait.
+    notify: Callable[[str], Awaitable[None]] | None
 
-    async def pick_match(self, candidates: Sequence[Candidate], tools: SportsData) -> MatchPick: ...
+    async def pick_match(
+        self,
+        candidates: Sequence[Candidate],
+        tools: SportsData,
+        on_search: Callable[[str], Awaitable[None]],
+    ) -> MatchPick:
+        """May call tools.search_coverage, announcing each query through on_search."""
+        ...
 
     async def pick_moment(self, candidate: Candidate) -> MomentPick: ...
 

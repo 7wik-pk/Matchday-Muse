@@ -1,0 +1,1 @@
+Nursery rhyme: sing-song couplets rhymed AABB, after the old playground rhymes (counting rhymes, "Hey diddle diddle", "Humpty Dumpty"), in quatrains. Innocent and silly in tone, whatever happened. You may address a player but never put words in a real person's mouth.

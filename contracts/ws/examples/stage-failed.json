@@ -15,7 +15,7 @@
     "llm": {
       "mode": "byok",
       "provider": "gemini",
-      "model": "gemini/gemini-flash",
+      "model": "gemini/gemini-flash-latest",
       "apiKey": "mock-key-not-real"
     }
   },

@@ -1,0 +1,1 @@
+Terrace chant: rhyming couplets to sing from the stands, short lines with a strong beat, ending in a chorus that repeats. The voice of the fans, loud and partisan but never abusive. You may address a player ("Isak, Isak, what a finish") but never put words in a real person's mouth.

@@ -344,7 +344,9 @@ Phase 0 builds three that differ in shape (`ballad`, `sonnet`, `limericks`): an 
 
 **Lines:** each line of the poem, and the headline, is annotated on its own. The grounding judge receives the numbered lines and returns the facts behind each one (`GroundingVerdict`). That one verdict drives both the grounding check and "Show your working" in the UI. Lines come from the writer's structured output, never from the judge, so the annotations cannot drift from the text. A refrain that repeats a line repeats its annotations.
 
-**Agent loop and tool calls:** `pick_match` uses LiteLLM tool calling with the `search_coverage` MCP tool schema converted to a function definition, capped at 4 tool calls and a 60-second timeout. Tool results enter the prompt as delimited, truncated data, like every other retrieved text. Every LLM call has a per-run token budget; exceeding it fails the run cleanly.
+**Agent loop and tool calls:** `pick_match` uses LiteLLM tool calling with the `search_coverage` MCP tool's `query` parameter as a function definition, capped at 4 searches and a 60-second timeout; each search shows in the stage panel ("Searching coverage: …"). The decision is then a separate structured-output call with no tools, given the match lines and everything found, since providers differ in whether tools and a response schema can share a call. Tool results enter the prompt inside `<search_results>` tags, truncated, with `<` and `>` escaped so retrieved text cannot close the tags; every prompt says that text inside them is data, never instructions. `search_coverage` reuses what `pick_match` found about the chosen match. Every run has a token budget (`LLM_RUN_TOKEN_BUDGET`); exceeding it fails the run cleanly with `budget_exceeded`.
+
+**LLM calls** (`app/llm/live.py`): every other call is a structured-output call whose `response_format` is the Pydantic model generated from `contracts/pipeline/`. A reply that does not parse gets one retry with the validation errors, then fails the stage. No `temperature` is sent: Gemini 3 is deprecating it and GPT-5 takes only the default. Overloaded providers (5xx, Gemini's "high demand", Anthropic's 529) get two more tries, after 2 and 6 seconds; a rate limit is retried, up to twice, only when the provider's suggested wait (a `retry-after` header, or the delay Gemini and Groq write into the error) is 30 seconds or less, so a used-up daily quota fails at once. Each wait shows in the stage panel ("Gemini is busy; trying again in 6 s"). Provider errors that remain map to `run.error` codes: a persistent overload to `provider_error` (retryable), rate limits and spent quotas to `quota_exceeded` (retryable), a rejected key to `provider_error` (not retryable), timeouts to `timeout`, an over-long prompt to `budget_exceeded`. Every failed run is logged with its code, stage and reasons. Prompts leave out the timeline's noise (fouls, corners, offsides, "wins a free kick"), which halves the largest ones. The key is passed per call, held only by the run's LLM object, and scrubbed from error text. LiteLLM is imported with `LITELLM_MODE=PRODUCTION` and `LITELLM_LOCAL_MODEL_COST_MAP=True`: otherwise it loads any `.env` file it finds into the process environment and fetches its price list from GitHub. A browser's model must be in the registry, since some LiteLLM prefixes reach local endpoints. Prompts are versioned files in `app/pipeline/prompts/` (one per call, plus one per style preset), and the versions are logged with every run.
 
 **Run state:** each run is a `runs` row; every stage event is appended to `run_events`. In Phases 0 and 1 a run is tied to its socket: a dropped socket cancels the run at the next stage boundary, and the event log serves debugging and the stage history. From Phase 3 a reconnecting client resumes the run and replays missed events from Postgres. On startup the backend marks any run still `running` as failed with code `interrupted`.
 
@@ -352,7 +354,7 @@ Phase 0 builds three that differ in shape (`ballad`, `sonnet`, `limericks`): an 
 
 **Phase 0 backend:** the same FastAPI app and WebSocket protocol, with runs and their events held in memory instead of Postgres. In docker compose it reaches the `mcp-server` service over Streamable HTTP (`MCP_SERVER_URL` plus the bearer token); outside Docker it can launch the server over stdio instead (`MCP_SERVER_COMMAND`). Each run opens one MCP session and closes it when the run ends; `list_competitions` is fetched once per process, and if it fails the socket closes with 1011 so the client reconnects and says hello again.
 
-Until the LiteLLM stages land, `MockLlm` stands in for every LLM call: it picks the match with the highest drama-signal total, the winner's decisive goal as the moment, and writes a "poem" that is the beats' facts, one stanza each, opening with a line that says no LLM wrote it. The guardrails stage reports all seven checks as skipped. Everything else (ranges, MCP calls, signals, coverage, the fact sheet's assembly and validation, the result's facts and sources) is the real code.
+With `MOCK_LLM=true`, `MockLlm` stands in for every LLM call, for tests and keyless demos: it picks the match with the highest drama-signal total, the winner's decisive goal as the moment, and writes a "poem" that is the beats' facts, one stanza each, opening with a line that says no LLM wrote it. Until the guardrails roadmap item, the guardrails stage runs the grounding judge (which feeds Show your working) and reports the seven checks as skipped. A failure raised inside a run's MCP session comes out of the MCP client's anyio task groups wrapped in an `ExceptionGroup`; `sports.connect()` unwraps it, so cancels, `no_matches` and stage failures reach the client as themselves.
 
 **Tests:** pytest drives the socket the way the UI does, with sports data replayed from `tests/fixtures/mcp/` (frozen through the real client by `make freeze-mcp`), and checks every server message against `contracts/ws/` with jsonschema. The protocol tests compare the backend with the scripted runs: `session.ready` must equal the scripted one, a full run's stage list must equal `success`'s, a retell's must equal `retell`'s, and an empty day must produce `no-matches`' message and suggestion. One test runs the real Go server over stdio for the tools that need no network. ruff and strict mypy run alongside.
 
@@ -459,21 +461,20 @@ Using a person's Google Gemini subscription is not possible: Google offers no OA
 - The real limits: at most 10 house runs per IP per day, counting failed runs too since they still spend tokens; a global daily spend cap in the proxy; a hard budget alert in the provider console.
 - Free runs are text-only, on one cheap house model.
 
-**Model registry** (`backend/app/llm/registry.yaml`, served in `session.ready`)
+**Model registry** (`MODELS` in `backend/app/presets.py`, served in `session.ready`; only these models may run)
 
-```yaml
-- id: gemini/gemini-flash          # LiteLLM model string; exact versions pinned in the file
-  provider: gemini
-  tools: true
-  json: true
-  image_companion: gemini/gemini-flash-image
-  free_tier_note: "Free tier limits apply"
-- id: anthropic/claude-haiku
-  provider: anthropic
-  tools: true
-  json: true
-  image_companion: null           # Image toggle disabled
-```
+| Id (LiteLLM model string) | Provider | Label | Image companion | Reasoning effort |
+| --- | --- | --- | --- | --- |
+| `gemini/gemini-flash-latest` | gemini | Gemini Flash | `gemini/gemini-3.1-flash-image` | minimal |
+| `gemini/gemini-3.5-flash` | gemini | Gemini 3.5 Flash | `gemini/gemini-3.1-flash-image` | minimal |
+| `anthropic/claude-haiku-5-5` | anthropic | Claude Haiku 5.5 | none (Image toggle disabled) | not sent |
+| `openai/gpt-5-mini` | openai | GPT-5 mini | none | minimal |
+| `groq/openai/gpt-oss-120b` | groq | GPT-OSS 120B | none | low |
+| `groq/openai/gpt-oss-20b` | groq | GPT-OSS 20B | none | low |
+
+Every call sends the lowest reasoning effort the model allows (`REASONING_EFFORT` in `presets.py`, passed as LiteLLM's `reasoning_effort`), since hidden reasoning tokens can outnumber the poem's and eat free-tier quota: Gemini 3 and GPT-5 take "minimal", GPT-OSS's lowest is "low", and Claude gets nothing, because Haiku does not think unless asked and asking would switch thinking on. Raise it per model if poem quality suffers.
+
+All of them call tools and return JSON. Gemini and Groq have free tiers; Groq's limits tokens per minute, which the rate-limit retries below absorb.
 
 Entries are seeded from LiteLLM's model capability helpers and overridden by hand. The image toggle is enabled only when the selected model's provider has an `image_companion`; image prompts are built from the fact sheet, never from raw articles.
 
@@ -708,8 +709,9 @@ Every variable lives in `.env.example` with a comment; services fail fast at sta
 | `HOUSE_RUNS_PER_IP_PER_DAY` | backend | `10` | Phase 3. Per-IP backstop |
 | `SESSION_SECRET` | backend |  | Signs session cookies |
 | `MCP_SERVER_COMMAND` | backend | `../mcp-server/bin/mcp-server` | Launch the MCP server over stdio instead of `MCP_SERVER_URL` (outside Docker) |
-| `MOCK_LLM` | backend | `true` | The mock LLM stages; `false` arrives with the LiteLLM stages |
-| `LLM_MODEL` | backend | `gemini/gemini-flash` | Default model for local runs and evals when the browser sends no model |
+| `MOCK_LLM` | backend | `false` | `true` runs every LLM stage on the mock: tests, keyless demos |
+| `LLM_MODEL` | backend | `gemini/gemini-flash-latest` | Default model for local runs and evals when the browser sends no model |
+| `LLM_RUN_TOKEN_BUDGET` | backend | `150000` | Tokens one run may spend across its LLM calls |
 | `LLM_API_KEY` | backend |  | Development fallback key, used when `run.start` asks for `llm.mode: house` (the browser has no key) and by `make eval`. Never set in the cloud |
 | `LITELLM_MASTER_KEY` | litellm |  | Phase 3. Proxy admin key |
 | `HOUSE_PROVIDER_API_KEY` | litellm |  | Phase 3. The real provider key behind the house model |
@@ -749,7 +751,7 @@ Build in five phases and move on only when a phase's gate passes. Phase 0 is the
 - [x] Go MCP server: SDK setup, `fixture` search, ESPN football adapter with recorded testdata, `find_matches` and `get_match_events`, on-disk cache, `cmd/schemagen`; try it in MCP Inspector over stdio
 - [x] Docker images (`mcp-server`, `frontend`) and `compose.yaml` with watch; Streamable HTTP transport with bearer token and `/healthz`
 - [x] Backend: FastAPI WebSocket endpoint with runs in memory, MCP client over Streamable HTTP and stdio, data stages, drama signals, mock LLM; protocol tests against the scripted runs; switch the UI from the mock to the real socket; `backend` service in compose
-- [ ] LLM stages via the LiteLLM SDK (pick match with tool calling, pick moment, fact sheet, generate) with v1 prompts and three style presets (ballad, sonnet, limericks); BYO key from the settings drawer
+- [x] LLM stages via the LiteLLM SDK (pick match with tool calling, pick moment, fact sheet, generate, and the grounding judge) with v1 prompts for all eight style presets (rubrics and evals for all but ballad, sonnet and limericks stay in Phase 1); BYO key from the settings drawer, checked against the registry
 - [ ] Guardrails: score parser, NER name check, quote check, overlap, length and form, grounding judge with rubric returning per-line fact ids, repair loop
 - [ ] Golden set of 5 EPL weeks frozen as fixtures and hand-labelled; Inspect task and scorers; baseline eval report
 

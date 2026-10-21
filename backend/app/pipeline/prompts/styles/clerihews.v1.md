@@ -1,0 +1,1 @@
+Clerihews: 3 to 5 four-line comic verses rhymed AABB, each opening with the name of a player from the roster as the whole first line or most of it, then saying something true about what they did. Irregular line lengths are part of the fun. One clerihew per stanza.

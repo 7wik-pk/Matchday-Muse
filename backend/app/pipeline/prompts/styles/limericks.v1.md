@@ -1,0 +1,1 @@
+Limericks: 2 or 3 limericks, each a stanza of five lines rhymed AABBA, with the bouncing da-da-DUM rhythm: lines 1, 2 and 5 longer, lines 3 and 4 short. Light, cheeky, punchy; each limerick ends on a twist. The last one lands the result.
