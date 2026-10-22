@@ -14,12 +14,12 @@ Each tool's schemas are generated from the Go types into [contracts/mcp/](../con
 ## Run it
 
 ```sh
-make dev                           # from the repo root: docker compose, HTTP on localhost:8081
+make dev                           # from the repo root: compose, HTTP on localhost:8081
 make dev-mcp                       # MCP Inspector's web UI over stdio, from the repo root
 go run ./cmd/server                # stdio, for any MCP client
 ```
 
-In compose the server listens at `http://localhost:8081/mcp` and wants `Authorization: Bearer <MCP_AUTH_TOKEN from .env>`. To point Inspector at it, choose the Streamable HTTP transport, that URL, and the header. `GET /healthz` needs no token.
+In compose the server listens at `http://localhost:8081/mcp` and wants `Authorization: Bearer <token>`: `MCP_AUTH_TOKEN` from `.env` if you set one, otherwise the generated one, which `docker compose exec mcp-server cat /run/mcp/token` prints. To point Inspector at it, choose the Streamable HTTP transport, that URL, and the header. `GET /healthz` needs no token.
 
 In Inspector, pass `match_id` as a string. Its CLI mode turns a bare `401879262` into a number, which the schema rejects, so quote it: `'match_id="401879262"'`.
 
@@ -36,6 +36,7 @@ To add it to Claude Desktop or another client, build it (`go build -o bin/mcp-se
 | `MCP_TRANSPORT` | `stdio` (`http` in the image) | `http` serves `/mcp` and `/healthz` |
 | `MCP_HTTP_ADDR` | `:8081` | |
 | `MCP_AUTH_TOKEN` | | Required for `http`; at least 32 characters |
+| `MCP_AUTH_TOKEN_FILE` | | A file holding the token, read when `MCP_AUTH_TOKEN` is unset; compose generates it |
 | `LOG_LEVEL` | `info` | `debug` logs every ESPN request; logs go to stderr |
 
 ## Tests and testdata

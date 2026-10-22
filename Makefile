@@ -50,8 +50,9 @@ gen: contracts/node_modules
 # The stack in compose: the UI at http://localhost:4200 on the real backend
 # (?mock=<script>&speed=<n> replays a scripted run instead), the backend at
 # localhost:8000 and the MCP server at http://localhost:8081/mcp.
-# Source changes sync or rebuild while it runs; Ctrl-C stops it.
-dev: .env
+# Source changes reload or restart while it runs; Ctrl-C stops it. Plain
+# `docker compose up -d` (or podman) works too: compose generates the MCP token.
+dev:
 	$(COMPOSE) up --build --watch
 
 down:
@@ -68,9 +69,10 @@ images:
 	$(ENGINE) build -t matchday-muse/backend:latest backend
 	$(ENGINE) build -t matchday-muse/frontend-build:latest --target build -f frontend/Dockerfile .
 
-# A local .env with a fresh MCP token. Never overwrites an existing one.
+# A local .env to edit (MOCK_LLM, LLM_API_KEY, ...); optional, and never
+# overwrites an existing one.
 .env:
-	sed "s/^MCP_AUTH_TOKEN=$$/MCP_AUTH_TOKEN=$$(openssl rand -hex 32)/" .env.example > $@
+	cp .env.example $@
 
 # MCP Inspector's web UI on the server over stdio, using live ESPN data; no
 # Docker needed.

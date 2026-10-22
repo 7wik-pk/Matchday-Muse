@@ -22,6 +22,7 @@ MCP_SERVER_COMMAND=../mcp-server/bin/mcp-server uv run uvicorn --factory app.mai
 | `MCP_SERVER_URL` | | Streamable HTTP endpoint, such as `http://mcp-server:8081/mcp`; needs `MCP_AUTH_TOKEN` |
 | `MCP_SERVER_COMMAND` | | Or: launch the MCP server binary over stdio |
 | `MCP_AUTH_TOKEN` | | The shared bearer token, at least 32 characters |
+| `MCP_AUTH_TOKEN_FILE` | | A file holding the token, read when `MCP_AUTH_TOKEN` is unset; compose generates it |
 | `MOCK_LLM` | `false` | `true` runs every LLM stage on the mock |
 | `LLM_MODEL` | `gemini/gemini-flash-latest` | The model for runs where the browser sends no key |
 | `LLM_API_KEY` | | The server's own key for those runs; leave unset to require one in the UI |

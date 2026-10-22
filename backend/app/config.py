@@ -16,6 +16,8 @@ class Settings(BaseSettings):
     mcp_server_url: str | None = None
     mcp_server_command: str | None = None
     mcp_auth_token: SecretStr | None = None
+    # compose generates the token into a volume; MCP_AUTH_TOKEN wins if set.
+    mcp_auth_token_file: Path | None = None
 
     # MOCK_LLM=true runs every LLM stage on MockLlm: tests, demos, no key.
     mock_llm: bool = False
@@ -30,7 +32,13 @@ class Settings(BaseSettings):
     log_level: str = "info"
 
     @field_validator(
-        "mcp_auth_token", "llm_api_key", "mcp_server_url", "mcp_server_command", "analysis_cache_dir", mode="before"
+        "mcp_auth_token",
+        "mcp_auth_token_file",
+        "llm_api_key",
+        "mcp_server_url",
+        "mcp_server_command",
+        "analysis_cache_dir",
+        mode="before",
     )
     @classmethod
     def empty_is_unset(cls, value: object) -> object:
@@ -41,6 +49,11 @@ class Settings(BaseSettings):
     def check(self) -> Self:
         if (self.mcp_server_url is None) == (self.mcp_server_command is None):
             raise ValueError("set exactly one of MCP_SERVER_URL or MCP_SERVER_COMMAND")
+        if self.mcp_auth_token is None and self.mcp_auth_token_file is not None:
+            try:
+                self.mcp_auth_token = SecretStr(self.mcp_auth_token_file.read_text().strip())
+            except OSError as e:
+                raise ValueError(f"MCP_AUTH_TOKEN_FILE: {e.strerror}") from e
         if self.mcp_server_url is not None:
             token = self.mcp_auth_token.get_secret_value() if self.mcp_auth_token else ""
             if len(token) < MIN_TOKEN_LENGTH:

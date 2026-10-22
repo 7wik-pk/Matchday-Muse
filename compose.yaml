@@ -1,23 +1,39 @@
-# The local stack, for Docker or Podman. `make dev` runs `compose up --build --watch`.
+# The local stack, for Docker or Podman. `docker compose up -d` (or `podman
+# compose up -d`) runs it with no .env and no make; `make dev` runs
+# `compose up --build --watch` in the foreground.
 # Source directories are mounted read-only: the frontend dev server and
 # uvicorn reload on their own, and watch restarts the MCP server, which
-# recompiles on start. (Watch's sync and rebuild actions misbehave on Podman, so neither
-# is used.) After changing dependencies, rerun `make dev`. `make images`
-# builds the deployable images.
+# recompiles on start (without watch, `compose restart mcp-server`). Watch's
+# sync and rebuild actions misbehave on Podman, so neither is used. After
+# changing dependencies, add --build. `make images` builds the deployable images.
 name: matchday-muse
 
 services:
+  # Writes a random shared token for the backend and the MCP server into a
+  # volume on first start, so no .env is needed; MCP_AUTH_TOKEN in .env
+  # overrides it. `compose down -v` discards it.
+  mcp-token:
+    image: docker.io/library/alpine:3.24
+    command:
+      - sh
+      - -c
+      - umask 077; [ -s /run/mcp/token ] || od -An -N32 -tx1 /dev/urandom | tr -d ' \n' > /run/mcp/token
+    volumes:
+      - mcp-token:/run/mcp
+
   mcp-server:
     build:
       context: ./mcp-server
       target: dev
     image: matchday-muse/mcp-server:dev
     environment:
-      MCP_AUTH_TOKEN: ${MCP_AUTH_TOKEN:?set MCP_AUTH_TOKEN in .env; make .env creates one}
+      MCP_AUTH_TOKEN: ${MCP_AUTH_TOKEN:-}
+      MCP_AUTH_TOKEN_FILE: /run/mcp/token
       SEARCH_PROVIDER: ${SEARCH_PROVIDER:-fixture}
       LOG_LEVEL: ${LOG_LEVEL:-info}
     volumes:
       - ./mcp-server:/src:ro
+      - mcp-token:/run/mcp:ro
       - mcp-cache:/data/cache
       - go-build-cache:/root/.cache/go-build
     healthcheck:
@@ -27,6 +43,9 @@ services:
       # The first start compiles the server.
       start_period: 60s
       retries: 3
+    depends_on:
+      mcp-token:
+        condition: service_completed_successfully
     ports:
       # Published on localhost only, for MCP Inspector on the host.
       - "127.0.0.1:8081:8081"
@@ -46,7 +65,8 @@ services:
     image: matchday-muse/backend:dev
     environment:
       MCP_SERVER_URL: http://mcp-server:8081/mcp
-      MCP_AUTH_TOKEN: ${MCP_AUTH_TOKEN:?set MCP_AUTH_TOKEN in .env; make .env creates one}
+      MCP_AUTH_TOKEN: ${MCP_AUTH_TOKEN:-}
+      MCP_AUTH_TOKEN_FILE: /run/mcp/token
       MOCK_LLM: ${MOCK_LLM:-false}
       # Optional: the server's own key, used when the browser sends none.
       LLM_MODEL: ${LLM_MODEL:-gemini/gemini-flash-latest}
@@ -57,6 +77,7 @@ services:
       LOG_LEVEL: ${LOG_LEVEL:-info}
     volumes:
       - ./backend/app:/app/app:ro
+      - mcp-token:/run/mcp:ro
       - analysis-cache:/data/analysis-cache
     ports:
       - "127.0.0.1:8000:8000"
@@ -80,6 +101,7 @@ services:
       - "127.0.0.1:4200:4200"
 
 volumes:
+  mcp-token:
   mcp-cache:
   go-build-cache:
   analysis-cache:

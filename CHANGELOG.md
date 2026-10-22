@@ -4,6 +4,11 @@ What each commit delivered, newest first. Design decisions and their reasons are
 
 ## Unreleased
 
+**Plain `docker compose up`**
+
+- `docker compose up -d` (or `podman compose up -d`) runs the whole stack, with no `.env` and no make. A one-shot `mcp-token` service writes a random shared token into a volume, and the backend and MCP server read it through the new `MCP_AUTH_TOKEN_FILE`; an `MCP_AUTH_TOKEN` set in `.env` still wins.
+- `make dev` no longer creates `.env`; `make .env` copies the template for editing.
+
 **The logo**
 
 - A chip with a football pitch on its die, between typographic quotation marks drawn in the chip's character: AI, about football, saying something. It replaces the placeholder crosshair in the header, the Angular favicon and the README.

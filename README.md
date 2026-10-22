@@ -33,7 +33,15 @@ Real runs on live Premier League data, written by GPT-OSS on Groq's free tier. T
 
 ## Try it
 
-The stack runs in Podman or Docker, with Compose (`docker-compose`, which `podman compose` uses too); the tests run on the host and need Node 22.22, 24.15 or 26 and later (what Angular 22 supports), Go 1.25 or later, and [uv](https://docs.astral.sh/uv/) (Python 3.14).
+The stack runs in Podman or Docker, with Compose (`docker-compose`, which `podman compose` uses too). Nothing else is needed to run it:
+
+```sh
+docker compose up -d     # or: podman compose up -d
+```
+
+Then open http://localhost:4200. The first start builds the images and takes a few minutes; `docker compose down` stops it. Add `--build` after changing dependencies.
+
+For development, the tests run on the host and need Node 22.22, 24.15 or 26 and later (what Angular 22 supports), Go 1.25 or later, and [uv](https://docs.astral.sh/uv/) (Python 3.14):
 
 ```sh
 make dev            # compose: the UI at http://localhost:4200 on the real backend
@@ -43,7 +51,7 @@ make dev-mcp        # MCP Inspector on the Go server over stdio, no Docker neede
 make test           # contract checks, Go, backend and frontend tests, offline
 ```
 
-`make dev` creates `.env` from [.env.example](.env.example) with a fresh `MCP_AUTH_TOKEN` the first time. While it runs, frontend changes hot-reload and Go changes restart the server, which recompiles in a couple of seconds. After changing dependencies, rerun `make dev`. `make images` builds the deployable images.
+No `.env` is needed: compose generates the token the backend and MCP server share. To change settings, copy [.env.example](.env.example) to `.env`. Frontend and backend changes reload in either mode; Go changes restart the server under `make dev` (which runs `compose up --build --watch`), or after `docker compose restart mcp-server`, and it recompiles in a couple of seconds. After changing dependencies, rerun `make dev`. `make images` builds the deployable images.
 
 To write a poem, add your key under **Your LLM** in the top right (free Gemini and Groq keys work). Keys stay in the browser tab's session storage and travel only with each run. Set `MOCK_LLM=true` in `.env` to run without a key: a mock then lines up the moment's facts instead of verse. To replay a scripted run instead of the backend, open `?mock=<script>`, for example `?mock=guardrail-failed&speed=0`; the scripts are in [contracts/ws/examples/](contracts/ws/examples/). See also [backend/README.md](backend/README.md) and [mcp-server/README.md](mcp-server/README.md).
 

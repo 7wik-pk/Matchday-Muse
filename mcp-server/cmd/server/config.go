@@ -43,6 +43,14 @@ func loadConfig(getenv func(string) string) (config, error) {
 	if err := oneOf("MCP_TRANSPORT", c.transport, "stdio", "http"); err != nil {
 		return c, err
 	}
+	// compose generates the token into a volume; MCP_AUTH_TOKEN wins if set.
+	if path := getenv("MCP_AUTH_TOKEN_FILE"); c.authToken == "" && path != "" {
+		b, err := os.ReadFile(path)
+		if err != nil {
+			return c, fmt.Errorf("MCP_AUTH_TOKEN_FILE: %w", err)
+		}
+		c.authToken = strings.TrimSpace(string(b))
+	}
 	if c.transport == "http" && len(c.authToken) < minTokenLength {
 		return c, fmt.Errorf("MCP_TRANSPORT=http needs MCP_AUTH_TOKEN of at least %d characters, such as the output of: openssl rand -hex 32", minTokenLength)
 	}
