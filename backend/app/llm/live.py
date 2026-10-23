@@ -49,6 +49,7 @@ from app.contracts.pipeline.poem import Poem
 from app.contracts.ws.server_message import StylePreset
 from app.llm.analysis_cache import AnalysisCache
 from app.llm.base import Candidate, LlmFailure, Usage
+from app.pipeline import answers
 from app.sports import SportsData, Timeline, ToolError
 
 litellm.drop_params = True  # drop parameters a provider does not take, rather than fail
@@ -138,10 +139,16 @@ def short_ids(t: Timeline) -> dict[str, str]:
 
 
 def to_refs(ids: Iterable[str], t: Timeline) -> list[str]:
-    """The model's short ids as source_refs; anything else is passed through
-    for the pipeline's own checks to judge."""
+    """The model's short ids as source_refs. A bare number is read as its short
+    id: GPT-OSS 120B wrote 92 for e92. Anything else is passed through, minus
+    brackets, for the pipeline's own checks to judge."""
     refs = short_ids(t)
-    return [refs.get(i.strip().strip("[]").strip().lower(), i) for i in ids]
+    out = []
+    for i in ids:
+        cleaned = i.strip().strip("[]").strip()
+        key = cleaned.lower()
+        out.append(refs.get(f"e{key}" if key.isdigit() else key, cleaned))
+    return out
 
 
 def event_lines(t: Timeline) -> str:
@@ -244,11 +251,13 @@ class LiteLlm:
         on_search: Callable[[str], Awaitable[None]],
     ) -> MatchPick:
         lines = "\n".join(candidate_line(c) for c in candidates)
+        ids = {c.match.id for c in candidates}
         return await self._cached(
             "pick_match",
             MatchPick,
             [prompt("pick_match"), prompt("pick_match_decide"), lines],
             lambda: self._pick_match(lines, tools, on_search),
+            lambda p: not answers.pick_problems(p, ids),
         )
 
     async def _pick_match(
@@ -307,7 +316,13 @@ class LiteLlm:
             m = await self._structured(MomentPick, prompt("pick_moment"), user)
             return m.model_copy(update={"event_refs": to_refs(m.event_refs, t), "beats": to_refs(m.beats, t)})
 
-        return await self._cached("pick_moment", MomentPick, [prompt("pick_moment"), user], produce)
+        return await self._cached(
+            "pick_moment",
+            MomentPick,
+            [prompt("pick_moment"), user],
+            produce,
+            lambda m: not answers.moment_problems(m, t),
+        )
 
     async def build_facts(self, candidate: Candidate, moment: MomentPick, coverage: Sequence[Result]) -> FactDraft:
         t = candidate.timeline
@@ -339,7 +354,14 @@ class LiteLlm:
             ]
             return FactDraft(facts=facts)
 
-        return await self._cached("build_fact_sheet", FactDraft, [prompt("build_fact_sheet"), user], produce)
+        urls = [str(s.url) for s in t.sources] + [r.url for r in coverage]
+        return await self._cached(
+            "build_fact_sheet",
+            FactDraft,
+            [prompt("build_fact_sheet"), user],
+            produce,
+            lambda d: not answers.fact_problems(d.facts, t, urls),
+        )
 
     async def write_poem(self, sheet: FactSheet, style: StylePreset) -> Poem:
         system = f"{prompt('generate')}\n{style_prompt(style)}"
@@ -367,9 +389,16 @@ class LiteLlm:
     # Plumbing
 
     async def _cached[M: BaseModel](
-        self, stage: str, model: type[M], parts: Sequence[str], produce: Callable[[], Awaitable[M]]
+        self,
+        stage: str,
+        model: type[M],
+        parts: Sequence[str],
+        produce: Callable[[], Awaitable[M]],
+        usable: Callable[[M], bool],
     ) -> M:
-        """An analysis stage's answer from the cache, or from the model and then cached."""
+        """An analysis stage's answer from the cache, or from the model and then
+        cached. Only answers the pipeline will accept are cached or reused, so a
+        bad reply fails one run, not every later run of the same week."""
         if self._cache is None:
             return await produce()
         key = AnalysisCache.key(stage, self.model, json.dumps(self._reasoning, sort_keys=True), *parts)
@@ -379,11 +408,14 @@ class LiteLlm:
             except ValidationError:
                 pass  # an entry from older contracts: answer afresh
             else:
-                if self.notify:
-                    await self.notify("Reusing this stage's answer from an earlier run")
-                return value
+                # An unusable entry was cached before this check existed: answer afresh.
+                if usable(value):
+                    if self.notify:
+                        await self.notify("Reusing this stage's answer from an earlier run")
+                    return value
         value = await produce()
-        self._cache.put(key, value.model_dump_json())
+        if usable(value):
+            self._cache.put(key, value.model_dump_json())
         return value
 
     async def _search(

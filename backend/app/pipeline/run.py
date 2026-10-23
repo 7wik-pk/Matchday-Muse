@@ -43,7 +43,7 @@ from app.contracts.ws.server_message import (
 )
 from app.guardrails.checks import Check, CheckId, Material, check_grounding, deterministic
 from app.llm.base import Candidate, ErrorCode, Llm, LlmFailure
-from app.pipeline import ranges, signals
+from app.pipeline import answers, ranges, signals
 from app.presets import STYLES_BY_ID
 from app.sports import SportsData, Timeline, ToolError
 
@@ -282,8 +282,7 @@ async def run_full(
         await stages.update("running", f"Searching coverage: {query}")
 
     pick = await llm_step(stages, llm.pick_match(candidates, recording, on_search))
-    chosen = next((c for c in candidates if c.match.id == pick.match_id), None)
-    if chosen is None:
+    if problems := answers.pick_problems(pick, (c.match.id for c in candidates)):
         await stages.fail(
             "The pick was not one of the matches",
             RunFailure(
@@ -291,9 +290,10 @@ async def run_full(
                 "The match pick went wrong. Please try again.",
                 retryable=True,
                 stage="pick_match",
-                reasons=[f"picked unknown match {pick.match_id!r}"],
+                reasons=problems,
             ),
         )
+    chosen = next(c for c in candidates if c.match.id == pick.match_id)
     await stages.done(f"Picked {chosen.match.title} · {pick.angle}", detail=pick.reason)
 
     # 5. search_coverage
@@ -315,9 +315,7 @@ async def run_full(
     # 6. pick_moment
     await stages.begin("pick_moment", "Reading the timeline")
     moment = clean_moment(await llm_step(stages, llm.pick_moment(chosen)))
-    events = {e.source_ref: e for e in chosen.timeline.events}
-    unknown = [r for r in [*moment.event_refs, *moment.beats] if r not in events]
-    if unknown or not moment.event_refs:
+    if problems := answers.moment_problems(moment, chosen.timeline):
         await stages.fail(
             "The moment did not match the timeline",
             RunFailure(
@@ -325,9 +323,10 @@ async def run_full(
                 "Picking the moment went wrong. Please try again.",
                 retryable=True,
                 stage="pick_moment",
-                reasons=[f"unknown event refs: {', '.join(unknown)}" if unknown else "no moment events"],
+                reasons=problems,
             ),
         )
+    events = {e.source_ref: e for e in chosen.timeline.events}
     await stages.done(moment.title, detail=", ".join(beat_label(events[r]) for r in moment.beats))
 
     # 7. build_fact_sheet
@@ -343,7 +342,7 @@ async def run_full(
         facts=[f.model_copy(update={"source_ref": clean_ref(f.source_ref)}) for f in draft.facts],
         sources=sources,
     )
-    if problems := fact_sheet_problems(sheet, chosen.timeline):
+    if problems := answers.fact_problems(sheet.facts, chosen.timeline, (str(s.url) for s in sheet.sources)):
         await stages.fail(
             "The fact sheet did not check out",
             RunFailure(
@@ -522,16 +521,6 @@ def source_links(t: Timeline, coverage: Sequence[Result]) -> list[SourceLink]:
 def roster(t: Timeline) -> list[Person]:
     names = dict.fromkeys(a for e in t.events for a in e.actors)
     return [Person(canonical=n, variants=[n.split()[-1]] if " " in n else []) for n in names]
-
-
-def fact_sheet_problems(sheet: FactSheet, t: Timeline) -> list[str]:
-    refs = {e.source_ref for e in t.events} | {str(s.url) for s in sheet.sources}
-    ids = [f.id for f in sheet.facts]
-    problems = [f"duplicate fact id {i}" for i in sorted({i for i in ids if ids.count(i) > 1})]
-    problems += [f"{f.id} cites unknown source {f.source_ref!r}" for f in sheet.facts if f.source_ref not in refs]
-    if not any(f.kind == "score" for f in sheet.facts):
-        problems.append("no fact states the final score")
-    return problems
 
 
 VERBS = {

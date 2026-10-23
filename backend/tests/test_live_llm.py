@@ -17,6 +17,7 @@ from app.config import Settings
 from app.contracts.pipeline.fact_draft import FactDraft
 from app.contracts.pipeline.grounding_verdict import GroundingVerdict
 from app.contracts.pipeline.match_pick import MatchPick
+from app.contracts.pipeline.moment_pick import MomentPick
 from app.contracts.ws.client_message import ByokLlm, HouseLlm
 from app.llm.analysis_cache import AnalysisCache
 from app.llm.base import LlmFailure
@@ -588,6 +589,29 @@ def test_the_model_sees_short_ids_and_the_pipeline_gets_refs(sports: FixtureSpor
     assert "espn:" not in facts_prompt and f"Beats: {short[moment['beats'][0]]}" in facts_prompt
 
 
+def test_bare_numbers_from_the_model_are_short_ids(sports: FixtureSports) -> None:
+    """GPT-OSS 120B wrote 92 for e92."""
+    timeline = anyio.run(sports.get_match_events, "football", "eng.1", "401879262")
+    bare = {ref: i.removeprefix("e") for i, ref in short_ids(timeline).items()}
+    moment = ANSWERS["MomentPick"]
+    answers = {
+        **ANSWERS,
+        "MomentPick": {
+            **moment,
+            "event_refs": [bare[r] for r in moment["event_refs"]],
+            "beats": [f"[{bare[r]}]" for r in moment["beats"]],
+        },
+    }
+
+    def reply(kw: dict[str, Any]) -> Resp:
+        if "tools" in kw:
+            return text("No search needed.")
+        return text(json.dumps(answers[kw["response_format"].__name__]))
+
+    result = socket_run(sports, Model(reply))[-1]
+    assert result["type"] == "run.result", result["payload"]
+
+
 # The development analysis cache.
 
 
@@ -609,3 +633,49 @@ def test_a_repeat_run_reuses_the_analysis(sports: FixtureSports, tmp_path: Path)
     other = Model(scripted)
     socket_run(sports, other, lambda: live(other, cache=cache, name="gemini/gemini-3.5-flash"))
     assert "MatchPick" in asked(other), "another model is a cache miss"
+
+
+BAD_MOMENT = {**ANSWERS["MomentPick"], "event_refs": ["no-such-event"]}
+
+
+def bad_moment(kw: dict[str, Any]) -> Resp:
+    if kw.get("response_format") is MomentPick:
+        return text(json.dumps(BAD_MOMENT))
+    return scripted(kw)
+
+
+class RecordingCache(AnalysisCache):
+    """Remembers the key of every entry written, in order."""
+
+    def __init__(self, directory: Path) -> None:
+        super().__init__(directory)
+        self.keys: list[str] = []
+
+    def put(self, key: str, value: str) -> None:
+        self.keys.append(key)
+        super().put(key, value)
+
+
+def test_a_rejected_answer_is_not_cached(sports: FixtureSports, tmp_path: Path) -> None:
+    cache = RecordingCache(tmp_path)
+    first = Model(bad_moment)
+    error = socket_run(sports, first, lambda: live(first, cache=cache))[-1]
+    assert error["type"] == "run.error" and error["payload"]["stage"] == "pick_moment"
+    assert len(cache.keys) == 1, "only the pick was cached"
+
+    second = Model(scripted)
+    assert socket_run(sports, second, lambda: live(second, cache=cache))[-1]["type"] == "run.result"
+    assert any(c.get("response_format") is MomentPick for c in second.calls), "the moment was asked afresh"
+
+
+def test_a_rejected_answer_already_cached_is_ignored(sports: FixtureSports, tmp_path: Path) -> None:
+    """A bad moment cached before answers were checked must not fail every later run."""
+    cache = RecordingCache(tmp_path)
+    first = Model(scripted)
+    socket_run(sports, first, lambda: live(first, cache=cache))
+    _pick, moment_key, _facts = cache.keys
+    cache.put(moment_key, MomentPick.model_validate(BAD_MOMENT).model_dump_json())
+
+    second = Model(scripted)
+    assert socket_run(sports, second, lambda: live(second, cache=cache))[-1]["type"] == "run.result"
+    assert any(c.get("response_format") is MomentPick for c in second.calls)

@@ -4,6 +4,11 @@ What each commit delivered, newest first. Design decisions and their reasons are
 
 ## Unreleased
 
+**Fixes: event ids and the analysis cache**
+
+- A bare number from the model (`92` for `e92`, seen from GPT-OSS 120B) is read as its short event id, instead of failing Pick the moment.
+- The development analysis cache keeps only answers the pipeline accepts, and skips a cached answer it would reject; before, one bad moment failed every later run of that week and model at once. The checks live in `app/pipeline/answers.py`, shared by the pipeline and the cache.
+
 **Plain `docker compose up`**
 
 - `docker compose up -d` (or `podman compose up -d`) runs the whole stack, with no `.env` and no make. A one-shot `mcp-token` service writes a random shared token into a volume, and the backend and MCP server read it through the new `MCP_AUTH_TOKEN_FILE`; an `MCP_AUTH_TOKEN` set in `.env` still wins.
