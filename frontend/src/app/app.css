@@ -61,6 +61,12 @@ app-mock-bar {
   }
 }
 
+/* Icon-only header link: square, the height of the buttons beside it. */
+.btn.icon {
+  width: 38px;
+  padding: 0;
+}
+
 .dot {
   width: 8px;
   height: 8px;

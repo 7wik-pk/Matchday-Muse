@@ -15,6 +15,9 @@ import { RoutingSocket } from './socket/routing-socket';
 import { LlmSettingsService } from './settings/llm-settings.service';
 import { StagePanel } from './stage-panel/stage-panel';
 
+/** The source code, linked from the header. */
+export const REPO_URL = 'https://github.com/7wik-pk/Matchday-Muse';
+
 const CONNECTION_NOTES = {
   connecting: 'Connecting…',
   reconnecting: 'Reconnecting…',
@@ -38,6 +41,7 @@ const CONNECTION_NOTES = {
   styleUrl: './app.css',
 })
 export class App {
+  protected readonly repoUrl = REPO_URL;
   protected readonly store = inject(RunStore);
   protected readonly settings = inject(LlmSettingsService);
   /** Set when runs without a key replay the sample run (production). */

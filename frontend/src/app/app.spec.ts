@@ -46,6 +46,16 @@ async function clickGenerate(fixture: ComponentFixture<App>, el: HTMLElement) {
 }
 
 describe('App', () => {
+  it('links to the source code from the header', async () => {
+    const { el, settle } = await boot('?speed=0');
+    const link = () =>
+      el.querySelector<HTMLAnchorElement>('.topbar a[aria-label="Source code on GitHub"]');
+    await settle(() => expect(link()).not.toBeNull());
+    expect(link()!.href).toBe('https://github.com/7wik-pk/Matchday-Muse');
+    expect(link()!.target).toBe('_blank');
+    expect(link()!.rel).toBe('noopener noreferrer');
+  });
+
   it('runs a scripted success from Generate to the result card', async () => {
     const { fixture, el, settle } = await boot('?speed=0');
     await clickGenerate(fixture, el);

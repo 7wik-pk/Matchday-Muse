@@ -9,6 +9,7 @@ What each commit delivered, newest first. Design decisions and their reasons are
 - In the production build, a visitor without an LLM key plays the sample run (the week of 12 Oct 2026) in any form, instead of hitting a "No LLM key" error: the controls stay on that week, greyed out, and the result card says the poem was written in advance, with no token or cost line.
 - `RoutingSocket` decides per run: with the user's key, the backend; without, the scripted replay. Adding or removing a key needs no reload, and a retell stays with the run it retells.
 - `ng serve` is unchanged (`environment.development.ts`): runs without a key still use the server's `LLM_API_KEY`.
+- A GitHub link at the top right of the header opens the source code in a new tab.
 
 **Fewer tokens per run, and rate limits waited out**
 
