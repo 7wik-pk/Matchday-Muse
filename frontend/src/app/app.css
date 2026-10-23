@@ -105,6 +105,14 @@ app-mock-bar {
   color: var(--ink-muted);
 }
 
+.intro .sample-note {
+  padding: 10px 14px;
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  background: var(--accent-soft);
+  color: inherit;
+}
+
 .working-message {
   font: 19px/1.4 var(--font-prose);
 }

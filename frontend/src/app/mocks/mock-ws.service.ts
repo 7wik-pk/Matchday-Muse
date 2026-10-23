@@ -103,6 +103,11 @@ export class MockWsService extends MatchdaySocket {
     }
   }
 
+  /** True for a run this mock replayed through to its run.result. */
+  hasRun(runId: string): boolean {
+    return this.finishedRuns.has(runId);
+  }
+
   /** The run.start payload of the selected script, so the controls can match it. */
   async scriptStart(): Promise<RunStartPayload | null> {
     // Every selectable script answers a run.start; only the retell script does not.

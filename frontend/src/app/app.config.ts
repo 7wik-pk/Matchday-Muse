@@ -4,18 +4,28 @@ import { APP_CONFIG, AppConfig } from './config';
 import { MOCK_OPTIONS, MockOptions, MockWsService } from './mocks/mock-ws.service';
 import { DEFAULT_RUN_SCRIPT, isRunScriptId } from './mocks/scripts';
 import { REVEAL_MS } from './passage/passage';
+import { RoutingSocket } from './socket/routing-socket';
 import { MatchdaySocket } from './socket/socket';
 import { WsService } from './socket/ws.service';
 
 /**
- * Real socket when a backend URL is set; otherwise, or with ?mock=<script>,
- * the mock. ?speed=<n> replays n times faster, the passage reveal included
- * (0 for instant).
+ * Real socket when a backend URL is set, routing runs without the user's own
+ * key to the sample replay when config.samplesWithoutKey is on; otherwise, or
+ * with ?mock=<script>, the mock. ?speed=<n> replays n times faster, the
+ * passage reveal included (0 for instant).
  */
 export function provideSocket(config: AppConfig, search: string): Provider[] {
   const params = new URLSearchParams(search);
   const requested = params.get('mock');
   if (config.wsUrl && requested === null) {
+    if (config.samplesWithoutKey) {
+      return [
+        WsService,
+        MockWsService,
+        RoutingSocket,
+        { provide: MatchdaySocket, useExisting: RoutingSocket },
+      ];
+    }
     return [WsService, { provide: MatchdaySocket, useExisting: WsService }];
   }
   const speed = Number(params.get('speed') ?? 1);

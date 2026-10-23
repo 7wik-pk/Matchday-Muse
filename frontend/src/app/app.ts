@@ -6,11 +6,12 @@ import { ErrorCard } from './error-card/error-card';
 import { MockBar } from './mock-bar/mock-bar';
 import { MockWsService } from './mocks/mock-ws.service';
 import { PromptModal } from './prompt-modal/prompt-modal';
-import { defaultRange, todayIn } from './range/range';
+import { defaultRange, sameRange, todayIn } from './range/range';
 import { ResultCard } from './result-card/result-card';
 import { isActive, isRetell } from './run/run-state';
 import { RunStore } from './run/run-store';
 import { SettingsDrawer } from './settings-drawer/settings-drawer';
+import { RoutingSocket } from './socket/routing-socket';
 import { LlmSettingsService } from './settings/llm-settings.service';
 import { StagePanel } from './stage-panel/stage-panel';
 
@@ -39,13 +40,26 @@ const CONNECTION_NOTES = {
 export class App {
   protected readonly store = inject(RunStore);
   protected readonly settings = inject(LlmSettingsService);
-  protected readonly mock = inject(MockWsService, { optional: true });
+  /** Set when runs without a key replay the sample run (production). */
+  protected readonly samples = inject(RoutingSocket, { optional: true });
+  /** Mock mode (?mock=<script>, or no backend): the script bar and autoplay. */
+  protected readonly mock = this.samples ? null : inject(MockWsService, { optional: true });
 
   protected readonly competition = signal('football/eng.1');
   protected readonly range = signal<RangeRequest>(defaultRange(todayIn(this.store.timeZone)));
   protected readonly style = signal<StyleId>('ballad');
   protected readonly outputKind = signal<OutputKind>('text');
   protected readonly drawerOpen = signal(false);
+
+  /** The sample run's request: its competition and week. */
+  private readonly sampleRequest = signal<RunStartPayload | null>(null);
+  /** No key yet, so Generate plays the sample run and the controls show its week. */
+  protected readonly sampling = computed(
+    () => this.sampleRequest() !== null && !this.settings.hasKey(),
+  );
+  protected readonly rangeLock = computed(() =>
+    this.sampling() ? 'Sample week: add your LLM key to pick any week.' : null,
+  );
 
   protected readonly session = this.store.session;
   protected readonly run = this.store.run;
@@ -79,6 +93,23 @@ export class App {
 
   constructor() {
     this.store.connect();
+    void this.samples?.sampleRequest().then((request) => this.sampleRequest.set(request));
+
+    // Without a key the controls show the sample week; with one, any week,
+    // starting from the default again.
+    effect(() => {
+      const sample = this.sampleRequest();
+      if (!sample) return;
+      const sampling = this.sampling();
+      untracked(() => {
+        if (sampling) {
+          this.competition.set(competitionKey(sample));
+          this.range.set(sample.range);
+        } else if (sameRange(this.range(), sample.range)) {
+          this.range.set(defaultRange(todayIn(this.store.timeZone)));
+        }
+      });
+    });
 
     let firstSession = true;
     effect(() => {
@@ -122,6 +153,10 @@ export class App {
 
   protected retell(style: StyleId): void {
     this.store.retell(style, this.settings.llm());
+  }
+
+  protected isSample(runId: string): boolean {
+    return this.samples?.isSample(runId) ?? false;
   }
 
   protected markRevealed(runId: string): void {

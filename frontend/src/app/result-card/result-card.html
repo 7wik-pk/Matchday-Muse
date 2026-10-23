@@ -59,7 +59,12 @@
       />
     }
     <figcaption class="hint">
-      {{ styleLabel(r.style) }} · AI-generated from match data; may contain errors.
+      @if (sample()) {
+        {{ styleLabel(r.style) }} · A sample poem, written in advance. Add your LLM key to write a
+        new one.
+      } @else {
+        {{ styleLabel(r.style) }} · AI-generated from match data; may contain errors.
+      }
     </figcaption>
   </figure>
 
@@ -102,7 +107,9 @@
   }
 
   <footer>
-    <span class="hint usage">{{ r.usage.model }} · {{ tokens() }} tokens · {{ cost() }}</span>
+    @if (!sample()) {
+      <span class="hint usage">{{ r.usage.model }} · {{ tokens() }} tokens · {{ cost() }}</span>
+    }
     @if (r.text) {
       <button type="button" class="btn quiet" (click)="copy()">
         {{ copied() ? 'Copied' : 'Copy poem' }}

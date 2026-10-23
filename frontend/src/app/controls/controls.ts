@@ -32,6 +32,8 @@ export class Controls {
   readonly timeZone = input.required<string>();
   /** Why Image is unavailable, or null when it can be chosen. */
   readonly imageBlockedReason = input<string | null>(null);
+  /** Why the competition and range are fixed (the sample run's), or null when they can change. */
+  readonly rangeLock = input<string | null>(null);
 
   readonly competition = model.required<string>();
   readonly range = model.required<RangeRequest>();

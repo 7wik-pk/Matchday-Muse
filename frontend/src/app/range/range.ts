@@ -62,6 +62,12 @@ export function rangeBounds({ granularity, anchor }: RangeRequest): { start: str
   return { start: format(first), end: format(last) };
 }
 
+/** True when both cover the same days, whichever day anchors them. */
+export function sameRange(a: RangeRequest, b: RangeRequest): boolean {
+  const [x, y] = [rangeBounds(a), rangeBounds(b)];
+  return a.granularity === b.granularity && x.start === y.start && x.end === y.end;
+}
+
 /** Changes the granularity, keeping the anchor inside the old range's first day. */
 export function withGranularity(range: RangeRequest, granularity: Granularity): RangeRequest {
   return { granularity, anchor: rangeBounds(range).start };

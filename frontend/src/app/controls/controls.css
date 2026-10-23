@@ -43,6 +43,11 @@
   min-height: 1.5em;
 }
 
+.range-lock {
+  max-width: 300px;
+  color: var(--accent);
+}
+
 .go {
   flex: none;
   align-self: center;

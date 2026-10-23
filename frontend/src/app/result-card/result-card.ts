@@ -38,6 +38,8 @@ export function formatCost(usd: number | null): string {
 })
 export class ResultCard {
   readonly takes = input.required<Take[]>();
+  /** A sample take, written in advance: labelled as such, with no usage line. */
+  readonly sample = input(false);
   readonly take = input.required<Take>();
   readonly styles = input.required<StylePreset[]>();
   readonly timeZone = input.required<string>();

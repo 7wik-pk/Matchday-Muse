@@ -2,7 +2,7 @@
   <label class="field competition">
     <span>Competition</span>
     <select
-      [disabled]="active() || !session()"
+      [disabled]="active() || !session() || rangeLock() !== null"
       (change)="competition.set($any($event.target).value)"
     >
       @for (sport of sports(); track sport.label) {
@@ -19,7 +19,7 @@
     </select>
   </label>
 
-  <fieldset class="field range" [disabled]="active()">
+  <fieldset class="field range" [disabled]="active() || rangeLock() !== null">
     <legend>Range</legend>
     <div class="range-row">
       <div class="segmented" role="group" aria-label="Range length">
@@ -68,6 +68,9 @@
       </div>
     </div>
     <p class="hint range-label" aria-live="polite">{{ label() }}</p>
+    @if (rangeLock(); as lock) {
+      <p class="hint range-lock">{{ lock }}</p>
+    }
   </fieldset>
 
   <label class="field style">

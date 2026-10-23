@@ -23,6 +23,7 @@
     [phase]="run().phase"
     [timeZone]="store.timeZone"
     [imageBlockedReason]="imageBlockedReason()"
+    [rangeLock]="rangeLock()"
     [(competition)]="competition"
     [(range)]="range"
     [(style)]="style"
@@ -39,6 +40,7 @@
         <app-result-card
           [takes]="store.takes()"
           [take]="take"
+          [sample]="isSample(take.runId)"
           [styles]="session()?.styles ?? []"
           [timeZone]="store.timeZone"
           [revealedIds]="revealedIds()"
@@ -65,6 +67,12 @@
             picks the most dramatic or funniest match, and retells it as a poem. Every line is
             checked against the match data before you see it.
           </p>
+          @if (sampling()) {
+            <p class="sample-note">
+              No LLM key yet, so Generate plays a sample run for one week, with a poem written in
+              advance in every form. Add your key under Your LLM to write new ones for any week.
+            </p>
+          }
         </article>
       } @else {
         <article class="working card" aria-busy="true">

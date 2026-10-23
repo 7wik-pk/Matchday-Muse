@@ -1,7 +1,16 @@
+import { Injectable, signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Subject } from 'rxjs';
 import { App } from './app';
 import { provideSocket } from './app.config';
 import { APP_CONFIG } from './config';
+import { ClientMessage, ServerMessage } from './contracts/contracts';
+import { MOCK_OPTIONS } from './mocks/mock-ws.service';
+import { loadSessionScript } from './mocks/scripts';
+import { sendsOf } from './mocks/testing';
+import { REVEAL_MS } from './passage/passage';
+import { ConnectionState, MatchdaySocket } from './socket/socket';
+import { WsService } from './socket/ws.service';
 
 // The whole app against the mock socket, replaying instantly.
 async function boot(search: string) {
@@ -123,5 +132,89 @@ describe('App', () => {
       expect(el.querySelector('app-error-card h2')?.textContent).toContain('Run cancelled'),
     );
     expect(button(el, 'Generate')).toBeDefined();
+  });
+});
+
+/** The backend for sample mode: answers the handshake, records what it is sent. */
+@Injectable()
+class SessionBackend extends MatchdaySocket {
+  private readonly incoming = new Subject<ServerMessage>();
+  readonly messages = this.incoming.asObservable();
+  readonly state = signal<ConnectionState>('closed');
+  readonly sent: ClientMessage[] = [];
+
+  connect(): void {
+    void loadSessionScript().then((script) => {
+      this.state.set('open');
+      this.incoming.next(sendsOf(script)[0]);
+    });
+  }
+
+  send(message: ClientMessage): void {
+    this.sent.push(message);
+  }
+}
+
+// Production's socket: runs without a key replay the sample run.
+async function bootSamples(apiKey = '') {
+  sessionStorage.clear();
+  if (apiKey) {
+    const llm = { provider: 'gemini', model: 'gemini/gemini-flash-latest', apiKey };
+    sessionStorage.setItem('matchday-muse.llm', JSON.stringify(llm));
+  }
+  const config = { wsUrl: 'ws://test/ws', samplesWithoutKey: true };
+  TestBed.configureTestingModule({
+    providers: [
+      { provide: APP_CONFIG, useValue: config },
+      provideSocket(config, ''),
+      { provide: WsService, useClass: SessionBackend },
+      { provide: MOCK_OPTIONS, useValue: { script: 'success', speed: 0, autoplay: false } },
+      { provide: REVEAL_MS, useValue: 0 },
+    ],
+  });
+  const fixture = TestBed.createComponent(App);
+  const el = fixture.nativeElement as HTMLElement;
+  const backend = TestBed.inject(WsService) as unknown as SessionBackend;
+  const settle = async (check: () => void) => {
+    await vi.waitFor(async () => {
+      await fixture.whenStable();
+      check();
+    });
+  };
+  return { fixture, el, backend, settle };
+}
+
+describe('App without a key, in production', () => {
+  it('locks the controls to the sample week and plays the sample run', async () => {
+    const { fixture, el, backend, settle } = await bootSamples();
+    await settle(() =>
+      expect(el.querySelector('.range-label')?.textContent).toContain(
+        'Mon 12 Oct – Sun 18 Oct 2026',
+      ),
+    );
+    expect(el.querySelector<HTMLFieldSetElement>('fieldset.range')?.disabled).toBe(true);
+    expect(el.querySelector('.range-lock')?.textContent).toContain('add your LLM key');
+    expect(el.querySelector('.sample-note')).not.toBeNull();
+    expect(el.querySelector('app-mock-bar')).toBeNull();
+
+    await clickGenerate(fixture, el);
+    await settle(() =>
+      expect(squash(el.querySelector('app-result-card figcaption')?.textContent)).toContain(
+        'A sample poem, written in advance',
+      ),
+    );
+    expect(el.querySelector('app-result-card .usage')).toBeNull();
+    expect(backend.sent).toEqual([]);
+  });
+
+  it('sends runs to the backend, for any week, once there is a key', async () => {
+    const { fixture, el, backend, settle } = await bootSamples('k-test');
+    await settle(() => expect(button(el, 'Generate')?.disabled).toBe(false));
+    expect(el.querySelector<HTMLFieldSetElement>('fieldset.range')?.disabled).toBe(false);
+    expect(el.querySelector('.range-lock')).toBeNull();
+
+    await clickGenerate(fixture, el);
+    expect(backend.sent.map((m) => m.type)).toEqual(['run.start']);
+    expect(backend.sent[0]).toMatchObject({ payload: { llm: { mode: 'byok' } } });
   });
 });
