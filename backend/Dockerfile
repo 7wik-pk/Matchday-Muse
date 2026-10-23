@@ -35,7 +35,10 @@ FROM base AS runtime
 COPY backend/app ./app
 COPY --from=ui /app/frontend/dist/matchday-muse/browser ./ui
 ENV STATIC_DIR=/app/ui
-RUN useradd --system --uid 10001 app
+# The analysis cache volume mounts here; owning the directory lets a fresh
+# named volume start out writable by the app user.
+RUN useradd --system --uid 10001 app \
+    && mkdir -p /data/analysis-cache && chown app /data/analysis-cache
 USER app
 EXPOSE 8000
 CMD ["uvicorn", "--factory", "app.main:build", "--host", "0.0.0.0", "--port", "8000"]

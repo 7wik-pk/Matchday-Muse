@@ -54,3 +54,32 @@ def test_allowed_origins_are_comma_separated() -> None:
     s = Settings(mcp_server_command="x", allowed_origins=f" {SITE}/ , http://localhost:8080,")
     assert s.allowed_origins == [SITE, "http://localhost:8080"]
     assert Settings(mcp_server_command="x", allowed_origins="").allowed_origins == []
+
+
+class Answer:
+    def __init__(self, status: int) -> None:
+        self.status = status
+
+    def __enter__(self) -> Answer:
+        return self
+
+    def __exit__(self, *_: object) -> None:
+        pass
+
+
+@pytest.mark.parametrize(
+    ("answer", "code"),
+    [(Answer(200), 0), (Answer(503), 1), (ConnectionRefusedError(), 1)],
+    ids=["healthy", "unhealthy", "not listening"],
+)
+def test_the_container_healthcheck(monkeypatch: pytest.MonkeyPatch, answer: Answer | OSError, code: int) -> None:
+    from app import healthcheck
+
+    def urlopen(url: str, timeout: float) -> Answer:
+        assert url == "http://127.0.0.1:8000/healthz"
+        if isinstance(answer, OSError):
+            raise answer
+        return answer
+
+    monkeypatch.setattr("urllib.request.urlopen", urlopen)
+    assert healthcheck.main() == code

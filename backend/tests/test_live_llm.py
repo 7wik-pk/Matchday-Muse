@@ -3,6 +3,7 @@ model, so the tool loop, structured parsing, retries, error mapping and the
 token budget are tested without a key or a network."""
 
 import json
+import re
 from collections.abc import Callable
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -11,7 +12,7 @@ from typing import Any
 import anyio
 import pytest
 from fastapi.testclient import TestClient
-from litellm.exceptions import AuthenticationError, RateLimitError, ServiceUnavailableError
+from litellm.exceptions import AuthenticationError, BadRequestError, RateLimitError, ServiceUnavailableError
 
 from app.config import Settings
 from app.contracts.pipeline.fact_draft import FactDraft
@@ -21,7 +22,7 @@ from app.contracts.pipeline.moment_pick import MomentPick
 from app.contracts.ws.client_message import ByokLlm, HouseLlm
 from app.llm.analysis_cache import AnalysisCache
 from app.llm.base import LlmFailure
-from app.llm.live import MAX_TOOL_CALLS, LiteLlm, results_block, short_ids
+from app.llm.live import MAX_TOOL_CALLS, LiteLlm, event_lines, fact_timeline, results_block, short_ids
 from app.main import create_app, llm_factory
 from app.pipeline.signals import compute
 from app.sports import SportsData
@@ -184,6 +185,42 @@ def test_two_bad_replies_fail_the_stage() -> None:
     with pytest.raises(LlmFailure) as e:
         anyio.run(go)
     assert (e.value.code, e.value.retryable) == ("stage_failed", True)
+
+
+def json_validate_failed() -> Exception:
+    """Groq's reply when the model's output does not match the schema, as seen from GPT-OSS."""
+    body = {
+        "error": {
+            "message": "Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.",
+            "type": "invalid_request_error",
+            "code": "json_validate_failed",
+            "failed_generation": "",
+        }
+    }
+    return BadRequestError(f"GroqException - {json.dumps(body)}", "openai/gpt-oss-120b", "groq")
+
+
+def test_a_reply_the_provider_rejects_gets_one_retry() -> None:
+    model = flaky(json_validate_failed())
+
+    async def go() -> MatchPick:
+        return await live(model, name="groq/openai/gpt-oss-120b")._structured(MatchPick, "s", "u")
+
+    assert anyio.run(go).match_id == "401879262"
+    retry = model.calls[1]["messages"]
+    assert [m["role"] for m in retry] == ["system", "user", "user"], "no empty assistant turn"
+    assert "did not match" in retry[-1]["content"]
+
+
+def test_two_rejected_replies_fail_the_stage() -> None:
+    async def go() -> MatchPick:
+        model = flaky(json_validate_failed(), json_validate_failed())
+        return await live(model, name="groq/openai/gpt-oss-120b")._structured(MatchPick, "s", "u")
+
+    with pytest.raises(LlmFailure) as e:
+        anyio.run(go)
+    assert (e.value.code, e.value.retryable) == ("stage_failed", True)
+    assert "json_validate_failed" in e.value.reasons[0]
 
 
 @pytest.mark.parametrize(
@@ -428,6 +465,25 @@ def test_short_rate_limit_waits_long_one_fails() -> None:
     assert isinstance(out, LlmFailure) and out.code == "quota_exceeded" and waits == []
 
 
+def groq_tpm(seconds: float) -> Exception:
+    return RateLimitError(
+        f"Rate limit reached on tokens per minute (TPM): Limit 8000, Used 6108, Requested 2161. "
+        f"Please try again in {seconds}s.",
+        "groq",
+        "gpt-oss-120b",
+    )
+
+
+def test_short_rate_limits_are_waited_out_up_to_a_minute_per_call() -> None:
+    """Seen on Groq's free tier: a run died 2 s short of success after the old two retries."""
+    _, waits, _, out = run_flaky(flaky(*[groq_tpm(2.0)] * 5))
+    assert isinstance(out, MatchPick) and waits == [2.5] * 5, "five quick waits, not two"
+
+    _, waits, _, out = run_flaky(flaky(*[groq_tpm(19.5)] * 4))
+    assert isinstance(out, LlmFailure) and out.code == "quota_exceeded"
+    assert waits == [20.0, 20.0, 20.0], "a fourth 20 s wait would pass a minute"
+
+
 def test_noise_events_stay_out_of_prompts(sports: FixtureSports) -> None:
     from app.llm.live import event_lines
 
@@ -441,6 +497,33 @@ def test_noise_events_stay_out_of_prompts(sports: FixtureSports) -> None:
     winner = next(i for i, ref in short_ids(timeline).items() if ref.endswith("53801457"))
     assert any(line.startswith(f"[{winner}] ") for line in lines), "the winner is still there"
     assert "espn:" not in "\n".join(lines), "prompts carry short ids, not source refs"
+
+
+def test_shots_and_substitutions_are_shortened(sports: FixtureSports) -> None:
+    timeline = anyio.run(sports.get_match_events, "football", "eng.1", "401879262")
+    by_id = {i: line for line in event_lines(timeline).splitlines() for i in [line.split("]")[0][1:]]}
+    short = {ref.removeprefix(B): i for i, ref in short_ids(timeline).items()}
+    events = {e.source_ref.removeprefix(B): e for e in timeline.events}
+    saved = next(r for r, e in events.items() if e.type == "shot_on_target" and e.actors[0] == "Víctor Muñoz")
+    sub = next(r for r, e in events.items() if e.type == "sub")
+
+    assert by_id[short[saved]].endswith(": Víctor Muñoz, shot, saved by Caoimhín Kelleher")
+    assert by_id[short[sub]].endswith(f": {events[sub].actors[0]} on for {events[sub].actors[1]}")
+    assert "Goal! Brentford 1, Liverpool 2. Alexander Isak" in by_id[short["53801457"]], "goals keep their words"
+
+
+def test_the_fact_sheet_sees_shots_near_the_beats_and_a_summary(sports: FixtureSports) -> None:
+    timeline = anyio.run(sports.get_match_events, "football", "eng.1", "401879262")
+    lines = fact_timeline(timeline, MomentPick.model_validate(ANSWERS["MomentPick"])).splitlines()
+    shots = [line for line in lines if " shot_" in line]
+    every_shot = [e for e in timeline.events if e.type.startswith("shot_")]
+    assert 0 < len(shots) < len(every_shot)
+    assert "Víctor Muñoz, shot, saved by Caoimhín Kelleher" in "\n".join(shots), "two events after the winner"
+    assert sum(" goal " in line for line in lines) == 3, "every goal stays"
+    summary = lines[-1]
+    assert summary.startswith("Other attempts, not listed above: Brentford ") and "Liverpool " in summary
+    listed = sum(int(n) for n in re.findall(r" (\d+) \(\d+ on target", summary))
+    assert listed + len(shots) == len(every_shot), "each shot is either listed or counted"
 
 
 # Keeping hidden reasoning to a minimum.

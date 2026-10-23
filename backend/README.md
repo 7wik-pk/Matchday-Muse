@@ -27,7 +27,7 @@ MCP_SERVER_COMMAND=../mcp-server/bin/mcp-server uv run uvicorn --factory app.mai
 | `LLM_MODEL` | `gemini/gemini-flash-latest` | The model for runs where the browser sends no key |
 | `LLM_API_KEY` | | The server's own key for those runs; leave unset to require one in the UI |
 | `LLM_RUN_TOKEN_BUDGET` | `150000` | Tokens one run may spend |
-| `ANALYSIS_CACHE_DIR` | unset (compose: a volume) | Development cache of the pick, moment and fact draft; a repeat run of a week makes only the poem and judge calls |
+| `ANALYSIS_CACHE_DIR` | unset (both compose files: a volume) | Development cache of the pick, moment and fact draft; a repeat run of a week makes only the poem and judge calls |
 | `LOG_LEVEL` | `info` | |
 | `STATIC_DIR` | unset (runtime image: `/app/ui`) | The built UI, served at `/` next to `/ws`; unset in development, where `ng serve` serves it |
 | `ALLOWED_ORIGINS` | empty | Comma-separated page origins allowed to open `/ws`; empty allows any. Required by `compose.prod.yaml` |

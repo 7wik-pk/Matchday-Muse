@@ -4,9 +4,22 @@ What each commit delivered, newest first. Design decisions and their reasons are
 
 ## Unreleased
 
+**Fewer tokens per run, and rate limits waited out**
+
+- A rate limit is now waited out as often as it recurs, while each suggested wait is 30 s or less and one call's waits add up to a minute at most; before, two retries per call, and runs on Groq's free tier failed with 2 s left to wait.
+- Shot and substitution lines in every timeline prompt are cut to who and how (`Víctor Muñoz, shot, saved by Caoimhín Kelleher`); goals, cards, VAR and woodwork keep the source's words.
+- The fact-sheet call (prompt v2) gets only the shots near the moment and its beats; the rest become one line of attempts per side, on target, and who shot most.
+- Together: input per run on the recorded week down from about 8,400 tokens to about 6,600 (Pick the moment −32%, Build the fact sheet −40%).
+- The production stack keeps the analysis cache on, in its own volume: a repeat run of a week, or a retell, makes only the poem and judge calls.
+
+**Fixes: schema rejections and the production healthcheck**
+
+- A structured reply the provider rejects against the schema itself (Groq's `json_validate_failed`, seen from GPT-OSS 120B on Build the fact sheet) now gets the same one retry as a reply that does not parse, instead of ending the run as a provider error.
+- The production backend's healthcheck is `python -m app.healthcheck`: Podman split the old one-line `python -c` check on its spaces, so the container always showed as unhealthy while serving normally.
+
 **Production compose**
 
-- `compose.prod.yaml` (`make prod`, `make prod-down`, `make prod-logs`) runs the stack for a server behind a tunnel or reverse proxy: the distroless MCP server, and the backend's runtime image, which now includes the built UI and serves it at `/` next to `/ws` on one origin. Only the backend publishes a port, on `127.0.0.1:${APP_PORT:-8080}`; no source mounts, no reload, no analysis cache, no server LLM key, `restart: always`.
+- `compose.prod.yaml` (`make prod`, `make prod-down`, `make prod-logs`) runs the stack for a server behind a tunnel or reverse proxy: the distroless MCP server, and the backend's runtime image, which now includes the built UI and serves it at `/` next to `/ws` on one origin. Only the backend publishes a port, on `127.0.0.1:${APP_PORT:-8080}`; no source mounts, no reload, no server LLM key, `restart: always`.
 - The socket accepts only the page origins in `ALLOWED_ORIGINS` (required in production; empty allows any, for development), so another site cannot open it from a visitor's browser.
 - `deploy.sh` deploys or redeploys on the server without make: it pulls, rebuilds, restarts, waits for `/healthz`, prunes the old images, and warns if the dev stack is still running or the stack would not survive a reboot.
 - The backend image builds from the repo root, as the frontend's does; the frontend image's `build` stage is gone, since the backend image builds the bundle.

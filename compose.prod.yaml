@@ -7,6 +7,11 @@
 # compose network. .env must set ALLOWED_ORIGINS. No server LLM key is set, so
 # every visitor brings their own.
 #
+# The analysis cache is on: a week run again on the same model, or a retell,
+# reuses the match pick, moment and fact draft, which spares free-tier quotas.
+# It holds only model output about public matches. Set ANALYSIS_CACHE_DIR=
+# (empty) in .env to turn it off.
+#
 # restart: always, because Podman's podman-restart.service brings back only
 # containers with that policy after a reboot.
 name: matchday-muse-prod
@@ -62,15 +67,17 @@ services:
       # Never a server key in production: visitors bring their own.
       LLM_API_KEY: ""
       MOCK_LLM: "false"
-      ANALYSIS_CACHE_DIR: ""
+      ANALYSIS_CACHE_DIR: ${ANALYSIS_CACHE_DIR-/data/analysis-cache}
       LOG_LEVEL: ${LOG_LEVEL:-info}
     volumes:
       - mcp-token:/run/mcp:ro
+      - analysis-cache:/data/analysis-cache
     ports:
       # Localhost only: the tunnel or reverse proxy on this host forwards here.
       - "127.0.0.1:${APP_PORT:-8080}:8000"
     healthcheck:
-      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/healthz', timeout=3)"]
+      # No spaces inside an argument: Podman splits them.
+      test: ["CMD", "python", "-m", "app.healthcheck"]
       interval: 30s
       timeout: 5s
       start_period: 15s
@@ -83,3 +90,4 @@ services:
 volumes:
   mcp-token:
   mcp-cache:
+  analysis-cache:

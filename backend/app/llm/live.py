@@ -12,6 +12,7 @@ import json
 import logging
 import os
 import re
+from collections import Counter
 from collections.abc import Awaitable, Callable, Iterable, Sequence
 from pathlib import Path
 from typing import Any
@@ -38,6 +39,7 @@ from litellm.exceptions import (
 )
 from pydantic import BaseModel, ValidationError
 
+from app.contracts.mcp.get_match_events_output import Event
 from app.contracts.mcp.search_coverage_input import SearchCoverageInput
 from app.contracts.mcp.search_coverage_output import Result
 from app.contracts.pipeline.fact_draft import FactDraft
@@ -62,7 +64,7 @@ PROMPT_VERSIONS = {
     "pick_match": "v1",
     "pick_match_decide": "v1",
     "pick_moment": "v1",
-    "build_fact_sheet": "v1",
+    "build_fact_sheet": "v2",
     "generate": "v1",
     "judge_grounding": "v1",
     "repair_poem": "v1",
@@ -70,16 +72,24 @@ PROMPT_VERSIONS = {
 }
 
 # Overloaded providers ("high demand", 5xx) get two more tries after these
-# waits. Rate limits are retried only when the provider's suggested wait is
-# short; a used-up daily quota fails at once.
+# waits. A rate limit is waited out as often as it recurs, as long as each
+# suggested wait is short and one call's waits add up to at most a minute:
+# per-minute token limits (Groq's free tier) clear in seconds, again and
+# again in a run. A used-up daily quota suggests hours, so it fails at once.
 OVERLOAD_WAITS_S = (2.0, 6.0)
 MAX_RATE_LIMIT_WAIT_S = 30.0
+MAX_RATE_LIMIT_WAITING_S = 60.0
 OVERLOAD_STATUS = {500, 502, 503, 504, 529}
 PROVIDER_NAMES = {"gemini": "Gemini", "anthropic": "Anthropic", "openai": "OpenAI", "groq": "Groq"}
 
 # Timeline events that carry no story: fouls, corners, offsides and the "wins
 # a free kick" lines. Leaving them out of prompts halves the biggest ones.
 NOISE_EVENTS = {"foul", "corner", "offside", "other"}
+SHOTS = {"shot_on_target", "shot_off_target", "shot_blocked"}
+# Shots this many events either side of a beat stay in the fact sheet's
+# timeline; the rest are summarised.
+NEAR_BEATS = 2
+_SAVED_BY = re.compile(r"\bsaved\b.*? by (.+?) \(")
 
 MAX_TOOL_CALLS = 4
 PICK_TIMEOUT_S = 60
@@ -151,12 +161,63 @@ def to_refs(ids: Iterable[str], t: Timeline) -> list[str]:
     return out
 
 
+def describe(e: Event) -> str:
+    """An event's text for prompts: the source's own words, except for shots
+    and substitutions, whose commentary is cut to who and how. Shots are half
+    of a busy timeline's lines."""
+    if e.type in SHOTS and e.actors:
+        text = f"{e.actors[0]}, {'header' if 'header' in e.description else 'shot'}"
+        if e.type == "shot_on_target" and (saved := _SAVED_BY.search(e.description)):
+            text += f", saved by {saved.group(1)}"
+        return text
+    if e.type == "sub" and len(e.actors) == 2:
+        return f"{e.actors[0]} on for {e.actors[1]}"
+    return e.description
+
+
+def story_events(t: Timeline) -> list[tuple[int, Event]]:
+    """The events prompts show, with their short id numbers."""
+    return [(i, e) for i, e in enumerate(t.events, start=1) if e.type not in NOISE_EVENTS]
+
+
+def event_line(i: int, e: Event) -> str:
+    return f"[e{i}] {e.clock} {e.type}{f' ({e.team})' if e.team else ''}: {describe(e)}"
+
+
 def event_lines(t: Timeline) -> str:
-    return "\n".join(
-        f"[e{i}] {e.clock} {e.type}{f' ({e.team})' if e.team else ''}: {e.description}"
-        for i, e in enumerate(t.events, start=1)
-        if e.type not in NOISE_EVENTS
-    )
+    return "\n".join(event_line(i, e) for i, e in story_events(t))
+
+
+def fact_timeline(t: Timeline, moment: MomentPick) -> str:
+    """The fact sheet's timeline: every event but shots, and the shots near the
+    moment and its beats. The other shots become one summary line, so who kept
+    shooting is not lost."""
+    events = story_events(t)
+    marked = {*moment.event_refs, *moment.beats}
+    near = {
+        k + d for k, (_, e) in enumerate(events) if e.source_ref in marked for d in range(-NEAR_BEATS, NEAR_BEATS + 1)
+    }
+    lines, others = [], []
+    for k, (i, e) in enumerate(events):
+        if e.type in SHOTS and k not in near:
+            others.append(e)
+        else:
+            lines.append(event_line(i, e))
+    if others:
+        lines.append(shots_summary(others))
+    return "\n".join(lines)
+
+
+def shots_summary(shots: Sequence[Event]) -> str:
+    """Such as: Other attempts, not listed above: Brentford 9 (2 on target; Igor Thiago 3, ...)."""
+    teams = []
+    for team in dict.fromkeys(e.team for e in shots):
+        theirs = [e for e in shots if e.team == team]
+        on_target = sum(e.type == "shot_on_target" for e in theirs)
+        most = Counter(e.actors[0] for e in theirs if e.actors).most_common(3)
+        who = ", ".join(f"{name} {n}" for name, n in most)
+        teams.append(f"{team or 'Unknown side'} {len(theirs)} ({on_target} on target; {who})")
+    return "Other attempts, not listed above: " + "; ".join(teams) + "."
 
 
 _RETRY_IN = re.compile(r'(?:retryDelay"?:\s*"|try again in )(\d+(?:\.\d+)?)\s*s', re.IGNORECASE)
@@ -181,6 +242,16 @@ def overloaded(e: Exception) -> bool:
         isinstance(e, ServiceUnavailableError | InternalServerError | BadGatewayError | APIConnectionError)
         or status in OVERLOAD_STATUS
     )
+
+
+class SchemaRejected(Exception):
+    """The provider checked a structured reply against the schema itself and
+    refused it, instead of returning it: Groq's json_validate_failed. Handled
+    like a reply that does not parse: one retry, then a failed stage."""
+
+
+def schema_rejected(e: Exception) -> bool:
+    return isinstance(e, BadRequestError) and "json_validate_failed" in str(e)
 
 
 def candidate_line(c: Candidate) -> str:
@@ -338,9 +409,10 @@ class LiteLlm:
             for s in t.team_stats
         )
         user = (
-            f"{match_header(candidate)}\nMatch page URL (the source_ref for the final score and statistics): "
-            f"{t.sources[0].url}\n\nMoment: {moment.title}\nMoment refs: {', '.join(short(moment.event_refs))}\n"
-            f"Beats: {', '.join(short(moment.beats))}\n\nTimeline:\n{event_lines(t)}\n\n"
+            f"{match_header(candidate)}\nMatch page URL (the source_ref for the final score, the statistics and "
+            f"the other attempts): {t.sources[0].url}\n\nMoment: {moment.title}\n"
+            f"Moment refs: {', '.join(short(moment.event_refs))}\nBeats: {', '.join(short(moment.beats))}\n\n"
+            f"Timeline:\n{fact_timeline(t, moment)}\n\n"
             f"Team statistics:\n{stats or 'none'}\n\nCoverage:\n{results_block('coverage of this match', coverage)}"
         )
 
@@ -441,28 +513,34 @@ class LiteLlm:
     async def _structured[M: BaseModel](self, model: type[M], system: str, user: str) -> M:
         messages: list[dict[str, Any]] = [{"role": "system", "content": system}, {"role": "user", "content": user}]
         for attempt in (1, 2):
-            resp = await self._call(messages, response_format=model)
-            content = resp.choices[0].message.content or ""
+            content: str | None = None
             try:
-                return model.model_validate_json(_FENCE.sub("", content.strip()))
-            except ValidationError as e:
-                problems = [f"{'.'.join(str(p) for p in err['loc'])}: {err['msg']}" for err in e.errors()[:5]]
-                if attempt == 2:
-                    raise LlmFailure(
-                        "stage_failed",
-                        "The model's answer was not in the expected shape. Please try again.",
-                        retryable=True,
-                        reasons=problems,
-                    ) from e
-                messages += [
-                    {"role": "assistant", "content": content},
-                    {
-                        "role": "user",
-                        "content": "That reply did not match the required JSON schema: "
-                        + "; ".join(problems)
-                        + ". Reply again with only the JSON object.",
-                    },
-                ]
+                resp = await self._call(messages, response_format=model)
+            except SchemaRejected:
+                problems = [f"{self.provider} rejected the reply as not matching the schema (json_validate_failed)"]
+            else:
+                content = resp.choices[0].message.content or ""
+                try:
+                    return model.model_validate_json(_FENCE.sub("", content.strip()))
+                except ValidationError as e:
+                    problems = [f"{'.'.join(str(p) for p in err['loc'])}: {err['msg']}" for err in e.errors()[:5]]
+            if attempt == 2:
+                raise LlmFailure(
+                    "stage_failed",
+                    "The model's answer was not in the expected shape. Please try again.",
+                    retryable=True,
+                    reasons=problems,
+                )
+            if content is not None:
+                messages.append({"role": "assistant", "content": content})
+            messages.append(
+                {
+                    "role": "user",
+                    "content": "That reply did not match the required JSON schema: "
+                    + "; ".join(problems)
+                    + ". Reply again with only the JSON object.",
+                }
+            )
         raise AssertionError("unreachable")
 
     async def _call(self, messages: list[dict[str, Any]], **kwargs: Any) -> Any:
@@ -474,7 +552,7 @@ class LiteLlm:
                 retryable=False,
                 reasons=[f"{spent} tokens spent; the budget is {self._budget}"],
             )
-        overloads = rate_limits = 0
+        overloads, rate_limited = 0, 0.0
         while True:
             try:
                 resp = await self._complete(
@@ -488,14 +566,21 @@ class LiteLlm:
             except LlmFailure:
                 raise
             except Exception as e:
+                if "response_format" in kwargs and schema_rejected(e):
+                    raise SchemaRejected from None
                 wait = None
                 if overloaded(e) and overloads < len(OVERLOAD_WAITS_S):
                     wait, overloads = OVERLOAD_WAITS_S[overloads], overloads + 1
                     why = f"{self.provider} is busy"
-                elif isinstance(e, RateLimitError) and rate_limits < 2:
+                elif isinstance(e, RateLimitError):
                     suggested = suggested_wait(e)
-                    if suggested is not None and suggested <= MAX_RATE_LIMIT_WAIT_S:
-                        wait, rate_limits = suggested + 0.5, rate_limits + 1
+                    if (
+                        suggested is not None
+                        and suggested <= MAX_RATE_LIMIT_WAIT_S
+                        and rate_limited + suggested + 0.5 <= MAX_RATE_LIMIT_WAITING_S
+                    ):
+                        wait = suggested + 0.5
+                        rate_limited += wait
                         why = f"{self.provider} rate limit reached"
                 if wait is None:
                     raise self._failure(e) from None
