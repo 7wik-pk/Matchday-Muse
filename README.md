@@ -53,6 +53,16 @@ make test           # contract checks, Go, backend and frontend tests, offline
 
 No `.env` is needed: compose generates the token the backend and MCP server share. To change settings, copy [.env.example](.env.example) to `.env`. Frontend and backend changes reload in either mode; Go changes restart the server under `make dev` (which runs `compose up --build --watch`), or after `docker compose restart mcp-server`, and it recompiles in a couple of seconds. After changing dependencies, rerun `make dev`. `make images` builds the deployable images.
 
+To run it in production, on a server behind a tunnel or reverse proxy on the same host, clone the repo there, set `ALLOWED_ORIGINS` in `.env` to the site's address (for example `https://matchday-muse.example.com`), then:
+
+```sh
+./deploy.sh         # pull, rebuild, restart, and wait until the site answers; again for every redeploy
+```
+
+`deploy.sh` needs no make; it refuses to run with local changes to tracked files, and warns if the development stack is still running or the stack would not survive a reboot. With make, `make prod` starts the same stack (`compose.prod.yaml`: the built UI and /ws on 127.0.0.1:8080, or `APP_PORT`), `make prod-down` stops it and `make prod-logs` follows the logs.
+
+Point the tunnel or proxy at `http://localhost:8080`. Only the backend publishes a port, on localhost; the MCP server stays on the compose network. There is no server LLM key in production, so every visitor adds their own. Containers restart on failure and after a reboot; on Podman, enable `podman-restart.service` for the reboot part (for rootless Podman: `systemctl --user enable podman-restart.service` and `loginctl enable-linger`).
+
 To write a poem, add your key under **Your LLM** in the top right (free Gemini and Groq keys work). Keys stay in the browser tab's session storage and travel only with each run. Set `MOCK_LLM=true` in `.env` to run without a key: a mock then lines up the moment's facts instead of verse. To replay a scripted run instead of the backend, open `?mock=<script>`, for example `?mock=guardrail-failed&speed=0`; the scripts are in [contracts/ws/examples/](contracts/ws/examples/). See also [backend/README.md](backend/README.md) and [mcp-server/README.md](mcp-server/README.md).
 
 ## Guardrail thresholds

@@ -1,8 +1,16 @@
-# Build context for frontend/Dockerfile (the repo root).
+# Build context for frontend/Dockerfile and backend/Dockerfile (the repo root).
 .git
+.env
 **/node_modules
 frontend/.angular
 frontend/dist
 mcp-server
 docs
-.env
+screens
+**/__pycache__/
+backend/.venv/
+backend/.mypy_cache/
+backend/.pytest_cache/
+backend/.ruff_cache/
+backend/tests/
+backend/scripts/

@@ -2,10 +2,10 @@
 
 from functools import lru_cache
 from pathlib import Path
-from typing import Self
+from typing import Annotated, Self
 
 from pydantic import SecretStr, field_validator, model_validator
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, NoDecode
 
 MIN_TOKEN_LENGTH = 32
 
@@ -31,6 +31,14 @@ class Settings(BaseSettings):
     analysis_cache_dir: Path | None = None
     log_level: str = "info"
 
+    # Production: the built UI, served at / next to /ws (the runtime image sets
+    # it). Unset: the UI comes from ng serve.
+    static_dir: Path | None = None
+    # The page origins allowed to open /ws, comma-separated, such as
+    # https://matchday-muse.example.com. Empty allows any, for development;
+    # compose.prod.yaml requires it.
+    allowed_origins: Annotated[list[str], NoDecode] = []
+
     @field_validator(
         "mcp_auth_token",
         "mcp_auth_token_file",
@@ -38,12 +46,20 @@ class Settings(BaseSettings):
         "mcp_server_url",
         "mcp_server_command",
         "analysis_cache_dir",
+        "static_dir",
         mode="before",
     )
     @classmethod
     def empty_is_unset(cls, value: object) -> object:
         # compose passes unset variables as empty strings
         return None if value == "" else value
+
+    @field_validator("allowed_origins", mode="before")
+    @classmethod
+    def comma_separated(cls, value: object) -> object:
+        if isinstance(value, str):
+            return [o.strip().rstrip("/") for o in value.split(",") if o.strip()]
+        return value
 
     @model_validator(mode="after")
     def check(self) -> Self:

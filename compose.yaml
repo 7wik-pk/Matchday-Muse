@@ -60,7 +60,8 @@ services:
 
   backend:
     build:
-      context: ./backend
+      context: .
+      dockerfile: backend/Dockerfile
       target: dev
     image: matchday-muse/backend:dev
     environment:

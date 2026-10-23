@@ -31,6 +31,8 @@ If `REVIEW.md` at the repo root is not empty, stop before starting any new work.
 - make test        # contracts, Go, backend and frontend tests, offline
 - make gen         # regenerate contracts/mcp/ and the TypeScript and Python types
 - make dev-mcp     # MCP Inspector on the Go server over stdio
+- make prod        # the production stack (compose.prod.yaml) on the server; make prod-down to stop
+- ./deploy.sh      # on the server: pull, rebuild and restart the production stack (no make needed)
 - make images      # the deployable images
 - make freeze-mcp  # re-record the backend's MCP fixtures (needs the network)
 - make record-espn # re-record the Go server's ESPN testdata (needs the network)

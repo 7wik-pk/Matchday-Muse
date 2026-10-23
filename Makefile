@@ -1,4 +1,4 @@
-.PHONY: test test-contracts test-mcp test-backend test-frontend gen brand freeze-mcp dev down logs images dev-mcp record-espn diagrams
+.PHONY: test test-contracts test-mcp test-backend test-frontend gen brand freeze-mcp dev down logs prod prod-down prod-logs images dev-mcp record-espn diagrams
 
 test: test-contracts test-mcp test-backend test-frontend
 
@@ -61,13 +61,25 @@ down:
 logs:
 	$(COMPOSE) logs -f
 
-# The deployable images: the MCP server on distroless, and the frontend's
-# production bundle (which the backend image will serve from Phase 1).
+# Production (compose.prod.yaml), for the server: the built UI and /ws on
+# 127.0.0.1:$${APP_PORT:-8080}, for a tunnel or reverse proxy on the same host.
+# Needs ALLOWED_ORIGINS in .env; rebuilds the images on every start.
+PROD = $(COMPOSE) -f compose.prod.yaml
+prod:
+	$(PROD) up -d --build
+
+prod-down:
+	$(PROD) down
+
+prod-logs:
+	$(PROD) logs -f
+
+# The deployable images: the MCP server on distroless, and the backend with
+# the frontend's production bundle.
 ENGINE ?= $(firstword $(COMPOSE))
 images:
 	$(ENGINE) build -t matchday-muse/mcp-server:latest mcp-server
-	$(ENGINE) build -t matchday-muse/backend:latest backend
-	$(ENGINE) build -t matchday-muse/frontend-build:latest --target build -f frontend/Dockerfile .
+	$(ENGINE) build -t matchday-muse/backend:latest -f backend/Dockerfile .
 
 # A local .env to edit (MOCK_LLM, LLM_API_KEY, ...); optional, and never
 # overwrites an existing one.

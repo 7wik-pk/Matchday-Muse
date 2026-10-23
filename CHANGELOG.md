@@ -4,6 +4,13 @@ What each commit delivered, newest first. Design decisions and their reasons are
 
 ## Unreleased
 
+**Production compose**
+
+- `compose.prod.yaml` (`make prod`, `make prod-down`, `make prod-logs`) runs the stack for a server behind a tunnel or reverse proxy: the distroless MCP server, and the backend's runtime image, which now includes the built UI and serves it at `/` next to `/ws` on one origin. Only the backend publishes a port, on `127.0.0.1:${APP_PORT:-8080}`; no source mounts, no reload, no analysis cache, no server LLM key, `restart: always`.
+- The socket accepts only the page origins in `ALLOWED_ORIGINS` (required in production; empty allows any, for development), so another site cannot open it from a visitor's browser.
+- `deploy.sh` deploys or redeploys on the server without make: it pulls, rebuilds, restarts, waits for `/healthz`, prunes the old images, and warns if the dev stack is still running or the stack would not survive a reboot.
+- The backend image builds from the repo root, as the frontend's does; the frontend image's `build` stage is gone, since the backend image builds the bundle.
+
 **Fixes: event ids and the analysis cache**
 
 - A bare number from the model (`92` for `e92`, seen from GPT-OSS 120B) is read as its short event id, instead of failing Pick the moment.

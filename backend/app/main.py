@@ -1,13 +1,16 @@
-"""The FastAPI app: the /ws socket the UI talks to, and /healthz.
+"""The FastAPI app: the /ws socket the UI talks to, /healthz, and in
+production the built UI itself.
 
 uv run uvicorn --factory app.main:build --reload   # needs MCP_SERVER_URL or MCP_SERVER_COMMAND
 """
 
 import logging
-from collections.abc import Callable
+from collections.abc import Callable, Sequence
 from contextlib import AbstractAsyncContextManager
+from pathlib import Path
 
 from fastapi import FastAPI, WebSocket
+from fastapi.staticfiles import StaticFiles
 
 from app.config import Settings, get_settings
 from app.contracts.ws.client_message import ByokLlm, LlmChoice
@@ -17,14 +20,24 @@ from app.presets import MODELS_BY_ID, REASONING_EFFORT
 from app.sports import SportsData, connect
 from app.ws.session import Competitions, Session
 
+log = logging.getLogger(__name__)
+
 
 def create_app(
     sports: Callable[[], AbstractAsyncContextManager[SportsData]],
     llm: Callable[[LlmChoice], Llm] = lambda _choice: MockLlm(),
+    *,
+    static_dir: Path | None = None,
+    allowed_origins: Sequence[str] = (),
 ) -> FastAPI:
-    """The app, given how to reach sports data and which LLM to use. Tests pass fixtures."""
+    """The app, given how to reach sports data and which LLM to use. Tests pass fixtures.
+
+    static_dir: the built UI, served at /. allowed_origins: the pages that may
+    open /ws; empty allows any.
+    """
     app = FastAPI(title="Matchday Muse", docs_url=None, redoc_url=None, openapi_url=None)
     competitions = Competitions(sports)
+    origins = set(allowed_origins)
 
     @app.get("/healthz")
     async def healthz() -> dict[str, str]:
@@ -32,8 +45,18 @@ def create_app(
 
     @app.websocket("/ws")
     async def ws(websocket: WebSocket) -> None:
+        # Browsers send the page's origin, so another site cannot open a
+        # socket to this backend from a visitor's browser.
+        if origins and (origin := websocket.headers.get("origin")) not in origins:
+            log.warning("refused a socket from origin %r", origin)
+            await websocket.close(code=1008)  # before accept: the handshake gets 403
+            return
         await websocket.accept()
         await Session(websocket, sports, competitions, llm).serve()
+
+    if static_dir is not None:
+        # Last, so /ws and /healthz match first.
+        app.mount("/", StaticFiles(directory=static_dir, html=True), name="ui")
 
     return app
 
@@ -80,7 +103,12 @@ def llm_factory(settings: Settings) -> Callable[[LlmChoice], Llm]:
 
 def from_settings(settings: Settings) -> FastAPI:
     logging.basicConfig(level=settings.log_level.upper(), format="%(asctime)s %(levelname)s %(name)s: %(message)s")
-    return create_app(lambda: connect(settings), llm_factory(settings))
+    return create_app(
+        lambda: connect(settings),
+        llm_factory(settings),
+        static_dir=settings.static_dir,
+        allowed_origins=settings.allowed_origins,
+    )
 
 
 def build() -> FastAPI:

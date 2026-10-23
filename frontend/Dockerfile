@@ -16,6 +16,4 @@ COPY --chown=node:node frontend/ ./
 EXPOSE 4200
 CMD ["npx", "ng", "serve", "--host", "0.0.0.0", "--port", "4200"]
 
-# The production bundle, for the backend image to serve from Phase 1.
-FROM dev AS build
-RUN npx ng build
+# The production bundle is built by backend/Dockerfile, whose runtime image serves it.

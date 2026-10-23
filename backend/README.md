@@ -29,14 +29,17 @@ MCP_SERVER_COMMAND=../mcp-server/bin/mcp-server uv run uvicorn --factory app.mai
 | `LLM_RUN_TOKEN_BUDGET` | `150000` | Tokens one run may spend |
 | `ANALYSIS_CACHE_DIR` | unset (compose: a volume) | Development cache of the pick, moment and fact draft; a repeat run of a week makes only the poem and judge calls |
 | `LOG_LEVEL` | `info` | |
+| `STATIC_DIR` | unset (runtime image: `/app/ui`) | The built UI, served at `/` next to `/ws`; unset in development, where `ng serve` serves it |
+| `ALLOWED_ORIGINS` | empty | Comma-separated page origins allowed to open `/ws`; empty allows any. Required by `compose.prod.yaml` |
 
 ## Layout
 
 | Path | |
 | --- | --- |
-| `app/main.py` | The app factory: `/ws` and `/healthz` |
+| `app/main.py` | The app factory: `/ws`, `/healthz` and, in production, the built UI |
 | `app/ws/session.py` | One socket: `session.hello`, at most one run at a time, cancel, retell of finished runs |
 | `app/pipeline/run.py` | The stages, in order, and the result |
+| `app/pipeline/answers.py` | The checks on the pick, moment and fact draft, shared with the analysis cache |
 | `app/pipeline/ranges.py`, `signals.py` | `resolve_range`, and the drama signals `score_matches` computes |
 | `app/guardrails/` | The output checks; `vocab.py` holds the nicknames, grounds and stock figures the name check accepts |
 | `app/llm/` | The LLM stages as one interface (`base.py`), on LiteLLM (`live.py`) or the mock |

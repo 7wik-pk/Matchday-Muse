@@ -1,0 +1,85 @@
+# Production, for a server behind a tunnel or reverse proxy on the same host.
+# `make prod` runs `compose -f compose.prod.yaml up -d --build`; `make prod-down`
+# stops it. compose.yaml is for development only.
+#
+# Only the backend publishes a port, on localhost: it serves the built UI at /
+# and the socket at /ws, on one origin. The MCP server is reachable only on the
+# compose network. .env must set ALLOWED_ORIGINS. No server LLM key is set, so
+# every visitor brings their own.
+#
+# restart: always, because Podman's podman-restart.service brings back only
+# containers with that policy after a reboot.
+name: matchday-muse-prod
+
+services:
+  # As in compose.yaml, but readable by the non-root users of the runtime
+  # images; only containers that mount the volume can see it.
+  mcp-token:
+    image: docker.io/library/alpine:3.24
+    command:
+      - sh
+      - -c
+      - umask 022; [ -s /run/mcp/token ] || od -An -N32 -tx1 /dev/urandom | tr -d ' \n' > /run/mcp/token
+    volumes:
+      - mcp-token:/run/mcp
+
+  mcp-server:
+    build:
+      context: ./mcp-server
+      target: runtime
+    image: matchday-muse/mcp-server:prod
+    environment:
+      MCP_AUTH_TOKEN: ${MCP_AUTH_TOKEN:-}
+      MCP_AUTH_TOKEN_FILE: /run/mcp/token
+      SEARCH_PROVIDER: ${SEARCH_PROVIDER:-fixture}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+    volumes:
+      - mcp-token:/run/mcp:ro
+      - mcp-cache:/data/cache
+    healthcheck:
+      test: ["CMD", "/mcp-server", "healthcheck"]
+      interval: 30s
+      timeout: 5s
+      start_period: 10s
+      retries: 3
+    depends_on:
+      mcp-token:
+        condition: service_completed_successfully
+    restart: always
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+      target: runtime
+    image: matchday-muse/backend:prod
+    environment:
+      MCP_SERVER_URL: http://mcp-server:8081/mcp
+      MCP_AUTH_TOKEN: ${MCP_AUTH_TOKEN:-}
+      MCP_AUTH_TOKEN_FILE: /run/mcp/token
+      # The site's own address, such as https://matchday-muse.example.com.
+      ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:?set ALLOWED_ORIGINS in .env to the site's https:// address}
+      # Never a server key in production: visitors bring their own.
+      LLM_API_KEY: ""
+      MOCK_LLM: "false"
+      ANALYSIS_CACHE_DIR: ""
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+    volumes:
+      - mcp-token:/run/mcp:ro
+    ports:
+      # Localhost only: the tunnel or reverse proxy on this host forwards here.
+      - "127.0.0.1:${APP_PORT:-8080}:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/healthz', timeout=3)"]
+      interval: 30s
+      timeout: 5s
+      start_period: 15s
+      retries: 3
+    depends_on:
+      mcp-server:
+        condition: service_healthy
+    restart: always
+
+volumes:
+  mcp-token:
+  mcp-cache:
